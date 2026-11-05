@@ -1,0 +1,23 @@
+{
+ "id": "ramsey-8-18",
+ "title": "Ramsey number R(8,18), lower bound",
+ "page": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1",
+ "statement": "Find a two-colouring of the edges of K_n with no red K_8 and no blue K_18; it shows R(8,18) > n. The best known lower bound is R(8,18) >= 1052, so a colouring of K_1051 is known and one of K_1052 or more would improve it.",
+ "objective": "maximize",
+ "submission": "Text file: the n x n adjacency matrix of the red graph, one line of n characters 0/1 per vertex (1 red, 0 blue), symmetric with a zero diagonal; n <= 2048.",
+ "checker": {
+  "program": "ramsey_check",
+  "args": [
+   "8",
+   "18"
+  ],
+  "value": "ramsey"
+ },
+ "best_known": {
+  "value": "1051",
+  "exact": "1051",
+  "source": "R(8,18) >= 1052: NaRT repository, 22 Oct 2026; Small Ramsey Numbers rev. 18 printed 1049; read 5 Nov 2026",
+  "kind": "direct colouring"
+ },
+ "verified_pending": []
+}

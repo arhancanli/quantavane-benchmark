@@ -1,0 +1,23 @@
+{
+ "id": "ramsey-4-18",
+ "title": "Ramsey number R(4,18), lower bound",
+ "page": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1",
+ "statement": "Find a two-colouring of the edges of K_n with no red K_4 and no blue K_18; it shows R(4,18) > n. The best known lower bound is R(4,18) >= 209, so a colouring of K_208 is known and one of K_209 or more would improve it.",
+ "objective": "maximize",
+ "submission": "Text file: the n x n adjacency matrix of the red graph, one line of n characters 0/1 per vertex (1 red, 0 blue), symmetric with a zero diagonal; n <= 2048.",
+ "checker": {
+  "program": "ramsey_check",
+  "args": [
+   "4",
+   "18"
+  ],
+  "value": "ramsey"
+ },
+ "best_known": {
+  "value": "208",
+  "exact": "208",
+  "source": "R(4,18) >= 209: NaRT, arXiv:2603.09172v3-v5 and repository; Small Ramsey Numbers rev. 18 printed 205; read 5 Nov 2026",
+  "kind": "direct colouring"
+ },
+ "verified_pending": []
+}

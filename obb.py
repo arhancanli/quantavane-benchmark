@@ -34,9 +34,23 @@ def exact(text):
     return Fraction(text)
 
 
+def native(program):
+    """Build a C checker from checkers/PROGRAM.c into checkers/bin/ on first use."""
+    exe = os.path.join(HERE, "checkers", "bin", program)
+    src = os.path.join(HERE, "checkers", program + ".c")
+    if not os.path.exists(exe) or os.path.getmtime(exe) < os.path.getmtime(src):
+        os.makedirs(os.path.dirname(exe), exist_ok=True)
+        subprocess.run(["cc", "-O3", "-o", exe, src], check=True)
+    return exe
+
+
 def run_checker(p, path):
     """Run the problem's checker on a submission; return (exact value proved, the checker's output)."""
     c = p["checker"]
+    if c["value"] == "ramsey":                      # ramsey_check S T FILE: exit 0 = no red K_S and no blue K_T
+        r = subprocess.run([native(c["program"])] + c["args"] + [path], capture_output=True, text=True)
+        m = re.search(r"^n (\d+) red_K\d+ none blue_K\d+ none", r.stdout, re.M)
+        return (Fraction(int(m.group(1))) if r.returncode == 0 and m else None), r.stdout + r.stderr
     cmd = [sys.executable, "-I", os.path.join(HERE, "checkers", c["program"])] + c["args"] + [path]
     r = subprocess.run(cmd, capture_output=True, text=True)
     text = r.stdout + r.stderr

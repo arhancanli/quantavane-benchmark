@@ -13,4 +13,5 @@ t 1c-lower certs/vid_1c_v3.json "IMPROVES,does not improve,"
 t 1d-upper certs/huiihao_1d.json "does not improve,does not improve,"
 t 68a-lower certs/pin_68a.json "does not improve,does not improve,"
 t 68a-lower certs/vid_68a_044605.json "IMPROVES,does not improve,"
+t ramsey-6-8 certs/cremer_6_8_n134.txt "does not improve,"
 exit $status

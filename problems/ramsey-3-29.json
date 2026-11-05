@@ -1,0 +1,23 @@
+{
+ "id": "ramsey-3-29",
+ "title": "Ramsey number R(3,29), lower bound",
+ "page": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1",
+ "statement": "Find a two-colouring of the edges of K_n with no red K_3 and no blue K_29; it shows R(3,29) > n. The best known lower bound is R(3,29) >= 194, so a colouring of K_193 is known and one of K_194 or more would improve it.",
+ "objective": "maximize",
+ "submission": "Text file: the n x n adjacency matrix of the red graph, one line of n characters 0/1 per vertex (1 red, 0 blue), symmetric with a zero diagonal; n <= 2048.",
+ "checker": {
+  "program": "ramsey_check",
+  "args": [
+   "3",
+   "29"
+  ],
+  "value": "ramsey"
+ },
+ "best_known": {
+  "value": "193",
+  "exact": "193",
+  "source": "R(3,29) >= 194: Coniglio et al., arXiv:2608.18769; Small Ramsey Numbers rev. 18 printed 190; read 5 Nov 2026",
+  "kind": "direct colouring"
+ },
+ "verified_pending": []
+}
