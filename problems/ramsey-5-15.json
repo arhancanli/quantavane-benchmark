@@ -14,9 +14,9 @@
   "value": "ramsey"
  },
  "best_known": {
-  "value": "278",
-  "exact": "278",
-  "source": "R(5,15) >= 279: Canli, Zenodo 23857057; Small Ramsey Numbers rev. 18 printed 275; read 5 Nov 2026",
+  "value": "282",
+  "exact": "282",
+  "source": "R(5,15) >= 283: Canli, github.com/arhancanli/quantavane-ramsey-records (circulant K_282, found 5 Nov 2026); before it 279 (Canli, Zenodo 23857057); Small Ramsey Numbers rev. 18 printed 275; read 6 Nov 2026",
   "kind": "direct colouring"
  },
  "verified_pending": []
