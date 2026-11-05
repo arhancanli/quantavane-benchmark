@@ -1,4 +1,4 @@
-# Open Problems Benchmark (v0, private draft)
+# Open Problems Benchmark (v0)
 
 Open problems with an exact checker each. A submission scores the exact value its checker proves, and it improves a
 problem when that value beats the best known one. Two reference values are kept apart for every problem: the best
@@ -19,4 +19,12 @@ v0 problems (5 Nov 2026), 47 in all:
   beat the larger), checked by our Bron-Kerbosch program (ramsey_check.c, n <= 2048).
 Next: C82, C86, C44, C70, C49; covering arrays, spherical codes, covering designs, prime gaps, codes.
 
-Checkers are Quantavane's own code (MIT), standard library only. Draft: nothing here is public yet.
+Checkers are Quantavane's own code (MIT, see LICENSE), standard library only (and a C compiler for the Ramsey
+checker). Each problem file in `problems/` states its objective, its checker, both reference values and their sources.
+
+## Submitting
+
+Open an issue or a pull request with your certificate in the problem's format (the reference submissions in `certs/`,
+fetched by `fetch.sh`, show each format) and say where the construction comes from. We run the checker, record the exact
+value, and list the result with your name and source. A submission that improves a problem is also worth sending to
+the keeper of the source table; we can help with that.
