@@ -1,0 +1,28 @@
+{
+ "id": "1a-upper",
+ "title": "Sidon autocorrelation constant C_1a, upper bound",
+ "page": "https://teorth.github.io/optimizationproblems/constants/1a.html",
+ "statement": "C_1a is the largest constant with max_{|t|<=1/2} (f*f)(t) >= C_1a (int f)^2 for every non-negative f. Any non-negative f on [-1/4, 1/4] gives C_1a <= max(f*f) / (int f)^2. Find f making this smaller.",
+ "objective": "minimize",
+ "submission": "JSON {\"values\": [...]}: the non-negative heights of a step function with n equal cells on [-1/4, 1/4] (integers, JSON numbers read as binary64, or decimal strings read exactly).",
+ "checker": {
+  "program": "autocorr_check.py",
+  "args": [
+   "1a"
+  ],
+  "value": "bound"
+ },
+ "best_known": {
+  "value": "1.5027434868",
+  "source": "[A2026] Atris, on the 1a page (main 87b4ebb)",
+  "exact": "1.50274348670958337974",
+  "exact_kind": "decimal, truncated (the page's exact value 1.50274348670958337974...)"
+ },
+ "verified_pending": [
+  {
+   "value": "1.50274335217817824811",
+   "source": "https://github.com/teorth/optimizationproblems/pull/270 (vidigoat, 262,144 cells), replayed 5 Nov 2026",
+   "exact": "3756858380445445962687721679242267976826786797829957539923492864000000000000/2500000000000000227858304266031237715040682299126697825903032255969919203361"
+  }
+ ]
+}

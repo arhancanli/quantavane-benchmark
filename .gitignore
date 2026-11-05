@@ -1,0 +1,6 @@
+certs/
+__pycache__/
+ruvector.db
+.claude-flow/
+.swarm/
+*.pyc

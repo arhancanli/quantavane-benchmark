@@ -1,0 +1,26 @@
+{
+ "id": "1d-upper",
+ "title": "Signed third autocorrelation constant C_1d, upper bound",
+ "page": "https://teorth.github.io/optimizationproblems/constants/1d.html",
+ "statement": "A step function f with n equal cells on [-1/4, 1/4] (signed values v) gives C_1d <= 2n max_m |c_m| / S^2 with c = v * v and S = sum v. Find v making this smaller.",
+ "objective": "minimize",
+ "submission": "JSON {\"values\": [...]}: the cell values (integers, binary64 numbers, or exact decimal strings).",
+ "checker": {
+  "program": "autocorr_check.py",
+  "args": [
+   "1d"
+  ],
+  "value": "bound"
+ },
+ "best_known": {
+  "value": "1.457854884921989",
+  "source": "[SCIEL2026], starred, on the 1d page (main 87b4ebb); unstarred 1.4630715826075594 [CERT2026]"
+ },
+ "verified_pending": [
+  {
+   "value": "1.45472766452875064884",
+   "source": "https://github.com/teorth/optimizationproblems/pull/312 (Julsgaard, 81,920 cells), replayed 4 Nov 2026",
+   "exact": "9900630255081376929482866688/6805830738283663732311831361"
+  }
+ ]
+}
