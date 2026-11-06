@@ -1,0 +1,25 @@
+{
+ "id": "covering-17-7-4-6",
+ "title": "Covering design C(17,7,4,6)",
+ "page": "https://www.coveringrepository.com/",
+ "statement": "Find 7-subsets (blocks) of {1, ..., 17} such that every 6-subset meets some block in at least 4 points, with as few blocks as possible. The best known size in the Covering Repository is 17 blocks (ours); a design with fewer blocks improves it.",
+ "objective": "minimize",
+ "submission": "Text file: one block per line, 7 distinct points from 1..17 separated by spaces.",
+ "checker": {
+  "program": "covering_check.py",
+  "args": [
+   "17",
+   "7",
+   "4",
+   "6"
+  ],
+  "value": "blocks"
+ },
+ "best_known": {
+  "value": "17",
+  "exact": "17",
+  "source": "Covering Repository (coveringrepository.com), C(17,7,4,6) = 17 blocks: ours, listed since 2026-10-26 (before it 18); read 6 Nov 2026",
+  "kind": "table entry"
+ },
+ "verified_pending": []
+}

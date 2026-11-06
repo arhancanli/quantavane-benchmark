@@ -1,0 +1,25 @@
+{
+ "id": "covering-28-17-4",
+ "title": "Covering design C(28,17,4)",
+ "page": "https://www.coveringrepository.com/",
+ "statement": "Find 17-subsets (blocks) of {1, ..., 28} such that every 4-subset lies in some block, with as few blocks as possible. The best known size in the Covering Repository is 20 blocks (ours); a design with fewer blocks improves it.",
+ "objective": "minimize",
+ "submission": "Text file: one block per line, 17 distinct points from 1..28 separated by spaces.",
+ "checker": {
+  "program": "covering_check.py",
+  "args": [
+   "28",
+   "17",
+   "4",
+   "4"
+  ],
+  "value": "blocks"
+ },
+ "best_known": {
+  "value": "20",
+  "exact": "20",
+  "source": "Covering Repository (coveringrepository.com), C(28,17,4) = 20 blocks: ours, listed since 2026-10-25 (before it 21); read 6 Nov 2026",
+  "kind": "table entry"
+ },
+ "verified_pending": []
+}

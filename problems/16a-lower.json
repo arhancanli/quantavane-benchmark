@@ -1,0 +1,24 @@
+{
+ "id": "16a-lower",
+ "title": "Brezis-Gallouet-Wainger remainder constant on the torus C16, lower bound",
+ "page": "https://teorth.github.io/optimizationproblems/constants/16a.html",
+ "statement": "Give mu > 0, and optionally a truncation radius R, for the trial function u = sum c_k e^{ik.x} with c_k = 1/(|k|^2 (1 + mu |k|^2)) over all k != 0 (or 0 < |k| <= R). Its BGW functional 4 pi |u(0)|^2/|grad u|^2 - ln(delta) - ln(1 + ln(delta)), delta = |Lap u|^2/|grad u|^2, is a lower bound for C16; the checker encloses it rigorously and scores the lower end. Larger is better.",
+ "objective": "maximize",
+ "submission": "JSON: {\"mu\": p/q or a hex float} for the untruncated family, or {\"mu\": p/q, \"R\": integer} for the truncated one.",
+ "checker": {
+  "program": "c16_lower.py",
+  "args": [],
+  "value": "c16"
+ },
+ "best_known": {
+  "value": "2.1562247706",
+  "source": "16a page, maximusrufus's truncated trial function (R = 4000, mu = 0.1221); read 6 Nov 2026",
+  "kind": "page row"
+ },
+ "verified_pending": [
+  {
+   "value": "2.156225528154212956",
+   "source": "PR #270, night update of 5 Nov (vidigoat), replayed by Quantavane (quantavane-replays c16)"
+  }
+ ]
+}

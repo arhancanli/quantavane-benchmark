@@ -1,0 +1,22 @@
+{
+ "id": "sphere-d4-n310",
+ "title": "Spherical code: 310 points on the sphere in R^4",
+ "page": "https://spherical-codes.org/",
+ "statement": "Place 310 points on the unit sphere in R^4 so that the largest cosine between two distinct points is as small as possible. The best known value in Henry Cohn's table of spherical codes is 0.907191157217 (our code, rounded up to the table's 12 decimals); a code improves it when its largest cosine is smaller by at least one unit in the 12th decimal.",
+ "objective": "minimize",
+ "submission": "Text file: 310 lines, each one point given by its 4 coordinates separated by commas (any length: the checker normalises every point in 50-digit decimal arithmetic); other lines are ignored, as on spherical-codes.org.",
+ "checker": {
+  "program": "sph_check.py",
+  "args": [
+   "4",
+   "310"
+  ],
+  "value": "spherical"
+ },
+ "best_known": {
+  "value": "0.907191157217",
+  "source": "spherical-codes.org (Henry Cohn's table), entry (4, 310): our code, largest cosine 0.90719115721659577316 (listed since 2026-10-26; before it 0.907195137153); read 6 Nov 2026",
+  "kind": "table entry"
+ },
+ "verified_pending": []
+}

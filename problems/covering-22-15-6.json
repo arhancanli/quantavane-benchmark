@@ -1,0 +1,25 @@
+{
+ "id": "covering-22-15-6",
+ "title": "Covering design C(22,15,6)",
+ "page": "https://www.coveringrepository.com/",
+ "statement": "Find 15-subsets (blocks) of {1, ..., 22} such that every 6-subset lies in some block, with as few blocks as possible. The best known size in the Covering Repository is 45 blocks (ours); a design with fewer blocks improves it.",
+ "objective": "minimize",
+ "submission": "Text file: one block per line, 15 distinct points from 1..22 separated by spaces.",
+ "checker": {
+  "program": "covering_check.py",
+  "args": [
+   "22",
+   "15",
+   "6",
+   "6"
+  ],
+  "value": "blocks"
+ },
+ "best_known": {
+  "value": "45",
+  "exact": "45",
+  "source": "Covering Repository (coveringrepository.com), C(22,15,6) = 45 blocks: ours, listed since 2026-10-25 (before it 46); read 6 Nov 2026",
+  "kind": "table entry"
+ },
+ "verified_pending": []
+}

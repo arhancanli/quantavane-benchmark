@@ -47,11 +47,15 @@ def native(program):
 def run_checker(p, path):
     """Run the problem's checker on a submission; return (exact value proved, the checker's output)."""
     c = p["checker"]
+    args = [os.path.join(HERE, a) if a.startswith("instances/") else a for a in c["args"]]  # fetched by fetch.sh
     if c["value"] == "ramsey":                      # ramsey_check S T FILE: exit 0 = no red K_S and no blue K_T
-        r = subprocess.run([native(c["program"])] + c["args"] + [path], capture_output=True, text=True)
+        r = subprocess.run([native(c["program"])] + args + [path], capture_output=True, text=True)
         m = re.search(r"^n (\d+) red_K\d+ none blue_K\d+ none", r.stdout, re.M)
         return (Fraction(int(m.group(1))) if r.returncode == 0 and m else None), r.stdout + r.stderr
-    cmd = [sys.executable, "-I", os.path.join(HERE, "checkers", c["program"])] + c["args"] + [path]
+    if c["value"] == "spherical":                  # sph_check.py FILE D N: the file comes first
+        cmd = [sys.executable, "-I", os.path.join(HERE, "checkers", c["program"]), path] + args
+    else:
+        cmd = [sys.executable, "-I", os.path.join(HERE, "checkers", c["program"])] + args + [path]
     r = subprocess.run(cmd, capture_output=True, text=True)
     text = r.stdout + r.stderr
     if r.returncode != 0:
@@ -62,6 +66,27 @@ def run_checker(p, path):
     if c["value"] == "c68":                         # c68_check.py: "RESULT C68 >= p/q = ...: all hypotheses hold"
         m = re.search(r"RESULT C68 >= (\d+)/(\d+) = \S+: all hypotheses hold", text)
         return (Fraction(int(m.group(1)), int(m.group(2))) if m else None), text
+    if c["value"] == "spherical":                  # sph_check.py: "max_cos X" (largest cosine, 50-digit decimals)
+        m = re.search(r"max_cos (-?\d+\.\d+)", text)
+        return (Fraction(m.group(1)) if m else None), text
+    if c["value"] == "blocks":                     # covering_check.py V K T M FILE: "blocks B" for a valid design
+        m = re.search(r"^blocks (\d+)$", text, re.M)
+        return (Fraction(int(m.group(1))) if m else None), text
+    if c["value"] == "c42":                        # c42_check.py FILE: "RESULT C42 <= num/den: PASS"
+        m = re.search(r"RESULT C42 <= (\d+)/(\d+): PASS", text)
+        return (Fraction(int(m.group(1)), int(m.group(2))) if m else None), text
+    if c["value"] == "c59":                        # c59_check.py FILE: "RESULT K_2 < R/E: PASS"
+        m = re.search(r"RESULT K_2 < (\d+)/(\d+): PASS", text)
+        return (Fraction(int(m.group(1)), int(m.group(2))) if m else None), text
+    if c["value"] == "c16":                        # c16_lower.py FILE: "RESULT C16 >= X" (lower end of the enclosure)
+        m = re.search(r"RESULT C16 >= (\d+\.\d+)", text)
+        return (Fraction(m.group(1)) if m else None), text
+    if c["value"] == "cvrp":                       # cvrp_check.py INSTANCE FILE: "cost C" for a valid solution
+        m = re.search(r"^cost (\d+)$", text, re.M)
+        return (Fraction(int(m.group(1))) if m else None), text
+    if c["value"] == "words":                      # cw_check.py N D W FILE: "words M" for a valid code
+        m = re.search(r"^words (\d+)$", text, re.M)
+        return (Fraction(int(m.group(1))) if m else None), text
     raise ValueError("unknown value kind " + c["value"])
 
 

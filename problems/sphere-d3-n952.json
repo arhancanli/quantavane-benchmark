@@ -1,0 +1,22 @@
+{
+ "id": "sphere-d3-n952",
+ "title": "Spherical code: 952 points on the sphere in R^3",
+ "page": "https://spherical-codes.org/",
+ "statement": "Place 952 points on the unit sphere in R^3 so that the largest cosine between two distinct points is as small as possible. The best known value in Henry Cohn's table of spherical codes is 0.992764719358 (our code, rounded up to the table's 12 decimals); a code improves it when its largest cosine is smaller by at least one unit in the 12th decimal.",
+ "objective": "minimize",
+ "submission": "Text file: 952 lines, each one point given by its 3 coordinates separated by commas (any length: the checker normalises every point in 50-digit decimal arithmetic); other lines are ignored, as on spherical-codes.org.",
+ "checker": {
+  "program": "sph_check.py",
+  "args": [
+   "3",
+   "952"
+  ],
+  "value": "spherical"
+ },
+ "best_known": {
+  "value": "0.992764719358",
+  "source": "spherical-codes.org (Henry Cohn's table), entry (3, 952): our code, largest cosine 0.99276471935772708038 (listed since 2026-10-26; before it 0.992764719664); read 6 Nov 2026",
+  "kind": "table entry"
+ },
+ "verified_pending": []
+}

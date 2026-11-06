@@ -1,0 +1,24 @@
+{
+ "id": "cw-51-6-6",
+ "title": "Constant weight code A(51,6,6)",
+ "page": "https://aeb.win.tue.nl/codes/Andw.html",
+ "statement": "Find binary words of length 51, each with exactly 6 ones and any two differing in at least 6 positions, as many as possible: a lower bound on A(51,6,6). The best known lower bound in Andries Brouwer's table of constant weight codes is 11,354 (our code); the best known upper bound is 16,660. A code with more words improves it.",
+ "objective": "maximize",
+ "submission": "Text file: one word per line, the 6 positions of its ones, distinct integers from 1..51 separated by spaces.",
+ "checker": {
+  "program": "cw_check.py",
+  "args": [
+   "51",
+   "6",
+   "6"
+  ],
+  "value": "words"
+ },
+ "best_known": {
+  "value": "11354",
+  "exact": "11354",
+  "source": "Andries Brouwer's table of constant weight codes (aeb.win.tue.nl/codes/Andw.html), A(51,6,6) >= 11,354: our code, listed since 2026-11-05 (before it 11,184); read 6 Nov 2026 13:28 UTC (page last modified 5 Nov 2026 22:34 GMT)",
+  "kind": "table entry"
+ },
+ "verified_pending": []
+}

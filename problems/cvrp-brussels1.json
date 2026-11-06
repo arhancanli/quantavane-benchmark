@@ -1,0 +1,22 @@
+{
+ "id": "cvrp-brussels1",
+ "title": "Vehicle routing: Brussels1 (CVRPLIB, 15,000 customers)",
+ "page": "https://galgos.inf.puc-rio.br/cvrplib/en/cvrp/instances",
+ "statement": "Serve the 15,000 customers of Brussels1, a Belgian instance of Arnold, Gendreau and Sörensen (Computers & Operations Research, 2019), from its depot with vehicles of capacity 50: each customer on exactly one route, the demand on each route at most 50, any number of routes. The cost is the total length of the routes, depot to depot, each distance the Euclidean distance rounded to the nearest integer (EUC_2D). The best known cost on CVRPLIB is 501,427 (our solution); it is not proven optimal. A solution of smaller cost improves it.",
+ "objective": "minimize",
+ "submission": "Text file in CVRPLIB's solution format: one line per route, \"Route #k: c1 c2 ...\", customers numbered 1 to 15000 (node c + 1 of the instance file, whose depot is node 1). A \"Cost\" line, if present, is compared with the computed cost; the computed cost is the score.",
+ "checker": {
+  "program": "cvrp_check.py",
+  "args": [
+   "instances/Brussels1.vrp"
+  ],
+  "value": "cvrp"
+ },
+ "best_known": {
+  "value": "501427",
+  "exact": "501427",
+  "source": "CVRPLIB (galgos.inf.puc-rio.br/cvrplib), instance Brussels1 (id 260): best known cost 501,427, our solution, listed since 2026-11-01 (before it 501,434), not proven optimal; read 6 Nov 2026 13:22 UTC",
+  "kind": "table entry"
+ },
+ "verified_pending": []
+}

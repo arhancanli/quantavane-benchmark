@@ -1,0 +1,25 @@
+{
+ "id": "covering-35-10-3",
+ "title": "Covering design C(35,10,3)",
+ "page": "https://www.coveringrepository.com/",
+ "statement": "Find 10-subsets (blocks) of {1, ..., 35} such that every 3-subset lies in some block, with as few blocks as possible. The best known size in the Covering Repository is 76 blocks (ours); a design with fewer blocks improves it.",
+ "objective": "minimize",
+ "submission": "Text file: one block per line, 10 distinct points from 1..35 separated by spaces.",
+ "checker": {
+  "program": "covering_check.py",
+  "args": [
+   "35",
+   "10",
+   "3",
+   "3"
+  ],
+  "value": "blocks"
+ },
+ "best_known": {
+  "value": "76",
+  "exact": "76",
+  "source": "Covering Repository (coveringrepository.com), C(35,10,3) = 76 blocks: ours, listed since 2026-10-25 (before it 77); read 6 Nov 2026",
+  "kind": "table entry"
+ },
+ "verified_pending": []
+}

@@ -1,0 +1,24 @@
+{
+ "id": "cw-39-4-5",
+ "title": "Constant weight code A(39,4,5)",
+ "page": "https://aeb.win.tue.nl/codes/Andw.html",
+ "statement": "Find binary words of length 39, each with exactly 5 ones and any two differing in at least 4 positions, as many as possible: a lower bound on A(39,4,5). The best known lower bound in Andries Brouwer's table of constant weight codes is 15,276 (our code). A code with more words improves it.",
+ "objective": "maximize",
+ "submission": "Text file: one word per line, the 5 positions of its ones, distinct integers from 1..39 separated by spaces.",
+ "checker": {
+  "program": "cw_check.py",
+  "args": [
+   "39",
+   "4",
+   "5"
+  ],
+  "value": "words"
+ },
+ "best_known": {
+  "value": "15276",
+  "exact": "15276",
+  "source": "Andries Brouwer's table of constant weight codes (aeb.win.tue.nl/codes/Andw.html), A(39,4,5) >= 15,276: our code, listed since 2026-11-03 (before it 15,010); read 6 Nov 2026 13:28 UTC (page last modified 5 Nov 2026 22:34 GMT)",
+  "kind": "table entry"
+ },
+ "verified_pending": []
+}

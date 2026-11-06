@@ -1,0 +1,25 @@
+{
+ "id": "covering-36-6-2",
+ "title": "Covering design C(36,6,2)",
+ "page": "https://www.coveringrepository.com/",
+ "statement": "Find 6-subsets (blocks) of {1, ..., 36} such that every 2-subset lies in some block, with as few blocks as possible. The best known size in the Covering Repository is 46 blocks (ours); a design with fewer blocks improves it.",
+ "objective": "minimize",
+ "submission": "Text file: one block per line, 6 distinct points from 1..36 separated by spaces.",
+ "checker": {
+  "program": "covering_check.py",
+  "args": [
+   "36",
+   "6",
+   "2",
+   "2"
+  ],
+  "value": "blocks"
+ },
+ "best_known": {
+  "value": "46",
+  "exact": "46",
+  "source": "Covering Repository (coveringrepository.com), C(36,6,2) = 46 blocks: ours, listed since 2026-10-25 (before it 47); read 6 Nov 2026",
+  "kind": "table entry"
+ },
+ "verified_pending": []
+}

@@ -1,0 +1,25 @@
+{
+ "id": "covering-24-17-7",
+ "title": "Covering design C(24,17,7)",
+ "page": "https://www.coveringrepository.com/",
+ "statement": "Find 17-subsets (blocks) of {1, ..., 24} such that every 7-subset lies in some block, with as few blocks as possible. The best known size in the Covering Repository is 56 blocks (ours); a design with fewer blocks improves it.",
+ "objective": "minimize",
+ "submission": "Text file: one block per line, 17 distinct points from 1..24 separated by spaces.",
+ "checker": {
+  "program": "covering_check.py",
+  "args": [
+   "24",
+   "17",
+   "7",
+   "7"
+  ],
+  "value": "blocks"
+ },
+ "best_known": {
+  "value": "56",
+  "exact": "56",
+  "source": "Covering Repository (coveringrepository.com), C(24,17,7) = 56 blocks: ours, listed since 2026-10-25 (before it 58); read 6 Nov 2026",
+  "kind": "table entry"
+ },
+ "verified_pending": []
+}

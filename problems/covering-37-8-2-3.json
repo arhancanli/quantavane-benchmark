@@ -1,0 +1,25 @@
+{
+ "id": "covering-37-8-2-3",
+ "title": "Covering design C(37,8,2,3)",
+ "page": "https://www.coveringrepository.com/",
+ "statement": "Find 8-subsets (blocks) of {1, ..., 37} such that every 3-subset meets some block in at least 2 points, with as few blocks as possible. The best known size in the Covering Repository is 15 blocks (ours); a design with fewer blocks improves it.",
+ "objective": "minimize",
+ "submission": "Text file: one block per line, 8 distinct points from 1..37 separated by spaces.",
+ "checker": {
+  "program": "covering_check.py",
+  "args": [
+   "37",
+   "8",
+   "2",
+   "3"
+  ],
+  "value": "blocks"
+ },
+ "best_known": {
+  "value": "15",
+  "exact": "15",
+  "source": "Covering Repository (coveringrepository.com), C(37,8,2,3) = 15 blocks: ours, listed since 2026-10-26 (before it 16); read 6 Nov 2026",
+  "kind": "table entry"
+ },
+ "verified_pending": []
+}

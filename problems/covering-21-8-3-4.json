@@ -1,0 +1,25 @@
+{
+ "id": "covering-21-8-3-4",
+ "title": "Covering design C(21,8,3,4)",
+ "page": "https://www.coveringrepository.com/",
+ "statement": "Find 8-subsets (blocks) of {1, ..., 21} such that every 4-subset meets some block in at least 3 points, with as few blocks as possible. The best known size in the Covering Repository is 16 blocks (ours); a design with fewer blocks improves it.",
+ "objective": "minimize",
+ "submission": "Text file: one block per line, 8 distinct points from 1..21 separated by spaces.",
+ "checker": {
+  "program": "covering_check.py",
+  "args": [
+   "21",
+   "8",
+   "3",
+   "4"
+  ],
+  "value": "blocks"
+ },
+ "best_known": {
+  "value": "16",
+  "exact": "16",
+  "source": "Covering Repository (coveringrepository.com), C(21,8,3,4) = 16 blocks: ours, listed since 2026-10-26 (before it 17); read 6 Nov 2026",
+  "kind": "table entry"
+ },
+ "verified_pending": []
+}
