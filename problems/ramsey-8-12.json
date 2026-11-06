@@ -2,7 +2,7 @@
  "id": "ramsey-8-12",
  "title": "Ramsey number R(8,12), lower bound",
  "page": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1",
- "statement": "Find a two-colouring of the edges of K_n with no red K_8 and no blue K_12; it shows R(8,12) > n. The best known lower bound is R(8,12) >= 519, so a colouring of K_518 is known and one of K_519 or more would improve it.",
+ "statement": "Find a two-colouring of the edges of K_n with no red K_8 and no blue K_12; it shows R(8,12) > n. The best known lower bound is R(8,12) >= 523, so a colouring of K_522 is known and one of K_523 or more would improve it.",
  "objective": "maximize",
  "submission": "Text file: the n x n adjacency matrix of the red graph, one line of n characters 0/1 per vertex (1 red, 0 blue), symmetric with a zero diagonal; n <= 2048.",
  "checker": {
@@ -14,9 +14,9 @@
   "value": "ramsey"
  },
  "best_known": {
-  "value": "518",
-  "exact": "518",
-  "source": "R(8,12) >= 519: Canli, Zenodo 23920916; Small Ramsey Numbers rev. 18 printed blank; read 5 Nov 2026",
+  "value": "522",
+  "exact": "522",
+  "source": "R(8,12) >= 523: Canli, github.com/arhancanli/quantavane-ramsey-records (K_522, found 6 Nov 2026); before it 519 (Canli, Zenodo 23920916); Small Ramsey Numbers rev. 18 printed blank; read 6 Nov 2026",
   "kind": "direct colouring"
  },
  "verified_pending": []
