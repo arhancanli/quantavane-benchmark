@@ -61,3 +61,11 @@ format: ours in `refs/`, the others fetched into `certs/` by `fetch.sh`, which a
 into `instances/`) and say where the construction comes from. We run the checker, record the exact value, and list
 the result with your name and source. A submission that improves a problem is also worth sending to
 the keeper of the source table; we can help with that.
+
+## Quantavane Open Research
+
+Anyone who can program and likes hard problems can work on these problems with us: find a better object, replay a
+certificate with your own checker, or make one of our searches faster or better on its own test problems. Every
+accepted result carries your name on the results page and in the table it enters, and a paper that uses your result
+lists you as a co-author. You choose how your name appears: your name or a handle. To start, open an issue here or
+write to arhan@quantavane.com. Details: https://quantavane.com/open-research/
