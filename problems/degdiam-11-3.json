@@ -18,7 +18,7 @@
  "best_known": {
   "value": "715",
   "exact": "715",
-  "source": "N(11,3) >= 715: Delorme (1985), in F. Comellas's table of the largest known graphs for the degree-diameter problem (last changed 2 Nov 2026), as kept by Leaps in Bounds (Leaps in Bounds (github.com/daniel-munro/leaps-in-bounds), data at commit 4521e13 (8 Nov 2026)); read 8 Nov 2026",
+  "source": "N(11,3) >= 715: Delorme (1985), in F. Comellas's table of the largest known graphs for the degree-diameter problem (last changed 2 Nov 2026), as mirrored by Leaps in Bounds at commit 4521e13; read 8 Nov 2026",
   "kind": "table entry",
   "provenance": {
    "keeper": "F. Comellas, The (Degree, Diameter) Problem for Graphs",
