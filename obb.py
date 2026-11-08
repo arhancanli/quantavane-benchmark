@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
-"""Open Problems Benchmark v0: open problems with exact checkers (private draft, Quantavane).
+"""Open Problems Benchmark (version in VERSION): open problems with exact checkers (Quantavane).
 
-  python3 -I obb.py list                        the problems, their objective, the best known value and its source
+  python3 -I obb.py list [FAMILY]               the problems, their objective, the best known value and its source
   python3 -I obb.py check PROBLEM SUBMISSION    check a submission exactly and compare it with the best known values
+  python3 -I obb.py verify RECORD.json          check a submission record (SUBMITTING.md) and print its leaderboard row
+  python3 -I obb.py leaderboard [PROBLEM]       the verified results in leaderboard.json, best first
 
 Every problem has a file in problems/ and an exact checker in checkers/ (our own code, from the definitions on the
-constant pages; standard library only). A submission scores the exact value its checker proves; it "improves" a
+source pages; standard library only). A submission scores the exact value its checker proves; it "improves" a
 problem when that value beats the best known one. Two reference values are kept apart: the best value on the
-constant page (the repository's main branch, with its source) and the best verified value still in review (an open
-pull request whose certificate has been replayed independently), so a result is never compared with a claim that
-nobody has checked."""
+source page (with its source) and the best verified value still in review (for instance an open pull request whose
+certificate has been replayed independently), so a result is never compared with a claim that nobody has checked."""
+import datetime
+import hashlib
 import json
 import os
 import re
@@ -18,6 +21,7 @@ import sys
 from fractions import Fraction
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+VERSION = open(os.path.join(HERE, "VERSION")).read().strip()
 
 
 def problems():
@@ -87,6 +91,9 @@ def run_checker(p, path):
     if c["value"] == "words":                      # cw_check.py N D W FILE: "words M" for a valid code
         m = re.search(r"^words (\d+)$", text, re.M)
         return (Fraction(int(m.group(1))) if m else None), text
+    if c["value"] == "result":                     # every checker added in v1.1: last line "RESULT v" (v integer or p/q)
+        m = re.search(r"^RESULT (-?\d+)(?:/(\d+))?$", text, re.M)
+        return (Fraction(int(m.group(1)), int(m.group(2) or 1)) if m else None), text
     raise ValueError("unknown value kind " + c["value"])
 
 
@@ -104,12 +111,23 @@ def better(p, a, b):
     return a < b if p["objective"] == "minimize" else a > b
 
 
-def cmd_list():
-    for pid, p in problems().items():
+def cmd_list(family=None):
+    probs = problems()
+    shown = 0
+    for pid, p in probs.items():
+        if family and p.get("family") != family:
+            continue
+        shown += 1
         vp = p.get("verified_pending") or []
         best_v = vp[0]["value"] if vp else "-"
-        print(f"{pid:10s} {p['objective']:8s} page {p['best_known']['value']:>22s}   verified in review {best_v}")
-        print(f"{'':10s} {p['title']}")
+        mark = "  [Quantavane record]" if p.get("quantavane_record") else ""
+        print(f"{pid:22s} {p['objective']:8s} page {p['best_known']['value']:>22s}   verified in review {best_v}{mark}")
+        print(f"{'':22s} {p['title']}")
+    fams = {}
+    for p in probs.values():
+        fams[p.get("family", "?")] = fams.get(p.get("family", "?"), 0) + 1
+    print(f"\nOpen Problems Benchmark v{VERSION}: {shown} of {len(probs)} problems shown; families: "
+          + ", ".join(f"{k} {v}" for k, v in sorted(fams.items())))
 
 
 def cmd_check(pid, path):
@@ -130,12 +148,78 @@ def cmd_check(pid, path):
     return 0
 
 
+def sha256(path):
+    h = hashlib.sha256()
+    with open(path, "rb") as f:
+        for block in iter(lambda: f.read(1 << 20), b""):
+            h.update(block)
+    return h.hexdigest()
+
+
+RECORD_FIELDS = ("problem", "certificate", "sha256", "submitter", "source", "ai_assistance", "date")
+
+
+def cmd_verify(record_path):
+    """Check a submission record (SUBMITTING.md) and print the leaderboard row it earns."""
+    rec = json.load(open(record_path))
+    missing = [k for k in RECORD_FIELDS if not str(rec.get(k, "")).strip()]
+    if missing:
+        print("the record lacks: " + ", ".join(missing))
+        return 1
+    p = problems().get(rec["problem"])
+    if p is None:
+        print(f"unknown problem {rec['problem']}")
+        return 1
+    cert = os.path.join(os.path.dirname(os.path.abspath(record_path)), rec["certificate"])
+    digest = sha256(cert)
+    if digest != rec["sha256"].lower():
+        print(f"the certificate's SHA-256 is {digest}, not {rec['sha256']}")
+        return 1
+    value, text = run_checker(p, cert)
+    if value is None:
+        print(f"{p['id']}: NOT CERTIFIED (the checker did not prove a value)")
+        print(text[-2000:])
+        return 1
+    page = threshold(p, p["best_known"])
+    row = {
+        "problem": p["id"], "value": str(value.numerator) if value.denominator == 1 else
+        f"{value.numerator}/{value.denominator}", "submitter": rec["submitter"], "source": rec["source"],
+        "ai_assistance": rec["ai_assistance"], "certificate_sha256": digest, "submitted": rec["date"],
+        "verified": datetime.date.today().isoformat(), "benchmark_version": VERSION,
+        "checker": p["checker"]["program"],
+        "improves_page_best": better(p, value, page),
+        "page_best_then": p["best_known"]["value"],
+    }
+    print(json.dumps(row, indent=1, ensure_ascii=False))
+    return 0
+
+
+def cmd_leaderboard(pid=None):
+    board = json.load(open(os.path.join(HERE, "leaderboard.json")))
+    probs = problems()
+    rows = [r for r in board["entries"] if pid is None or r["problem"] == pid]
+
+    def key(r):
+        p = probs.get(r["problem"])
+        v = Fraction(r["value"])
+        return (r["problem"], -v if p and p["objective"] == "maximize" else v)
+    for r in sorted(rows, key=key):
+        flag = "above the page (in review)" if r.get("improves_page_best") else "record" if r.get("equals_page_best") else ""
+        print(f"{r['problem']:22s} {r['value']:>12s}  {r['submitter'][:40]:40s} {r['verified']}  {flag}")
+    print(f"{len(rows)} verified entries (leaderboard.json, benchmark v{board['benchmark_version']})")
+    return 0
+
+
 def main():
     if len(sys.argv) >= 2 and sys.argv[1] == "list":
-        cmd_list()
+        cmd_list(sys.argv[2] if len(sys.argv) > 2 else None)
         return 0
     if len(sys.argv) == 4 and sys.argv[1] == "check":
         return cmd_check(sys.argv[2], sys.argv[3])
+    if len(sys.argv) == 3 and sys.argv[1] == "verify":
+        return cmd_verify(sys.argv[2])
+    if len(sys.argv) in (2, 3) and sys.argv[1] == "leaderboard":
+        return cmd_leaderboard(sys.argv[2] if len(sys.argv) == 3 else None)
     print(__doc__)
     return 2
 
