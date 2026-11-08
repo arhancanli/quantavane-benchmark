@@ -1,0 +1,32 @@
+{
+ "id": "kissing-d10",
+ "family": "kissing-number",
+ "title": "Kissing number in dimension 10, lower bound",
+ "page": "https://cohn.mit.edu/kissing-numbers/",
+ "statement": "Find as many nonzero vectors as possible in R^10 with pairwise angles of at least 60 degrees (unit spheres centred at twice the normalised vectors then all touch a central unit sphere without overlapping); k such vectors show that the kissing number in dimension 10 is at least k. The best known configuration, by Ganzhinov (2022), has 510 vectors; one with more vectors improves it.",
+ "objective": "maximize",
+ "submission": "Text file: one vector per line, integer coordinates separated by spaces or commas, all with the same squared norm N; more than 10 coordinates are allowed when the vectors span a space of dimension at most 10. Every inner product between two vectors must be at most N/2.",
+ "checker": {
+  "program": "kissing_check.py",
+  "args": [
+   "10"
+  ],
+  "value": "result"
+ },
+ "score": "k, the number of vectors (larger is better)",
+ "best_known": {
+  "value": "510",
+  "exact": "510",
+  "source": "kissing number in dimension 10 >= 510: Ganzhinov (2022), in Henry Cohn's table of kissing numbers (cohn.mit.edu/kissing-numbers) and Leaps in Bounds (github.com/daniel-munro/leaps-in-bounds), data at commit 4521e13 (8 Nov 2026); read 8 Nov 2026",
+  "kind": "table entry",
+  "provenance": {
+   "keeper": "H. Cohn, Kissing numbers",
+   "url": "https://cohn.mit.edu/kissing-numbers/",
+   "read": "2026-11-08",
+   "revision": "table read 8 Nov 2026; Leaps in Bounds data at 4521e13",
+   "holder": "Ganzhinov (2022)"
+  }
+ },
+ "verified_pending": [],
+ "added": "1.1"
+}

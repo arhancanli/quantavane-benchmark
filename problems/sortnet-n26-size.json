@@ -1,0 +1,32 @@
+{
+ "id": "sortnet-n26-size",
+ "family": "sorting-network",
+ "title": "Sorting network on 26 inputs with the fewest comparators",
+ "page": "https://bertdobbelaere.github.io/sorting_networks_extended.html",
+ "statement": "Find a sorting network on 26 channels (a fixed sequence of comparators, each putting the smaller of two values on the lower-numbered channel, that sorts every input) with as few comparators as possible. The smallest known network on Bert Dobbelaere's list has 138 comparators; a network with fewer comparators improves it. Its depth is reported but not scored.",
+ "objective": "minimize",
+ "submission": "Text file: the comparators in order, each as a pair of channel numbers 0..25; every two integers form one comparator (Dobbelaere's \"[(0,13),(1,12),...]\" format and one \"i j\" per line both work; text after # is ignored).",
+ "checker": {
+  "program": "sortnet_check.py",
+  "args": [
+   "26"
+  ],
+  "value": "result"
+ },
+ "score": "the number of comparators (smaller is better)",
+ "best_known": {
+  "value": "138",
+  "exact": "138",
+  "source": "size 138 for 26 inputs: Bert Dobbelaere's list of sorting networks (bertdobbelaere.github.io/sorting_networks_extended.html), which credits each network; read 8 Nov 2026",
+  "kind": "table entry",
+  "provenance": {
+   "keeper": "B. Dobbelaere, Smallest and fastest sorting networks",
+   "url": "https://bertdobbelaere.github.io/sorting_networks_extended.html",
+   "read": "2026-11-08",
+   "revision": "page read 8 Nov 2026",
+   "holder": "as credited on the page"
+  }
+ },
+ "verified_pending": [],
+ "added": "1.1"
+}
