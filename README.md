@@ -12,7 +12,7 @@ unknown counts only when beaten by more than its last printed digit.
     python3 -I obb.py leaderboard             # the verified results in leaderboard.json
     ./fetch.sh && ./test.sh                   # the reference submissions, red controls and the expected verdicts
 
-v1.1 problems (8 Nov 2026), 373 in all:
+v1.1 problems (8 Nov 2026), 374 in all:
 - 7 constants from the optimization constants repository (teorth/optimizationproblems): 1a-upper, 1c-lower,
   1d-upper (step-function autocorrelation constants), 68a-lower (Korenblum's constant, moment certificates for two
   known envelopes), 42a-upper (Turán's pure power-sum constant), 59a-upper (Bohr radius of the bidisc) and 16a-lower
@@ -24,7 +24,7 @@ v1.1 problems (8 Nov 2026), 373 in all:
   (ramsey_check.c, n <= 2048).
 - 14 multicolour Ramsey numbers from Tables XIa and XIb of the same survey, among them R(3,3,3,3), R(4,4,4),
   R(5,5,5) and R_7(3).
-- 39 cages n(k,g) from the House of Graphs cage table, among them the cubic cages of girth 13 to 20 and cells the
+- 40 cages n(k,g) from the House of Graphs cage table, among them the cubic cages of girth 13 to 20 and cells the
   table leaves blank (their value then comes from monotonicity in the girth).
 - 20 cells of the degree-diameter problem (F. Comellas's table), 16 kissing numbers (H. Cohn's table, dimensions 5 to
   21), 21 sorting networks with the fewest comparators (B. Dobbelaere's list, 13 to 33 inputs; Green's 60-comparator
