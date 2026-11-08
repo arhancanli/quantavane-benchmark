@@ -1,0 +1,35 @@
+{
+ "id": "ramsey-3-18",
+ "family": "ramsey",
+ "title": "Ramsey number R(3,18), lower bound",
+ "page": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1",
+ "statement": "Find a two-colouring of the edges of K_n with no red K_3 and no blue K_18; it shows R(3,18) > n. The best known lower bound is R(3,18) >= 101, so a colouring of K_100 is known and one of K_101 or more would improve it.",
+ "objective": "maximize",
+ "submission": "Text file: the n x n adjacency matrix of the red graph, one line of n characters 0/1 per vertex (1 red, 0 blue), symmetric with a zero diagonal; n <= 2048.",
+ "checker": {
+  "program": "ramsey_check",
+  "args": [
+   "3",
+   "18"
+  ],
+  "value": "ramsey"
+ },
+ "score": "n, the number of vertices of the colouring; it proves R(3,18) >= n + 1 (larger is better)",
+ "best_known": {
+  "value": "100",
+  "exact": "100",
+  "source": "R(3,18) >= 101: Canli, github.com/arhancanli/quantavane-ramsey-records (K_100, one vertex added to the K_99 colouring of Nagda, Raghavan and Thakurta's repository, found 8 Nov 2026); before it 100 [NaRT], the value Small Ramsey Numbers rev. 18 prints in Table IIa; read 8 Nov 2026",
+  "kind": "direct colouring",
+  "provenance": {
+   "keeper": "Small Ramsey Numbers (S. Radziszowski), EJC Dynamic Survey DS1",
+   "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1",
+   "read": "2026-11-08",
+   "revision": "revision 18 (24 Apr 2026), Table IIa",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true
+  }
+ },
+ "quantavane_record": true,
+ "verified_pending": [],
+ "added": "1.1"
+}
