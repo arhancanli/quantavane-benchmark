@@ -1,0 +1,33 @@
+{
+ "id": "shannon-c7-power5",
+ "family": "shannon-capacity",
+ "title": "Independent sets in the fifth strong power of C_7 (Shannon capacity of the 7-cycle)",
+ "page": "https://teorth.github.io/optimizationproblems/constants/9a.html",
+ "statement": "Find as large an independent set as possible in C_7^5, the fifth strong power of the 7-cycle (two distinct 5-tuples over Z_7 are adjacent when every coordinate is equal or differs by 1 mod 7). An independent set of size a gives the Shannon capacity bound Theta(C_7) >= a^(1/5). The largest known has 367 vertices (Polak and Schrijver, 2018); a larger one improves it. Tao's page 9a lists better capacity bounds from much higher powers.",
+ "objective": "maximize",
+ "submission": "Text file: the vertices, one per line, each as 5 digits 0-6 with nothing between them.",
+ "checker": {
+  "program": "strongpow_check.py",
+  "args": [
+   "7",
+   "5"
+  ],
+  "value": "result"
+ },
+ "score": "the size of the independent set (larger is better)",
+ "best_known": {
+  "value": "367",
+  "exact": "367",
+  "source": "alpha(C_7^5) >= 367: Polak and Schrijver (2018), the row [PS2018] on Tao's optimization constants page 9a; read 8 Nov 2026",
+  "kind": "page row",
+  "provenance": {
+   "keeper": "T. Tao et al., optimization constants, 9a",
+   "url": "https://teorth.github.io/optimizationproblems/constants/9a.html",
+   "read": "2026-11-08",
+   "revision": "page read 8 Nov 2026",
+   "holder": "Polak and Schrijver (2018)"
+  }
+ },
+ "verified_pending": [],
+ "added": "1.1"
+}

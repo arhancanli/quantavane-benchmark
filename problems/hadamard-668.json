@@ -1,0 +1,32 @@
+{
+ "id": "hadamard-668",
+ "family": "hadamard",
+ "title": "Hadamard matrix of order 668",
+ "page": "https://teorth.github.io/optimizationproblems/constants/23a.html",
+ "statement": "Find a 668 x 668 matrix H with entries +1 and -1 and H H^T = 668 I. The Hadamard conjecture says one exists for every multiple of 4, but none of order 668 is known. It is the smallest order for which none is known. A valid matrix scores 1 and settles the order.",
+ "objective": "maximize",
+ "submission": "Text file: 668 rows of 668 entries, written as + and - characters or as 1 and -1 separated by spaces.",
+ "checker": {
+  "program": "hadamard_check.py",
+  "args": [
+   "668"
+  ],
+  "value": "result"
+ },
+ "score": "1 for a Hadamard matrix of this order; nothing is known, so the best known value is 0",
+ "best_known": {
+  "value": "0",
+  "exact": "0",
+  "source": "no Hadamard matrix of order 668 is known: Tao's optimization constants page 23a (668 is the smallest unsolved order; README at 87b4ebb) and Cati and Pasechnik, A database of constructions of Hadamard matrices (arXiv:2411.18897v2, 2025), whose open orders up to 1208 are 668, 716, 892 and 1132; read 8 Nov 2026",
+  "kind": "open existence question",
+  "provenance": {
+   "keeper": "T. Tao et al., optimization constants, 23a; Cati and Pasechnik (2025)",
+   "url": "https://teorth.github.io/optimizationproblems/constants/23a.html",
+   "read": "2026-11-08",
+   "revision": "README at 87b4ebb",
+   "holder": "none known"
+  }
+ },
+ "verified_pending": [],
+ "added": "1.1"
+}

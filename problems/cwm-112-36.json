@@ -1,0 +1,33 @@
+{
+ "id": "cwm-112-36",
+ "family": "circulant-weighing-matrix",
+ "title": "Proper circulant weighing matrix CW(112, 6^2)",
+ "page": "https://github.com/dmgordo/circulant-weighing-matrices",
+ "statement": "Find a proper circulant weighing matrix CW(112,36): a circulant 112 x 112 matrix W with entries -1, 0, 1 and W W^T = 36 I whose first row's support is not inside a coset of a proper subgroup of Z_112 (an improper one comes from a smaller order). Its existence is Open in D. Gordon's La Jolla repository. A valid first row scores 1 and settles the case.",
+ "objective": "maximize",
+ "submission": "Text file: the first row, 112 entries -1, 0, 1 separated by spaces (or the characters -, 0, +).",
+ "checker": {
+  "program": "cwm_check.py",
+  "args": [
+   "112",
+   "36"
+  ],
+  "value": "result"
+ },
+ "score": "1 for a proper CW of these parameters; none is known, so the best known value is 0",
+ "best_known": {
+  "value": "0",
+  "exact": "0",
+  "source": "CW(112,6^2) has status Open in the La Jolla Circulant Weighing Matrix Repository (D. Gordon; cwm.json at commit 5b3d729, 24 Apr 2026, entry CW(112,6)); read 8 Nov 2026",
+  "kind": "open existence question",
+  "provenance": {
+   "keeper": "D. Gordon, La Jolla Circulant Weighing Matrix Repository",
+   "url": "https://github.com/dmgordo/circulant-weighing-matrices",
+   "read": "2026-11-08",
+   "revision": "cwm.json at commit 5b3d729 (24 Apr 2026)",
+   "holder": "none known"
+  }
+ },
+ "verified_pending": [],
+ "added": "1.1"
+}
