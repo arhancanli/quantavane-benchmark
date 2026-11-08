@@ -98,6 +98,7 @@ int main(int argc, char **argv) {
         int m = (int)strspn(row, "01");
         if (m == 0) continue;
         if (width < 0) width = m;
+        if (m > MAXV) { fprintf(stderr, "rows wider than %d are not supported\n", MAXV); return 2; }
         if (m != width || nv >= MAXV) { fprintf(stderr, "not a square 0/1 matrix\n"); return 2; }
         for (int y = 0; y < m; y++) a[nv][y] = (uint8_t)(row[y] - '0');
         nv++;
