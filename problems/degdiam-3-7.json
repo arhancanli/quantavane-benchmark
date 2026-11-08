@@ -1,0 +1,33 @@
+{
+ "id": "degdiam-3-7",
+ "family": "degree-diameter",
+ "title": "Degree-diameter problem (3,7): a large graph of maximum degree 3 and diameter 7",
+ "page": "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html",
+ "statement": "Find a graph with maximum degree at most 3 and diameter at most 7, with as many vertices n as possible; it shows N(3,7) >= n. The largest known such graph, by Bhakar (Oct 2026), has 200 vertices; a graph with more vertices improves it.",
+ "objective": "maximize",
+ "submission": "Text file: one graph in graph6 or sparse6 (as House of Graphs gives them; an optional >>graph6<< or >>sparse6<< header is allowed), or an edge list, one edge \"u v\" per line, vertices numbered from 0.",
+ "checker": {
+  "program": "degdiam_check.py",
+  "args": [
+   "3",
+   "7"
+  ],
+  "value": "result"
+ },
+ "score": "n, the number of vertices of a graph with maximum degree at most 3 and diameter at most 7 (larger is better)",
+ "best_known": {
+  "value": "200",
+  "exact": "200",
+  "source": "N(3,7) >= 200: Bhakar (Oct 2026), in F. Comellas's table of the largest known graphs for the degree-diameter problem (last changed 2 Nov 2026), as kept by Leaps in Bounds (Leaps in Bounds (github.com/daniel-munro/leaps-in-bounds), data at commit 4521e13 (8 Nov 2026)); read 8 Nov 2026",
+  "kind": "table entry",
+  "provenance": {
+   "keeper": "F. Comellas, The (Degree, Diameter) Problem for Graphs",
+   "url": "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html",
+   "read": "2026-11-08",
+   "revision": "last changed 2 Nov 2026; Leaps in Bounds data at 4521e13",
+   "holder": "Bhakar (Oct 2026)"
+  }
+ },
+ "verified_pending": [],
+ "added": "1.1"
+}

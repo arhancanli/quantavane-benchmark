@@ -1,0 +1,33 @@
+{
+ "id": "cage-3-15",
+ "family": "cage",
+ "title": "Cage n(3,15): a 3-regular graph of girth 15 with few vertices",
+ "page": "https://houseofgraphs.org/meta-directory/cages",
+ "statement": "Find a 3-regular simple graph whose girth (shortest cycle) is at least 15, with as few vertices n as possible; it shows n(3,15) <= n (cages grow with the girth). The best known (k,g)-graph in the House of Graphs cage table has 620 vertices [BH83]; a graph with fewer vertices improves it.",
+ "objective": "minimize",
+ "submission": "Text file: one graph in graph6 or sparse6 (as House of Graphs gives them; an optional >>graph6<< or >>sparse6<< header is allowed), or an edge list, one edge \"u v\" per line, vertices numbered from 0.",
+ "checker": {
+  "program": "cage_check.py",
+  "args": [
+   "3",
+   "15"
+  ],
+  "value": "result"
+ },
+ "score": "n, the number of vertices of a 3-regular graph of girth at least 15 (smaller is better)",
+ "best_known": {
+  "value": "620",
+  "exact": "620",
+  "source": "n(3,15) <= 620: [BH83] in the House of Graphs cage table (houseofgraphs.org/meta-directory/cages; J. Goedgebeur, J. Jooken, T. Van den Eede); read 8 Nov 2026",
+  "kind": "table entry",
+  "provenance": {
+   "keeper": "House of Graphs cage table (houseofgraphs.org/meta-directory/cages; J. Goedgebeur, J. Jooken, T. Van den Eede)",
+   "url": "https://houseofgraphs.org/meta-directory/cages",
+   "read": "2026-11-08",
+   "revision": "page read 8 Nov 2026",
+   "holder": "[BH83] (reference key of the table)"
+  }
+ },
+ "verified_pending": [],
+ "added": "1.1"
+}

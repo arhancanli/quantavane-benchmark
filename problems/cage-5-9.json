@@ -1,0 +1,33 @@
+{
+ "id": "cage-5-9",
+ "family": "cage",
+ "title": "Cage n(5,9): a 5-regular graph of girth 9 with few vertices",
+ "page": "https://houseofgraphs.org/meta-directory/cages",
+ "statement": "Find a 5-regular simple graph whose girth (shortest cycle) is at least 9, with as few vertices n as possible; it shows n(5,9) <= n (cages grow with the girth). The best known (k,g)-graph in the House of Graphs cage table has 1116 vertices [EGJSV26]; a graph with fewer vertices improves it.",
+ "objective": "minimize",
+ "submission": "Text file: one graph in graph6 or sparse6 (as House of Graphs gives them; an optional >>graph6<< or >>sparse6<< header is allowed), or an edge list, one edge \"u v\" per line, vertices numbered from 0.",
+ "checker": {
+  "program": "cage_check.py",
+  "args": [
+   "5",
+   "9"
+  ],
+  "value": "result"
+ },
+ "score": "n, the number of vertices of a 5-regular graph of girth at least 9 (smaller is better)",
+ "best_known": {
+  "value": "1116",
+  "exact": "1116",
+  "source": "n(5,9) <= 1116: [EGJSV26] in the House of Graphs cage table (houseofgraphs.org/meta-directory/cages; J. Goedgebeur, J. Jooken, T. Van den Eede); read 8 Nov 2026",
+  "kind": "table entry",
+  "provenance": {
+   "keeper": "House of Graphs cage table (houseofgraphs.org/meta-directory/cages; J. Goedgebeur, J. Jooken, T. Van den Eede)",
+   "url": "https://houseofgraphs.org/meta-directory/cages",
+   "read": "2026-11-08",
+   "revision": "page read 8 Nov 2026",
+   "holder": "[EGJSV26] (reference key of the table)"
+  }
+ },
+ "verified_pending": [],
+ "added": "1.1"
+}

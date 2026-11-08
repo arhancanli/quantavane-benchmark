@@ -1,0 +1,33 @@
+{
+ "id": "cage-7-8",
+ "family": "cage",
+ "title": "Cage n(7,8): a 7-regular graph of girth 8 with few vertices",
+ "page": "https://houseofgraphs.org/meta-directory/cages",
+ "statement": "Find a 7-regular simple graph whose girth (shortest cycle) is at least 8, with as few vertices n as possible; it shows n(7,8) <= n (cages grow with the girth). The best known (k,g)-graph in the House of Graphs cage table has 630 vertices [Joo26]; a graph with fewer vertices improves it.",
+ "objective": "minimize",
+ "submission": "Text file: one graph in graph6 or sparse6 (as House of Graphs gives them; an optional >>graph6<< or >>sparse6<< header is allowed), or an edge list, one edge \"u v\" per line, vertices numbered from 0.",
+ "checker": {
+  "program": "cage_check.py",
+  "args": [
+   "7",
+   "8"
+  ],
+  "value": "result"
+ },
+ "score": "n, the number of vertices of a 7-regular graph of girth at least 8 (smaller is better)",
+ "best_known": {
+  "value": "630",
+  "exact": "630",
+  "source": "n(7,8) <= 630: [Joo26] in the House of Graphs cage table (houseofgraphs.org/meta-directory/cages; J. Goedgebeur, J. Jooken, T. Van den Eede); read 8 Nov 2026",
+  "kind": "table entry",
+  "provenance": {
+   "keeper": "House of Graphs cage table (houseofgraphs.org/meta-directory/cages; J. Goedgebeur, J. Jooken, T. Van den Eede)",
+   "url": "https://houseofgraphs.org/meta-directory/cages",
+   "read": "2026-11-08",
+   "revision": "page read 8 Nov 2026",
+   "holder": "[Joo26] (reference key of the table)"
+  }
+ },
+ "verified_pending": [],
+ "added": "1.1"
+}

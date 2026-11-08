@@ -1,0 +1,33 @@
+{
+ "id": "cage-9-10",
+ "family": "cage",
+ "title": "Cage n(9,10): a 9-regular graph of girth 10 with few vertices",
+ "page": "https://houseofgraphs.org/meta-directory/cages",
+ "statement": "Find a 9-regular simple graph whose girth (shortest cycle) is at least 10, with as few vertices n as possible; it shows n(9,10) <= n (cages grow with the girth). The House of Graphs cage table lists no graph for this cell; strict monotonicity in the girth and its (9,11)-graph on 74752 vertices give n(9,10) <= 74751. A graph with fewer than 74751 vertices improves it.",
+ "objective": "minimize",
+ "submission": "Text file: one graph in graph6 or sparse6 (as House of Graphs gives them; an optional >>graph6<< or >>sparse6<< header is allowed), or an edge list, one edge \"u v\" per line, vertices numbered from 0.",
+ "checker": {
+  "program": "cage_check.py",
+  "args": [
+   "9",
+   "10"
+  ],
+  "value": "result"
+ },
+ "score": "n, the number of vertices of a 9-regular graph of girth at least 10 (smaller is better)",
+ "best_known": {
+  "value": "74751",
+  "exact": "74751",
+  "source": "n(9,10) <= 74751: implied by strict monotonicity in the girth (n(k,g) < n(k,g+1), Fu, Huang and Rodger 1997) from n(9,11) <= 74752 [A10]; the House of Graphs cage table (houseofgraphs.org/meta-directory/cages; J. Goedgebeur, J. Jooken, T. Van den Eede) lists no graph for girth 10; read 8 Nov 2026",
+  "kind": "implied",
+  "provenance": {
+   "keeper": "House of Graphs cage table (houseofgraphs.org/meta-directory/cages; J. Goedgebeur, J. Jooken, T. Van den Eede)",
+   "url": "https://houseofgraphs.org/meta-directory/cages",
+   "read": "2026-11-08",
+   "revision": "page read 8 Nov 2026",
+   "holder": "implied by monotonicity (no graph listed)"
+  }
+ },
+ "verified_pending": [],
+ "added": "1.1"
+}

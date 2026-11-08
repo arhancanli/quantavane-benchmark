@@ -1,0 +1,34 @@
+{
+ "id": "multiramsey-3-5-5",
+ "family": "multicolour-ramsey",
+ "title": "Multicolour Ramsey number R(3,5,5), lower bound",
+ "page": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1",
+ "statement": "Find a colouring of the edges of K_n with 3 colours 0..2 in which colour c holds no complete graph K_(S_(c+1)), for (S_1, ..., S_3) = (3,5,5); it shows R(3,5,5) > n. The best known lower bound is R(3,5,5) >= 139, so a colouring of K_138 is known and one of K_139 or more would improve it.",
+ "objective": "maximize",
+ "submission": "Text file: the n x n colour matrix, one line of n characters per vertex; the character in row i, column j (i != j) is the colour of the edge {i,j}, a digit from 0 to r-1 (colour c must avoid K_(S_(c+1))), symmetric; diagonal characters are ignored (write 0 or -). n <= 2048 is practical.",
+ "checker": {
+  "program": "multiramsey_check.py",
+  "args": [
+   "3",
+   "5",
+   "5"
+  ],
+  "value": "result"
+ },
+ "score": "n, the number of vertices of the colouring; it proves R(3,5,5) >= n + 1 (larger is better)",
+ "best_known": {
+  "value": "138",
+  "exact": "138",
+  "source": "R(3,5,5) >= 139: [Ex17] in Small Ramsey Numbers rev. 18 (24 Apr 2026), Table XIb; read 8 Nov 2026",
+  "kind": "survey entry",
+  "provenance": {
+   "keeper": "Small Ramsey Numbers (S. Radziszowski), EJC Dynamic Survey DS1",
+   "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1",
+   "read": "2026-11-08",
+   "revision": "revision 18 (24 Apr 2026), Table XIb",
+   "holder": "[Ex17] (reference key of the survey)"
+  }
+ },
+ "verified_pending": [],
+ "added": "1.1"
+}
