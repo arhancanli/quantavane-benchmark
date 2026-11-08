@@ -1,5 +1,6 @@
 {
  "id": "cw-45-6-5",
+ "family": "constant-weight-code",
  "title": "Constant weight code A(45,6,5)",
  "page": "https://aeb.win.tue.nl/codes/Andw.html",
  "statement": "Find binary words of length 45, each with exactly 5 ones and any two differing in at least 6 positions, as many as possible: a lower bound on A(45,6,5). The best known lower bound in Andries Brouwer's table of constant weight codes is 1,239 (our code); the best known upper bound is 1,386. A code with more words improves it.",
@@ -18,7 +19,19 @@
   "value": "1239",
   "exact": "1239",
   "source": "Andries Brouwer's table of constant weight codes (aeb.win.tue.nl/codes/Andw.html), A(45,6,5) >= 1,239: our code, listed since 2026-11-05 (before it 1,189); read 6 Nov 2026 13:28 UTC (page last modified 5 Nov 2026 22:34 GMT)",
-  "kind": "table entry"
+  "kind": "table entry",
+  "provenance": {
+   "keeper": "A. E. Brouwer, table of constant weight codes",
+   "url": "https://aeb.win.tue.nl/codes/Andw.html",
+   "read": "2026-11-06",
+   "revision": "table read on the date given",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true
+  }
  },
- "verified_pending": []
+ "verified_pending": [],
+ "score": "the number of code words (more is better)",
+ "added": "1",
+ "quantavane_record": true,
+ "quantavane_note": "our object is the best known entry of the source table"
 }

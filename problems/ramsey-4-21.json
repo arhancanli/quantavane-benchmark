@@ -1,5 +1,6 @@
 {
  "id": "ramsey-4-21",
+ "family": "ramsey",
  "title": "Ramsey number R(4,21), lower bound",
  "page": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1",
  "statement": "Find a two-colouring of the edges of K_n with no red K_4 and no blue K_21; it shows R(4,21) > n. The best known lower bound is R(4,21) >= 257, so a colouring of K_256 is known and one of K_257 or more would improve it.",
@@ -17,7 +18,16 @@
   "value": "256",
   "exact": "256",
   "source": "R(4,21) >= 257: implied by the recursion e: R(4,20) + 5; Small Ramsey Numbers rev. 18 printed 242; read 5 Nov 2026",
-  "kind": "recursion"
+  "kind": "recursion",
+  "provenance": {
+   "keeper": "Small Ramsey Numbers (S. Radziszowski), EJC Dynamic Survey DS1",
+   "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1",
+   "read": "2026-11-05",
+   "revision": "revision 18 (24 Apr 2026) and later sources named",
+   "holder": "implied by the recursion e: R(4,20) + 5"
+  }
  },
- "verified_pending": []
+ "verified_pending": [],
+ "score": "n, the number of vertices of the colouring; it proves R(4,21) >= n + 1 (larger is better)",
+ "added": "0"
 }

@@ -1,5 +1,6 @@
 {
  "id": "68a-lower",
+ "family": "constant",
  "title": "Korenblum's constant C_68, lower bound",
  "page": "https://teorth.github.io/optimizationproblems/constants/68a.html",
  "statement": "Wikstrom's moment lemma (arXiv:2607.17748, Lemma 3.1): c is admissible when a probability measure on [c^2, 1] with no atom at 1 meets two moment families with beta = 1 - 1/G. Submit c with a measure (atoms plus Lebesgue measure on [R, 1]) for one of the two envelopes G the checker knows.",
@@ -14,7 +15,14 @@
   "value": "0.432",
   "source": "[Pin2026] Pinho, starred, on the 68a page (main 87b4ebb); unstarred 0.4263 [Wik2026]",
   "exact": "54/125",
-  "exact_kind": "fraction (c is exact)"
+  "exact_kind": "fraction (c is exact)",
+  "provenance": {
+   "keeper": "T. Tao et al., optimization constants repository (teorth/optimizationproblems)",
+   "url": "https://teorth.github.io/optimizationproblems/constants/68a.html",
+   "read": null,
+   "revision": "main 87b4ebb",
+   "holder": "[Pin2026] Pinho, starred, on the 68a page (main 87b4ebb)"
+  }
  },
  "verified_pending": [
   {
@@ -28,5 +36,7 @@
    "value": "0.447",
    "source": "https://github.com/teorth/optimizationproblems/pull/299 (Pinho, candidate, a modified lemma; not replayed)"
   }
- ]
+ ],
+ "score": "a certified lower bound on the constant (exact; larger is better)",
+ "added": "0"
 }

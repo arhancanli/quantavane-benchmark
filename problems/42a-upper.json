@@ -1,5 +1,6 @@
 {
  "id": "42a-upper",
+ "family": "constant",
  "title": "Turán's pure power-sum constant C42, upper bound (first-block cut-off tau >= 1/3)",
  "page": "https://teorth.github.io/optimizationproblems/constants/42a.html",
  "statement": "Give the inputs of the finite-step criterion in section 2 of Pinho's paper (Griego's construction with M middle steps): alpha = a + ib with a > 0, breaks tau = t_0 < ... < t_M = 1 - tau with tau >= 1/3, middle values eta_j and C. If |1 - alpha| < C, every |eta_j| < C and |Y| < C D (I and J integrals as defined there), then C42 <= C. The checker verifies all of it exactly; the asymptotic reduction itself is unrefereed. The best value on the page, 0.6873358063 (Koshta, tau = 41/200), uses three- and four-fold terms that this checker does not evaluate; the best with tau >= 1/3 is Pinho's 0.6888863712.",
@@ -14,7 +15,16 @@
   "value": "0.6873358063",
   "exact": "6873358063/10000000000",
   "source": "42a page, [Kos2026] (DennisKoshta, #263), asterisked; read 6 Nov 2026",
-  "kind": "page row"
+  "kind": "page row",
+  "provenance": {
+   "keeper": "T. Tao et al., optimization constants repository (teorth/optimizationproblems)",
+   "url": "https://teorth.github.io/optimizationproblems/constants/42a.html",
+   "read": "2026-11-06",
+   "revision": "main branch as named in the source",
+   "holder": "42a page, [Kos2026] (DennisKoshta, #263), asterisked"
+  }
  },
- "verified_pending": []
+ "verified_pending": [],
+ "score": "a certified upper bound on the constant (exact; smaller is better)",
+ "added": "1"
 }

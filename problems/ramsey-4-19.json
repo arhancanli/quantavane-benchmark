@@ -1,5 +1,6 @@
 {
  "id": "ramsey-4-19",
+ "family": "ramsey",
  "title": "Ramsey number R(4,19), lower bound",
  "page": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1",
  "statement": "Find a two-colouring of the edges of K_n with no red K_4 and no blue K_19; it shows R(4,19) > n. The best known lower bound is R(4,19) >= 219, so a colouring of K_218 is known and one of K_219 or more would improve it.",
@@ -17,7 +18,16 @@
   "value": "218",
   "exact": "218",
   "source": "R(4,19) >= 219: NaRT, arXiv:2603.09172v3-v5 and repository; Small Ramsey Numbers rev. 18 printed 213; read 5 Nov 2026",
-  "kind": "direct colouring"
+  "kind": "direct colouring",
+  "provenance": {
+   "keeper": "Small Ramsey Numbers (S. Radziszowski), EJC Dynamic Survey DS1",
+   "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1",
+   "read": "2026-11-05",
+   "revision": "revision 18 (24 Apr 2026) and later sources named",
+   "holder": "NaRT, arXiv:2603.09172v3-v5 and repository"
+  }
  },
- "verified_pending": []
+ "verified_pending": [],
+ "score": "n, the number of vertices of the colouring; it proves R(4,19) >= n + 1 (larger is better)",
+ "added": "0"
 }

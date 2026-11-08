@@ -1,5 +1,6 @@
 {
  "id": "ramsey-3-28",
+ "family": "ramsey",
  "title": "Ramsey number R(3,28), lower bound",
  "page": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1",
  "statement": "Find a two-colouring of the edges of K_n with no red K_3 and no blue K_28; it shows R(3,28) > n. The best known lower bound is R(3,28) >= 181, so a colouring of K_180 is known and one of K_181 or more would improve it.",
@@ -17,7 +18,16 @@
   "value": "180",
   "exact": "180",
   "source": "R(3,28) >= 181: Coniglio et al., arXiv:2608.18769; Small Ramsey Numbers rev. 18 printed 179; read 5 Nov 2026",
-  "kind": "direct colouring"
+  "kind": "direct colouring",
+  "provenance": {
+   "keeper": "Small Ramsey Numbers (S. Radziszowski), EJC Dynamic Survey DS1",
+   "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1",
+   "read": "2026-11-05",
+   "revision": "revision 18 (24 Apr 2026) and later sources named",
+   "holder": "Coniglio et al., arXiv:2608.18769"
+  }
  },
- "verified_pending": []
+ "verified_pending": [],
+ "score": "n, the number of vertices of the colouring; it proves R(3,28) >= n + 1 (larger is better)",
+ "added": "0"
 }

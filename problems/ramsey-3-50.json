@@ -1,5 +1,6 @@
 {
  "id": "ramsey-3-50",
+ "family": "ramsey",
  "title": "Ramsey number R(3,50), lower bound",
  "page": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1",
  "statement": "Find a two-colouring of the edges of K_n with no red K_3 and no blue K_50; it shows R(3,50) > n. The best known lower bound is R(3,50) >= 414, so a colouring of K_413 is known and one of K_414 or more would improve it.",
@@ -17,7 +18,16 @@
   "value": "413",
   "exact": "413",
   "source": "R(3,50) >= 414: implied by the recursion e: R(3,49) + 3; Small Ramsey Numbers rev. 18 printed blank; read 5 Nov 2026",
-  "kind": "recursion"
+  "kind": "recursion",
+  "provenance": {
+   "keeper": "Small Ramsey Numbers (S. Radziszowski), EJC Dynamic Survey DS1",
+   "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1",
+   "read": "2026-11-05",
+   "revision": "revision 18 (24 Apr 2026) and later sources named",
+   "holder": "implied by the recursion e: R(3,49) + 3"
+  }
  },
- "verified_pending": []
+ "verified_pending": [],
+ "score": "n, the number of vertices of the colouring; it proves R(3,50) >= n + 1 (larger is better)",
+ "added": "0"
 }

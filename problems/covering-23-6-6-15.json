@@ -1,5 +1,6 @@
 {
  "id": "covering-23-6-6-15",
+ "family": "covering-design",
  "title": "Covering design C(23,6,6,15)",
  "page": "https://www.coveringrepository.com/",
  "statement": "Find 6-subsets (blocks) of {1, ..., 23} such that every 15-subset meets some block in at least 6 points, with as few blocks as possible. The best known size in the Covering Repository is 59 blocks (ours); a design with fewer blocks improves it.",
@@ -19,7 +20,19 @@
   "value": "59",
   "exact": "59",
   "source": "Covering Repository (coveringrepository.com), C(23,6,6,15) = 59 blocks: ours, listed since 2026-10-26 (before it 60); read 6 Nov 2026",
-  "kind": "table entry"
+  "kind": "table entry",
+  "provenance": {
+   "keeper": "Covering Repository",
+   "url": "https://www.coveringrepository.com/",
+   "read": "2026-11-06",
+   "revision": "repository read on the date given",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true
+  }
  },
- "verified_pending": []
+ "verified_pending": [],
+ "score": "the number of blocks (smaller is better)",
+ "added": "1",
+ "quantavane_record": true,
+ "quantavane_note": "our object is the best known entry of the source table"
 }

@@ -1,5 +1,6 @@
 {
  "id": "cvrp-antwerp1",
+ "family": "vehicle-routing",
  "title": "Vehicle routing: Antwerp1 (CVRPLIB, 6,000 customers)",
  "page": "https://galgos.inf.puc-rio.br/cvrplib/en/cvrp/instances",
  "statement": "Serve the 6,000 customers of Antwerp1, a Belgian instance of Arnold, Gendreau and Sörensen (Computers & Operations Research, 2019), from its depot with vehicles of capacity 30: each customer on exactly one route, the demand on each route at most 30, any number of routes. The cost is the total length of the routes, depot to depot, each distance the Euclidean distance rounded to the nearest integer (EUC_2D). The best known cost on CVRPLIB is 477,256 (our solution); it is not proven optimal. A solution of smaller cost improves it.",
@@ -16,7 +17,19 @@
   "value": "477256",
   "exact": "477256",
   "source": "CVRPLIB (galgos.inf.puc-rio.br/cvrplib), instance Antwerp1 (id 258): best known cost 477,256, our solution, listed since 2026-11-01 (before it 477,260), not proven optimal; read 6 Nov 2026 13:22 UTC",
-  "kind": "table entry"
+  "kind": "table entry",
+  "provenance": {
+   "keeper": "CVRPLIB",
+   "url": "https://galgos.inf.puc-rio.br/cvrplib/en/cvrp/instances",
+   "read": "2026-11-06",
+   "revision": "best known solutions read on the date given",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true
+  }
  },
- "verified_pending": []
+ "verified_pending": [],
+ "score": "the total length of the routes, distances rounded exactly in integers (smaller is better)",
+ "added": "1",
+ "quantavane_record": true,
+ "quantavane_note": "our object is the best known entry of the source table"
 }

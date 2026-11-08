@@ -1,5 +1,6 @@
 {
  "id": "59a-upper",
+ "family": "constant",
  "title": "Bohr radius of the bidisc K_2, upper bound",
  "page": "https://teorth.github.io/optimizationproblems/constants/59a.html",
  "statement": "Give a 3 x 3 unitary colligation U = Ut/den with Gaussian-integer entries Ut (blocks of sizes 1 and 2), a degree N and r = R/E such that the Bohr sum of the transfer function f = A + B Delta (I - D Delta)^-1 C up to degree N in each variable exceeds 1 at r. Unitarity makes f a Schur function, so K_2 < r. Smaller r is better.",
@@ -13,7 +14,14 @@
  "best_known": {
   "value": "0.302825279492",
   "source": "59a page, [P2026] (Patel); read 6 Nov 2026",
-  "kind": "page row"
+  "kind": "page row",
+  "provenance": {
+   "keeper": "T. Tao et al., optimization constants repository (teorth/optimizationproblems)",
+   "url": "https://teorth.github.io/optimizationproblems/constants/59a.html",
+   "read": "2026-11-06",
+   "revision": "main branch as named in the source",
+   "holder": "59a page, [P2026] (Patel)"
+  }
  },
  "verified_pending": [
   {
@@ -21,5 +29,7 @@
    "exact": "75706319872747/250000000000000",
    "source": "PR #297 (gomyway), replayed by Quantavane (quantavane-replays c59, issuecomment-6684848725)"
   }
- ]
+ ],
+ "score": "a certified upper bound on the constant (exact; smaller is better)",
+ "added": "1"
 }

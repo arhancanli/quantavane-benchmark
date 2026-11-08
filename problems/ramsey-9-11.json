@@ -1,5 +1,6 @@
 {
  "id": "ramsey-9-11",
+ "family": "ramsey",
  "title": "Ramsey number R(9,11), lower bound",
  "page": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1",
  "statement": "Find a two-colouring of the edges of K_n with no red K_9 and no blue K_11; it shows R(9,11) > n. The best known lower bound is R(9,11) >= 617, so a colouring of K_616 is known and one of K_617 or more would improve it.",
@@ -17,7 +18,16 @@
   "value": "616",
   "exact": "616",
   "source": "R(9,11) >= 617: NaRT repository, 22 Oct 2026; Small Ramsey Numbers rev. 18 printed blank; read 5 Nov 2026",
-  "kind": "direct colouring"
+  "kind": "direct colouring",
+  "provenance": {
+   "keeper": "Small Ramsey Numbers (S. Radziszowski), EJC Dynamic Survey DS1",
+   "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1",
+   "read": "2026-11-05",
+   "revision": "revision 18 (24 Apr 2026) and later sources named",
+   "holder": "NaRT repository, 22 Oct 2026"
+  }
  },
- "verified_pending": []
+ "verified_pending": [],
+ "score": "n, the number of vertices of the colouring; it proves R(9,11) >= n + 1 (larger is better)",
+ "added": "0"
 }

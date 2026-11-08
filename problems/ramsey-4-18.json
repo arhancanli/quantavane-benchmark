@@ -1,8 +1,9 @@
 {
  "id": "ramsey-4-18",
+ "family": "ramsey",
  "title": "Ramsey number R(4,18), lower bound",
  "page": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1",
- "statement": "Find a two-colouring of the edges of K_n with no red K_4 and no blue K_18; it shows R(4,18) > n. The best known lower bound is R(4,18) >= 209, so a colouring of K_208 is known and one of K_209 or more would improve it.",
+ "statement": "Find a two-colouring of the edges of K_n with no red K_4 and no blue K_18; it shows R(4,18) > n. The best known lower bound is R(4,18) >= 211, so a colouring of K_210 is known and one of K_211 or more would improve it.",
  "objective": "maximize",
  "submission": "Text file: the n x n adjacency matrix of the red graph, one line of n characters 0/1 per vertex (1 red, 0 blue), symmetric with a zero diagonal; n <= 2048.",
  "checker": {
@@ -14,10 +15,22 @@
   "value": "ramsey"
  },
  "best_known": {
-  "value": "208",
-  "exact": "208",
-  "source": "R(4,18) >= 209: NaRT, arXiv:2603.09172v3-v5 and repository; Small Ramsey Numbers rev. 18 printed 205; read 5 Nov 2026",
-  "kind": "direct colouring"
+  "value": "210",
+  "exact": "210",
+  "source": "R(4,18) >= 211: Canli, github.com/arhancanli/quantavane-ramsey-records (K_210, one vertex added to our K_209, found 8 Nov 2026); before it 210 (Canli, K_209, 8 Nov 2026) and 209 [NaRT repository]; Small Ramsey Numbers rev. 18 printed 205; read 8 Nov 2026",
+  "kind": "direct colouring",
+  "provenance": {
+   "keeper": "Small Ramsey Numbers (S. Radziszowski), EJC Dynamic Survey DS1",
+   "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1",
+   "read": "2026-11-08",
+   "revision": "revision 18 (24 Apr 2026) and later sources named",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true
+  }
  },
- "verified_pending": []
+ "verified_pending": [],
+ "score": "n, the number of vertices of the colouring; it proves R(4,18) >= n + 1 (larger is better)",
+ "added": "0",
+ "quantavane_record": true,
+ "quantavane_note": "our colouring is the best known (public in arhancanli/quantavane-ramsey-records)"
 }

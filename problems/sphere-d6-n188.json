@@ -1,5 +1,6 @@
 {
  "id": "sphere-d6-n188",
+ "family": "spherical-code",
  "title": "Spherical code: 188 points on the sphere in R^6",
  "page": "https://spherical-codes.org/",
  "statement": "Place 188 points on the unit sphere in R^6 so that the largest cosine between two distinct points is as small as possible. The best known value in Henry Cohn's table of spherical codes is 0.674695081992 (our code, rounded up to the table's 12 decimals); a code improves it when its largest cosine is smaller by at least one unit in the 12th decimal.",
@@ -16,7 +17,19 @@
  "best_known": {
   "value": "0.674695081992",
   "source": "spherical-codes.org (Henry Cohn's table), entry (6, 188): our code, largest cosine 0.67469508199124100145 (listed since 2026-10-26; before it 0.674709835503); read 6 Nov 2026",
-  "kind": "table entry"
+  "kind": "table entry",
+  "provenance": {
+   "keeper": "H. Cohn, table of spherical codes",
+   "url": "https://spherical-codes.org/",
+   "read": "2026-11-06",
+   "revision": "table read on the date given",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true
+  }
  },
- "verified_pending": []
+ "verified_pending": [],
+ "score": "the largest cosine between two of the points (smaller is better)",
+ "added": "1",
+ "quantavane_record": true,
+ "quantavane_note": "our object is the best known entry of the source table"
 }

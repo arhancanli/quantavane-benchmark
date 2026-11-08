@@ -1,5 +1,6 @@
 {
  "id": "ramsey-5-15",
+ "family": "ramsey",
  "title": "Ramsey number R(5,15), lower bound",
  "page": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1",
  "statement": "Find a two-colouring of the edges of K_n with no red K_5 and no blue K_15; it shows R(5,15) > n. The best known lower bound is R(5,15) >= 283, so a colouring of K_282 is known and one of K_283 or more would improve it.",
@@ -17,7 +18,19 @@
   "value": "282",
   "exact": "282",
   "source": "R(5,15) >= 283: Canli, github.com/arhancanli/quantavane-ramsey-records (circulant K_282, found 5 Nov 2026); before it 279 (Canli, Zenodo 23857057); Small Ramsey Numbers rev. 18 printed 275; read 6 Nov 2026",
-  "kind": "direct colouring"
+  "kind": "direct colouring",
+  "provenance": {
+   "keeper": "Small Ramsey Numbers (S. Radziszowski), EJC Dynamic Survey DS1",
+   "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1",
+   "read": "2026-11-06",
+   "revision": "revision 18 (24 Apr 2026) and later sources named",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true
+  }
  },
- "verified_pending": []
+ "verified_pending": [],
+ "score": "n, the number of vertices of the colouring; it proves R(5,15) >= n + 1 (larger is better)",
+ "added": "0",
+ "quantavane_record": true,
+ "quantavane_note": "our colouring is the best known (public in arhancanli/quantavane-ramsey-records)"
 }

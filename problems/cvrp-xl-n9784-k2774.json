@@ -1,5 +1,6 @@
 {
  "id": "cvrp-xl-n9784-k2774",
+ "family": "vehicle-routing",
  "title": "Vehicle routing: XL-n9784-k2774 (CVRPLIB, 9,783 customers)",
  "page": "https://galgos.inf.puc-rio.br/cvrplib/en/cvrp/instances",
  "statement": "Serve the 9,783 customers of XL-n9784-k2774, a instance of CVRPLIB's XL set, released for the CVRPLIB Best Known Solution Challenge, from its depot with vehicles of capacity 19: each customer on exactly one route, the demand on each route at most 19, any number of routes. The cost is the total length of the routes, depot to depot, each distance the Euclidean distance rounded to the nearest integer (EUC_2D). The best known cost on CVRPLIB is 4,076,853 (our solution); it is not proven optimal. A solution of smaller cost improves it.",
@@ -16,7 +17,19 @@
   "value": "4076853",
   "exact": "4076853",
   "source": "CVRPLIB (galgos.inf.puc-rio.br/cvrplib), instance XL-n9784-k2774 (id 378): best known cost 4,076,853, our solution, listed since 2026-10-28 (before it 4,076,860), not proven optimal; read 6 Nov 2026 13:22 UTC",
-  "kind": "table entry"
+  "kind": "table entry",
+  "provenance": {
+   "keeper": "CVRPLIB",
+   "url": "https://galgos.inf.puc-rio.br/cvrplib/en/cvrp/instances",
+   "read": "2026-11-06",
+   "revision": "best known solutions read on the date given",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true
+  }
  },
- "verified_pending": []
+ "verified_pending": [],
+ "score": "the total length of the routes, distances rounded exactly in integers (smaller is better)",
+ "added": "1",
+ "quantavane_record": true,
+ "quantavane_note": "our object is the best known entry of the source table"
 }

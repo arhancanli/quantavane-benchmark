@@ -1,5 +1,6 @@
 {
  "id": "ramsey-7-16",
+ "family": "ramsey",
  "title": "Ramsey number R(7,16), lower bound",
  "page": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1",
  "statement": "Find a two-colouring of the edges of K_n with no red K_7 and no blue K_16; it shows R(7,16) > n. The best known lower bound is R(7,16) >= 649, so a colouring of K_648 is known and one of K_649 or more would improve it.",
@@ -17,7 +18,16 @@
   "value": "648",
   "exact": "648",
   "source": "R(7,16) >= 649: implied by the recursion i: 4 R(4,15) - 3; Small Ramsey Numbers rev. 18 printed 629; read 5 Nov 2026",
-  "kind": "recursion"
+  "kind": "recursion",
+  "provenance": {
+   "keeper": "Small Ramsey Numbers (S. Radziszowski), EJC Dynamic Survey DS1",
+   "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1",
+   "read": "2026-11-05",
+   "revision": "revision 18 (24 Apr 2026) and later sources named",
+   "holder": "implied by the recursion i: 4 R(4,15) - 3"
+  }
  },
- "verified_pending": []
+ "verified_pending": [],
+ "score": "n, the number of vertices of the colouring; it proves R(7,16) >= n + 1 (larger is better)",
+ "added": "0"
 }

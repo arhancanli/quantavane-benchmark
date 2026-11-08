@@ -1,5 +1,6 @@
 {
  "id": "1d-upper",
+ "family": "constant",
  "title": "Signed third autocorrelation constant C_1d, upper bound",
  "page": "https://teorth.github.io/optimizationproblems/constants/1d.html",
  "statement": "A step function f with n equal cells on [-1/4, 1/4] (signed values v) gives C_1d <= 2n max_m |c_m| / S^2 with c = v * v and S = sum v. Find v making this smaller.",
@@ -14,7 +15,14 @@
  },
  "best_known": {
   "value": "1.457854884921989",
-  "source": "[SCIEL2026], starred, on the 1d page (main 87b4ebb); unstarred 1.4630715826075594 [CERT2026]"
+  "source": "[SCIEL2026], starred, on the 1d page (main 87b4ebb); unstarred 1.4630715826075594 [CERT2026]",
+  "provenance": {
+   "keeper": "T. Tao et al., optimization constants repository (teorth/optimizationproblems)",
+   "url": "https://teorth.github.io/optimizationproblems/constants/1d.html",
+   "read": null,
+   "revision": "main 87b4ebb",
+   "holder": "[SCIEL2026], starred, on the 1d page (main 87b4ebb)"
+  }
  },
  "verified_pending": [
   {
@@ -22,5 +30,8 @@
    "source": "https://github.com/teorth/optimizationproblems/pull/312 (Julsgaard, 81,920 cells), replayed 4 Nov 2026",
    "exact": "9900630255081376929482866688/6805830738283663732311831361"
   }
- ]
+ ],
+ "score": "a certified upper bound on the constant (exact; smaller is better)",
+ "added": "0",
+ "quantavane_note": "our pull request teorth/optimizationproblems#345 claims 1.454683534422819 (in review)"
 }

@@ -1,5 +1,6 @@
 {
  "id": "ramsey-8-10",
+ "family": "ramsey",
  "title": "Ramsey number R(8,10), lower bound",
  "page": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1",
  "statement": "Find a two-colouring of the edges of K_n with no red K_8 and no blue K_10; it shows R(8,10) > n. The best known lower bound is R(8,10) >= 345, so a colouring of K_344 is known and one of K_345 or more would improve it.",
@@ -17,7 +18,16 @@
   "value": "344",
   "exact": "344",
   "source": "R(8,10) >= 345: Cremer, arXiv:2610.12122; Small Ramsey Numbers rev. 18 printed 343; read 5 Nov 2026",
-  "kind": "direct colouring"
+  "kind": "direct colouring",
+  "provenance": {
+   "keeper": "Small Ramsey Numbers (S. Radziszowski), EJC Dynamic Survey DS1",
+   "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1",
+   "read": "2026-11-05",
+   "revision": "revision 18 (24 Apr 2026) and later sources named",
+   "holder": "Cremer, arXiv:2610.12122"
+  }
  },
- "verified_pending": []
+ "verified_pending": [],
+ "score": "n, the number of vertices of the colouring; it proves R(8,10) >= n + 1 (larger is better)",
+ "added": "0"
 }

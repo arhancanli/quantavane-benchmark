@@ -1,5 +1,6 @@
 {
  "id": "covering-21-8-3-4",
+ "family": "covering-design",
  "title": "Covering design C(21,8,3,4)",
  "page": "https://www.coveringrepository.com/",
  "statement": "Find 8-subsets (blocks) of {1, ..., 21} such that every 4-subset meets some block in at least 3 points, with as few blocks as possible. The best known size in the Covering Repository is 16 blocks (ours); a design with fewer blocks improves it.",
@@ -19,7 +20,19 @@
   "value": "16",
   "exact": "16",
   "source": "Covering Repository (coveringrepository.com), C(21,8,3,4) = 16 blocks: ours, listed since 2026-10-26 (before it 17); read 6 Nov 2026",
-  "kind": "table entry"
+  "kind": "table entry",
+  "provenance": {
+   "keeper": "Covering Repository",
+   "url": "https://www.coveringrepository.com/",
+   "read": "2026-11-06",
+   "revision": "repository read on the date given",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true
+  }
  },
- "verified_pending": []
+ "verified_pending": [],
+ "score": "the number of blocks (smaller is better)",
+ "added": "1",
+ "quantavane_record": true,
+ "quantavane_note": "our object is the best known entry of the source table"
 }
