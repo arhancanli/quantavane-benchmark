@@ -1,0 +1,32 @@
+{
+ "id": "golomb-30",
+ "family": "golomb-ruler",
+ "title": "Golomb ruler with 30 marks, shortest known",
+ "page": "https://leapsinbounds.org/constants/golomb-ruler-30/",
+ "statement": "Place 30 marks on a ruler (integers) so that all differences between two marks are distinct, with the ruler as short as possible. The shortest known ruler with 30 marks has length 680 (Atkinson and Hassenklover, 1984, in J. B. Shearer's table); a shorter one improves it. Rulers with up to 28 marks are proved optimal.",
+ "objective": "minimize",
+ "submission": "Text file: the 30 marks, integers separated by whitespace or commas.",
+ "checker": {
+  "program": "golomb_check.py",
+  "args": [
+   "30"
+  ],
+  "value": "result"
+ },
+ "score": "the length (largest minus smallest mark; smaller is better)",
+ "best_known": {
+  "value": "680",
+  "exact": "680",
+  "source": "G(30) <= 680: Atkinson and Hassenklover (1984), in J. B. Shearer's table of Golomb rulers and Leaps in Bounds (github.com/daniel-munro/leaps-in-bounds), data at commit 4521e13 (8 Nov 2026); read 8 Nov 2026",
+  "kind": "table entry",
+  "provenance": {
+   "keeper": "J. B. Shearer, table of shortest known Golomb rulers",
+   "url": "https://leapsinbounds.org",
+   "read": "2026-11-08",
+   "revision": "Leaps in Bounds data at 4521e13",
+   "holder": "Atkinson and Hassenklover (1984)"
+  }
+ },
+ "verified_pending": [],
+ "added": "1.1"
+}

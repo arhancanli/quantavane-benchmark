@@ -1,0 +1,33 @@
+{
+ "id": "vdw-2-7",
+ "family": "van-der-waerden",
+ "title": "Van der Waerden number W(2,7), lower bound",
+ "page": "https://leapsinbounds.org/constants/van-der-waerden-2-7/",
+ "statement": "Colour n consecutive integers with 2 colours so that no colour holds an arithmetic progression of 7 terms, with n as large as possible; it shows W(2,7) > n. The best known lower bound is W(2,7) >= 3704, by Rabung and Lotts (2012), so such a colouring of 3703 integers is known and one of 3704 or more would improve it.",
+ "objective": "maximize",
+ "submission": "Text file: the colours of the n integers in order, digits 0..1 (whitespace ignored).",
+ "checker": {
+  "program": "vdw_check.py",
+  "args": [
+   "2",
+   "7"
+  ],
+  "value": "result"
+ },
+ "score": "n, the number of integers coloured; it proves W(2,7) >= n + 1 (larger is better)",
+ "best_known": {
+  "value": "3703",
+  "exact": "3703",
+  "source": "W(2,7) >= 3704: Rabung and Lotts (2012), in Leaps in Bounds (github.com/daniel-munro/leaps-in-bounds), data at commit 4521e13 (8 Nov 2026); read 8 Nov 2026",
+  "kind": "table entry",
+  "provenance": {
+   "keeper": "Leaps in Bounds, van der Waerden numbers",
+   "url": "https://leapsinbounds.org",
+   "read": "2026-11-08",
+   "revision": "data at commit 4521e13",
+   "holder": "Rabung and Lotts (2012)"
+  }
+ },
+ "verified_pending": [],
+ "added": "1.1"
+}

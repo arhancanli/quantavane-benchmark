@@ -1,0 +1,33 @@
+{
+ "id": "schur-6",
+ "family": "schur",
+ "title": "Schur number S(6), lower bound",
+ "page": "https://leapsinbounds.org/constants/schur-6/",
+ "statement": "Colour 1, 2, ..., n with 6 colours so that no colour holds a solution of x + y = z (x = y allowed), with n as large as possible; it shows S(6) >= n. The best known lower bound is S(6) >= 537, by Chen, Zhu and Long (2026); a colouring of 1..538 or more would improve it.",
+ "objective": "maximize",
+ "submission": "Text file: the colours of 1..n in order, digits 0..5 (whitespace ignored).",
+ "checker": {
+  "program": "schur_check.py",
+  "args": [
+   "schur",
+   "6"
+  ],
+  "value": "result"
+ },
+ "score": "n, the length of the colouring; it proves S(6) >= n (larger is better)",
+ "best_known": {
+  "value": "537",
+  "exact": "537",
+  "source": "S(6) >= 537: Chen, Zhu and Long (2026), in Leaps in Bounds (github.com/daniel-munro/leaps-in-bounds), data at commit 4521e13 (8 Nov 2026); read 8 Nov 2026",
+  "kind": "table entry",
+  "provenance": {
+   "keeper": "Leaps in Bounds, Schur and weak Schur numbers",
+   "url": "https://leapsinbounds.org",
+   "read": "2026-11-08",
+   "revision": "data at commit 4521e13",
+   "holder": "Chen, Zhu and Long (2026)"
+  }
+ },
+ "verified_pending": [],
+ "added": "1.1"
+}

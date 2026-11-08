@@ -1,0 +1,32 @@
+{
+ "id": "capset-n7",
+ "family": "cap-set",
+ "title": "Cap set in F_3^7, lower bound",
+ "page": "https://leapsinbounds.org/constants/cap-set-7/",
+ "statement": "Find as many points as possible in F_3^7 with no three distinct points on a line (no x + y + z = 0). The largest known cap set in dimension 7, by Calderbank and Fishburn (1994), has 236 points; a larger one improves it.",
+ "objective": "maximize",
+ "submission": "Text file: the points separated by whitespace, each as 7 digits 0-2 with nothing between them.",
+ "checker": {
+  "program": "capset_check.py",
+  "args": [
+   "7"
+  ],
+  "value": "result"
+ },
+ "score": "the number of points (larger is better)",
+ "best_known": {
+  "value": "236",
+  "exact": "236",
+  "source": "r(7) >= 236: Calderbank and Fishburn (1994), in Leaps in Bounds (github.com/daniel-munro/leaps-in-bounds), data at commit 4521e13 (8 Nov 2026); read 8 Nov 2026",
+  "kind": "table entry",
+  "provenance": {
+   "keeper": "Leaps in Bounds, cap sets",
+   "url": "https://leapsinbounds.org",
+   "read": "2026-11-08",
+   "revision": "data at commit 4521e13",
+   "holder": "Calderbank and Fishburn (1994)"
+  }
+ },
+ "verified_pending": [],
+ "added": "1.1"
+}

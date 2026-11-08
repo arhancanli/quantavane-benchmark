@@ -1,0 +1,32 @@
+{
+ "id": "superperm-n6",
+ "family": "superpermutation",
+ "title": "Shortest superpermutation on 6 symbols",
+ "page": "https://leapsinbounds.org/constants/minimal-superpermutation-6/",
+ "statement": "Find a string over 1..6 that contains every permutation of 1..6 as 6 consecutive characters, as short as possible. The shortest known, by Houston (2014), has length 872; a shorter one improves it.",
+ "objective": "minimize",
+ "submission": "Text file: the string, digits 1..6 (whitespace ignored).",
+ "checker": {
+  "program": "superperm_check.py",
+  "args": [
+   "6"
+  ],
+  "value": "result"
+ },
+ "score": "the length of the string (smaller is better)",
+ "best_known": {
+  "value": "872",
+  "exact": "872",
+  "source": "L(6) <= 872: Houston (2014), in Leaps in Bounds (github.com/daniel-munro/leaps-in-bounds), data at commit 4521e13 (8 Nov 2026); read 8 Nov 2026",
+  "kind": "table entry",
+  "provenance": {
+   "keeper": "Leaps in Bounds, minimal superpermutations",
+   "url": "https://leapsinbounds.org",
+   "read": "2026-11-08",
+   "revision": "data at commit 4521e13",
+   "holder": "Houston (2014)"
+  }
+ },
+ "verified_pending": [],
+ "added": "1.1"
+}

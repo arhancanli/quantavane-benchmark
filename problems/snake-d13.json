@@ -1,0 +1,33 @@
+{
+ "id": "snake-d13",
+ "family": "snake-in-the-box",
+ "title": "Snake-in-the-box in dimension 13",
+ "page": "https://www.minortriad.com/snake/",
+ "statement": "Find an induced path in the hypercube Q_13 (two of its vertices adjacent only when consecutive) with as many edges as possible. The longest known, by Toner (2026), has 2946 edges; a longer one improves it.",
+ "objective": "maximize",
+ "submission": "Text file: the transition sequence from the vertex 0, one character per edge for the coordinate that changes (0-9, then a-z; whitespace ignored).",
+ "checker": {
+  "program": "snake_check.py",
+  "args": [
+   "snake",
+   "13"
+  ],
+  "value": "result"
+ },
+ "score": "the number of edges (larger is better)",
+ "best_known": {
+  "value": "2946",
+  "exact": "2946",
+  "source": "snake of length 2946 in Q_13: Toner (2026), on the snake-in-the-box records page (T. Ace, minortriad.com/snake) and in Leaps in Bounds (github.com/daniel-munro/leaps-in-bounds), data at commit 4521e13 (8 Nov 2026); read 8 Nov 2026",
+  "kind": "table entry",
+  "provenance": {
+   "keeper": "T. Ace, snake-in-the-box records",
+   "url": "https://www.minortriad.com/snake/",
+   "read": "2026-11-08",
+   "revision": "Leaps in Bounds data at 4521e13",
+   "holder": "Toner (2026)"
+  }
+ },
+ "verified_pending": [],
+ "added": "1.1"
+}

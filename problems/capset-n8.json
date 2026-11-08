@@ -1,0 +1,32 @@
+{
+ "id": "capset-n8",
+ "family": "cap-set",
+ "title": "Cap set in F_3^8, lower bound",
+ "page": "https://leapsinbounds.org/constants/cap-set-8/",
+ "statement": "Find as many points as possible in F_3^8 with no three distinct points on a line (no x + y + z = 0). The largest known cap set in dimension 8, by Romera-Paredes et al. (2023, FunSearch), has 512 points; a larger one improves it.",
+ "objective": "maximize",
+ "submission": "Text file: the points separated by whitespace, each as 8 digits 0-2 with nothing between them.",
+ "checker": {
+  "program": "capset_check.py",
+  "args": [
+   "8"
+  ],
+  "value": "result"
+ },
+ "score": "the number of points (larger is better)",
+ "best_known": {
+  "value": "512",
+  "exact": "512",
+  "source": "r(8) >= 512: Romera-Paredes et al. (2023, FunSearch), in Leaps in Bounds (github.com/daniel-munro/leaps-in-bounds), data at commit 4521e13 (8 Nov 2026); read 8 Nov 2026",
+  "kind": "table entry",
+  "provenance": {
+   "keeper": "Leaps in Bounds, cap sets",
+   "url": "https://leapsinbounds.org",
+   "read": "2026-11-08",
+   "revision": "data at commit 4521e13",
+   "holder": "Romera-Paredes et al. (2023, FunSearch)"
+  }
+ },
+ "verified_pending": [],
+ "added": "1.1"
+}

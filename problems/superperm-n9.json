@@ -1,0 +1,32 @@
+{
+ "id": "superperm-n9",
+ "family": "superpermutation",
+ "title": "Shortest superpermutation on 9 symbols",
+ "page": "https://leapsinbounds.org/constants/minimal-superpermutation-9/",
+ "statement": "Find a string over 1..9 that contains every permutation of 1..9 as 9 consecutive characters, as short as possible. The shortest known, by Egan's construction (2019), has length 408966; a shorter one improves it.",
+ "objective": "minimize",
+ "submission": "Text file: the string, digits 1..9 (whitespace ignored).",
+ "checker": {
+  "program": "superperm_check.py",
+  "args": [
+   "9"
+  ],
+  "value": "result"
+ },
+ "score": "the length of the string (smaller is better)",
+ "best_known": {
+  "value": "408966",
+  "exact": "408966",
+  "source": "L(9) <= 408966: Egan's construction (2019), in Leaps in Bounds (github.com/daniel-munro/leaps-in-bounds), data at commit 4521e13 (8 Nov 2026); read 8 Nov 2026",
+  "kind": "table entry",
+  "provenance": {
+   "keeper": "Leaps in Bounds, minimal superpermutations",
+   "url": "https://leapsinbounds.org",
+   "read": "2026-11-08",
+   "revision": "data at commit 4521e13",
+   "holder": "Egan's construction (2019)"
+  }
+ },
+ "verified_pending": [],
+ "added": "1.1"
+}

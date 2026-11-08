@@ -1,0 +1,32 @@
+{
+ "id": "superperm-n7",
+ "family": "superpermutation",
+ "title": "Shortest superpermutation on 7 symbols",
+ "page": "https://leapsinbounds.org/constants/minimal-superpermutation-7/",
+ "statement": "Find a string over 1..7 that contains every permutation of 1..7 as 7 consecutive characters, as short as possible. The shortest known, by Teodorescu (2026), has length 5905; a shorter one improves it.",
+ "objective": "minimize",
+ "submission": "Text file: the string, digits 1..7 (whitespace ignored).",
+ "checker": {
+  "program": "superperm_check.py",
+  "args": [
+   "7"
+  ],
+  "value": "result"
+ },
+ "score": "the length of the string (smaller is better)",
+ "best_known": {
+  "value": "5905",
+  "exact": "5905",
+  "source": "L(7) <= 5905: Teodorescu (2026), in Leaps in Bounds (github.com/daniel-munro/leaps-in-bounds), data at commit 4521e13 (8 Nov 2026); read 8 Nov 2026",
+  "kind": "table entry",
+  "provenance": {
+   "keeper": "Leaps in Bounds, minimal superpermutations",
+   "url": "https://leapsinbounds.org",
+   "read": "2026-11-08",
+   "revision": "data at commit 4521e13",
+   "holder": "Teodorescu (2026)"
+  }
+ },
+ "verified_pending": [],
+ "added": "1.1"
+}

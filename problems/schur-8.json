@@ -1,0 +1,33 @@
+{
+ "id": "schur-8",
+ "family": "schur",
+ "title": "Schur number S(8), lower bound",
+ "page": "https://leapsinbounds.org/constants/schur-8/",
+ "statement": "Colour 1, 2, ..., n with 8 colours so that no colour holds a solution of x + y = z (x = y allowed), with n as large as possible; it shows S(8) >= n. The best known lower bound is S(8) >= 5372, by Chen, Zhu and Long (2026), by a recurrence from S(6) >= 537; a colouring of 1..5373 or more would improve it.",
+ "objective": "maximize",
+ "submission": "Text file: the colours of 1..n in order, digits 0..7 (whitespace ignored).",
+ "checker": {
+  "program": "schur_check.py",
+  "args": [
+   "schur",
+   "8"
+  ],
+  "value": "result"
+ },
+ "score": "n, the length of the colouring; it proves S(8) >= n (larger is better)",
+ "best_known": {
+  "value": "5372",
+  "exact": "5372",
+  "source": "S(8) >= 5372: Chen, Zhu and Long (2026), by a recurrence from S(6) >= 537, in Leaps in Bounds (github.com/daniel-munro/leaps-in-bounds), data at commit 4521e13 (8 Nov 2026); read 8 Nov 2026",
+  "kind": "table entry",
+  "provenance": {
+   "keeper": "Leaps in Bounds, Schur and weak Schur numbers",
+   "url": "https://leapsinbounds.org",
+   "read": "2026-11-08",
+   "revision": "data at commit 4521e13",
+   "holder": "Chen, Zhu and Long (2026), by a recurrence from S(6) >= 537"
+  }
+ },
+ "verified_pending": [],
+ "added": "1.1"
+}
