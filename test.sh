@@ -96,4 +96,152 @@ sed -n '1p' refs/ours_cw_34_6_5.txt | cat - refs/ours_cw_34_6_5.txt > certs/cont
 t cw-34-6-5 certs/control_cw_repeated.txt "NOT CERTIFIED,"
 sed '1s/$/ 34/' refs/ours_cw_34_6_5.txt > certs/control_cw_weight.txt
 t cw-34-6-5 certs/control_cw_weight.txt "NOT CERTIFIED,"
+# v1.1: our public Ramsey colourings (arhancanli/quantavane-ramsey-records), our cage graphs sent to House of Graphs,
+# and classical constructions built by our own code (refs/README.md)
+t ramsey-3-18 refs/ours_ramsey_3_18_n100.txt "does not improve,"
+t ramsey-4-18 refs/ours_ramsey_4_18_n210.txt "does not improve,"
+t ramsey-5-15 refs/ours_ramsey_5_15_n282.txt "does not improve,"
+t cage-6-9 refs/ours_cage_6_9_n5600.s6 "IMPROVES,does not improve,"
+t cage-7-9 refs/ours_cage_7_9_n17600.s6 "IMPROVES,does not improve,"
+t multiramsey-3-3-3-3 refs/classic_multiramsey_3333_n32.txt "does not improve,"
+t multiramsey-4-4-4 refs/classic_multiramsey_444_n127.txt "does not improve,"
+t kissing-d5 refs/classic_kissing_d5_D5_n40.txt "does not improve,"
+t kissing-d6 refs/classic_kissing_d6_E6_n72.txt "does not improve,"
+t kissing-d7 refs/classic_kissing_d7_E7_n126.txt "does not improve,"
+t kissing-d16 refs/classic_kissing_d16_BW16_n4320.txt "does not improve,"
+t sortnet-n13-size refs/classic_sortnet_batcher_n13.txt "does not improve,"
+t sortnet-n16-size refs/classic_sortnet_batcher_n16.txt "does not improve,"
+t sortnet-n20-size refs/classic_sortnet_batcher_n20.txt "does not improve,"
+t sortnet-n24-size refs/classic_sortnet_batcher_n24.txt "does not improve,"
+t sortnet-n28-size refs/classic_sortnet_batcher_n28.txt "does not improve,"
+t sortnet-n32-size refs/classic_sortnet_batcher_n32.txt "does not improve,"
+t sortnet-n33-size refs/classic_sortnet_batcher_n33.txt "does not improve,"
+t golomb-29 refs/classic_golomb_erdos_turan_m29.txt "does not improve,"
+t golomb-30 refs/classic_golomb_erdos_turan_m30.txt "does not improve,"
+t superperm-n8 refs/classic_superperm_n8.txt "does not improve,"
+t superperm-n9 refs/classic_superperm_n9.txt "does not improve,"
+t shannon-c7-power5 refs/classic_shannon_c7_k5_n243.txt "does not improve,"
+# v1.1: Leaps in Bounds certificates (fetch.sh), replayed by our checkers
+t snake-d9 certs/lib_snake-in-the-box-9-lower-191.txt "does not improve,"
+t snake-d10 certs/lib_snake-in-the-box-10-lower-379.txt "does not improve,"
+t snake-d11 certs/lib_snake-in-the-box-11-lower-750.txt "does not improve,"
+t snake-d12 certs/lib_snake-in-the-box-12-lower-1480.txt "does not improve,"
+t snake-d13 certs/lib_snake-in-the-box-13-lower-2946.txt "does not improve,"
+t coil-d9 certs/lib_coil-in-the-box-9-lower-192.txt "does not improve,"
+t coil-d10 certs/lib_coil-in-the-box-10-lower-374.txt "does not improve,"
+t coil-d11 certs/lib_coil-in-the-box-11-lower-740.txt "does not improve,"
+t coil-d12 certs/lib_coil-in-the-box-12-lower-1468.txt "does not improve,"
+t coil-d13 certs/lib_coil-in-the-box-13-lower-2930.txt "does not improve,"
+t capset-n7 certs/lib_cap-set-7-lower-236.txt "does not improve,"
+t capset-n8 certs/lib_cap-set-8-lower-512.txt "does not improve,"
+t superperm-n6 certs/lib_minimal-superpermutation-6-upper-873.txt "does not improve,"
+t superperm-n7 certs/lib_minimal-superpermutation-7-upper-5913.txt "does not improve,"
+t schur-6 certs/lib_schur-6-lower-537.txt "does not improve,"
+t schur-7 certs/lib_schur-7-lower-1696.txt "does not improve,"
+t schur-8 certs/lib_schur-8-lower-5372.txt "does not improve,"
+t weak-schur-5 certs/lib_weak-schur-5-lower-207.txt "does not improve,"
+t weak-schur-6 certs/lib_weak-schur-6-lower-650.txt "does not improve,"
+t vdw-2-7 certs/lib_van-der-waerden-2-7-lower-3704.txt "does not improve,"
+t vdw-2-8 certs/lib_van-der-waerden-2-8-lower-11496.txt "does not improve,"
+t vdw-4-4 certs/lib_van-der-waerden-4-4-lower-1049.txt "does not improve,"
+t vdw-4-5 certs/lib_van-der-waerden-4-5-lower-17706.txt "does not improve,"
+t vdw-5-4 certs/lib_van-der-waerden-5-4-lower-2255.txt "does not improve,"
+t vdw-6-4 certs/lib_van-der-waerden-6-4-lower-9779.txt "does not improve,"
+t no3line-75 certs/lib_no-three-in-line-75-lower-148.txt "does not improve,"
+t no3line-77 certs/lib_no-three-in-line-77-lower-152.txt "does not improve,"
+t degdiam-3-5 certs/lib_degree-diameter-3-5-lower-64.s6 "does not improve,"
+t degdiam-3-6 certs/lib_degree-diameter-3-6-lower-64.s6 "does not improve,"
+t degdiam-3-7 certs/lib_degree-diameter-3-7-lower-162.s6 "does not improve,"
+t degdiam-3-8 certs/lib_degree-diameter-3-8-lower-272.s6 "does not improve,"
+t degdiam-3-9 certs/lib_degree-diameter-3-9-lower-506.s6 "does not improve,"
+t degdiam-3-10 certs/lib_degree-diameter-3-10-lower-820.s6 "does not improve,"
+t degdiam-4-3 certs/lib_degree-diameter-4-3-lower-41.s6 "does not improve,"
+t degdiam-4-4 certs/lib_degree-diameter-4-4-lower-84.s6 "does not improve,"
+t degdiam-4-5 certs/lib_degree-diameter-4-5-lower-205.s6 "does not improve,"
+t degdiam-5-3 certs/lib_degree-diameter-5-3-lower-54.s6 "does not improve,"
+t degdiam-5-4 certs/lib_degree-diameter-5-4-lower-210.s6 "does not improve,"
+t degdiam-8-2 certs/lib_degree-diameter-8-2-lower-57.s6 "does not improve,"
+t degdiam-8-3 certs/lib_degree-diameter-8-3-lower-253.s6 "does not improve,"
+t degdiam-8-4 certs/lib_degree-diameter-8-4-lower-1029.s6 "does not improve,"
+t degdiam-9-3 certs/lib_degree-diameter-9-3-lower-256.s6 "does not improve,"
+t degdiam-10-2 certs/lib_degree-diameter-10-2-lower-91.s6 "does not improve,"
+t degdiam-10-3 certs/lib_degree-diameter-10-3-lower-366.s6 "does not improve,"
+t degdiam-11-3 certs/lib_degree-diameter-11-3-lower-420.s6 "does not improve,"
+# the Schur partitions of 1..537 and 1..1696 colour K_538 and K_1697 without monochromatic triangles (edge {i,j} by
+# the class of |i-j|): R_6(3) >= 539 and R_7(3) >= 1698
+schur_to_kn() { python3 -I -c 'import sys
+s = "".join(open(sys.argv[1]).read().split())
+n = len(s) + 1
+sys.stdout.write("".join("".join("-" if i == j else s[abs(i - j) - 1] for j in range(n)) + "\n" for i in range(n)))' "$1"; }
+schur_to_kn certs/lib_schur-6-lower-537.txt > certs/derived_r63_from_schur6_n538.txt
+t multiramsey-3-3-3-3-3-3 certs/derived_r63_from_schur6_n538.txt "does not improve,"
+schur_to_kn certs/lib_schur-7-lower-1696.txt > certs/derived_r73_from_schur7_n1697.txt
+t multiramsey-3-3-3-3-3-3-3 certs/derived_r73_from_schur7_n1697.txt "does not improve,"
+# v1.1 red controls: each must be refused
+cp refs/ours_ramsey_3_18_n100.txt certs/control_ramsey_blue_k17.txt            # independence number 17: a blue K_17
+t ramsey-3-17 certs/control_ramsey_blue_k17.txt "NOT CERTIFIED,"
+printf -- '-00\n0-0\n00-\n' > certs/control_multiramsey_triangle.txt            # a triangle in colour 0
+t multiramsey-3-3-3-3 certs/control_multiramsey_triangle.txt "NOT CERTIFIED,"
+printf '0 1\n1 2\n2 3\n3 4\n4 0\n0 5\n1 6\n2 7\n3 8\n4 9\n5 7\n7 9\n9 6\n6 8\n8 5\n' > certs/control_cage_petersen.txt
+t cage-3-13 certs/control_cage_petersen.txt "NOT CERTIFIED,"                    # cubic, girth 5
+sed '$d' certs/control_cage_petersen.txt > certs/control_cage_not_regular.txt
+t cage-3-13 certs/control_cage_not_regular.txt "NOT CERTIFIED,"                 # two vertices of degree 2
+cp refs/ours_cage_6_9_n5600.s6 certs/control_cage_girth9_as_10.s6
+t cage-6-10 certs/control_cage_girth9_as_10.s6 "NOT CERTIFIED,"                 # girth 9, not 10
+printf '0 1\n0 2\n0 3\n0 4\n' > certs/control_degdiam_star.txt
+t degdiam-3-5 certs/control_degdiam_star.txt "NOT CERTIFIED,"                   # degree 4 > 3
+cp certs/lib_degree-diameter-3-10-lower-820.s6 certs/control_degdiam_diameter10_as_9.s6
+t degdiam-3-9 certs/control_degdiam_diameter10_as_9.s6 "NOT CERTIFIED,"         # diameter 10 > 9
+(grep -v '^#' refs/classic_kissing_d5_D5_n40.txt | head -1; cat refs/classic_kissing_d5_D5_n40.txt) > certs/control_kissing_repeat.txt
+t kissing-d5 certs/control_kissing_repeat.txt "NOT CERTIFIED,"                  # a vector twice
+cp refs/classic_kissing_d6_E6_n72.txt certs/control_kissing_rank6_as_5.txt
+t kissing-d5 certs/control_kissing_rank6_as_5.txt "NOT CERTIFIED,"              # spans dimension 6
+(cat refs/classic_kissing_d5_D5_n40.txt; echo '2 0 0 0 0') > certs/control_kissing_norm.txt
+t kissing-d5 certs/control_kissing_norm.txt "NOT CERTIFIED,"                    # squared norm 4, not 2
+sed '$d' refs/classic_sortnet_batcher_n16.txt > certs/control_sortnet_missing_last.txt
+t sortnet-n16-size certs/control_sortnet_missing_last.txt "NOT CERTIFIED,"     # last comparator removed
+printf '0000000\n' > certs/control_vdw_ap.txt
+t vdw-2-7 certs/control_vdw_ap.txt "NOT CERTIFIED,"                             # 1..7 in one colour
+printf '000\n' > certs/control_schur_sum.txt
+t schur-6 certs/control_schur_sum.txt "NOT CERTIFIED,"                          # 1 + 1 = 2
+printf '0000\n' > certs/control_weak_schur_sum.txt
+t weak-schur-5 certs/control_weak_schur_sum.txt "NOT CERTIFIED,"                # 1 + 2 = 3
+printf '00\n' > certs/control_snake_back.txt
+t snake-d9 certs/control_snake_back.txt "NOT CERTIFIED,"                        # returns to the vertex 0
+cp certs/lib_snake-in-the-box-9-lower-191.txt certs/control_coil_open.txt
+t coil-d9 certs/control_coil_open.txt "NOT CERTIFIED,"                          # a snake does not close
+printf '0000000 1111111 2222222\n' > certs/control_capset_line.txt
+t capset-n7 certs/control_capset_line.txt "NOT CERTIFIED,"                      # three points on a line
+printf '123456\n' > certs/control_superperm_short.txt
+t superperm-n6 certs/control_superperm_short.txt "NOT CERTIFIED,"
+seq 0 28 > certs/control_golomb_repeat.txt
+t golomb-29 certs/control_golomb_repeat.txt "NOT CERTIFIED,"                    # difference 1 repeated
+printf '0,0 1,1 2,2\n' > certs/control_no3line_diagonal.txt
+t no3line-75 certs/control_no3line_diagonal.txt "NOT CERTIFIED,"
+python3 -I -c 'print(("+" * 668 + "\n") * 668, end="")' > certs/control_hadamard_all_plus.txt
+t hadamard-668 certs/control_hadamard_all_plus.txt "NOT CERTIFIED,"
+python3 -I -c 'H = [[1]]
+for _ in range(4):
+    H = [r + r for r in H] + [r + [-x for x in r] for r in H]
+print("\n".join("".join("+" if x > 0 else "-" for x in r) for r in H))' > certs/unit_sylvester16.txt
+t hadamard-668 certs/unit_sylvester16.txt "NOT CERTIFIED,"                      # a Hadamard matrix of the wrong order
+python3 -I -c 'print(" ".join(["0"] * 155))' > certs/control_cwm_zero.txt
+t cwm-155-25 certs/control_cwm_zero.txt "NOT CERTIFIED,"                        # weight 0, not 25
+printf '00000\n00001\n' > certs/control_strongpow_adjacent.txt
+t shannon-c7-power5 certs/control_strongpow_adjacent.txt "NOT CERTIFIED,"
+# checker unit tests: the exit status of a checker run on its own
+u() {  # u EXPECTED_EXIT_STATUS CHECKER ARGS...
+  want=$1; shift
+  python3 -I "$@" > /dev/null 2>&1; got=$?
+  if [ "$got" = "$want" ]; then echo "ok    unit $*: exit $got"; else echo "FAIL  unit $*: exit $got (expected $want)"; status=1; fi
+}
+u 0 checkers/hadamard_check.py 16 certs/unit_sylvester16.txt
+sed '2s/^./-/' certs/unit_sylvester16.txt > certs/control_hadamard_flip.txt
+u 1 checkers/hadamard_check.py 16 certs/control_hadamard_flip.txt
+printf -- '-1 1 1 1\n' > certs/unit_cw_4_4.txt
+u 0 checkers/cwm_check.py 4 4 certs/unit_cw_4_4.txt                             # the circulant Hadamard matrix of order 4
+printf -- '-1 0 1 0 1 0 1 0\n' > certs/control_cw_8_4_improper.txt
+u 1 checkers/cwm_check.py 8 4 certs/control_cw_8_4_improper.txt                 # W W^T = 4 I but not proper
+u 0 checkers/cage_check.py 3 5 certs/control_cage_petersen.txt                   # the Petersen graph is a (3,5)-cage
+u 0 checkers/degdiam_check.py 3 2 certs/control_cage_petersen.txt                # and a Moore graph of diameter 2
 exit $status
