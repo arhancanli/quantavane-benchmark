@@ -1,17 +1,29 @@
 {
  "collection": "Quantavane Originals",
- "problems": 20,
+ "problems": 23,
  "by_field": {
-  "Combinatorics and graph theory": 4,
-  "Number theory": 3,
+  "Combinatorics and graph theory": 5,
+  "Number theory": 4,
   "Coding theory": 2,
   "Discrete geometry": 2,
-  "Physics": 3,
+  "Physics": 4,
   "Chemistry and materials": 1,
   "Computing and operations research": 3,
   "Biology": 2
  },
  "items": [
+  {
+   "id": "ap-cover",
+   "field": "Combinatorics and graph theory",
+   "title": "Covering all pairs of Z_p by three-term progressions",
+   "status": "open",
+   "objective": "minimize",
+   "best_known": "165",
+   "holder": "Quantavane (Arhan Canli)",
+   "date": "2026-11-09",
+   "checker": "collections/originals/checkers/orig_comb.py",
+   "page": "problems/ap-cover.md"
+  },
   {
    "id": "autoconv-square",
    "field": "Combinatorics and graph theory",
@@ -59,6 +71,18 @@
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_comb.py",
    "page": "problems/overlap-three.md"
+  },
+  {
+   "id": "cubic-admissible",
+   "field": "Number theory",
+   "title": "Densest admissible patterns of primes n^3 + h",
+   "status": "open",
+   "objective": "minimize",
+   "best_known": "255",
+   "holder": "Quantavane (Arhan Canli)",
+   "date": "2026-11-09",
+   "checker": "collections/originals/checkers/orig_numth.py",
+   "page": "problems/cubic-admissible.md"
   },
   {
    "id": "gauss-admissible",
@@ -179,6 +203,18 @@
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_phys.py",
    "page": "problems/potts3-600.md"
+  },
+  {
+   "id": "snub24-ising",
+   "field": "Physics",
+   "title": "Ising antiferromagnet on the snub 24-cell",
+   "status": "open",
+   "objective": "minimize",
+   "best_known": "-144",
+   "holder": "Quantavane (Arhan Canli)",
+   "date": "2026-11-09",
+   "checker": "collections/originals/checkers/orig_phys.py",
+   "page": "problems/snub24-ising.md"
   },
   {
    "id": "benzenoid-kemeny",

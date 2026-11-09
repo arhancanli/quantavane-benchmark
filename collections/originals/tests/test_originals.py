@@ -153,6 +153,15 @@ def controls():
     if "e8-idcode" in P:
         t = " ".join(lines_of(certificates(P["e8-idcode"]))).split()
         refuse("e8-idcode", " ".join(t[:-5]) + "\n", "the code with 5 roots removed")
+    if "snub24-ising" in P:
+        sp = "".join(lines_of(certificates(P["snub24-ising"])))
+        refuse("snub24-ising", sp[:-2] + "\n", "94 spins")
+    if "ap-cover" in P:
+        L = lines_of(certificates(P["ap-cover"]))
+        refuse("ap-cover", "\n".join(L[1:]) + "\n", "the covering without one progression (a pair left uncovered)")
+    if "cubic-admissible" in P:
+        t = " ".join(lines_of(certificates(P["cubic-admissible"]))).split()
+        refuse("cubic-admissible", " ".join(t[:-1] + [str(int(t[-1]) + 1)]) + "\n", "a shift of the other parity")
     if "hp-tri" in P:
         L = lines_of(certificates(P["hp-tri"]))
         refuse("hp-tri", "\n".join(L[:-1] + ["99 99"]) + "\n", "a chain with a broken bond")
@@ -247,6 +256,26 @@ def cross_checks():
     best = max(k for k in range(3, 7) for S in itertools.combinations(pts, k)
                if all(ar(*T) for T in itertools.combinations(S, 3)) and len({ar(*T) for T in itertools.combinations(S, 3)}) == k * (k - 1) * (k - 2) // 6)
     expect(f"cross tri-areas t(6) = 5 by brute force", best == 5, best)
+    # progressions covering Z_7: none with 8 blocks, one with 9 (A(7) = 9)
+    p = 7
+    aps = sorted({tuple(sorted(((a + i * d) % p) for i in range(3))) for a in range(p) for d in range(1, p)})
+    allpairs = set(itertools.combinations(range(p), 2))
+    def covers(bs):
+        c = set()
+        for b in bs:
+            c.update(itertools.combinations(b, 2))
+        return c == allpairs
+    has8 = any(covers(bs) for bs in itertools.combinations(aps, 8))
+    has9 = any(covers(bs) for bs in itertools.combinations(aps, 9))
+    expect("cross ap-cover A(7) = 9 by brute force over sets of progressions", (not has8) and has9, (has8, has9))
+    # cubic family: m(5) = 14 by brute force
+    def cadm(H):
+        for p in (2, 3, 5, 7, 11, 13):
+            if {x ** 3 % p for x in range(p)} <= {(-h) % p for h in H}:
+                return False
+        return True
+    m5 = min(max(H) for H in itertools.combinations(range(1, 18), 5) if cadm(H))
+    expect(f"cross cubic-admissible m(5) = 14 by brute force", m5 == 14, m5)
     # the uniform three-part splitting has largest overlap exactly 1/3
     code, res, _ = run("collections/originals/checkers/orig_comb.py", ["overlap-three", 3, 3, write("uni3.txt", "1 1 1\n1 1 1\n1 1 1\n")])
     expect(f"cross overlap-three the uniform splitting scores 1/3", res == "1/3", res)

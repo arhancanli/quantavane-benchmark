@@ -24,6 +24,9 @@ exits 0 only for a valid certificate and 1 otherwise. Problems:
                            Value: the largest overlap, max over parts a != b and shifts x of integral f_a(t) f_b(t - x)
                            dt = (3/M) max_k sum_i e_a[i] e_b[i-k] / DEN^2 (the overlap is linear between grid shifts),
                            exactly.
+  ap-cover P K FILE        FILE: lines "a d", each the progression {a, a+d, ..., a+(K-1)d} modulo the prime P (d not 0
+                           mod P, so its K elements are distinct). Valid when every pair of elements of Z_P lies in
+                           some progression. Value: the number of progressions.
   cell600-forest FILE      FILE: vertex numbers 0..119 of the 600-cell's graph (vertex order as in cell600_graph)
                            whose induced subgraph is a forest (no cycle). Value: the number of vertices; the 120 minus
                            it is the size of a decycling (feedback vertex) set."""
@@ -144,6 +147,32 @@ def vertex_list(path, n):
     return vs
 
 
+def ap_cover(args, path):
+    p, k = int(args[0]), int(args[1])
+    if p < 3 or any(p % d == 0 for d in range(2, int(p ** 0.5) + 1)) or not 2 <= k <= p:
+        print("P must be an odd prime and 2 <= K <= P")
+        return 1
+    rows = matrix(path)
+    covered = set()
+    for r in rows:
+        if len(r) != 2 or r[1] % p == 0:
+            print(f"bad progression line {r}: expected 'a d' with d not 0 mod {p}")
+            return 1
+        a, d = r
+        b = sorted((a + i * d) % p for i in range(k))
+        for i in range(k):
+            for j in range(i + 1, k):
+                covered.add((b[i], b[j]))
+    missing = p * (p - 1) // 2 - len(covered)
+    if missing:
+        x, y = next((x, y) for x in range(p) for y in range(x + 1, p) if (x, y) not in covered)
+        print(f"{missing} pairs not covered, for instance {{{x}, {y}}}")
+        return 1
+    print(f"{len(rows)} progressions of length {k} cover all {p * (p - 1) // 2} pairs of Z_{p}")
+    print(f"RESULT {len(rows)}")
+    return 0
+
+
 def cell600_forest(args, path):
     adj = cell600_graph()
     S = vertex_list(path, 120)
@@ -197,7 +226,7 @@ def overlap_three(args, path):
 
 
 PROBLEMS = {"autoconv-square": (1, autoconv_square), "overlap-square": (2, overlap_square),
-            "overlap-three": (2, overlap_three),
+            "overlap-three": (2, overlap_three), "ap-cover": (2, ap_cover),
             "cell600-forest": (0, cell600_forest)}
 
 

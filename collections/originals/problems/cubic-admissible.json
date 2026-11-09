@@ -1,0 +1,171 @@
+{
+ "id": "cubic-admissible",
+ "collection": "originals",
+ "field": "Number theory",
+ "title": "Densest admissible patterns of primes n^3 + h",
+ "status": "open",
+ "statement": "Call a set H of positive integers admissible for n^3 + h if for every prime p there is an integer n with n^3 + h not divisible by p for all h in H; equivalently the residues -h (mod p) miss one of the values of n^3 (mod p), 0 included (all p residues when p = 3 or p = 2 mod 3, and (p+2)/3 of them when p = 1 mod 3). Only primes p <= 3|H| - 2 need checking. Let m(k) be the least m such that an admissible k-set lies in [1, m]. Determine m(k); the headline cell is k = 50: find an admissible 50-set with largest element below 255.",
+ "objective": "minimize",
+ "submission": "Text file: 50 distinct positive integers h, separated by spaces or newlines.",
+ "checker": {
+  "program": "collections/originals/checkers/orig_numth.py",
+  "args": [
+   "cubic-admissible",
+   "50"
+  ],
+  "value": "result"
+ },
+ "score": "the largest element of the set (smaller is better)",
+ "best_known": {
+  "value": "255",
+  "exact": "255",
+  "source": "Quantavane (Arhan Canli), 9 November 2026: an admissible 50-set with largest element 255 found by a randomized greedy sieve (tools/cubic_admissible.py sieve)",
+  "kind": "our construction (Quantavane Originals)",
+  "provenance": {
+   "keeper": "Quantavane Originals",
+   "url": "collections/originals/problems/cubic-admissible.md",
+   "read": "2026-11-09",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true,
+   "certificate": "collections/originals/refs/cubic-admissible.txt"
+  }
+ },
+ "verified_pending": [],
+ "added": "originals-1",
+ "quantavane_record": true,
+ "context": "Admissible patterns govern the Hardy-Littlewood and Bateman-Horn predictions for prime constellations: for linear shifts n + h the least width H(k) is the classical table behind bounded gaps between primes, and for n^2 + h the analogous least sets are the problem quad-admissible. The cubic family is the next case and mixes two behaviours: at primes p = 2 (mod 3) cubing is a bijection, so the condition is the linear one, while at primes p = 1 (mod 3) only (p+2)/3 cube classes need to be missed, so covering them is easier and admissibility harder. The values differ from both neighbours already at k = 5 (14, against 13 for n^2 + h and 13 for shifted linear tuples).",
+ "references": [
+  "P. T. Bateman, R. A. Horn, A heuristic asymptotic formula concerning the distribution of prime numbers, Math. Comp. 16 (1962) 363-367",
+  "D. H. J. Polymath, Variants of the Selberg sieve, and bounded intervals containing many primes, arXiv:1407.4897",
+  "W. Banks, K. Ford, Sets of integers satisfying Bateman-Horn statistics, arXiv:2605.01155"
+ ],
+ "novelty": {
+  "checked": "2026-11-09",
+  "file": "novelty/cubic-admissible.json",
+  "verdict": "new. No table of least admissible shift sets for n^3 + h was found (arXiv), and the sequence m(k) is not in the OEIS.",
+  "closest": [
+   "The linear admissible tuples H(k) and our quadratic problem quad-admissible: the same question for other polynomial families."
+  ],
+  "benchmark": "no prime-pattern family"
+ },
+ "first_values": {
+  "columns": [
+   "k",
+   "m(k)",
+   "how"
+  ],
+  "rows": [
+   [
+    1,
+    1,
+    "exact (exhaustive)"
+   ],
+   [
+    2,
+    3,
+    "exact (exhaustive)"
+   ],
+   [
+    3,
+    7,
+    "exact (exhaustive)"
+   ],
+   [
+    4,
+    9,
+    "exact (exhaustive)"
+   ],
+   [
+    5,
+    14,
+    "exact (exhaustive)"
+   ],
+   [
+    6,
+    19,
+    "exact (exhaustive)"
+   ],
+   [
+    7,
+    23,
+    "exact (exhaustive)"
+   ],
+   [
+    8,
+    28,
+    "exact (exhaustive)"
+   ],
+   [
+    9,
+    31,
+    "exact (exhaustive)"
+   ],
+   [
+    10,
+    35,
+    "exact (exhaustive)"
+   ],
+   [
+    11,
+    37,
+    "exact (exhaustive)"
+   ],
+   [
+    12,
+    45,
+    "exact (exhaustive)"
+   ],
+   [
+    13,
+    49,
+    "exact (exhaustive)"
+   ],
+   [
+    14,
+    52,
+    "exact (exhaustive)"
+   ],
+   [
+    15,
+    58,
+    "exact (exhaustive)"
+   ],
+   [
+    16,
+    63,
+    "exact (exhaustive)"
+   ],
+   [
+    20,
+    82,
+    "best known (ours)"
+   ],
+   [
+    30,
+    141,
+    "best known (ours)"
+   ],
+   [
+    40,
+    190,
+    "best known (ours)"
+   ],
+   [
+    50,
+    255,
+    "best known (ours)"
+   ]
+  ],
+  "note": "Exact values by exhaustive search (tools/cubic_admissible.py exact); the sieve reproduces m(12) = 45 and m(16) = 63 and gives the upper bounds for larger k."
+ },
+ "baseline": {
+  "date": "2026-11-09",
+  "holder": "Quantavane (Arhan Canli)",
+  "text": "255 for k = 50, held by Quantavane (Arhan Canli), 9 November 2026: the set in `refs/cubic-admissible.txt`. Lower bound m(50) >= m(16) = 63; nothing better is proved."
+ },
+ "bound": {
+  "value": "63",
+  "kind": "lower bound",
+  "source": "m(k) is non-decreasing and m(16) = 63 exactly"
+ }
+}

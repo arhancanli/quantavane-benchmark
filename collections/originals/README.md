@@ -1,6 +1,6 @@
 # Quantavane Originals
 
-New open problems, written by Quantavane: <!--count-->20<!--/count--> problems across mathematics, physics,
+New open problems, written by Quantavane: <!--count-->23<!--/count--> problems across mathematics, physics,
 chemistry, computing and biology. Each one is a question that, as far as our searches show, nobody had asked before,
 stated precisely, with an exact checker of ours and a first value of ours, so that it starts with a best known value,
 a holder and a date. All of them are open.
@@ -31,10 +31,12 @@ and is credited by name on the problem's page and in `leaderboard.json`.
 <!--table-->
 | Problem | Field | Objective | Best known (ours, 9 November 2026) |
 | --- | --- | --- | --- |
+| [Covering all pairs of Z_p by three-term progressions](problems/ap-cover.md) | Combinatorics and graph theory | minimize | 165 |
 | [The autoconvolution constant of the square](problems/autoconv-square.md) | Combinatorics and graph theory | minimize | 5687487427963392/2559015127450681 |
 | [The decycling number of the 600-cell](problems/cell600-forest.md) | Combinatorics and graph theory | maximize | 37 |
 | [The minimum overlap constant of the square](problems/overlap-square.md) | Combinatorics and graph theory | minimize | 150615/262144 |
 | [The minimum overlap problem for three parts](problems/overlap-three.md) | Combinatorics and graph theory | minimize | 56061/200000 |
+| [Densest admissible patterns of primes n^3 + h](problems/cubic-admissible.md) | Number theory | minimize | 255 |
 | [Admissible constellations of smallest diameter in the Gaussian integers](problems/gauss-admissible.md) | Number theory | minimize | 218 |
 | [Largest sum-free set of quadratic residues](problems/qr-sumfree.md) | Number theory | maximize | 174 |
 | [Densest admissible patterns of primes n^2 + h](problems/quad-admissible.md) | Number theory | minimize | 247 |
@@ -45,6 +47,7 @@ and is credited by name on the problem's page and in `leaderboard.json`.
 | [Ground states of the Paley Ising model](problems/paley-ising.md) | Physics | minimize | -480 |
 | [Ising antiferromagnet on the 600-cell](problems/polytope-ising.md) | Physics | minimize | -160 |
 | [Three-state Potts antiferromagnet on the 600-cell](problems/potts3-600.md) | Physics | minimize | 134 |
+| [Ising antiferromagnet on the snub 24-cell](problems/snub24-ising.md) | Physics | minimize | -144 |
 | [Benzenoids with the smallest Kemeny constant](problems/benzenoid-kemeny.md) | Chemistry and materials | minimize | 14813904881/113347080 |
 | [XOR circuits for the quadratic-residue circulant](problems/qr-xor.md) | Computing and operations research | minimize | 238 |
 | [Shortest reset words of the quadratic automaton modulo p](problems/sync-quadratic.md) | Computing and operations research | minimize | 31 |

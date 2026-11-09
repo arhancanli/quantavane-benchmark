@@ -1,0 +1,52 @@
+{
+ "id": "snub24-ising",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"snub 24-cell\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22snub+24-cell%22&start=0&max_results=10&sortBy=relevance",
+   "results": 5,
+   "top": [
+    {
+     "arxiv": "1106.3433v2",
+     "year": "2011",
+     "first_author": "Mehmet Koca",
+     "title": "Snub 24-Cell Derived from the Coxeter-Weyl Group W(D4)"
+    },
+    {
+     "arxiv": "0906.2109v2",
+     "year": "2009",
+     "first_author": "Mehmet Koca",
+     "title": "Quaternionic Representation of Snub 24-Cell and its Dual Polytope Derived From E_8 Root System"
+    },
+    {
+     "arxiv": "1606.02445v1",
+     "year": "2016",
+     "first_author": "Mehmet Koca",
+     "title": "4D Pyritohedral Symmetry with Quaternions, Related Polytopes and Lattices"
+    },
+    {
+     "arxiv": "2103.07817v2",
+     "year": "2021",
+     "first_author": "Pierre-Philippe Dechant",
+     "title": "Clifford spinors and root system induction: $H_4$ and the Grand Antiprism"
+    },
+    {
+     "arxiv": "1307.6768v1",
+     "year": "2013",
+     "first_author": "Pierre-Philippe Dechant",
+     "title": "Platonic solids generate their four-dimensional analogues"
+    }
+   ],
+   "run": "2026-11-09T14:32:01Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"snub 24-cell\" AND all:antiferromagnet",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22snub+24-cell%22+AND+all%3Aantiferromagnet&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T14:32:06Z"
+  }
+ ]
+}

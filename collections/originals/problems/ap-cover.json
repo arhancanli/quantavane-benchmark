@@ -1,0 +1,122 @@
+{
+ "id": "ap-cover",
+ "collection": "originals",
+ "field": "Combinatorics and graph theory",
+ "title": "Covering all pairs of Z_p by three-term progressions",
+ "status": "open",
+ "statement": "For a prime p, call a three-term arithmetic progression {a, a + d, a + 2d} (mod p, d not 0) a block. Each pair of elements of Z_p lies in exactly three blocks, so the blocks form a 2-(p, 3, 3) design. Let A(p) be the least number of blocks that together contain every pair of Z_p. Determine A(p). The Schonheim bound gives A(p) >= ceil(p ceil((p-1)/2) / 3), and A(p) equals it exactly when the progressions contain a Steiner triple system (a subsystem in which every pair lies in exactly one block). The headline cell is p = 31: find fewer than 165 progressions covering all pairs of Z_31 (the bound is 155).",
+ "objective": "minimize",
+ "submission": "Text file: one progression per line, 'a d' (the block {a, a+d, a+2d} mod 31, d not 0).",
+ "checker": {
+  "program": "collections/originals/checkers/orig_comb.py",
+  "args": [
+   "ap-cover",
+   "31",
+   "3"
+  ],
+  "value": "result"
+ },
+ "score": "the number of progressions (smaller is better)",
+ "best_known": {
+  "value": "165",
+  "exact": "165",
+  "source": "Quantavane (Arhan Canli), 9 November 2026: greedy covering followed by local search (remove blocks, repair greedily; tools/ap_cover.py)",
+  "kind": "our construction (Quantavane Originals)",
+  "provenance": {
+   "keeper": "Quantavane Originals",
+   "url": "collections/originals/problems/ap-cover.md",
+   "read": "2026-11-09",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true,
+   "certificate": "collections/originals/refs/ap-cover.txt"
+  }
+ },
+ "verified_pending": [],
+ "added": "originals-1",
+ "quantavane_record": true,
+ "context": "Covering designs C(v, k, 2), the fewest k-sets covering all pairs of a v-set, are among the most studied tables in design theory (La Jolla Covering Repository), and their cyclic and structured versions model sampling and testing schedules. Restricting the blocks to arithmetic progressions asks how much is lost when every block must be equally spaced, as in periodic schedules on a ring. For p = 7 and 13, where Steiner triple systems exist, no system consists of progressions only: the exact minima 9 and 27 exceed the Steiner values 7 and 26. Whether the progression design of Z_p ever contains a Steiner triple system (p = 19, 31, 37, 43, ... are the candidates) is open, and so is the growth of A(p) beyond the bound.",
+ "references": [
+  "J. Schonheim, On coverings, Pacific J. Math. 14 (1964) 1405-1411",
+  "D. M. Gordon, La Jolla Covering Repository (now the Covering Repository): tables of C(v, k, t)",
+  "C. J. Colbourn, J. H. Dinitz (eds.), Handbook of Combinatorial Designs (2nd ed., CRC 2007): Steiner triple systems and coverings"
+ ],
+ "novelty": {
+  "checked": "2026-11-09",
+  "file": "novelty/ap-cover.json",
+  "verdict": "new. No study of pair coverings (or Steiner triple systems) made of arithmetic progressions in Z_p was found on arXiv or by web search; covering by progressions is studied in other senses (covering sets of integers, rainbow progressions), which are different problems.",
+  "closest": [
+   "Covering designs C(v, 3, 2) (Covering Repository): the same covering problem with arbitrary triples; the progression constraint changes the answers (9 versus 7 at p = 7).",
+   "Rainbow progressions covering k-subsets (arXiv:1802.03285) and coverings of sets by progressions: different problems."
+  ],
+  "benchmark": "the benchmark's covering-design family uses arbitrary blocks; no progression-block entry"
+ },
+ "first_values": {
+  "columns": [
+   "p",
+   "A(p)",
+   "Schonheim bound",
+   "status"
+  ],
+  "rows": [
+   [
+    5,
+    4,
+    4,
+    "exact"
+   ],
+   [
+    7,
+    9,
+    7,
+    "exact"
+   ],
+   [
+    11,
+    20,
+    19,
+    "exact"
+   ],
+   [
+    13,
+    27,
+    26,
+    "exact"
+   ],
+   [
+    17,
+    "46 to 48",
+    46,
+    "open (search proved 46 lower bound; ours 48)"
+   ],
+   [
+    19,
+    "<= 59 (ours)",
+    57,
+    "open"
+   ],
+   [
+    31,
+    "<= 165 (ours)",
+    155,
+    "open"
+   ],
+   [
+    37,
+    "<= 229 (ours)",
+    222,
+    "open"
+   ]
+  ],
+  "note": "Exact values by depth-first search with iterative deepening (tools/ap_cover.py exact); for p = 17 the search ruled out 45 or fewer before its node limit. Upper bounds for larger p from our local search."
+ },
+ "baseline": {
+  "date": "2026-11-09",
+  "holder": "Quantavane (Arhan Canli)",
+  "text": "165 for p = 31, held by Quantavane (Arhan Canli), 9 November 2026: the progressions in `refs/ap-cover.txt`. Lower bound 155 (Schonheim); an answer of 155 would be a Steiner triple system made of progressions."
+ },
+ "bound": {
+  "value": "155",
+  "kind": "lower bound",
+  "source": "Schonheim bound ceil(31 ceil(30/2) / 3)"
+ }
+}

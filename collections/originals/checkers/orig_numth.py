@@ -16,6 +16,9 @@ valid certificate and 1 otherwise. Problems:
                                  n^2 + h nonzero modulo p, i.e. the residues -h (mod p) miss one of the (p+1)/2
                                  values of n^2 (mod p), 0 included (only p <= 2K - 1 can fail). Value: the largest
                                  element of the set.
+  cubic-admissible K FILE        the same for the cubic family n^3 + h: the residues -h (mod p) must miss one of the
+                                 values of n^3 (mod p), 0 included (all p residues when p = 3 or p = 2 mod 3, (p+2)/3
+                                 of them when p = 1 mod 3); only p <= 3K - 2 can fail. Value: the largest element.
   qr-sumfree P FILE              FILE: distinct nonzero squares modulo the prime P (integers in 1..P-1). Valid when no
                                  three of them, not necessarily distinct, satisfy a + b = c (mod P). Value: the number
                                  of elements."""
@@ -111,6 +114,25 @@ def quad_admissible(args, path):
     return 0
 
 
+def cubic_admissible(args, path):
+    k = int(args[0])
+    hs = [int(t) for t in " ".join(line.split("#")[0] for line in open(path, encoding="ascii", errors="replace")).split()]
+    if len(hs) != k or len(set(hs)) != k or min(hs) < 1:
+        print(f"expected {k} distinct positive integers")
+        return 1
+    for p in range(2, max(3, 3 * k - 1)):
+        if not isprime(p):
+            continue
+        cubes = {x ** 3 % p for x in range(p)}
+        if cubes <= {(-h) % p for h in hs}:
+            print(f"not admissible: modulo {p} some n^3 + h is divisible by {p} for every n")
+            return 1
+    print(f"{k} shifts h: the polynomials n^3 + h are admissible (every prime p <= {3 * k - 2} checked); "
+          f"largest shift {max(hs)}")
+    print(f"RESULT {max(hs)}")
+    return 0
+
+
 def qr_sumfree(args, path):
     p = int(args[0])
     if not isprime(p) or p < 3:
@@ -133,7 +155,7 @@ def qr_sumfree(args, path):
 
 
 PROBLEMS = {"gauss-admissible": (2, gauss_admissible), "quad-admissible": (1, quad_admissible),
-            "qr-sumfree": (1, qr_sumfree)}
+            "cubic-admissible": (1, cubic_admissible), "qr-sumfree": (1, qr_sumfree)}
 
 
 def main():

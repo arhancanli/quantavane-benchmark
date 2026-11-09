@@ -9,9 +9,9 @@ an integer or p/q); it exits 0 only for a well-formed configuration and 1 otherw
                          with P = 1 mod 4. Value: E(s) = sum over i < j of chi(j - i) s_i s_j, where chi is the
                          Legendre symbol modulo P (couplings +1 on the edges of the Paley graph, -1 elsewhere).
   polytope-ising KIND FILE
-                         FILE: one spin per vertex of the graph of a 4-dimensional regular polytope or of the E8 root
-                         polytope (KIND 600: the 600-cell, 120 vertices; KIND 120: the 120-cell, 600 vertices; KIND e8:
-                         the 4_21 polytope, 240 vertices), as + and - in the vertex order of this checker (see
+                         FILE: one spin per vertex of the graph of a 4-dimensional polytope or of the E8 root polytope
+                         (KIND 600: the 600-cell, 120 vertices; KIND snub: the snub 24-cell, 96 vertices; KIND 120: the
+                         120-cell, 600 vertices; KIND e8: the 4_21 polytope, 240 vertices), as + and - in the vertex order of this checker (see
                          polytope_graph). Value: the antiferromagnetic Ising energy E(s) = sum over edges uv of s_u s_v
                          (each satisfied edge gives -1, each frustrated edge +1).
   polytope-potts KIND Q FILE
@@ -61,6 +61,29 @@ def _q5mul(x, y):      # a + b sqrt5 as pairs of Fractions
     return (x[0] * y[0] + 5 * x[1] * y[1], x[0] * y[1] + x[1] * y[0])
 
 
+def _cell600_points():
+    h, z = (F(1, 2), F(0)), (F(0), F(0))
+    phi_h = _q5mul((F(1, 2), F(1, 2)), h)
+    iphi_h = _q5mul((F(-1, 2), F(1, 2)), h)
+    neg = lambda x: (-x[0], -x[1])
+    pts = set()
+    for i in range(4):
+        for s in ((F(1), F(0)), (F(-1), F(0))):
+            v = [z] * 4
+            v[i] = s
+            pts.add(tuple(v))
+    for signs in itertools.product((h, neg(h)), repeat=4):
+        pts.add(tuple(signs))
+    base = [phi_h, h, iphi_h, z]
+    for perm in itertools.permutations(range(4)):
+        if sum(1 for a in range(4) for b in range(a + 1, 4) if perm[a] > perm[b]) % 2:
+            continue
+        for signs in itertools.product((1, -1), repeat=3):
+            sg = iter(signs)
+            pts.add(tuple(v if v == z else (v if next(sg) == 1 else neg(v)) for v in (base[perm[k]] for k in range(4))))
+    return sorted(pts)
+
+
 def _cell600():
     h, z = (F(1, 2), F(0)), (F(0), F(0))
     phi_h = _q5mul((F(1, 2), F(1, 2)), h)           # phi/2
@@ -100,6 +123,16 @@ def polytope_graph(kind):
         n, e = _cell600()
         assert len(e) == 720
         return n, e
+    if kind == "snub":
+        # the snub 24-cell: the 600-cell without its 24 vertices with rational coordinates (an inscribed 24-cell,
+        # pairwise non-adjacent); its edges are the 600-cell edges among the other 96 vertices (432 of them)
+        pts = _cell600_points()
+        n6, e6 = _cell600()
+        keep = [i for i, p in enumerate(pts) if any(c[1] != 0 for c in p)]
+        idx = {v: j for j, v in enumerate(keep)}
+        edges = [(idx[a], idx[b]) for a, b in e6 if a in idx and b in idx]
+        assert len(keep) == 96 and len(edges) == 432
+        return 96, edges
     if kind == "120":
         n6, e6 = _cell600()
         adj = [set() for _ in range(n6)]
@@ -130,7 +163,7 @@ def polytope_graph(kind):
                  if sum(x * y for x, y in zip(roots[a], roots[b])) == 4]
         assert len(edges) == 6720
         return 240, edges
-    raise ValueError("KIND must be 600, 120 or e8")
+    raise ValueError("KIND must be 600, snub, 120 or e8")
 
 
 def polytope_ising(args, path):
