@@ -201,3 +201,7 @@ certificate with your own checker, or make one of our searches faster or better 
 accepted result carries your name on the results page and in the table it enters, and a paper that uses your result
 lists you as a co-author. You choose how your name appears: your name or a handle. To start, open an issue here or
 write to arhan@quantavane.com. Details: https://quantavane.com/open-research/
+
+## Contributing
+
+Results, problems and fixes are welcome, credited by name: see [CONTRIBUTING.md](CONTRIBUTING.md).
