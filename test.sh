@@ -244,4 +244,11 @@ printf -- '-1 0 1 0 1 0 1 0\n' > certs/control_cw_8_4_improper.txt
 u 1 checkers/cwm_check.py 8 4 certs/control_cw_8_4_improper.txt                 # W W^T = 4 I but not proper
 u 0 checkers/cage_check.py 3 5 certs/control_cage_petersen.txt                   # the Petersen graph is a (3,5)-cage
 u 0 checkers/degdiam_check.py 3 2 certs/control_cage_petersen.txt                # and a Moore graph of diameter 2
+# v2.0: the checkers added or changed in v2.0 (ca_check.py, lincode_check.py, rcpsp_check.py, covering_check.py):
+# known objects with their exact values, red controls and cross-checks against brute force; then a few sampled cells
+# of every family (an object of ours for each, certified and not improving, and a red control refused); then
+# index.json against the files it lists
+python3 -I tests/units.py || status=1
+python3 -I tests/sample_cells.py || status=1
+if python3 -I obb.py index > /dev/null; then echo "ok    index.json matches the files"; else echo "FAIL  index.json"; status=1; fi
 exit $status
