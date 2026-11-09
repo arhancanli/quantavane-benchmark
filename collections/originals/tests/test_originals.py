@@ -195,12 +195,6 @@ def controls():
         c = list("".join(lines_of(certificates(P["eisenstein-triples"]))))
         c[2] = c[4] = c[6] = "0"
         refuse("eisenstein-triples", "".join(c) + "\n", "a colouring with 3, 5 and 7 the same colour (9 + 15 + 25 = 49)")
-    if "primel" in P:
-        L = lines_of(certificates(P["primel"]))
-        refuse("primel", "\n".join(L[1:]) + "\n", "a strategy with one answer missing")
-        bad = L[0].split()
-        bad[0] = "10001"
-        refuse("primel", "\n".join([" ".join(bad)] + L[1:]) + "\n", "a first guess that is not prime (10001 = 73 x 137)")
     if "gauss-prime-ap" in P:
         L = lines_of(certificates(P["gauss-prime-ap"]))
         x0, y0 = map(int, L[0].split())
@@ -366,24 +360,6 @@ def cross_checks():
     sys.path.insert(0, os.path.join(HERE, "checkers"))
     import orig_numth
     expect(f"cross eisenstein-triples {direct} triples with z <= 1500 by direct search", len(orig_numth.eisenstein_triples_upto(1500)) == direct, direct)
-    # Primel marks against an independent count-based implementation, on random pairs of five-digit primes
-    sys.path.insert(0, os.path.join(HERE, "checkers"))
-    import orig_comp
-    pr = [str(q) for q in range(10007, 100000) if all(q % d for d in range(2, int(q ** 0.5) + 1))]
-    expect("cross primel 8,363 five-digit primes", len(pr) == 8363, len(pr))
-    def marks2(g, a):
-        m = [2 if g[i] == a[i] else 0 for i in range(5)]
-        left = {}
-        for i in range(5):
-            if m[i] != 2:
-                left[a[i]] = left.get(a[i], 0) + 1
-        for i in range(5):
-            if m[i] != 2 and left.get(g[i], 0) > 0:
-                m[i], left[g[i]] = 1, left[g[i]] - 1
-        return tuple(m)
-    rng2 = random.Random(5)
-    pairs = [(rng2.choice(pr), rng2.choice(pr)) for _ in range(3000)] + [("11113", "31111"), ("11117", "71171")]
-    expect("cross primel marks (3,002 pairs, repeated digits included)", all(orig_comp.primel_marks(g, a) == marks2(g, a) for g, a in pairs))
     # Gaussian prime progressions: least largest norm for K = 3..7 by brute force over a small disc
     gp = [(x, y) for x in range(-6, 7) for y in range(-6, 7) if x * x + y * y <= 40 and ((x and y and all((x * x + y * y) % d for d in range(2, x * x + y * y)) and x * x + y * y > 1) or ((x == 0) != (y == 0) and (abs(x) + abs(y)) % 4 == 3 and all((abs(x) + abs(y)) % d for d in range(2, abs(x) + abs(y)))))]
     gps = set(gp)

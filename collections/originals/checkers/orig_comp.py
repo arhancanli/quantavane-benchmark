@@ -20,14 +20,7 @@ valid certificate and 1 otherwise. Problems:
                           gate k, k = 1..G, is signal P+k-1 = (signal a) XOR (signal b), with a, b < P+k-1), then a
                           line of P signal numbers, the outputs. Valid when output i computes the XOR of the inputs
                           x_j with j - i a nonzero square modulo P (row i of the quadratic-residue circulant over
-                          GF(2)). Value: G, the number of XOR gates.
-  primel FILE             Primel: the answers and the allowed guesses are the 8,363 primes from 10007 to 99991.
-                          FILE: one line per answer, the guesses made for it in order, the last being the answer
-                          itself (at most 6 guesses). Marks: greens first, then a digit of the guess is yellow when
-                          it occurs among the answer's digits not yet matched, left to right (Wordle's rule for
-                          repeated digits). Valid when every answer has exactly one line, every guess is a five-digit
-                          prime, no earlier guess equals the answer, and the lines form one strategy: answers with the
-                          same marks so far always get the same next guess. Value: the total number of guesses."""
+                          GF(2)). Value: G, the number of XOR gates."""
 import math
 import sys
 
@@ -119,63 +112,8 @@ def qr_xor(args, path):
     return 0
 
 
-def primel_marks(g, a):
-    m, used = [0] * 5, [False] * 5
-    for i in range(5):
-        if g[i] == a[i]:
-            m[i], used[i] = 2, True
-    for i in range(5):
-        if m[i] != 2:
-            for j in range(5):
-                if not used[j] and a[j] == g[i]:
-                    m[i], used[j] = 1, True
-                    break
-    return tuple(m)
-
-
-def primel(args, path):
-    sieve = bytearray([1]) * 100000
-    sieve[0] = sieve[1] = 0
-    for i in range(2, 317):
-        if sieve[i]:
-            sieve[i * i::i] = bytearray(len(sieve[i * i::i]))
-    primes = {str(p) for p in range(10000, 100000) if sieve[p]}
-    seen, nextg, total = set(), {}, 0
-    for line in open(path):
-        line = line.split("#")[0].split()
-        if not line:
-            continue
-        a = line[-1]
-        if a not in primes or a in seen:
-            print(f"line ending in {a}: not a five-digit prime, or a second line for it")
-            return 1
-        seen.add(a)
-        if len(line) > 6:
-            print(f"answer {a} needs {len(line)} guesses (at most 6)")
-            return 1
-        hist = ()
-        for k, g in enumerate(line):
-            if g not in primes:
-                print(f"guess {g} is not a five-digit prime")
-                return 1
-            if g == a and k < len(line) - 1:
-                print(f"answer {a} is guessed before its line ends")
-                return 1
-            if nextg.setdefault(hist, g) != g:
-                print(f"answers with the same marks so far get different guesses ({nextg[hist]} and {g})")
-                return 1
-            hist = hist + (primel_marks(g, a),)
-        total += len(line)
-    if seen != primes:
-        print(f"{len(primes) - len(seen)} answers have no line")
-        return 1
-    print(f"a strategy that solves all {len(primes)} answers within six guesses: {total} guesses in all (average {total / len(primes):.6f})")
-    print(f"RESULT {total}")
-    return 0
-
-
 PROBLEMS = {"sync-quadratic": (1, sync_quadratic), "tsp": (1, tsp_sunflower), "tsp-sunflower": (1, tsp_sunflower),
-            "qr-xor": (1, qr_xor), "primel": (0, primel)}
+            "qr-xor": (1, qr_xor)}
 
 
 def main():

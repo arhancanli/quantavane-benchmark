@@ -1,6 +1,6 @@
 {
  "collection": "Quantavane Originals",
- "problems": 36,
+ "problems": 35,
  "by_field": {
   "Combinatorics and graph theory": 7,
   "Number theory": 6,
@@ -9,7 +9,7 @@
   "Physics": 5,
   "Chemistry and materials": 3,
   "Astronomy": 1,
-  "Computing and operations research": 5,
+  "Computing and operations research": 4,
   "Biology": 3
  },
  "items": [
@@ -348,18 +348,6 @@
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_astro.py",
    "page": "problems/nrm-segments.md"
-  },
-  {
-   "id": "primel",
-   "field": "Computing and operations research",
-   "title": "An optimal strategy for Primel",
-   "status": "open",
-   "objective": "minimize",
-   "best_known": "29016",
-   "holder": "Quantavane (Arhan Canli)",
-   "date": "2026-11-09",
-   "checker": "collections/originals/checkers/orig_comp.py",
-   "page": "problems/primel.md"
   },
   {
    "id": "qr-xor",
