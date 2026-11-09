@@ -10,7 +10,7 @@ A benzenoid system with h hexagons is a connected set of h cells of the hexagona
 
 ## Why it is interesting
 
-Kemeny's constant measures how fast a random walk mixes on a network, and through K = Kf*(G)/(2m) it equals the degree-Kirchhoff (multiplicative degree-Kirchhoff) index of chemical graph theory divided by twice the number of bonds. For hexagonal chains, the unbranched catacondensed benzenoids, the extremes are known: the linear chain maximises Kemeny's constant and the helicene chain minimises it (MATCH, 2026). Over all benzenoids, including pericondensed ones, our exhaustive computation up to h = 10 shows that the minimisers are the most compact systems (the fewest carbon atoms, 2h + 1 + ceil(sqrt(12h - 3)), as for coronene at h = 7), but compactness alone does not decide: at h = 6 three systems with 22 atoms have different constants (42.391, 42.678 and 43.299). Whether the coronene series (coronene, circumcoronene, ...) always minimises K when h = 3k(k+1) + 1 is open.
+Kemeny's constant measures how fast a random walk mixes on a network, and through K = Kf*(G)/(2m) it equals the degree-Kirchhoff (multiplicative degree-Kirchhoff) index of chemical graph theory divided by twice the number of bonds. For hexagonal chains, the unbranched catacondensed benzenoids, the extremes are known: the linear chain maximises Kemeny's constant and the helicene chain minimises it (Y. Yang and W. Li, MATCH 2026). Over all benzenoids, including pericondensed ones, our exhaustive computation up to h = 10 shows that the minimisers are the most compact systems (the fewest carbon atoms, 2h + 1 + ceil(sqrt(12h - 3)), as for coronene at h = 7), but compactness alone does not decide: at h = 6 three systems with 22 atoms have different constants (42.391, 42.678 and 43.299). Whether the coronene series (coronene, circumcoronene, ...) always minimises K when h = 3k(k+1) + 1 is open.
 
 ## Novelty check
 
@@ -30,7 +30,7 @@ Checked 9 November 2026, before the problem was added. Every search below is in 
 - Open Problems Benchmark v2.0 (its 26 families and the keeper tables they come from): no chemical-graph family.
 
 Closest work found, and how this problem differs:
-- Kemeny's constant of hexagonal chains (MATCH, 2026): extremes among unbranched catacondensed benzenoids. Here the class is all benzenoids, and the minimisers found are compact pericondensed systems, not chains.
+- Y. Yang and W. Li, Kemeny's constant of hexagonal chains (MATCH, 2026): extremes among unbranched catacondensed benzenoids. Here the class is all benzenoids, and the minimisers found are compact pericondensed systems, not chains.
 - Li, Chen and Liu (arXiv:2504.12781): Kemeny's constant of iterated hexagonal graphs, a family of formulas, not an extremal problem.
 
 Verdict: new as stated. Kemeny's constant has been studied for hexagonal chains (unbranched catacondensed systems) and for special families; no work was found on its minimum over all benzenoid systems with h hexagons, and the values below are not in any table.
@@ -80,6 +80,6 @@ The checker is ours (standard library only); it prints the exact value as its la
 
 - J. G. Kemeny, J. L. Snell, Finite Markov Chains (Van Nostrand, 1960)
 - H. Chen, F. Zhang, Resistance distance and the normalized Laplacian spectrum, Discrete Applied Math. 155 (2007) 654-661 (degree-Kirchhoff index; K = Kf*/2m)
-- Kemeny's constant of hexagonal chains (linear chain maximal, helicene minimal), MATCH Commun. Math. Comput. Chem. 2026 (found by web search; read as data)
+- Y. Yang, W. Li, Extremal hexagonal chains with respect to the Kemeny's constant, MATCH Commun. Math. Comput. Chem. 96 (2026) 625-646 (linear chain maximal, helicene minimal among hexagonal chains; read as data)
 - F. Harary, H. Harborth, Extremal animals, J. Combin. Inform. System Sci. 1 (1976) 1-8 (fewest vertices of a polyhex)
 - OEIS A018190 (number of benzenoids with h hexagons; our enumeration reproduces 1, 1, 3, 7, 22, 81, 331, 1435, 6505, 30086)

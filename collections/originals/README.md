@@ -1,6 +1,6 @@
 # Quantavane Originals
 
-New open problems, written by Quantavane: <!--count-->26<!--/count--> problems across mathematics, physics,
+New open problems, written by Quantavane: <!--count-->27<!--/count--> problems across mathematics, physics,
 chemistry, computing and biology. Each one is a question that, as far as our searches show, nobody had asked before,
 stated precisely, with an exact checker of ours and a first value of ours, so that it starts with a best known value,
 a holder and a date. All of them are open.
@@ -51,6 +51,7 @@ and is credited by name on the problem's page and in `leaderboard.json`.
 | [Three-state Potts antiferromagnet on the 600-cell](problems/potts3-600.md) | Physics | minimize | 134 |
 | [Ising antiferromagnet on the snub 24-cell](problems/snub24-ising.md) | Physics | minimize | -144 |
 | [Benzenoids with the smallest Kemeny constant](problems/benzenoid-kemeny.md) | Chemistry and materials | minimize | 14813904881/113347080 |
+| [Catacondensed benzenoids with the smallest Kemeny constant](problems/cata-kemeny.md) | Chemistry and materials | minimize | 59617087737367409/159902997431616 |
 | [XOR circuits for the quadratic-residue circulant](problems/qr-xor.md) | Computing and operations research | minimize | 238 |
 | [Shortest reset words of the quadratic automaton modulo p](problems/sync-quadratic.md) | Computing and operations research | minimize | 31 |
 | [The travelling salesman tour of the Gaussian primes](problems/tsp-gaussian.md) | Computing and operations research | minimize | 11298548 |

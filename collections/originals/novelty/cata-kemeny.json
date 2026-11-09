@@ -1,0 +1,63 @@
+{
+ "id": "cata-kemeny",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:Kemeny AND all:catacondensed",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3AKemeny+AND+all%3Acatacondensed&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T14:44:41Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:Kemeny AND all:\"hexagonal chains\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3AKemeny+AND+all%3A%22hexagonal+chains%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T14:44:45Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"degree-Kirchhoff\" AND all:catacondensed",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22degree-Kirchhoff%22+AND+all%3Acatacondensed&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T14:44:49Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "1,1,2,5,12,36,118,411,1489,5572",
+   "url": "https://oeis.org/search?q=1%2C1%2C2%2C5%2C12%2C36%2C118%2C411%2C1489%2C5572&fmt=json",
+   "results": 1,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A038142",
+     "name": "Number of planar cata-polyhexes with n cells."
+    }
+   ],
+   "run": "2026-11-09T14:44:53Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "degree-Kirchhoff index catacondensed hexagonal systems extremal minimum",
+   "date": "2026-11-09",
+   "found": "extremal catacondensed systems for degree-based indices (Rada and Gutman 2013; Rada 2017; ABC index); nothing on the degree-Kirchhoff index or Kemeny's constant over catacondensed systems"
+  },
+  {
+   "engine": "general web search",
+   "query": "Kemeny's constant hexagonal chains helicene linear chain MATCH 2026",
+   "date": "2026-11-09",
+   "found": "Y. Yang and W. Li, MATCH 96 (2026) 625-646: among hexagonal chains the linear chain is the unique maximiser and the helicene the unique minimiser; Liao, Chen and Li, polygonal chains (DAM 2026); nothing on branched systems"
+  },
+  {
+   "engine": "general web search",
+   "query": "\"Kemeny\" constant catacondensed OR \"hexagonal systems\" OR benzenoid branched minimum resistance random walk",
+   "date": "2026-11-09",
+   "found": "the same chain results and hexagonal ring networks (Zaman et al. 2022); nothing on branched systems"
+  }
+ ]
+}

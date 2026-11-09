@@ -162,6 +162,10 @@ def controls():
     if "e8-goodman" in P:
         c = "".join(lines_of(certificates(P["e8-goodman"])))
         refuse("e8-goodman", c[:-1] + "2\n", "a colour 2")
+    if "cata-kemeny" in P:
+        L = lines_of(certificates(P["benzenoid-kemeny"])) if "benzenoid-kemeny" in P else []
+        if len(L) == 19:
+            refuse("cata-kemeny", "\n".join(L) + "\n", "circumcoronene (pericondensed: internal atoms)")
     if "ap-cover" in P:
         L = lines_of(certificates(P["ap-cover"]))
         refuse("ap-cover", "\n".join(L[1:]) + "\n", "the covering without one progression (a pair left uncovered)")
@@ -282,6 +286,9 @@ def cross_checks():
         return True
     m5 = min(max(H) for H in itertools.combinations(range(1, 18), 5) if cadm(H))
     expect(f"cross cubic-admissible m(5) = 14 by brute force", m5 == 14, m5)
+    # catacondensed: triphenylene (h = 4) has Kemeny constant 50521/1386, the minimum over the five catacondensed systems
+    code, res, _ = run("collections/originals/checkers/orig_chem.py", ["cata-kemeny", 4, write("triphenylene.txt", "0 1\n1 1\n1 2\n2 0\n")])
+    expect(f"cross cata-kemeny triphenylene: 50521/1386", res == "50521/1386", res)
     # the uniform three-part splitting has largest overlap exactly 1/3
     code, res, _ = run("collections/originals/checkers/orig_comb.py", ["overlap-three", 3, 3, write("uni3.txt", "1 1 1\n1 1 1\n1 1 1\n")])
     expect(f"cross overlap-three the uniform splitting scores 1/3", res == "1/3", res)

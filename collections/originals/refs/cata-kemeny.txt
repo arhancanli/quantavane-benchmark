@@ -1,0 +1,20 @@
+# catacondensed benzenoid with 19 hexagons, Kemeny constant 59617087737367409/159902997431616 (Quantavane, 9 Nov 2026)
+0 3
+0 4
+0 6
+1 4
+1 6
+1 7
+2 1
+2 2
+2 4
+2 5
+3 2
+3 3
+3 5
+3 6
+4 0
+4 1
+4 3
+5 1
+5 3

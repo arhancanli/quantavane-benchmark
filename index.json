@@ -112,11 +112,11 @@
   {
    "kind": "problems",
    "path": "collections/originals/problems",
-   "count": 26,
+   "count": 27,
    "about": "Quantavane Originals: new problems of ours, one JSON file each (not counted in 'problems')"
   }
  ],
  "collections": {
-  "originals": 26
+  "originals": 27
  }
 }

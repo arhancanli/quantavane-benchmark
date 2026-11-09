@@ -1,13 +1,13 @@
 {
  "collection": "Quantavane Originals",
- "problems": 26,
+ "problems": 27,
  "by_field": {
   "Combinatorics and graph theory": 6,
   "Number theory": 4,
   "Coding theory": 2,
   "Discrete geometry": 2,
   "Physics": 5,
-  "Chemistry and materials": 1,
+  "Chemistry and materials": 2,
   "Computing and operations research": 4,
   "Biology": 2
  },
@@ -251,6 +251,18 @@
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_chem.py",
    "page": "problems/benzenoid-kemeny.md"
+  },
+  {
+   "id": "cata-kemeny",
+   "field": "Chemistry and materials",
+   "title": "Catacondensed benzenoids with the smallest Kemeny constant",
+   "status": "open",
+   "objective": "minimize",
+   "best_known": "59617087737367409/159902997431616",
+   "holder": "Quantavane (Arhan Canli)",
+   "date": "2026-11-09",
+   "checker": "collections/originals/checkers/orig_chem.py",
+   "page": "problems/cata-kemeny.md"
   },
   {
    "id": "qr-xor",

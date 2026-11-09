@@ -12,7 +12,10 @@ exits 0 only for a valid certificate and 1 otherwise. Problems:
                             edges: their sides), K = (1/(2m)) * sum over vertex pairs {i, j} of d_i d_j R_ij, with R the
                             resistance distance, d the degrees and m the number of edges, in exact rational arithmetic.
                             (Equivalently K = sum over the eigenvalues lambda != 1 of the transition matrix of
-                            1/(1 - lambda).)"""
+                            1/(1 - lambda).)
+  cata-kemeny H FILE        the same for catacondensed benzenoids: valid only if the molecular graph has no internal
+                            vertex (every carbon atom on the perimeter; equivalently 4H + 2 vertices and no three
+                            hexagons sharing a vertex). Value: Kemeny's constant, exactly."""
 import sys
 from fractions import Fraction
 
@@ -120,7 +123,18 @@ def benzenoid_kemeny(args, path):
     return 0
 
 
-PROBLEMS = {"benzenoid-kemeny": (1, benzenoid_kemeny)}
+def cata_kemeny(args, path):
+    h = int(args[0])
+    cs = cells(path)
+    if len(cs) == h and len(set(cs)) == h:
+        n, edges = molecular_graph(cs)
+        if n != 4 * h + 2:
+            print(f"not catacondensed: {n} vertices instead of {4 * h + 2} (some carbon atom is internal)")
+            return 1
+    return benzenoid_kemeny(args, path)
+
+
+PROBLEMS = {"benzenoid-kemeny": (1, benzenoid_kemeny), "cata-kemeny": (1, cata_kemeny)}
 
 
 def main():
