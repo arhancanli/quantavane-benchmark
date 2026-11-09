@@ -102,6 +102,23 @@ New single problems in v2.1: Costas arrays of orders 32 and 33 (`costas-32`, `co
 (`tsp-mona-lisa`; its instance is fetched into `instances/tsp/`), Erdos problems #107 and #993 (`erdos-107`,
 `erdos-993`) and the kissing numbers in dimensions 22, 23 and 25 to 31.
 
+## Quantavane Originals
+
+`collections/originals/` holds new open problems of ours: questions that, as far as our searches show, had not been
+posed before, across combinatorics, number theory, coding theory, discrete geometry, physics, chemistry, computing and
+biology. Each problem file (`problems/ID.json`, with its page `problems/ID.md`) gives the statement, why the problem is
+interesting with references, the novelty check run before it was added (arXiv API and OEIS searches kept in
+`novelty/ID.json`, web searches named), first values (exact where an exhaustive search finished), our best known
+value with its certificate in `refs/` and the bound on the other side. Checkers are in
+`collections/originals/checkers/` (standard library only, last line `RESULT v`), the programs behind the values in
+`collections/originals/tools/`, and `dropped.json` lists the candidates we dropped because the question or an
+equivalent one had already been studied or settled. The Originals are listed apart and not counted in the totals
+above; `obb.py` takes their ids like any other problem:
+
+    python3 -I obb.py list originals
+    python3 -I obb.py check paley-ising my_configuration.txt
+    python3 -I collections/originals/tests/test_originals.py
+
 ## Families
 
 `families/NAME/family.json` holds the statement (a template filled in from each cell's parameters), the checker and

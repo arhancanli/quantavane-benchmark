@@ -286,6 +286,9 @@ printf '0 1\n1 2\n2 3\n3 4\n' > certs/control_tree_path.txt
 t erdos-993 certs/control_tree_path.txt "NOT CERTIFIED,"                        # a path: unimodal
 python3 -I tests/units_prestige.py || status=1
 if python3 -I tools/build_prestige100.py --check > /dev/null; then echo "ok    collections/prestige100 (100 problems, records agree with the problem files)"; else echo "FAIL  collections/prestige100"; status=1; fi
+# collections/originals: every certificate certified with its value, a red control per problem, brute-force
+# cross-checks on small cases, pages in sync with the problem files
+python3 -I collections/originals/tests/test_originals.py || status=1
 # checker unit tests: the exit status of a checker run on its own
 u() {  # u EXPECTED_EXIT_STATUS CHECKER ARGS...
   want=$1; shift

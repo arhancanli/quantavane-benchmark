@@ -108,6 +108,15 @@
    "keeper": "H. Cohn, table of spherical codes (spherical-codes.org)",
    "read": "2026-11-09",
    "checker": "sph_check.py"
+  },
+  {
+   "kind": "problems",
+   "path": "collections/originals/problems",
+   "count": 20,
+   "about": "Quantavane Originals: new problems of ours, one JSON file each (not counted in 'problems')"
   }
- ]
+ ],
+ "collections": {
+  "originals": 20
+ }
 }

@@ -3,6 +3,17 @@
 The version is in `VERSION`; each problem file says in `added` which version first had it. A problem's best known
 value can change within a version when its source table changes; the file then says when the value was read.
 
+## Next (in review): Quantavane Originals
+
+- `collections/originals/`: new open problems of ours, each with a novelty check written down before it was added, an
+  exact checker of ours and a first value of ours (best known value, certificate, holder and date), in eight fields.
+  `dropped.json` lists the candidates dropped because they were already studied or settled. Not counted in the
+  totals; `index.json` lists the folder as its own shard.
+- `obb.py`: problems of a collection (`collections/NAME/problems/ID.json`) are found by `show`, `check` and `verify`
+  and listed by `list NAME`; a checker may live in the collection (`collections/NAME/checkers/`), and arguments that
+  start with `collections/` are read from the benchmark's folder.
+- `test.sh` runs `collections/originals/tests/test_originals.py`.
+
 ## 2.1 (9 Nov 2026): 149,372 problems and the Prestige 100 collection
 
 - `collections/prestige100/`: Quantavane Prestige 100, one hundred famous open problems in which one checked object

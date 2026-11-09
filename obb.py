@@ -67,12 +67,12 @@ def collections():
     if os.path.isdir(COLLECTIONS):
         for name in sorted(os.listdir(COLLECTIONS)):
             d = os.path.join(COLLECTIONS, name, "problems")
-            if os.path.isdir(d):
+            files = sorted(f for f in os.listdir(d) if f.endswith(".json")) if os.path.isdir(d) else []
+            if files:          # a collection whose problems are pages over existing problems (prestige100) has none
                 out[name] = {}
-                for f in sorted(os.listdir(d)):
-                    if f.endswith(".json"):
-                        p = json.load(open(os.path.join(d, f)))
-                        out[name][p["id"]] = p
+                for f in files:
+                    p = json.load(open(os.path.join(d, f)))
+                    out[name][p["id"]] = p
     return out
 
 
