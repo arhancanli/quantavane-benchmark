@@ -3,7 +3,7 @@
  "family": "weak-schur",
  "title": "Weak Schur number WS(9), lower bound",
  "page": "https://leapsinbounds.org/constants/weak-schur-9/",
- "statement": "Colour 1, 2, ..., n with 9 colours so that no colour holds a solution of x + y = z with x != y, with n as large as possible; it shows WS(9) >= n. The best known lower bound is WS(9) >= 22536, by Ageron, Casteras, Pellerin, Portella, Rimmel and Tomasik (2021); a colouring of 1..22537 or more would improve it.",
+ "statement": "Colour 1, 2, ..., n with 9 colours so that no colour holds a solution of x + y = z with x != y, with n as large as possible; it shows WS(9) >= n. The best known lower bound is WS(9) >= 22620, by Quantavane (8 Nov 2026); a colouring of 1..22621 or more would improve it.",
  "objective": "maximize",
  "submission": "Text file: the colours of 1..n in order, digits 0..8 (whitespace ignored).",
  "checker": {
@@ -16,18 +16,20 @@
  },
  "score": "n, the length of the colouring; it proves WS(9) >= n (larger is better)",
  "best_known": {
-  "value": "22536",
-  "exact": "22536",
-  "source": "WS(9) >= 22536: Ageron, Casteras, Pellerin, Portella, Rimmel and Tomasik (2021), in Leaps in Bounds (github.com/daniel-munro/leaps-in-bounds), data at commit 4521e13 (8 Nov 2026); read 8 Nov 2026",
+  "value": "22620",
+  "exact": "22620",
+  "source": "WS(9) >= 22620: Canli (Quantavane), 8 Nov 2026, Ageron et al.'s construction WS(k+3) >= 42 S(k) + 24 applied to McKenna's S(6) >= 538 partition; certificate verified and merged by Leaps in Bounds (pull request #50, commit 98bda6e, 9 Nov 2026), whose table of published values still shows 22536 (Ageron et al. 2021); read 9 Nov 2026",
   "kind": "table entry",
   "provenance": {
    "keeper": "Leaps in Bounds, Schur and weak Schur numbers",
    "url": "https://leapsinbounds.org",
-   "read": "2026-11-08",
-   "revision": "data at commit 4521e13",
-   "holder": "Ageron, Casteras, Pellerin, Portella, Rimmel and Tomasik (2021)"
+   "read": "2026-11-09",
+   "revision": "certificates at commit a5bbf82",
+   "holder": "Quantavane (Arhan Canli)"
   }
  },
  "verified_pending": [],
- "added": "1.1"
+ "added": "1.1",
+ "quantavane_record": true,
+ "quantavane_note": "our partition is the best known; Leaps in Bounds verified and holds the certificate"
 }

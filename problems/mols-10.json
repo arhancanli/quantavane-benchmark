@@ -1,0 +1,37 @@
+{
+ "id": "mols-10",
+ "family": "latin-squares",
+ "title": "Mutually orthogonal Latin squares of order 10",
+ "page": "https://oeis.org/A001438",
+ "statement": "Find as many mutually orthogonal Latin squares of order 10 as possible: Latin squares that, taken two at a time and superimposed, show each of the 100 ordered pairs of symbols exactly once. Two are known (Parker 1959; Bose, Shrikhande and Parker 1960); three would be new.",
+ "objective": "maximize",
+ "submission": "Text file: K Latin squares of order 10 one after another, each 10 rows of 10 symbols 0..9 (or 1..10) separated by spaces or commas; blank lines between squares are allowed.",
+ "checker": {
+  "program": "mols_check.py",
+  "args": [
+   "10"
+  ],
+  "value": "result"
+ },
+ "score": "K, the number of mutually orthogonal Latin squares (larger is better)",
+ "best_known": {
+  "value": "2",
+  "exact": "2",
+  "source": "two MOLS of order 10 are known (E. T. Parker 1959; Bose, Shrikhande and Parker 1960); OEIS A001438 notes that 'Parker and others conjecture that a(10) = 2'; read 9 Nov 2026",
+  "kind": "literature value",
+  "provenance": {
+   "keeper": "OEIS A001438",
+   "url": "https://oeis.org/A001438",
+   "read": "2026-11-09",
+   "revision": "revision 96",
+   "holder": "E. T. Parker (1959)"
+  }
+ },
+ "bound": {
+  "value": "8",
+  "kind": "upper bound",
+  "source": "nine MOLS of order 10 would give a projective plane of order 10, which does not exist (Lam, Thiel and Swiercz 1989)"
+ },
+ "verified_pending": [],
+ "added": "2.1"
+}

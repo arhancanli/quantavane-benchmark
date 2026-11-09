@@ -3,6 +3,33 @@
 The version is in `VERSION`; each problem file says in `added` which version first had it. A problem's best known
 value can change within a version when its source table changes; the file then says when the value was read.
 
+## 2.1 (9 Nov 2026): 149,372 problems and the Prestige 100 collection
+
+- `collections/prestige100/`: Quantavane Prestige 100, one hundred famous open problems in which one checked object
+  settles the score, chosen by fame and checkability: 20 two-colour and 4 multicolour Ramsey numbers, 10 Schur, weak
+  Schur and van der Waerden numbers, the kissing numbers in the 25 open dimensions from 5 to 31, 3 x 3 and 4 x 4 matrix
+  multiplication, Hadamard orders 668, 716 and 892, the Moore graph of degree 57, Conway's 99-graph, srg(88,27,6,9), a
+  projective plane of order 12, three MOLS of order 10, Costas arrays of orders 32 and 33, 6 cages, 6 degree-diameter
+  cells, sorting networks for 13 to 17 inputs, Golomb rulers with 29 and 30 marks, cap sets in dimensions 7 and 8, the
+  snake in the 9-cube, the superpermutation on 6 symbols, Erdos problems #107 and #993, the constant C_1a, independent
+  sets in the fifth power of C_7, no-three-in-line on the 75 x 75 grid and the Mona Lisa TSP. Every keeper read on
+  9 Nov 2026; histories from the keepers (Small Ramsey Numbers revision 18, Leaps in Bounds at a5bbf82, H. Cohn's
+  table, A. Kravatskiy's table, B. Dobbelaere, F. Comellas, A. E. Brouwer, T. Tao et al., A. Sedoglavic, W. Cook,
+  erdosproblems.com, OEIS, K. Drakakis). `tools/build_prestige100.py` builds the pages, `index.json` and
+  `leaderboard.json` from `curation.json` and the problem files, and checks them.
+- 21 new single problems (Costas 32 and 33, Moore 57, srg(99,14,1,2), srg(88,27,6,9), projective plane 12, MOLS 10,
+  matmul 3x3x3 and 4x4x4, Mona Lisa TSP, Erdos #107 and #993, kissing numbers in dimensions 22, 23, 25-31) and eight
+  checkers (`costas_check.py`, `srg_check.py`, `projplane_check.py`, `mols_check.py`, `matmul_check.py`,
+  `tsp_check.py`, `convex_check.py`, `tree_unimodal_check.py`), unit-tested in `tests/units_prestige.py`.
+- Record certificates replayed by our checkers on 9 Nov 2026 and in `test.sh`: Nagata's Mona Lisa tour (5,757,191),
+  Laderman's <3x3x3:23> and the catalogue's <4x4x4:48> (rational coefficients), Dobbelaere's networks for 13 to 17
+  inputs (45, 51, 56, 60, 71), Kalbfleisch's, Mathon's and Burling and Reyner's colourings for R(6,6) >= 102,
+  R(7,7) >= 205 and R(8,8) >= 282 (from Leaps in Bounds), McKenna's S(6) >= 538, our WS(7) >= 2154, WS(8) >= 7002 and
+  WS(9) >= 22620, and our C_1a <= 1.5027427375 (pull request #346, in review).
+- Values read again on 9 Nov 2026: `schur-6` 537 -> 538 (McKenna); `weak-schur-7`, `-8`, `-9` now ours (2154, 7002,
+  22620; certificates merged by Leaps in Bounds, pull request #50); `1a-upper` gains our value in review.
+- `fetch.sh` fetches the record certificates and the Mona Lisa instance before the CVRPLIB instances.
+
 ## 2.0 (9 Nov 2026): 149,351 problems
 
 - Families: one statement and one checker applied to a whole table kept by someone else, one cell per entry of the

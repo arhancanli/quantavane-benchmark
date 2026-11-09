@@ -1,0 +1,32 @@
+{
+ "id": "costas-32",
+ "family": "costas-array",
+ "title": "Costas array of order 32",
+ "page": "https://arxiv.org/abs/1102.5727",
+ "statement": "Find a permutation p of 1..32 such that the 496 vectors (j - i, p(j) - p(i)), i < j, are pairwise distinct: a Costas array of order 32. Costas arrays are known for every order up to 31, but none is known for the orders 32 and 33. A valid array scores 1 and settles the order.",
+ "objective": "maximize",
+ "submission": "Text file: 32 integers, a permutation of 1..32 (or of 0..31), separated by spaces, commas or newlines; the i-th number is the row of the dot in column i.",
+ "checker": {
+  "program": "costas_check.py",
+  "args": [
+   "32"
+  ],
+  "value": "result"
+ },
+ "score": "1 for a Costas array of order 32; none is known, so the best known value is 0",
+ "best_known": {
+  "value": "0",
+  "exact": "0",
+  "source": "no Costas array of order 32 is known: K. Drakakis, Open problems in Costas arrays, arXiv:1102.5727, section 3.2 ('the smallest values of n for which no Costas array of order n is currently known are n = 32 and 33') and Table 1; read 9 Nov 2026",
+  "kind": "open existence question",
+  "provenance": {
+   "keeper": "K. Drakakis, Open problems in Costas arrays (arXiv:1102.5727)",
+   "url": "https://arxiv.org/abs/1102.5727",
+   "read": "2026-11-09",
+   "revision": "arXiv:1102.5727v1",
+   "holder": "none known"
+  }
+ },
+ "verified_pending": [],
+ "added": "2.1"
+}

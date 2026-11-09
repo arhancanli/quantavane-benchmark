@@ -1,0 +1,35 @@
+{
+ "id": "srg-99-14-1-2",
+ "family": "strongly-regular-graph",
+ "title": "Conway's 99-graph, srg(99, 14, 1, 2)",
+ "page": "https://www.win.tue.nl/~aeb/graphs/srg/srgtab51-100.html",
+ "statement": "Find a graph on 99 vertices, 14-regular, in which every two adjacent vertices have exactly one common neighbour and every two non-adjacent vertices exactly two: a strongly regular graph srg(99, 14, 1, 2). J. H. Conway offered $1,000 for deciding whether it exists. A valid graph scores 1.",
+ "objective": "maximize",
+ "submission": "Text file: the graph in graph6 or sparse6 (as on House of Graphs), as an edge list (one edge \"u v\" per line, vertices numbered from 0) or as a 0/1 adjacency matrix.",
+ "checker": {
+  "program": "srg_check.py",
+  "args": [
+   "99",
+   "14",
+   "1",
+   "2"
+  ],
+  "value": "result"
+ },
+ "score": "1 for a valid graph; none is known, so the best known value is 0",
+ "best_known": {
+  "value": "0",
+  "exact": "0",
+  "source": "existence unknown: A. E. Brouwer's table of strongly regular graphs on 51-100 vertices marks (99, 14, 1, 2) with '?'; read 9 Nov 2026",
+  "kind": "open existence question",
+  "provenance": {
+   "keeper": "A. E. Brouwer, Parameters of strongly regular graphs",
+   "url": "https://www.win.tue.nl/~aeb/graphs/srg/srgtab51-100.html",
+   "read": "2026-11-09",
+   "revision": "table read 9 Nov 2026",
+   "holder": "none known"
+  }
+ },
+ "verified_pending": [],
+ "added": "2.1"
+}

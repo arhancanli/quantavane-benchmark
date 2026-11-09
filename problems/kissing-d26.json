@@ -1,0 +1,37 @@
+{
+ "id": "kissing-d26",
+ "family": "kissing-number",
+ "title": "Kissing number in dimension 26, lower bound",
+ "page": "https://cohn.mit.edu/kissing-numbers/",
+ "statement": "Find as many nonzero vectors as possible in R^26 with pairwise angles of at least 60 degrees; k such vectors show that the kissing number in dimension 26 is at least k. The best known configuration, by A. Kravatskiy (2026), has 201136 vectors; one with more vectors improves it. The upper bound is 367775 (Leijenhorst and de Laat).",
+ "objective": "maximize",
+ "submission": "Text file: one vector per line, integer coordinates separated by spaces or commas, all with the same squared norm N; more than 26 coordinates are allowed when the vectors span a space of dimension at most 26. Every inner product between two vectors must be at most N/2. With 201,136 vectors or more the check is long (hours) in pure Python.",
+ "checker": {
+  "program": "kissing_check.py",
+  "args": [
+   "26"
+  ],
+  "value": "result"
+ },
+ "score": "k, the number of vectors (larger is better)",
+ "best_known": {
+  "value": "201136",
+  "exact": "201136",
+  "source": "kissing number in dimension 26 >= 201136: A. Kravatskiy (2026), in Henry Cohn's table of kissing numbers (cohn.mit.edu/kissing-numbers); read 9 Nov 2026",
+  "kind": "table entry",
+  "provenance": {
+   "keeper": "H. Cohn, Kissing numbers",
+   "url": "https://cohn.mit.edu/kissing-numbers/",
+   "read": "2026-11-09",
+   "revision": "table read 9 Nov 2026",
+   "holder": "A. Kravatskiy (2026)"
+  }
+ },
+ "bound": {
+  "value": "367775",
+  "kind": "upper bound",
+  "source": "N. Leijenhorst and D. de Laat (2022), in Henry Cohn's table"
+ },
+ "verified_pending": [],
+ "added": "2.1"
+}

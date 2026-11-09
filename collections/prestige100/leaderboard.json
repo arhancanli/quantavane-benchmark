@@ -1,0 +1,2003 @@
+{
+ "collection": "prestige100",
+ "version": "1.0",
+ "date": "2026-11-09",
+ "about": "For each problem, the record as its keeper lists it, and the certificates we have checked with the problem's checker. standing: record = equals the listed record; above the listed record (in review) = better than the keeper lists, verified by us and waiting for the keeper; below the record = valid but weaker. A record with no entry is listed by its keeper but its certificate has not been replayed here yet.",
+ "problems": [
+  {
+   "slot": 1,
+   "id": "ramsey-5-5",
+   "name": "R(5,5)",
+   "objective": "maximize",
+   "score": "n, the number of vertices of the colouring; it proves R(5,5) >= n + 1 (larger is better)",
+   "record": {
+    "statement": "R(5,5) ≥ 43",
+    "value": "42",
+    "holders": "G. Exoo (1989)",
+    "listed_by": "Small Ramsey Numbers (S. P. Radziszowski), Electronic Journal of Combinatorics, Dynamic Survey DS1",
+    "read": "2026-11-09 16:02 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 2,
+   "id": "ramsey-6-6",
+   "name": "R(6,6)",
+   "objective": "maximize",
+   "score": "n, the number of vertices of the colouring; it proves R(6,6) >= n + 1 (larger is better)",
+   "record": {
+    "statement": "R(6,6) ≥ 102",
+    "value": "101",
+    "holders": "J. G. Kalbfleisch (1966)",
+    "listed_by": "Small Ramsey Numbers (S. P. Radziszowski), Electronic Journal of Combinatorics, Dynamic Survey DS1",
+    "read": "2026-11-09 16:02 +04"
+   },
+   "quantavane_record": false,
+   "entries": [
+    {
+     "value": "101",
+     "holder": "J. G. Kalbfleisch (1966)",
+     "certificate": "certs/derived_lib_ramsey-6-6-lower-102.txt",
+     "source": "Leaps in Bounds at a5bbf82, ramsey-6-6-lower-102.g6 (SHA-256 ebc60e82...), as a 0/1 matrix",
+     "sha256": "a48a24af350896df52010a45eae6ac826178bdb4a3dd34be45d0fad34e55afb9",
+     "verified": "2026-11-09",
+     "checker": "ramsey_check",
+     "standing": "record"
+    }
+   ]
+  },
+  {
+   "slot": 3,
+   "id": "ramsey-7-7",
+   "name": "R(7,7)",
+   "objective": "maximize",
+   "score": "n, the number of vertices of the colouring; it proves R(7,7) >= n + 1 (larger is better)",
+   "record": {
+    "statement": "R(7,7) ≥ 205",
+    "value": "204",
+    "holders": "R. Mathon (1987)",
+    "listed_by": "Small Ramsey Numbers (S. P. Radziszowski), Electronic Journal of Combinatorics, Dynamic Survey DS1",
+    "read": "2026-11-09 16:02 +04"
+   },
+   "quantavane_record": false,
+   "entries": [
+    {
+     "value": "204",
+     "holder": "R. Mathon (1987)",
+     "certificate": "certs/derived_lib_ramsey-7-7-lower-205.txt",
+     "source": "Leaps in Bounds at a5bbf82, ramsey-7-7-lower-205.g6 (SHA-256 6d87bee0...), as a 0/1 matrix",
+     "sha256": "7bcd6f7f862656ff0897bb9341a03d73d410db57d5408b917d7f4c236fddd8ed",
+     "verified": "2026-11-09",
+     "checker": "ramsey_check",
+     "standing": "record"
+    }
+   ]
+  },
+  {
+   "slot": 4,
+   "id": "ramsey-8-8",
+   "name": "R(8,8)",
+   "objective": "maximize",
+   "score": "n, the number of vertices of the colouring; it proves R(8,8) >= n + 1 (larger is better)",
+   "record": {
+    "statement": "R(8,8) ≥ 282",
+    "value": "281",
+    "holders": "J. P. Burling and S. W. Reyner (1972)",
+    "listed_by": "Small Ramsey Numbers (S. P. Radziszowski), Electronic Journal of Combinatorics, Dynamic Survey DS1",
+    "read": "2026-11-09 16:02 +04"
+   },
+   "quantavane_record": false,
+   "entries": [
+    {
+     "value": "281",
+     "holder": "J. P. Burling and S. W. Reyner (1972)",
+     "certificate": "certs/derived_lib_ramsey-8-8-lower-282.txt",
+     "source": "Leaps in Bounds at a5bbf82, ramsey-8-8-lower-282.g6 (SHA-256 4ab78933...), as a 0/1 matrix",
+     "sha256": "06c7efc1865f4749aeee71d3358e76759db92cdcccdbfa362b76fa59987d5570",
+     "verified": "2026-11-09",
+     "checker": "ramsey_check",
+     "standing": "record"
+    }
+   ]
+  },
+  {
+   "slot": 5,
+   "id": "ramsey-9-9",
+   "name": "R(9,9)",
+   "objective": "maximize",
+   "score": "n, the number of vertices of the colouring; it proves R(9,9) >= n + 1 (larger is better)",
+   "record": {
+    "statement": "R(9,9) ≥ 565",
+    "value": "564",
+    "holders": "R. Mathon (1987)",
+    "listed_by": "Small Ramsey Numbers (S. P. Radziszowski), Electronic Journal of Combinatorics, Dynamic Survey DS1",
+    "read": "2026-11-09 16:02 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 6,
+   "id": "ramsey-10-10",
+   "name": "R(10,10)",
+   "objective": "maximize",
+   "score": "n, the number of vertices of the colouring; it proves R(10,10) >= n + 1 (larger is better)",
+   "record": {
+    "statement": "R(10,10) ≥ 798",
+    "value": "797",
+    "holders": "R. Mathon (1987)",
+    "listed_by": "Small Ramsey Numbers (S. P. Radziszowski), Electronic Journal of Combinatorics, Dynamic Survey DS1",
+    "read": "2026-11-09 16:02 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 7,
+   "id": "ramsey-4-6",
+   "name": "R(4,6)",
+   "objective": "maximize",
+   "score": "n, the number of vertices of the colouring; it proves R(4,6) >= n + 1 (larger is better)",
+   "record": {
+    "statement": "R(4,6) ≥ 36",
+    "value": "35",
+    "holders": "G. Exoo (2012)",
+    "listed_by": "Small Ramsey Numbers (S. P. Radziszowski), Electronic Journal of Combinatorics, Dynamic Survey DS1",
+    "read": "2026-11-09 16:02 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 8,
+   "id": "ramsey-3-10",
+   "name": "R(3,10)",
+   "objective": "maximize",
+   "score": "n, the number of vertices of the colouring; it proves R(3,10) >= n + 1 (larger is better)",
+   "record": {
+    "statement": "R(3,10) ≥ 40",
+    "value": "39",
+    "holders": "G. Exoo (1989)",
+    "listed_by": "Small Ramsey Numbers (S. P. Radziszowski), Electronic Journal of Combinatorics, Dynamic Survey DS1",
+    "read": "2026-11-09 16:02 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 9,
+   "id": "ramsey-3-11",
+   "name": "R(3,11)",
+   "objective": "maximize",
+   "score": "n, the number of vertices of the colouring; it proves R(3,11) >= n + 1 (larger is better)",
+   "record": {
+    "statement": "R(3,11) ≥ 47",
+    "value": "46",
+    "holders": "G. Exoo (2013)",
+    "listed_by": "Small Ramsey Numbers (S. P. Radziszowski), Electronic Journal of Combinatorics, Dynamic Survey DS1",
+    "read": "2026-11-09 16:02 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 10,
+   "id": "ramsey-3-12",
+   "name": "R(3,12)",
+   "objective": "maximize",
+   "score": "n, the number of vertices of the colouring; it proves R(3,12) >= n + 1 (larger is better)",
+   "record": {
+    "statement": "R(3,12) ≥ 53",
+    "value": "52",
+    "holders": "M. Kolodyazhny (2015)",
+    "listed_by": "Small Ramsey Numbers (S. P. Radziszowski), Electronic Journal of Combinatorics, Dynamic Survey DS1",
+    "read": "2026-11-09 16:02 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 11,
+   "id": "ramsey-3-13",
+   "name": "R(3,13)",
+   "objective": "maximize",
+   "score": "n, the number of vertices of the colouring; it proves R(3,13) >= n + 1 (larger is better)",
+   "record": {
+    "statement": "R(3,13) ≥ 61",
+    "value": "60",
+    "holders": "Google Research, ramsey_number_bounds (2026)",
+    "listed_by": "Small Ramsey Numbers (S. P. Radziszowski), Electronic Journal of Combinatorics, Dynamic Survey DS1",
+    "read": "2026-11-09 16:02 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 12,
+   "id": "ramsey-3-14",
+   "name": "R(3,14)",
+   "objective": "maximize",
+   "score": "n, the number of vertices of the colouring; it proves R(3,14) >= n + 1 (larger is better)",
+   "record": {
+    "statement": "R(3,14) ≥ 67",
+    "value": "66",
+    "holders": "M. Kolodyazhny (2016)",
+    "listed_by": "Small Ramsey Numbers (S. P. Radziszowski), Electronic Journal of Combinatorics, Dynamic Survey DS1",
+    "read": "2026-11-09 16:02 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 13,
+   "id": "ramsey-4-7",
+   "name": "R(4,7)",
+   "objective": "maximize",
+   "score": "n, the number of vertices of the colouring; it proves R(4,7) >= n + 1 (larger is better)",
+   "record": {
+    "statement": "R(4,7) ≥ 49",
+    "value": "48",
+    "holders": "G. Exoo (1989)",
+    "listed_by": "Small Ramsey Numbers (S. P. Radziszowski), Electronic Journal of Combinatorics, Dynamic Survey DS1",
+    "read": "2026-11-09 16:02 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 14,
+   "id": "ramsey-4-8",
+   "name": "R(4,8)",
+   "objective": "maximize",
+   "score": "n, the number of vertices of the colouring; it proves R(4,8) >= n + 1 (larger is better)",
+   "record": {
+    "statement": "R(4,8) ≥ 59",
+    "value": "58",
+    "holders": "G. Exoo and M. Tatarevic (2015)",
+    "listed_by": "Small Ramsey Numbers (S. P. Radziszowski), Electronic Journal of Combinatorics, Dynamic Survey DS1",
+    "read": "2026-11-09 16:02 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 15,
+   "id": "ramsey-5-6",
+   "name": "R(5,6)",
+   "objective": "maximize",
+   "score": "n, the number of vertices of the colouring; it proves R(5,6) >= n + 1 (larger is better)",
+   "record": {
+    "statement": "R(5,6) ≥ 59",
+    "value": "58",
+    "holders": "G. Exoo (2023)",
+    "listed_by": "Small Ramsey Numbers (S. P. Radziszowski), Electronic Journal of Combinatorics, Dynamic Survey DS1",
+    "read": "2026-11-09 16:02 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 16,
+   "id": "ramsey-5-7",
+   "name": "R(5,7)",
+   "objective": "maximize",
+   "score": "n, the number of vertices of the colouring; it proves R(5,7) >= n + 1 (larger is better)",
+   "record": {
+    "statement": "R(5,7) ≥ 80",
+    "value": "79",
+    "holders": "N. J. Calkin, P. Erdős and C. A. Tovey (1997)",
+    "listed_by": "Small Ramsey Numbers (S. P. Radziszowski), Electronic Journal of Combinatorics, Dynamic Survey DS1",
+    "read": "2026-11-09 16:02 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 17,
+   "id": "ramsey-5-15",
+   "name": "R(5,15)",
+   "objective": "maximize",
+   "score": "n, the number of vertices of the colouring; it proves R(5,15) >= n + 1 (larger is better)",
+   "record": {
+    "statement": "R(5,15) ≥ 283",
+    "value": "282",
+    "holders": "A. Canli (Quantavane), 5 Nov 2026",
+    "listed_by": "Small Ramsey Numbers (S. P. Radziszowski), Electronic Journal of Combinatorics, Dynamic Survey DS1",
+    "read": "2026-11-09 16:02 +04"
+   },
+   "quantavane_record": true,
+   "entries": [
+    {
+     "value": "282",
+     "holder": "Quantavane (Arhan Canli)",
+     "certificate": "refs/ours_ramsey_5_15_n282.txt",
+     "source": "benchmark leaderboard.json",
+     "sha256": "9c678813f4ac4d6f64372acf057b92c4118e2a1b382a3a894d9012963bd9cb80",
+     "verified": "2026-11-08",
+     "checker": "ramsey_check",
+     "standing": "record"
+    }
+   ]
+  },
+  {
+   "slot": 18,
+   "id": "ramsey-8-12",
+   "name": "R(8,12)",
+   "objective": "maximize",
+   "score": "n, the number of vertices of the colouring; it proves R(8,12) >= n + 1 (larger is better)",
+   "record": {
+    "statement": "R(8,12) ≥ 523",
+    "value": "522",
+    "holders": "A. Canli (Quantavane), 6 Nov 2026",
+    "listed_by": "Small Ramsey Numbers (S. P. Radziszowski), Electronic Journal of Combinatorics, Dynamic Survey DS1",
+    "read": "2026-11-09 16:02 +04"
+   },
+   "quantavane_record": true,
+   "entries": []
+  },
+  {
+   "slot": 19,
+   "id": "ramsey-3-18",
+   "name": "R(3,18)",
+   "objective": "maximize",
+   "score": "n, the number of vertices of the colouring; it proves R(3,18) >= n + 1 (larger is better)",
+   "record": {
+    "statement": "R(3,18) ≥ 101",
+    "value": "100",
+    "holders": "A. Canli (Quantavane), 8 Nov 2026",
+    "listed_by": "Small Ramsey Numbers (S. P. Radziszowski), Electronic Journal of Combinatorics, Dynamic Survey DS1",
+    "read": "2026-11-09 16:02 +04"
+   },
+   "quantavane_record": true,
+   "entries": [
+    {
+     "value": "100",
+     "holder": "Quantavane (Arhan Canli)",
+     "certificate": "refs/ours_ramsey_3_18_n100.txt",
+     "source": "benchmark leaderboard.json",
+     "sha256": "53679872bbd0e0c03e3538bd09509474b98406500774314637b3e07c03908dc9",
+     "verified": "2026-11-08",
+     "checker": "ramsey_check",
+     "standing": "record"
+    }
+   ]
+  },
+  {
+   "slot": 20,
+   "id": "ramsey-4-18",
+   "name": "R(4,18)",
+   "objective": "maximize",
+   "score": "n, the number of vertices of the colouring; it proves R(4,18) >= n + 1 (larger is better)",
+   "record": {
+    "statement": "R(4,18) ≥ 211",
+    "value": "210",
+    "holders": "A. Canli (Quantavane), 8 Nov 2026",
+    "listed_by": "Small Ramsey Numbers (S. P. Radziszowski), Electronic Journal of Combinatorics, Dynamic Survey DS1",
+    "read": "2026-11-09 16:02 +04"
+   },
+   "quantavane_record": true,
+   "entries": [
+    {
+     "value": "210",
+     "holder": "Quantavane (Arhan Canli)",
+     "certificate": "refs/ours_ramsey_4_18_n210.txt",
+     "source": "benchmark leaderboard.json",
+     "sha256": "20ef93483f350401fc17fd99bded8c084b667a92b5b1ea2f892c79df45df37a0",
+     "verified": "2026-11-08",
+     "checker": "ramsey_check",
+     "standing": "record"
+    }
+   ]
+  },
+  {
+   "slot": 21,
+   "id": "multiramsey-3-3-3-3",
+   "name": "R(3,3,3,3)",
+   "objective": "maximize",
+   "score": "n, the number of vertices of the colouring; it proves R(3,3,3,3) >= n + 1 (larger is better)",
+   "record": {
+    "statement": "R(3,3,3,3) ≥ 51",
+    "value": "50",
+    "holders": "F. R. K. Chung (1973)",
+    "listed_by": "Small Ramsey Numbers (S. P. Radziszowski), Electronic Journal of Combinatorics, Dynamic Survey DS1",
+    "read": "2026-11-09 16:02 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 22,
+   "id": "multiramsey-4-4-4",
+   "name": "R(4,4,4)",
+   "objective": "maximize",
+   "score": "n, the number of vertices of the colouring; it proves R(4,4,4) >= n + 1 (larger is better)",
+   "record": {
+    "statement": "R(4,4,4) ≥ 128",
+    "value": "127",
+    "holders": "R. Hill and R. W. Irving (1982)",
+    "listed_by": "Small Ramsey Numbers (S. P. Radziszowski), Electronic Journal of Combinatorics, Dynamic Survey DS1",
+    "read": "2026-11-09 16:02 +04"
+   },
+   "quantavane_record": false,
+   "entries": [
+    {
+     "value": "127",
+     "holder": "[HiIr] (reference key of the survey) (file built by Quantavane's code)",
+     "certificate": "refs/classic_multiramsey_444_n127.txt",
+     "source": "benchmark leaderboard.json",
+     "sha256": "2c97e6ba40743318dfc8779c7d32ba0038bd2fe3bdf39f877a149a175e9a69b7",
+     "verified": "2026-11-08",
+     "checker": "multiramsey_check.py",
+     "standing": "record"
+    }
+   ]
+  },
+  {
+   "slot": 23,
+   "id": "multiramsey-3-3-5",
+   "name": "R(3,3,5)",
+   "objective": "maximize",
+   "score": "n, the number of vertices of the colouring; it proves R(3,3,5) >= n + 1 (larger is better)",
+   "record": {
+    "statement": "R(3,3,5) ≥ 45",
+    "value": "44",
+    "holders": "G. Exoo (1989)",
+    "listed_by": "Small Ramsey Numbers (S. P. Radziszowski), Electronic Journal of Combinatorics, Dynamic Survey DS1",
+    "read": "2026-11-09 16:02 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 24,
+   "id": "multiramsey-3-3-3-3-3",
+   "name": "R(3,3,3,3,3)",
+   "objective": "maximize",
+   "score": "n, the number of vertices of the colouring; it proves R(3,3,3,3,3) >= n + 1 (larger is better)",
+   "record": {
+    "statement": "R(3,3,3,3,3) ≥ 162",
+    "value": "161",
+    "holders": "G. Exoo (1994)",
+    "listed_by": "Small Ramsey Numbers (S. P. Radziszowski), Electronic Journal of Combinatorics, Dynamic Survey DS1",
+    "read": "2026-11-09 16:02 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 25,
+   "id": "schur-6",
+   "name": "S(6)",
+   "objective": "maximize",
+   "score": "n, the length of the colouring; it proves S(6) >= n (larger is better)",
+   "record": {
+    "statement": "S(6) ≥ 538",
+    "value": "538",
+    "holders": "A. McKenna (4 Nov 2026)",
+    "listed_by": "Leaps in Bounds (D. Munro)",
+    "read": "2026-11-09 15:49 +04"
+   },
+   "quantavane_record": false,
+   "entries": [
+    {
+     "value": "538",
+     "holder": "A. McKenna (4 Nov 2026)",
+     "certificate": "certs/derived_mckenna_schur6_538.txt",
+     "source": "github.com/mysticflounder/schur-538 at ebc5f55, schur6-538.word (SHA-256 9e149c00...), colours 1-6 written as 0-5",
+     "sha256": "8ae15c5e54f0652fef7465e7644c055eaa2a14a7c88eca5b823ced4aa90ed1d8",
+     "verified": "2026-11-09",
+     "checker": "schur_check.py",
+     "standing": "record"
+    },
+    {
+     "value": "537",
+     "holder": "Chen, Zhu and Long (2026) (certificate from Leaps in Bounds, MIT)",
+     "certificate": "certs/lib_schur-6-lower-537.txt",
+     "source": "benchmark leaderboard.json",
+     "sha256": "c6266f6d369e86f515b21f2cbc78bc4449366c39c26813df67d82e08a7e13b6b",
+     "verified": "2026-11-08",
+     "checker": "schur_check.py",
+     "standing": "below the record"
+    }
+   ]
+  },
+  {
+   "slot": 26,
+   "id": "schur-7",
+   "name": "S(7)",
+   "objective": "maximize",
+   "score": "n, the length of the colouring; it proves S(7) >= n (larger is better)",
+   "record": {
+    "statement": "S(7) ≥ 1696",
+    "value": "1696",
+    "holders": "F. Rowley (2021)",
+    "listed_by": "Leaps in Bounds (D. Munro)",
+    "read": "2026-11-09 15:49 +04"
+   },
+   "quantavane_record": false,
+   "entries": [
+    {
+     "value": "1696",
+     "holder": "Rowley (2021) (certificate from Leaps in Bounds, MIT)",
+     "certificate": "certs/lib_schur-7-lower-1696.txt",
+     "source": "benchmark leaderboard.json",
+     "sha256": "6d4794df0f86e60e60aa3f8b33af2ba5a989bd03fdeea2c39637c4f735b54650",
+     "verified": "2026-11-08",
+     "checker": "schur_check.py",
+     "standing": "record"
+    }
+   ]
+  },
+  {
+   "slot": 27,
+   "id": "weak-schur-5",
+   "name": "WS(5)",
+   "objective": "maximize",
+   "score": "n, the length of the colouring; it proves WS(5) >= n (larger is better)",
+   "record": {
+    "statement": "WS(5) ≥ 207",
+    "value": "207",
+    "holders": "F. Rowley (2025)",
+    "listed_by": "Leaps in Bounds (D. Munro)",
+    "read": "2026-11-09 15:49 +04"
+   },
+   "quantavane_record": false,
+   "entries": [
+    {
+     "value": "207",
+     "holder": "Rowley (2025, in OEIS A072842) (certificate from Leaps in Bounds, MIT)",
+     "certificate": "certs/lib_weak-schur-5-lower-207.txt",
+     "source": "benchmark leaderboard.json",
+     "sha256": "e35bcbb75659616a3be80e6d572b1e3ec010cecdc8a7d8f3043226417b47f463",
+     "verified": "2026-11-08",
+     "checker": "schur_check.py",
+     "standing": "record"
+    }
+   ]
+  },
+  {
+   "slot": 28,
+   "id": "weak-schur-6",
+   "name": "WS(6)",
+   "objective": "maximize",
+   "score": "n, the length of the colouring; it proves WS(6) >= n (larger is better)",
+   "record": {
+    "statement": "WS(6) ≥ 650",
+    "value": "650",
+    "holders": "S. E. Rodrigo (2026)",
+    "listed_by": "Leaps in Bounds (D. Munro)",
+    "read": "2026-11-09 15:49 +04"
+   },
+   "quantavane_record": false,
+   "entries": [
+    {
+     "value": "650",
+     "holder": "Rodrigo (2026) (certificate from Leaps in Bounds, MIT)",
+     "certificate": "certs/lib_weak-schur-6-lower-650.txt",
+     "source": "benchmark leaderboard.json",
+     "sha256": "300891d3d3387bee9684c1673d9b329ecd75df37affd88b7060d42c6e235c96f",
+     "verified": "2026-11-08",
+     "checker": "schur_check.py",
+     "standing": "record"
+    }
+   ]
+  },
+  {
+   "slot": 29,
+   "id": "weak-schur-7",
+   "name": "WS(7)",
+   "objective": "maximize",
+   "score": "n, the length of the colouring; it proves WS(7) >= n (larger is better)",
+   "record": {
+    "statement": "WS(7) ≥ 2154",
+    "value": "2154",
+    "holders": "A. Canli (Quantavane), 8 Nov 2026",
+    "listed_by": "Leaps in Bounds (D. Munro)",
+    "read": "2026-11-09 15:49 +04"
+   },
+   "quantavane_record": true,
+   "entries": [
+    {
+     "value": "2154",
+     "holder": "A. Canli (Quantavane), 8 Nov 2026",
+     "certificate": "certs/lib_weak-schur-7-lower-2154.txt",
+     "source": "Leaps in Bounds at a5bbf82, certificates/weak-schur",
+     "sha256": "c05c5cd24de7302904c08a1d618f585cee512b0622a76e22fc75839a7a9dfaab",
+     "verified": "2026-11-09",
+     "checker": "schur_check.py",
+     "standing": "record"
+    }
+   ]
+  },
+  {
+   "slot": 30,
+   "id": "weak-schur-8",
+   "name": "WS(8)",
+   "objective": "maximize",
+   "score": "n, the length of the colouring; it proves WS(8) >= n (larger is better)",
+   "record": {
+    "statement": "WS(8) ≥ 7002",
+    "value": "7002",
+    "holders": "A. Canli (Quantavane), 8 Nov 2026",
+    "listed_by": "Leaps in Bounds (D. Munro)",
+    "read": "2026-11-09 15:49 +04"
+   },
+   "quantavane_record": true,
+   "entries": [
+    {
+     "value": "7002",
+     "holder": "A. Canli (Quantavane), 8 Nov 2026",
+     "certificate": "certs/lib_weak-schur-8-lower-7002.txt",
+     "source": "Leaps in Bounds at a5bbf82, certificates/weak-schur",
+     "sha256": "c2d529a4f41b380756f94f091a86a99489d8ee819b3c5d68c8fa4253d04ae0ab",
+     "verified": "2026-11-09",
+     "checker": "schur_check.py",
+     "standing": "record"
+    }
+   ]
+  },
+  {
+   "slot": 31,
+   "id": "weak-schur-9",
+   "name": "WS(9)",
+   "objective": "maximize",
+   "score": "n, the length of the colouring; it proves WS(9) >= n (larger is better)",
+   "record": {
+    "statement": "WS(9) ≥ 22620",
+    "value": "22620",
+    "holders": "A. Canli (Quantavane), 8 Nov 2026",
+    "listed_by": "Leaps in Bounds (D. Munro)",
+    "read": "2026-11-09 15:49 +04"
+   },
+   "quantavane_record": true,
+   "entries": [
+    {
+     "value": "22620",
+     "holder": "A. Canli (Quantavane), 8 Nov 2026",
+     "certificate": "certs/lib_weak-schur-9-lower-22620.txt",
+     "source": "Leaps in Bounds at a5bbf82, certificates/weak-schur",
+     "sha256": "5b6e7c96b0a800a77f12facfc2fc197a49cfb72d9e867a9bbac64951625ef5ad",
+     "verified": "2026-11-09",
+     "checker": "schur_check.py",
+     "standing": "record"
+    }
+   ]
+  },
+  {
+   "slot": 32,
+   "id": "vdw-2-7",
+   "name": "W(2,7)",
+   "objective": "maximize",
+   "score": "n, the number of integers coloured; it proves W(2,7) >= n + 1 (larger is better)",
+   "record": {
+    "statement": "W(2,7) ≥ 3704",
+    "value": "3703",
+    "holders": "J. Rabung and M. Lotts (2012)",
+    "listed_by": "Leaps in Bounds (D. Munro)",
+    "read": "2026-11-09 15:49 +04"
+   },
+   "quantavane_record": false,
+   "entries": [
+    {
+     "value": "3703",
+     "holder": "Rabung and Lotts (2012) (certificate from Leaps in Bounds, MIT)",
+     "certificate": "certs/lib_van-der-waerden-2-7-lower-3704.txt",
+     "source": "benchmark leaderboard.json",
+     "sha256": "efebc0141a14f58698916c0220971e3290f29ed012f29248cddb8ebc22402d29",
+     "verified": "2026-11-08",
+     "checker": "vdw_check.py",
+     "standing": "record"
+    }
+   ]
+  },
+  {
+   "slot": 33,
+   "id": "vdw-4-4",
+   "name": "W(4,4)",
+   "objective": "maximize",
+   "score": "n, the number of integers coloured; it proves W(4,4) >= n + 1 (larger is better)",
+   "record": {
+    "statement": "W(4,4) ≥ 1049",
+    "value": "1048",
+    "holders": "J. Rabung and M. Lotts (2012)",
+    "listed_by": "Leaps in Bounds (D. Munro)",
+    "read": "2026-11-09 15:49 +04"
+   },
+   "quantavane_record": false,
+   "entries": [
+    {
+     "value": "1048",
+     "holder": "Rabung and Lotts (2012) (certificate from Leaps in Bounds, MIT)",
+     "certificate": "certs/lib_van-der-waerden-4-4-lower-1049.txt",
+     "source": "benchmark leaderboard.json",
+     "sha256": "06af9ae6792406160a632001430f59ab4d0ddad7f66dc674782db30870ab263c",
+     "verified": "2026-11-08",
+     "checker": "vdw_check.py",
+     "standing": "record"
+    }
+   ]
+  },
+  {
+   "slot": 34,
+   "id": "vdw-5-3",
+   "name": "W(5,3)",
+   "objective": "maximize",
+   "score": "n, the number of integers coloured; it proves W(5,3) >= n + 1 (larger is better)",
+   "record": {
+    "statement": "W(5,3) ≥ 171",
+    "value": "170",
+    "holders": "J. Rabung and M. Lotts (2012)",
+    "listed_by": "Leaps in Bounds (D. Munro)",
+    "read": "2026-11-09 15:49 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 35,
+   "id": "kissing-d5",
+   "name": "Kissing number, dimension 5",
+   "objective": "maximize",
+   "score": "k, the number of vectors (larger is better)",
+   "record": {
+    "statement": "κ(5) ≥ 40",
+    "value": "40",
+    "holders": "A. Korkine and G. Zolotareff (1873)",
+    "listed_by": "Kissing numbers (H. Cohn)",
+    "read": "2026-11-09 15:51 +04"
+   },
+   "quantavane_record": false,
+   "entries": [
+    {
+     "value": "40",
+     "holder": "Korkine and Zolotareff (1873) (file built by Quantavane's code)",
+     "certificate": "refs/classic_kissing_d5_D5_n40.txt",
+     "source": "benchmark leaderboard.json",
+     "sha256": "49bbcefc2ec82ba1922662ff3fb90390b34df30eb393c91aaaca83e28c547f98",
+     "verified": "2026-11-08",
+     "checker": "kissing_check.py",
+     "standing": "record"
+    }
+   ]
+  },
+  {
+   "slot": 36,
+   "id": "kissing-d6",
+   "name": "Kissing number, dimension 6",
+   "objective": "maximize",
+   "score": "k, the number of vectors (larger is better)",
+   "record": {
+    "statement": "κ(6) ≥ 72",
+    "value": "72",
+    "holders": "A. Korkine and G. Zolotareff (1873)",
+    "listed_by": "Kissing numbers (H. Cohn)",
+    "read": "2026-11-09 15:51 +04"
+   },
+   "quantavane_record": false,
+   "entries": [
+    {
+     "value": "72",
+     "holder": "Korkine and Zolotareff (1873) (file built by Quantavane's code)",
+     "certificate": "refs/classic_kissing_d6_E6_n72.txt",
+     "source": "benchmark leaderboard.json",
+     "sha256": "6a2bb2e4adc5162e00023122604408ac12810257b36b992fa054baf5b56f4736",
+     "verified": "2026-11-08",
+     "checker": "kissing_check.py",
+     "standing": "record"
+    }
+   ]
+  },
+  {
+   "slot": 37,
+   "id": "kissing-d7",
+   "name": "Kissing number, dimension 7",
+   "objective": "maximize",
+   "score": "k, the number of vectors (larger is better)",
+   "record": {
+    "statement": "κ(7) ≥ 126",
+    "value": "126",
+    "holders": "A. Korkine and G. Zolotareff (1873)",
+    "listed_by": "Kissing numbers (H. Cohn)",
+    "read": "2026-11-09 15:51 +04"
+   },
+   "quantavane_record": false,
+   "entries": [
+    {
+     "value": "126",
+     "holder": "Korkine and Zolotareff (1873) (file built by Quantavane's code)",
+     "certificate": "refs/classic_kissing_d7_E7_n126.txt",
+     "source": "benchmark leaderboard.json",
+     "sha256": "1de0f162d31097695845750e1903df47c2d44c8e7bf347947b669e78cdfa13f9",
+     "verified": "2026-11-08",
+     "checker": "kissing_check.py",
+     "standing": "record"
+    }
+   ]
+  },
+  {
+   "slot": 38,
+   "id": "kissing-d9",
+   "name": "Kissing number, dimension 9",
+   "objective": "maximize",
+   "score": "k, the number of vectors (larger is better)",
+   "record": {
+    "statement": "κ(9) ≥ 306",
+    "value": "306",
+    "holders": "J. Leech and N. J. A. Sloane (1971)",
+    "listed_by": "Kissing numbers (H. Cohn)",
+    "read": "2026-11-09 15:51 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 39,
+   "id": "kissing-d10",
+   "name": "Kissing number, dimension 10",
+   "objective": "maximize",
+   "score": "k, the number of vectors (larger is better)",
+   "record": {
+    "statement": "κ(10) ≥ 510",
+    "value": "510",
+    "holders": "M. Ganzhinov (2022)",
+    "listed_by": "Kissing numbers (H. Cohn)",
+    "read": "2026-11-09 15:51 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 40,
+   "id": "kissing-d11",
+   "name": "Kissing number, dimension 11",
+   "objective": "maximize",
+   "score": "k, the number of vectors (larger is better)",
+   "record": {
+    "statement": "κ(11) ≥ 604",
+    "value": "604",
+    "holders": "F. Bianchi, Y. Kwon, A. Pappu and J. Zou (2026)",
+    "listed_by": "Kissing numbers (H. Cohn)",
+    "read": "2026-11-09 15:51 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 41,
+   "id": "kissing-d12",
+   "name": "Kissing number, dimension 12",
+   "objective": "maximize",
+   "score": "k, the number of vectors (larger is better)",
+   "record": {
+    "statement": "κ(12) ≥ 841",
+    "value": "841",
+    "holders": "R. Takhanov, Z. Assylbekov and S. Yun (2026)",
+    "listed_by": "Kissing numbers (H. Cohn)",
+    "read": "2026-11-09 15:51 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 42,
+   "id": "kissing-d13",
+   "name": "Kissing number, dimension 13",
+   "objective": "maximize",
+   "score": "k, the number of vectors (larger is better)",
+   "record": {
+    "statement": "κ(13) ≥ 1154",
+    "value": "1154",
+    "holders": "V. A. Zinoviev and T. Ericson (1999)",
+    "listed_by": "Kissing numbers (H. Cohn)",
+    "read": "2026-11-09 15:51 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 43,
+   "id": "kissing-d14",
+   "name": "Kissing number, dimension 14",
+   "objective": "maximize",
+   "score": "k, the number of vectors (larger is better)",
+   "record": {
+    "statement": "κ(14) ≥ 1932",
+    "value": "1932",
+    "holders": "M. Ganzhinov (2022)",
+    "listed_by": "Kissing numbers (H. Cohn)",
+    "read": "2026-11-09 15:51 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 44,
+   "id": "kissing-d15",
+   "name": "Kissing number, dimension 15",
+   "objective": "maximize",
+   "score": "k, the number of vectors (larger is better)",
+   "record": {
+    "statement": "κ(15) ≥ 2564",
+    "value": "2564",
+    "holders": "J. Leech and N. J. A. Sloane (1971)",
+    "listed_by": "Kissing numbers (H. Cohn)",
+    "read": "2026-11-09 15:51 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 45,
+   "id": "kissing-d16",
+   "name": "Kissing number, dimension 16",
+   "objective": "maximize",
+   "score": "k, the number of vectors (larger is better)",
+   "record": {
+    "statement": "κ(16) ≥ 4320",
+    "value": "4320",
+    "holders": "E. S. Barnes and G. E. Wall (1959)",
+    "listed_by": "Kissing numbers (H. Cohn)",
+    "read": "2026-11-09 15:51 +04"
+   },
+   "quantavane_record": false,
+   "entries": [
+    {
+     "value": "4320",
+     "holder": "Barnes and Wall (1959) (file built by Quantavane's code)",
+     "certificate": "refs/classic_kissing_d16_BW16_n4320.txt",
+     "source": "benchmark leaderboard.json",
+     "sha256": "ed97ffdfda3768873db8cce9691391955f45ca04eea33d71df4fd1e383d46e34",
+     "verified": "2026-11-08",
+     "checker": "kissing_check.py",
+     "standing": "record"
+    }
+   ]
+  },
+  {
+   "slot": 46,
+   "id": "kissing-d17",
+   "name": "Kissing number, dimension 17",
+   "objective": "maximize",
+   "score": "k, the number of vectors (larger is better)",
+   "record": {
+    "statement": "κ(17) ≥ 5730",
+    "value": "5730",
+    "holders": "H. Cohn and A. Li (2024)",
+    "listed_by": "Kissing numbers (H. Cohn)",
+    "read": "2026-11-09 15:51 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 47,
+   "id": "kissing-d18",
+   "name": "Kissing number, dimension 18",
+   "objective": "maximize",
+   "score": "k, the number of vectors (larger is better)",
+   "record": {
+    "statement": "κ(18) ≥ 8358",
+    "value": "8358",
+    "holders": "A. Kravatskiy (2026)",
+    "listed_by": "Kissing numbers (H. Cohn)",
+    "read": "2026-11-09 15:51 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 48,
+   "id": "kissing-d19",
+   "name": "Kissing number, dimension 19",
+   "objective": "maximize",
+   "score": "k, the number of vectors (larger is better)",
+   "record": {
+    "statement": "κ(19) ≥ 12460",
+    "value": "12460",
+    "holders": "K. Li (2026)",
+    "listed_by": "Kissing numbers (H. Cohn)",
+    "read": "2026-11-09 15:51 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 49,
+   "id": "kissing-d20",
+   "name": "Kissing number, dimension 20",
+   "objective": "maximize",
+   "score": "k, the number of vectors (larger is better)",
+   "record": {
+    "statement": "κ(20) ≥ 19448",
+    "value": "19448",
+    "holders": "H. Cohn and A. Li (2024)",
+    "listed_by": "Kissing numbers (H. Cohn)",
+    "read": "2026-11-09 15:51 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 50,
+   "id": "kissing-d21",
+   "name": "Kissing number, dimension 21",
+   "objective": "maximize",
+   "score": "k, the number of vectors (larger is better)",
+   "record": {
+    "statement": "κ(21) ≥ 31560",
+    "value": "31560",
+    "holders": "K. Li (2026)",
+    "listed_by": "Kissing numbers (H. Cohn)",
+    "read": "2026-11-09 15:51 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 51,
+   "id": "kissing-d22",
+   "name": "Kissing number, dimension 22",
+   "objective": "maximize",
+   "score": "k, the number of vectors (larger is better)",
+   "record": {
+    "statement": "κ(22) ≥ 49896",
+    "value": "49896",
+    "holders": "J. Leech (1967)",
+    "listed_by": "Kissing numbers (H. Cohn)",
+    "read": "2026-11-09 15:51 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 52,
+   "id": "kissing-d23",
+   "name": "Kissing number, dimension 23",
+   "objective": "maximize",
+   "score": "k, the number of vectors (larger is better)",
+   "record": {
+    "statement": "κ(23) ≥ 93150",
+    "value": "93150",
+    "holders": "J. Leech (1967)",
+    "listed_by": "Kissing numbers (H. Cohn)",
+    "read": "2026-11-09 15:51 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 53,
+   "id": "kissing-d25",
+   "name": "Kissing number, dimension 25",
+   "objective": "maximize",
+   "score": "k, the number of vectors (larger is better)",
+   "record": {
+    "statement": "κ(25) ≥ 197584",
+    "value": "197584",
+    "holders": "A. Kravatskiy (2026)",
+    "listed_by": "Kissing numbers (H. Cohn)",
+    "read": "2026-11-09 15:51 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 54,
+   "id": "kissing-d26",
+   "name": "Kissing number, dimension 26",
+   "objective": "maximize",
+   "score": "k, the number of vectors (larger is better)",
+   "record": {
+    "statement": "κ(26) ≥ 201136",
+    "value": "201136",
+    "holders": "A. Kravatskiy (2026)",
+    "listed_by": "Kissing numbers (H. Cohn)",
+    "read": "2026-11-09 15:51 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 55,
+   "id": "kissing-d27",
+   "name": "Kissing number, dimension 27",
+   "objective": "maximize",
+   "score": "k, the number of vectors (larger is better)",
+   "record": {
+    "statement": "κ(27) ≥ 209825",
+    "value": "209825",
+    "holders": "A. Kravatskiy (2026)",
+    "listed_by": "Kissing numbers (H. Cohn)",
+    "read": "2026-11-09 15:51 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 56,
+   "id": "kissing-d28",
+   "name": "Kissing number, dimension 28",
+   "objective": "maximize",
+   "score": "k, the number of vectors (larger is better)",
+   "record": {
+    "statement": "κ(28) ≥ 221988",
+    "value": "221988",
+    "holders": "A. Kravatskiy (2026)",
+    "listed_by": "Kissing numbers (H. Cohn)",
+    "read": "2026-11-09 15:51 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 57,
+   "id": "kissing-d29",
+   "name": "Kissing number, dimension 29",
+   "objective": "maximize",
+   "score": "k, the number of vectors (larger is better)",
+   "record": {
+    "statement": "κ(29) ≥ 231697",
+    "value": "231697",
+    "holders": "A. Kravatskiy (2026)",
+    "listed_by": "Kissing numbers (H. Cohn)",
+    "read": "2026-11-09 15:51 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 58,
+   "id": "kissing-d30",
+   "name": "Kissing number, dimension 30",
+   "objective": "maximize",
+   "score": "k, the number of vectors (larger is better)",
+   "record": {
+    "statement": "κ(30) ≥ 247972",
+    "value": "247972",
+    "holders": "A. Kravatskiy (2026)",
+    "listed_by": "Kissing numbers (H. Cohn)",
+    "read": "2026-11-09 15:51 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 59,
+   "id": "kissing-d31",
+   "name": "Kissing number, dimension 31",
+   "objective": "maximize",
+   "score": "k, the number of vectors (larger is better)",
+   "record": {
+    "statement": "κ(31) ≥ 251200",
+    "value": "251200",
+    "holders": "A. Kravatskiy (2026)",
+    "listed_by": "Kissing numbers (H. Cohn)",
+    "read": "2026-11-09 15:51 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 60,
+   "id": "matmul-3x3x3",
+   "name": "3 × 3 matrix multiplication",
+   "objective": "minimize",
+   "score": "R, the number of multiplications (smaller is better)",
+   "record": {
+    "statement": "rank ≤ 23",
+    "value": "23",
+    "holders": "J. D. Laderman (1976)",
+    "listed_by": "Yet another catalogue of fast matrix multiplication algorithms (A. Sedoglavic)",
+    "read": "2026-11-09 15:58 +04"
+   },
+   "quantavane_record": false,
+   "entries": [
+    {
+     "value": "23",
+     "holder": "J. D. Laderman (1976)",
+     "certificate": "certs/fmm_3x3x3_23.json",
+     "source": "Sedoglavic's catalogue, 3x3x3_tensor.mpl.bz2 (SHA-256 c145cff7...), converted with parameter l = 1 by tools/convert_certs.py",
+     "sha256": "c453ae32b9d83458316d57d2103a57f7400c536e57764f84a0ef206eb0774be5",
+     "verified": "2026-11-09",
+     "checker": "matmul_check.py",
+     "standing": "record"
+    }
+   ]
+  },
+  {
+   "slot": 61,
+   "id": "matmul-4x4x4",
+   "name": "4 × 4 matrix multiplication",
+   "objective": "minimize",
+   "score": "R, the number of multiplications (smaller is better)",
+   "record": {
+    "statement": "rank ≤ 48 over the rationals",
+    "value": "48",
+    "holders": "A. Novikov et al. (AlphaEvolve, 2025), as credited by the catalogue",
+    "listed_by": "Yet another catalogue of fast matrix multiplication algorithms (A. Sedoglavic)",
+    "read": "2026-11-09 15:58 +04"
+   },
+   "quantavane_record": false,
+   "entries": [
+    {
+     "value": "48",
+     "holder": "A. Novikov et al. (AlphaEvolve, 2025), the catalogue's rational form",
+     "certificate": "certs/fmm_4x4x4_48.json",
+     "source": "Sedoglavic's catalogue, 4x4x4_tensor.mpl.bz2 (SHA-256 5e6c6488...), converted by tools/convert_certs.py; checked over Q",
+     "sha256": "a7908dd19279742dbcf2eeaf541686affccfab0f225eca76eb82bc827b772d06",
+     "verified": "2026-11-09",
+     "checker": "matmul_check.py",
+     "standing": "record"
+    }
+   ]
+  },
+  {
+   "slot": 62,
+   "id": "hadamard-668",
+   "name": "Hadamard matrix of order 668",
+   "objective": "maximize",
+   "score": "1 for a Hadamard matrix of this order; nothing is known, so the best known value is 0",
+   "record": {
+    "statement": "none known",
+    "value": "0",
+    "holders": "none",
+    "listed_by": "Optimization constants in mathematics, constant 23a (T. Tao et al.)",
+    "read": "2026-11-09 15:58 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 63,
+   "id": "hadamard-716",
+   "name": "Hadamard matrix of order 716",
+   "objective": "maximize",
+   "score": "1 for a Hadamard matrix of this order; nothing is known, so the best known value is 0",
+   "record": {
+    "statement": "none known",
+    "value": "0",
+    "holders": "none",
+    "listed_by": "Optimization constants in mathematics, constant 23a (T. Tao et al.)",
+    "read": "2026-11-09 15:58 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 64,
+   "id": "hadamard-892",
+   "name": "Hadamard matrix of order 892",
+   "objective": "maximize",
+   "score": "1 for a Hadamard matrix of this order; nothing is known, so the best known value is 0",
+   "record": {
+    "statement": "none known",
+    "value": "0",
+    "holders": "none",
+    "listed_by": "Optimization constants in mathematics, constant 23a (T. Tao et al.)",
+    "read": "2026-11-09 15:58 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 65,
+   "id": "moore-57",
+   "name": "Moore graph of degree 57",
+   "objective": "maximize",
+   "score": "1 for a valid graph; none is known, so the best known value is 0",
+   "record": {
+    "statement": "none known",
+    "value": "0",
+    "holders": "none",
+    "listed_by": "The (Degree, Diameter) Problem for Graphs (F. Comellas)",
+    "read": "2026-11-09 15:51 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 66,
+   "id": "srg-99-14-1-2",
+   "name": "Conway's 99-graph",
+   "objective": "maximize",
+   "score": "1 for a valid graph; none is known, so the best known value is 0",
+   "record": {
+    "statement": "none known",
+    "value": "0",
+    "holders": "none",
+    "listed_by": "Parameters of strongly regular graphs (A. E. Brouwer)",
+    "read": "2026-11-09 15:52 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 67,
+   "id": "srg-88-27-6-9",
+   "name": "srg(88, 27, 6, 9)",
+   "objective": "maximize",
+   "score": "1 for a valid graph; none is known, so the best known value is 0",
+   "record": {
+    "statement": "none known",
+    "value": "0",
+    "holders": "none",
+    "listed_by": "Parameters of strongly regular graphs (A. E. Brouwer)",
+    "read": "2026-11-09 15:52 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 68,
+   "id": "projplane-12",
+   "name": "Projective plane of order 12",
+   "objective": "maximize",
+   "score": "1 for a projective plane of order 12; none is known, so the best known value is 0",
+   "record": {
+    "statement": "none known",
+    "value": "0",
+    "holders": "none",
+    "listed_by": "The On-Line Encyclopedia of Integer Sequences",
+    "read": "2026-11-09 16:14 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 69,
+   "id": "mols-10",
+   "name": "Three MOLS of order 10",
+   "objective": "maximize",
+   "score": "K, the number of mutually orthogonal Latin squares (larger is better)",
+   "record": {
+    "statement": "2",
+    "value": "2",
+    "holders": "E. T. Parker (1959)",
+    "listed_by": "The On-Line Encyclopedia of Integer Sequences",
+    "read": "2026-11-09 16:14 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 70,
+   "id": "costas-32",
+   "name": "Costas array of order 32",
+   "objective": "maximize",
+   "score": "1 for a Costas array of order 32; none is known, so the best known value is 0",
+   "record": {
+    "statement": "none known",
+    "value": "0",
+    "holders": "none",
+    "listed_by": "K. Drakakis, Open problems in Costas arrays (arXiv:1102.5727)",
+    "read": "2026-11-09 16:05 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 71,
+   "id": "costas-33",
+   "name": "Costas array of order 33",
+   "objective": "maximize",
+   "score": "1 for a Costas array of order 33; none is known, so the best known value is 0",
+   "record": {
+    "statement": "none known",
+    "value": "0",
+    "holders": "none",
+    "listed_by": "K. Drakakis, Open problems in Costas arrays (arXiv:1102.5727)",
+    "read": "2026-11-09 16:05 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 72,
+   "id": "cage-3-13",
+   "name": "Cage n(3,13)",
+   "objective": "minimize",
+   "score": "n, the number of vertices of a 3-regular graph of girth at least 13 (smaller is better)",
+   "record": {
+    "statement": "n(3,13) ≤ 272",
+    "value": "272",
+    "holders": "Hoare, reported by Biggs ([Bi89])",
+    "listed_by": "House of Graphs cage table (J. Goedgebeur, J. Jooken, T. Van den Eede)",
+    "read": "2026-11-09 07:4x +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 73,
+   "id": "cage-3-14",
+   "name": "Cage n(3,14)",
+   "objective": "minimize",
+   "score": "n, the number of vertices of a 3-regular graph of girth at least 14 (smaller is better)",
+   "record": {
+    "statement": "n(3,14) ≤ 372",
+    "value": "372",
+    "holders": "[EK26] in the House of Graphs table",
+    "listed_by": "House of Graphs cage table (J. Goedgebeur, J. Jooken, T. Van den Eede)",
+    "read": "2026-11-09 07:4x +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 74,
+   "id": "cage-3-15",
+   "name": "Cage n(3,15)",
+   "objective": "minimize",
+   "score": "n, the number of vertices of a 3-regular graph of girth at least 15 (smaller is better)",
+   "record": {
+    "statement": "n(3,15) ≤ 620",
+    "value": "620",
+    "holders": "N. Biggs and M. J. Hoare (1983)",
+    "listed_by": "House of Graphs cage table (J. Goedgebeur, J. Jooken, T. Van den Eede)",
+    "read": "2026-11-09 07:4x +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 75,
+   "id": "cage-3-16",
+   "name": "Cage n(3,16)",
+   "objective": "minimize",
+   "score": "n, the number of vertices of a 3-regular graph of girth at least 16 (smaller is better)",
+   "record": {
+    "statement": "n(3,16) ≤ 702",
+    "value": "702",
+    "holders": "[P26] in the House of Graphs table",
+    "listed_by": "House of Graphs cage table (J. Goedgebeur, J. Jooken, T. Van den Eede)",
+    "read": "2026-11-09 07:4x +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 76,
+   "id": "cage-4-9",
+   "name": "Cage n(4,9)",
+   "objective": "minimize",
+   "score": "n, the number of vertices of a 4-regular graph of girth at least 9 (smaller is better)",
+   "record": {
+    "statement": "n(4,9) ≤ 270",
+    "value": "270",
+    "holders": "G. Exoo, J. Goedgebeur, J. Jooken, T. Stubbe and G. Van den Eede (2026)",
+    "listed_by": "House of Graphs cage table (J. Goedgebeur, J. Jooken, T. Van den Eede)",
+    "read": "2026-11-09 07:4x +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 77,
+   "id": "cage-5-7",
+   "name": "Cage n(5,7)",
+   "objective": "minimize",
+   "score": "n, the number of vertices of a 5-regular graph of girth at least 7 (smaller is better)",
+   "record": {
+    "statement": "n(5,7) ≤ 152",
+    "value": "152",
+    "holders": "[MY] in the House of Graphs table",
+    "listed_by": "House of Graphs cage table (J. Goedgebeur, J. Jooken, T. Van den Eede)",
+    "read": "2026-11-09 07:4x +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 78,
+   "id": "degdiam-3-5",
+   "name": "(3,5)-graph",
+   "objective": "maximize",
+   "score": "n, the number of vertices of a graph with maximum degree at most 3 and diameter at most 5 (larger is better)",
+   "record": {
+    "statement": "70 vertices",
+    "value": "70",
+    "holders": "C. von Conta (1983); I. Alegre, M. A. Fiol and J. L. A. Yebra (1986)",
+    "listed_by": "The (Degree, Diameter) Problem for Graphs (F. Comellas)",
+    "read": "2026-11-09 15:51 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 79,
+   "id": "degdiam-3-6",
+   "name": "(3,6)-graph",
+   "objective": "maximize",
+   "score": "n, the number of vertices of a graph with maximum degree at most 3 and diameter at most 6 (larger is better)",
+   "record": {
+    "statement": "132 vertices",
+    "value": "132",
+    "holders": "G. Exoo (1998)",
+    "listed_by": "The (Degree, Diameter) Problem for Graphs (F. Comellas)",
+    "read": "2026-11-09 15:51 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 80,
+   "id": "degdiam-4-3",
+   "name": "(4,3)-graph",
+   "objective": "maximize",
+   "score": "n, the number of vertices of a graph with maximum degree at most 4 and diameter at most 3 (larger is better)",
+   "record": {
+    "statement": "41 vertices",
+    "value": "41",
+    "holders": "J. Allwright (1992)",
+    "listed_by": "The (Degree, Diameter) Problem for Graphs (F. Comellas)",
+    "read": "2026-11-09 15:51 +04"
+   },
+   "quantavane_record": false,
+   "entries": [
+    {
+     "value": "41",
+     "holder": "Allwright (1992) (certificate from Leaps in Bounds, MIT)",
+     "certificate": "certs/lib_degree-diameter-4-3-lower-41.s6",
+     "source": "benchmark leaderboard.json",
+     "sha256": "72f1be69af439755e5f7ffce1b43dc9fe0431d555ce2dd189da2976c23935d70",
+     "verified": "2026-11-08",
+     "checker": "degdiam_check.py",
+     "standing": "record"
+    }
+   ]
+  },
+  {
+   "slot": 81,
+   "id": "degdiam-4-4",
+   "name": "(4,4)-graph",
+   "objective": "maximize",
+   "score": "n, the number of vertices of a graph with maximum degree at most 4 and diameter at most 4 (larger is better)",
+   "record": {
+    "statement": "104 vertices",
+    "value": "104",
+    "holders": "N. Bhakar (Aug 2026)",
+    "listed_by": "The (Degree, Diameter) Problem for Graphs (F. Comellas)",
+    "read": "2026-11-09 15:51 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 82,
+   "id": "degdiam-5-3",
+   "name": "(5,3)-graph",
+   "objective": "maximize",
+   "score": "n, the number of vertices of a graph with maximum degree at most 5 and diameter at most 3 (larger is better)",
+   "record": {
+    "statement": "72 vertices",
+    "value": "72",
+    "holders": "G. Exoo (2001)",
+    "listed_by": "The (Degree, Diameter) Problem for Graphs (F. Comellas)",
+    "read": "2026-11-09 15:51 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 83,
+   "id": "degdiam-8-2",
+   "name": "(8,2)-graph",
+   "objective": "maximize",
+   "score": "n, the number of vertices of a graph with maximum degree at most 8 and diameter at most 2 (larger is better)",
+   "record": {
+    "statement": "57 vertices",
+    "value": "57",
+    "holders": "R. M. Storwick (1970)",
+    "listed_by": "The (Degree, Diameter) Problem for Graphs (F. Comellas)",
+    "read": "2026-11-09 15:51 +04"
+   },
+   "quantavane_record": false,
+   "entries": [
+    {
+     "value": "57",
+     "holder": "Storwick (1970) (certificate from Leaps in Bounds, MIT)",
+     "certificate": "certs/lib_degree-diameter-8-2-lower-57.s6",
+     "source": "benchmark leaderboard.json",
+     "sha256": "f14a5ac69f473deb556800344e4f507c1b44070c4b505d38e4327db7a32ae98e",
+     "verified": "2026-11-08",
+     "checker": "degdiam_check.py",
+     "standing": "record"
+    }
+   ]
+  },
+  {
+   "slot": 84,
+   "id": "sortnet-n13-size",
+   "name": "Sorting network, 13 inputs",
+   "objective": "minimize",
+   "score": "the number of comparators (smaller is better)",
+   "record": {
+    "statement": "45 comparators",
+    "value": "45",
+    "holders": "as listed in D. E. Knuth's TAOCP vol. 3",
+    "listed_by": "Smallest and fastest sorting networks (B. Dobbelaere)",
+    "read": "2026-11-09 15:51 +04"
+   },
+   "quantavane_record": false,
+   "entries": [
+    {
+     "value": "45",
+     "holder": "as listed in Knuth's TAOCP vol. 3 (Dobbelaere's list)",
+     "certificate": "certs/dobb_n13_s45.txt",
+     "source": "B. Dobbelaere's page at 6bb0bd2 (SHA-256 fb08a5cd...)",
+     "sha256": "77cf04d99678080b7238f4d16223908513f78842ce2c873a7b8be09ebb9d5e07",
+     "verified": "2026-11-09",
+     "checker": "sortnet_check.py",
+     "standing": "record"
+    }
+   ]
+  },
+  {
+   "slot": 85,
+   "id": "sortnet-n14-size",
+   "name": "Sorting network, 14 inputs",
+   "objective": "minimize",
+   "score": "the number of comparators (smaller is better)",
+   "record": {
+    "statement": "51 comparators",
+    "value": "51",
+    "holders": "as listed in D. E. Knuth's TAOCP vol. 3",
+    "listed_by": "Smallest and fastest sorting networks (B. Dobbelaere)",
+    "read": "2026-11-09 15:51 +04"
+   },
+   "quantavane_record": false,
+   "entries": [
+    {
+     "value": "51",
+     "holder": "as listed in Knuth's TAOCP vol. 3 (Dobbelaere's list)",
+     "certificate": "certs/dobb_n14_s51.txt",
+     "source": "B. Dobbelaere's page at 6bb0bd2",
+     "sha256": "14353dfbfc6e7d5f5e59b8c99821395108df82f4e20ccb6cf5b426d4be35af7f",
+     "verified": "2026-11-09",
+     "checker": "sortnet_check.py",
+     "standing": "record"
+    }
+   ]
+  },
+  {
+   "slot": 86,
+   "id": "sortnet-n15-size",
+   "name": "Sorting network, 15 inputs",
+   "objective": "minimize",
+   "score": "the number of comparators (smaller is better)",
+   "record": {
+    "statement": "56 comparators",
+    "value": "56",
+    "holders": "as listed in D. E. Knuth's TAOCP vol. 3",
+    "listed_by": "Smallest and fastest sorting networks (B. Dobbelaere)",
+    "read": "2026-11-09 15:51 +04"
+   },
+   "quantavane_record": false,
+   "entries": [
+    {
+     "value": "56",
+     "holder": "as listed in Knuth's TAOCP vol. 3 (Dobbelaere's list)",
+     "certificate": "certs/dobb_n15_s56.txt",
+     "source": "B. Dobbelaere's page at 6bb0bd2",
+     "sha256": "e4abf9b9ffddd1edcae82b505963535a6600273fb051fa601d62f2b98ac04003",
+     "verified": "2026-11-09",
+     "checker": "sortnet_check.py",
+     "standing": "record"
+    }
+   ]
+  },
+  {
+   "slot": 87,
+   "id": "sortnet-n16-size",
+   "name": "Sorting network, 16 inputs",
+   "objective": "minimize",
+   "score": "the number of comparators (smaller is better)",
+   "record": {
+    "statement": "60 comparators",
+    "value": "60",
+    "holders": "M. W. Green (1969), in TAOCP vol. 3",
+    "listed_by": "Smallest and fastest sorting networks (B. Dobbelaere)",
+    "read": "2026-11-09 15:51 +04"
+   },
+   "quantavane_record": false,
+   "entries": [
+    {
+     "value": "60",
+     "holder": "M. W. Green (1969)",
+     "certificate": "certs/dobb_n16_s60.txt",
+     "source": "B. Dobbelaere's page at 6bb0bd2",
+     "sha256": "d5095642a544b01a78481fda4e12bb395f77dcf6922f2caf0f152a5fb3f4a168",
+     "verified": "2026-11-09",
+     "checker": "sortnet_check.py",
+     "standing": "record"
+    }
+   ]
+  },
+  {
+   "slot": 88,
+   "id": "sortnet-n17-size",
+   "name": "Sorting network, 17 inputs",
+   "objective": "minimize",
+   "score": "the number of comparators (smaller is better)",
+   "record": {
+    "statement": "71 comparators",
+    "value": "71",
+    "holders": "S. W. Al-Haj Baddar (2009)",
+    "listed_by": "Smallest and fastest sorting networks (B. Dobbelaere)",
+    "read": "2026-11-09 15:51 +04"
+   },
+   "quantavane_record": false,
+   "entries": [
+    {
+     "value": "71",
+     "holder": "S. W. Al-Haj Baddar (2009)",
+     "certificate": "certs/dobb_n17_s71.txt",
+     "source": "B. Dobbelaere's page at 6bb0bd2",
+     "sha256": "01e04d83789d231867d2ed29f4d5e540c9e74f439750a5206fd6e75f55c54bf5",
+     "verified": "2026-11-09",
+     "checker": "sortnet_check.py",
+     "standing": "record"
+    }
+   ]
+  },
+  {
+   "slot": 89,
+   "id": "golomb-29",
+   "name": "Golomb ruler, 29 marks",
+   "objective": "minimize",
+   "score": "the length (largest minus smallest mark; smaller is better)",
+   "record": {
+    "statement": "length ≤ 623",
+    "value": "623",
+    "holders": "M. D. Atkinson and A. Hassenklover (1984)",
+    "listed_by": "Leaps in Bounds (D. Munro)",
+    "read": "2026-11-09 15:49 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 90,
+   "id": "golomb-30",
+   "name": "Golomb ruler, 30 marks",
+   "objective": "minimize",
+   "score": "the length (largest minus smallest mark; smaller is better)",
+   "record": {
+    "statement": "length ≤ 680",
+    "value": "680",
+    "holders": "M. D. Atkinson and A. Hassenklover (1984)",
+    "listed_by": "Leaps in Bounds (D. Munro)",
+    "read": "2026-11-09 15:49 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 91,
+   "id": "capset-n7",
+   "name": "Cap set in F_3^7",
+   "objective": "maximize",
+   "score": "the number of points (larger is better)",
+   "record": {
+    "statement": "236 points",
+    "value": "236",
+    "holders": "A. R. Calderbank and P. C. Fishburn (1994)",
+    "listed_by": "Leaps in Bounds (D. Munro)",
+    "read": "2026-11-09 15:49 +04"
+   },
+   "quantavane_record": false,
+   "entries": [
+    {
+     "value": "236",
+     "holder": "Calderbank and Fishburn (1994) (certificate from Leaps in Bounds, MIT)",
+     "certificate": "certs/lib_cap-set-7-lower-236.txt",
+     "source": "benchmark leaderboard.json",
+     "sha256": "3c3fc5029a61be80a95714007fe9e9cc5574779284b65bbb846dd8421f019520",
+     "verified": "2026-11-08",
+     "checker": "capset_check.py",
+     "standing": "record"
+    }
+   ]
+  },
+  {
+   "slot": 92,
+   "id": "capset-n8",
+   "name": "Cap set in F_3^8",
+   "objective": "maximize",
+   "score": "the number of points (larger is better)",
+   "record": {
+    "statement": "512 points",
+    "value": "512",
+    "holders": "B. Romera-Paredes et al. (FunSearch, 2023)",
+    "listed_by": "Leaps in Bounds (D. Munro)",
+    "read": "2026-11-09 15:49 +04"
+   },
+   "quantavane_record": false,
+   "entries": [
+    {
+     "value": "512",
+     "holder": "Romera-Paredes et al. (2023, FunSearch) (certificate from Leaps in Bounds, MIT)",
+     "certificate": "certs/lib_cap-set-8-lower-512.txt",
+     "source": "benchmark leaderboard.json",
+     "sha256": "238d59d3199bd3f71861a2d44b477ea403ef9d588ede01062b216345949eaa0c",
+     "verified": "2026-11-08",
+     "checker": "capset_check.py",
+     "standing": "record"
+    }
+   ]
+  },
+  {
+   "slot": 93,
+   "id": "snake-d9",
+   "name": "Snake in the 9-cube",
+   "objective": "maximize",
+   "score": "the number of edges (larger is better)",
+   "record": {
+    "statement": "191 edges",
+    "value": "191",
+    "holders": "M. Orland, B. Fagan et al. (2026)",
+    "listed_by": "Leaps in Bounds (D. Munro)",
+    "read": "2026-11-09 15:49 +04"
+   },
+   "quantavane_record": false,
+   "entries": [
+    {
+     "value": "191",
+     "holder": "Orland, Fagan et al. (2026) (certificate from Leaps in Bounds, MIT)",
+     "certificate": "certs/lib_snake-in-the-box-9-lower-191.txt",
+     "source": "benchmark leaderboard.json",
+     "sha256": "a9b63ff19ff4040271899ad246ddee7481c759e926fd67824bd9228fe047afc3",
+     "verified": "2026-11-08",
+     "checker": "snake_check.py",
+     "standing": "record"
+    }
+   ]
+  },
+  {
+   "slot": 94,
+   "id": "superperm-n6",
+   "name": "Minimal superpermutation, n = 6",
+   "objective": "minimize",
+   "score": "the length of the string (smaller is better)",
+   "record": {
+    "statement": "length ≤ 872",
+    "value": "872",
+    "holders": "R. Houston (2014)",
+    "listed_by": "Leaps in Bounds (D. Munro)",
+    "read": "2026-11-09 15:49 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 95,
+   "id": "erdos-107",
+   "name": "Erdős #107 (happy ending)",
+   "objective": "maximize",
+   "score": "1 for a counterexample; none is known, so the best known value is 0",
+   "record": {
+    "statement": "no counterexample known",
+    "value": "0",
+    "holders": "none",
+    "listed_by": "Erdős Problems (T. F. Bloom)",
+    "read": "2026-11-09 15:58 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 96,
+   "id": "erdos-993",
+   "name": "Erdős #993 (trees)",
+   "objective": "maximize",
+   "score": "1 for a counterexample; none is known, so the best known value is 0",
+   "record": {
+    "statement": "no counterexample known",
+    "value": "0",
+    "holders": "none",
+    "listed_by": "Erdős Problems (T. F. Bloom)",
+    "read": "2026-11-09 15:58 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 97,
+   "id": "1a-upper",
+   "name": "Sidon autocorrelation constant C_1a",
+   "objective": "minimize",
+   "score": "a certified upper bound on the constant (exact; smaller is better)",
+   "record": {
+    "statement": "C_1a ≤ 1.5027434868",
+    "value": "1.5027434868",
+    "holders": "Atris (2026), on the constant's page",
+    "listed_by": "Optimization constants in mathematics, constant 1a (T. Tao et al.)",
+    "read": "2026-11-09 15:58 +04"
+   },
+   "quantavane_record": false,
+   "entries": [
+    {
+     "value": "29134478977604335569142246661390387511296/19387536037290895570476550697799766901521",
+     "holder": "A. Canli (Quantavane), pull request #346, in review",
+     "certificate": "certs/ours_c1a_upper_n262144.json",
+     "source": "github.com/arhancanli/quantavane-replays at c40060f, improvements/c1a",
+     "sha256": "a5eba0bf61429955a179b8d436fd72d2934a7b1677cedec333bec2f381f85361",
+     "verified": "2026-11-09",
+     "checker": "autocorr_check.py",
+     "standing": "above the listed record (in review)"
+    }
+   ]
+  },
+  {
+   "slot": 98,
+   "id": "shannon-c7-power5",
+   "name": "Independent sets in C7^5",
+   "objective": "maximize",
+   "score": "the size of the independent set (larger is better)",
+   "record": {
+    "statement": "367 vertices",
+    "value": "367",
+    "holders": "S. C. Polak and A. Schrijver (2018)",
+    "listed_by": "Optimization constants in mathematics, constant 9 (T. Tao et al.)",
+    "read": "2026-11-09 15:58 +04"
+   },
+   "quantavane_record": false,
+   "entries": []
+  },
+  {
+   "slot": 99,
+   "id": "no3line-75",
+   "name": "No-three-in-line, 75 × 75",
+   "objective": "maximize",
+   "score": "the number of points (larger is better)",
+   "record": {
+    "statement": "148 points",
+    "value": "148",
+    "holders": "the 74 × 74 solution (T. Prellberg, 2026) placed in the 75 × 75 grid",
+    "listed_by": "No-three-in-line records (A. Flammenkamp), via Leaps in Bounds",
+    "read": "2026-11-09 15:49 +04"
+   },
+   "quantavane_record": false,
+   "entries": [
+    {
+     "value": "148",
+     "holder": "embedding of the smaller grid's record (certificate from Leaps in Bounds, MIT)",
+     "certificate": "certs/lib_no-three-in-line-75-lower-148.txt",
+     "source": "benchmark leaderboard.json",
+     "sha256": "3dd21be9210fb79b9fd4fe188964ecf9340ff6a1ddaf1a23a06facb4732809ac",
+     "verified": "2026-11-08",
+     "checker": "no3line_check.py",
+     "standing": "record"
+    }
+   ]
+  },
+  {
+   "slot": 100,
+   "id": "tsp-mona-lisa",
+   "name": "Mona Lisa TSP",
+   "objective": "minimize",
+   "score": "L, the tour length with EUC_2D distances rounded to the nearest integer (smaller is better)",
+   "record": {
+    "statement": "tour length 5,757,191",
+    "value": "5757191",
+    "holders": "Y. Nagata (17 Mar 2009)",
+    "listed_by": "Mona Lisa TSP Challenge (W. Cook)",
+    "read": "2026-11-09 15:58 +04"
+   },
+   "quantavane_record": false,
+   "entries": [
+    {
+     "value": "5757191",
+     "holder": "Y. Nagata (17 Mar 2009)",
+     "certificate": "certs/cook_monalisa_5757191.tour",
+     "source": "W. Cook's page, tour/monalisa_5757191.tour (fetch.sh)",
+     "sha256": "d8a98a936d01b0317ff63a43646fbbbfa74bf6ee954a9449ad659128e579eb88",
+     "verified": "2026-11-09",
+     "checker": "tsp_check.py",
+     "standing": "record"
+    }
+   ]
+  }
+ ]
+}

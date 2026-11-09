@@ -1,0 +1,37 @@
+{
+ "id": "tsp-mona-lisa",
+ "family": "travelling-salesman",
+ "title": "Mona Lisa TSP (100,000 cities)",
+ "page": "https://www.math.uwaterloo.ca/tsp/data/ml/monalisa.html",
+ "statement": "Find a shortest closed tour through the 100,000 cities of R. Bosch's Mona Lisa instance (mona-lisa100K.tsp, TSPLIB EUC_2D distances). The best known tour has length 5,757,191 (Y. Nagata, 17 Mar 2009) and no tour is shorter than 5,757,084 (Concorde, 27 Jul 2012); W. Cook offers $1,000 for the first tour shorter than 5,757,191.",
+ "objective": "minimize",
+ "submission": "Text file: a TSPLIB tour file (TOUR_SECTION ending with -1) or the 100,000 city numbers 1..100000 in the order visited, one per line.",
+ "checker": {
+  "program": "tsp_check.py",
+  "args": [
+   "instances/tsp/mona-lisa100K.tsp"
+  ],
+  "value": "result"
+ },
+ "score": "L, the tour length with EUC_2D distances rounded to the nearest integer (smaller is better)",
+ "best_known": {
+  "value": "5757191",
+  "exact": "5757191",
+  "source": "tour 5,757,191 by Y. Nagata (17 Mar 2009), on W. Cook's Mona Lisa TSP Challenge page; read 9 Nov 2026",
+  "kind": "table entry",
+  "provenance": {
+   "keeper": "W. Cook, Mona Lisa TSP Challenge",
+   "url": "https://www.math.uwaterloo.ca/tsp/data/ml/monalisa.html",
+   "read": "2026-11-09",
+   "revision": "status read 9 Nov 2026",
+   "holder": "Y. Nagata (2009)"
+  }
+ },
+ "bound": {
+  "value": "5757084",
+  "kind": "lower bound",
+  "source": "Concorde, 27 Jul 2012, on the same page"
+ },
+ "verified_pending": [],
+ "added": "2.1"
+}

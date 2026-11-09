@@ -1,4 +1,4 @@
-# Open Problems Benchmark (v2.0)
+# Open Problems Benchmark (v2.1)
 
 Open problems with an exact checker each. A submission scores the exact value its checker proves, and it improves a
 problem when that value beats the best known one. Two reference values are kept apart for every problem: the best
@@ -14,9 +14,16 @@ unknown counts only when beaten by more than its last printed digit.
     python3 -I obb.py leaderboard             # the verified results in leaderboard.json
     ./fetch.sh && ./test.sh                   # the reference submissions, red controls and the expected verdicts
 
-v2.0 (9 Nov 2026) has 149,351 problems: the 374 single problems of v1.1 and 148,977 cells of six families. A family
-is one statement and one checker applied to a whole table kept by someone else: each cell is one entry of the table,
-with its parameters, the best known value read from the table, and who holds that value when the table says.
+v2.1 (9 Nov 2026) has 149,372 problems: 395 single problems and 148,977 cells of six families. A family is one
+statement and one checker applied to a whole table kept by someone else: each cell is one entry of the table, with its
+parameters, the best known value read from the table, and who holds that value when the table says.
+
+v2.1 adds the curated collection **Quantavane Prestige 100** (`collections/prestige100/`): one hundred famous open
+problems in which a single checked object settles the score, from R(5,5) and Hadamard 668 to Costas arrays of order 32,
+3 x 3 matrix multiplication with 22 multiplications, Conway's 99-graph and the Mona Lisa TSP. Each has a page with the
+statement, why it matters, the best known value with its holders and history as recorded by its keeper (every keeper
+read on 9 Nov 2026), the checker, the certificate format and a leaderboard of the certificates we have checked. 21 of
+the 100 are new single problems of v2.1, with eight new checkers; see the collection's README.
 
 | Family | Cells | Table (keeper) | Checker |
 | --- | ---: | --- | --- |
@@ -66,7 +73,8 @@ Every best known value was read from its source on the date given in the problem
 names the keeper of the table, the revision or commit read, the date and who holds the value. Where the best known
 value is ours the file says so (`quantavane_record`): the spherical codes, covering designs, routing instances and
 constant weight codes (for A(34,6,6), our code with 10 words added by Brouwer), R(3,18), R(4,18), R(5,15) and
-R(8,12), and the cages n(6,9) <= 5600 and n(7,9) <= 17600 (sent to House of Graphs, not listed yet). Our results are
+R(8,12), the weak Schur numbers WS(7) to WS(9) (from v2.1), and the cages n(6,9) <= 5600 and n(7,9) <= 17600 (sent to
+House of Graphs, not listed yet). Our results are
 the reference submissions, in `refs/`, with classical constructions built by our code; other authors' certificates,
 including 45 from Leaps in Bounds (MIT licence), are fetched into `certs/` by `fetch.sh` at pinned commits.
 Changes from version to version are in CHANGELOG.md.
@@ -74,6 +82,25 @@ Changes from version to version are in CHANGELOG.md.
 Checkers are Quantavane's own code (MIT, see LICENSE), standard library only (and a C compiler for the Ramsey
 checker). Each problem file in `problems/` states its objective, its checker, what the score means, both reference
 values and their sources.
+
+## Quantavane Prestige 100
+
+`collections/prestige100/` holds the collection: `README.md` (the hundred problems by family, with the record, its
+holder and the checker), `problems/NN-ID.md` (one page per problem), `index.json` (everything in machine-readable
+form), `leaderboard.json` (for each problem the record as its keeper lists it and the certificates checked here, with
+their SHA-256) and `curation.json`, the curated source: record, holders, history with sources, why it matters, the
+keeper and when it was read, and the record certificates we replayed. `python3 -I tools/build_prestige100.py` rebuilds
+the other files from it and from the problem files, and `--check` checks that there are exactly 100 problems, each with
+a problem file, a checker, a credited holder and a keeper read on a stated date, and that every record agrees with its
+problem file. Quantavane holds the best known value in seven of the hundred (R(5,15), R(8,12), R(3,18), R(4,18) and
+WS(7) to WS(9)); they are marked.
+
+New single problems in v2.1: Costas arrays of orders 32 and 33 (`costas-32`, `costas-33`), the Moore graph of degree 57
+(`moore-57`), Conway's 99-graph (`srg-99-14-1-2`), the smallest open strongly regular graph in A. E. Brouwer's tables
+(`srg-88-27-6-9`), a projective plane of order 12 (`projplane-12`), mutually orthogonal Latin squares of order 10
+(`mols-10`), 3 x 3 and 4 x 4 matrix multiplication (`matmul-3x3x3`, `matmul-4x4x4`), the Mona Lisa TSP
+(`tsp-mona-lisa`; its instance is fetched into `instances/tsp/`), Erdos problems #107 and #993 (`erdos-107`,
+`erdos-993`) and the kissing numbers in dimensions 22, 23 and 25 to 31.
 
 ## Families
 
@@ -182,6 +209,29 @@ m > t it now runs an exact branch-and-bound search for an m-subset meeting every
 minutes or more on some designs of the repository, and on the 200 C(v,k,t,m) designs we hold the new one takes
 under 10 seconds for most and about 3 minutes for the slowest. Both are cross-checked against brute force in
 `tests/units.py`.
+
+The checkers added in v2.1 for the Prestige 100 also end with `RESULT v`; each is unit-tested on known objects, red
+controls and brute force in `tests/units_prestige.py`:
+
+- `costas_check.py N FILE`: a Costas array of order N (all displacement vectors distinct).
+- `srg_check.py V K L M FILE`: a strongly regular graph srg(V,K,L,M), common neighbours of every pair counted on bit
+  sets (graph6, sparse6, edge list or 0/1 matrix).
+- `projplane_check.py N FILE`: a projective plane of order N given by its lines (every pair of points on exactly one).
+- `mols_check.py N FILE`: K mutually orthogonal Latin squares of order N; the result is K.
+- `matmul_check.py N M P FIELDS FILE`: a bilinear algorithm for <N,M,P> over Q, Q(i) or GF(p), checked exactly as a
+  decomposition of the matrix multiplication tensor; the result is the number of multiplications. FIELDS = char0
+  accepts only Q and Q(i).
+- `tsp_check.py INSTANCE TOUR`: the exact EUC_2D length of a TSPLIB tour (integer rounding done exactly).
+- `convex_check.py FILE`: a counterexample to the Erdos-Szekeres conjecture (general position, then the largest subset
+  in convex position by dynamic programming).
+- `tree_unimodal_check.py FILE`: a forest whose independent set sequence is not unimodal (exact independence
+  polynomial).
+
+`fetch.sh` also fetches, at pinned commits or with pinned SHA-256, the record certificates the collection replays:
+Y. Nagata's Mona Lisa tour, Laderman's and the catalogue's 48-term algorithms (A. Sedoglavic's catalogue), B.
+Dobbelaere's networks for 13 to 17 inputs, Leaps in Bounds' colourings for R(6,6), R(7,7) and R(8,8), A. McKenna's
+S(6) >= 538 partition, our weak Schur partitions and our C_1a certificate; `tools/convert_certs.py` writes them in our
+checkers' formats (as data; no code from the sources is run).
 
 ## Submitting
 

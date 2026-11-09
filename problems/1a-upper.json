@@ -21,12 +21,17 @@
   "provenance": {
    "keeper": "T. Tao et al., optimization constants repository (teorth/optimizationproblems)",
    "url": "https://teorth.github.io/optimizationproblems/constants/1a.html",
-   "read": null,
+   "read": "2026-11-09",
    "revision": "main 87b4ebb",
    "holder": "[A2026] Atris, on the 1a page (main 87b4ebb)"
   }
  },
  "verified_pending": [
+  {
+   "value": "1.50274273747657840978",
+   "source": "https://github.com/teorth/optimizationproblems/pull/346 (Quantavane, 262,144 cells; certificate github.com/arhancanli/quantavane-replays at c40060f, improvements/c1a), checked with autocorr_check.py on 9 Nov 2026",
+   "exact": "29134478977604335569142246661390387511296/19387536037290895570476550697799766901521"
+  },
   {
    "value": "1.50274335217817824811",
    "source": "https://github.com/teorth/optimizationproblems/pull/270 (vidigoat, 262,144 cells), replayed 5 Nov 2026",
@@ -35,5 +40,5 @@
  ],
  "score": "a certified upper bound on the constant (exact; smaller is better)",
  "added": "0",
- "quantavane_note": "our pull request teorth/optimizationproblems#346 claims 1.5027427375 (in review)"
+ "quantavane_note": "our pull request teorth/optimizationproblems#346 (1.5027427375, in review) is the best verified value in review"
 }

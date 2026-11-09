@@ -1,0 +1,32 @@
+{
+ "id": "projplane-12",
+ "family": "projective-plane",
+ "title": "Projective plane of order 12",
+ "page": "https://oeis.org/A001231",
+ "statement": "Find a projective plane of order 12: 157 points and 157 lines, each line holding 13 points, such that every two points lie on exactly one line. Planes are known for every prime-power order; order 6 is impossible (Bruck and Ryser 1949) and order 10 was ruled out by computer (Lam, Thiel and Swiercz 1989), so 12 is the smallest open order. A valid plane scores 1.",
+ "objective": "maximize",
+ "submission": "Text file: 157 lines of text, each with the 13 points (numbered 0..156 or 1..157) of one line of the plane, separated by spaces or commas.",
+ "checker": {
+  "program": "projplane_check.py",
+  "args": [
+   "12"
+  ],
+  "value": "result"
+ },
+ "score": "1 for a projective plane of order 12; none is known, so the best known value is 0",
+ "best_known": {
+  "value": "0",
+  "exact": "0",
+  "source": "no projective plane of order 12 is known: OEIS A001231 (number of projective planes of order n) lists values only through n = 10; read 9 Nov 2026",
+  "kind": "open existence question",
+  "provenance": {
+   "keeper": "OEIS A001231",
+   "url": "https://oeis.org/A001231",
+   "read": "2026-11-09",
+   "revision": "revision 35",
+   "holder": "none known"
+  }
+ },
+ "verified_pending": [],
+ "added": "2.1"
+}

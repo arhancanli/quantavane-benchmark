@@ -1,0 +1,30 @@
+{
+ "id": "erdos-107",
+ "family": "erdos-problem",
+ "title": "Erdos problem #107: a counterexample to the Erdos-Szekeres conjecture",
+ "page": "https://www.erdosproblems.com/107",
+ "statement": "Find points in the plane, no three on a line, with at least 2^(c-1) + 1 points but no c + 1 of them in convex position, for some c: a counterexample to the Erdos-Szekeres ('happy ending') conjecture that any 2^(n-2) + 1 points in general position contain a convex n-gon. The conjecture holds for n <= 6, so a counterexample has at least 33 points. A valid counterexample scores 1 (Erdos offered $500 for the problem).",
+ "objective": "maximize",
+ "submission": "Text file: one point per line, two integer coordinates separated by a space or a comma.",
+ "checker": {
+  "program": "convex_check.py",
+  "args": [],
+  "value": "result"
+ },
+ "score": "1 for a counterexample; none is known, so the best known value is 0",
+ "best_known": {
+  "value": "0",
+  "exact": "0",
+  "source": "no counterexample is known: T. F. Bloom, Erdos Problem #107 (erdosproblems.com/107; status 'falsifiable' in the database teorth/erdosproblems); proved for n <= 6 (Szekeres and Peters 2006); read 9 Nov 2026",
+  "kind": "open conjecture",
+  "provenance": {
+   "keeper": "T. F. Bloom, Erdos Problems",
+   "url": "https://www.erdosproblems.com/107",
+   "read": "2026-11-09",
+   "revision": "page and database read 9 Nov 2026",
+   "holder": "none known"
+  }
+ },
+ "verified_pending": [],
+ "added": "2.1"
+}

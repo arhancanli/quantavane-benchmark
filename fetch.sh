@@ -61,6 +61,35 @@ get lib_degree-diameter-10-2-lower-91.s6 https://raw.githubusercontent.com/danie
 get lib_degree-diameter-10-3-lower-366.s6 https://raw.githubusercontent.com/daniel-munro/leaps-in-bounds/4521e13522e0e191ed2212eda9f00a870fde1d7c/certificates/degree-diameter/degree-diameter-10-3-lower-366.s6 0460bb1f355ed9815599e0d3075c4bfc6635a1efbd646e6f41211b5611932961
 get lib_degree-diameter-11-3-lower-420.s6 https://raw.githubusercontent.com/daniel-munro/leaps-in-bounds/4521e13522e0e191ed2212eda9f00a870fde1d7c/certificates/degree-diameter/degree-diameter-11-3-lower-420.s6 74df5dc2ad11eaa269a61ef0851335ba7eeb24467c3195863b9e8c8e4859a85a
 
+# v2.1, Quantavane Prestige 100 (collections/prestige100): the Mona Lisa instance and record certificates, replayed by
+# our checkers in test.sh. Data only; tools/convert_certs.py turns them into our checkers' formats.
+mkdir -p ../instances/tsp
+get ../instances/tsp/mona-lisa100K.tsp https://www.math.uwaterloo.ca/tsp/data/ml/mona-lisa100K.tsp 532fefbfb9ad66cc2550bece766fa069acaa8e34ee511ac1949ae101da4d70ad
+get cook_monalisa_5757191.tour https://www.math.uwaterloo.ca/tsp/data/ml/tour/monalisa_5757191.tour d8a98a936d01b0317ff63a43646fbbbfa74bf6ee954a9449ad659128e579eb88
+get fmm_3x3x3_tensor.mpl.bz2 https://fmm.univ-lille.fr/3x3x3_tensor.mpl.bz2 c145cff7708b8472de23e0112c0722cae05f08bed2d9883b8dbf98cbb843169e
+get fmm_4x4x4_tensor.mpl.bz2 https://fmm.univ-lille.fr/4x4x4_tensor.mpl.bz2 5e6c6488e9982961d8d476dcc09972ce7de7a74a1deb0c913fbd309679ba2c49
+get dobbelaere_sorting_networks_6bb0bd2.html https://raw.githubusercontent.com/bertdobbelaere/bertdobbelaere.github.io/6bb0bd2cb560064a1d92f35513dfed974e098eb1/sorting_networks.html fb08a5cd90a460607586be0f753fa19baedc1e5fe1c7d4247efc1923e6dfd0f6
+get mckenna_schur6-538.word https://raw.githubusercontent.com/mysticflounder/schur-538/ebc5f5598881eded8c053b0ffe3a712d3e55f4b2/schur6-538.word 9e149c007b778655afd199685ebcc76260604a44f4c322d8aa9a1d96afb71d20
+get ours_c1a_upper_n262144.json https://raw.githubusercontent.com/arhancanli/quantavane-replays/c40060ff2d03ed022d970ef25047e70c23a54ad3/improvements/c1a/c1a_upper_n262144.json a5eba0bf61429955a179b8d436fd72d2934a7b1677cedec333bec2f381f85361
+L=https://raw.githubusercontent.com/daniel-munro/leaps-in-bounds/a5bbf82e21aa362df89d634c3cd79e3109674ac8/certificates
+get lib_ramsey-6-6-lower-102.g6 $L/ramsey/ramsey-6-6-lower-102.g6 ebc60e8269cb2c447fe1ba42c3c8d05c788e130cdd0f63e82ca91e2d00635353
+get lib_ramsey-7-7-lower-205.g6 $L/ramsey/ramsey-7-7-lower-205.g6 6d87bee01a7eea3646d0198740c35b6e550dcc234635c251ae045279299ec06d
+get lib_ramsey-8-8-lower-282.g6 $L/ramsey/ramsey-8-8-lower-282.g6 4ab78933e6b619ba7bab6f1d6f1b9c740492a2322bfb2445a168a02d48fc978d
+get lib_weak-schur-7-lower-2154.txt $L/weak-schur/weak-schur-7-lower-2154.txt c05c5cd24de7302904c08a1d618f585cee512b0622a76e22fc75839a7a9dfaab
+get lib_weak-schur-8-lower-7002.txt $L/weak-schur/weak-schur-8-lower-7002.txt c2d529a4f41b380756f94f091a86a99489d8ee819b3c5d68c8fa4253d04ae0ab
+get lib_weak-schur-9-lower-22620.txt $L/weak-schur/weak-schur-9-lower-22620.txt 5b6e7c96b0a800a77f12facfc2fc197a49cfb72d9e867a9bbac64951625ef5ad
+C="python3 -I ../tools/convert_certs.py"
+[ -s fmm_3x3x3_23.json ] || $C fmm fmm_3x3x3_tensor.mpl.bz2 fmm_3x3x3_23.json 1
+[ -s fmm_4x4x4_48.json ] || $C fmm fmm_4x4x4_tensor.mpl.bz2 fmm_4x4x4_48.json 1
+for nw in 13:45 14:51 15:56 16:60 17:71; do
+  n=${nw%:*}; s=${nw#*:}
+  [ -s dobb_n${n}_s${s}.txt ] || $C dobbelaere dobbelaere_sorting_networks_6bb0bd2.html $n $s dobb_n${n}_s${s}.txt
+done
+for g in ramsey-6-6-lower-102 ramsey-7-7-lower-205 ramsey-8-8-lower-282; do
+  [ -s derived_lib_$g.txt ] || $C g6 lib_$g.g6 derived_lib_$g.txt
+done
+[ -s derived_mckenna_schur6_538.txt ] || $C shift mckenna_schur6-538.word derived_mckenna_schur6_538.txt 1
+
 # CVRPLIB instances for the routing problems, one request every 2 seconds
 cd .. && mkdir -p instances && cd instances
 slow() { [ -s "$1" ] || sleep 2; get "$@"; }

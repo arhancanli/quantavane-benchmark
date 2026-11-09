@@ -1,0 +1,35 @@
+{
+ "id": "matmul-4x4x4",
+ "family": "matrix-multiplication",
+ "title": "4 x 4 matrix multiplication in characteristic 0, number of multiplications",
+ "page": "https://fmm.univ-lille.fr/4x4x4.html",
+ "statement": "Find a bilinear algorithm that multiplies two 4 x 4 matrices with non-commuting entries over the rationals (or the Gaussian rationals) with as few multiplications as possible. The catalogue's best is 48 (credited to Novikov et al., AlphaEvolve, 2025; its explicit algorithm has rational coefficients); 47 is known only over GF(2) (Fawzi et al., 2022) and does not count here.",
+ "objective": "minimize",
+ "submission": "JSON {\"field\": F, \"terms\": [[U, V, W], ...]}: F is \"Q\", \"Q(i)\" or \"GF(p)\"; U is N x M, V is M x P and W is N x P, lists of rows; entries are integers or strings \"a/b\" (over Q(i) also pairs [re, im]); product r is (sum U_r[i][j] A[i][j]) (sum V_r[j][k] B[j][k]) and C[i][k] = sum_r W_r[i][k] times product r.",
+ "checker": {
+  "program": "matmul_check.py",
+  "args": [
+   "4",
+   "4",
+   "4",
+   "char0"
+  ],
+  "value": "result"
+ },
+ "score": "R, the number of multiplications (smaller is better)",
+ "best_known": {
+  "value": "48",
+  "exact": "48",
+  "source": "<4x4x4:48>: Novikov et al. (AlphaEvolve 2025), in A. Sedoglavic's catalogue of fast matrix multiplication algorithms (fmm.univ-lille.fr, version 1c55fea), whose explicit algorithm has rational coefficients; read 9 Nov 2026",
+  "kind": "table entry",
+  "provenance": {
+   "keeper": "A. Sedoglavic, Yet another catalogue of fast matrix multiplication algorithms",
+   "url": "https://fmm.univ-lille.fr/",
+   "read": "2026-11-09",
+   "revision": "version 1c55fea",
+   "holder": "A. Novikov et al. (AlphaEvolve, 2025)"
+  }
+ },
+ "verified_pending": [],
+ "added": "2.1"
+}

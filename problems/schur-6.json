@@ -3,7 +3,7 @@
  "family": "schur",
  "title": "Schur number S(6), lower bound",
  "page": "https://leapsinbounds.org/constants/schur-6/",
- "statement": "Colour 1, 2, ..., n with 6 colours so that no colour holds a solution of x + y = z (x = y allowed), with n as large as possible; it shows S(6) >= n. The best known lower bound is S(6) >= 537, by Chen, Zhu and Long (2026); a colouring of 1..538 or more would improve it.",
+ "statement": "Colour 1, 2, ..., n with 6 colours so that no colour holds a solution of x + y = z, with n as large as possible; it shows S(6) >= n. The best known lower bound is S(6) >= 538, by McKenna (2026); a colouring of 1..539 or more would improve it.",
  "objective": "maximize",
  "submission": "Text file: the colours of 1..n in order, digits 0..5 (whitespace ignored).",
  "checker": {
@@ -16,16 +16,16 @@
  },
  "score": "n, the length of the colouring; it proves S(6) >= n (larger is better)",
  "best_known": {
-  "value": "537",
-  "exact": "537",
-  "source": "S(6) >= 537: Chen, Zhu and Long (2026), in Leaps in Bounds (github.com/daniel-munro/leaps-in-bounds), data at commit 4521e13 (8 Nov 2026); read 8 Nov 2026",
+  "value": "538",
+  "exact": "538",
+  "source": "S(6) >= 538: A. McKenna, The sixth Schur number is at least 538, Zenodo (4 Nov 2026), in Leaps in Bounds (github.com/daniel-munro/leaps-in-bounds), data at commit a5bbf82 (9 Nov 2026); read 9 Nov 2026; before it 537 (Chen, Zhu and Long, Oct 2026) and 536 (Fredricksen and Sweet 2000)",
   "kind": "table entry",
   "provenance": {
    "keeper": "Leaps in Bounds, Schur and weak Schur numbers",
    "url": "https://leapsinbounds.org",
-   "read": "2026-11-08",
-   "revision": "data at commit 4521e13",
-   "holder": "Chen, Zhu and Long (2026)"
+   "read": "2026-11-09",
+   "revision": "data at commit a5bbf82",
+   "holder": "McKenna (2026)"
   }
  },
  "verified_pending": [],

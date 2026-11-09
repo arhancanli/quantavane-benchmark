@@ -1,0 +1,35 @@
+{
+ "id": "srg-88-27-6-9",
+ "family": "strongly-regular-graph",
+ "title": "Strongly regular graph srg(88, 27, 6, 9)",
+ "page": "https://www.win.tue.nl/~aeb/graphs/srg/srgtab51-100.html",
+ "statement": "Find a strongly regular graph with parameters (88, 27, 6, 9): 88 vertices, 27-regular, adjacent vertices with exactly 6 common neighbours and non-adjacent vertices with exactly 9. It is the smallest parameter set marked open in A. E. Brouwer's tables. A valid graph scores 1.",
+ "objective": "maximize",
+ "submission": "Text file: the graph in graph6 or sparse6 (as on House of Graphs), as an edge list (one edge \"u v\" per line, vertices numbered from 0) or as a 0/1 adjacency matrix.",
+ "checker": {
+  "program": "srg_check.py",
+  "args": [
+   "88",
+   "27",
+   "6",
+   "9"
+  ],
+  "value": "result"
+ },
+ "score": "1 for a valid graph; none is known, so the best known value is 0",
+ "best_known": {
+  "value": "0",
+  "exact": "0",
+  "source": "existence unknown: A. E. Brouwer's table of strongly regular graphs on 51-100 vertices marks (88, 27, 6, 9) with '?', and no parameter set on 1-50 vertices is open; read 9 Nov 2026",
+  "kind": "open existence question",
+  "provenance": {
+   "keeper": "A. E. Brouwer, Parameters of strongly regular graphs",
+   "url": "https://www.win.tue.nl/~aeb/graphs/srg/srgtab51-100.html",
+   "read": "2026-11-09",
+   "revision": "tables for 1-50 and 51-100 vertices read 9 Nov 2026",
+   "holder": "none known"
+  }
+ },
+ "verified_pending": [],
+ "added": "2.1"
+}

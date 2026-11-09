@@ -1,0 +1,37 @@
+{
+ "id": "kissing-d31",
+ "family": "kissing-number",
+ "title": "Kissing number in dimension 31, lower bound",
+ "page": "https://cohn.mit.edu/kissing-numbers/",
+ "statement": "Find as many nonzero vectors as possible in R^31 with pairwise angles of at least 60 degrees; k such vectors show that the kissing number in dimension 31 is at least k. The best known configuration, by A. Kravatskiy (2026), has 251200 vectors; one with more vectors improves it. The upper bound is 2213487 (Leijenhorst and de Laat).",
+ "objective": "maximize",
+ "submission": "Text file: one vector per line, integer coordinates separated by spaces or commas, all with the same squared norm N; more than 31 coordinates are allowed when the vectors span a space of dimension at most 31. Every inner product between two vectors must be at most N/2. With 251,200 vectors or more the check is long (hours) in pure Python.",
+ "checker": {
+  "program": "kissing_check.py",
+  "args": [
+   "31"
+  ],
+  "value": "result"
+ },
+ "score": "k, the number of vectors (larger is better)",
+ "best_known": {
+  "value": "251200",
+  "exact": "251200",
+  "source": "kissing number in dimension 31 >= 251200: A. Kravatskiy (2026), in Henry Cohn's table of kissing numbers (cohn.mit.edu/kissing-numbers); read 9 Nov 2026",
+  "kind": "table entry",
+  "provenance": {
+   "keeper": "H. Cohn, Kissing numbers",
+   "url": "https://cohn.mit.edu/kissing-numbers/",
+   "read": "2026-11-09",
+   "revision": "table read 9 Nov 2026",
+   "holder": "A. Kravatskiy (2026)"
+  }
+ },
+ "bound": {
+  "value": "2213487",
+  "kind": "upper bound",
+  "source": "N. Leijenhorst and D. de Laat (2022), in Henry Cohn's table"
+ },
+ "verified_pending": [],
+ "added": "2.1"
+}

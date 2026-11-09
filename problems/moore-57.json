@@ -1,0 +1,35 @@
+{
+ "id": "moore-57",
+ "family": "strongly-regular-graph",
+ "title": "Moore graph of degree 57 (srg(3250, 57, 0, 1))",
+ "page": "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html",
+ "statement": "Find a 57-regular graph on 3250 vertices with diameter 2, equivalently a strongly regular graph srg(3250, 57, 0, 1) (girth 5, every two non-adjacent vertices with exactly one common neighbour). Hoffman and Singleton (1960) showed that a Moore graph of diameter 2 has degree 2, 3, 7 or 57; the first three exist and degree 57 is open. A valid graph scores 1.",
+ "objective": "maximize",
+ "submission": "Text file: the graph in graph6 or sparse6 (as on House of Graphs), as an edge list (one edge \"u v\" per line, vertices numbered from 0) or as a 0/1 adjacency matrix.",
+ "checker": {
+  "program": "srg_check.py",
+  "args": [
+   "3250",
+   "57",
+   "0",
+   "1"
+  ],
+  "value": "result"
+ },
+ "score": "1 for a valid graph; none is known, so the best known value is 0",
+ "best_known": {
+  "value": "0",
+  "exact": "0",
+  "source": "no Moore graph of degree 57 is known: Hoffman and Singleton (1960); F. Comellas's degree-diameter table states that Moore graphs of diameter 2 exist for degree 3 and 7 and '(perhaps) 57'; read 9 Nov 2026",
+  "kind": "open existence question",
+  "provenance": {
+   "keeper": "F. Comellas, The (Degree, Diameter) Problem for Graphs",
+   "url": "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html",
+   "read": "2026-11-09",
+   "revision": "last changed 4 Nov 2026",
+   "holder": "none known"
+  }
+ },
+ "verified_pending": [],
+ "added": "2.1"
+}

@@ -7,7 +7,7 @@ t() {  # t PROBLEM FILE EXPECTED
   if [ "$got" = "$3" ]; then echo "ok    $1 $(basename $2): $got"; else echo "FAIL  $1 $(basename $2): $got (expected $3)"; status=1; fi
 }
 echo '{"values": [1, 1, 1, 1]}' > certs/flat4_1a.json
-t 1a-upper certs/flat4_1a.json "does not improve,does not improve,"
+t 1a-upper certs/flat4_1a.json "does not improve,does not improve,does not improve,"
 t 1c-lower certs/kos_1c.json "does not improve,does not improve,"
 t 1c-lower certs/vid_1c_v3.json "IMPROVES,does not improve,"
 t 1d-upper certs/huiihao_1d.json "does not improve,does not improve,"
@@ -229,6 +229,63 @@ python3 -I -c 'print(" ".join(["0"] * 155))' > certs/control_cwm_zero.txt
 t cwm-155-25 certs/control_cwm_zero.txt "NOT CERTIFIED,"                        # weight 0, not 25
 printf '00000\n00001\n' > certs/control_strongpow_adjacent.txt
 t shannon-c7-power5 certs/control_strongpow_adjacent.txt "NOT CERTIFIED,"
+# v2.1, Prestige 100: record certificates fetched by fetch.sh, replayed by our checkers (each equals its record)
+t tsp-mona-lisa certs/cook_monalisa_5757191.tour "does not improve,"            # Nagata's tour, 5,757,191
+t matmul-3x3x3 certs/fmm_3x3x3_23.json "does not improve,"                      # Laderman's 23 (catalogue, l = 1)
+t matmul-4x4x4 certs/fmm_4x4x4_48.json "does not improve,"                      # the catalogue's 48, rational coefficients
+t schur-6 certs/derived_mckenna_schur6_538.txt "does not improve,"              # McKenna's S(6) >= 538
+t weak-schur-7 certs/lib_weak-schur-7-lower-2154.txt "does not improve,"        # ours, merged by Leaps in Bounds
+t weak-schur-8 certs/lib_weak-schur-8-lower-7002.txt "does not improve,"
+t weak-schur-9 certs/lib_weak-schur-9-lower-22620.txt "does not improve,"
+t ramsey-6-6 certs/derived_lib_ramsey-6-6-lower-102.txt "does not improve,"     # Kalbfleisch's K_101
+t ramsey-7-7 certs/derived_lib_ramsey-7-7-lower-205.txt "does not improve,"     # Mathon's K_204
+t ramsey-8-8 certs/derived_lib_ramsey-8-8-lower-282.txt "does not improve,"     # Burling and Reyner's K_281
+t sortnet-n13-size certs/dobb_n13_s45.txt "does not improve,"                   # B. Dobbelaere's list
+t sortnet-n14-size certs/dobb_n14_s51.txt "does not improve,"
+t sortnet-n15-size certs/dobb_n15_s56.txt "does not improve,"
+t sortnet-n16-size certs/dobb_n16_s60.txt "does not improve,"                   # Green's 60 (1969)
+t sortnet-n17-size certs/dobb_n17_s71.txt "does not improve,"
+t 1a-upper certs/ours_c1a_upper_n262144.json "IMPROVES,does not improve,IMPROVES,"  # ours, pull request #346 in review
+dn() { python3 -I -c 'import itertools, sys
+n = int(sys.argv[1])
+for i, j in itertools.combinations(range(n), 2):
+    for a in (1, -1):
+        for b in (1, -1):
+            v = [0] * n; v[i], v[j] = a, b; print(" ".join(map(str, v)))' "$1"; }
+dn 22 > certs/classic_kissing_D22.txt
+t kissing-d22 certs/classic_kissing_D22.txt "does not improve,"                 # the 924 roots of D22
+dn 31 > certs/classic_kissing_D31.txt
+t kissing-d31 certs/classic_kissing_D31.txt "does not improve,"                 # the 1,860 roots of D31
+dn 23 > certs/control_kissing_D23_as_22.txt
+t kissing-d22 certs/control_kissing_D23_as_22.txt "NOT CERTIFIED,"              # spans dimension 23
+# v2.1 red controls on the new problems: each must be refused
+seq 1 32 > certs/control_costas_identity.txt
+t costas-32 certs/control_costas_identity.txt "NOT CERTIFIED,"                  # every shift-1 difference is 1
+t moore-57 certs/control_cage_petersen.txt "NOT CERTIFIED,"                     # the Moore graph of degree 3, not 57
+t srg-99-14-1-2 certs/control_cage_petersen.txt "NOT CERTIFIED,"
+t srg-88-27-6-9 certs/control_cage_petersen.txt "NOT CERTIFIED,"
+python3 -I -c 'print("\n".join(" ".join(str((i + j) % 10) for j in range(10)) for i in range(10)))' > certs/control_mols_cyclic.txt
+cat certs/control_mols_cyclic.txt certs/control_mols_cyclic.txt > certs/control_mols_equal.txt
+t mols-10 certs/control_mols_equal.txt "NOT CERTIFIED,"                         # a square is not orthogonal to itself
+python3 -I -c 'print("\n".join(" ".join(str(x) for x in range(13 * r, 13 * r + 13)) for r in range(12)))' > certs/control_projplane_disjoint.txt
+t projplane-12 certs/control_projplane_disjoint.txt "NOT CERTIFIED,"            # 12 disjoint lines, not a plane
+python3 -I -c 'import json, sys
+d = json.load(open(sys.argv[1])); t = d["terms"][0][0]
+r, c = next((r, c) for r in range(3) for c in range(3) if t[r][c] != "0"); t[r][c] = "0"
+json.dump(d, sys.stdout)' certs/fmm_3x3x3_23.json > certs/control_matmul_3x3x3_zeroed.json
+t matmul-3x3x3 certs/control_matmul_3x3x3_zeroed.json "NOT CERTIFIED,"         # one coefficient set to 0
+python3 -I -c 'import json, sys
+d = json.load(open(sys.argv[1])); d["field"] = "GF(3)"; json.dump(d, sys.stdout)' certs/fmm_4x4x4_48.json > certs/control_matmul_4x4x4_gf3.json
+t matmul-4x4x4 certs/control_matmul_4x4x4_gf3.json "NOT CERTIFIED,"            # characteristic 3 is not allowed here
+sed '$d' certs/cook_monalisa_5757191.tour | sed '$d' > certs/control_monalisa_short.tour
+t tsp-mona-lisa certs/control_monalisa_short.tour "NOT CERTIFIED,"              # a city left out
+python3 -I -c 'import math
+print("\n".join("%d %d" % (round(1000 * math.cos(2 * math.pi * k / 9)), round(1000 * math.sin(2 * math.pi * k / 9))) for k in range(9)))' > certs/control_convex_nonagon.txt
+t erdos-107 certs/control_convex_nonagon.txt "NOT CERTIFIED,"                   # convex: not a counterexample
+printf '0 1\n1 2\n2 3\n3 4\n' > certs/control_tree_path.txt
+t erdos-993 certs/control_tree_path.txt "NOT CERTIFIED,"                        # a path: unimodal
+python3 -I tests/units_prestige.py || status=1
+if python3 -I tools/build_prestige100.py --check > /dev/null; then echo "ok    collections/prestige100 (100 problems, records agree with the problem files)"; else echo "FAIL  collections/prestige100"; status=1; fi
 # checker unit tests: the exit status of a checker run on its own
 u() {  # u EXPECTED_EXIT_STATUS CHECKER ARGS...
   want=$1; shift

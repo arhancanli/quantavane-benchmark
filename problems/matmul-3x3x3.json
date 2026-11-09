@@ -1,0 +1,40 @@
+{
+ "id": "matmul-3x3x3",
+ "family": "matrix-multiplication",
+ "title": "3 x 3 matrix multiplication, number of multiplications",
+ "page": "https://fmm.univ-lille.fr/3x3x3.html",
+ "statement": "Find a bilinear algorithm that multiplies two 3 x 3 matrices with non-commuting entries using as few multiplications as possible: a decomposition of the matrix multiplication tensor <3,3,3> into R products. Laderman's 1976 algorithm uses 23; the lower bound is 19 (Bläser 2003). Any field is accepted.",
+ "objective": "minimize",
+ "submission": "JSON {\"field\": F, \"terms\": [[U, V, W], ...]}: F is \"Q\", \"Q(i)\" or \"GF(p)\"; U is N x M, V is M x P and W is N x P, lists of rows; entries are integers or strings \"a/b\" (over Q(i) also pairs [re, im]); product r is (sum U_r[i][j] A[i][j]) (sum V_r[j][k] B[j][k]) and C[i][k] = sum_r W_r[i][k] times product r.",
+ "checker": {
+  "program": "matmul_check.py",
+  "args": [
+   "3",
+   "3",
+   "3",
+   "any"
+  ],
+  "value": "result"
+ },
+ "score": "R, the number of multiplications (smaller is better)",
+ "best_known": {
+  "value": "23",
+  "exact": "23",
+  "source": "<3x3x3:23>: J. D. Laderman, Bull. AMS 82 (1976) 126-128, in A. Sedoglavic's catalogue of fast matrix multiplication algorithms (fmm.univ-lille.fr, version 1c55fea); read 9 Nov 2026",
+  "kind": "table entry",
+  "provenance": {
+   "keeper": "A. Sedoglavic, Yet another catalogue of fast matrix multiplication algorithms",
+   "url": "https://fmm.univ-lille.fr/",
+   "read": "2026-11-09",
+   "revision": "version 1c55fea",
+   "holder": "J. D. Laderman (1976)"
+  }
+ },
+ "bound": {
+  "value": "19",
+  "kind": "lower bound",
+  "source": "M. Bläser, On the complexity of the multiplication of matrices of small formats, J. Complexity 19 (2003)"
+ },
+ "verified_pending": [],
+ "added": "2.1"
+}
