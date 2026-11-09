@@ -1,14 +1,15 @@
 {
  "collection": "Quantavane Originals",
- "problems": 27,
+ "problems": 35,
  "by_field": {
-  "Combinatorics and graph theory": 6,
-  "Number theory": 4,
+  "Combinatorics and graph theory": 7,
+  "Number theory": 6,
   "Coding theory": 2,
   "Discrete geometry": 2,
   "Physics": 5,
   "Chemistry and materials": 2,
-  "Computing and operations research": 4,
+  "Astronomy": 4,
+  "Computing and operations research": 5,
   "Biology": 2
  },
  "items": [
@@ -61,6 +62,18 @@
    "page": "problems/e8-goodman.md"
   },
   {
+   "id": "e8-resolving",
+   "field": "Combinatorics and graph theory",
+   "title": "The metric dimension of the E8 root graph",
+   "status": "open",
+   "objective": "minimize",
+   "best_known": "12",
+   "holder": "Quantavane (Arhan Canli)",
+   "date": "2026-11-09",
+   "checker": "collections/originals/checkers/orig_comb.py",
+   "page": "problems/e8-resolving.md"
+  },
+  {
    "id": "overlap-square",
    "field": "Combinatorics and graph theory",
    "title": "The minimum overlap constant of the square",
@@ -97,6 +110,18 @@
    "page": "problems/cubic-admissible.md"
   },
   {
+   "id": "eisenstein-triples",
+   "field": "Number theory",
+   "title": "Two-colourings with no monochromatic 120-degree triangle",
+   "status": "open",
+   "objective": "maximize",
+   "best_known": "19200",
+   "holder": "Quantavane (Arhan Canli)",
+   "date": "2026-11-09",
+   "checker": "collections/originals/checkers/orig_numth.py",
+   "page": "problems/eisenstein-triples.md"
+  },
+  {
    "id": "gauss-admissible",
    "field": "Number theory",
    "title": "Admissible constellations of smallest diameter in the Gaussian integers",
@@ -107,6 +132,18 @@
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_numth.py",
    "page": "problems/gauss-admissible.md"
+  },
+  {
+   "id": "gauss-prime-ap",
+   "field": "Number theory",
+   "title": "Arithmetic progressions of Gaussian primes",
+   "status": "open",
+   "objective": "maximize",
+   "best_known": "18",
+   "holder": "Quantavane (Arhan Canli)",
+   "date": "2026-11-09",
+   "checker": "collections/originals/checkers/orig_numth.py",
+   "page": "problems/gauss-prime-ap.md"
   },
   {
    "id": "qr-sumfree",
@@ -263,6 +300,66 @@
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_chem.py",
    "page": "problems/cata-kemeny.md"
+  },
+  {
+   "id": "nrm-segments",
+   "field": "Astronomy",
+   "title": "Non-redundant aperture masks for segmented mirrors",
+   "status": "open",
+   "objective": "maximize",
+   "best_known": "23",
+   "holder": "Quantavane (Arhan Canli)",
+   "date": "2026-11-09",
+   "checker": "collections/originals/checkers/orig_astro.py",
+   "page": "problems/nrm-segments.md"
+  },
+  {
+   "id": "nrm-tilting",
+   "field": "Astronomy",
+   "title": "Splitting a segmented mirror into non-redundant groups",
+   "status": "open",
+   "objective": "minimize",
+   "best_known": "11",
+   "holder": "Quantavane (Arhan Canli)",
+   "date": "2026-11-09",
+   "checker": "collections/originals/checkers/orig_astro.py",
+   "page": "problems/nrm-tilting.md"
+  },
+  {
+   "id": "slew-tour",
+   "field": "Astronomy",
+   "title": "The slewing tour of the Bright Star Catalogue",
+   "status": "open",
+   "objective": "minimize",
+   "best_known": "103836804",
+   "holder": "Quantavane (Arhan Canli)",
+   "date": "2026-11-09",
+   "checker": "collections/originals/checkers/orig_astro.py",
+   "page": "problems/slew-tour.md"
+  },
+  {
+   "id": "star-tracker",
+   "field": "Astronomy",
+   "title": "The smallest star-tracker catalogue of the bright sky",
+   "status": "open",
+   "objective": "minimize",
+   "best_known": "456",
+   "holder": "Quantavane (Arhan Canli)",
+   "date": "2026-11-09",
+   "checker": "collections/originals/checkers/orig_astro.py",
+   "page": "problems/star-tracker.md"
+  },
+  {
+   "id": "primel",
+   "field": "Computing and operations research",
+   "title": "An optimal strategy for Primel",
+   "status": "open",
+   "objective": "minimize",
+   "best_known": "29016",
+   "holder": "Quantavane (Arhan Canli)",
+   "date": "2026-11-09",
+   "checker": "collections/originals/checkers/orig_comp.py",
+   "page": "problems/primel.md"
   },
   {
    "id": "qr-xor",

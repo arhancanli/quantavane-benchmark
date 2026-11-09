@@ -1,0 +1,415 @@
+{
+ "id": "nrm-segments",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"non-redundant\" AND all:\"aperture mask\" AND all:segmented",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22non-redundant%22+AND+all%3A%22aperture+mask%22+AND+all%3Asegmented&start=0&max_results=10&sortBy=relevance",
+   "results": 2,
+   "top": [
+    {
+     "arxiv": "1203.5075v1",
+     "year": "2012",
+     "first_author": "E. Huby",
+     "title": "FIRST, a fibered aperture masking instrument. I. First on-sky test results"
+    },
+    {
+     "arxiv": "2102.06470v1",
+     "year": "2021",
+     "first_author": "K. Barjot",
+     "title": "Laboratory characterization of FIRSTv2 photonic chip for the study of substellar companions"
+    }
+   ],
+   "run": "2026-11-09T15:30:02Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"non-redundant mask\" AND all:holes AND all:maximum",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22non-redundant+mask%22+AND+all%3Aholes+AND+all%3Amaximum&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T15:30:07Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"distinct difference\" AND all:hexagonal",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22distinct+difference%22+AND+all%3Ahexagonal&start=0&max_results=10&sortBy=relevance",
+   "results": 5,
+   "top": [
+    {
+     "arxiv": "0811.3832v2",
+     "year": "2008",
+     "first_author": "Simon R. Blackburn",
+     "title": "Two-Dimensional Patterns with Distinct Differences -- Constructions, Bounds, and Maximal Anticodes"
+    },
+    {
+     "arxiv": "1404.3085v1",
+     "year": "2014",
+     "first_author": "Alireza Akbari",
+     "title": "Gap function of hexagonal pnictide superconductor SrPtAs from quasiparticle interference spectrum"
+    },
+    {
+     "arxiv": "cond-mat/0106298v1",
+     "year": "2001",
+     "first_author": "Bas B. van Aken",
+     "title": "Structural view of hexagonal non-perovskite AMnO3"
+    },
+    {
+     "arxiv": "1502.04672v1",
+     "year": "2015",
+     "first_author": "Anshuman Kumar",
+     "title": "Tunable light-matter interaction and the role of hyperbolicity in graphene-hBN system"
+    },
+    {
+     "arxiv": "2206.07637v1",
+     "year": "2022",
+     "first_author": "Rajendra Singh Negi",
+     "title": "Emergent collective behavior of active Brownian particles by visual perception"
+    }
+   ],
+   "run": "2026-11-09T15:30:14Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"Sidon set\" AND all:hexagonal",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22Sidon+set%22+AND+all%3Ahexagonal&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T15:30:19Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:Golomb AND all:hexagonal AND all:lattice",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3AGolomb+AND+all%3Ahexagonal+AND+all%3Alattice&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T15:30:23Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "non-redundant mask",
+   "url": "https://oeis.org/search?q=non-redundant+mask&fmt=json",
+   "results": 0,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [],
+   "run": "2026-11-09T15:30:28Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "Sidon hexagon",
+   "url": "https://oeis.org/search?q=Sidon+hexagon&fmt=json",
+   "results": 2,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A000217",
+     "name": "Triangular numbers: a(n) = binomial(n+1,2) = n*(n+1)/2 = 0 + 1 + 2 + ... + n."
+    },
+    {
+     "oeis": "A001107",
+     "name": "10-gonal (or decagonal) numbers: a(n) = n*(4*n-3)."
+    }
+   ],
+   "run": "2026-11-09T15:30:32Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "distinct differences hexagonal",
+   "url": "https://oeis.org/search?q=distinct+differences+hexagonal&fmt=json",
+   "results": 10,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A390739",
+     "name": "a(n) is the least possible difference between the areas of the largest and smallest trapezoids in a 4 element set of distinct integer-sided trapezoids whose base angles are 60 degrees that fill a regular hexagon of side n units."
+    },
+    {
+     "oeis": "A205128",
+     "name": "Ordered differences of distinct hexagonal numbers."
+    },
+    {
+     "oeis": "A390738",
+     "name": "a(n) is the least possible difference between the areas of the largest and smallest trapezoids in a 3 element set of distinct integer-sided trapezoids whose base angles are 60 degrees that fill a regular hexagon of side n units."
+    },
+    {
+     "oeis": "A205129",
+     "name": "Least k such that n divides a difference between distinct hexagonal numbers, ordered as in A205128."
+    },
+    {
+     "oeis": "A066931",
+     "name": "Number of ways to tile hexagon of edge n with diamonds of side 1, not counting rotations and reflections as different."
+    },
+    {
+     "oeis": "A000384",
+     "name": "Hexagonal numbers: a(n) = n*(2*n-1)."
+    },
+    {
+     "oeis": "A003215",
+     "name": "Hex (or centered hexagonal) numbers: 3*n*(n+1)+1 (crystal ball sequence for hexagonal lattice)."
+    },
+    {
+     "oeis": "A001998",
+     "name": "Bending a piece of wire of length n+1; walks of length n+1 on a tetrahedron; also non-branched catafusenes with n+2 condensed hexagons."
+    },
+    {
+     "oeis": "A066443",
+     "name": "Number of distinct paths of length 2n+1 along edges of a unit cube between two fixed adjacent vertices."
+    },
+    {
+     "oeis": "A174257",
+     "name": "Number of symmetry classes of 3 X 3 reduced magic squares with distinct values and maximum value 2n; also, with magic sum 3n."
+    }
+   ],
+   "run": "2026-11-09T15:30:37Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"honeycomb arrays\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22honeycomb+arrays%22&start=0&max_results=10&sortBy=relevance",
+   "results": 43,
+   "top": [
+    {
+     "arxiv": "0911.2384v1",
+     "year": "2009",
+     "first_author": "Simon R. Blackburn",
+     "title": "Honeycomb arrays"
+    },
+    {
+     "arxiv": "cond-mat/0703599v1",
+     "year": "2007",
+     "first_author": "N. Murata",
+     "title": "Meissner effect in honeycomb arrays of multi-walled carbon nanotubes"
+    },
+    {
+     "arxiv": "2009.08137v1",
+     "year": "2020",
+     "first_author": "Xuekai Ma",
+     "title": "Topological edge states of nonequilibrium polaritons in hollow honeycomb arrays"
+    },
+    {
+     "arxiv": "2211.00653v1",
+     "year": "2022",
+     "first_author": "Milan Kornjača",
+     "title": "Trimer quantum spin liquid in a honeycomb array of Rydberg atoms"
+    },
+    {
+     "arxiv": "cond-mat/0609670v1",
+     "year": "2006",
+     "first_author": "L. Viciu",
+     "title": "Structure and basic magnetic properties of the honeycomb lattice compounds Na2Co2TeO6 and Na3Co2SbO6"
+    },
+    {
+     "arxiv": "2004.03740v1",
+     "year": "2020",
+     "first_author": "Sergey K. Ivanov",
+     "title": "Bragg solitons in topological Floquet insulators"
+    },
+    {
+     "arxiv": "1207.1456v1",
+     "year": "2012",
+     "first_author": "Sheng Zhang",
+     "title": "Perpendicular Magnetization and Generic Realization of the Ising Model in Artificial Spin Ice"
+    },
+    {
+     "arxiv": "1809.08105v1",
+     "year": "2018",
+     "first_author": "Yiqi Zhang",
+     "title": "Inhibition of tunnelling and edge state control in polariton topological insulators"
+    },
+    {
+     "arxiv": "2103.06814v1",
+     "year": "2021",
+     "first_author": "N. P. Vizarim",
+     "title": "Directional Locking and the Influence of Obstacle Density on Skyrmion Dynamics in Triangular and Honeycomb Arrays"
+    },
+    {
+     "arxiv": "1409.6564v1",
+     "year": "2014",
+     "first_author": "A. V. Nalitov",
+     "title": "Polariton $\\mathbb{Z}$ Topological Insulator"
+    }
+   ],
+   "run": "2026-11-09T15:45:50Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"aperture masking\" AND all:\"non-redundant\" AND all:design",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22aperture+masking%22+AND+all%3A%22non-redundant%22+AND+all%3Adesign&start=0&max_results=10&sortBy=relevance",
+   "results": 7,
+   "top": [
+    {
+     "arxiv": "2310.12483v1",
+     "year": "2023",
+     "first_author": "Mackenzie Lach",
+     "title": "Recovering simulated planet and disk signals using SCALES aperture masking"
+    },
+    {
+     "arxiv": "2501.01570v2",
+     "year": "2025",
+     "first_author": "Adam K. Taras",
+     "title": "Jewel Optics I: non-redundant Fizeau beam combination without the guilt"
+    },
+    {
+     "arxiv": "2408.17146v1",
+     "year": "2024",
+     "first_author": "Elsa Huby",
+     "title": "The MICADO first light imager for the ELT: Sparse Aperture Masks, design and simulations"
+    },
+    {
+     "arxiv": "1509.01299v1",
+     "year": "2015",
+     "first_author": "D. Defrère",
+     "title": "Exoplanet science with the LBTI: instrument status and plans"
+    },
+    {
+     "arxiv": "2209.02898v1",
+     "year": "2022",
+     "first_author": "Vincent Deo",
+     "title": "Controlling petals using fringes: discontinuous wavefront sensing through sparse aperture interferometry at Subaru/SCExAO"
+    },
+    {
+     "arxiv": "2510.09806v2",
+     "year": "2025",
+     "first_author": "Louis Desdoigts",
+     "title": "AMIGO: a Data-Driven Calibration of the JWST Interferometer"
+    },
+    {
+     "arxiv": "1405.7426v3",
+     "year": "2014",
+     "first_author": "Barnaby Norris",
+     "title": "The VAMPIRES instrument: Imaging the innermost regions of protoplanetary disks with polarimetric interferometry"
+    }
+   ],
+   "run": "2026-11-09T15:45:54Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"sparse aperture masking\" AND all:segments AND all:\"non-redundant\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22sparse+aperture+masking%22+AND+all%3Asegments+AND+all%3A%22non-redundant%22&start=0&max_results=10&sortBy=relevance",
+   "results": 1,
+   "top": [
+    {
+     "arxiv": "2102.06470v1",
+     "year": "2021",
+     "first_author": "K. Barjot",
+     "title": "Laboratory characterization of FIRSTv2 photonic chip for the study of substellar companions"
+    }
+   ],
+   "run": "2026-11-09T16:02:42Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "4,7,9,12",
+   "url": "https://oeis.org/search?q=4%2C7%2C9%2C12&fmt=json",
+   "results": 10,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A003136",
+     "name": "Loeschian numbers: numbers of the form x^2 + xy + y^2; norms of vectors in A2 lattice."
+    },
+    {
+     "oeis": "A003151",
+     "name": "Beatty sequence for 1+sqrt(2); a(n) = floor(n*(1+sqrt(2)))."
+    },
+    {
+     "oeis": "A301692",
+     "name": "Coordination sequence for node of type V2 in \"krf\" 2-D tiling (or net)."
+    },
+    {
+     "oeis": "A047211",
+     "name": "Numbers that are congruent to {2, 4} mod 5."
+    },
+    {
+     "oeis": "A185256",
+     "name": "Stanley Sequence S(0,3)."
+    },
+    {
+     "oeis": "A143419",
+     "name": "G.f.: 1/p(x), where p(x) = degree 22 Salem polynomial p(x) = x^22 + x^21 - x^19 - 2*x^18 - 3*x^17 - 3*x^16 - 2*x^15 + 2*x^13 + 4*x^12 + 5*x^11 + 4*x^10 + 2*x^9 - 2*x^7 - 3*x^6 - 3*x^5 - 2*x^4 - x^3 + x + 1."
+    },
+    {
+     "oeis": "A064491",
+     "name": "a(1) = 1, a(n+1) = a(n) + tau(a(n)), where tau(n) (A000005) is the number of divisors of n."
+    },
+    {
+     "oeis": "A060142",
+     "name": "Ordered set S defined by these rules: 0 is in S and if x is in S then 2x+1 and 4x are in S."
+    },
+    {
+     "oeis": "A022840",
+     "name": "Beatty sequence for sqrt(6)."
+    },
+    {
+     "oeis": "A329963",
+     "name": "Numbers k such that sigma(k) is not divisible by 3."
+    }
+   ],
+   "run": "2026-11-09T16:02:47Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "4,7,9,12,14",
+   "url": "https://oeis.org/search?q=4%2C7%2C9%2C12%2C14&fmt=json",
+   "results": 10,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A003151",
+     "name": "Beatty sequence for 1+sqrt(2); a(n) = floor(n*(1+sqrt(2)))."
+    },
+    {
+     "oeis": "A047211",
+     "name": "Numbers that are congruent to {2, 4} mod 5."
+    },
+    {
+     "oeis": "A022840",
+     "name": "Beatty sequence for sqrt(6)."
+    },
+    {
+     "oeis": "A007064",
+     "name": "Numbers not of form \"nearest integer to n*tau\", tau = (1+sqrt(5))/2."
+    },
+    {
+     "oeis": "A246514",
+     "name": "Number of composite numbers between prime(n) and 2*prime(n) exclusive."
+    },
+    {
+     "oeis": "A065027",
+     "name": "a(n) is the smallest k > 0 such that n^k < k!."
+    },
+    {
+     "oeis": "A239009",
+     "name": "Exponents m such that the decimal expansion of 4^m exhibits its first zero from the right later than any previous exponent."
+    },
+    {
+     "oeis": "A092861",
+     "name": "\"Product\" of the sequence of primes and the \"evil\" numbers (A001969)."
+    },
+    {
+     "oeis": "A190429",
+     "name": "Positions of 1 in A190427."
+    },
+    {
+     "oeis": "A219637",
+     "name": "Numbers that occur twice in A219641."
+    }
+   ],
+   "run": "2026-11-09T16:02:51Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "maximum number of holes non-redundant aperture mask segmented mirror hexagonal segments one hole per segment JWST AMI Keck design",
+   "date": "2026-11-09",
+   "found": "the JWST NIRISS documentation and Sivaramakrishnan et al. (2023): a 7-hole non-redundant mask with one hole per primary segment; the Keck segment-tilting experiment; no maximum hole count for masks with one hole per segment"
+  },
+  {
+   "engine": "arXiv full text (read)",
+   "query": "arXiv:0811.3832 (Blackburn, Etzion, Martin, Paterson)",
+   "date": "2026-11-09",
+   "found": "hexagonal-grid distinct-difference configurations with diameter at most r, the best ones found by backtracking for 2 <= r <= 10 (given in a figure); the constraint is the diameter, not a fixed region with its centre removed"
+  }
+ ]
+}

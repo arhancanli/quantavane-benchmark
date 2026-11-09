@@ -1,0 +1,24 @@
+# non-redundant mask with 23 holes on the 10-ring mirror (330 segments); lines 'a b' = segment a + b*w, w = e^(i pi/3)
+1 9
+8 -2
+6 4
+1 7
+0 5
+8 -9
+-3 -3
+8 1
+-10 10
+10 -7
+-8 -1
+1 -9
+-8 10
+4 5
+3 -3
+0 10
+10 -6
+-6 8
+4 -10
+-9 5
+-9 -1
+7 0
+-5 -4

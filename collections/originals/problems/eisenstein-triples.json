@@ -1,0 +1,112 @@
+{
+ "id": "eisenstein-triples",
+ "collection": "originals",
+ "field": "Number theory",
+ "title": "Two-colourings with no monochromatic 120-degree triangle",
+ "status": "open",
+ "statement": "An Eisenstein triple is a triple of positive integers x < y, z with x^2 + xy + y^2 = z^2: the side lengths of a triangle with an angle of 120 degrees opposite z (the smallest are (3, 5, 7), (7, 8, 13) and (5, 16, 19)). Colour the integers 1, 2, ..., n with two colours. What is the largest n for which some colouring has no monochromatic Eisenstein triple, that is, no triple with x, y and z all of the same colour? We do not know whether this n is finite. For Pythagorean triples x^2 + y^2 = z^2 the answer is 7824 (Heule, Kullmann and Marek 2016). The headline cell: give a valid colouring of 1..n for some n > 19,200.",
+ "objective": "maximize",
+ "submission": "Text file: the colours of 1, 2, ..., n as characters 0 and 1, in order (line breaks and lines starting with # are ignored).",
+ "checker": {
+  "program": "collections/originals/checkers/orig_numth.py",
+  "args": [
+   "eisenstein-triples"
+  ],
+  "value": "result"
+ },
+ "score": "n, the length of the colouring (larger is better)",
+ "best_known": {
+  "value": "19200",
+  "exact": "19200",
+  "source": "Quantavane (Arhan Canli), 9 November 2026: a focused random walk on the triples (pick a monochromatic triple, flip the member that breaks the fewest others, or a random member with probability 0.4), extending n by 100 while a valid colouring is found within 240 seconds (tools/src/eiswalk.c)",
+  "kind": "our construction (Quantavane Originals)",
+  "provenance": {
+   "keeper": "Quantavane Originals",
+   "url": "collections/originals/problems/eisenstein-triples.md",
+   "read": "2026-11-09",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true,
+   "certificate": "collections/originals/refs/eisenstein-triples.txt"
+  }
+ },
+ "verified_pending": [],
+ "added": "originals-1",
+ "quantavane_record": true,
+ "context": "The Boolean Pythagorean triples problem asked whether the positive integers can be split into two parts with no Pythagorean triple inside a part; Heule, Kullmann and Marek (2016) proved with a SAT solver that 1..7824 can be split and 1..7825 cannot, and Leng (2026) gave a new proof, without an explicit bound, that every two-colouring of the natural numbers has a monochromatic Pythagorean triple. Eisenstein triples play the same role for the norm form x^2 + xy + y^2 of the Eisenstein integers that Pythagorean triples play for the Gaussian norm x^2 + y^2: they are the integer triangles with a 120-degree angle, and they are about as dense (7,839 triples with z <= 7825, against 9,472 Pythagorean triples with c <= 7825). Yet the two problems behave differently. Our local search finds two-colourings of 1..19,200 avoiding monochromatic Eisenstein triples (21,624 triples) and stalls only above that, while the same program run on Pythagorean triples stops at 6,800, below the true answer 7,824 there (it had 60 s per step instead of 240 s; earlier computer searches had reached 7664 before the SAT proof). So the 120-degree threshold, if there is one, is more than twice the Pythagorean one. Whether the threshold is finite (two-colour partition regularity of x^2 + xy + y^2 = z^2) is not settled in anything we found; the exact threshold would need a SAT computation of the cube-and-conquer kind, and a two-colouring of all positive integers would settle the problem the other way.",
+ "references": [
+  "M. J. H. Heule, O. Kullmann, V. W. Marek, Solving and verifying the Boolean Pythagorean triples problem via cube-and-conquer, SAT 2016, Lecture Notes in Comput. Sci. 9710 (2016) 228-245 (arXiv:1605.00723)",
+  "J. Leng, A new proof of two-color partition regularity of Pythagorean triples, arXiv:2609.34676 (2026)",
+  "S. Eliahou, J. Fromentin, V. Marion-Poty, D. Robilliard, Are monochromatic Pythagorean triples unavoidable under morphic colorings?, arXiv:1605.00859 (2016)",
+  "N. Frantzikinakis, B. Host, Higher order Fourier analysis of multiplicative functions and applications, J. Amer. Math. Soc. 30 (2017) 67-157",
+  "OEIS A121992 and A264826: lists of Eisenstein triples"
+ ],
+ "novelty": {
+  "checked": "2026-11-09",
+  "file": "novelty/eisenstein-triples.json",
+  "verdict": "new. The Pythagorean version is solved (7824); no result was found on two-colourings avoiding monochromatic triples x^2 + xy + y^2 = z^2, finite or infinite.",
+  "closest": [
+   "M. J. H. Heule, O. Kullmann and V. W. Marek (2016): the same question for x^2 + y^2 = z^2 (answer 7824); J. Leng (2026): a new proof that the Pythagorean version is finite, with no bound and no other equation.",
+   "Partition-regularity results for homogeneous quadratic equations (Frantzikinakis and Host, as cited by Leng) concern other equations and infinite colourings; no explicit thresholds.",
+   "OEIS A121992, A264826: lists of Eisenstein triples, without any colouring question."
+  ],
+  "benchmark": "no Ramsey-type colouring family in the benchmark"
+ },
+ "first_values": {
+  "columns": [
+   "n",
+   "Eisenstein triples with z <= n",
+   "Pythagorean triples with c <= n",
+   "two-colouring of 1..n with no monochromatic Eisenstein triple"
+  ],
+  "rows": [
+   [
+    1000,
+    719,
+    881,
+    "found (ours)"
+   ],
+   [
+    5000,
+    4703,
+    5681,
+    "found (ours)"
+   ],
+   [
+    7825,
+    7839,
+    9472,
+    "found (ours); none exists for Pythagorean triples"
+   ],
+   [
+    10000,
+    10374,
+    12471,
+    "found (ours)"
+   ],
+   [
+    15000,
+    16386,
+    "",
+    "found (ours)"
+   ],
+   [
+    17500,
+    19489,
+    "",
+    "found (ours)"
+   ],
+   [
+    19200,
+    21624,
+    "",
+    "found (ours), the best known"
+   ]
+  ],
+  "note": "Triples counted by the checker's exact enumeration (factorisations of 3x^2) and cross-checked against a direct search; colourings found by tools/src/eiswalk.c. At n = 19,300 the search stopped with 5 monochromatic triples after 240 s. Control: the same program on Pythagorean triples (x^2 + y^2 = z^2, 60 s per step) reaches 6,800 and stops at 6,900."
+ },
+ "baseline": {
+  "date": "2026-11-09",
+  "holder": "Quantavane (Arhan Canli)",
+  "text": "n = 19,200, held by Quantavane (Arhan Canli), 9 November 2026: the colouring in `refs/eisenstein-triples.txt` (no monochromatic triple among the 21,624 Eisenstein triples with z <= 19,200). No upper bound is known."
+ }
+}

@@ -1,0 +1,255 @@
+{
+ "id": "eisenstein-triples",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"Pythagorean triples\" AND all:coloring AND all:Eisenstein",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22Pythagorean+triples%22+AND+all%3Acoloring+AND+all%3AEisenstein&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T15:34:06Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"Boolean Pythagorean triples\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22Boolean+Pythagorean+triples%22&start=0&max_results=10&sortBy=relevance",
+   "results": 3,
+   "top": [
+    {
+     "arxiv": "1605.00723v1",
+     "year": "2016",
+     "first_author": "Marijn J. H. Heule",
+     "title": "Solving and Verifying the boolean Pythagorean Triples problem via Cube-and-Conquer"
+    },
+    {
+     "arxiv": "1610.06984v2",
+     "year": "2016",
+     "first_author": "Luís Cruz-Filipe",
+     "title": "Efficient Certified Resolution Proof Checking"
+    },
+    {
+     "arxiv": "2103.10267v2",
+     "year": "2021",
+     "first_author": "Alexander Ivrii",
+     "title": "Exploiting Isomorphic Subgraphs in SAT (Long version)"
+    }
+   ],
+   "run": "2026-11-09T15:34:10Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"Eisenstein triples\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22Eisenstein+triples%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T15:34:15Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:monochromatic AND all:\"Pythagorean\" AND all:\"120 degrees\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3Amonochromatic+AND+all%3A%22Pythagorean%22+AND+all%3A%22120+degrees%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T15:34:19Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "Eisenstein triples",
+   "url": "https://oeis.org/search?q=Eisenstein+triples&fmt=json",
+   "results": 10,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A121992",
+     "name": "List of Eisenstein triples: {a,b,c} such that {a^2 + b^2 - a*b - c^2 = 0} and abs(a - b) > 0, sorted by greatest a."
+    },
+    {
+     "oeis": "A201223",
+     "name": "Primitive Eisenstein triples (a,b,c) listed as groups of three in order of increasing b."
+    },
+    {
+     "oeis": "A264826",
+     "name": "Primitive Eisenstein triples: (a,b,c) in lexicographic order such that a^2 + b^2 - a*b - c^2 = 0, a < b < c, and gcd(a, b) = 1."
+    },
+    {
+     "oeis": "A242039",
+     "name": "List of integers b such that (a1,b,c1) and (a2,b,c2) are primitive Eisenstein triples, max(a1,b,c1,a2,c2)=b, and a1,c1,a3,c3 are distinct."
+    },
+    {
+     "oeis": "A335893",
+     "name": "Primitive triples for integer-sided triangles whose angles A < B < C are in arithmetic progression."
+    },
+    {
+     "oeis": "A357274",
+     "name": "List of primitive triples for integer-sided triangles with angles A < B < C and C = 2*Pi/3 = 120 degrees."
+    },
+    {
+     "oeis": "A000292",
+     "name": "Tetrahedral (or triangular pyramidal) numbers: a(n) = C(n+2,3) = n*(n+1)*(n+2)/6."
+    },
+    {
+     "oeis": "A002144",
+     "name": "Pythagorean primes: primes of the form 4*k + 1."
+    },
+    {
+     "oeis": "A001353",
+     "name": "a(n) = 4*a(n-1) - a(n-2) with a(0) = 0, a(1) = 1."
+    },
+    {
+     "oeis": "A003136",
+     "name": "Loeschian numbers: numbers of the form x^2 + xy + y^2; norms of vectors in A2 lattice."
+    }
+   ],
+   "run": "2026-11-09T15:34:35Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "Pythagorean triples 2-coloring",
+   "url": "https://oeis.org/search?q=Pythagorean+triples+2-coloring&fmt=json",
+   "results": 6,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A383181",
+     "name": "Family of 2-colorings of {1..7824} with no monochromatic Pythagorean triples."
+    },
+    {
+     "oeis": "A272709",
+     "name": "Number of 2-colorings of [1..n] with no monochromatic Pythagorean triple."
+    },
+    {
+     "oeis": "A250026",
+     "name": "The 2-color Rado numbers for x_1^2 + x_2^2 + ... + x_n^2 = z^2."
+    },
+    {
+     "oeis": "A000984",
+     "name": "Central binomial coefficients: binomial(2*n,n) = (2*n)!/(n!)^2."
+    },
+    {
+     "oeis": "A004526",
+     "name": "Nonnegative integers repeated, floor(n/2)."
+    },
+    {
+     "oeis": "A000384",
+     "name": "Hexagonal numbers: a(n) = n*(2*n-1)."
+    }
+   ],
+   "run": "2026-11-09T15:34:39Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"x^2+xy+y^2\" AND all:coloring",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22x%5E2%2Bxy%2By%5E2%22+AND+all%3Acoloring&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T15:45:58Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"partition regular\" AND all:\"quadratic\" AND all:\"Pythagorean\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22partition+regular%22+AND+all%3A%22quadratic%22+AND+all%3A%22Pythagorean%22&start=0&max_results=10&sortBy=relevance",
+   "results": 1,
+   "top": [
+    {
+     "arxiv": "2407.08360v3",
+     "year": "2024",
+     "first_author": "Nikos Frantzikinakis",
+     "title": "Partition regularity of generalized Pythagorean pairs"
+    }
+   ],
+   "run": "2026-11-09T15:46:04Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"120 degree\" AND all:triangles AND all:integer AND all:coloring",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22120+degree%22+AND+all%3Atriangles+AND+all%3Ainteger+AND+all%3Acoloring&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T16:03:40Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"Pythagorean triples\" AND all:\"two colors\" AND all:monochromatic",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22Pythagorean+triples%22+AND+all%3A%22two+colors%22+AND+all%3Amonochromatic&start=0&max_results=10&sortBy=relevance",
+   "results": 2,
+   "top": [
+    {
+     "arxiv": "2609.34676v1",
+     "year": "2026",
+     "first_author": "James Leng",
+     "title": "A new proof of two-color partition regularity of Pythagorean triples"
+    },
+    {
+     "arxiv": "0809.3478v1",
+     "year": "2008",
+     "first_author": "Joshua Cooper",
+     "title": "Pythagorean Partition-Regularity and Ordered Triple Systems with the Sum Property"
+    }
+   ],
+   "run": "2026-11-09T16:03:44Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "triangles 120 degrees 2-coloring",
+   "url": "https://oeis.org/search?q=triangles+120+degrees+2-coloring&fmt=json",
+   "results": 6,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A000295",
+     "name": "Eulerian numbers (Euler's triangle: column k=2 of A008292, column k=1 of A173018)."
+    },
+    {
+     "oeis": "A000031",
+     "name": "Number of n-bead necklaces with 2 colors when turning over is not allowed; also number of output sequences from a simple n-stage cycling shift register; also number of binary irreducible polynomials whose degree divides n."
+    },
+    {
+     "oeis": "A001700",
+     "name": "a(n) = binomial(2*n+1, n+1): number of ways to put n+1 indistinguishable balls into n+1 distinguishable boxes = number of (n+1)-st degree monomials in n+1 variables = number of monotone maps from 1..n+1 to 1..n+1."
+    },
+    {
+     "oeis": "A011782",
+     "name": "Coefficients of expansion of (1-x)/(1-2*x) in powers of x."
+    },
+    {
+     "oeis": "A004526",
+     "name": "Nonnegative integers repeated, floor(n/2)."
+    },
+    {
+     "oeis": "A006318",
+     "name": "Large Schröder numbers (or large Schroeder numbers, or big Schroeder numbers)."
+    }
+   ],
+   "run": "2026-11-09T16:03:50Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "x^2+xy+y^2=z^2 coloring",
+   "url": "https://oeis.org/search?q=x%5E2%2Bxy%2By%5E2%3Dz%5E2+coloring&fmt=json",
+   "results": 0,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [],
+   "run": "2026-11-09T16:03:55Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "2-coloring monochromatic \"x^2+xy+y^2=z^2\" OR \"Eisenstein triples\" Ramsey OR \"Rado number\" OR \"Boolean\"",
+   "date": "2026-11-09",
+   "found": "the Boolean Pythagorean triples results (7825), monochromatic solutions of x + y = z^2 (Green and Lindqvist), generalized Schur triples; nothing on x^2 + xy + y^2 = z^2"
+  },
+  {
+   "engine": "general web search",
+   "query": "\"partition regular\" OR \"monochromatic\" \"x^2 + xy + y^2 = z^2\" triangles 120 degrees integer sides coloring",
+   "date": "2026-11-09",
+   "found": "morphic colourings and Pythagorean triples (Eliahou et al.), x + y = z^2; nothing on the 120-degree equation"
+  },
+  {
+   "engine": "arXiv abstract and full text (read)",
+   "query": "arXiv:2609.34676 (J. Leng)",
+   "date": "2026-11-09",
+   "found": "a new proof of two-colour partition regularity of Pythagorean triples; no explicit bound, no other equation treated (Frantzikinakis-Host and Frantzikinakis-Mountakis cited for other quadratic equations)"
+  }
+ ]
+}

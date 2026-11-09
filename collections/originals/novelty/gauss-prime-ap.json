@@ -1,0 +1,175 @@
+{
+ "id": "gauss-prime-ap",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"Gaussian primes\" AND all:\"arithmetic progression\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22Gaussian+primes%22+AND+all%3A%22arithmetic+progression%22&start=0&max_results=10&sortBy=relevance",
+   "results": 6,
+   "top": [
+    {
+     "arxiv": "math/0501314v4",
+     "year": "2005",
+     "first_author": "Terence Tao",
+     "title": "The Gaussian primes contain arbitrarily shaped constellations"
+    },
+    {
+     "arxiv": "1811.07300v2",
+     "year": "2018",
+     "first_author": "Stephan Baier",
+     "title": "Large sieve with sparse sets of moduli for $\\mathbb{Z}[i]$"
+    },
+    {
+     "arxiv": "math/0503572v2",
+     "year": "2005",
+     "first_author": "Terence Tao",
+     "title": "A variant of the hypergraph removal lemma"
+    },
+    {
+     "arxiv": "1305.5440v2",
+     "year": "2013",
+     "first_author": "David Conlon",
+     "title": "A relative Szemerédi theorem"
+    },
+    {
+     "arxiv": "1512.04869v2",
+     "year": "2015",
+     "first_author": "Manfred G. Madritsch",
+     "title": "Romanov's Theorem in Number Fields"
+    },
+    {
+     "arxiv": "2012.15669v2",
+     "year": "2020",
+     "first_author": "Wataru Kai",
+     "title": "Constellations in prime elements of number fields"
+    }
+   ],
+   "run": "2026-11-09T15:34:44Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"Gaussian primes\" AND all:constellations AND all:computation",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22Gaussian+primes%22+AND+all%3Aconstellations+AND+all%3Acomputation&start=0&max_results=10&sortBy=relevance",
+   "results": 1,
+   "top": [
+    {
+     "arxiv": "1607.07171v1",
+     "year": "2016",
+     "first_author": "Long Shi",
+     "title": "Complex Linear Physical-Layer Network Coding"
+    }
+   ],
+   "run": "2026-11-09T15:34:48Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "Gaussian primes arithmetic progression",
+   "url": "https://oeis.org/search?q=Gaussian+primes+arithmetic+progression&fmt=json",
+   "results": 7,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A000043",
+     "name": "Mersenne exponents: primes p such that 2^p - 1 is prime. Then 2^p - 1 is called a Mersenne prime."
+    },
+    {
+     "oeis": "A034693",
+     "name": "Smallest k such that k*n+1 is prime."
+    },
+    {
+     "oeis": "A000984",
+     "name": "Central binomial coefficients: binomial(2*n,n) = (2*n)!/(n!)^2."
+    },
+    {
+     "oeis": "A004018",
+     "name": "Theta series of square lattice (or number of ways of writing n as a sum of 2 squares). Often denoted by r(n) or r_2(n)."
+    },
+    {
+     "oeis": "A060294",
+     "name": "Decimal expansion of Buffon's constant 2/Pi."
+    },
+    {
+     "oeis": "A343785",
+     "name": "a(n) is completely multiplicative with a(p^e) = (-1)^e if p == 2 (mod 3) and a(p^e) = 1 otherwise."
+    },
+    {
+     "oeis": "A401365",
+     "name": "Partial sums of A401407: a(n) = Sum_{k=1..n} lambda(k)*chi_{-4}(k), where lambda is Liouville's function A008836 and chi_{-4} = A101455 is the nonprincipal Dirichlet character modulo 4."
+    }
+   ],
+   "run": "2026-11-09T15:34:53Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"Gaussian primes\" AND all:\"arithmetic progressions\" AND all:longest",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22Gaussian+primes%22+AND+all%3A%22arithmetic+progressions%22+AND+all%3Alongest&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T16:47:09Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "9,9,17,17,29,29,173,1013,14489",
+   "url": "https://oeis.org/search?q=9%2C9%2C17%2C17%2C29%2C29%2C173%2C1013%2C14489&fmt=json",
+   "results": 0,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [],
+   "run": "2026-11-09T16:47:48Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "17,29,173,1013,14489,122033",
+   "url": "https://oeis.org/search?q=17%2C29%2C173%2C1013%2C14489%2C122033&fmt=json",
+   "results": 0,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [],
+   "run": "2026-11-09T16:47:53Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "Gaussian primes in arithmetic progression",
+   "url": "https://oeis.org/search?q=Gaussian+primes+in+arithmetic+progression&fmt=json",
+   "results": 7,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A000043",
+     "name": "Mersenne exponents: primes p such that 2^p - 1 is prime. Then 2^p - 1 is called a Mersenne prime."
+    },
+    {
+     "oeis": "A034693",
+     "name": "Smallest k such that k*n+1 is prime."
+    },
+    {
+     "oeis": "A000984",
+     "name": "Central binomial coefficients: binomial(2*n,n) = (2*n)!/(n!)^2."
+    },
+    {
+     "oeis": "A004018",
+     "name": "Theta series of square lattice (or number of ways of writing n as a sum of 2 squares). Often denoted by r(n) or r_2(n)."
+    },
+    {
+     "oeis": "A060294",
+     "name": "Decimal expansion of Buffon's constant 2/Pi."
+    },
+    {
+     "oeis": "A343785",
+     "name": "a(n) is completely multiplicative with a(p^e) = (-1)^e if p == 2 (mod 3) and a(p^e) = 1 otherwise."
+    },
+    {
+     "oeis": "A401365",
+     "name": "Partial sums of A401407: a(n) = Sum_{k=1..n} lambda(k)*chi_{-4}(k), where lambda is Liouville's function A008836 and chi_{-4} = A101455 is the nonprincipal Dirichlet character modulo 4."
+    }
+   ],
+   "run": "2026-11-09T16:47:58Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "longest arithmetic progression of Gaussian primes computational search record smallest norm",
+   "date": "2026-11-09",
+   "found": "Tao's existence theorem for constellations in the Gaussian primes, expositions of Green-Tao and records for rational primes (Andersen's table, 26 and 27 terms); no computation for Gaussian primes"
+  }
+ ]
+}

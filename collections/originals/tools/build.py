@@ -12,7 +12,7 @@ import re
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FIELDS = ["Combinatorics and graph theory", "Number theory", "Coding theory", "Discrete geometry", "Physics",
-          "Chemistry and materials", "Computing and operations research", "Biology"]
+          "Chemistry and materials", "Astronomy", "Computing and operations research", "Biology"]
 MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
           "November", "December"]
 

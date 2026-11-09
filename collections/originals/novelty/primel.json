@@ -1,0 +1,29 @@
+{
+ "id": "primel",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:Primel AND all:Wordle",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3APrimel+AND+all%3AWordle&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T15:34:58Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:Wordle AND all:\"prime numbers\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3AWordle+AND+all%3A%22prime+numbers%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T15:35:02Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "Primel prime number wordle optimal strategy solver decision tree average guesses",
+   "date": "2026-11-09",
+   "found": "an entropy-based Primel solver project (8,363 answers, no average given), a filtering script, and the exact Wordle solution (Bertsimas and Paskov; average 3.421 with SALET); no optimal or published Primel strategy value"
+  }
+ ]
+}

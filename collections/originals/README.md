@@ -1,9 +1,9 @@
 # Quantavane Originals
 
-New open problems, written by Quantavane: <!--count-->27<!--/count--> problems across mathematics, physics,
-chemistry, computing and biology. Each one is a question that, as far as our searches show, nobody had asked before,
-stated precisely, with an exact checker of ours and a first value of ours, so that it starts with a best known value,
-a holder and a date. All of them are open.
+New open problems, written by Quantavane: <!--count-->35<!--/count--> problems across mathematics, physics,
+chemistry, astronomy, computing and biology. Each one is a question that, as far as our searches show, nobody had
+asked before, stated precisely, with an exact checker of ours and a first value of ours, so that it starts with a best
+known value, a holder and a date. All of them are open.
 
 For every problem the file in `problems/` (and its page `problems/ID.md`) gives:
 
@@ -35,10 +35,13 @@ and is credited by name on the problem's page and in `leaderboard.json`.
 | [The autoconvolution constant of the square](problems/autoconv-square.md) | Combinatorics and graph theory | minimize | 5687487427963392/2559015127450681 |
 | [The decycling number of the 600-cell](problems/cell600-forest.md) | Combinatorics and graph theory | maximize | 37 |
 | [Fewest monochromatic triangles in the E8 root graph](problems/e8-goodman.md) | Combinatorics and graph theory | minimize | 10385 |
+| [The metric dimension of the E8 root graph](problems/e8-resolving.md) | Combinatorics and graph theory | minimize | 12 |
 | [The minimum overlap constant of the square](problems/overlap-square.md) | Combinatorics and graph theory | minimize | 150615/262144 |
 | [The minimum overlap problem for three parts](problems/overlap-three.md) | Combinatorics and graph theory | minimize | 56061/200000 |
 | [Densest admissible patterns of primes n^3 + h](problems/cubic-admissible.md) | Number theory | minimize | 255 |
+| [Two-colourings with no monochromatic 120-degree triangle](problems/eisenstein-triples.md) | Number theory | maximize | 19200 |
 | [Admissible constellations of smallest diameter in the Gaussian integers](problems/gauss-admissible.md) | Number theory | minimize | 218 |
+| [Arithmetic progressions of Gaussian primes](problems/gauss-prime-ap.md) | Number theory | maximize | 18 |
 | [Largest sum-free set of quadratic residues](problems/qr-sumfree.md) | Number theory | maximize | 174 |
 | [Densest admissible patterns of primes n^2 + h](problems/quad-admissible.md) | Number theory | minimize | 247 |
 | [Identifying codes of the 600-cell](problems/cell600-idcode.md) | Coding theory | minimize | 20 |
@@ -52,6 +55,11 @@ and is credited by name on the problem's page and in `leaderboard.json`.
 | [Ising antiferromagnet on the snub 24-cell](problems/snub24-ising.md) | Physics | minimize | -144 |
 | [Benzenoids with the smallest Kemeny constant](problems/benzenoid-kemeny.md) | Chemistry and materials | minimize | 14813904881/113347080 |
 | [Catacondensed benzenoids with the smallest Kemeny constant](problems/cata-kemeny.md) | Chemistry and materials | minimize | 59617087737367409/159902997431616 |
+| [Non-redundant aperture masks for segmented mirrors](problems/nrm-segments.md) | Astronomy | maximize | 23 |
+| [Splitting a segmented mirror into non-redundant groups](problems/nrm-tilting.md) | Astronomy | minimize | 11 |
+| [The slewing tour of the Bright Star Catalogue](problems/slew-tour.md) | Astronomy | minimize | 103836804 |
+| [The smallest star-tracker catalogue of the bright sky](problems/star-tracker.md) | Astronomy | minimize | 456 |
+| [An optimal strategy for Primel](problems/primel.md) | Computing and operations research | minimize | 29016 |
 | [XOR circuits for the quadratic-residue circulant](problems/qr-xor.md) | Computing and operations research | minimize | 238 |
 | [Shortest reset words of the quadratic automaton modulo p](problems/sync-quadratic.md) | Computing and operations research | minimize | 31 |
 | [The travelling salesman tour of the Gaussian primes](problems/tsp-gaussian.md) | Computing and operations research | minimize | 11298548 |

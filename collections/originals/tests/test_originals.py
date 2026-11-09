@@ -175,6 +175,48 @@ def controls():
     if "hp-tri" in P:
         L = lines_of(certificates(P["hp-tri"]))
         refuse("hp-tri", "\n".join(L[:-1] + ["99 99"]) + "\n", "a chain with a broken bond")
+    if "nrm-segments" in P:
+        L = lines_of(certificates(P["nrm-segments"]))
+        pts = [tuple(map(int, l.split())) for l in L]
+        sv = int(P["nrm-segments"]["checker"]["args"][1])
+        seg = [(a, b) for a in range(-sv, sv + 1) for b in range(-sv, sv + 1) if 1 <= max(abs(a), abs(b), abs(a + b)) <= sv]
+        def cls(p, q):
+            d = (p[0] - q[0], p[1] - q[1])
+            return d if d > (0, 0) else (-d[0], -d[1])
+        used = {cls(p, q) for p, q in itertools.combinations(pts, 2)}
+        extra = next(r for r in seg if r not in pts and any(cls(r, q) in used for q in pts))
+        refuse("nrm-segments", "\n".join(L + [f"{extra[0]} {extra[1]}"]) + "\n", "a mask with one more hole repeating a baseline")
+        refuse("nrm-segments", "\n".join(L + ["0 0"]) + "\n", "a hole on the missing centre segment")
+    if "nrm-tilting" in P:
+        L = lines_of(certificates(P["nrm-tilting"]))
+        refuse("nrm-tilting", "\n".join([L[0] + " " + L[1]] + L[2:]) + "\n", "two groups merged (a repeated baseline)")
+        refuse("nrm-tilting", "\n".join(L[:-1]) + "\n", "a partition missing a group of segments")
+    if "eisenstein-triples" in P:
+        c = list("".join(lines_of(certificates(P["eisenstein-triples"]))))
+        c[2] = c[4] = c[6] = "0"
+        refuse("eisenstein-triples", "".join(c) + "\n", "a colouring with 3, 5 and 7 the same colour (9 + 15 + 25 = 49)")
+    if "star-tracker" in P:
+        t = " ".join(lines_of(certificates(P["star-tracker"]))).split()
+        refuse("star-tracker", " ".join(t[1:]) + "\n", "the catalogue without its first star (every star of it is needed)")
+    if "primel" in P:
+        L = lines_of(certificates(P["primel"]))
+        refuse("primel", "\n".join(L[1:]) + "\n", "a strategy with one answer missing")
+        bad = L[0].split()
+        bad[0] = "10001"
+        refuse("primel", "\n".join([" ".join(bad)] + L[1:]) + "\n", "a first guess that is not prime (10001 = 73 x 137)")
+    if "gauss-prime-ap" in P:
+        L = lines_of(certificates(P["gauss-prime-ap"]))
+        x0, y0 = map(int, L[0].split())
+        x1, y1 = map(int, L[1].split())
+        k = len(L)
+        refuse("gauss-prime-ap", "\n".join(f"{x0 + j * (x1 - x0)} {y0 + j * (y1 - y0) + (1 if j == k - 1 else 0)}" for j in range(k)) + "\n", "a last term off the progression")
+    if "e8-resolving" in P:
+        t = " ".join(lines_of(certificates(P["e8-resolving"]))).split()
+        refuse("e8-resolving", " ".join(t[:6]) + "\n", "6 of its vertices (at least 11 are needed)")
+        refuse("e8-resolving", " ".join(["240"] + t[1:]) + "\n", "a vertex number out of range")
+    if "slew-tour" in P:
+        t = " ".join(lines_of(certificates(P["slew-tour"]))).split()
+        refuse("slew-tour", " ".join(t[:-1] + [t[0]]) + "\n", "a tour visiting one star twice")
 
 
 def cross_checks():
@@ -289,6 +331,78 @@ def cross_checks():
     # catacondensed: triphenylene (h = 4) has Kemeny constant 50521/1386, the minimum over the five catacondensed systems
     code, res, _ = run("collections/originals/checkers/orig_chem.py", ["cata-kemeny", 4, write("triphenylene.txt", "0 1\n1 1\n1 2\n2 0\n")])
     expect(f"cross cata-kemeny triphenylene: 50521/1386", res == "50521/1386", res)
+    # non-redundant masks: no 8 of the 18 segments of the 2-ring mirror (the JWST layout) are non-redundant, 7 are
+    seg2 = [(a, b) for a in range(-2, 3) for b in range(-2, 3) if 1 <= max(abs(a), abs(b), abs(a + b)) <= 2]
+    def nonred(S):
+        seen = set()
+        for p, q in itertools.combinations(S, 2):
+            d = (p[0] - q[0], p[1] - q[1])
+            d = d if d > (0, 0) else (-d[0], -d[1])
+            if d in seen:
+                return False
+            seen.add(d)
+        return True
+    has8 = any(nonred(S) for S in itertools.combinations(seg2, 8))
+    seven = next(S for S in itertools.combinations(seg2, 7) if nonred(S))
+    code, res, _ = run("collections/originals/checkers/orig_astro.py", ["nrm-segments", 2, write("nrm7.txt", "\n".join(f"{a} {b}" for a, b in seven) + "\n")])
+    expect("cross nrm-segments h(2) = 7 by brute force (JWST layout)", (not has8) and res == "7", (has8, res))
+    # Eisenstein triples: the checker's divisor enumeration against a direct search up to 1500
+    import math
+    direct = sum(1 for x in range(1, 1501) for y in range(x + 1, 1501) if x * x + x * y + y * y <= 1500 ** 2 and math.isqrt(x * x + x * y + y * y) ** 2 == x * x + x * y + y * y)
+    sys.path.insert(0, os.path.join(HERE, "checkers"))
+    import orig_numth
+    expect(f"cross eisenstein-triples {direct} triples with z <= 1500 by direct search", len(orig_numth.eisenstein_triples_upto(1500)) == direct, direct)
+    # slew tour: an independent length of the tour in HR order
+    if os.path.exists(os.path.join(HERE, "instances", "bsc-sky.txt")):
+        sky = [tuple(map(int, l.split())) for l in open(os.path.join(HERE, "instances", "bsc-sky.txt")) if not l.startswith("#")]
+        tot = 0
+        for i in range(len(sky)):
+            a, b = sky[i], sky[(i + 1) % len(sky)]
+            dra = abs(3 * a[1] - 3 * b[1])
+            tot += max(min(dra, 2592000 - dra), abs(2 * a[2] - 2 * b[2]))
+        code, res, _ = run("collections/originals/checkers/orig_astro.py", ["slew-tour", "collections/originals/instances/bsc-sky.txt", write("hrorder.txt", "\n".join(str(r[0]) for r in sky) + "\n")])
+        expect(f"cross slew-tour the tour in HR order has length {tot}", res == str(tot), res)
+    # Primel marks against an independent count-based implementation, on random pairs of five-digit primes
+    sys.path.insert(0, os.path.join(HERE, "checkers"))
+    import orig_comp
+    pr = [str(q) for q in range(10007, 100000) if all(q % d for d in range(2, int(q ** 0.5) + 1))]
+    expect("cross primel 8,363 five-digit primes", len(pr) == 8363, len(pr))
+    def marks2(g, a):
+        m = [2 if g[i] == a[i] else 0 for i in range(5)]
+        left = {}
+        for i in range(5):
+            if m[i] != 2:
+                left[a[i]] = left.get(a[i], 0) + 1
+        for i in range(5):
+            if m[i] != 2 and left.get(g[i], 0) > 0:
+                m[i], left[g[i]] = 1, left[g[i]] - 1
+        return tuple(m)
+    rng2 = random.Random(5)
+    pairs = [(rng2.choice(pr), rng2.choice(pr)) for _ in range(3000)] + [("11113", "31111"), ("11117", "71171")]
+    expect("cross primel marks (3,002 pairs, repeated digits included)", all(orig_comp.primel_marks(g, a) == marks2(g, a) for g, a in pairs))
+    # Gaussian prime progressions: least largest norm for K = 3..7 by brute force over a small disc
+    gp = [(x, y) for x in range(-6, 7) for y in range(-6, 7) if x * x + y * y <= 40 and ((x and y and all((x * x + y * y) % d for d in range(2, x * x + y * y)) and x * x + y * y > 1) or ((x == 0) != (y == 0) and (abs(x) + abs(y)) % 4 == 3 and all((abs(x) + abs(y)) % d for d in range(2, abs(x) + abs(y)))))]
+    gps = set(gp)
+    for K, want in ((3, 9), (4, 9), (5, 17), (6, 17), (7, 29)):
+        best = min((max((a[0] + j * (b[0] - a[0])) ** 2 + (a[1] + j * (b[1] - a[1])) ** 2 for j in range(K))
+                    for a in gp for b in gp if a != b and all((a[0] + j * (b[0] - a[0]), a[1] + j * (b[1] - a[1])) in gps for j in range(K))), default=None)
+        expect(f"cross gauss-prime-ap least largest norm {want} for {K} terms (brute force)", best == want, best)
+    # E8 root graph: distances from a root are 0, 1, 2, 3 for 1, 56, 182 and 1 roots (inner products 2, 1, 0 or -1, -2)
+    roots = sorted({tuple(v) for i, j in itertools.combinations(range(8), 2) for si in (2, -2) for sj in (2, -2)
+                    for v in [[si if k == i else sj if k == j else 0 for k in range(8)]]} |
+                   {s8 for s8 in itertools.product((1, -1), repeat=8) if s8.count(-1) % 2 == 0})
+    ip = [sum(a * b for a, b in zip(roots[0], r)) for r in roots]
+    predicted = [{8: 0, 4: 1, 0: 2, -4: 2, -8: 3}[x] for x in ip]
+    nbr = [[j for j in range(240) if sum(a * b for a, b in zip(roots[i], roots[j])) == 4] for i in range(240)]
+    bfs = [-1] * 240
+    bfs[0], queue = 0, [0]
+    for u in queue:
+        for w in nbr[u]:
+            if bfs[w] < 0:
+                bfs[w] = bfs[u] + 1
+                queue.append(w)
+    expect("cross e8-resolving BFS distances from a root: 1, 56, 182, 1 at 0..3, as the inner products predict",
+           bfs == predicted and [bfs.count(k) for k in range(4)] == [1, 56, 182, 1], [bfs.count(k) for k in range(4)])
     # the uniform three-part splitting has largest overlap exactly 1/3
     code, res, _ = run("collections/originals/checkers/orig_comb.py", ["overlap-three", 3, 3, write("uni3.txt", "1 1 1\n1 1 1\n1 1 1\n")])
     expect(f"cross overlap-three the uniform splitting scores 1/3", res == "1/3", res)

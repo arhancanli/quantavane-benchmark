@@ -1,0 +1,113 @@
+{
+ "id": "nrm-tilting",
+ "collection": "originals",
+ "field": "Astronomy",
+ "title": "Splitting a segmented mirror into non-redundant groups",
+ "status": "open",
+ "statement": "On the segmented mirror with s rings of hexagonal segments around a missing centre (the 3s(s + 1) segments a + b*w of problem nrm-segments, w = e^(i pi/3), hexagonal norm 1 to s), split all the segments into groups so that no baseline repeats inside a group: within each group the vectors joining two segments are all different, a vector and its negative counting as one. Let g(s) be the fewest groups. Tilting the segments of each group so that its light forms its own interferogram turns the whole mirror into several non-redundant interferometers at once. The headline cell is s = 6 (126 segments): split them into fewer than 11 non-redundant groups.",
+ "objective": "minimize",
+ "submission": "Text file: one line per group, its segments written 'a,b' and separated by spaces; every segment of the 6-ring mirror exactly once.",
+ "checker": {
+  "program": "collections/originals/checkers/orig_astro.py",
+  "args": [
+   "nrm-tilting",
+   "6"
+  ],
+  "value": "result"
+ },
+ "score": "the number of groups, an integer (smaller is better)",
+ "best_known": {
+  "value": "11",
+  "exact": "11",
+  "source": "Quantavane (Arhan Canli), 9 November 2026: min-conflicts local search that moves one segment between groups, with a tabu list (tools/src/nrm.c, mode part)",
+  "kind": "our construction (Quantavane Originals)",
+  "provenance": {
+   "keeper": "Quantavane Originals",
+   "url": "collections/originals/problems/nrm-tilting.md",
+   "read": "2026-11-09",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true,
+   "certificate": "collections/originals/refs/nrm-tilting.txt"
+  }
+ },
+ "verified_pending": [],
+ "added": "originals-1",
+ "quantavane_record": true,
+ "context": "A non-redundant aperture mask uses only a few segments of a mirror and throws most of the light away (problem nrm-segments). Pupil remapping recovers it: on Keck, the primary-mirror segments were tilted so that four non-redundant groups of six segments formed separate interferograms on the detector at the same time, and the other 12 segments, which 'could not all fit into four non-redundant patterns', made a fifth image (Monnier et al. 2009). Jewel Optics (Taras, Piroscia and Tuthill 2025) does the same with phase wedges on a hexagonal grid of sub-apertures inside a circular pupil, choosing 'as few sets as possible' by a local search, with no proof of a minimum. Using every segment needs a partition of the whole mirror into non-redundant groups, and the fewest groups means the fewest interferograms to fit on the detector. For Keck's 36-segment layout (s = 3) we find that five groups suffice and four do not, confirming the experiment's observation: a split into four groups would need four disjoint largest masks of 9 segments, and an exhaustive search of all 5,190 such masks finds no four that partition the mirror. For s = 4 five groups are impossible in the same way (178 largest masks of 12 segments, no five disjoint), seven are enough, and six is open. Mathematically, g(s) is the least number of Sidon sets that partition a hexagon of the triangular lattice with its centre removed; partitions of sets of integers into Sidon sets have been studied, but we found nothing on hexagonal regions or on segmented mirrors.",
+ "references": [
+  "A. K. Taras, G. Piroscia, P. Tuthill, Jewel Optics I: non-redundant Fizeau beam combination without the guilt, arXiv:2501.01570 (2025)",
+  "J. D. Monnier et al., Mid-infrared size survey of young stellar objects: description of Keck segment-tilting experiment and basic results, Astrophys. J. 700 (2009) 491-505 (arXiv:0905.3495)",
+  "P. G. Tuthill, J. D. Monnier, W. C. Danchi, E. H. Wishnow, C. A. Haniff, Michelson interferometry with the Keck I telescope, Publ. Astron. Soc. Pacific 112 (2000) 555-565",
+  "S. R. Blackburn, T. Etzion, K. M. Martin, M. B. Paterson, Two-dimensional patterns with distinct differences: constructions, bounds, and maximal anticodes, IEEE Trans. Inform. Theory 56 (2010) 1216-1229",
+  "K. O'Bryant, A complete annotated bibliography of work related to Sidon sequences, Electron. J. Combin. DS11 (2004)"
+ ],
+ "novelty": {
+  "checked": "2026-11-09",
+  "file": "novelty/nrm-tilting.json",
+  "verdict": "new as stated, close to a studied design question. Tiling a pupil by few non-redundant sets was done on Keck (segment tilting) and in Jewel Optics (hexagonal grids in circular pupils, by local search); no result was found on the fewest groups for the segment layout of a hexagonal segmented mirror, and no proven minimum for any layout.",
+  "closest": [
+   "The Keck segment-tilting experiment (Monnier et al. 2009): 24 of 36 segments in four interferograms; here every segment is used and the number of groups is minimised.",
+   "Jewel Optics (A. K. Taras, G. Piroscia, P. Tuthill 2025): the same design question (tile a pupil by few non-redundant sets) on hexagonal grids inside circular pupils with obstructions removed, solved by local search for particular designs (4 to 9 interferograms), without a proven minimum and not on the segment layout of a segmented mirror. The problem type is studied there; this region, its exact small values and the bounds are not.",
+   "Our problem nrm-segments (the largest single non-redundant group), whose exact values give the lower bounds for s <= 4 here.",
+   "Partitions of {1, ..., n} into Sidon sets (one-dimensional, from the Sidon-set literature collected by O'Bryant): a different region and dimension."
+  ],
+  "benchmark": "no Sidon-set or partition family in the benchmark"
+ },
+ "first_values": {
+  "columns": [
+   "s",
+   "segments",
+   "fewest groups g(s)",
+   "how"
+  ],
+  "rows": [
+   [
+    1,
+    6,
+    2,
+    "exact (largest non-redundant set: 4 segments)"
+   ],
+   [
+    2,
+    18,
+    3,
+    "exact (largest set: 7)"
+   ],
+   [
+    3,
+    36,
+    5,
+    "exact: 4 groups would need 4 disjoint largest masks; none among the 5,190 masks of 9 segments"
+   ],
+   [
+    4,
+    60,
+    "6 or 7",
+    "7 found; 5 impossible (no 5 disjoint among the 178 masks of 12 segments)"
+   ],
+   [
+    5,
+    90,
+    9,
+    "best known (ours, local search); at least 5"
+   ],
+   [
+    6,
+    126,
+    11,
+    "best known (ours, local search); at least 6"
+   ]
+  ],
+  "note": "Lower bounds: the number of segments divided by the largest non-redundant set (exact for s <= 4; the counting bound h(5) <= 18, h(6) <= 22 otherwise), and exact covers by all largest sets (tools/src/nrm.c mode all, tools/nrm_cover.py)."
+ },
+ "baseline": {
+  "date": "2026-11-09",
+  "holder": "Quantavane (Arhan Canli)",
+  "text": "11 groups, held by Quantavane (Arhan Canli), 9 November 2026: the partition in `refs/nrm-tilting.txt`. Lower bound 6: a non-redundant set on the 6-ring mirror has at most 22 segments (its baselines are distinct vectors of hexagonal norm at most 12, 234 of them up to sign), and 126/22 > 5."
+ },
+ "bound": {
+  "value": "6",
+  "kind": "lower bound",
+  "source": "a non-redundant group has at most 22 of the 126 segments (counting baselines: 234 vectors of hexagonal norm at most 12 up to sign)"
+ }
+}

@@ -34,7 +34,11 @@ exits 0 only for a valid certificate and 1 otherwise. Problems:
                            monochromatic triangles.
   cell600-forest FILE      FILE: vertex numbers 0..119 of the 600-cell's graph (vertex order as in cell600_graph)
                            whose induced subgraph is a forest (no cycle). Value: the number of vertices; the 120 minus
-                           it is the size of a decycling (feedback vertex) set."""
+                           it is the size of a decycling (feedback vertex) set.
+  e8-resolving FILE        FILE: vertex numbers 0..239 of the E8 root graph (the 240 roots doubled to integer vectors,
+                           sorted, adjacent when the inner product is 4, as for e8-goodman). Valid when the set W
+                           resolves the graph: the vectors of graph distances (d(v, w))_(w in W) are different for all
+                           240 vertices v. Value: |W|."""
 import itertools
 import sys
 from fractions import Fraction
@@ -268,7 +272,38 @@ def overlap_three(args, path):
     return 0
 
 
-PROBLEMS = {"autoconv-square": (1, autoconv_square), "overlap-square": (2, overlap_square),
+def e8_resolving(args, path):
+    W = vertex_list(path, 240)
+    if W is None:
+        return 1
+    adj = [[] for _ in range(240)]
+    for a, b in e8_edges():
+        adj[a].append(b)
+        adj[b].append(a)
+    cols = []
+    for w in W:
+        d = [-1] * 240
+        d[w] = 0
+        q = [w]
+        for u in q:
+            for x in adj[u]:
+                if d[x] < 0:
+                    d[x] = d[u] + 1
+                    q.append(x)
+        cols.append(d)
+    vecs = {}
+    for v in range(240):
+        key = tuple(c[v] for c in cols)
+        if key in vecs:
+            print(f"vertices {vecs[key]} and {v} have the same distances {key} to the set")
+            return 1
+        vecs[key] = v
+    print(f"{len(W)} vertices resolve the E8 root graph: all 240 distance vectors are different")
+    print(f"RESULT {len(W)}")
+    return 0
+
+
+PROBLEMS = {"autoconv-square": (1, autoconv_square), "e8-resolving": (0, e8_resolving), "overlap-square": (2, overlap_square),
             "overlap-three": (2, overlap_three), "ap-cover": (2, ap_cover), "e8-goodman": (0, e8_goodman),
             "cell600-forest": (0, cell600_forest)}
 

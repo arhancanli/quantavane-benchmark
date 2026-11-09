@@ -1,0 +1,107 @@
+{
+ "id": "e8-resolving",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"metric dimension\" AND all:E8",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22metric+dimension%22+AND+all%3AE8&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T15:32:05Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"metric dimension\" AND all:\"root system\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22metric+dimension%22+AND+all%3A%22root+system%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T15:32:09Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"resolving set\" AND all:polytope",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22resolving+set%22+AND+all%3Apolytope&start=0&max_results=10&sortBy=relevance",
+   "results": 1,
+   "top": [
+    {
+     "arxiv": "2104.09167v1",
+     "year": "2021",
+     "first_author": "Sunny Kumar Sharma",
+     "title": "On Fault-Tolerant Resolvability of Double Antiprism and its related Graphs"
+    }
+   ],
+   "run": "2026-11-09T15:32:13Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"metric dimension\" AND all:\"600-cell\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22metric+dimension%22+AND+all%3A%22600-cell%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T15:45:06Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"metric dimension\" AND all:\"Gosset\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22metric+dimension%22+AND+all%3A%22Gosset%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T15:45:10Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"metric dimension\" AND all:\"strongly regular\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22metric+dimension%22+AND+all%3A%22strongly+regular%22&start=0&max_results=10&sortBy=relevance",
+   "results": 4,
+   "top": [
+    {
+     "arxiv": "1312.4973v1",
+     "year": "2013",
+     "first_author": "Robert F. Bailey",
+     "title": "The metric dimension of small distance-regular and strongly regular graphs"
+    },
+    {
+     "arxiv": "1707.02899v2",
+     "year": "2017",
+     "first_author": "Robert F. Bailey",
+     "title": "On the metric dimension of incidence graphs"
+    },
+    {
+     "arxiv": "2607.05152v1",
+     "year": "2026",
+     "first_author": "Robert F. Bailey",
+     "title": "Localization and metric dimension for families of highly structured digraphs"
+    },
+    {
+     "arxiv": "1411.5275v2",
+     "year": "2014",
+     "first_author": "Sylvain Gravier",
+     "title": "Identifying codes in vertex-transitive graphs and strongly regular graphs"
+    }
+   ],
+   "run": "2026-11-09T16:45:08Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"metric dimension\" AND all:polytope AND all:\"4-dimensional\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22metric+dimension%22+AND+all%3Apolytope+AND+all%3A%224-dimensional%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T16:45:12Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "\"metric dimension\" E8 root system graph OR \"Gosset polytope\" OR \"4_21\" OR \"600-cell\" resolving set",
+   "date": "2026-11-09",
+   "found": "general results on metric dimension (hierarchical and rooted products, infinite graphs); nothing on root-system or polytope graphs"
+  },
+  {
+   "engine": "arXiv abstract (read)",
+   "query": "arXiv:2607.05152 (Bailey and Pittman, 2026)",
+   "date": "2026-11-09",
+   "found": "metric dimension of directed analogues of strongly regular graphs; no root systems or polytopes"
+  }
+ ]
+}

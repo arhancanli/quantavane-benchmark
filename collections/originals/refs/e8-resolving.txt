@@ -1,0 +1,2 @@
+# resolving set of 12 vertices of the E8 root graph (vertex numbers as in checkers/orig_comb.py)
+193 211 23 75 205 53 216 178 167 72 33 206

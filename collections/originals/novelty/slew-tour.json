@@ -1,0 +1,83 @@
+{
+ "id": "slew-tour",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"traveling salesman\" AND all:\"bright star\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22traveling+salesman%22+AND+all%3A%22bright+star%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T15:30:42Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"travelling salesman\" AND all:telescope AND all:slew",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22travelling+salesman%22+AND+all%3Atelescope+AND+all%3Aslew&start=0&max_results=10&sortBy=relevance",
+   "results": 1,
+   "top": [
+    {
+     "arxiv": "1409.1859v1",
+     "year": "2014",
+     "first_author": "Walter Max-Moerbeck",
+     "title": "Scheduling and calibration strategy for continuous radio monitoring of 1700 sources every three days"
+    }
+   ],
+   "run": "2026-11-09T15:30:46Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"star tours\" AND all:\"traveling salesman\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22star+tours%22+AND+all%3A%22traveling+salesman%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T15:30:50Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"telescope scheduling\" AND all:\"traveling salesman\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22telescope+scheduling%22+AND+all%3A%22traveling+salesman%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T15:30:55Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"slew time\" AND all:\"traveling salesman\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22slew+time%22+AND+all%3A%22traveling+salesman%22&start=0&max_results=10&sortBy=relevance",
+   "results": 1,
+   "top": [
+    {
+     "arxiv": "1409.1859v1",
+     "year": "2014",
+     "first_author": "Walter Max-Moerbeck",
+     "title": "Scheduling and calibration strategy for continuous radio monitoring of 1700 sources every three days"
+    }
+   ],
+   "run": "2026-11-09T16:03:27Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"equatorial mount\" AND all:slew",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22equatorial+mount%22+AND+all%3Aslew&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T16:03:31Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"Bright Star Catalogue\" AND all:tour",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22Bright+Star+Catalogue%22+AND+all%3Atour&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T16:03:35Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "travelling salesman tour telescope slew equatorial mount star catalogue Bright Star Catalogue",
+   "date": "2026-11-09",
+   "found": "the Traveling Telescope Problem (Handley, Petigura and Misic, arXiv:2310.18497: a travelling salesman variant with time-dependent slew times, solved by integer programming), the Zwicky Transient Facility scheduler (arXiv:1905.02209: a travelling salesman problem inside each observing block, equatorial mount with independent axes), a pulsar timing programme ordering sources with 2-opt (arXiv:1812.04038) and amateur forum threads; none uses the Bright Star Catalogue or poses a benchmark instance"
+  }
+ ]
+}

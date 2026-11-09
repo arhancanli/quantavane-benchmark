@@ -1,0 +1,130 @@
+{
+ "id": "nrm-tilting",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"pupil remapping\" AND all:segments AND all:tilting",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22pupil+remapping%22+AND+all%3Asegments+AND+all%3Atilting&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T16:02:56Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"segment tilting\" AND all:interferometry",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22segment+tilting%22+AND+all%3Ainterferometry&start=0&max_results=10&sortBy=relevance",
+   "results": 3,
+   "top": [
+    {
+     "arxiv": "0808.1728v1",
+     "year": "2008",
+     "first_author": "A. Tannirkulam",
+     "title": "A Tale of Two Herbig Ae stars -MWC275 and AB Aurigae: Comprehensive Models for SED and Interferometry"
+    },
+    {
+     "arxiv": "0905.3495v1",
+     "year": "2009",
+     "first_author": "J. D. Monnier",
+     "title": "Mid-infrared size survey of Young Stellar Objects: Description of Keck segment-tilting experiment and basic results"
+    },
+    {
+     "arxiv": "0807.0146v1",
+     "year": "2008",
+     "first_author": "J. D. Monnier",
+     "title": "Discovery of a Circumbinary Disk around Herbig Ae/Be system v892 Tau"
+    }
+   ],
+   "run": "2026-11-09T16:03:00Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"Sidon sets\" AND all:partition AND all:\"minimum number\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22Sidon+sets%22+AND+all%3Apartition+AND+all%3A%22minimum+number%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T16:03:04Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "2,3,5",
+   "url": "https://oeis.org/search?q=2%2C3%2C5&fmt=json",
+   "results": 10,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A000040",
+     "name": "The prime numbers."
+    },
+    {
+     "oeis": "A000045",
+     "name": "Fibonacci numbers: F(n) = F(n-1) + F(n-2) with F(0) = 0 and F(1) = 1."
+    },
+    {
+     "oeis": "A000041",
+     "name": "a(n) is the number of partitions of n (the partition numbers)."
+    },
+    {
+     "oeis": "A005117",
+     "name": "Squarefree numbers: numbers that are not divisible by a square greater than 1."
+    },
+    {
+     "oeis": "A001620",
+     "name": "Decimal expansion of Euler's constant (or the Euler-Mascheroni constant), gamma."
+    },
+    {
+     "oeis": "A006530",
+     "name": "Gpf(n): greatest prime dividing n, for n >= 2; a(1)=1."
+    },
+    {
+     "oeis": "A000051",
+     "name": "a(n) = 2^n + 1."
+    },
+    {
+     "oeis": "A001113",
+     "name": "Decimal expansion of e."
+    },
+    {
+     "oeis": "A000043",
+     "name": "Mersenne exponents: primes p such that 2^p - 1 is prime. Then 2^p - 1 is called a Mersenne prime."
+    },
+    {
+     "oeis": "A008578",
+     "name": "Prime numbers at the beginning of the 20th century (today 1 is no longer regarded as a prime)."
+    }
+   ],
+   "run": "2026-11-09T16:03:09Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "partition into Sidon sets",
+   "url": "https://oeis.org/search?q=partition+into+Sidon+sets&fmt=json",
+   "results": 2,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A000217",
+     "name": "Triangular numbers: a(n) = binomial(n+1,2) = n*(n+1)/2 = 0 + 1 + 2 + ... + n."
+    },
+    {
+     "oeis": "A398238",
+     "name": "a(n) is the number of distinct unordered pairwise sums with repetition of the distinct multinomial coefficient values of order n having more than one representation."
+    }
+   ],
+   "run": "2026-11-09T16:03:14Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "Keck segment tilting experiment Monnier 2009 24 of 36 segments four interferograms non-redundant pupil remapping",
+   "date": "2026-11-09",
+   "found": "Monnier et al. (2009, arXiv:0905.3495): four non-redundant arrays of tilted segments, 24 of the 36 segments used for science, the rest in a fifth image because they could not all fit into four non-redundant patterns; Tuthill's review of masking (arXiv:1302.2722); Jewel Optics (arXiv:2501.01570)"
+  },
+  {
+   "engine": "arXiv full text (read)",
+   "query": "arXiv:2501.01570 (Taras, Piroscia, Tuthill, Jewel Optics I)",
+   "date": "2026-11-09",
+   "found": "sub-apertures on a hexagonal close-packed grid in a circular pupil, split into non-redundant sets by a binary local search from random starts; 'the number of sets is selected empirically such that the final design has as few sets as possible'; 4 to 9 interferograms in their designs; no proven minimum, no segment layouts"
+  }
+ ]
+}
