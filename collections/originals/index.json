@@ -1,16 +1,16 @@
 {
  "collection": "Quantavane Originals",
- "problems": 35,
+ "problems": 37,
  "by_field": {
   "Combinatorics and graph theory": 7,
   "Number theory": 6,
-  "Coding theory": 3,
+  "Coding theory": 4,
   "Discrete geometry": 3,
   "Physics": 5,
   "Chemistry and materials": 3,
   "Astronomy": 1,
   "Computing and operations research": 4,
-  "Biology": 3
+  "Biology": 4
  },
  "items": [
   {
@@ -168,6 +168,18 @@
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_numth.py",
    "page": "problems/quad-admissible.md"
+  },
+  {
+   "id": "cell120-coil",
+   "field": "Coding theory",
+   "title": "Coils in the 120-cell",
+   "status": "open",
+   "objective": "maximize",
+   "best_known": "202",
+   "holder": "Quantavane (Arhan Canli)",
+   "date": "2026-11-09",
+   "checker": "collections/originals/checkers/orig_codes.py",
+   "page": "problems/cell120-coil.md"
   },
   {
    "id": "cell600-idcode",
@@ -432,6 +444,18 @@
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_bio.py",
    "page": "problems/nussinov-degeneracy.md"
+  },
+  {
+   "id": "six-frame",
+   "field": "Biology",
+   "title": "DNA open in all six reading frames",
+   "status": "open",
+   "objective": "minimize",
+   "best_known": "72",
+   "holder": "Quantavane (Arhan Canli)",
+   "date": "2026-11-09",
+   "checker": "collections/originals/checkers/orig_bio.py",
+   "page": "problems/six-frame.md"
   }
  ]
 }

@@ -15,7 +15,13 @@ valid certificate and 1 otherwise. Problems:
   prime-cover N FILE   FILE: N-digit primes (the code), separated by spaces or newlines. Valid when every N-digit
                        prime is in the code or differs from a prime of the code in exactly one digit (the leading
                        digit stays nonzero): a covering code of radius 1 inside the N-digit primes, with the Hamming
-                       distance on digits. Value: the number of code primes."""
+                       distance on digits. Value: the number of code primes.
+  cell120-coil FILE    FILE: one line "a b c d" per vertex of the 120-cell, written as the tetrahedral cell of the
+                       600-cell it stands for (four vertex numbers 0..119 of cell600_graph, pairwise adjacent), in the
+                       order of the cycle. Valid when the cells are distinct, consecutive cells (and the last and the
+                       first) share a triangle (three vertices: adjacent vertices of the 120-cell) and any two other
+                       cells share at most two vertices (no chord): an induced cycle, a coil-in-the-box. Value: the
+                       number of cells."""
 import sys
 
 
@@ -165,7 +171,40 @@ def prime_cover(args, path):
     return 0
 
 
-PROBLEMS = {"cell600-idcode": (0, cell600_idcode), "e8-idcode": (0, e8_idcode), "prime-cover": (1, prime_cover)}
+def cell120_coil(args, path):
+    adj = cell600_graph()
+    cells = []
+    for line in open(path):
+        line = line.split("#")[0].strip()
+        if line:
+            t = tuple(sorted(int(x) for x in line.split()))
+            if len(t) != 4 or len(set(t)) != 4 or not all(0 <= x < 120 for x in t):
+                print(f"line {line!r} is not four vertices of the 600-cell")
+                return 1
+            if not all(b in adj[a] for i, a in enumerate(t) for b in t[i + 1:]):
+                print(f"{t} is not a tetrahedral cell of the 600-cell")
+                return 1
+            cells.append(set(t))
+    k = len(cells)
+    if k < 5 or len({tuple(sorted(c)) for c in cells}) != k:
+        print("a coil needs at least 5 distinct cells")
+        return 1
+    for i in range(k):
+        for j in range(i + 1, k):
+            shared = len(cells[i] & cells[j])
+            consecutive = j == i + 1 or (i == 0 and j == k - 1)
+            if consecutive and shared != 3:
+                print(f"cells {i + 1} and {j + 1} are consecutive but share {shared} vertices, not a triangle")
+                return 1
+            if not consecutive and shared >= 3:
+                print(f"cells {i + 1} and {j + 1} share a triangle: a chord")
+                return 1
+    print(f"an induced cycle of {k} vertices in the 120-cell")
+    print(f"RESULT {k}")
+    return 0
+
+
+PROBLEMS = {"cell600-idcode": (0, cell600_idcode), "e8-idcode": (0, e8_idcode), "prime-cover": (1, prime_cover), "cell120-coil": (0, cell120_coil)}
 
 
 def main():

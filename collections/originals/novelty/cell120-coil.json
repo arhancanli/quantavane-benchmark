@@ -1,0 +1,53 @@
+{
+ "id": "cell120-coil",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"snake-in-the-box\" AND all:polytope",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22snake-in-the-box%22+AND+all%3Apolytope&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T15:31:38Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"induced path\" AND all:\"120-cell\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22induced+path%22+AND+all%3A%22120-cell%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T15:31:43Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"120-cell\" AND all:graph AND all:code",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22120-cell%22+AND+all%3Agraph+AND+all%3Acode&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T15:31:47Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"snake-in-the-box\" AND all:graph AND all:\"induced cycle\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22snake-in-the-box%22+AND+all%3Agraph+AND+all%3A%22induced+cycle%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T16:45:17Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"longest induced path\" AND all:polytope",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22longest+induced+path%22+AND+all%3Apolytope&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T16:45:21Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "\"snake-in-the-box\" OR \"coil-in-the-box\" OR \"longest induced cycle\" OR \"longest induced path\" 120-cell OR \"600-cell\" OR \"regular polytope\" graph",
+   "date": "2026-11-09",
+   "found": "snake-in-the-box and coil-in-the-box in hypercubes (known values to dimension 8, 2025-2026 records, arXiv:2607.15270), induced paths in general; nothing on the 120-cell or other polytope graphs"
+  }
+ ]
+}

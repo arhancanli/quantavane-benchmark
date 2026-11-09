@@ -1,0 +1,46 @@
+{
+ "id": "six-frame",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"six reading frames\" AND all:\"amino acids\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22six+reading+frames%22+AND+all%3A%22amino+acids%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T17:58:49Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"overlapping genes\" AND all:\"reading frames\" AND all:\"all six\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22overlapping+genes%22+AND+all%3A%22reading+frames%22+AND+all%3A%22all+six%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T17:58:54Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"open reading frames\" AND all:\"six frames\" AND all:shortest",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22open+reading+frames%22+AND+all%3A%22six+frames%22+AND+all%3Ashortest&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T17:58:58Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "DNA sequence all six reading frames",
+   "url": "https://oeis.org/search?q=DNA+sequence+all+six+reading+frames&fmt=json",
+   "results": 0,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [],
+   "run": "2026-11-09T17:59:03Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "shortest DNA sequence that encodes all 20 amino acids in every reading frame six frames overlapping codons all amino acids",
+   "date": "2026-11-09",
+   "found": "textbook material on reading frames and the genetic code, a 1990s piece on overlapping codes; no extremal result on sequences open in all six frames"
+  }
+ ]
+}

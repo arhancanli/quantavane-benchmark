@@ -1,6 +1,6 @@
 # Quantavane Originals
 
-New open problems, written by Quantavane: <!--count-->35<!--/count--> problems across mathematics, physics,
+New open problems, written by Quantavane: <!--count-->37<!--/count--> problems across mathematics, physics,
 chemistry, astronomy, computing and biology. Each one is a question that, as far as our searches show, nobody had
 asked before, stated precisely, with an exact checker of ours and a first value of ours, so that it starts with a best
 known value, a holder and a date. All of them are open.
@@ -44,6 +44,7 @@ and is credited by name on the problem's page and in `leaderboard.json`.
 | [Arithmetic progressions of Gaussian primes](problems/gauss-prime-ap.md) | Number theory | maximize | 18 |
 | [Largest sum-free set of quadratic residues](problems/qr-sumfree.md) | Number theory | maximize | 174 |
 | [Densest admissible patterns of primes n^2 + h](problems/quad-admissible.md) | Number theory | minimize | 247 |
+| [Coils in the 120-cell](problems/cell120-coil.md) | Coding theory | maximize | 202 |
 | [Identifying codes of the 600-cell](problems/cell600-idcode.md) | Coding theory | minimize | 20 |
 | [Identifying codes of the E8 root polytope](problems/e8-idcode.md) | Coding theory | minimize | 15 |
 | [Covering the five-digit primes by one-digit changes](problems/prime-cover.md) | Coding theory | minimize | 1219 |
@@ -66,4 +67,5 @@ and is credited by name on the problem's page and in `leaderboard.json`.
 | [The most ambiguous pair of DNA sequences](problems/align-ambiguity.md) | Biology | maximize | 917147 |
 | [Fibonacci proteins on the triangular lattice](problems/hp-tri.md) | Biology | minimize | -44 |
 | [The most ambiguous RNA under base-pair maximization](problems/nussinov-degeneracy.md) | Biology | maximize | 100603 |
+| [DNA open in all six reading frames](problems/six-frame.md) | Biology | minimize | 72 |
 <!--/table-->

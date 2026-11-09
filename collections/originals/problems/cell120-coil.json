@@ -1,0 +1,82 @@
+{
+ "id": "cell120-coil",
+ "collection": "originals",
+ "field": "Coding theory",
+ "title": "Coils in the 120-cell",
+ "status": "open",
+ "statement": "The 120-cell is the regular 4-dimensional polytope with 600 vertices; its graph is 4-regular with girth 5. Its vertices correspond to the 600 tetrahedral cells of the 600-cell, two vertices being adjacent when their cells share a triangle. A coil (coil-in-the-box) is an induced cycle: a cycle in the graph with no edge between two of its vertices other than the cycle's own edges. How long can a coil in the 120-cell be? Best known: 202 vertices (ours); every coil has at most 400.",
+ "objective": "maximize",
+ "submission": "Text file: one line 'a b c d' per vertex of the coil, in the order of the cycle, each vertex written as its tetrahedral cell of the 600-cell (four vertex numbers 0..119, numbered as in checkers/orig_codes.py).",
+ "checker": {
+  "program": "collections/originals/checkers/orig_codes.py",
+  "args": [
+   "cell120-coil"
+  ],
+  "value": "result"
+ },
+ "score": "the number of vertices of the coil (larger is better)",
+ "best_known": {
+  "value": "202",
+  "exact": "202",
+  "source": "Quantavane (Arhan Canli), 9 November 2026: randomised greedy growth of induced paths that prefers the step blocking the fewest free vertices, recording every closing induced cycle, many restarts (tools/src/coil.c)",
+  "kind": "our construction (Quantavane Originals)",
+  "provenance": {
+   "keeper": "Quantavane Originals",
+   "url": "collections/originals/problems/cell120-coil.md",
+   "read": "2026-11-09",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true,
+   "certificate": "collections/originals/refs/cell120-coil.txt"
+  }
+ },
+ "verified_pending": [],
+ "added": "originals-1",
+ "quantavane_record": true,
+ "context": "Snake-in-the-box codes (Kautz 1958) are long induced paths and cycles in the hypercube: read as codes, consecutive words differ in one coordinate and any two other words in at least two, so a single error is detected; exact values are known only up to dimension 8, and records in higher dimensions are still being improved (2026). The question makes sense in any graph, and the 120-cell, the four-dimensional analogue of the dodecahedron, is a natural one: sparse (degree 4), with girth 5 and a symmetry group of order 14,400. A coil there is a closed walk through its vertices in which no two walk vertices are neighbours unless consecutive. Our searches find coils through a third of the 600 vertices. Counting gives the bound 400: each coil vertex has two neighbours off the coil, and each of the other 600 - c vertices has at most four neighbours, so 2c <= 4(600 - c). The gap between our coils and 400, and the longest induced path (snake), are open.",
+ "references": [
+  "W. H. Kautz, Unit-distance error-checking codes, IRE Trans. Electronic Computers EC-7 (1958) 179-180",
+  "H. S. M. Coxeter, Regular Polytopes, 3rd ed., Dover (1973)",
+  "P. R. J. Ostergard, V. H. Pettersson, Exhaustive search for snake-in-the-box codes, Graphs Combin. 31 (2015) 1019-1028",
+  "A census of new snake-in-the-box records, arXiv:2607.15270 (2026)"
+ ],
+ "novelty": {
+  "checked": "2026-11-09",
+  "file": "novelty/cell120-coil.json",
+  "verdict": "new question for this graph: snake-in-the-box and coil-in-the-box are studied for hypercubes and other cube-like graphs; nothing was found on induced cycles or paths of the 120-cell.",
+  "closest": [
+   "Snake-in-the-box and coil-in-the-box in the hypercube (Kautz 1958; exhaustive values to dimension 8; records still improved in 2026): the same question in another graph.",
+   "Snakes in Fibonacci cubes (in the OEIS; dropped by us) and our problem cell600-forest (largest induced forest of the 600-cell): other induced-subgraph questions."
+  ],
+  "benchmark": "no snake-in-the-box family in the benchmark"
+ },
+ "first_values": {
+  "columns": [
+   "quantity",
+   "best found (ours)",
+   "upper bound"
+  ],
+  "rows": [
+   [
+    "coil (induced cycle), vertices",
+    202,
+    400
+   ],
+   [
+    "snake (induced path), vertices",
+    214,
+    ""
+   ]
+  ],
+  "note": "tools/src/coil.c with 30 s and 400 s of search; the certificate lists the cells of the 600-cell."
+ },
+ "baseline": {
+  "date": "2026-11-09",
+  "holder": "Quantavane (Arhan Canli)",
+  "text": "202 vertices, held by Quantavane (Arhan Canli), 9 November 2026: the coil in `refs/cell120-coil.txt`. Upper bound 400 (counting edges between the coil and the rest)."
+ },
+ "bound": {
+  "value": "400",
+  "kind": "upper bound",
+  "source": "each of the c coil vertices has 2 neighbours off the coil and each of the other 600 - c vertices at most 4, so 2c <= 4(600 - c)"
+ }
+}

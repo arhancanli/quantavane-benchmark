@@ -1,0 +1,2 @@
+# a DNA sequence of 72 bases whose six reading frames are open and each contain all 20 amino acids
+GAAAAATGGCATGCAATTGGAGACATCTCTTGTCGCCAGAATATGTATTTTCCATTGGTATCGACCAGACTC

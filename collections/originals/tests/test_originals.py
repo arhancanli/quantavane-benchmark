@@ -195,6 +195,12 @@ def controls():
         c = list("".join(lines_of(certificates(P["eisenstein-triples"]))))
         c[2] = c[4] = c[6] = "0"
         refuse("eisenstein-triples", "".join(c) + "\n", "a colouring with 3, 5 and 7 the same colour (9 + 15 + 25 = 49)")
+    if "cell120-coil" in P:
+        L = lines_of(certificates(P["cell120-coil"]))
+        refuse("cell120-coil", "\n".join(L[:5] + L[6:]) + "\n", "the coil with its sixth cell left out")
+    if "six-frame" in P:
+        sq = "".join(lines_of(certificates(P["six-frame"])))
+        refuse("six-frame", "TAA" + sq + "\n", "the sequence with a stop codon TAA in front")
     if "gauss-prime-ap" in P:
         L = lines_of(certificates(P["gauss-prime-ap"]))
         x0, y0 = map(int, L[0].split())
@@ -444,6 +450,24 @@ def cross_checks():
     nbh = {q: {r for r in p2 if r == q or sum(a != b for a, b in zip(str(q), str(r))) == 1} for q in p2}
     covers = lambda C: set().union(*(nbh[c] for c in C)) == set(p2)
     expect("cross prime-cover two-digit primes need 4 (brute force)", not any(covers(C) for C in itertools.combinations(p2, 3)) and any(covers(C) for C in itertools.combinations(p2, 4)))
+    # 120-cell from the 600-cell's tetrahedra: 600 cells, each sharing a triangle with exactly 4 others; a 5-cycle
+    # (the girth is 5) is accepted as a coil
+    import orig_codes
+    a6 = orig_codes.cell600_graph()
+    tets = sorted({tuple(sorted((a, b, c, d))) for a in range(120) for b in a6[a] for c in a6[a] & a6[b] for d in a6[a] & a6[b] & a6[c]})
+    tset = [set(t) for t in tets]
+    nb = [[j for j in range(len(tets)) if j != i and len(tset[i] & tset[j]) == 3] for i in range(len(tets))]
+    expect("cross cell120-coil 600 cells of the 600-cell, each adjacent to 4", len(tets) == 600 and all(len(x) == 4 for x in nb), len(tets))
+    five = next([0, a, b, c, d] for a in nb[0] for b in nb[a] if b != 0 for c in nb[b] if c not in (0, a) for d in nb[c] if d not in (0, a, b) and 0 in nb[d])
+    code, res, _ = run("collections/originals/checkers/orig_codes.py", ["cell120-coil", write("pent.txt", "".join(" ".join(map(str, tets[i])) + "\n" for i in five))])
+    expect("cross cell120-coil a pentagon of the 120-cell is a coil of length 5", res == "5", res)
+    # genetic code: the checker's table (built from codon lists) against the table written as one string in the order
+    # A, C, G, T (index 16a + 4b + c); 64 codons, 3 stops, 20 amino acids
+    import orig_bio
+    order = "KNKNTTTTRSRSIIMIQHQHPPPPRRRRLLLLEDEDAAAAGGGGVVVV*Y*YSSSS*CWCLFLF"
+    alt = {a + b + c: order[16 * i + 4 * j + k] for i, a in enumerate("ACGT") for j, b in enumerate("ACGT") for k, c in enumerate("ACGT")}
+    expect("cross six-frame genetic code: two independent tables agree (64 codons, 3 stops, 20 amino acids)",
+           alt == orig_bio.STANDARD_CODE and len(set(alt.values()) - {"*"}) == 20 and list(alt.values()).count("*") == 3)
     # the uniform three-part splitting has largest overlap exactly 1/3
     code, res, _ = run("collections/originals/checkers/orig_comb.py", ["overlap-three", 3, 3, write("uni3.txt", "1 1 1\n1 1 1\n1 1 1\n")])
     expect(f"cross overlap-three the uniform splitting scores 1/3", res == "1/3", res)

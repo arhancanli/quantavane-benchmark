@@ -1,0 +1,130 @@
+{
+ "id": "six-frame",
+ "collection": "originals",
+ "field": "Biology",
+ "title": "DNA open in all six reading frames",
+ "status": "open",
+ "statement": "A DNA sequence has six reading frames: three on the strand itself, starting at its first, second or third base, and the same three on its reverse complement, each read as consecutive codons with the standard genetic code (an incomplete codon at the end is ignored). What is the shortest sequence in which all six frames are open, with no stop codon (TAA, TAG, TGA), and each frame contains all 20 amino acids? Every frame needs at least 20 codons, so at least 62 bases are needed. Best known: 72 bases (ours).",
+ "objective": "minimize",
+ "submission": "Text file: the DNA sequence (letters A, C, G, T; line breaks ignored).",
+ "checker": {
+  "program": "collections/originals/checkers/orig_bio.py",
+  "args": [
+   "six-frame"
+  ],
+  "value": "result"
+ },
+ "score": "the length of the sequence (smaller is better)",
+ "best_known": {
+  "value": "72",
+  "exact": "72",
+  "source": "Quantavane (Arhan Canli), 9 November 2026: simulated annealing over sequences of each length (single-base changes), minimising the stop codons and missing amino acids over the six frames (tools/src/sixframe.c)",
+  "kind": "our construction (Quantavane Originals)",
+  "provenance": {
+   "keeper": "Quantavane Originals",
+   "url": "collections/originals/problems/six-frame.md",
+   "read": "2026-11-09",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true,
+   "certificate": "collections/originals/refs/six-frame.txt"
+  }
+ },
+ "verified_pending": [],
+ "added": "originals-1",
+ "quantavane_record": true,
+ "context": "Overlapping genes, where one stretch of DNA encodes proteins in two or more frames, are common in viruses (the first were found in the bacteriophage phiX174, Barrell, Air and Hutchison 1976) and occur in bacteria and animals; they show how much information a sequence can carry at once under the constraints of the genetic code, since a codon in one frame fixes parts of the codons in the others. The extreme case asks for a sequence that is an open reading frame in all six frames at once and uses the whole amino-acid alphabet in every one of them. The genetic code makes this tight: methionine (ATG) and tryptophan (TGG) have a single codon each, and the stops TAA, TAG and TGA must be avoided in all six frames, so their reverse complements TTA, CTA and TCA cannot appear in any forward frame either. Counting codons gives at least 62 bases; our search finds 72. The exact minimum, and its value when only the three forward frames are required, are open.",
+ "references": [
+  "B. G. Barrell, G. M. Air, C. A. Hutchison III, Overlapping genes in bacteriophage phiX174, Nature 264 (1976) 34-41",
+  "The standard genetic code (NCBI translation table 1)"
+ ],
+ "novelty": {
+  "checked": "2026-11-09",
+  "file": "novelty/six-frame.json",
+  "verdict": "new question: overlapping genes and the coding capacity of overlapping frames are studied, but no result was found on the shortest sequence that is open in all six frames and uses all 20 amino acids in each.",
+  "closest": [
+   "Overlapping genes in viruses and other genomes (phiX174 and later): natural sequences coding in two or three frames, studied for their constraints and evolution, not this extremal question.",
+   "Six-frame translation in genome annotation: every frame is read, with no extremal question."
+  ],
+  "benchmark": "no sequence-design family in the benchmark"
+ },
+ "first_values": {
+  "columns": [
+   "length",
+   "result",
+   "how"
+  ],
+  "rows": [
+   [
+    "lower bound",
+    62,
+    "each of the six frames needs 20 codons"
+   ],
+   [
+    "length 62",
+    "not found",
+    "annealing, 60 s: at best 6 stop codons or missing amino acids left"
+   ],
+   [
+    "length 63",
+    "not found",
+    "annealing, 60 s: at best 5 stop codons or missing amino acids left"
+   ],
+   [
+    "length 64",
+    "not found",
+    "annealing, 60 s: at best 4 stop codons or missing amino acids left"
+   ],
+   [
+    "length 65",
+    "not found",
+    "annealing, 60 s: at best 4 stop codons or missing amino acids left"
+   ],
+   [
+    "length 66",
+    "not found",
+    "annealing, 60 s: at best 3 stop codons or missing amino acids left"
+   ],
+   [
+    "length 67",
+    "not found",
+    "annealing, 60 s: at best 3 stop codons or missing amino acids left"
+   ],
+   [
+    "length 68",
+    "not found",
+    "annealing, 60 s: at best 2 stop codons or missing amino acids left"
+   ],
+   [
+    "length 69",
+    "not found",
+    "annealing, 60 s: at best 2 stop codons or missing amino acids left"
+   ],
+   [
+    "length 70",
+    "not found",
+    "annealing, 60 s: at best 1 stop codons or missing amino acids left"
+   ],
+   [
+    "length 71",
+    "not found",
+    "annealing, 60 s: at best 1 stop codons or missing amino acids left"
+   ],
+   [
+    "shortest found",
+    72,
+    "ours (tools/src/sixframe.c)"
+   ]
+  ],
+  "note": "A length with no sequence found is not proved impossible; only 62 is a proved lower bound."
+ },
+ "baseline": {
+  "date": "2026-11-09",
+  "holder": "Quantavane (Arhan Canli)",
+  "text": "72 bases, held by Quantavane (Arhan Canli), 9 November 2026: the sequence in `refs/six-frame.txt`. Lower bound 62."
+ },
+ "bound": {
+  "value": "62",
+  "kind": "lower bound",
+  "source": "each frame must contain 20 codons, so a frame starting at the third base needs 2 + 60 bases"
+ }
+}

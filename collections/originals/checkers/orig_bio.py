@@ -21,7 +21,13 @@ valid certificate and 1 otherwise. Problems:
   align-ambiguity N FILE       FILE: two lines, DNA sequences x and y of length N over A, C, G, T. Value: the number
                                of optimal global alignments of x and y with unit costs (mismatch 1, gap 1, match 0):
                                paths in the edit graph from (0, 0) to (N, N) with diagonal, horizontal and vertical
-                               steps and the least total cost, counted exactly by dynamic programming."""
+                               steps and the least total cost, counted exactly by dynamic programming.
+  six-frame FILE               FILE: a DNA sequence over A, C, G, T (line breaks and lines starting with # ignored).
+                               Its six reading frames: the forward frames starting at the first, second and third
+                               base, and the same three frames of the reverse complement, each read as consecutive
+                               codons (an incomplete codon at the end is ignored) with the standard genetic code.
+                               Valid when no frame contains a stop codon (TAA, TAG, TGA) and every frame contains all
+                               20 amino acids. Value: the length of the sequence."""
 import sys
 
 PAIRS = {("A", "U"), ("U", "A"), ("G", "C"), ("C", "G"), ("G", "U"), ("U", "G")}
@@ -137,7 +143,39 @@ def align_ambiguity(args, path):
     return 0
 
 
-PROBLEMS = {"align-ambiguity": (1, align_ambiguity), "nussinov-degeneracy": (1, nussinov_degeneracy), "hp-tri": (1, hp_tri)}
+STANDARD_CODE = {}
+for _aa, _codons in (("F", "TTT TTC"), ("L", "TTA TTG CTT CTC CTA CTG"), ("I", "ATT ATC ATA"), ("M", "ATG"),
+                     ("V", "GTT GTC GTA GTG"), ("S", "TCT TCC TCA TCG AGT AGC"), ("P", "CCT CCC CCA CCG"),
+                     ("T", "ACT ACC ACA ACG"), ("A", "GCT GCC GCA GCG"), ("Y", "TAT TAC"), ("*", "TAA TAG TGA"),
+                     ("H", "CAT CAC"), ("Q", "CAA CAG"), ("N", "AAT AAC"), ("K", "AAA AAG"), ("D", "GAT GAC"),
+                     ("E", "GAA GAG"), ("C", "TGT TGC"), ("W", "TGG"), ("R", "CGT CGC CGA CGG AGA AGG"),
+                     ("G", "GGT GGC GGA GGG")):
+    for _c in _codons.split():
+        STANDARD_CODE[_c] = _aa
+
+
+def six_frame(args, path):
+    seq = "".join("".join(l.split()) for l in open(path, encoding="ascii", errors="replace") if not l.startswith("#")).upper()
+    if not seq or set(seq) - set("ACGT"):
+        print("the sequence must consist of the letters A, C, G, T")
+        return 1
+    rc = seq[::-1].translate(str.maketrans("ACGT", "TGCA"))
+    for name, strand in (("forward", seq), ("reverse", rc)):
+        for f in range(3):
+            prot = "".join(STANDARD_CODE[strand[i:i + 3]] for i in range(f, len(strand) - 2, 3))
+            if "*" in prot:
+                print(f"{name} frame {f + 1} contains a stop codon")
+                return 1
+            missing = set("ACDEFGHIKLMNPQRSTVWY") - set(prot)
+            if missing:
+                print(f"{name} frame {f + 1} lacks {''.join(sorted(missing))}")
+                return 1
+    print(f"a sequence of {len(seq)} bases: all six frames are open and contain all 20 amino acids")
+    print(f"RESULT {len(seq)}")
+    return 0
+
+
+PROBLEMS = {"align-ambiguity": (1, align_ambiguity), "six-frame": (0, six_frame), "nussinov-degeneracy": (1, nussinov_degeneracy), "hp-tri": (1, hp_tri)}
 
 
 def main():
