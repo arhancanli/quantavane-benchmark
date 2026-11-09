@@ -9,7 +9,7 @@ valid certificate and 1 otherwise. Problems:
                           0, ..., P-1 (P prime), the letter a maps x to x + 1 and b maps x to x^2 (mod P); a word is
                           applied letter by letter from the left. Valid when the word sends every state to the same
                           state (a reset word). Value: its length.
-  tsp-sunflower INSTANCE FILE
+  tsp INSTANCE FILE (also tsp-sunflower)
                           INSTANCE: collections/originals/instances/sunflower-N.txt (N, then lines "k x y" with
                           integer coordinates). FILE: a tour, the point numbers 1..N in visiting order (one per line
                           or separated by spaces), each exactly once. Value: the tour length, the sum over consecutive
@@ -112,7 +112,8 @@ def qr_xor(args, path):
     return 0
 
 
-PROBLEMS = {"sync-quadratic": (1, sync_quadratic), "tsp-sunflower": (1, tsp_sunflower), "qr-xor": (1, qr_xor)}
+PROBLEMS = {"sync-quadratic": (1, sync_quadratic), "tsp": (1, tsp_sunflower), "tsp-sunflower": (1, tsp_sunflower),
+            "qr-xor": (1, qr_xor)}
 
 
 def main():

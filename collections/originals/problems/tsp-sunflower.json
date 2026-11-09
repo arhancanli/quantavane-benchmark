@@ -10,7 +10,7 @@
  "checker": {
   "program": "collections/originals/checkers/orig_comp.py",
   "args": [
-   "tsp-sunflower",
+   "tsp",
    "collections/originals/instances/sunflower-10000.txt"
   ],
   "value": "result"

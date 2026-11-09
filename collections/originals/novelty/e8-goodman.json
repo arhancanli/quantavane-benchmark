@@ -1,0 +1,29 @@
+{
+ "id": "e8-goodman",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"monochromatic triangles\" AND all:E8",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22monochromatic+triangles%22+AND+all%3AE8&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T14:40:20Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:Goodman AND all:\"monochromatic triangles\" AND all:\"strongly regular\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3AGoodman+AND+all%3A%22monochromatic+triangles%22+AND+all%3A%22strongly+regular%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T14:40:24Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"monochromatic triangles\" AND all:\"root system\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22monochromatic+triangles%22+AND+all%3A%22root+system%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T14:40:29Z"
+  }
+ ]
+}

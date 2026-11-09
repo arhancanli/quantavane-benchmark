@@ -1,0 +1,61 @@
+{
+ "id": "e8-goodman",
+ "collection": "originals",
+ "field": "Combinatorics and graph theory",
+ "title": "Fewest monochromatic triangles in the E8 root graph",
+ "status": "open",
+ "statement": "Let G be the graph on the 240 roots of E8, two roots adjacent when their inner product is 1 (6720 edges, 60480 triangles; every edge lies in 27 triangles and every vertex neighbourhood is the Gosset graph). Colour each edge red or blue. What is the least possible number of monochromatic triangles? Known: 10080 <= minimum <= 10385; find a colouring with fewer than 10385 monochromatic triangles, or improve the lower bound.",
+ "objective": "minimize",
+ "submission": "Text file: 6720 digits 0 or 1, the colours of the edges in the checker's order (roots doubled to integer vectors and sorted; edges (a, b), a < b, in lexicographic order; see e8_edges in checkers/orig_comb.py).",
+ "checker": {
+  "program": "collections/originals/checkers/orig_comb.py",
+  "args": [
+   "e8-goodman"
+  ],
+  "value": "result"
+ },
+ "score": "the number of monochromatic triangles (smaller is better)",
+ "best_known": {
+  "value": "10385",
+  "exact": "10385",
+  "source": "Quantavane (Arhan Canli), 9 November 2026: simulated annealing over edge colourings, each move scored by the 27 triangles through the edge (tools/mono_triangles.py, 1500 sweeps)",
+  "kind": "our construction (Quantavane Originals)",
+  "provenance": {
+   "keeper": "Quantavane Originals",
+   "url": "collections/originals/problems/e8-goodman.md",
+   "read": "2026-11-09",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true,
+   "certificate": "collections/originals/refs/e8-goodman.txt"
+  }
+ },
+ "verified_pending": [],
+ "added": "originals-1",
+ "quantavane_record": true,
+ "context": "Goodman's theorem (1959) gives the exact minimum number of monochromatic triangles in a 2-colouring of the complete graph, and Ramsey multiplicity problems ask the same for other graphs; on host graphs other than complete graphs the minimum is a property of the host. The E8 root graph is the most symmetric dense graph in eight dimensions (its automorphism group is the Weyl group W(E8), of order 696,729,600). A local version of Goodman's count gives a lower bound: a triangle that is not monochromatic has exactly two vertices where its two edges differ in colour, and at a vertex v those pairs are the cut edges of a 2-colouring of the Gosset graph on N(v), whose maximum cut is exactly 420 (an eigenvalue bound that a configuration attains); so at least 60480 - 240 * 420 / 2 = 10080 triangles are monochromatic. Equality would need every neighbourhood split by a maximum cut at once; our best colouring has 10385.",
+ "references": [
+  "A. W. Goodman, On sets of acquaintances and strangers at any party, Amer. Math. Monthly 66 (1959) 778-783",
+  "J. H. Conway, N. J. A. Sloane, Sphere Packings, Lattices and Groups (Springer, 1999), chapter 4 (the E8 root system)",
+  "B. Mohar, S. Poljak, Eigenvalues and the max-cut problem, Czechoslovak Math. J. 40 (1990) 343-352"
+ ],
+ "novelty": {
+  "checked": "2026-11-09",
+  "file": "novelty/e8-goodman.json",
+  "verdict": "new. No study of monochromatic triangles (or Ramsey multiplicity) in edge colourings of the E8 root graph was found on arXiv; Goodman-type problems are studied for complete graphs and random or pseudo-random hosts.",
+  "closest": [
+   "Goodman's theorem and Ramsey multiplicity on complete graphs; the host graph here is the E8 root graph, and the bound and the answer differ."
+  ],
+  "benchmark": "no Ramsey-multiplicity family"
+ },
+ "first_values": null,
+ "baseline": {
+  "date": "2026-11-09",
+  "holder": "Quantavane (Arhan Canli)",
+  "text": "10385, held by Quantavane (Arhan Canli), 9 November 2026: the colouring in `refs/e8-goodman.txt`. Lower bound 10080 from the local count above, using the exact maximum cut 420 of the Gosset graph (our configuration attains its eigenvalue bound 56 (27 + 3) / 4 = 420)."
+ },
+ "bound": {
+  "value": "10080",
+  "kind": "lower bound",
+  "source": "60480 - (1/2) * 240 * 420: each vertex sees at most 420 bichromatic pairs (the maximum cut of the Gosset graph)"
+ }
+}

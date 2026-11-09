@@ -46,7 +46,7 @@ Format: Text file: the point numbers 1..10000 in the order of the tour, each exa
 Score: the tour length in rounded Euclidean distances, an integer (smaller is better). A submission improves the problem when its exact value is smaller than the best known value.
 
     python3 -I obb.py check tsp-sunflower FILE               # from the benchmark's root
-    python3 -I collections/originals/checkers/orig_comp.py tsp-sunflower collections/originals/instances/sunflower-10000.txt FILE
+    python3 -I collections/originals/checkers/orig_comp.py tsp collections/originals/instances/sunflower-10000.txt FILE
 
 The checker is ours (standard library only); it prints the exact value as its last line `RESULT v` and exits 0 only for a valid certificate. Our certificate: `collections/originals/refs/tsp-sunflower.txt`.
 

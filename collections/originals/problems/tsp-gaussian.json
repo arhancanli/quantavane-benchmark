@@ -1,0 +1,57 @@
+{
+ "id": "tsp-gaussian",
+ "collection": "originals",
+ "field": "Computing and operations research",
+ "title": "The travelling salesman tour of the Gaussian primes",
+ "status": "open",
+ "statement": "Take the Gaussian primes a + bi with a > 0, b >= 0 (one associate of each prime element) and norm a^2 + b^2 <= 50,000: 5,125 points, placed at (1000a, 1000b) and listed in collections/originals/instances/gaussian-primes-50000.txt. With distances the Euclidean distances rounded to the nearest integer (TSPLIB EUC_2D), find the shortest closed tour through all of them. Best known: 11,298,548 (ours); no lower bound has been computed.",
+ "objective": "minimize",
+ "submission": "Text file: the point numbers 1..5125 in the order of the tour, each exactly once.",
+ "checker": {
+  "program": "collections/originals/checkers/orig_comp.py",
+  "args": [
+   "tsp",
+   "collections/originals/instances/gaussian-primes-50000.txt"
+  ],
+  "value": "result"
+ },
+ "score": "the tour length in rounded Euclidean distances, an integer (smaller is better)",
+ "best_known": {
+  "value": "11298548",
+  "exact": "11298548",
+  "source": "Quantavane (Arhan Canli), 9 November 2026: nearest-neighbour start, 2-opt and Or-opt with 10-nearest-neighbour lists, then segment perturbation for 240 seconds (tools/src/tsp2opt.c)",
+  "kind": "our construction (Quantavane Originals)",
+  "provenance": {
+   "keeper": "Quantavane Originals",
+   "url": "collections/originals/problems/tsp-gaussian.md",
+   "read": "2026-11-09",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true,
+   "certificate": "collections/originals/refs/tsp-gaussian.txt"
+  }
+ },
+ "verified_pending": [],
+ "added": "originals-1",
+ "quantavane_record": true,
+ "context": "The Gaussian primes are a classical picture of arithmetic randomness in the plane (the 'Gaussian moat' question asks whether one can walk to infinity on them with bounded steps), and the travelling salesman tour through them is an exactly defined instance whose local structure comes from the distribution of primes of the form a^2 + b^2: there are no points with a + b even except 1 + i, rows and columns thin out like the primes, and the density falls slowly with the norm. Standard benchmark sets for the travelling salesman problem are random, clustered or geographic; this one is arithmetic, and how its optimal tour length compares with the Beardwood-Halton-Hammersley asymptotics for random points of the same density is open. The sunflower problem (tsp-sunflower) is its quasi-uniform counterpart.",
+ "references": [
+  "E. Gethner, S. Wagon, B. Wick, A stroll through the Gaussian primes, Amer. Math. Monthly 105 (1998) 327-337",
+  "G. Reinelt, TSPLIB - a traveling salesman problem library, ORSA J. Computing 3 (1991) 376-384",
+  "J. Beardwood, J. H. Halton, J. M. Hammersley, The shortest path through many points, Proc. Cambridge Philos. Soc. 55 (1959) 299-327"
+ ],
+ "novelty": {
+  "checked": "2026-11-09",
+  "file": "novelty/tsp-gaussian.json",
+  "verdict": "new. No travelling salesman instance on the Gaussian primes was found on arXiv or among the standard benchmark sets; the instance is defined here.",
+  "closest": [
+   "TSPLIB and the DIMACS challenge instances (random, clustered and geographic point sets), and our sunflower instance; none is a set of primes."
+  ],
+  "benchmark": "the benchmark has vehicle routing instances and the Mona Lisa TSP (Prestige 100), not this point set"
+ },
+ "first_values": null,
+ "baseline": {
+  "date": "2026-11-09",
+  "holder": "Quantavane (Arhan Canli)",
+  "text": "11,298,548, held by Quantavane (Arhan Canli), 9 November 2026: the tour in `refs/tsp-gaussian.txt` (tools/src/tsp2opt.c, 240 s). A quick local-search tour; Lin-Kernighan-type heuristics should improve it, and an exact solver could settle the optimum."
+ }
+}

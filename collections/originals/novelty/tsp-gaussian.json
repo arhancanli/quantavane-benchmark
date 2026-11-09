@@ -1,0 +1,21 @@
+{
+ "id": "tsp-gaussian",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"traveling salesman\" AND all:\"Gaussian primes\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22traveling+salesman%22+AND+all%3A%22Gaussian+primes%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T14:42:43Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"travelling salesman\" AND all:primes AND all:points",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22travelling+salesman%22+AND+all%3Aprimes+AND+all%3Apoints&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T14:42:47Z"
+  }
+ ]
+}

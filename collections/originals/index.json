@@ -1,14 +1,14 @@
 {
  "collection": "Quantavane Originals",
- "problems": 23,
+ "problems": 26,
  "by_field": {
-  "Combinatorics and graph theory": 5,
+  "Combinatorics and graph theory": 6,
   "Number theory": 4,
   "Coding theory": 2,
   "Discrete geometry": 2,
-  "Physics": 4,
+  "Physics": 5,
   "Chemistry and materials": 1,
-  "Computing and operations research": 3,
+  "Computing and operations research": 4,
   "Biology": 2
  },
  "items": [
@@ -47,6 +47,18 @@
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_comb.py",
    "page": "problems/cell600-forest.md"
+  },
+  {
+   "id": "e8-goodman",
+   "field": "Combinatorics and graph theory",
+   "title": "Fewest monochromatic triangles in the E8 root graph",
+   "status": "open",
+   "objective": "minimize",
+   "best_known": "10385",
+   "holder": "Quantavane (Arhan Canli)",
+   "date": "2026-11-09",
+   "checker": "collections/originals/checkers/orig_comb.py",
+   "page": "problems/e8-goodman.md"
   },
   {
    "id": "overlap-square",
@@ -169,6 +181,18 @@
    "page": "problems/tri-distinct.md"
   },
   {
+   "id": "ga-ising",
+   "field": "Physics",
+   "title": "Ising antiferromagnet on the grand antiprism",
+   "status": "open",
+   "objective": "minimize",
+   "best_known": "-140",
+   "holder": "Quantavane (Arhan Canli)",
+   "date": "2026-11-09",
+   "checker": "collections/originals/checkers/orig_phys.py",
+   "page": "problems/ga-ising.md"
+  },
+  {
    "id": "paley-ising",
    "field": "Physics",
    "title": "Ground states of the Paley Ising model",
@@ -251,6 +275,18 @@
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_comp.py",
    "page": "problems/sync-quadratic.md"
+  },
+  {
+   "id": "tsp-gaussian",
+   "field": "Computing and operations research",
+   "title": "The travelling salesman tour of the Gaussian primes",
+   "status": "open",
+   "objective": "minimize",
+   "best_known": "11298548",
+   "holder": "Quantavane (Arhan Canli)",
+   "date": "2026-11-09",
+   "checker": "collections/originals/checkers/orig_comp.py",
+   "page": "problems/tsp-gaussian.md"
   },
   {
    "id": "tsp-sunflower",

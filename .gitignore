@@ -1,5 +1,6 @@
 certs/
 instances/
+!collections/originals/instances/
 __pycache__/
 ruvector.db
 .claude-flow/

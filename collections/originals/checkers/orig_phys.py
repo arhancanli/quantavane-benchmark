@@ -10,8 +10,8 @@ an integer or p/q); it exits 0 only for a well-formed configuration and 1 otherw
                          Legendre symbol modulo P (couplings +1 on the edges of the Paley graph, -1 elsewhere).
   polytope-ising KIND FILE
                          FILE: one spin per vertex of the graph of a 4-dimensional polytope or of the E8 root polytope
-                         (KIND 600: the 600-cell, 120 vertices; KIND snub: the snub 24-cell, 96 vertices; KIND 120: the
-                         120-cell, 600 vertices; KIND e8: the 4_21 polytope, 240 vertices), as + and - in the vertex order of this checker (see
+                         (KIND 600: the 600-cell, 120 vertices; KIND snub: the snub 24-cell, 96 vertices; KIND ga: the
+                         grand antiprism, 100 vertices; KIND 120: the 120-cell, 600 vertices; KIND e8: the 4_21 polytope, 240 vertices), as + and - in the vertex order of this checker (see
                          polytope_graph). Value: the antiferromagnetic Ising energy E(s) = sum over edges uv of s_u s_v
                          (each satisfied edge gives -1, each frustrated edge +1).
   polytope-potts KIND Q FILE
@@ -133,6 +133,44 @@ def polytope_graph(kind):
         edges = [(idx[a], idx[b]) for a, b in e6 if a in idx and b in idx]
         assert len(keep) == 96 and len(edges) == 432
         return 96, edges
+    if kind == "ga":
+        # the grand antiprism: the 600-cell without two great decagons in orthogonal planes. The first decagon starts
+        # at vertex 0 and its least-numbered neighbour and follows v_(k+1) = phi v_k - v_(k-1); the second is the first
+        # decagon (in vertex order) among the 10 vertices orthogonal to the first. 100 vertices, 500 edges remain.
+        pts = _cell600_points()
+        n6, e6 = _cell600()
+        idx = {q: i for i, q in enumerate(pts)}
+        adj6 = [set() for _ in range(120)]
+        for a, b in e6:
+            adj6[a].add(b)
+            adj6[b].add(a)
+        phi = (F(1, 2), F(1, 2))
+        zero = (F(0), F(0))
+
+        def ip(a, b):
+            t = zero
+            for k in range(4):
+                m = _q5mul(a[k], b[k])
+                t = (t[0] + m[0], t[1] + m[1])
+            return t
+
+        def ring(u, v):
+            r = [u, v]
+            for _ in range(8):
+                w = tuple((_q5mul(phi, pts[r[-1]][k])[0] - pts[r[-2]][k][0], _q5mul(phi, pts[r[-1]][k])[1] - pts[r[-2]][k][1]) for k in range(4))
+                if w not in idx:
+                    return None
+                r.append(idx[w])
+            return r
+        r1 = ring(0, min(adj6[0]))
+        orth = [w for w in range(120) if all(ip(pts[w], pts[x]) == zero for x in r1)]
+        r2 = next(r for w in orth for x in sorted(adj6[w]) if x in orth for r in [ring(w, x)] if r)
+        removed = set(r1) | set(r2)
+        keep = [i for i in range(120) if i not in removed]
+        k2 = {v: j for j, v in enumerate(keep)}
+        edges = [(k2[a], k2[b]) for a, b in e6 if a in k2 and b in k2]
+        assert len(keep) == 100 and len(edges) == 500
+        return 100, edges
     if kind == "120":
         n6, e6 = _cell600()
         adj = [set() for _ in range(n6)]
@@ -163,7 +201,7 @@ def polytope_graph(kind):
                  if sum(x * y for x, y in zip(roots[a], roots[b])) == 4]
         assert len(edges) == 6720
         return 240, edges
-    raise ValueError("KIND must be 600, snub, 120 or e8")
+    raise ValueError("KIND must be 600, snub, ga, 120 or e8")
 
 
 def polytope_ising(args, path):

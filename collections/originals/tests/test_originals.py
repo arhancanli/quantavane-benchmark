@@ -156,6 +156,12 @@ def controls():
     if "snub24-ising" in P:
         sp = "".join(lines_of(certificates(P["snub24-ising"])))
         refuse("snub24-ising", sp[:-2] + "\n", "94 spins")
+    if "ga-ising" in P:
+        sp = "".join(lines_of(certificates(P["ga-ising"])))
+        refuse("ga-ising", sp + "+\n", "101 spins")
+    if "e8-goodman" in P:
+        c = "".join(lines_of(certificates(P["e8-goodman"])))
+        refuse("e8-goodman", c[:-1] + "2\n", "a colour 2")
     if "ap-cover" in P:
         L = lines_of(certificates(P["ap-cover"]))
         refuse("ap-cover", "\n".join(L[1:]) + "\n", "the covering without one progression (a pair left uncovered)")

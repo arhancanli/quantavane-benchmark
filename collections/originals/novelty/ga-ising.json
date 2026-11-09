@@ -1,0 +1,40 @@
+{
+ "id": "ga-ising",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"grand antiprism\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22grand+antiprism%22&start=0&max_results=10&sortBy=relevance",
+   "results": 3,
+   "top": [
+    {
+     "arxiv": "0906.2117v2",
+     "year": "2009",
+     "first_author": "Mehmet Koca",
+     "title": "Grand Antiprism and Quaternions"
+    },
+    {
+     "arxiv": "2103.07817v2",
+     "year": "2021",
+     "first_author": "Pierre-Philippe Dechant",
+     "title": "Clifford spinors and root system induction: $H_4$ and the Grand Antiprism"
+    },
+    {
+     "arxiv": "1307.6768v1",
+     "year": "2013",
+     "first_author": "Pierre-Philippe Dechant",
+     "title": "Platonic solids generate their four-dimensional analogues"
+    }
+   ],
+   "run": "2026-11-09T14:37:37Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"grand antiprism\" AND all:Ising",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22grand+antiprism%22+AND+all%3AIsing&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T14:37:41Z"
+  }
+ ]
+}
