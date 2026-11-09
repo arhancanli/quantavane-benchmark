@@ -2,12 +2,20 @@
 """Open Problems Benchmark (version in VERSION): open problems with exact checkers (Quantavane).
 
   python3 -I obb.py list [FAMILY]               the problems, their objective, the best known value and its source
+                                                (without FAMILY: the single problems and a count of each family)
+  python3 -I obb.py families                    the families: keeper, date read, checker, number of cells
+  python3 -I obb.py show PROBLEM                one problem in full (a family cell is written out like a problem file)
+  python3 -I obb.py sample FAMILY [N] [SEED]    N problems of a family drawn at random (default 10, seed 0)
   python3 -I obb.py check PROBLEM SUBMISSION    check a submission exactly and compare it with the best known values
   python3 -I obb.py verify RECORD.json          check a submission record (SUBMITTING.md) and print its leaderboard row
   python3 -I obb.py leaderboard [PROBLEM]       the verified results in leaderboard.json, best first
+  python3 -I obb.py index                       check index.json against the files it lists (counts and SHA-256)
 
-Every problem has a file in problems/ and an exact checker in checkers/ (our own code, from the definitions on the
-source pages; standard library only). A submission scores the exact value its checker proves; it "improves" a
+A problem is either a single problem, with its own file in problems/, or a cell of a family: one statement and one
+checker in families/NAME/family.json, and one line per cell in families/NAME/cells.jsonl (its parameters, the best
+known value read from the keeper's table and who holds it). index.json lists both, with counts and SHA-256. Every
+problem has an exact checker in checkers/ (our own code, from the definitions on the source pages; standard library
+only). A submission scores the exact value its checker proves; it "improves" a
 problem when that value beats the best known one. Two reference values are kept apart: the best value on the
 source page (with its source) and the best verified value still in review (for instance an open pull request whose
 certificate has been replayed independently), so a result is never compared with a claim that nobody has checked."""
@@ -31,6 +39,87 @@ def problems():
             p = json.load(open(os.path.join(HERE, "problems", f)))
             out[p["id"]] = p
     return out
+
+
+FAMILIES = os.path.join(HERE, "families")
+
+
+def families():
+    """Family definitions (families/NAME/family.json), by name."""
+    out = {}
+    if os.path.isdir(FAMILIES):
+        for name in sorted(os.listdir(FAMILIES)):
+            path = os.path.join(FAMILIES, name, "family.json")
+            if os.path.exists(path):
+                out[name] = json.load(open(path))
+    return out
+
+
+def cells(fam):
+    """The cells of a family, one dict per line of families/NAME/cells.jsonl."""
+    with open(os.path.join(FAMILIES, fam["family"], fam["cells"])) as f:
+        for line in f:
+            if line.strip():
+                yield json.loads(line)
+
+
+def fill(template, values):
+    if isinstance(template, list):
+        return [fill(t, values) for t in template]
+    return template.format(**values)
+
+
+def materialize(fam, cell):
+    """The problem a family cell stands for, written out like a problem file."""
+    values = dict(cell["params"])
+    tpl = dict(fam["template"])
+    tpl.update(fam.get("variants", {}).get(cell.get("variant", ""), {}))
+    holder = cell.get("holder") or fam["holder_unknown"]
+    ours = bool(cell.get("quantavane_record"))
+    read = cell.get("read", fam["read"])
+    title = fill(tpl["title"], values)
+    values.update(best=cell["best"], holder=holder, title=title)
+    best_known = {
+        "value": cell["best"],
+        "source": f"{fam['keeper']}, {title}: {cell['best']} ({holder}); read {read}",
+        "kind": "table entry",
+        "provenance": {"keeper": fam["keeper"], "url": fill(fam.get("cell_url") or fam["page"], values), "read": read,
+                       "revision": fam["revision"], "holder": holder, "quantavane": ours},
+    }
+    if fam.get("exact_values", True):
+        best_known["exact"] = cell["best"]
+    p = {
+        "id": cell["id"], "family": fam["family"], "title": title, "page": fam["page"],
+        "statement": fill(tpl["statement"], values) + " " + fill(fam["best_text"], values),
+        "objective": fam["objective"], "submission": fill(tpl["submission"], values),
+        "checker": {"program": fam["checker"]["program"], "args": fill(tpl.get("args", fam["checker"].get("args", [])),
+                                                                       values), "value": fam["checker"]["value"]},
+        "best_known": best_known, "verified_pending": [], "score": fam["score"], "added": fam["added"],
+    }
+    if "bound" in cell:
+        p["bound"] = {"value": cell["bound"], "kind": fam["bound_kind"], "source": fam["bound_source"]}
+    if ours:
+        p["quantavane_record"] = True
+        p["quantavane_note"] = "our object is the best known entry of the source table"
+    return p
+
+
+def find_problem(pid):
+    """A single problem (problems/PID.json) or a family cell, or None."""
+    path = os.path.join(HERE, "problems", pid + ".json")
+    if re.fullmatch(r"[A-Za-z0-9_.+-]+", pid) and os.path.exists(path):
+        p = json.load(open(path))
+        if p["id"] == pid:
+            return p
+    key = '{"id": "' + pid + '"'
+    for fam in families().values():
+        if not any(pid.startswith(x) for x in fam["id_prefixes"]):
+            continue
+        with open(os.path.join(FAMILIES, fam["family"], fam["cells"])) as f:
+            for line in f:
+                if line.startswith(key + ",") or line.startswith(key + "}"):
+                    return materialize(fam, json.loads(line))
+    return None
 
 
 def exact(text):
@@ -113,6 +202,7 @@ def better(p, a, b):
 
 def cmd_list(family=None):
     probs = problems()
+    fams = families()
     shown = 0
     for pid, p in probs.items():
         if family and p.get("family") != family:
@@ -123,15 +213,80 @@ def cmd_list(family=None):
         mark = "  [Quantavane record]" if p.get("quantavane_record") else ""
         print(f"{pid:22s} {p['objective']:8s} page {p['best_known']['value']:>22s}   verified in review {best_v}{mark}")
         print(f"{'':22s} {p['title']}")
-    fams = {}
+    n_cells = 0
+    if family in fams:
+        fam = fams[family]
+        for c in cells(fam):
+            shown += 1
+            mark = "  [Quantavane record]" if c.get("quantavane_record") else ""
+            print(f"{c['id']:22s} {fam['objective']:8s} best {c['best']:>22s}   {(c.get('holder') or '')[:60]}{mark}")
+    counts = {}
     for p in probs.values():
-        fams[p.get("family", "?")] = fams.get(p.get("family", "?"), 0) + 1
-    print(f"\nOpen Problems Benchmark v{VERSION}: {shown} of {len(probs)} problems shown; families: "
-          + ", ".join(f"{k} {v}" for k, v in sorted(fams.items())))
+        counts[p.get("family", "?")] = counts.get(p.get("family", "?"), 0) + 1
+    for name, fam in fams.items():
+        counts[name] = counts.get(name, 0) + fam["count"]
+        n_cells += fam["count"]
+    total = len(probs) + n_cells
+    print(f"\nOpen Problems Benchmark v{VERSION}: {shown} of {total} problems shown ({len(probs)} single problems, "
+          f"{n_cells} family cells); by family: " + ", ".join(f"{k} {v}" for k, v in sorted(counts.items())))
+    if not family and fams:
+        print("A family's cells: python3 -I obb.py list FAMILY (families: " + ", ".join(fams) + ")")
+
+
+def cmd_families():
+    fams = families()
+    for name, fam in fams.items():
+        print(f"{name:22s} {fam['count']:>7d} cells  {fam['objective']:8s} checker {fam['checker']['program']}")
+        print(f"{'':22s} {fam['keeper']}; read {fam['read']}; {fam.get('quantavane_records', 0)} held by Quantavane")
+    print(f"{len(fams)} families, {sum(f['count'] for f in fams.values())} cells")
+    return 0
+
+
+def cmd_show(pid):
+    p = find_problem(pid)
+    if p is None:
+        print(f"unknown problem {pid}")
+        return 1
+    print(json.dumps(p, indent=1, ensure_ascii=False))
+    return 0
+
+
+def cmd_sample(name, n=10, seed=0):
+    import random
+    fam = families().get(name)
+    if fam is None:
+        print(f"unknown family {name}")
+        return 1
+    ids = [c["id"] for c in cells(fam)]
+    for pid in random.Random(seed).sample(ids, min(n, len(ids))):
+        print(pid)
+    return 0
+
+
+def cmd_index():
+    """Check index.json against the files: every listed file exists with the stated SHA-256 and count."""
+    idx = json.load(open(os.path.join(HERE, "index.json")))
+    bad = 0
+    for shard in idx["shards"]:
+        path = os.path.join(HERE, shard["path"])
+        if shard["kind"] == "problems":
+            n = len([f for f in os.listdir(path) if f.endswith(".json")])
+            digest = None
+        else:
+            n = sum(1 for line in open(path) if line.strip())
+            digest = sha256(path)
+        ok = n == shard["count"] and (digest is None or digest == shard["sha256"])
+        bad += not ok
+        print(f"{'ok  ' if ok else 'BAD '} {shard['path']:45s} {n:>7d} {'(' + shard['family'] + ')' if 'family' in shard else ''}")
+    print(f"{idx['problems']} problems in index.json (benchmark v{idx['benchmark_version']})")
+    return 1 if bad else 0
 
 
 def cmd_check(pid, path):
-    p = problems()[pid]
+    p = find_problem(pid)
+    if p is None:
+        print(f"unknown problem {pid}")
+        return 1
     value, text = run_checker(p, path)
     if value is None:
         print(f"{pid}: NOT CERTIFIED (the checker did not prove a value)")
@@ -166,7 +321,7 @@ def cmd_verify(record_path):
     if missing:
         print("the record lacks: " + ", ".join(missing))
         return 1
-    p = problems().get(rec["problem"])
+    p = find_problem(rec["problem"])
     if p is None:
         print(f"unknown problem {rec['problem']}")
         return 1
@@ -200,7 +355,7 @@ def cmd_leaderboard(pid=None):
     rows = [r for r in board["entries"] if pid is None or r["problem"] == pid]
 
     def key(r):
-        p = probs.get(r["problem"])
+        p = probs.get(r["problem"]) or find_problem(r["problem"])
         v = Fraction(r["value"])
         return (r["problem"], -v if p and p["objective"] == "maximize" else v)
     for r in sorted(rows, key=key):
@@ -220,6 +375,14 @@ def main():
         return cmd_verify(sys.argv[2])
     if len(sys.argv) in (2, 3) and sys.argv[1] == "leaderboard":
         return cmd_leaderboard(sys.argv[2] if len(sys.argv) == 3 else None)
+    if len(sys.argv) == 2 and sys.argv[1] == "families":
+        return cmd_families()
+    if len(sys.argv) == 3 and sys.argv[1] == "show":
+        return cmd_show(sys.argv[2])
+    if 3 <= len(sys.argv) <= 5 and sys.argv[1] == "sample":
+        return cmd_sample(sys.argv[2], *(int(x) for x in sys.argv[3:]))
+    if len(sys.argv) == 2 and sys.argv[1] == "index":
+        return cmd_index()
     print(__doc__)
     return 2
 
