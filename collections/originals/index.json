@@ -1,6 +1,6 @@
 {
  "collection": "Quantavane Originals",
- "problems": 39,
+ "problems": 36,
  "by_field": {
   "Combinatorics and graph theory": 7,
   "Number theory": 6,
@@ -8,7 +8,7 @@
   "Discrete geometry": 3,
   "Physics": 5,
   "Chemistry and materials": 3,
-  "Astronomy": 4,
+  "Astronomy": 1,
   "Computing and operations research": 5,
   "Biology": 3
  },
@@ -348,42 +348,6 @@
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_astro.py",
    "page": "problems/nrm-segments.md"
-  },
-  {
-   "id": "nrm-tilting",
-   "field": "Astronomy",
-   "title": "Splitting a segmented mirror into non-redundant groups",
-   "status": "open",
-   "objective": "minimize",
-   "best_known": "11",
-   "holder": "Quantavane (Arhan Canli)",
-   "date": "2026-11-09",
-   "checker": "collections/originals/checkers/orig_astro.py",
-   "page": "problems/nrm-tilting.md"
-  },
-  {
-   "id": "slew-tour",
-   "field": "Astronomy",
-   "title": "The slewing tour of the Bright Star Catalogue",
-   "status": "open",
-   "objective": "minimize",
-   "best_known": "103836804",
-   "holder": "Quantavane (Arhan Canli)",
-   "date": "2026-11-09",
-   "checker": "collections/originals/checkers/orig_astro.py",
-   "page": "problems/slew-tour.md"
-  },
-  {
-   "id": "star-tracker",
-   "field": "Astronomy",
-   "title": "The smallest star-tracker catalogue of the bright sky",
-   "status": "open",
-   "objective": "minimize",
-   "best_known": "456",
-   "holder": "Quantavane (Arhan Canli)",
-   "date": "2026-11-09",
-   "checker": "collections/originals/checkers/orig_astro.py",
-   "page": "problems/star-tracker.md"
   },
   {
    "id": "primel",

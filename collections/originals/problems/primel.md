@@ -26,7 +26,7 @@ Closest work found, and how this problem differs:
 - Wordle: the optimal strategy (average 3.421 over 2,315 answers) found by exhaustive search (Selby; Bertsimas and Paskov). Same feedback rules, different answer set (words), and the dictionary of allowed guesses differs.
 - An entropy-based Primel solver (a student project found by our web search) and a filtering script: no strategy value published.
 
-Verdict: new. Exact strategies are known for Wordle and Mastermind; for Primel only heuristic solvers without published values were found.
+Verdict: new question for this game: exact strategies are known for Wordle and Mastermind, games with other answer sets; for Primel only heuristic solvers without published values were found.
 
 ## Best known value
 

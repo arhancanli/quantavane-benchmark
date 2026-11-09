@@ -34,7 +34,7 @@ Closest work found, and how this problem differs:
 - Our problem tri-distinct: the same question in the triangular grid (two dimensions), where the answers stay below n.
 - P. Erdos and R. K. Guy (1970): the n x n square grid, largest sets of order n^(2/3) up to logarithmic factors; a different lattice and dimension.
 
-Verdict: new. Distinct-distance subsets of the square grid were studied by Erdos and Guy, and of the triangular grid in our problem tri-distinct; no result was found for the face-centred cubic lattice or its tetrahedral pieces.
+Verdict: new question for this lattice: Erdos and Guy asked it for the square grid and we for the triangular grid (tri-distinct); no result was found for the face-centred cubic lattice or its tetrahedral pieces.
 
 ## First values
 

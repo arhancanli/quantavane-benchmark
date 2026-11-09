@@ -7,7 +7,8 @@ value can change within a version when its source table changes; the file then s
 
 - `collections/originals/`: new open problems of ours, each with a novelty check written down before it was added, an
   exact checker of ours and a first value of ours (best known value, certificate, holder and date), in nine fields
-  (astronomy added: `checkers/orig_astro.py`, star-catalogue instances in `instances/`).
+  (astronomy added: `checkers/orig_astro.py`). A problem qualifies only when its question is new, not only its
+  instance; candidates whose question had been studied are in `dropped.json` with the evidence.
   `dropped.json` lists the candidates dropped because they were already studied or settled. Not counted in the
   totals; `index.json` lists the folder as its own shard.
 - `obb.py`: problems of a collection (`collections/NAME/problems/ID.json`) are found by `show`, `check` and `verify`

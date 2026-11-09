@@ -1,15 +1,11 @@
 /* Non-redundant aperture masks on the hexagonal segment array of s rings with the centre segment removed (our own
-   code, Quantavane Originals; problems nrm-segments and nrm-tilting).
+   code, Quantavane Originals; problem nrm-segments).
    Segments: points (a, b) of the triangular lattice with hexagonal norm max(|a|, |b|, |a + b|) from 1 to s. A set is
    non-redundant when the difference vectors of its pairs are all different up to sign.
    cc -O2 -o nrm nrm.c
    ./nrm max S            exhaustive search: the largest non-redundant set (prints one)
-   ./nrm all S K          every non-redundant set of exactly K segments, as 64-bit masks of segment indices (S <= 4)
    ./nrm ls S K0 SECS SEED   local search for k = K0, K0+1, ...: move one hole at a time to the position creating the
-                          fewest repeated baselines (tabu list); prints every k reached
-   ./nrm part S G SECS SEED  local search for a partition of all segments into G non-redundant groups (min-conflicts
-                          moves of one segment between groups, tabu list); prints the groups when it succeeds
-   Exact covers of the segments by maximum sets (the lower bounds of nrm-tilting) are checked with tools/nrm_cover.py. */
+                          fewest repeated baselines (tabu list); prints every k reached */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -22,14 +18,13 @@ static int key(int i, int j) { int da = pa[i] - pa[j], db = pb[i] - pb[j]; if (d
 static void setup(int S) { s = S; R = 2 * s; W = 4 * s + 1; n = 0;
   for (int a = -s; a <= s; a++) for (int b = -s; b <= s; b++) { int h = hn(a, b); if (h >= 1 && h <= s) { pa[n] = a; pb[n] = b; n++; } } }
 
-/* exhaustive search (max) and enumeration (all) */
-static unsigned char *used; static int chosen[64], bestset[64], best, K, mode_all; static long long nodes, found;
+/* exhaustive search (max) */
+static unsigned char *used; static int chosen[64], bestset[64], best; static long long nodes;
 static void dfs(int k, int *cand, int nc) {
   nodes++;
-  if (mode_all && k == K) { unsigned long long m = 0; for (int i = 0; i < k; i++) m |= 1ULL << chosen[i]; printf("%llu\n", m); found++; return; }
-  if (!mode_all && k > best) { best = k; memcpy(bestset, chosen, sizeof(int) * k); }
+  if (k > best) { best = k; memcpy(bestset, chosen, sizeof(int) * k); }
   for (int i = 0; i < nc; i++) {
-    if (mode_all ? k + (nc - i) < K : k + (nc - i) <= best) return;
+    if (k + (nc - i) <= best) return;
     int p = cand[i], keys[64], ok = 1;
     for (int j = 0; j < k; j++) { int kk = key(p, chosen[j]); if (used[kk]) { ok = 0; break; } for (int t = 0; t < j; t++) if (keys[t] == kk) { ok = 0; break; } if (!ok) break; keys[j] = kk; }
     if (!ok) continue;
@@ -68,40 +63,13 @@ static int ls(int K0, double secs) {
   return bestk;
 }
 
-/* local search for a partition into G groups */
-static int part(int G, double secs) {
-  int g[2000], *cnt = calloc((size_t)G * W * W, sizeof(int)), *tabu = calloc((size_t)n * G, sizeof(int)); long it = 0; clock_t st = clock();
-  for (int i = 0; i < n; i++) g[i] = rnd() % G;
-  for (int i = 0; i < n; i++) for (int j = i + 1; j < n; j++) if (g[i] == g[j]) cnt[g[i] * W * W + key(i, j)]++;
-  int conf = 0; for (int i = 0; i < G * W * W; i++) if (cnt[i] > 1) conf += cnt[i] - 1;
-  while (conf > 0 && (double)(clock() - st) / CLOCKS_PER_SEC < secs) { it++;
-    int p, tries = 0;
-    do { p = rnd() % n; int bad = 0; for (int j = 0; j < n && !bad; j++) if (j != p && g[j] == g[p] && cnt[g[p] * W * W + key(p, j)] > 1) bad = 1; if (bad) break; } while (++tries < 1000);
-    int old = g[p], cur = 0, bg = old, bd = 1 << 30, ties = 0;
-    for (int j = 0; j < n; j++) if (j != p && g[j] == old && cnt[old * W * W + key(p, j)] > 1) cur++;
-    for (int c = 0; c < G; c++) { if (c == old || tabu[p * G + c] > it) continue; int d = 0;
-      for (int j = 0; j < n; j++) if (j != p && g[j] == c && cnt[c * W * W + key(p, j)] >= 1) d++;
-      if (d - cur < bd) { bd = d - cur; bg = c; ties = 1; } else if (d - cur == bd) { ties++; if (rnd() % ties == 0) bg = c; } }
-    if (bg == old) continue;
-    for (int j = 0; j < n; j++) if (j != p && g[j] == old) { int k = old * W * W + key(p, j); if (cnt[k] > 1) conf--; cnt[k]--; }
-    g[p] = bg;
-    for (int j = 0; j < n; j++) if (j != p && g[j] == bg) { int k = bg * W * W + key(p, j); if (cnt[k] >= 1) conf++; cnt[k]++; }
-    tabu[p * G + old] = it + 3 + rnd() % 7; }
-  if (conf) { printf("no partition into %d groups found (%d repeated baselines left)\n", G, conf); return 0; }
-  for (int c = 0; c < G; c++) { for (int i = 0, first = 1; i < n; i++) if (g[i] == c) { printf(first ? "%d,%d" : " %d,%d", pa[i], pb[i]); first = 0; } printf("\n"); }
-  return 1;
-}
-
 int main(int argc, char **argv) {
-  if (argc < 3) { fprintf(stderr, "usage: nrm max|all|ls|part S ...\n"); return 2; }
+  if (argc < 3) { fprintf(stderr, "usage: nrm max|ls S ...\n"); return 2; }
   setup(atoi(argv[2])); used = calloc(W * W, 1);
-  if (!strcmp(argv[1], "max") || !strcmp(argv[1], "all")) {
-    mode_all = !strcmp(argv[1], "all"); if (mode_all) K = atoi(argv[3]);
+  if (!strcmp(argv[1], "max")) {
     int *cand = malloc(sizeof(int) * n); for (int i = 0; i < n; i++) cand[i] = i;
     dfs(0, cand, n);
-    if (mode_all) fprintf(stderr, "s=%d: %lld non-redundant sets of %d segments\n", s, found, K);
-    else { printf("s=%d: maximum %d (%lld nodes):", s, best, nodes); for (int i = 0; i < best; i++) printf(" %d %d", pa[bestset[i]], pb[bestset[i]]); printf("\n"); }
+    printf("s=%d: maximum %d (%lld nodes):", s, best, nodes); for (int i = 0; i < best; i++) printf(" %d %d", pa[bestset[i]], pb[bestset[i]]); printf("\n");
   } else if (!strcmp(argv[1], "ls")) { rs ^= (unsigned long long)atoi(argv[5]) * 2654435761ULL; ls(atoi(argv[3]), atof(argv[4])); }
-  else if (!strcmp(argv[1], "part")) { rs ^= (unsigned long long)atoi(argv[5]) * 2654435761ULL; part(atoi(argv[3]), atof(argv[4])); }
   return 0;
 }

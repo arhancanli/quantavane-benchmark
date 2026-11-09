@@ -33,7 +33,7 @@ Closest work found, and how this problem differs:
 - Records for rational primes (minimal and longest progressions, PrimeGrid and others): the same questions in Z.
 - Our problem gauss-admissible: admissible constellations (no primality) of smallest diameter in Z[i].
 
-Verdict: new. Long progressions in the Gaussian primes are known to exist (Tao 2006); no computation of explicit progressions, least norms or longest progressions in a disc was found.
+Verdict: new question: long progressions in the Gaussian primes are known to exist (Tao 2006); no computation of explicit progressions, of least norms or of the longest progression in a disc was found.
 
 ## First values
 

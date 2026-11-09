@@ -39,7 +39,7 @@ Closest work found, and how this problem differs:
 - Parametric alignment (Gusfield et al.; Vinzant): the number of distinct optimal alignment summaries as the scores vary, not the number of optimal paths for one scoring.
 - OEIS A026786 and A027246 (Kimberling's triangle A026780): agree with our values 1, 3, 5, 12, 24, 53 and then give 117, where A(7) = 114.
 
-Verdict: new. Counting the optimal alignments of given sequences is standard; no result was found on the pair of sequences of a given length with the most optimal alignments under unit costs. Our first values match an unrelated OEIS sequence for six terms and differ at the seventh.
+Verdict: new question: counting the optimal alignments of given sequences is standard, but no result was found on the pair of sequences of a given length with the most optimal alignments under unit costs. Our first values match an unrelated OEIS sequence for six terms and differ at the seventh.
 
 ## First values
 

@@ -31,7 +31,7 @@ Closest work found, and how this problem differs:
 - The Cambridge Cluster Database and basin-hopping minima (Wales and Doye 1997): relaxed clusters in continuous space; here the atoms stay on lattice sites and energies are exact.
 - Lattice searching methods (Northby 1987: icosahedral lattice; Shao, Cheng and Cai 2004 and later: fcc and decahedral lattices): use lattice clusters as starting points and relax them; the unrelaxed fcc minima are not reported as a problem of their own.
 
-Verdict: new as stated. Lennard-Jones minima are tabulated for relaxed clusters, and lattices are used to generate candidates; no table of minima restricted to fcc sites (with the 2.5 sigma cutoff and exact energies) was found.
+Verdict: new question: Lennard-Jones minima are tabulated for relaxed clusters, and lattices serve only to generate candidates; no one posed the minima restricted to fcc sites (2.5 sigma cutoff, exact energies) as a question of their own.
 
 ## First values
 

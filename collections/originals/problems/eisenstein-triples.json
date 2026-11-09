@@ -43,7 +43,7 @@
  "novelty": {
   "checked": "2026-11-09",
   "file": "novelty/eisenstein-triples.json",
-  "verdict": "new. The Pythagorean version is solved (7824); no result was found on two-colourings avoiding monochromatic triples x^2 + xy + y^2 = z^2, finite or infinite.",
+  "verdict": "new question: the Pythagorean version is solved (7824); no result was found on two-colourings avoiding monochromatic triples x^2 + xy + y^2 = z^2, finite or infinite.",
   "closest": [
    "M. J. H. Heule, O. Kullmann and V. W. Marek (2016): the same question for x^2 + y^2 = z^2 (answer 7824); J. Leng (2026): a new proof that the Pythagorean version is finite, with no bound and no other equation.",
    "Partition-regularity results for homogeneous quadratic equations (Frantzikinakis and Host, as cited by Leng) concern other equations and infinite colourings; no explicit thresholds.",

@@ -191,17 +191,10 @@ def controls():
         extra = next(r for r in seg if r not in pts and any(cls(r, q) in used for q in pts))
         refuse("nrm-segments", "\n".join(L + [f"{extra[0]} {extra[1]}"]) + "\n", "a mask with one more hole repeating a baseline")
         refuse("nrm-segments", "\n".join(L + ["0 0"]) + "\n", "a hole on the missing centre segment")
-    if "nrm-tilting" in P:
-        L = lines_of(certificates(P["nrm-tilting"]))
-        refuse("nrm-tilting", "\n".join([L[0] + " " + L[1]] + L[2:]) + "\n", "two groups merged (a repeated baseline)")
-        refuse("nrm-tilting", "\n".join(L[:-1]) + "\n", "a partition missing a group of segments")
     if "eisenstein-triples" in P:
         c = list("".join(lines_of(certificates(P["eisenstein-triples"]))))
         c[2] = c[4] = c[6] = "0"
         refuse("eisenstein-triples", "".join(c) + "\n", "a colouring with 3, 5 and 7 the same colour (9 + 15 + 25 = 49)")
-    if "star-tracker" in P:
-        t = " ".join(lines_of(certificates(P["star-tracker"]))).split()
-        refuse("star-tracker", " ".join(t[1:]) + "\n", "the catalogue without its first star (every star of it is needed)")
     if "primel" in P:
         L = lines_of(certificates(P["primel"]))
         refuse("primel", "\n".join(L[1:]) + "\n", "a strategy with one answer missing")
@@ -238,9 +231,6 @@ def controls():
         t = " ".join(lines_of(certificates(P["prime-cover"]))).split()
         refuse("prime-cover", " ".join(t[1:]) + "\n", "the code without its first prime (every prime of it is needed)")
         refuse("prime-cover", " ".join(t + ["10001"]) + "\n", "a code containing 10001 = 73 x 137")
-    if "slew-tour" in P:
-        t = " ".join(lines_of(certificates(P["slew-tour"]))).split()
-        refuse("slew-tour", " ".join(t[:-1] + [t[0]]) + "\n", "a tour visiting one star twice")
 
 
 def cross_checks():
@@ -376,16 +366,6 @@ def cross_checks():
     sys.path.insert(0, os.path.join(HERE, "checkers"))
     import orig_numth
     expect(f"cross eisenstein-triples {direct} triples with z <= 1500 by direct search", len(orig_numth.eisenstein_triples_upto(1500)) == direct, direct)
-    # slew tour: an independent length of the tour in HR order
-    if os.path.exists(os.path.join(HERE, "instances", "bsc-sky.txt")):
-        sky = [tuple(map(int, l.split())) for l in open(os.path.join(HERE, "instances", "bsc-sky.txt")) if not l.startswith("#")]
-        tot = 0
-        for i in range(len(sky)):
-            a, b = sky[i], sky[(i + 1) % len(sky)]
-            dra = abs(3 * a[1] - 3 * b[1])
-            tot += max(min(dra, 2592000 - dra), abs(2 * a[2] - 2 * b[2]))
-        code, res, _ = run("collections/originals/checkers/orig_astro.py", ["slew-tour", "collections/originals/instances/bsc-sky.txt", write("hrorder.txt", "\n".join(str(r[0]) for r in sky) + "\n")])
-        expect(f"cross slew-tour the tour in HR order has length {tot}", res == str(tot), res)
     # Primel marks against an independent count-based implementation, on random pairs of five-digit primes
     sys.path.insert(0, os.path.join(HERE, "checkers"))
     import orig_comp

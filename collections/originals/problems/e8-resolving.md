@@ -32,7 +32,7 @@ Closest work found, and how this problem differs:
 - R. F. Bailey (2013): metric dimension of small distance-regular and strongly regular graphs; the E8 root graph is neither.
 - Our problem e8-idcode: identifying codes of the same graph (vertices told apart by their closed neighbourhoods inside the code, not by distances).
 
-Verdict: new. The metric dimension is known for many graph families and for small distance-regular graphs; no result was found for the E8 root graph, which is not distance-regular.
+Verdict: new question: the metric dimension is known for many graph families and for small distance-regular graphs; no result was found for the E8 root graph, which is not distance-regular.
 
 ## Best known value
 

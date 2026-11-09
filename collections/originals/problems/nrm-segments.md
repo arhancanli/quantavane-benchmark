@@ -40,7 +40,7 @@ Closest work found, and how this problem differs:
 - The JWST NIRISS mask (7 holes on 18 segments) and other masks designed instrument by instrument; none asks for the maximum on a given layout.
 - Golay arrays (1971) and honeycomb arrays (Blackburn, Panoui, Paterson, Stinson 2010): non-redundant arrays with other constraints (compactness; one dot in every row in three directions).
 
-Verdict: new as stated. Non-redundant masks are designed for each instrument, and distinct-difference configurations in the hexagonal grid were studied with a bound on their diameter; no result was found on the largest non-redundant set of segments of a hexagonal segmented mirror with its centre removed.
+Verdict: new question: nobody asked for the largest non-redundant set of segments of a hexagonal segmented mirror with its centre removed. Masks are designed instrument by instrument, and distinct-difference configurations in the hexagonal grid were studied with a bound on their diameter, which is a different question.
 
 ## First values
 

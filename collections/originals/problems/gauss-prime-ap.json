@@ -43,7 +43,7 @@
  "novelty": {
   "checked": "2026-11-09",
   "file": "novelty/gauss-prime-ap.json",
-  "verdict": "new. Long progressions in the Gaussian primes are known to exist (Tao 2006); no computation of explicit progressions, least norms or longest progressions in a disc was found.",
+  "verdict": "new question: long progressions in the Gaussian primes are known to exist (Tao 2006); no computation of explicit progressions, of least norms or of the longest progression in a disc was found.",
   "closest": [
    "T. Tao (2006): existence of every constellation in the Gaussian primes, with no explicit examples or bounds usable for computation.",
    "Records for rational primes (minimal and longest progressions, PrimeGrid and others): the same questions in Z.",

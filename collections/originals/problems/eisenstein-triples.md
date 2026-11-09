@@ -40,7 +40,7 @@ Closest work found, and how this problem differs:
 - Partition-regularity results for homogeneous quadratic equations (Frantzikinakis and Host, as cited by Leng) concern other equations and infinite colourings; no explicit thresholds.
 - OEIS A121992, A264826: lists of Eisenstein triples, without any colouring question.
 
-Verdict: new. The Pythagorean version is solved (7824); no result was found on two-colourings avoiding monochromatic triples x^2 + xy + y^2 = z^2, finite or infinite.
+Verdict: new question: the Pythagorean version is solved (7824); no result was found on two-colourings avoiding monochromatic triples x^2 + xy + y^2 = z^2, finite or infinite.
 
 ## First values
 

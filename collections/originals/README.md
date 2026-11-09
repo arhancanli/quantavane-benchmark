@@ -1,6 +1,6 @@
 # Quantavane Originals
 
-New open problems, written by Quantavane: <!--count-->39<!--/count--> problems across mathematics, physics,
+New open problems, written by Quantavane: <!--count-->36<!--/count--> problems across mathematics, physics,
 chemistry, astronomy, computing and biology. Each one is a question that, as far as our searches show, nobody had
 asked before, stated precisely, with an exact checker of ours and a first value of ours, so that it starts with a best
 known value, a holder and a date. All of them are open.
@@ -11,8 +11,8 @@ For every problem the file in `problems/` (and its page `problems/ID.md`) gives:
 - why it is interesting: what it is connected to, with references;
 - the novelty check, run before the problem was added: arXiv API searches, OEIS searches of its first values and of
   its words, web searches where useful, and the keeper tables of the Open Problems Benchmark. Every search is kept
-  in `novelty/ID.json` with its address, time and first results. A problem whose quantity had been studied before
-  was dropped, not added;
+  in `novelty/ID.json` with its address, time and first results. A problem whose question had been studied
+  before, even if only on other instances, was dropped, not added; each verdict says whether the question is new;
 - the first values (exact where an exhaustive search finished, best known otherwise) and how they were computed;
 - the best known value, the certificate in `refs/`, and the bound on the other side when there is one.
 
@@ -59,9 +59,6 @@ and is credited by name on the problem's page and in `leaderboard.json`.
 | [Catacondensed benzenoids with the smallest Kemeny constant](problems/cata-kemeny.md) | Chemistry and materials | minimize | 59617087737367409/159902997431616 |
 | [Lennard-Jones clusters on the face-centred cubic lattice](problems/lj-fcc.md) | Chemistry and materials | minimize | -789723697/1492992 |
 | [Non-redundant aperture masks for segmented mirrors](problems/nrm-segments.md) | Astronomy | maximize | 23 |
-| [Splitting a segmented mirror into non-redundant groups](problems/nrm-tilting.md) | Astronomy | minimize | 11 |
-| [The slewing tour of the Bright Star Catalogue](problems/slew-tour.md) | Astronomy | minimize | 103836804 |
-| [The smallest star-tracker catalogue of the bright sky](problems/star-tracker.md) | Astronomy | minimize | 456 |
 | [An optimal strategy for Primel](problems/primel.md) | Computing and operations research | minimize | 29016 |
 | [XOR circuits for the quadratic-residue circulant](problems/qr-xor.md) | Computing and operations research | minimize | 238 |
 | [Shortest reset words of the quadratic automaton modulo p](problems/sync-quadratic.md) | Computing and operations research | minimize | 31 |

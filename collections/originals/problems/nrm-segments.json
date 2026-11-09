@@ -45,7 +45,7 @@
  "novelty": {
   "checked": "2026-11-09",
   "file": "novelty/nrm-segments.json",
-  "verdict": "new as stated. Non-redundant masks are designed for each instrument, and distinct-difference configurations in the hexagonal grid were studied with a bound on their diameter; no result was found on the largest non-redundant set of segments of a hexagonal segmented mirror with its centre removed.",
+  "verdict": "new question: nobody asked for the largest non-redundant set of segments of a hexagonal segmented mirror with its centre removed. Masks are designed instrument by instrument, and distinct-difference configurations in the hexagonal grid were studied with a bound on their diameter, which is a different question.",
   "closest": [
    "S. R. Blackburn, T. Etzion, K. M. Martin and M. B. Paterson (2010): the largest hexagonal-grid configurations with distinct differences and diameter at most r (r <= 10, by backtracking). Their region is any set of that diameter; here the region is fixed (the segment layout) and the centre is missing, as on real telescopes.",
    "The JWST NIRISS mask (7 holes on 18 segments) and other masks designed instrument by instrument; none asks for the maximum on a given layout.",

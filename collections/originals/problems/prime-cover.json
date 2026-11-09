@@ -42,7 +42,7 @@
  "novelty": {
   "checked": "2026-11-09",
   "file": "novelty/prime-cover.json",
-  "verdict": "new. Covering codes of Hamming spaces and digitally delicate primes are studied; no result was found on covering codes inside the primes with the digit (Hamming) distance.",
+  "verdict": "new question: covering codes of Hamming spaces and digitally delicate primes are studied; no result was found on covering codes inside the primes with the digit (Hamming) distance.",
   "closest": [
    "Covering codes and the football-pool problem in Hamming spaces (Cohen, Honkala, Litsyn and Lobstein): the whole space, regular neighbourhoods; here only primes.",
    "Digitally delicate primes (Tao 2011; Filaseta and others): primes with no prime neighbour, which would be forced into any code; none has five digits."

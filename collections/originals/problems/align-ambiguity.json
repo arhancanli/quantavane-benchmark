@@ -44,7 +44,7 @@
  "novelty": {
   "checked": "2026-11-09",
   "file": "novelty/align-ambiguity.json",
-  "verdict": "new. Counting the optimal alignments of given sequences is standard; no result was found on the pair of sequences of a given length with the most optimal alignments under unit costs. Our first values match an unrelated OEIS sequence for six terms and differ at the seventh.",
+  "verdict": "new question: counting the optimal alignments of given sequences is standard, but no result was found on the pair of sequences of a given length with the most optimal alignments under unit costs. Our first values match an unrelated OEIS sequence for six terms and differ at the seventh.",
   "closest": [
    "R. I. Greenberg (2003): the largest number of longest-common-subsequence embeddings and of distinct LCS strings (indels only, no substitutions); here substitutions cost 1 as well.",
    "Parametric alignment (Gusfield et al.; Vinzant): the number of distinct optimal alignment summaries as the scores vary, not the number of optimal paths for one scoring.",
