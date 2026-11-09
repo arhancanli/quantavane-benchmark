@@ -1,11 +1,11 @@
 {
  "collection": "Quantavane Originals",
- "problems": 45,
+ "problems": 46,
  "by_field": {
   "Combinatorics and graph theory": 7,
   "Number theory": 7,
   "Coding theory": 5,
-  "Discrete geometry": 4,
+  "Discrete geometry": 5,
   "Physics": 6,
   "Chemistry and materials": 6,
   "Astronomy": 2,
@@ -252,6 +252,18 @@
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_geom.py",
    "page": "problems/cell120-great.md"
+  },
+  {
+   "id": "e8-coulomb",
+   "field": "Discrete geometry",
+   "title": "Charges on the roots of E8",
+   "status": "open",
+   "objective": "minimize",
+   "best_known": "304375/1152",
+   "holder": "Quantavane (Arhan Canli)",
+   "date": "2026-11-09",
+   "checker": "collections/originals/checkers/orig_geom.py",
+   "page": "problems/e8-coulomb.md"
   },
   {
    "id": "tetra-distinct",

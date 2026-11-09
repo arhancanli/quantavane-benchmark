@@ -1,0 +1,79 @@
+{
+ "id": "e8-coulomb",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:E8 AND all:\"root system\" AND all:subsets AND all:energy",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3AE8+AND+all%3A%22root+system%22+AND+all%3Asubsets+AND+all%3Aenergy&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T19:19:40Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"Riesz energy\" AND all:E8",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22Riesz+energy%22+AND+all%3AE8&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T19:19:44Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"discrete energy\" AND all:\"root system\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22discrete+energy%22+AND+all%3A%22root+system%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T19:19:49Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"Thomson problem\" AND all:dimensions AND all:lattice",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22Thomson+problem%22+AND+all%3Adimensions+AND+all%3Alattice&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T19:19:53Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"E8 lattice\" AND all:Coulomb AND all:configurations",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22E8+lattice%22+AND+all%3ACoulomb+AND+all%3Aconfigurations&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T19:19:57Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"universally optimal\" AND all:subsets AND all:\"E8\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22universally+optimal%22+AND+all%3Asubsets+AND+all%3A%22E8%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T19:20:02Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "E8 roots energy subsets",
+   "url": "https://oeis.org/search?q=E8+roots+energy+subsets&fmt=json",
+   "results": 0,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [],
+   "run": "2026-11-09T19:20:17Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "E8 root system subsets minimal energy",
+   "url": "https://oeis.org/search?q=E8+root+system+subsets+minimal+energy&fmt=json",
+   "results": 0,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [],
+   "run": "2026-11-09T19:20:21Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "minimal energy subsets of the E8 root system, N points, Coulomb Riesz energy, E8 subsets of roots, optimal configurations, discrete energy",
+   "date": "2026-11-09",
+   "found": "the complexity of minimum Riesz s-energy subset selection in Euclidean and ultrametric spaces (arXiv:2605.04715), dynamic programming for subsets of points on a line (Emmerich, arXiv:2502.01163), local optimality of D4, E8 and the Leech lattice for Riesz energies (Cohn, Kumar, Miller and others); nothing on energy-minimising subsets of the E8 roots"
+  }
+ ]
+}

@@ -1,0 +1,197 @@
+{
+ "id": "e8-coulomb",
+ "collection": "originals",
+ "field": "Discrete geometry",
+ "title": "Charges on the roots of E8",
+ "status": "open",
+ "statement": "Place N unit charges on N distinct roots of E8, the 240 shortest vectors of the E8 lattice (norm 2), and let them repel with the Coulomb potential of eight-dimensional space, 1/r^6 (the Newtonian potential r^(2-d) in dimension d = 8). Two roots are at squared distance 2, 4, 6 or 8 (inner product 1, 0, -1 or -2), so a pair costs 1/8, 1/64, 1/216 or 1/512 and every energy is an exact rational number. Which N roots have the lowest energy? This is the Thomson problem restricted to the best 240-point configuration in eight dimensions. The headline cell is N = 120, half of the roots: find 120 roots with energy below 304375/1152 = 264.214410 (ours).",
+ "objective": "minimize",
+ "submission": "Text file: 120 lines of 8 integers, distinct roots of E8 written doubled: a permutation of (+-2, +-2, 0, 0, 0, 0, 0, 0), or eight entries +-1 with an even number of minus signs.",
+ "checker": {
+  "program": "collections/originals/checkers/orig_geom.py",
+  "args": [
+   "e8-coulomb",
+   "120"
+  ],
+  "value": "result"
+ },
+ "score": "the Coulomb energy, an exact rational number (smaller is better)",
+ "best_known": {
+  "value": "304375/1152",
+  "exact": "304375/1152",
+  "source": "Quantavane (Arhan Canli), 9 November 2026: simulated annealing over 120-subsets of the roots, swapping a chosen root for an unchosen one, restarts for 8 seconds; two seeds and a 10-second run gave the same energy (tools/src/e8coulomb.c)",
+  "kind": "our construction (Quantavane Originals)",
+  "provenance": {
+   "keeper": "Quantavane Originals",
+   "url": "collections/originals/problems/e8-coulomb.md",
+   "read": "2026-11-09",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true,
+   "certificate": "collections/originals/refs/e8-coulomb.txt"
+  }
+ },
+ "verified_pending": [],
+ "added": "originals-1",
+ "quantavane_record": true,
+ "context": "The Thomson problem asks how N equal charges arrange themselves on a sphere to minimise their Coulomb energy; it is solved for only a handful of N in three dimensions. In eight dimensions the E8 root system is the answer for N = 240: Cohn and Kumar (2007) proved it universally optimal, minimising every completely monotonic potential, the Coulomb potential 1/r^6 included. Restricting the charges to the roots themselves turns the problem for smaller N into an exact discrete one: which N-subsets of the best configuration are best? The energy depends only on how many pairs meet at 60, 90, 120 and 180 degrees, so it is a rational number, and the question becomes a weighted extremal problem on the root system. Our best subsets are structured: for N = 16 the cross-polytope (8 orthogonal pairs of opposite roots); for N = 112 and N = 128 sets with exactly the angle counts of the 112 roots of D8 and of the 128 roots (+-1/2)^8; for most even N from 16 on, centrally symmetric sets (N = 60 and N = 100 are exceptions in the table); the best N = 120 subset we found consists of 60 pairs of opposite roots. Minimum-energy subset selection is studied as an algorithmic problem for points on a line or in the plane, and the energies of the whole root systems are classical, but the subsets of the E8 roots have not been asked about as far as our searches show. No lower bound beyond the trivial one is known to us for N = 120.",
+ "references": [
+  "J. J. Thomson, On the structure of the atom, Philos. Mag. (6) 7 (1904) 237-265",
+  "H. Cohn, A. Kumar, Universally optimal distribution of points on spheres, J. Amer. Math. Soc. 20 (2007) 99-148",
+  "J. H. Conway, N. J. A. Sloane, Sphere Packings, Lattices and Groups, 3rd ed., Springer, 1999 (the E8 root system)",
+  "M. Emmerich, Minimum Riesz s-energy subset selection in ordered point sets via dynamic programming, arXiv:2502.01163"
+ ],
+ "novelty": {
+  "checked": "2026-11-09",
+  "file": "novelty/e8-coulomb.json",
+  "verdict": "new question for the E8 root system: the whole configuration is universally optimal (Cohn and Kumar) and minimum-energy subset selection is studied for points on a line or in the plane, but no one has asked which N-subsets of the E8 roots minimise the Coulomb energy, as far as our searches show.",
+  "closest": [
+   "Universal optimality of the E8 roots and lattice (Cohn and Kumar 2007; Cohn, Kumar, Miller, Radchenko and Viazovska): the whole configuration, not its subsets.",
+   "Minimum Riesz s-energy subset selection (Emmerich, arXiv:2502.01163; complexity results, arXiv:2605.04715): algorithms for subsets of points on a line or in the plane.",
+   "Our problems on E8 (e8-goodman, e8-idcode, e8-resolving): other questions on the same configuration."
+  ],
+  "benchmark": "the benchmark's spherical-code and kissing families ask for the largest minimum distance, not for energy"
+ },
+ "first_values": {
+  "columns": [
+   "N",
+   "lowest energy found",
+   "decimal",
+   "pairs at 60, 90, 120, 180 degrees",
+   "how"
+  ],
+  "rows": [
+   [
+    3,
+    "1/72",
+    "0.013889",
+    "0, 0, 3, 0",
+    "exact (brute force over all triples through one root)"
+   ],
+   [
+    8,
+    "151/432",
+    "0.349537",
+    "0, 20, 8, 0",
+    "best known (ours, simulated annealing)"
+   ],
+   [
+    16,
+    "113/64",
+    "1.765625",
+    "0, 112, 0, 8",
+    "best known (ours); a cross-polytope: 8 orthogonal pairs of opposite roots"
+   ],
+   [
+    24,
+    "7499/1152",
+    "6.509549",
+    "24, 216, 24, 12",
+    "best known (ours, simulated annealing)"
+   ],
+   [
+    32,
+    "11947/864",
+    "13.827546",
+    "64, 352, 64, 16",
+    "best known (ours, simulated annealing)"
+   ],
+   [
+    40,
+    "27325/1152",
+    "23.719618",
+    "120, 520, 120, 20",
+    "best known (ours, simulated annealing)"
+   ],
+   [
+    56,
+    "177037/3456",
+    "51.225984",
+    "280, 952, 280, 28",
+    "best known (ours, simulated annealing)"
+   ],
+   [
+    60,
+    "34705/576",
+    "60.251736",
+    "336, 1062, 348, 24",
+    "best known (ours, simulated annealing)"
+   ],
+   [
+    72,
+    "34187/384",
+    "89.028646",
+    "504, 1512, 504, 36",
+    "best known (ours, simulated annealing)"
+   ],
+   [
+    80,
+    "193175/1728",
+    "111.791088",
+    "640, 1840, 640, 40",
+    "best known (ours, simulated annealing)"
+   ],
+   [
+    100,
+    "207935/1152",
+    "180.499132",
+    "1056, 2782, 1068, 44",
+    "best known (ours, simulated annealing)"
+   ],
+   [
+    112,
+    "131663/576",
+    "228.581597",
+    "1344, 3472, 1344, 56",
+    "best known (ours); the same angle counts as the 112 roots of D8"
+   ],
+   [
+    120,
+    "304375/1152",
+    "264.214410",
+    "1560, 3960, 1560, 60",
+    "best known (ours, simulated annealing)"
+   ],
+   [
+    126,
+    "4050053/13824",
+    "292.972584",
+    "1736, 4340, 1736, 63",
+    "best known (ours, simulated annealing)"
+   ],
+   [
+    128,
+    "65323/216",
+    "302.421296",
+    "1792, 4480, 1792, 64",
+    "best known (ours); the same angle counts as the 128 roots (+-1/2)^8"
+   ],
+   [
+    160,
+    "46175/96",
+    "480.989583",
+    "2880, 6880, 2880, 80",
+    "best known (ours, simulated annealing)"
+   ],
+   [
+    200,
+    "2633875/3456",
+    "762.116609",
+    "4600, 10600, 4600, 100",
+    "best known (ours, simulated annealing)"
+   ],
+   [
+    240,
+    "637975/576",
+    "1107.595486",
+    "6720, 15120, 6720, 120",
+    "all roots"
+   ]
+  ],
+  "note": "Energies from the exact checker (checkers/orig_geom.py); subsets from tools/src/e8coulomb.c, 8 s and two seeds for each N (the seeds agree for every N). Our tests check N = 3 by brute force and N = 240 against the counts 56, 126, 56, 1 of the root system."
+ },
+ "baseline": {
+  "date": "2026-11-09",
+  "holder": "Quantavane (Arhan Canli)",
+  "text": "304375/1152 = 264.214410 (1560, 3960, 1560 and 60 pairs at 60, 90, 120 and 180 degrees), held by Quantavane (Arhan Canli), 9 November 2026: the 120 roots in `refs/e8-coulomb.txt`."
+ }
+}

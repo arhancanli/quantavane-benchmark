@@ -1,6 +1,6 @@
 # Quantavane Originals
 
-New open problems, written by Quantavane: <!--count-->45<!--/count--> problems across mathematics, physics,
+New open problems, written by Quantavane: <!--count-->46<!--/count--> problems across mathematics, physics,
 chemistry, astronomy, computing and biology. Each one is a question that, as far as our searches show, nobody had
 asked before, stated precisely, with an exact checker of ours and a first value of ours, so that it starts with a best
 known value, a holder and a date. All of them are open.
@@ -51,6 +51,7 @@ and is credited by name on the problem's page and in `leaderboard.json`.
 | [Error-correcting codes made of primes](problems/prime-code.md) | Coding theory | maximize | 299 |
 | [Covering the five-digit primes by one-digit changes](problems/prime-cover.md) | Coding theory | minimize | 1219 |
 | [Vertices of the 120-cell with no three on a great circle](problems/cell120-great.md) | Discrete geometry | maximize | 57 |
+| [Charges on the roots of E8](problems/e8-coulomb.md) | Discrete geometry | minimize | 304375/1152 |
 | [Distinct distances in the tetrahedral grid](problems/tetra-distinct.md) | Discrete geometry | maximize | 16 |
 | [Distinct triangle areas in the triangular grid](problems/tri-areas.md) | Discrete geometry | maximize | 9 |
 | [Distinct distances in the triangular grid](problems/tri-distinct.md) | Discrete geometry | maximize | 14 |
