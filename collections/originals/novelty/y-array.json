@@ -1,0 +1,89 @@
+{
+ "id": "y-array",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"Y-shaped\" AND all:array AND all:baselines AND all:\"non-redundant\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22Y-shaped%22+AND+all%3Aarray+AND+all%3Abaselines+AND+all%3A%22non-redundant%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T18:14:20Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"Y-shaped array\" AND all:\"baseline lengths\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22Y-shaped+array%22+AND+all%3A%22baseline+lengths%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T18:14:24Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"minimum redundancy\" AND all:\"Y-shaped\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22minimum+redundancy%22+AND+all%3A%22Y-shaped%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T18:14:28Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:Golomb AND all:\"Y-shaped\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3AGolomb+AND+all%3A%22Y-shaped%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T18:14:32Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "Y-shaped array distinct baselines",
+   "url": "https://oeis.org/search?q=Y-shaped+array+distinct+baselines&fmt=json",
+   "results": 0,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [],
+   "run": "2026-11-09T18:14:36Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"baseline lengths\" AND all:distinct AND all:array AND all:interferometer",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22baseline+lengths%22+AND+all%3Adistinct+AND+all%3Aarray+AND+all%3Ainterferometer&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T18:24:59Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "1,2,3,5,6,7,9,11,14,17,21",
+   "url": "https://oeis.org/search?q=1%2C2%2C3%2C5%2C6%2C7%2C9%2C11%2C14%2C17%2C21&fmt=json",
+   "results": 0,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [],
+   "run": "2026-11-09T18:25:03Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "2,3,5,6,7,9,11,14,17,21",
+   "url": "https://oeis.org/search?q=2%2C3%2C5%2C6%2C7%2C9%2C11%2C14%2C17%2C21&fmt=json",
+   "results": 0,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [],
+   "run": "2026-11-09T18:25:07Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "1,2,3,5,6,7,9,11,14,17",
+   "url": "https://oeis.org/search?q=1%2C2%2C3%2C5%2C6%2C7%2C9%2C11%2C14%2C17&fmt=json",
+   "results": 0,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [],
+   "run": "2026-11-09T18:25:12Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "Y-shaped interferometer array antenna positions all baseline lengths distinct Golomb VLA arms 120 degrees non-redundant baseline lengths",
+   "date": "2026-11-09",
+   "found": "the VLA's 120-degree arms, CHARA as a non-redundant Y of six telescopes (15 baselines, not all of different length), MROI's non-redundant Y; no array with all baseline lengths different"
+  }
+ ]
+}

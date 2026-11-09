@@ -1,0 +1,4 @@
+# a Y array of 27 antennas (arms at 120 degrees) with all 351 baseline lengths different; arm length 165
+2 13 15 36 117 139 143 153 158
+1 4 33 51 71 78 113 156 164 165
+10 47 75 100 106 130 146 163

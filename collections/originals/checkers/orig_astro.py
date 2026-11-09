@@ -9,7 +9,12 @@ valid certificate and 1 otherwise. Problems:
                         the points a + b*w of the triangular lattice (w = e^(i pi/3)) with hexagonal norm
                         max(|a|, |b|, |a + b|) from 1 to S (the centre segment is missing). Valid when the holes are
                         distinct segments and no baseline repeats: the vectors p - q between two holes are all
-                        different, a vector and its negative counting as the same baseline. Value: number of holes."""
+                        different, a vector and its negative counting as the same baseline. Value: number of holes.
+  y-array N FILE        FILE: three lines, the distances (positive integers) of the antennas on the three arms of a
+                        Y whose arms meet at 120 degrees (a line "-" for an empty arm). Two antennas on one arm at a
+                        and a' have squared distance (a - a')^2, on two arms a^2 + ab + b^2. Valid when there are N
+                        antennas, no place is used twice and all N(N - 1)/2 squared baseline lengths are different.
+                        Value: the arm length, the largest distance used."""
 import sys
 
 
@@ -53,7 +58,36 @@ def nrm_segments(args, path):
     return 0
 
 
-PROBLEMS = {"nrm-segments": (1, nrm_segments)}
+def y_array(args, path):
+    n = int(args[0])
+    rows = [l.split("#")[0].strip() for l in open(path) if l.split("#")[0].strip()]
+    if len(rows) != 3:
+        print("expected three lines, one per arm ('-' for an empty arm)")
+        return 1
+    arms = [[] if r == "-" else [int(t) for t in r.replace(",", " ").split()] for r in rows]
+    if any(a < 1 for arm in arms for a in arm) or any(len(set(arm)) != len(arm) for arm in arms):
+        print("distances must be positive and different on each arm")
+        return 1
+    ants = [(k, a) for k, arm in enumerate(arms) for a in arm]
+    if len(ants) != n:
+        print(f"expected {n} antennas, found {len(ants)}")
+        return 1
+    seen = {}
+    for i in range(n):
+        for j in range(i + 1, n):
+            (k1, a), (k2, b) = ants[i], ants[j]
+            q = (a - b) ** 2 if k1 == k2 else a * a + a * b + b * b
+            if q in seen:
+                print(f"squared length {q} occurs twice: {ants[i]}, {ants[j]} and {seen[q]}")
+                return 1
+            seen[q] = (ants[i], ants[j])
+    L = max(a for _, a in ants)
+    print(f"{n} antennas on arms of {', '.join(str(len(arm)) for arm in arms)}; all {len(seen)} baseline lengths different; arm length {L}")
+    print(f"RESULT {L}")
+    return 0
+
+
+PROBLEMS = {"nrm-segments": (1, nrm_segments), "y-array": (1, y_array)}
 
 
 def main():

@@ -1,6 +1,6 @@
 # Quantavane Originals
 
-New open problems, written by Quantavane: <!--count-->37<!--/count--> problems across mathematics, physics,
+New open problems, written by Quantavane: <!--count-->39<!--/count--> problems across mathematics, physics,
 chemistry, astronomy, computing and biology. Each one is a question that, as far as our searches show, nobody had
 asked before, stated precisely, with an exact checker of ours and a first value of ours, so that it starts with a best
 known value, a holder and a date. All of them are open.
@@ -48,6 +48,7 @@ and is credited by name on the problem's page and in `leaderboard.json`.
 | [Identifying codes of the 600-cell](problems/cell600-idcode.md) | Coding theory | minimize | 20 |
 | [Identifying codes of the E8 root polytope](problems/e8-idcode.md) | Coding theory | minimize | 15 |
 | [Covering the five-digit primes by one-digit changes](problems/prime-cover.md) | Coding theory | minimize | 1219 |
+| [Vertices of the 120-cell with no three on a great circle](problems/cell120-great.md) | Discrete geometry | maximize | 57 |
 | [Distinct distances in the tetrahedral grid](problems/tetra-distinct.md) | Discrete geometry | maximize | 16 |
 | [Distinct triangle areas in the triangular grid](problems/tri-areas.md) | Discrete geometry | maximize | 9 |
 | [Distinct distances in the triangular grid](problems/tri-distinct.md) | Discrete geometry | maximize | 14 |
@@ -60,6 +61,7 @@ and is credited by name on the problem's page and in `leaderboard.json`.
 | [Catacondensed benzenoids with the smallest Kemeny constant](problems/cata-kemeny.md) | Chemistry and materials | minimize | 59617087737367409/159902997431616 |
 | [Lennard-Jones clusters on the face-centred cubic lattice](problems/lj-fcc.md) | Chemistry and materials | minimize | -789723697/1492992 |
 | [Non-redundant aperture masks for segmented mirrors](problems/nrm-segments.md) | Astronomy | maximize | 23 |
+| [Y-shaped arrays with all baseline lengths different](problems/y-array.md) | Astronomy | minimize | 165 |
 | [XOR circuits for the quadratic-residue circulant](problems/qr-xor.md) | Computing and operations research | minimize | 238 |
 | [Shortest reset words of the quadratic automaton modulo p](problems/sync-quadratic.md) | Computing and operations research | minimize | 31 |
 | [The travelling salesman tour of the Gaussian primes](problems/tsp-gaussian.md) | Computing and operations research | minimize | 11298548 |

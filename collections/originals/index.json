@@ -1,14 +1,14 @@
 {
  "collection": "Quantavane Originals",
- "problems": 37,
+ "problems": 39,
  "by_field": {
   "Combinatorics and graph theory": 7,
   "Number theory": 6,
   "Coding theory": 4,
-  "Discrete geometry": 3,
+  "Discrete geometry": 4,
   "Physics": 5,
   "Chemistry and materials": 3,
-  "Astronomy": 1,
+  "Astronomy": 2,
   "Computing and operations research": 4,
   "Biology": 4
  },
@@ -218,6 +218,18 @@
    "page": "problems/prime-cover.md"
   },
   {
+   "id": "cell120-great",
+   "field": "Discrete geometry",
+   "title": "Vertices of the 120-cell with no three on a great circle",
+   "status": "open",
+   "objective": "maximize",
+   "best_known": "57",
+   "holder": "Quantavane (Arhan Canli)",
+   "date": "2026-11-09",
+   "checker": "collections/originals/checkers/orig_geom.py",
+   "page": "problems/cell120-great.md"
+  },
+  {
    "id": "tetra-distinct",
    "field": "Discrete geometry",
    "title": "Distinct distances in the tetrahedral grid",
@@ -360,6 +372,18 @@
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_astro.py",
    "page": "problems/nrm-segments.md"
+  },
+  {
+   "id": "y-array",
+   "field": "Astronomy",
+   "title": "Y-shaped arrays with all baseline lengths different",
+   "status": "open",
+   "objective": "minimize",
+   "best_known": "165",
+   "holder": "Quantavane (Arhan Canli)",
+   "date": "2026-11-09",
+   "checker": "collections/originals/checkers/orig_astro.py",
+   "page": "problems/y-array.md"
   },
   {
    "id": "qr-xor",

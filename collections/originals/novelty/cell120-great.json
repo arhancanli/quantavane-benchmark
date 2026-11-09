@@ -1,0 +1,46 @@
+{
+ "id": "cell120-great",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"no three\" AND all:\"great circle\" AND all:polytope",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22no+three%22+AND+all%3A%22great+circle%22+AND+all%3Apolytope&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T18:14:53Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"120-cell\" AND all:\"great circles\" AND all:vertices AND all:subset",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22120-cell%22+AND+all%3A%22great+circles%22+AND+all%3Avertices+AND+all%3Asubset&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T18:14:57Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"cap\" AND all:\"600-cell\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22cap%22+AND+all%3A%22600-cell%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T18:15:01Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "120-cell no three on a great circle",
+   "url": "https://oeis.org/search?q=120-cell+no+three+on+a+great+circle&fmt=json",
+   "results": 0,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [],
+   "run": "2026-11-09T18:15:05Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "largest subset of vertices of the 120-cell OR 600-cell no three on a great circle OR \"no three collinear\" projective cap regular polytope vertices",
+   "date": "2026-11-09",
+   "found": "descriptions of the 600-cell and 120-cell (great decagons and pentagons, the 120-cell as five inscribed 600-cells) and a 2026 sphere-packing paper using independent sets among the 600-cell's vertices; nothing on caps or no-three-on-a-great-circle sets"
+  }
+ ]
+}

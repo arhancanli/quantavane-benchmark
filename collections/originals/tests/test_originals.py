@@ -201,6 +201,19 @@ def controls():
     if "six-frame" in P:
         sq = "".join(lines_of(certificates(P["six-frame"])))
         refuse("six-frame", "TAA" + sq + "\n", "the sequence with a stop codon TAA in front")
+    if "cell120-great" in P:
+        L = lines_of(certificates(P["cell120-great"]))
+        sys.path.insert(0, os.path.join(HERE, "checkers"))
+        import orig_geom
+        pts600, _ = orig_geom.cell600_points()
+        where = {v: i for i, v in enumerate(pts600)}
+        first = [int(x) for x in L[0].split()]
+        opposite = sorted(where[tuple((-c[0], -c[1]) for c in pts600[i])] for i in first)
+        refuse("cell120-great", "\n".join(L + [" ".join(map(str, opposite))]) + "\n", "a set with a vertex and its opposite")
+    if "y-array" in P:
+        L = lines_of(certificates(P["y-array"]))
+        arm = L[0].split()
+        refuse("y-array", "\n".join([" ".join(arm + [arm[0]])] + L[1:]) + "\n", "an arm with one distance used twice")
     if "gauss-prime-ap" in P:
         L = lines_of(certificates(P["gauss-prime-ap"]))
         x0, y0 = map(int, L[0].split())
@@ -468,6 +481,23 @@ def cross_checks():
     alt = {a + b + c: order[16 * i + 4 * j + k] for i, a in enumerate("ACGT") for j, b in enumerate("ACGT") for k, c in enumerate("ACGT")}
     expect("cross six-frame genetic code: two independent tables agree (64 codons, 3 stops, 20 amino acids)",
            alt == orig_bio.STANDARD_CODE and len(set(alt.values()) - {"*"}) == 20 and list(alt.values()).count("*") == 3)
+    # great circles of the 600-cell through its vertices: 200 hexagons and 72 decagons (Coxeter), as our planes give
+    import orig_geom
+    g60, _ = orig_geom.great_points("600")
+    sizes = [len(l) for l in orig_geom.great_lines(g60) if len(l) >= 3]
+    expect("cross cell120-great the 600-cell has 200 great hexagons and 72 great decagons", (sizes.count(3), sizes.count(5), len(sizes)) == (200, 72, 272), (sizes.count(3), sizes.count(5)))
+    # Y arrays: L(5) = 5 and L(6) = 6 by brute force over all placements
+    def yok(S):
+        seen = set()
+        for (k1, a), (k2, b) in itertools.combinations(S, 2):
+            q = (a - b) ** 2 if k1 == k2 else a * a + a * b + b * b
+            if q in seen:
+                return False
+            seen.add(q)
+        return True
+    for n, want in ((5, 5), (6, 6)):
+        least = next(Lm for Lm in range(1, 10) if any(yok(S) for S in itertools.combinations([(k, a) for k in range(3) for a in range(1, Lm + 1)], n)))
+        expect(f"cross y-array L({n}) = {want} by brute force", least == want, least)
     # the uniform three-part splitting has largest overlap exactly 1/3
     code, res, _ = run("collections/originals/checkers/orig_comb.py", ["overlap-three", 3, 3, write("uni3.txt", "1 1 1\n1 1 1\n1 1 1\n")])
     expect(f"cross overlap-three the uniform splitting scores 1/3", res == "1/3", res)
