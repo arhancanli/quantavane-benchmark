@@ -1,0 +1,238 @@
+{
+ "id": "gauss-jacobsthal",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:Jacobsthal AND all:Gaussian",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3AJacobsthal+AND+all%3AGaussian&start=0&max_results=10&sortBy=relevance",
+   "results": 2,
+   "top": [
+    {
+     "arxiv": "2508.11650v1",
+     "year": "2025",
+     "first_author": "Gamaliel Morales",
+     "title": "Generalization of Gaussian third-order Jacobsthal numbers and their new families"
+    },
+    {
+     "arxiv": "2608.00347v1",
+     "year": "2026",
+     "first_author": "Kevin Calderon",
+     "title": "Ljunggren--Jacobsthal and Bailey-Type Congruences for Rectangular Gaussian Binomial Coefficients"
+    }
+   ],
+   "run": "2026-11-09T19:20:57Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"Jacobsthal function\" AND all:\"number field\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22Jacobsthal+function%22+AND+all%3A%22number+field%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T19:21:06Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"Jacobsthal function\" AND all:\"imaginary quadratic\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22Jacobsthal+function%22+AND+all%3A%22imaginary+quadratic%22&start=0&max_results=10&sortBy=relevance",
+   "results": 1,
+   "top": [
+    {
+     "arxiv": "2110.06973v2",
+     "year": "2021",
+     "first_author": "Daniel E. Martin",
+     "title": "Bounds on entries in Bianchi group generators"
+    }
+   ],
+   "run": "2026-11-09T19:21:10Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"Jacobsthal function\" AND all:\"two-dimensional\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22Jacobsthal+function%22+AND+all%3A%22two-dimensional%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T19:21:15Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"Gaussian integers\" AND all:coprime AND all:primorial",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22Gaussian+integers%22+AND+all%3Acoprime+AND+all%3Aprimorial&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T19:21:19Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"Jacobsthal\" AND all:\"lattice points\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22Jacobsthal%22+AND+all%3A%22lattice+points%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T19:21:24Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "Jacobsthal Gaussian",
+   "url": "https://oeis.org/search?q=Jacobsthal+Gaussian&fmt=json",
+   "results": 9,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A001045",
+     "name": "Jacobsthal sequence (or Jacobsthal numbers): a(n) = a(n-1) + 2*a(n-2), with a(0) = 0, a(1) = 1; also a(n) = nearest integer to 2^n/3."
+    },
+    {
+     "oeis": "A014551",
+     "name": "Jacobsthal-Lucas numbers."
+    },
+    {
+     "oeis": "A015331",
+     "name": "Gaussian binomial coefficient [ n,6 ] for q = -8."
+    },
+    {
+     "oeis": "A000225",
+     "name": "a(n) = 2^n - 1. (Sometimes called Mersenne numbers, although that name is usually reserved for A001348.)"
+    },
+    {
+     "oeis": "A002275",
+     "name": "Repunits: (10^n - 1)/9. Often denoted by R_n."
+    },
+    {
+     "oeis": "A000129",
+     "name": "Pell numbers: a(0) = 0, a(1) = 1; for n > 1, a(n) = 2*a(n-1) + a(n-2)."
+    },
+    {
+     "oeis": "A066983",
+     "name": "a(n+2) = a(n+1) + a(n) + (-1)^n, with a(1) = a(2) = 1."
+    },
+    {
+     "oeis": "A169623",
+     "name": "Generalized Pascal triangle read by rows: T(n,0) = T(0,n) = 1 for n >= 0, T(n,k) = 0 for k < 0 or k > n; otherwise T(n,k) = T(n-2,k-2) + T(n-2,k-1) + T(n-2,k) for 1 <= k <= n-1."
+    },
+    {
+     "oeis": "A341091",
+     "name": "Triangle read by rows: Coefficients for calculation of the sum of all the finite differences from order zero to order k. Sum_{n=0..k} T(n, k)*b(n) = b(0) + b(1) + ... + b(k) + (b(1) - b(0)) + ... + (b(k) - b(k-1)) + ((b(2) - b(1)) - (b(1) - b(0))) + ... ."
+    }
+   ],
+   "run": "2026-11-09T19:21:28Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "Gaussian integers Jacobsthal function",
+   "url": "https://oeis.org/search?q=Gaussian+integers+Jacobsthal+function&fmt=json",
+   "results": 5,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A001045",
+     "name": "Jacobsthal sequence (or Jacobsthal numbers): a(n) = a(n-1) + 2*a(n-2), with a(0) = 0, a(1) = 1; also a(n) = nearest integer to 2^n/3."
+    },
+    {
+     "oeis": "A014551",
+     "name": "Jacobsthal-Lucas numbers."
+    },
+    {
+     "oeis": "A000225",
+     "name": "a(n) = 2^n - 1. (Sometimes called Mersenne numbers, although that name is usually reserved for A001348.)"
+    },
+    {
+     "oeis": "A000129",
+     "name": "Pell numbers: a(0) = 0, a(1) = 1; for n > 1, a(n) = 2*a(n-1) + a(n-2)."
+    },
+    {
+     "oeis": "A341091",
+     "name": "Triangle read by rows: Coefficients for calculation of the sum of all the finite differences from order zero to order k. Sum_{n=0..k} T(n, k)*b(n) = b(0) + b(1) + ... + b(k) + (b(1) - b(0)) + ... + (b(k) - b(k-1)) + ((b(2) - b(1)) - (b(1) - b(0))) + ... ."
+    }
+   ],
+   "run": "2026-11-09T19:21:34Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "Jacobsthal function Gaussian primes",
+   "url": "https://oeis.org/search?q=Jacobsthal+function+Gaussian+primes&fmt=json",
+   "results": 3,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A001045",
+     "name": "Jacobsthal sequence (or Jacobsthal numbers): a(n) = a(n-1) + 2*a(n-2), with a(0) = 0, a(1) = 1; also a(n) = nearest integer to 2^n/3."
+    },
+    {
+     "oeis": "A000225",
+     "name": "a(n) = 2^n - 1. (Sometimes called Mersenne numbers, although that name is usually reserved for A001348.)"
+    },
+    {
+     "oeis": "A000129",
+     "name": "Pell numbers: a(0) = 0, a(1) = 1; for n > 1, a(n) = 2*a(n-1) + a(n-2)."
+    }
+   ],
+   "run": "2026-11-09T19:21:39Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "1,2,2,4,5,7,9",
+   "url": "https://oeis.org/search?q=1%2C2%2C2%2C4%2C5%2C7%2C9&fmt=json",
+   "results": 10,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A000726",
+     "name": "Number of partitions of n in which no parts are multiples of 3."
+    },
+    {
+     "oeis": "A211861",
+     "name": "Number of partitions of n into parts <= 6 with the property that all parts have distinct multiplicities."
+    },
+    {
+     "oeis": "A137200",
+     "name": "Number of ways to tile an n X 1 strip with 1 X 1 squares and 2 X 1 dominoes with the restriction that no three consecutive tiles are of the same type."
+    },
+    {
+     "oeis": "A240215",
+     "name": "Number of partitions p of n such that median(p) > multiplicity(min(p))."
+    },
+    {
+     "oeis": "A094362",
+     "name": "McKay-Thompson series of class 39C for the Monster group with a(0) = 1."
+    },
+    {
+     "oeis": "A128663",
+     "name": "Expansion of eta(q^3) * eta(q^33) / ( eta(q)* eta(q^11)) in powers of q."
+    },
+    {
+     "oeis": "A194709",
+     "name": "Triangle read by rows: T(k,m) = number of occurrences of k in the last section of the set of partitions of (9 + m)."
+    },
+    {
+     "oeis": "A240508",
+     "name": "Row lengths of table A174382."
+    },
+    {
+     "oeis": "A258318",
+     "name": "Number of distinct numbers in rows 0 through n of triangle A258197."
+    },
+    {
+     "oeis": "A396058",
+     "name": "Number of partitions of n into 5 distinct parts containing the part 3."
+    }
+   ],
+   "run": "2026-11-09T19:28:23Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "1,2,2,4,5,7,9,9",
+   "url": "https://oeis.org/search?q=1%2C2%2C2%2C4%2C5%2C7%2C9%2C9&fmt=json",
+   "results": 0,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [],
+   "run": "2026-11-09T20:19:26Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "\"Jacobsthal function\" Gaussian integers OR \"number fields\" OR \"imaginary quadratic\" generalization maximal gap coprime",
+   "date": "2026-11-09",
+   "found": "the generalised Jacobsthal function for paired progressions (arXiv:1706.03668), the polynomial analogue of Kalmynin and Konyagin (runs of integers i with N sharing a factor with x + f(i)), and papers on Gaussian or complex Jacobsthal numbers (an unrelated sequence); no Jacobsthal function of the Gaussian integers or of other rings of integers"
+  }
+ ]
+}

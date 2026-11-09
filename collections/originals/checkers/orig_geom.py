@@ -21,7 +21,13 @@ their triangle in units of sqrt(3)/4, the area of a unit triangle). Problems:
                            as in checkers/orig_codes.py). Valid when the cells are distinct tetrahedral cells and no
                            three of the chosen vertices lie on a common great circle, i.e. no three of the centre
                            vectors lie in a plane through the origin (exact arithmetic in Q(sqrt 5)). Value: the
-                           number of chosen vertices."""
+                           number of chosen vertices.
+  e8-coulomb N FILE        FILE: N lines of 8 integers, distinct roots of E8 written doubled: a permutation of
+                           (+-2, +-2, 0, 0, 0, 0, 0, 0), or (+-1, ..., +-1) with an even number of minus signs (the
+                           240 roots (+-1, +-1, 0^6) and (+-1/2)^8 scaled by 2). Value: the Coulomb energy of unit
+                           charges on these roots in eight dimensions, the sum over pairs of 1/r^6, r the distance
+                           between the (unscaled, norm 2) roots: 1/8, 1/64, 1/216 or 1/512 for inner products 1, 0,
+                           -1 and -2, in exact rational arithmetic."""
 import itertools
 import sys
 from itertools import combinations
@@ -233,7 +239,42 @@ def cell120_great(args, path):
     return 0
 
 
-PROBLEMS = {"tetra-distinct": (1, tetra_distinct), "cell120-great": (0, cell120_great), "tri-distinct": (1, tri_distinct), "tri-areas": (1, tri_areas)}
+def is_e8_root2(v):
+    """A root of E8 scaled by 2: two entries +-2 and six zeros, or eight entries +-1 with an even number of -1."""
+    if len(v) != 8:
+        return False
+    if sorted(abs(x) for x in v) == [0, 0, 0, 0, 0, 0, 2, 2]:
+        return True
+    return all(abs(x) == 1 for x in v) and sum(1 for x in v if x < 0) % 2 == 0
+
+
+def e8_coulomb(args, path):
+    from fractions import Fraction
+    n = int(args[0])
+    roots = []
+    for line in open(path, encoding="ascii", errors="replace"):
+        line = line.split("#")[0].strip()
+        if line:
+            roots.append(tuple(int(t) for t in line.split()))
+    if len(roots) != n or len(set(roots)) != n:
+        print(f"expected {n} distinct roots, found {len(roots)} ({len(set(roots))} distinct)")
+        return 1
+    bad = [r for r in roots if not is_e8_root2(r)]
+    if bad:
+        print(f"{bad[0]} is not a root of E8 written doubled")
+        return 1
+    counts = {}
+    for a, b in combinations(roots, 2):
+        ip = sum(x * y for x, y in zip(a, b)) // 4       # inner product of the unscaled roots: 1, 0, -1 or -2
+        counts[ip] = counts.get(ip, 0) + 1
+    energy = sum(Fraction(c, (4 - 2 * ip) ** 3) for ip, c in counts.items())
+    print(f"{n} roots of E8; pairs with inner product 1, 0, -1, -2: {counts.get(1, 0)}, {counts.get(0, 0)}, "
+          f"{counts.get(-1, 0)}, {counts.get(-2, 0)}; energy {float(energy):.9f}")
+    print(f"RESULT {energy.numerator}/{energy.denominator}" if energy.denominator != 1 else f"RESULT {energy.numerator}")
+    return 0
+
+
+PROBLEMS = {"tetra-distinct": (1, tetra_distinct), "cell120-great": (0, cell120_great), "tri-distinct": (1, tri_distinct), "tri-areas": (1, tri_areas), "e8-coulomb": (1, e8_coulomb)}
 
 
 def main():

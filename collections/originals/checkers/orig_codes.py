@@ -21,7 +21,11 @@ valid certificate and 1 otherwise. Problems:
                        order of the cycle. Valid when the cells are distinct, consecutive cells (and the last and the
                        first) share a triangle (three vertices: adjacent vertices of the 120-cell) and any two other
                        cells share at most two vertices (no chord): an induced cycle, a coil-in-the-box. Value: the
-                       number of cells."""
+                       number of cells.
+  prime-code N D FILE  FILE: N-digit primes (separated by spaces or newlines). Valid when they are distinct N-digit
+                       primes and any two of them differ in at least D of their N decimal digits (a code of minimum
+                       Hamming distance D made of primes; D = 3 corrects one wrong digit). Value: the number of
+                       primes."""
 import sys
 
 
@@ -204,7 +208,32 @@ def cell120_coil(args, path):
     return 0
 
 
-PROBLEMS = {"cell600-idcode": (0, cell600_idcode), "e8-idcode": (0, e8_idcode), "prime-cover": (1, prime_cover), "cell120-coil": (0, cell120_coil)}
+def prime_code(args, path):
+    n, d = int(args[0]), int(args[1])
+    lo, hi = 10 ** (n - 1), 10 ** n
+    sieve = bytearray([1]) * hi
+    sieve[0] = sieve[1] = 0
+    for i in range(2, int(hi ** 0.5) + 1):
+        if sieve[i]:
+            sieve[i * i::i] = bytearray(len(sieve[i * i::i]))
+    code = [int(t) for line in open(path) for t in line.split("#")[0].split()]
+    if len(set(code)) != len(code) or any(not (lo <= c < hi and sieve[c]) for c in code):
+        print(f"the code must consist of distinct {n}-digit primes")
+        return 1
+    words = [str(c) for c in code]
+    for a in range(len(words)):
+        for b in range(a + 1, len(words)):
+            dist = sum(x != y for x, y in zip(words[a], words[b]))
+            if dist < d:
+                print(f"{words[a]} and {words[b]} differ in only {dist} digits")
+                return 1
+    print(f"{len(code)} {n}-digit primes, any two differing in at least {d} digits")
+    print(f"RESULT {len(code)}")
+    return 0
+
+
+PROBLEMS = {"cell600-idcode": (0, cell600_idcode), "e8-idcode": (0, e8_idcode), "prime-cover": (1, prime_cover), "cell120-coil": (0, cell120_coil),
+            "prime-code": (2, prime_code)}
 
 
 def main():

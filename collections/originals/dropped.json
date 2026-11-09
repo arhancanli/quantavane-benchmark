@@ -1,57 +1,312 @@
 [
- {"idea": "Largest Sidon set in {1..n} that is also sum-free", "reason": "already known: such sets are exactly Golomb rulers with a mark at 0 minus that mark, so the values are the Golomb ruler lengths", "evidence": "OEIS A003022 (our thresholds 1, 3, 6, 11, 17, 25, 34, 44, 55, 72 are its terms)"},
- {"idea": "No three in line in the triangular grid", "reason": "already in the OEIS", "evidence": "OEIS A234349 (our values 1, 3, 4, 6, 7, 8, 10, 11, 12, 13, 15 match)"},
- {"idea": "Snakes (longest induced paths) in Fibonacci cubes", "reason": "already in the OEIS", "evidence": "OEIS A357619 (our values 2, 3, 6, 9, 13, 20, 30 match)"},
- {"idea": "Exact sizes of corner-free sets in the n x n grid", "reason": "the corners problem is heavily studied", "evidence": "arXiv: 36 results for corner-free, e.g. 2012.03187, 2209.10012"},
- {"idea": "Fewest monochromatic Schur triples in 3-colourings of {1..n}", "reason": "studied (minimum monochromatic Schur triples and generalizations)", "evidence": "arXiv 1609.07639, 1904.01925, math/9803149"},
- {"idea": "Fewest monochromatic 4-cycles in 2-colourings of K_n", "reason": "Ramsey multiplicity of cycles studied", "evidence": "arXiv 2108.00991, 2606.01996, 2609.07285"},
- {"idea": "Largest induced subgraph of the n-cube with maximum degree 1", "reason": "settled by Huang's sensitivity theorem (the answer is 2^(n-1))", "evidence": "arXiv 1907.00847"},
- {"idea": "2-colourings of grids with no monochromatic square in any orientation", "reason": "studied (homothetic and similar copies in square and triangular grids)", "evidence": "arXiv 2512.23303"},
- {"idea": "Distinct subset sums in the Gaussian integers", "reason": "Erdos's distinct subset sums problem in higher dimensions is studied", "evidence": "arXiv 2610.26970, 2510.06032"},
- {"idea": "Smallest max(|A+A|, |AA|) over k-sets of integers", "reason": "studied computationally", "evidence": "arXiv 2307.06874, 2601.21828 (The sum-product problem for small sets)"},
- {"idea": "Sets that are both additive and multiplicative Sidon sets", "reason": "studied", "evidence": "arXiv 2103.13066, 2203.13174"},
- {"idea": "Sets with all pairwise least common multiples distinct", "reason": "close to studied lcm problems", "evidence": "arXiv 2609.07268"},
- {"idea": "Binary codes up to rotation (necklace codes)", "reason": "too close to cyclically permutable codes (Gilbert)", "evidence": "arXiv: 18 results for cyclically permutable codes"},
- {"idea": "Two-dimensional codes up to torus shifts", "reason": "multidimensional cyclically permutable codes are studied", "evidence": "arXiv 2609.24575"},
- {"idea": "Error-correcting codes in Fibonacci cubes", "reason": "perfect codes in Fibonacci and Lucas cubes are studied", "evidence": "arXiv 1801.04106, 2004.10198"},
- {"idea": "Run-length-limited binary codes with a minimum Hamming distance", "reason": "constrained codes with error correction are classical", "evidence": "the literature on distance-enhancing constrained codes"},
- {"idea": "Codes in Hanoi and Sierpinski graphs", "reason": "perfect codes in these graphs are known", "evidence": "Klavzar, Milutinovic and Petr (1-perfect codes in Sierpinski graphs)"},
- {"idea": "Permutation codes under the cyclic Kendall tau metric", "reason": "studied", "evidence": "arXiv 1310.5515 (perfect permutation codes with the Kendall tau metric, cyclic version included)"},
- {"idea": "Covering systems of the Gaussian integers", "reason": "the minimum modulus problem in number fields is studied", "evidence": "arXiv 2302.05946, 1012.3686"},
- {"idea": "Domination numbers of Paley graphs", "reason": "bounds for Paley and Paley-type graphs are studied", "evidence": "A. Das (2019), domination of Paley-type graphs; the existential closure of Paley graphs"},
- {"idea": "Maximum cut (Ising antiferromagnet) of the odd graphs", "reason": "solved for Kneser graphs K(n, r) with n <= (4.3 + o(1)) r, which includes the odd graphs", "evidence": "S. Poljak, Zs. Tuza, Maximum bipartite subgraphs of Kneser graphs (1987)"},
- {"idea": "Kemeny's constant of alkane trees (maximum degree 4)", "reason": "on trees it is the Gutman index over 2(n - 1), whose extremal trees with degree constraints are studied", "evidence": "Das and Vetrik (general Gutman index); Andova et al. (2012); arXiv 2209.11271"},
- {"idea": "Lattice clusters with short-range attraction and long-range repulsion on the triangular lattice", "reason": "studied", "evidence": "arXiv 1401.0801"},
- {"idea": "Dispersing points on the surface of a regular tetrahedron", "reason": "solved for small numbers of points in published puzzle solutions", "evidence": "'Solutions Christmas problem 2004' (petericepudding.com)"},
- {"idea": "Number of designable structures in the Nussinov model", "reason": "designability in this model is characterised", "evidence": "arXiv 1502.03201, 1603.03577"},
- {"idea": "Most error-robust genetic codes", "reason": "studied", "evidence": "arXiv 0909.1442, 0908.3579"},
- {"idea": "Most attractors or fixed points of Boolean threshold networks", "reason": "maximum numbers of fixed points of AND-OR-NOT networks are studied", "evidence": "Aracena, Richard, Salinas (2014) and later work"},
- {"idea": "Grid subsets with no four points forming a square (or other 4-point patterns)", "reason": "studied", "evidence": "arXiv 2601.14465"},
- {"idea": "Euler-type prime-producing quadratics over the Gaussian integers", "reason": "reduces to prime-producing quartic polynomials, a studied records area", "evidence": "the records of prime-producing polynomials"},
- {"idea": "Exact ground states of the classical Rydberg Hamiltonian on finite square arrays", "reason": "classical ground states of Rydberg arrays are studied", "evidence": "classical-limit phase diagrams of square-lattice Rydberg arrays"},
- {"idea": "Discrete Heilbronn problem in the triangular grid", "reason": "a discretisation of the Heilbronn problem in a triangle, which is studied; the values stay bounded and say little", "evidence": "Heilbronn's problem for triangles"},
- {"idea": "Ising antiferromagnet on the Hoffman-Singleton graph", "reason": "closed by our own computation: a configuration meets the eigenvalue bound (maximum cut 125), so it is not open", "evidence": "our annealer and the bound n (k - lambda_min) / 4"},
- {"idea": "Slater index (fewest arcs to reverse for a transitive tournament) of the Paley tournaments", "reason": "studied: Paley tournaments are the standard explicit examples in the problem of ranking tournaments, with published bounds on their Slater index", "evidence": "S. Satake, A constructive solution to a problem of ranking tournaments (arXiv:1902.10204) and the bounds for doubly regular tournaments it cites; web search 9 November 2026"},
- {"idea": "Schur numbers of the Gaussian integers (sum-free colourings of Gaussian integers in a box)", "reason": "studied: two-dimensional Schur numbers and colourings of the Gaussian integers have published results", "evidence": "arXiv:2112.03127 and a 2024 paper in Integers on two-dimensional Schur numbers; web search 9 November 2026"},
- {"idea": "Fullerenes with the smallest Kirchhoff index or Kemeny constant", "reason": "studied: resistance distances and the Kirchhoff index of fullerene graphs are published", "evidence": "P. W. Fowler, Resistance distances in fullerene graphs, Croatica Chemica Acta 75 (2002) 401-408, and later work on fullerene Kirchhoff indices"},
- {"idea": "Largest code in the 600-cell or E8 root graph with a given graph distance", "reason": "closed by our own computation: a meet-in-the-middle search settled the sizes we would have posed, so nothing open remained", "evidence": "our exhaustive search, 9 November 2026 (not published as a problem)"},
- {"idea": "Ising antiferromagnet on the Gosset graph (E7 polytope 3_21)", "reason": "closed by our own computation: a configuration meets the eigenvalue bound, so the ground state is known", "evidence": "our computation, 9 November 2026"},
- {"idea": "Largest DNA codes free of reverse complements for small lengths", "reason": "the simple upper bound is attained for every small length we could check, so the small cases are not open; larger lengths sit inside the studied theory of DNA codes", "evidence": "our computation, 9 November 2026; DNA codes with reverse-complement constraints are a studied subject"},
- {"idea": "Sidon sets made of quadratic residues modulo p", "reason": "dropped after first computations: not interesting enough as a problem of its own", "evidence": "our computation, 9 November 2026"},
- {"idea": "Golomb rulers whose marks are all primes", "reason": "dropped: our first values were weak and the problem adds little to Golomb rulers", "evidence": "our computation, 9 November 2026; Golomb rulers OEIS A003022"},
- {"idea": "Sets avoiding all solutions of a fixed Diophantine equation (anti-Diophantine sets)", "reason": "dropped: the extremal sets follow a trivial pattern", "evidence": "our computation, 9 November 2026"},
- {"idea": "Smallest decycling set (feedback vertex set) of the E8 root graph", "reason": "dropped: our first value was weak, too far from any lower bound to make a meaningful first value", "evidence": "our computation, 9 November 2026"},
- {"idea": "Ising antiferromagnet on planar point-set graphs (sunflower or Delaunay graphs)", "reason": "dropped: maximum cut of a planar graph is solvable in polynomial time, so these are not hard open cells", "evidence": "maximum cut is polynomial on planar graphs (Hadlock 1975)"},
- {"idea": "Ising antiferromagnet on the 120-cell", "reason": "closed by our own computation: a configuration meets the pentagon bound", "evidence": "each of the 720 pentagonal faces needs an unsatisfied edge and every edge lies in 3 faces, so E >= -1200 + 2 x 240 = -720; simulated annealing (tools/src/ising.c) reaches E = -720"},
- {"idea": "Domination number (covering code of radius 1) of the 120-cell graph", "reason": "closed by our own computation: the 120-cell graph has a perfect code", "evidence": "an exact-cover search finds 120 vertices whose closed neighbourhoods partition the 600 vertices, so the domination number is 600/5 = 120"},
- {"idea": "Ising antiferromagnet on the triangle-free strongly regular graphs (Gewirtz, M22, Higman-Sims), the graphs of the untracked tools/trianglefree_srg.py", "reason": "closed or too small: for the Gewirtz and Higman-Sims graphs a configuration meets the eigenvalue bound; the M22 graph has 77 vertices, within reach of exact max-cut solvers", "evidence": "simulated annealing (tools/src/ising.c) reaches E = -112 (Gewirtz) and -400 (Higman-Sims), the eigenvalue bounds m - n(k - lambda_min)/2; M22: -224 found against the bound -230"},
- {"idea": "Identifying codes of the Higman-Sims graph", "reason": "not added: identifying codes of vertex-transitive and strongly regular graphs are studied, and two identifying-code problems of ours exist", "evidence": "S. Gravier, A. Parreau, S. Rottey, L. Storme, E. Vandomme, Identifying codes in vertex-transitive graphs and strongly regular graphs (arXiv:1411.5275)"},
- {"idea": "Largest aluminium content of zeolite frameworks under Loewenstein's rule (independent sets of the T-site net)", "reason": "studied: the independence quotient of periodic nets", "evidence": "R. Klee (1974) and J.-G. Eon, M. Moreira de Oliveira (Acta Cryst. A, 2021), found by web search on 9 November 2026"},
- {"idea": "No four concyclic points in the triangular grid", "reason": "too close to current work on the no-four-on-a-circle problem in lattices", "evidence": "arXiv:2609.20447 (The extensible no-four-on-a-circle problem, 2026); OEIS A395821 (n x n grid, no four on a circle or a line)"},
- {"idea": "Benzenoids with the most or the fewest spanning trees", "reason": "dropped: spanning-tree counts of benzenoid chains and the spanning-tree density of benzenoids are studied, and by planar duality the count is det(6I - A) for the adjacency matrix A of the hexagon graph, which made the extremes look structured rather than hard", "evidence": "arXiv:2102.02089 (spanning trees of pyrene and triphenylene chains); Gutman, Mallion and Essam on spanning-tree density"},
- {"idea": "HP lattice proteins on the FCC lattice (Fibonacci sequences)", "reason": "dropped: HP folding on the FCC lattice is solved exactly for long sequences by hydrophobic-core construction", "evidence": "R. Backofen, S. Will, A constraint-based approach to fast and exact structure prediction in three-dimensional protein models, Constraints 11 (2006) 5-30 (the CPSP tools)"},
- {"idea": "Splitting a segmented mirror into the fewest non-redundant groups (pupil remapping by segment tilting)", "reason": "the question is studied; only our instance (the hexagonal segment layout with its centre removed) was new", "evidence": "A. K. Taras, G. Piroscia, P. Tuthill, Jewel Optics I (arXiv:2501.01570, 2025): pupils tiled by as few non-redundant sets as possible, found by local search; the Keck segment-tilting experiment (Monnier et al. 2009, arXiv:0905.3495). Our exact values (Keck's 36 segments need 5 groups, 4 are impossible) stay in our records."},
- {"idea": "The slewing tour of the Bright Star Catalogue for an equatorial mount", "reason": "the question is studied; only our instance (the catalogue and the idealised mount metric) was new", "evidence": "the Traveling Telescope Problem (L. Handley, E. A. Petigura, V. V. Misic, arXiv:2310.18497) and survey schedulers that order targets by slew time as a travelling salesman problem (Zwicky Transient Facility, arXiv:1905.02209)"},
- {"idea": "The smallest star-tracker catalogue with at least three stars in every field of view", "reason": "the question is studied; only our instance (the Bright Star Catalogue with V <= 5.5, 10-degree fields, HEALPix pointings) was new", "evidence": "guide-star catalogue generation for star trackers: the design rule of more than two stars in every field, solved by catalogue thinning, genetic algorithms, entropy and probability criteria (e.g. Generation of guide star catalog for star trackers, IEEE Sensors Journal 2018)"},
- {"idea": "An optimal strategy for Primel (Wordle played on the 8,363 five-digit primes)", "reason": "the question is solved for Wordle-type games; a new word list is a new instance of a solved problem class, not a new question", "evidence": "exact optimal Wordle strategies (A. Selby 2022; D. Bertsimas and A. Paskov, Operations Research, doi:10.1287/opre.2022.0434) and Mastermind (D. E. Knuth 1976; K. Koyama and T. W. Lai 1993). Our strategy (29,016 guesses, average 3.4696; lower bound 24,866) stays in our records."}
+ {
+  "idea": "Largest Sidon set in {1..n} that is also sum-free",
+  "reason": "already known: such sets are exactly Golomb rulers with a mark at 0 minus that mark, so the values are the Golomb ruler lengths",
+  "evidence": "OEIS A003022 (our thresholds 1, 3, 6, 11, 17, 25, 34, 44, 55, 72 are its terms)"
+ },
+ {
+  "idea": "No three in line in the triangular grid",
+  "reason": "already in the OEIS",
+  "evidence": "OEIS A234349 (our values 1, 3, 4, 6, 7, 8, 10, 11, 12, 13, 15 match)"
+ },
+ {
+  "idea": "Snakes (longest induced paths) in Fibonacci cubes",
+  "reason": "already in the OEIS",
+  "evidence": "OEIS A357619 (our values 2, 3, 6, 9, 13, 20, 30 match)"
+ },
+ {
+  "idea": "Exact sizes of corner-free sets in the n x n grid",
+  "reason": "the corners problem is heavily studied",
+  "evidence": "arXiv: 36 results for corner-free, e.g. 2012.03187, 2209.10012"
+ },
+ {
+  "idea": "Fewest monochromatic Schur triples in 3-colourings of {1..n}",
+  "reason": "studied (minimum monochromatic Schur triples and generalizations)",
+  "evidence": "arXiv 1609.07639, 1904.01925, math/9803149"
+ },
+ {
+  "idea": "Fewest monochromatic 4-cycles in 2-colourings of K_n",
+  "reason": "Ramsey multiplicity of cycles studied",
+  "evidence": "arXiv 2108.00991, 2606.01996, 2609.07285"
+ },
+ {
+  "idea": "Largest induced subgraph of the n-cube with maximum degree 1",
+  "reason": "settled by Huang's sensitivity theorem (the answer is 2^(n-1))",
+  "evidence": "arXiv 1907.00847"
+ },
+ {
+  "idea": "2-colourings of grids with no monochromatic square in any orientation",
+  "reason": "studied (homothetic and similar copies in square and triangular grids)",
+  "evidence": "arXiv 2512.23303"
+ },
+ {
+  "idea": "Distinct subset sums in the Gaussian integers",
+  "reason": "Erdos's distinct subset sums problem in higher dimensions is studied",
+  "evidence": "arXiv 2610.26970, 2510.06032"
+ },
+ {
+  "idea": "Smallest max(|A+A|, |AA|) over k-sets of integers",
+  "reason": "studied computationally",
+  "evidence": "arXiv 2307.06874, 2601.21828 (The sum-product problem for small sets)"
+ },
+ {
+  "idea": "Sets that are both additive and multiplicative Sidon sets",
+  "reason": "studied",
+  "evidence": "arXiv 2103.13066, 2203.13174"
+ },
+ {
+  "idea": "Sets with all pairwise least common multiples distinct",
+  "reason": "close to studied lcm problems",
+  "evidence": "arXiv 2609.07268"
+ },
+ {
+  "idea": "Binary codes up to rotation (necklace codes)",
+  "reason": "too close to cyclically permutable codes (Gilbert)",
+  "evidence": "arXiv: 18 results for cyclically permutable codes"
+ },
+ {
+  "idea": "Two-dimensional codes up to torus shifts",
+  "reason": "multidimensional cyclically permutable codes are studied",
+  "evidence": "arXiv 2609.24575"
+ },
+ {
+  "idea": "Error-correcting codes in Fibonacci cubes",
+  "reason": "perfect codes in Fibonacci and Lucas cubes are studied",
+  "evidence": "arXiv 1801.04106, 2004.10198"
+ },
+ {
+  "idea": "Run-length-limited binary codes with a minimum Hamming distance",
+  "reason": "constrained codes with error correction are classical",
+  "evidence": "the literature on distance-enhancing constrained codes"
+ },
+ {
+  "idea": "Codes in Hanoi and Sierpinski graphs",
+  "reason": "perfect codes in these graphs are known",
+  "evidence": "Klavzar, Milutinovic and Petr (1-perfect codes in Sierpinski graphs)"
+ },
+ {
+  "idea": "Permutation codes under the cyclic Kendall tau metric",
+  "reason": "studied",
+  "evidence": "arXiv 1310.5515 (perfect permutation codes with the Kendall tau metric, cyclic version included)"
+ },
+ {
+  "idea": "Covering systems of the Gaussian integers",
+  "reason": "the minimum modulus problem in number fields is studied",
+  "evidence": "arXiv 2302.05946, 1012.3686"
+ },
+ {
+  "idea": "Domination numbers of Paley graphs",
+  "reason": "bounds for Paley and Paley-type graphs are studied",
+  "evidence": "A. Das (2019), domination of Paley-type graphs; the existential closure of Paley graphs"
+ },
+ {
+  "idea": "Maximum cut (Ising antiferromagnet) of the odd graphs",
+  "reason": "solved for Kneser graphs K(n, r) with n <= (4.3 + o(1)) r, which includes the odd graphs",
+  "evidence": "S. Poljak, Zs. Tuza, Maximum bipartite subgraphs of Kneser graphs (1987)"
+ },
+ {
+  "idea": "Kemeny's constant of alkane trees (maximum degree 4)",
+  "reason": "on trees it is the Gutman index over 2(n - 1), whose extremal trees with degree constraints are studied",
+  "evidence": "Das and Vetrik (general Gutman index); Andova et al. (2012); arXiv 2209.11271"
+ },
+ {
+  "idea": "Lattice clusters with short-range attraction and long-range repulsion on the triangular lattice",
+  "reason": "studied",
+  "evidence": "arXiv 1401.0801"
+ },
+ {
+  "idea": "Dispersing points on the surface of a regular tetrahedron",
+  "reason": "solved for small numbers of points in published puzzle solutions",
+  "evidence": "'Solutions Christmas problem 2004' (petericepudding.com)"
+ },
+ {
+  "idea": "Number of designable structures in the Nussinov model",
+  "reason": "designability in this model is characterised",
+  "evidence": "arXiv 1502.03201, 1603.03577"
+ },
+ {
+  "idea": "Most error-robust genetic codes",
+  "reason": "studied",
+  "evidence": "arXiv 0909.1442, 0908.3579"
+ },
+ {
+  "idea": "Most attractors or fixed points of Boolean threshold networks",
+  "reason": "maximum numbers of fixed points of AND-OR-NOT networks are studied",
+  "evidence": "Aracena, Richard, Salinas (2014) and later work"
+ },
+ {
+  "idea": "Grid subsets with no four points forming a square (or other 4-point patterns)",
+  "reason": "studied",
+  "evidence": "arXiv 2601.14465"
+ },
+ {
+  "idea": "Euler-type prime-producing quadratics over the Gaussian integers",
+  "reason": "reduces to prime-producing quartic polynomials, a studied records area",
+  "evidence": "the records of prime-producing polynomials"
+ },
+ {
+  "idea": "Exact ground states of the classical Rydberg Hamiltonian on finite square arrays",
+  "reason": "classical ground states of Rydberg arrays are studied",
+  "evidence": "classical-limit phase diagrams of square-lattice Rydberg arrays"
+ },
+ {
+  "idea": "Discrete Heilbronn problem in the triangular grid",
+  "reason": "a discretisation of the Heilbronn problem in a triangle, which is studied; the values stay bounded and say little",
+  "evidence": "Heilbronn's problem for triangles"
+ },
+ {
+  "idea": "Ising antiferromagnet on the Hoffman-Singleton graph",
+  "reason": "closed by our own computation: a configuration meets the eigenvalue bound (maximum cut 125), so it is not open",
+  "evidence": "our annealer and the bound n (k - lambda_min) / 4"
+ },
+ {
+  "idea": "Slater index (fewest arcs to reverse for a transitive tournament) of the Paley tournaments",
+  "reason": "studied: Paley tournaments are the standard explicit examples in the problem of ranking tournaments, with published bounds on their Slater index",
+  "evidence": "S. Satake, A constructive solution to a problem of ranking tournaments (arXiv:1902.10204) and the bounds for doubly regular tournaments it cites; web search 9 November 2026"
+ },
+ {
+  "idea": "Schur numbers of the Gaussian integers (sum-free colourings of Gaussian integers in a box)",
+  "reason": "studied: two-dimensional Schur numbers and colourings of the Gaussian integers have published results",
+  "evidence": "arXiv:2112.03127 and a 2024 paper in Integers on two-dimensional Schur numbers; web search 9 November 2026"
+ },
+ {
+  "idea": "Fullerenes with the smallest Kirchhoff index or Kemeny constant",
+  "reason": "studied: resistance distances and the Kirchhoff index of fullerene graphs are published",
+  "evidence": "P. W. Fowler, Resistance distances in fullerene graphs, Croatica Chemica Acta 75 (2002) 401-408, and later work on fullerene Kirchhoff indices"
+ },
+ {
+  "idea": "Largest code in the 600-cell or E8 root graph with a given graph distance",
+  "reason": "closed by our own computation: a meet-in-the-middle search settled the sizes we would have posed, so nothing open remained",
+  "evidence": "our exhaustive search, 9 November 2026 (not published as a problem)"
+ },
+ {
+  "idea": "Ising antiferromagnet on the Gosset graph (E7 polytope 3_21)",
+  "reason": "closed by our own computation: a configuration meets the eigenvalue bound, so the ground state is known",
+  "evidence": "our computation, 9 November 2026"
+ },
+ {
+  "idea": "Largest DNA codes free of reverse complements for small lengths",
+  "reason": "the simple upper bound is attained for every small length we could check, so the small cases are not open; larger lengths sit inside the studied theory of DNA codes",
+  "evidence": "our computation, 9 November 2026; DNA codes with reverse-complement constraints are a studied subject"
+ },
+ {
+  "idea": "Sidon sets made of quadratic residues modulo p",
+  "reason": "dropped after first computations: not interesting enough as a problem of its own",
+  "evidence": "our computation, 9 November 2026"
+ },
+ {
+  "idea": "Golomb rulers whose marks are all primes",
+  "reason": "dropped: our first values were weak and the problem adds little to Golomb rulers",
+  "evidence": "our computation, 9 November 2026; Golomb rulers OEIS A003022"
+ },
+ {
+  "idea": "Sets avoiding all solutions of a fixed Diophantine equation (anti-Diophantine sets)",
+  "reason": "dropped: the extremal sets follow a trivial pattern",
+  "evidence": "our computation, 9 November 2026"
+ },
+ {
+  "idea": "Smallest decycling set (feedback vertex set) of the E8 root graph",
+  "reason": "dropped: our first value was weak, too far from any lower bound to make a meaningful first value",
+  "evidence": "our computation, 9 November 2026"
+ },
+ {
+  "idea": "Ising antiferromagnet on planar point-set graphs (sunflower or Delaunay graphs)",
+  "reason": "dropped: maximum cut of a planar graph is solvable in polynomial time, so these are not hard open cells",
+  "evidence": "maximum cut is polynomial on planar graphs (Hadlock 1975)"
+ },
+ {
+  "idea": "Ising antiferromagnet on the 120-cell",
+  "reason": "closed by our own computation: a configuration meets the pentagon bound",
+  "evidence": "each of the 720 pentagonal faces needs an unsatisfied edge and every edge lies in 3 faces, so E >= -1200 + 2 x 240 = -720; simulated annealing (tools/src/ising.c) reaches E = -720"
+ },
+ {
+  "idea": "Domination number (covering code of radius 1) of the 120-cell graph",
+  "reason": "closed by our own computation: the 120-cell graph has a perfect code",
+  "evidence": "an exact-cover search finds 120 vertices whose closed neighbourhoods partition the 600 vertices, so the domination number is 600/5 = 120"
+ },
+ {
+  "idea": "Ising antiferromagnet on the triangle-free strongly regular graphs (Gewirtz, M22, Higman-Sims), the graphs of the untracked tools/trianglefree_srg.py",
+  "reason": "closed or too small: for the Gewirtz and Higman-Sims graphs a configuration meets the eigenvalue bound; the M22 graph has 77 vertices, within reach of exact max-cut solvers",
+  "evidence": "simulated annealing (tools/src/ising.c) reaches E = -112 (Gewirtz) and -400 (Higman-Sims), the eigenvalue bounds m - n(k - lambda_min)/2; M22: -224 found against the bound -230"
+ },
+ {
+  "idea": "Identifying codes of the Higman-Sims graph",
+  "reason": "not added: identifying codes of vertex-transitive and strongly regular graphs are studied, and two identifying-code problems of ours exist",
+  "evidence": "S. Gravier, A. Parreau, S. Rottey, L. Storme, E. Vandomme, Identifying codes in vertex-transitive graphs and strongly regular graphs (arXiv:1411.5275)"
+ },
+ {
+  "idea": "Largest aluminium content of zeolite frameworks under Loewenstein's rule (independent sets of the T-site net)",
+  "reason": "studied: the independence quotient of periodic nets",
+  "evidence": "R. Klee (1974) and J.-G. Eon, M. Moreira de Oliveira (Acta Cryst. A, 2021), found by web search on 9 November 2026"
+ },
+ {
+  "idea": "No four concyclic points in the triangular grid",
+  "reason": "too close to current work on the no-four-on-a-circle problem in lattices",
+  "evidence": "arXiv:2609.20447 (The extensible no-four-on-a-circle problem, 2026); OEIS A395821 (n x n grid, no four on a circle or a line)"
+ },
+ {
+  "idea": "Benzenoids with the most or the fewest spanning trees",
+  "reason": "dropped: spanning-tree counts of benzenoid chains and the spanning-tree density of benzenoids are studied, and by planar duality the count is det(6I - A) for the adjacency matrix A of the hexagon graph, which made the extremes look structured rather than hard",
+  "evidence": "arXiv:2102.02089 (spanning trees of pyrene and triphenylene chains); Gutman, Mallion and Essam on spanning-tree density"
+ },
+ {
+  "idea": "HP lattice proteins on the FCC lattice (Fibonacci sequences)",
+  "reason": "dropped: HP folding on the FCC lattice is solved exactly for long sequences by hydrophobic-core construction",
+  "evidence": "R. Backofen, S. Will, A constraint-based approach to fast and exact structure prediction in three-dimensional protein models, Constraints 11 (2006) 5-30 (the CPSP tools)"
+ },
+ {
+  "idea": "Splitting a segmented mirror into the fewest non-redundant groups (pupil remapping by segment tilting)",
+  "reason": "the question is studied; only our instance (the hexagonal segment layout with its centre removed) was new",
+  "evidence": "A. K. Taras, G. Piroscia, P. Tuthill, Jewel Optics I (arXiv:2501.01570, 2025): pupils tiled by as few non-redundant sets as possible, found by local search; the Keck segment-tilting experiment (Monnier et al. 2009, arXiv:0905.3495). Our exact values (Keck's 36 segments need 5 groups, 4 are impossible) stay in our records."
+ },
+ {
+  "idea": "The slewing tour of the Bright Star Catalogue for an equatorial mount",
+  "reason": "the question is studied; only our instance (the catalogue and the idealised mount metric) was new",
+  "evidence": "the Traveling Telescope Problem (L. Handley, E. A. Petigura, V. V. Misic, arXiv:2310.18497) and survey schedulers that order targets by slew time as a travelling salesman problem (Zwicky Transient Facility, arXiv:1905.02209)"
+ },
+ {
+  "idea": "The smallest star-tracker catalogue with at least three stars in every field of view",
+  "reason": "the question is studied; only our instance (the Bright Star Catalogue with V <= 5.5, 10-degree fields, HEALPix pointings) was new",
+  "evidence": "guide-star catalogue generation for star trackers: the design rule of more than two stars in every field, solved by catalogue thinning, genetic algorithms, entropy and probability criteria (e.g. Generation of guide star catalog for star trackers, IEEE Sensors Journal 2018)"
+ },
+ {
+  "idea": "An optimal strategy for Primel (Wordle played on the 8,363 five-digit primes)",
+  "reason": "the question is solved for Wordle-type games; a new word list is a new instance of a solved problem class, not a new question",
+  "evidence": "exact optimal Wordle strategies (A. Selby 2022; D. Bertsimas and A. Paskov, Operations Research, doi:10.1287/opre.2022.0434) and Mastermind (D. E. Knuth 1976; K. Koyama and T. W. Lai 1993). Our strategy (29,016 guesses, average 3.4696; lower bound 24,866) stays in our records."
+ },
+ {
+  "idea": "The smallest benzenoid with exactly K Kekule structures (which Kekule structure counts benzenoids with h hexagons attain)",
+  "reason": "the question is studied: the distribution of Kekule structure counts over the benzenoids with h hexagons, and the benzenoids with a given count, are tabulated by the chemists who enumerated benzenoids",
+  "evidence": "S. J. Cyvin, I. Gutman, Kekule Structures in Benzenoid Hydrocarbons, Lecture Notes in Chemistry 46 (Springer 1988), chapter 'Distribution of K, and Kekule Structure Statistics' (including the numbers of normal benzenoids with a given K); the enumeration report of Balaban, Brunvoll, Cioslowski, Cyvin and others cites works of Cyvin and coauthors 'where the benzenoids are enumerated according to their Kekule structure counts'; web searches 9 November 2026"
+ },
+ {
+  "idea": "The longest peptide with all fragment (contiguous sub-peptide) masses different, with integer residue masses",
+  "reason": "trivial: the fragments of length one are the residues themselves, so no residue mass may repeat and no such peptide has more than 18 residues (the 18 distinct integer masses of the 20 amino acids); our search found 18 at once",
+  "evidence": "our computation, 9 November 2026 (prefix masses form a Golomb ruler whose consecutive gaps must be distinct residue masses)"
+ },
+ {
+  "idea": "The largest set of binary phylogenetic trees on n leaves with no split in common (pairwise at the largest Robinson-Foulds distance)",
+  "reason": "settled by a simple bound: every unrooted binary tree has at least two cherries (splits of two leaves), so at most n(n-1)/4 trees, and caterpillars with two cherries each, whose other splits are plentiful, appear to meet it; not an open question worth posing",
+  "evidence": "the cherry count; arXiv and OEIS searches 9 November 2026 found no work on it"
+ },
+ {
+  "idea": "The shortest DNA sequence containing every reverse-complement palindrome of length 2k (every possible palindromic restriction site)",
+  "reason": "the question is studied for binary palindromes (OEIS A330022, A390882: shortest binary strings containing all palindromes of length n), so the DNA version would be a new instance; in addition the overlaps between palindromes are rigid (each hexamer palindrome has exactly one partner at overlap 3, an involution), so the optimum follows from a matching argument rather than search",
+  "evidence": "OEIS A330022 and A390882; our analysis of the overlaps, 9 November 2026"
+ },
+ {
+  "idea": "The straight-line complexity of the Pochhammer polynomials (x-1)(x-2)...(x-n) for small n",
+  "reason": "too close to studied work: these products are the standard examples of the Shub-Smale tau-conjecture, and the straight-line complexity of the small factorials, their values at 0, is computed",
+  "evidence": "The straight line complexity of small factorials and primorials (arXiv:1306.3091); the tau-conjecture literature (arXiv searches 9 November 2026)"
+ },
+ {
+  "idea": "Arithmetic progressions of lucky numbers",
+  "reason": "studied: the least starts of arithmetic progressions of consecutive lucky (and ludic) numbers are in the OEIS",
+  "evidence": "OEIS A330362, A350005"
+ },
+ {
+  "idea": "The orientable genus of the Higman-Sims graph (a quadrangular embedding would give genus 226)",
+  "reason": "the minimum genus of famous symmetric graphs is an active, studied question (the Hoffman-Singleton graph was settled with methods designed for such graphs), and our first annealing values were far from the bound",
+  "evidence": "M. Conder, K. Stokes, New methods for finding minimum genus embeddings of graphs on orientable and non-orientable surfaces, Ars Math. Contemp. 17 (2019) 1-35; our computation, 9 November 2026"
+ }
 ]

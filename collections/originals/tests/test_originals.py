@@ -244,6 +244,43 @@ def controls():
         t = " ".join(lines_of(certificates(P["prime-cover"]))).split()
         refuse("prime-cover", " ".join(t[1:]) + "\n", "the code without its first prime (every prime of it is needed)")
         refuse("prime-cover", " ".join(t + ["10001"]) + "\n", "a code containing 10001 = 73 x 137")
+    if "diamond-bonds" in P:
+        L = lines_of(certificates(P["diamond-bonds"]))
+        x, y, z = map(int, L[0].split())
+        refuse("diamond-bonds", "\n".join([f"{x + 1} {y + 1} {z}"] + L[1:]) + "\n", "a point that is not a site of the diamond lattice")
+        refuse("diamond-bonds", "\n".join(L[:-1] + ["40 40 40"]) + "\n", "a piece with one atom far away (not connected)")
+    if "mclaughlin-ising" in P:
+        sp = "".join(lines_of(certificates(P["mclaughlin-ising"])))
+        refuse("mclaughlin-ising", sp[:-1] + "\n", "274 spins")
+    if "prime-code" in P:
+        t = " ".join(lines_of(certificates(P["prime-code"]))).split()
+        first = t[0]
+        isp = lambda m: m > 1 and all(m % d for d in range(2, int(m ** 0.5) + 1))
+        near = next(str(q) for k in range(5) for dgt in "0123456789" for q in [int(first[:k] + dgt + first[k + 1:])]
+                    if dgt != first[k] and not (k == 0 and dgt == "0") and isp(q) and str(q) not in t)
+        refuse("prime-code", " ".join(t + [near]) + "\n", f"the code with {near}, one digit away from {first}")
+        refuse("prime-code", " ".join(t + ["10001"]) + "\n", "a code containing 10001 = 73 x 137")
+    if "gauss-jacobsthal" in P:
+        x0, y0, side = lines_of(certificates(P["gauss-jacobsthal"]))[0].split()
+        refuse("gauss-jacobsthal", f"1 0 {side}\n", "a square containing the unit 1, divisible by no prime")
+        refuse("gauss-jacobsthal", f"{x0} {y0}\n", "a corner without the side")
+        refuse("gauss-jacobsthal", f"0 1 {side}\n", "a square containing the unit i")
+    if "diamond-knot" in P:
+        L = lines_of(certificates(P["diamond-knot"]))
+        chair = "0 0 0\n1 -1 -1\n2 0 -2\n3 1 -1\n2 2 0\n1 1 1\n"
+        refuse("diamond-knot", chair, "a six-membered ring (cyclohexane chair, unknotted)")
+        refuse("diamond-knot", "\n".join(["40 40 40"] + L[1:]) + "\n", "the ring with one atom moved far away (a broken bond)")
+    if "diamond-link" in P:
+        text = certificates(P["diamond-link"])
+        ring1 = text.split("\n-\n")[0].strip()
+        chair = "0 0 0\n1 -1 -1\n2 0 -2\n3 1 -1\n2 2 0\n1 1 1\n"
+        far = "".join(f"{int(a) + 40} {int(b) + 40} {int(c)}\n" for a, b, c in (l.split() for l in chair.splitlines()))
+        refuse("diamond-link", chair + "-\n" + far, "two separate chairs (linking number 0)")
+        refuse("diamond-link", ring1 + "\n-\n" + ring1 + "\n", "a ring paired with itself (shared sites)")
+    if "e8-coulomb" in P:
+        L = lines_of(certificates(P["e8-coulomb"]))
+        refuse("e8-coulomb", "\n".join(["2 2 2 0 0 0 0 0"] + L[1:]) + "\n", "a vector that is not a root of E8")
+        refuse("e8-coulomb", "\n".join(L[:-1] + [L[0]]) + "\n", "a root used twice")
 
 
 def cross_checks():
@@ -501,6 +538,143 @@ def cross_checks():
     # the uniform three-part splitting has largest overlap exactly 1/3
     code, res, _ = run("collections/originals/checkers/orig_comb.py", ["overlap-three", 3, 3, write("uni3.txt", "1 1 1\n1 1 1\n1 1 1\n")])
     expect(f"cross overlap-three the uniform splitting scores 1/3", res == "1/3", res)
+    # diamond lattice: the connected pieces with up to 7 atoms, grown here set by set and identified up to translation,
+    # number 2, 4, 12, 44, 182, 796, 3612 (OEIS A039740 from two atoms on) with at most 0, 1, 2, 3, 4, 6, 7 bonds,
+    # as the exhaustive search (tools/src/diamond.c) and the problem page state
+    def dnb(p):
+        sg = 1 if p[0] % 2 == 0 else -1
+        return [(p[0] + sg * a, p[1] + sg * b, p[2] + sg * c) for a, b, c in ((1, 1, 1), (1, -1, -1), (-1, 1, -1), (-1, -1, 1))]
+    def dcanon(S):
+        m = min(S)
+        t = m if m[0] % 2 == 0 else (m[0] - 1, m[1] - 1, m[2] - 1)
+        return tuple(sorted((a - t[0], b - t[1], c - t[2]) for a, b, c in S))
+    level, counts, most = {dcanon([(0, 0, 0)]), dcanon([(1, 1, 1)])}, [], []
+    for size in range(1, 8):
+        counts.append(len(level))
+        most.append(max(sum(1 for q in S for r in dnb(q) if r in set(S)) // 2 for S in level))
+        if size < 7:
+            level = {dcanon(set(S) | {r}) for S in level for q in S for r in dnb(q) if r not in S}
+    expect("cross diamond-bonds pieces of 1..7 atoms: 2, 4, 12, 44, 182, 796, 3612 (A039740) with at most 0, 1, 2, 3, 4, 6, 7 bonds",
+           counts == [2, 4, 12, 44, 182, 796, 3612] and most == [0, 1, 2, 3, 4, 6, 7], (counts, most))
+    if "diamond-bonds" in problems_by_id():
+        dp = problems_by_id()["diamond-bonds"]
+        exact_rows = {r[0]: (r[1], r[2]) for r in dp["first_values"]["rows"] if str(r[4]).startswith("exact")}
+        expect("cross diamond-bonds the page's exact rows for 1..7 atoms agree with the enumeration here",
+               all(exact_rows[k] == (most[k - 1], 4 * k - 2 * most[k - 1]) for k in range(1, 8)), exact_rows)
+    adam = "0 0 0\n1 -1 -1\n2 0 -2\n3 1 -1\n4 0 0\n3 -1 1\n2 0 2\n2 2 0\n2 -2 0\n1 1 1\n"
+    code, res, _ = run("collections/originals/checkers/orig_chem.py", ["diamond-bonds", 10, write("adamantane.txt", adam)])
+    expect("cross diamond-bonds adamantane: 10 atoms, 12 bonds, 16 hydrogens (C10H16)", res == "16", res)
+    # McLaughlin graph: the checker's graph is strongly regular (275, 112, 30, 56) (checked for every pair through the
+    # first 12 vertices), and the certificate's energy agrees with a recount from the graph tool's matrix
+    import orig_phys
+    mn, medges = orig_phys.mclaughlin_graph()
+    madj = [set() for _ in range(mn)]
+    for a, b in medges:
+        madj[a].add(b)
+        madj[b].add(a)
+    srg_ok = all(len(madj[v]) == 112 for v in range(mn)) and all(len(madj[u] & madj[v]) == (30 if v in madj[u] else 56) for u in range(12) for v in range(mn) if v != u)
+    expect("cross mclaughlin-ising the graph is srg(275, 112, 30, 56)", mn == 275 and srg_ok)
+    if "mclaughlin-ising" in problems_by_id():
+        sys.path.insert(0, os.path.join(HERE, "tools"))
+        import mclaughlin_graph
+        A = mclaughlin_graph.graph()
+        sp = "".join(lines_of(certificates(problems_by_id()["mclaughlin-ising"])))
+        sv = [1 if c == "+" else -1 for c in sp]
+        e2 = sum(A[i][j] * sv[i] * sv[j] for i in range(275) for j in range(i + 1, 275))
+        expect(f"cross mclaughlin-ising the certificate's energy {e2} from the tool's matrix equals the best known value",
+               str(e2) == problems_by_id()["mclaughlin-ising"]["best_known"]["exact"], e2)
+    # codes made of primes: a 36-prime code of four-digit primes meets the bound 9 x 4 (two codewords may agree in at most
+    # one digit, so the pairs (first digit, last digit) are all different), and no five three-digit primes differ
+    # pairwise in all three digits (only four possible last digits)
+    code4 = "1009 1117 9859 1361 1583 2129 2207 2333 3037 3163 3251 3319 4073 4289 4327 4441 5101 5413 5557 5639 6469 6521 6653 6947 7477 7549 7681 7703 8731 8867 8999 9697 8243 9923 9011 2971"
+    code, res, _ = run("collections/originals/checkers/orig_codes.py", ["prime-code", 4, 3, write("pc4.txt", code4 + "\n")])
+    pairs4 = {(w[0], w[-1]) for w in code4.split()}
+    expect("cross prime-code four-digit primes: a code of 36 meets the bound 9 x 4 = 36", res == "36" and len(pairs4) == 36, res)
+    p3 = [q for q in range(100, 1000) if all(q % d for d in range(2, int(q ** 0.5) + 1))]
+    far = lambda a, b: all(x != y for x, y in zip(str(a), str(b)))
+    four = next(([a, b, c, d] for a in p3 for b in p3 if far(a, b) for c in p3 if far(a, c) and far(b, c)
+                 for d in p3 if far(a, d) and far(b, d) and far(c, d)), None)
+    expect("cross prime-code three-digit primes: 4 differing pairwise in every digit exist, 5 cannot (last digits 1, 3, 7, 9)",
+           four is not None and {str(q)[-1] for q in p3} == {"1", "3", "7", "9"}, four)
+    # Gaussian Jacobsthal: exhaustive search over one residue class per prime (independent of tools/src/gjacob.c) gives
+    # s = 2 for norm <= 5 and s = 4 for norm <= 13 (the next sizes impossible); a 4 x 4 cover turned into a square by
+    # the Chinese remainder theorem (brute force over corners modulo 2 x 3 x 5 x 13) is certified by the checker
+    def gideals(X):
+        out = []
+        for q in range(2, X + 1):
+            if any(q % d == 0 for d in range(2, q)):
+                continue
+            if q == 2:
+                out.append((2, "r", lambda x, y: (x + y) % 2))
+            elif q % 4 == 1:
+                for r in [a for a in range(2, q) if (a * a + 1) % q == 0]:
+                    out.append((q, "s", lambda x, y, q=q, r=r: (x + y * r) % q))
+            elif q * q <= X:
+                out.append((q, "i", lambda x, y, q=q: (x % q) * q + (y % q)))
+        return out
+    def gcover(X, side):
+        ids = gideals(X)
+        full = (1 << (side * side)) - 1
+        opts = []
+        for _, _, f in ids:
+            m = {}
+            for x in range(side):
+                for y in range(side):
+                    m.setdefault(f(x, y), [0, None])[0] |= 1 << (x * side + y)
+                    m[f(x, y)][1] = f(x, y)
+            opts.append(sorted((v[0], v[1]) for v in m.values()))
+        for combo in itertools.product(*opts):
+            acc = 0
+            for v, _ in combo:
+                acc |= v
+            if acc == full:
+                return ids, [c for _, c in combo]
+        return None
+    small = [(X, sd, gcover(X, sd) is not None) for X, sd in ((5, 2), (5, 3), (13, 4), (13, 5))]
+    expect("cross gauss-jacobsthal exhaustive over residue classes: s(5) = 2, s(13) = 4", [o for _, _, o in small] == [True, False, True, False], small)
+    ids, classes = gcover(13, 4)
+    corner = next((x0, y0) for x0 in range(390) for y0 in range(390)
+                  if all((x0 + y0) % 2 == c if kind == "r" else (f(-x0, -y0) == c) for (q, kind, f), c in zip(ids, classes)))
+    code, res, _ = run("collections/originals/checkers/orig_numth.py", ["gauss-jacobsthal", 13, write("gj13.txt", f"{corner[0]} {corner[1]} 4\n")])
+    expect(f"cross gauss-jacobsthal the cover found here, placed at {corner[0]} + {corner[1]}i, is certified with side 4", res == "4", res)
+    # knot determinants: smooth trefoil, figure-eight and unknotted curves sampled at 120 integer points give 3, 5 and 1;
+    # the mirror image of our ring (x and y swapped, sites stay on the lattice) is certified with the same length
+    import math
+    import orig_chem
+    def curve(f, N=120, S=1000):
+        return [tuple(int(round(S * c)) for c in f(2 * math.pi * k / N)) for k in range(N)]
+    kd = [orig_chem.knot_determinant(curve(f)) for f in (
+        lambda t: (math.sin(t) + 2 * math.sin(2 * t), math.cos(t) - 2 * math.cos(2 * t), -math.sin(3 * t)),
+        lambda t: ((2 + math.cos(2 * t)) * math.cos(3 * t), (2 + math.cos(2 * t)) * math.sin(3 * t), math.sin(4 * t)),
+        lambda t: (math.cos(t), math.sin(t), 0.3 * math.sin(2 * t)))]
+    expect("cross diamond-knot knot determinants: trefoil 3, figure-eight 5, unknot 1", kd == [3, 5, 1], kd)
+    if "diamond-knot" in problems_by_id():
+        dk = problems_by_id()["diamond-knot"]
+        mirror = "".join(f"{b} {a} {c}\n" for a, b, c in (l.split() for l in lines_of(certificates(dk))))
+        code, res, _ = run("collections/originals/checkers/orig_chem.py", ["diamond-knot", write("mirror_knot.txt", mirror)])
+        expect("cross diamond-knot the mirror image of our ring is certified with the same length", code == 0 and res == dk["best_known"]["exact"], res)
+    # linking numbers: two circles forming a Hopf link give 1 up to sign, separate circles 0, and reversing one circle
+    # flips the sign
+    hopf_a = curve(lambda t: (math.cos(t), math.sin(t), 0.0), 80)
+    hopf_b = curve(lambda t: (1 + math.cos(t), 0.0, math.sin(t)), 80)
+    apart_b = curve(lambda t: (3 + math.cos(t), 0.0, math.sin(t)), 80)
+    lk = (orig_chem.linking_number(hopf_a, hopf_b), orig_chem.linking_number(hopf_a, apart_b), orig_chem.linking_number(hopf_a[::-1], hopf_b))
+    expect("cross diamond-link linking numbers: Hopf link +-1, separate circles 0, reversed circle opposite sign", abs(lk[0]) == 1 and lk[1] == 0 and lk[2] == -lk[0], lk)
+    # E8: the 240 roots (each with 56, 126, 56, 1 others at inner products 1, 0, -1, -2) have energy
+    # 6720/8 + 15120/64 + 6720/216 + 120/512, and the best three roots, found by brute force over pairs added to a fixed
+    # root (the Weyl group is transitive), are three roots summing to zero, with energy 3/216 = 1/72
+    import orig_geom
+    from fractions import Fraction
+    e8 = sorted({tuple(v) for i, j in itertools.combinations(range(8), 2) for si in (2, -2) for sj in (2, -2)
+                 for v in [[si if k == i else sj if k == j else 0 for k in range(8)]]} |
+                {s8 for s8 in itertools.product((1, -1), repeat=8) if s8.count(-1) % 2 == 0})
+    allroots = "".join(" ".join(map(str, r)) + "\n" for r in e8)
+    code, res, _ = run("collections/originals/checkers/orig_geom.py", ["e8-coulomb", 240, write("e8all.txt", allroots)])
+    want = Fraction(6720, 8) + Fraction(15120, 64) + Fraction(6720, 216) + Fraction(120, 512)
+    expect(f"cross e8-coulomb all 240 roots: energy {want}", res == f"{want.numerator}/{want.denominator}", res)
+    w = lambda a, b: Fraction(1, (4 - 2 * (sum(x * y for x, y in zip(a, b)) // 4)) ** 3)
+    best3 = min(w(e8[0], b) + w(e8[0], c) + w(b, c) for b, c in itertools.combinations(e8[1:], 2))
+    expect("cross e8-coulomb three roots: the minimum energy is 1/72 (brute force)", best3 == Fraction(1, 72), best3)
 
 
 def pages():

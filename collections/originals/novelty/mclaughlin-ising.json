@@ -1,0 +1,136 @@
+{
+ "id": "mclaughlin-ising",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"McLaughlin graph\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22McLaughlin+graph%22&start=0&max_results=10&sortBy=relevance",
+   "results": 5,
+   "top": [
+    {
+     "arxiv": "1607.03372v1",
+     "year": "2016",
+     "first_author": "Patric R. J. Östergård",
+     "title": "There is No McLaughlin Geometry"
+    },
+    {
+     "arxiv": "2508.02562v1",
+     "year": "2025",
+     "first_author": "Simon Schmidt",
+     "title": "Quantum symmetry of $3$-transitive graphs"
+    },
+    {
+     "arxiv": "1807.10525v2",
+     "year": "2018",
+     "first_author": "Christian Pech",
+     "title": "On a family of highly regular graphs by Brouwer, Ivanov, and Klin"
+    },
+    {
+     "arxiv": "2608.06573v5",
+     "year": "2026",
+     "first_author": "Igal Sason",
+     "title": "Shannon Capacity and Related Graph Invariants for Lexicographic Products"
+    },
+    {
+     "arxiv": "2412.11962v1",
+     "year": "2024",
+     "first_author": "Ludmila Yu. Tsiovkina",
+     "title": "On vertex-transitive distance-regular covers of complete graphs with an extremal smallest eigenvalue"
+    }
+   ],
+   "run": "2026-11-09T19:20:26Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"McLaughlin graph\" AND all:cut",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22McLaughlin+graph%22+AND+all%3Acut&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T19:20:30Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"strongly regular\" AND all:\"max-cut\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22strongly+regular%22+AND+all%3A%22max-cut%22&start=0&max_results=10&sortBy=relevance",
+   "results": 3,
+   "top": [
+    {
+     "arxiv": "1507.06254v2",
+     "year": "2015",
+     "first_author": "Sebastian M. Cioabă",
+     "title": "Max-cut and extendability of matchings in distance-regular graphs"
+    },
+    {
+     "arxiv": "2509.24108v1",
+     "year": "2025",
+     "first_author": "Reuben Tate",
+     "title": "Comparison of Hyperplane Rounding for Max-Cut and Quantum Approximate Optimization Algorithm over Certain Regular Graph Families"
+    },
+    {
+     "arxiv": "1912.12277v2",
+     "year": "2019",
+     "first_author": "Mario Szegedy",
+     "title": "What do QAOA energies reveal about graphs?"
+    }
+   ],
+   "run": "2026-11-09T19:20:34Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"strongly regular graphs\" AND all:\"maximum cut\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22strongly+regular+graphs%22+AND+all%3A%22maximum+cut%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T19:20:39Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"sporadic\" AND all:graph AND all:\"Ising\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22sporadic%22+AND+all%3Agraph+AND+all%3A%22Ising%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T19:20:44Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "McLaughlin graph",
+   "url": "https://oeis.org/search?q=McLaughlin+graph&fmt=json",
+   "results": 2,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A006918",
+     "name": "a(n) = binomial(n+3, 3)/4 for odd n, n*(n+2)*(n+4)/24 for even n."
+    },
+    {
+     "oeis": "A007997",
+     "name": "a(n) = ceiling((n-3)(n-4)/6)."
+    }
+   ],
+   "run": "2026-11-09T19:20:48Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "maximum cut McLaughlin",
+   "url": "https://oeis.org/search?q=maximum+cut+McLaughlin&fmt=json",
+   "results": 0,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [],
+   "run": "2026-11-09T19:20:53Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "McLaughlin graph maximum cut OR max-cut OR bipartite subgraph OR Ising, strongly regular graph 275 vertices",
+   "date": "2026-11-09",
+   "found": "the parameters (275, 112, 30, 56), spectrum 112, 2^252, (-28)^22, independence number 22 (Brouwer) and constructions; nothing on its maximum cut or Ising ground state"
+  },
+  {
+   "engine": "arXiv abstract",
+   "query": "arXiv:1507.06254 (Max-cut and extendability of matchings in distance-regular graphs)",
+   "date": "2026-11-09",
+   "found": "a general upper bound e(1 - 1/g) on the maximum cut of a distance-regular graph of odd girth g (2/3 of the edges here, weaker than the eigenvalue bound); no values for particular graphs"
+  }
+ ]
+}

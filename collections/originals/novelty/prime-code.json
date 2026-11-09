@@ -1,0 +1,285 @@
+{
+ "id": "prime-code",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:primes AND all:\"error-correcting\" AND all:digits",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3Aprimes+AND+all%3A%22error-correcting%22+AND+all%3Adigits&start=0&max_results=10&sortBy=relevance",
+   "results": 3,
+   "top": [
+    {
+     "arxiv": "2512.02747v1",
+     "year": "2025",
+     "first_author": "Jiaxu Hu",
+     "title": "Digit-Indexed q-ary SEC-DED Codes with Near-Hamming Overhead"
+    },
+    {
+     "arxiv": "1007.1209v1",
+     "year": "2010",
+     "first_author": "Xuebin Wu",
+     "title": "Prime Factor Cyclotomic Fourier Transforms with Reduced Complexity over Finite Fields"
+    },
+    {
+     "arxiv": "1202.1536v1",
+     "year": "2012",
+     "first_author": "Andrew T. Sornborger",
+     "title": "Quantum Simulation of Tunneling in Small Systems"
+    }
+   ],
+   "run": "2026-11-09T19:21:43Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"prime numbers\" AND all:\"Hamming distance\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22prime+numbers%22+AND+all%3A%22Hamming+distance%22&start=0&max_results=10&sortBy=relevance",
+   "results": 3,
+   "top": [
+    {
+     "arxiv": "1508.07034v1",
+     "year": "2015",
+     "first_author": "Bappaditya Ghosh",
+     "title": "Cyclic codes over the ring $\\mathbb{F}_p[u,v] / \\langle u^k,v^2,uv-vu\\rangle$"
+    },
+    {
+     "arxiv": "1509.04221v2",
+     "year": "2015",
+     "first_author": "Pramod Kumar Kewat",
+     "title": "Cyclic codes over the ring $\\mathbb{F}_p[u,v,w]/\\langle u^2, v^2, w^2, uv-vu, vw-wv, uw-wu \\rangle$"
+    },
+    {
+     "arxiv": "1405.5981v2",
+     "year": "2014",
+     "first_author": "Pramod Kumar Kewat",
+     "title": "Cyclic codes over the ring $ \\Z_p[u, v]/\\langle u^2, v^2, uv-vu\\rangle$"
+    }
+   ],
+   "run": "2026-11-09T19:22:03Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:primes AND all:\"minimum distance\" AND all:\"decimal digits\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3Aprimes+AND+all%3A%22minimum+distance%22+AND+all%3A%22decimal+digits%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T19:22:07Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"digitally delicate\" AND all:primes",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22digitally+delicate%22+AND+all%3Aprimes&start=0&max_results=10&sortBy=relevance",
+   "results": 4,
+   "top": [
+    {
+     "arxiv": "1510.03401v2",
+     "year": "2015",
+     "first_author": "Jackson Hopper",
+     "title": "Digitally delicate primes"
+    },
+    {
+     "arxiv": "2209.10646v1",
+     "year": "2022",
+     "first_author": "Michael Filaseta",
+     "title": "Consecutive primes which are widely digitally delicate and Brier numbers"
+    },
+    {
+     "arxiv": "2109.03923v3",
+     "year": "2021",
+     "first_author": "Jon Grantham",
+     "title": "Finding a Widely Digitally Delicate Prime"
+    },
+    {
+     "arxiv": "2101.08898v1",
+     "year": "2021",
+     "first_author": "Michael Filaseta",
+     "title": "Consecutive primes which are widely digitally delicate"
+    }
+   ],
+   "run": "2026-11-09T19:22:12Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "primes pairwise Hamming distance",
+   "url": "https://oeis.org/search?q=primes+pairwise+Hamming+distance&fmt=json",
+   "results": 2,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A321945",
+     "name": "Number of binary self-dual codes of length 2n having an automorphism group size that is a prime power."
+    },
+    {
+     "oeis": "A000166",
+     "name": "Subfactorial or rencontres numbers, or derangements: number of permutations of n elements with no fixed points."
+    }
+   ],
+   "run": "2026-11-09T19:23:27Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "largest set of primes differing in at least digits",
+   "url": "https://oeis.org/search?q=largest+set+of+primes+differing+in+at+least+digits&fmt=json",
+   "results": 10,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A163622",
+     "name": "Composite numbers such that the sum of its smallest digit and the largest digit is a prime."
+    },
+    {
+     "oeis": "A300326",
+     "name": "Sum of the largest possible permutations that can be written without repetition of digits in each base from binary to n+1."
+    },
+    {
+     "oeis": "A119892",
+     "name": "Prime quartet leaders: largest number of a prime quartet."
+    },
+    {
+     "oeis": "A001359",
+     "name": "Lesser of twin primes."
+    },
+    {
+     "oeis": "A001700",
+     "name": "a(n) = binomial(2*n+1, n+1): number of ways to put n+1 indistinguishable balls into n+1 distinguishable boxes = number of (n+1)-st degree monomials in n+1 variables = number of monotone maps from 1..n+1 to 1..n+1."
+    },
+    {
+     "oeis": "A003418",
+     "name": "Least common multiple (or LCM) of {1, 2, ..., n} for n >= 1, a(0) = 1."
+    },
+    {
+     "oeis": "A276380",
+     "name": "Irregular triangle where row n contains terms k of the partition of n produced by greedy algorithm such that all elements are in A003586."
+    },
+    {
+     "oeis": "A252495",
+     "name": "Restricted magnanimous numbers: numbers such that the sum obtained by inserting a \"+\" anywhere between two digits gives a prime, but no \"leading zeros\" may appear."
+    },
+    {
+     "oeis": "A000079",
+     "name": "Powers of 2: a(n) = 2^n."
+    },
+    {
+     "oeis": "A000396",
+     "name": "Perfect numbers k: k is equal to the sum of the proper divisors of k."
+    }
+   ],
+   "run": "2026-11-09T19:23:32Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "primes code distance",
+   "url": "https://oeis.org/search?q=primes+code+distance&fmt=json",
+   "results": 10,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A164677",
+     "name": "For a binary reflected Gray code, the (Hamming/Euclidean) distance between 2 subsequent points x and y is 1, say in coordinate k. If y has a 1 in coordinate k and x has a 0, than (x,y) is indicated by k, if it is the other way around, (x,y) is indicated by -k. The sequence has a fractal character such that G(d+1) = G(d) d+1 R(G(d)) where R(G(d)) alters d --> -d and leaves all other numbers invariant."
+    },
+    {
+     "oeis": "A051864",
+     "name": "Sum of transposition distances (divided by 2) present in the permutation produced by inverses of 1..(p-1) computed in Zp, where p is n-th prime."
+    },
+    {
+     "oeis": "A106169",
+     "name": "Number of inequivalent codes attaining highest minimal Hamming distance of any Type (4_II)^H+ even Hermitian additive self-dual code over GF(4) of length 2n."
+    },
+    {
+     "oeis": "A110866",
+     "name": "Number of Type I but not Type II additive Hermitian self-dual codes of length n over GF(4) having the highest possible minimal distance."
+    },
+    {
+     "oeis": "A321945",
+     "name": "Number of binary self-dual codes of length 2n having an automorphism group size that is a prime power."
+    },
+    {
+     "oeis": "A005811",
+     "name": "Number of runs in binary expansion of n (n>0); number of 1's in Gray code for n."
+    },
+    {
+     "oeis": "A005097",
+     "name": "(Odd primes - 1)/2."
+    },
+    {
+     "oeis": "A004613",
+     "name": "Numbers that are divisible only by primes congruent to 1 mod 4."
+    },
+    {
+     "oeis": "A212618",
+     "name": "Sum of the distances between all unordered pairs of vertices of degree 2 in the rooted tree with Matula-Goebel number n."
+    },
+    {
+     "oeis": "A034173",
+     "name": "a(n) is minimal such that prime factorizations of a(n), ..., a(n)+n-1 have same exponents."
+    }
+   ],
+   "run": "2026-11-09T19:23:36Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "4,36,299",
+   "url": "https://oeis.org/search?q=4%2C36%2C299&fmt=json",
+   "results": 0,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [],
+   "run": "2026-11-09T20:19:30Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "4,4,36",
+   "url": "https://oeis.org/search?q=4%2C4%2C36&fmt=json",
+   "results": 10,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A046109",
+     "name": "Number of lattice points (x,y) on the circumference of a circle of radius n with center at (0,0)."
+    },
+    {
+     "oeis": "A375124",
+     "name": "Weakly decreasing run-leader transformation for standard compositions."
+    },
+    {
+     "oeis": "A124859",
+     "name": "Multiplicative with p^e -> primorial(e), p prime and e > 0."
+    },
+    {
+     "oeis": "A253139",
+     "name": "a(n) = lcm_{d|n} tau(d), where tau(d) represents the number of divisors of d (A000005(d))."
+    },
+    {
+     "oeis": "A301856",
+     "name": "Number of subset-products (greater than 1) of factorizations of n into factors greater than 1."
+    },
+    {
+     "oeis": "A265392",
+     "name": "a(n) = denominator of Sum_{d|n} 1 / tau(d)."
+    },
+    {
+     "oeis": "A272973",
+     "name": "T(n,k)=Number of nXk 0..1 arrays with exactly n+k-2 having value 1 and no three 1s forming an isosceles triangle."
+    },
+    {
+     "oeis": "A193807",
+     "name": "Smallest positive integer k such that n*k^2 + 1 is a prime."
+    },
+    {
+     "oeis": "A293443",
+     "name": "Multiplicative with a(p^e) = A019565(A193231(e))."
+    },
+    {
+     "oeis": "A226008",
+     "name": "a(0) = 0; for n>0, a(n) = denominator(1/4 - 4/n^2)."
+    }
+   ],
+   "run": "2026-11-09T20:19:34Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "largest set of primes with the same number of digits pairwise differing in at least three digits, error-correcting code made of prime numbers, Hamming distance",
+   "date": "2026-11-09",
+   "found": "prime triplets, prime digit puzzles (primepuzzles.net) and prime curios about concatenations; nothing on codes of primes with a minimum Hamming distance"
+  }
+ ]
+}

@@ -1,0 +1,111 @@
+{
+ "id": "prime-code",
+ "collection": "originals",
+ "field": "Coding theory",
+ "title": "Error-correcting codes made of primes",
+ "status": "open",
+ "statement": "Choose n-digit primes so that any two of them differ in at least D of their n decimal digits (Hamming distance at least D). With D = 3 the primes form a code that corrects one wrong digit: a five-digit prime read with one digit changed is still closer to it than to any other code word. Let A(n, D) be the largest number of n-digit primes in such a code. The headline cell is n = 5, D = 3, among the 8,363 five-digit primes: find more than 299 five-digit primes, any two differing in at least three digits (ours). Two code words agree in at most two of the five digits, so their (first, second, last) digits are all different: A(5, 3) <= 9 x 10 x 4 = 360.",
+ "objective": "maximize",
+ "submission": "Text file: distinct five-digit primes, separated by spaces or newlines, any two differing in at least three digits.",
+ "checker": {
+  "program": "collections/originals/checkers/orig_codes.py",
+  "args": [
+   "prime-code",
+   "5",
+   "3"
+  ],
+  "value": "result"
+ },
+ "score": "the number of primes in the code (larger is better)",
+ "best_known": {
+  "value": "299",
+  "exact": "299",
+  "source": "Quantavane (Arhan Canli), 9 November 2026: iterated local search for a maximum independent set of the graph joining two five-digit primes that differ in at most two digits (force a prime in and drop its neighbours, then (1,2)-swaps: one code word out, two in), runs of 60, 300 and 300 seconds with three seeds giving 297, 298 and 299 (tools/src/primecode.c)",
+  "kind": "our construction (Quantavane Originals)",
+  "provenance": {
+   "keeper": "Quantavane Originals",
+   "url": "collections/originals/problems/prime-code.md",
+   "read": "2026-11-09",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true,
+   "certificate": "collections/originals/refs/prime-code.txt"
+  }
+ },
+ "verified_pending": [],
+ "added": "originals-1",
+ "quantavane_record": true,
+ "context": "Error-correcting codes are usually built in a vector space where every word is allowed; here the words must be primes. The primes of a fixed length form the word-ladder graph of our problem prime-cover (two primes adjacent when they differ in one digit), and that problem asks for the smallest covering code of radius one in it; this one asks for the opposite extreme, the largest packing: a set of primes whose balls of radius one are disjoint, so that every single-digit error is corrected. Classical bounds still apply in a restricted form. Two code words of minimum distance D agree in at most n - D digits, so they differ in every set of n - D + 1 positions, and the Singleton bound becomes a count of the allowed digits: 9 first digits, 10 middle digits, and only 1, 3, 7 and 9 as last digits. For four-digit primes this bound, 9 x 4 = 36, is attained; for five-digit primes the bound is 360, and the primes are too sparse to come close as far as we can find. The question joins two well-studied objects, maximum codes and the digit structure of primes (digitally delicate primes, which have no prime at distance one, were studied by Erdos, Tao and others), but codes made of primes are new as far as our searches show.",
+ "references": [
+  "R. C. Singleton, Maximum distance q-nary codes, IEEE Trans. Inform. Theory 10 (1964) 116-118",
+  "T. Tao, A remark on primality testing and decimal expansions, J. Aust. Math. Soc. 91 (2011) 405-413 (digitally delicate primes)",
+  "J. Hopper, P. Pollack, Digitally delicate primes, arXiv:1510.03401",
+  "M. Filaseta, J. Juillerat, Consecutive primes which are widely digitally delicate, arXiv:2101.08898",
+  "D. V. Andrade, M. G. C. Resende, R. F. Werneck, Fast local search for the maximum independent set problem, J. Heuristics 18 (2012) 525-547"
+ ],
+ "novelty": {
+  "checked": "2026-11-09",
+  "file": "novelty/prime-code.json",
+  "verdict": "new question: error-correcting codes and the digits of primes are both studied (digitally delicate primes; our own covering problem prime-cover), but no one has asked for the largest set of n-digit primes with a given minimum Hamming distance, as far as our searches show.",
+  "closest": [
+   "Our problem prime-cover: the smallest covering code of radius one inside the five-digit primes, the opposite extreme on the same graph.",
+   "Digitally delicate primes (Erdos; Tao 2011; Hopper and Pollack, arXiv:1510.03401; Filaseta and Juillerat, arXiv:2101.08898): primes with no prime at distance one, a property of single primes, not codes.",
+   "Maximum codes with a minimum distance over a full alphabet (the Singleton and sphere-packing bounds): here the words are restricted to primes."
+  ],
+  "benchmark": "the benchmark's linear-code and constant-weight-code families are codes over full alphabets; none is restricted to primes"
+ },
+ "first_values": {
+  "columns": [
+   "n (digits)",
+   "D",
+   "n-digit primes",
+   "largest code found",
+   "how",
+   "upper bound"
+  ],
+  "rows": [
+   [
+    2,
+    2,
+    21,
+    4,
+    "exact (bound met: four last digits)",
+    4
+   ],
+   [
+    3,
+    3,
+    143,
+    4,
+    "exact (bound met: four last digits)",
+    4
+   ],
+   [
+    4,
+    3,
+    1061,
+    36,
+    "exact (bound met: 9 first digits x 4 last digits)",
+    36
+   ],
+   [
+    5,
+    3,
+    8363,
+    299,
+    "best known (ours, iterated local search, 300 s)",
+    360
+   ]
+  ],
+  "note": "Codes from tools/src/primecode.c; the checker (checkers/orig_codes.py) sieves the n-digit primes and checks every pair. The upper bounds count the possible (first, ..., last) digit tuples on n - D + 1 positions."
+ },
+ "bound": {
+  "value": "360",
+  "kind": "upper bound",
+  "source": "two code words agree in at most two of the five digits, so the triples (first digit, second digit, last digit) are all different: at most 9 x 10 x 4, the last digit of a five-digit prime being 1, 3, 7 or 9"
+ },
+ "baseline": {
+  "date": "2026-11-09",
+  "holder": "Quantavane (Arhan Canli)",
+  "text": "299 five-digit primes, any two differing in at least three digits, held by Quantavane (Arhan Canli), 9 November 2026: the code in `refs/prime-code.txt`."
+ }
+}

@@ -1,0 +1,157 @@
+{
+ "id": "diamond-link",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"lattice stick number\" AND all:links",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22lattice+stick+number%22+AND+all%3Alinks&start=0&max_results=10&sortBy=relevance",
+   "results": 2,
+   "top": [
+    {
+     "arxiv": "1402.1642v1",
+     "year": "2014",
+     "first_author": "Kyungpyo Hong",
+     "title": "Links with small lattice stick numbers"
+    },
+    {
+     "arxiv": "1805.00213v1",
+     "year": "2018",
+     "first_author": "Hyoungjun Kim",
+     "title": "Circuit presentation and lattice stick number with exactly 4 $z$-sticks"
+    }
+   ],
+   "run": "2026-11-09T20:15:54Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"Hopf link\" AND all:lattice AND all:minimal",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22Hopf+link%22+AND+all%3Alattice+AND+all%3Aminimal&start=0&max_results=10&sortBy=relevance",
+   "results": 1,
+   "top": [
+    {
+     "arxiv": "2507.20903v1",
+     "year": "2025",
+     "first_author": "Alexander Klotz",
+     "title": "Geometric considerations for energy minimization of topological links and chainmail networks"
+    }
+   ],
+   "run": "2026-11-09T20:15:58Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:catenane AND all:lattice AND all:polygons",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3Acatenane+AND+all%3Alattice+AND+all%3Apolygons&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T20:16:03Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"diamond lattice\" AND all:linked",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22diamond+lattice%22+AND+all%3Alinked&start=0&max_results=10&sortBy=relevance",
+   "results": 6,
+   "top": [
+    {
+     "arxiv": "0709.1302v2",
+     "year": "2007",
+     "first_author": "Tieyan Si",
+     "title": "Exactly soluble spin-1/2 models on three-dimensional lattices and non-abelian statistics of closed string excitations"
+    },
+    {
+     "arxiv": "2002.00669v2",
+     "year": "2020",
+     "first_author": "Hui Zhang",
+     "title": "Double lattice potential for molecular dynamics simulation of silicon with demonstrated validity"
+    },
+    {
+     "arxiv": "2012.02663v1",
+     "year": "2020",
+     "first_author": "Wei-Han Li",
+     "title": "Cluster dynamics in two-dimensional lattice gases with inter-site interactions"
+    },
+    {
+     "arxiv": "2411.04961v2",
+     "year": "2024",
+     "first_author": "Hani Barhum",
+     "title": "Nonlinear Broadband THz Generation from NV Centers in Bulk Diamond Crystals"
+    },
+    {
+     "arxiv": "1604.07785v2",
+     "year": "2016",
+     "first_author": "Joseph T. Schick",
+     "title": "Classical model of negative thermal expansion in solids with expanding bonds"
+    },
+    {
+     "arxiv": "2510.11607v1",
+     "year": "2025",
+     "first_author": "Souvik Kundu",
+     "title": "Flux confinement-deconfinement transition of dimer-loop models on three-dimensional bipartite lattices"
+    }
+   ],
+   "run": "2026-11-09T20:16:07Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"linked polygons\" AND all:\"cubic lattice\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22linked+polygons%22+AND+all%3A%22cubic+lattice%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T20:16:12Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"minimal links\" AND all:lattice",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22minimal+links%22+AND+all%3Alattice&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T20:16:16Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "minimal lattice link Hopf",
+   "url": "https://oeis.org/search?q=minimal+lattice+link+Hopf&fmt=json",
+   "results": 5,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A000108",
+     "name": "Catalan numbers: C(n) = binomial(2n,n)/(n+1) = (2n)!/(n!(n+1)!)."
+    },
+    {
+     "oeis": "A001700",
+     "name": "a(n) = binomial(2*n+1, n+1): number of ways to put n+1 indistinguishable balls into n+1 distinguishable boxes = number of (n+1)-st degree monomials in n+1 variables = number of monotone maps from 1..n+1 to 1..n+1."
+    },
+    {
+     "oeis": "A001003",
+     "name": "Schroeder's second problem (generalized parentheses); also called super-Catalan numbers or little Schroeder numbers."
+    },
+    {
+     "oeis": "A001190",
+     "name": "Wedderburn-Etherington numbers: unlabeled binary rooted trees (every node has outdegree 0 or 2) with n endpoints (and 2n-1 nodes in all)."
+    },
+    {
+     "oeis": "A060854",
+     "name": "Array T(m,n) read by antidiagonals: T(m,n) (m >= 1, n >= 1) = number of ways to arrange the numbers 1,2,...,m*n in an m X n matrix so that each row and each column is increasing."
+    }
+   ],
+   "run": "2026-11-09T20:16:22Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "catenane lattice minimal",
+   "url": "https://oeis.org/search?q=catenane+lattice+minimal&fmt=json",
+   "results": 0,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [],
+   "run": "2026-11-09T20:16:26Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "minimal links cubic lattice Hopf link minimum number of edges two lattice polygons linked catenane lattice \"minimal links\"",
+   "date": "2026-11-09",
+   "found": "minimal edge numbers of several links in the simple cubic lattice (a 2005 thesis), lattice stick numbers of links with small stick numbers (Hong, No and Oh), Diao's minimal trefoil of 24 edges; nothing on the diamond lattice"
+  }
+ ]
+}

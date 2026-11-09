@@ -1,0 +1,172 @@
+{
+ "id": "diamond-bonds",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"diamond lattice\" AND all:\"edge-isoperimetric\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22diamond+lattice%22+AND+all%3A%22edge-isoperimetric%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T19:08:03Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"diamond lattice\" AND all:isoperimetric",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22diamond+lattice%22+AND+all%3Aisoperimetric&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T19:08:07Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"diamond lattice\" AND all:clusters AND all:\"dangling bonds\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22diamond+lattice%22+AND+all%3Aclusters+AND+all%3A%22dangling+bonds%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T19:08:12Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:diamondoids AND all:enumeration",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3Adiamondoids+AND+all%3Aenumeration&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T19:08:16Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"diamond lattice\" AND all:\"lattice animals\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22diamond+lattice%22+AND+all%3A%22lattice+animals%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T19:08:21Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"silicon nanocrystals\" AND all:hydrogen AND all:\"magic\" AND all:clusters",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22silicon+nanocrystals%22+AND+all%3Ahydrogen+AND+all%3A%22magic%22+AND+all%3Aclusters&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T19:08:25Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"maximum number of bonds\" AND all:lattice AND all:clusters",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22maximum+number+of+bonds%22+AND+all%3Alattice+AND+all%3Aclusters&start=0&max_results=10&sortBy=relevance",
+   "results": 1,
+   "top": [
+    {
+     "arxiv": "2609.25384v1",
+     "year": "2026",
+     "first_author": "Roman Rausch",
+     "title": "Lattice in Line: Optimized DMRG ordering for complex lattice geometries"
+    }
+   ],
+   "run": "2026-11-09T19:08:30Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "diamond lattice bonds cluster",
+   "url": "https://oeis.org/search?q=diamond+lattice+bonds+cluster&fmt=json",
+   "results": 1,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A003211",
+     "name": "Cluster series for cubic lattice."
+    }
+   ],
+   "run": "2026-11-09T19:08:34Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "diamondoid hydrogen",
+   "url": "https://oeis.org/search?q=diamondoid+hydrogen&fmt=json",
+   "results": 0,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [],
+   "run": "2026-11-09T19:08:38Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "diamond lattice maximal number of edges",
+   "url": "https://oeis.org/search?q=diamond+lattice+maximal+number+of+edges&fmt=json",
+   "results": 6,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A010683",
+     "name": "Let S(x,y) = number of lattice paths from (0,0) to (x,y) that use the step set { (0,1), (1,0), (2,0), (3,0), ...} and never pass below y = x. Sequence gives S(n-1,n) = number of 'Schröder' trees with n+1 leaves and root of degree 2."
+    },
+    {
+     "oeis": "A001147",
+     "name": "Double factorial of odd numbers: a(n) = (2*n-1)!! = 1*3*5*...*(2*n-1)."
+    },
+    {
+     "oeis": "A001263",
+     "name": "Triangle of Narayana numbers T(n,k) = C(n-1,k-1)*C(n,k-1)/k with 1 <= k <= n, read by rows. Also called the Catalan triangle."
+    },
+    {
+     "oeis": "A394840",
+     "name": "Minimum number of triangular cells in a connected polyiamond enclosing an interior hole of exactly n empty triangular cells."
+    },
+    {
+     "oeis": "A006125",
+     "name": "a(n) = 2^(n*(n-1)/2)."
+    },
+    {
+     "oeis": "A008574",
+     "name": "a(0) = 1, thereafter a(n) = 4n."
+    }
+   ],
+   "run": "2026-11-09T19:08:43Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "0,1,2,3,4,6,7,8,10,12,13,14,16,18,19,20,22",
+   "url": "https://oeis.org/search?q=0%2C1%2C2%2C3%2C4%2C6%2C7%2C8%2C10%2C12%2C13%2C14%2C16%2C18%2C19%2C20%2C22&fmt=json",
+   "results": 0,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [],
+   "run": "2026-11-09T19:28:10Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "4,6,8,10,12,12,14,16,16,16,18,20,20,20,22,24,24",
+   "url": "https://oeis.org/search?q=4%2C6%2C8%2C10%2C12%2C12%2C14%2C16%2C16%2C16%2C18%2C20%2C20%2C20%2C22%2C24%2C24&fmt=json",
+   "results": 0,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [],
+   "run": "2026-11-09T19:28:14Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "1,2,6,22,91,398,1806,8393,39713,190625",
+   "url": "https://oeis.org/search?q=1%2C2%2C6%2C22%2C91%2C398%2C1806%2C8393%2C39713%2C190625&fmt=json",
+   "results": 0,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [],
+   "run": "2026-11-09T19:28:18Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "maximum number of bonds among n atoms in the diamond lattice, cluster with fewest dangling bonds, edge-isoperimetric problem diamond lattice",
+   "date": "2026-11-09",
+   "found": "edge-isoperimetric results for Z^d (Bollobas and Leader), the triangular, square, hexagonal and cubic lattices (N^(3/4) laws for the minimisers), Barber and Erde for Cayley graphs on Z^d, and Strachan and Swanepoel, Edge isoperimetry of lattices (arXiv:2503.09591: Cayley graphs on Z^d and the triangular lattice); nothing on the diamond lattice"
+  },
+  {
+   "engine": "general web search",
+   "query": "diamondoid C_nH_m fewest hydrogen atoms for a given number of carbon atoms, diamond lattice, most compact hydrocarbon fragment, nanodiamond minimum hydrogens",
+   "date": "2026-11-09",
+   "found": "the catamantane formula C(4n+6)H(4n+12) (Balaban and Rucker), an enumeration of the diamondoids CnHm with 10 to 41 carbon atoms (nomenclature, stabilities, gaps; 2018), CH and CH2 counts of truncated tetrahedral nanodiamonds (arXiv:2111.04490); no fewest-hydrogen values over all fragments of the diamond lattice"
+  },
+  {
+   "engine": "general web search",
+   "query": "hydrogenated silicon nanocrystal Si_nH_m minimum number of hydrogen atoms for given n, optimal shape, diamond lattice cluster, dangling bonds, minimal surface",
+   "date": "2026-11-09",
+   "found": "structures of SinH2m clusters with n <= 21 (Nanoscale 2021) and work on amorphous and nanocrystalline silicon; no extremal dangling-bond counts"
+  }
+ ]
+}

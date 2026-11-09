@@ -1,0 +1,175 @@
+{
+ "id": "diamond-knot",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"diamond lattice\" AND all:knot",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22diamond+lattice%22+AND+all%3Aknot&start=0&max_results=10&sortBy=relevance",
+   "results": 1,
+   "top": [
+    {
+     "arxiv": "0709.1302v2",
+     "year": "2007",
+     "first_author": "Tieyan Si",
+     "title": "Exactly soluble spin-1/2 models on three-dimensional lattices and non-abelian statistics of closed string excitations"
+    }
+   ],
+   "run": "2026-11-09T20:05:30Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"diamond lattice\" AND all:knotted",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22diamond+lattice%22+AND+all%3Aknotted&start=0&max_results=10&sortBy=relevance",
+   "results": 1,
+   "top": [
+    {
+     "arxiv": "0709.1302v2",
+     "year": "2007",
+     "first_author": "Tieyan Si",
+     "title": "Exactly soluble spin-1/2 models on three-dimensional lattices and non-abelian statistics of closed string excitations"
+    }
+   ],
+   "run": "2026-11-09T20:05:35Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"minimal knot\" AND all:lattice",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22minimal+knot%22+AND+all%3Alattice&start=0&max_results=10&sortBy=relevance",
+   "results": 1,
+   "top": [
+    {
+     "arxiv": "1107.2162v1",
+     "year": "2011",
+     "first_author": "E. J. Janse van Rensburg",
+     "title": "Minimal knotted polygons in cubic lattices"
+    }
+   ],
+   "run": "2026-11-09T20:05:39Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"lattice knots\" AND all:\"minimal length\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22lattice+knots%22+AND+all%3A%22minimal+length%22&start=0&max_results=10&sortBy=relevance",
+   "results": 3,
+   "top": [
+    {
+     "arxiv": "1203.3212v1",
+     "year": "2012",
+     "first_author": "Esaias J Janse van Rensburg",
+     "title": "The Compressibility of Minimal Lattice Knots"
+    },
+    {
+     "arxiv": "1204.6674v4",
+     "year": "2012",
+     "first_author": "D. Gasumova",
+     "title": "Lattice Knots in a Slab"
+    },
+    {
+     "arxiv": "1411.1849v1",
+     "year": "2014",
+     "first_author": "Kyungpyo Hong",
+     "title": "Upper bounds on the minimal length of cubic lattice knots"
+    }
+   ],
+   "run": "2026-11-09T20:05:43Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"minimal knotted polygons\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22minimal+knotted+polygons%22&start=0&max_results=10&sortBy=relevance",
+   "results": 1,
+   "top": [
+    {
+     "arxiv": "1107.2162v1",
+     "year": "2011",
+     "first_author": "E. J. Janse van Rensburg",
+     "title": "Minimal knotted polygons in cubic lattices"
+    }
+   ],
+   "run": "2026-11-09T20:05:48Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"knotted\" AND all:\"cycloalkane\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22knotted%22+AND+all%3A%22cycloalkane%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T20:05:52Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"molecular knot\" AND all:smallest",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22molecular+knot%22+AND+all%3Asmallest&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T20:05:56Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "minimal knot lattice polygon",
+   "url": "https://oeis.org/search?q=minimal+knot+lattice+polygon&fmt=json",
+   "results": 5,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A122059",
+     "name": "Number of different polygonal knots with n straight line segments."
+    },
+    {
+     "oeis": "A000108",
+     "name": "Catalan numbers: C(n) = binomial(2n,n)/(n+1) = (2n)!/(n!(n+1)!)."
+    },
+    {
+     "oeis": "A000975",
+     "name": "a(2n) = 2*a(2n-1), a(2n+1) = 2*a(2n)+1 (also a(n) is the n-th number without consecutive equal binary digits)."
+    },
+    {
+     "oeis": "A000931",
+     "name": "Padovan sequence (or Padovan numbers): a(n) = a(n-2) + a(n-3) with a(0) = 1, a(1) = a(2) = 0."
+    },
+    {
+     "oeis": "A005043",
+     "name": "Riordan numbers: a(n) = (n-1)*(2*a(n-1) + 3*a(n-2))/(n+1)."
+    }
+   ],
+   "run": "2026-11-09T20:06:01Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "trefoil lattice minimal number of edges",
+   "url": "https://oeis.org/search?q=trefoil+lattice+minimal+number+of+edges&fmt=json",
+   "results": 1,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A122059",
+     "name": "Number of different polygonal knots with n straight line segments."
+    }
+   ],
+   "run": "2026-11-09T20:06:05Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "24 15 18 trefoil lattice",
+   "url": "https://oeis.org/search?q=24+15+18+trefoil+lattice&fmt=json",
+   "results": 0,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [],
+   "run": "2026-11-09T20:06:10Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "minimal step number trefoil knot diamond lattice self-avoiding polygon minimum length knot \"diamond lattice\"",
+   "date": "2026-11-09",
+   "found": "minimal trefoils of 24 edges in the simple cubic lattice (Diao), 15 and 18 edges in the face-centred and body-centred cubic lattices, knots in slabs; nothing for the diamond lattice"
+  },
+  {
+   "engine": "general web search",
+   "query": "\"diamond lattice\" knotted ring polymer smallest knot length minimal number of steps trefoil knotting probability",
+   "date": "2026-11-09",
+   "found": "The compressibility of minimal lattice knots (arXiv:1203.3212), Minimal knotted polygons in cubic lattices (arXiv:1107.2162), relative knot probabilities in confined lattice polygons (arXiv:2501.08835); no minimal knot of the diamond lattice"
+  }
+ ]
+}

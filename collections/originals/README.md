@@ -1,6 +1,6 @@
 # Quantavane Originals
 
-New open problems, written by Quantavane: <!--count-->39<!--/count--> problems across mathematics, physics,
+New open problems, written by Quantavane: <!--count-->45<!--/count--> problems across mathematics, physics,
 chemistry, astronomy, computing and biology. Each one is a question that, as far as our searches show, nobody had
 asked before, stated precisely, with an exact checker of ours and a first value of ours, so that it starts with a best
 known value, a holder and a date. All of them are open.
@@ -41,24 +41,30 @@ and is credited by name on the problem's page and in `leaderboard.json`.
 | [Densest admissible patterns of primes n^3 + h](problems/cubic-admissible.md) | Number theory | minimize | 255 |
 | [Two-colourings with no monochromatic 120-degree triangle](problems/eisenstein-triples.md) | Number theory | maximize | 19200 |
 | [Admissible constellations of smallest diameter in the Gaussian integers](problems/gauss-admissible.md) | Number theory | minimize | 218 |
+| [The Jacobsthal function of the Gaussian integers](problems/gauss-jacobsthal.md) | Number theory | maximize | 15 |
 | [Arithmetic progressions of Gaussian primes](problems/gauss-prime-ap.md) | Number theory | maximize | 18 |
 | [Largest sum-free set of quadratic residues](problems/qr-sumfree.md) | Number theory | maximize | 174 |
 | [Densest admissible patterns of primes n^2 + h](problems/quad-admissible.md) | Number theory | minimize | 247 |
 | [Coils in the 120-cell](problems/cell120-coil.md) | Coding theory | maximize | 202 |
 | [Identifying codes of the 600-cell](problems/cell600-idcode.md) | Coding theory | minimize | 20 |
 | [Identifying codes of the E8 root polytope](problems/e8-idcode.md) | Coding theory | minimize | 15 |
+| [Error-correcting codes made of primes](problems/prime-code.md) | Coding theory | maximize | 299 |
 | [Covering the five-digit primes by one-digit changes](problems/prime-cover.md) | Coding theory | minimize | 1219 |
 | [Vertices of the 120-cell with no three on a great circle](problems/cell120-great.md) | Discrete geometry | maximize | 57 |
 | [Distinct distances in the tetrahedral grid](problems/tetra-distinct.md) | Discrete geometry | maximize | 16 |
 | [Distinct triangle areas in the triangular grid](problems/tri-areas.md) | Discrete geometry | maximize | 9 |
 | [Distinct distances in the triangular grid](problems/tri-distinct.md) | Discrete geometry | maximize | 14 |
 | [Ising antiferromagnet on the grand antiprism](problems/ga-ising.md) | Physics | minimize | -140 |
+| [Ising antiferromagnet on the McLaughlin graph](problems/mclaughlin-ising.md) | Physics | minimize | -2968 |
 | [Ground states of the Paley Ising model](problems/paley-ising.md) | Physics | minimize | -480 |
 | [Ising antiferromagnet on the 600-cell](problems/polytope-ising.md) | Physics | minimize | -160 |
 | [Three-state Potts antiferromagnet on the 600-cell](problems/potts3-600.md) | Physics | minimize | 134 |
 | [Ising antiferromagnet on the snub 24-cell](problems/snub24-ising.md) | Physics | minimize | -144 |
 | [Benzenoids with the smallest Kemeny constant](problems/benzenoid-kemeny.md) | Chemistry and materials | minimize | 14813904881/113347080 |
 | [Catacondensed benzenoids with the smallest Kemeny constant](problems/cata-kemeny.md) | Chemistry and materials | minimize | 59617087737367409/159902997431616 |
+| [Pieces of diamond with the fewest dangling bonds](problems/diamond-bonds.md) | Chemistry and materials | minimize | 72 |
+| [The smallest knotted ring in the diamond lattice](problems/diamond-knot.md) | Chemistry and materials | minimize | 36 |
+| [The smallest catenane in the diamond lattice](problems/diamond-link.md) | Chemistry and materials | minimize | 28 |
 | [Lennard-Jones clusters on the face-centred cubic lattice](problems/lj-fcc.md) | Chemistry and materials | minimize | -789723697/1492992 |
 | [Non-redundant aperture masks for segmented mirrors](problems/nrm-segments.md) | Astronomy | maximize | 23 |
 | [Y-shaped arrays with all baseline lengths different](problems/y-array.md) | Astronomy | minimize | 165 |

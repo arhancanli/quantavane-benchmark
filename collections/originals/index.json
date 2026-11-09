@@ -1,13 +1,13 @@
 {
  "collection": "Quantavane Originals",
- "problems": 39,
+ "problems": 45,
  "by_field": {
   "Combinatorics and graph theory": 7,
-  "Number theory": 6,
-  "Coding theory": 4,
+  "Number theory": 7,
+  "Coding theory": 5,
   "Discrete geometry": 4,
-  "Physics": 5,
-  "Chemistry and materials": 3,
+  "Physics": 6,
+  "Chemistry and materials": 6,
   "Astronomy": 2,
   "Computing and operations research": 4,
   "Biology": 4
@@ -134,6 +134,18 @@
    "page": "problems/gauss-admissible.md"
   },
   {
+   "id": "gauss-jacobsthal",
+   "field": "Number theory",
+   "title": "The Jacobsthal function of the Gaussian integers",
+   "status": "open",
+   "objective": "maximize",
+   "best_known": "15",
+   "holder": "Quantavane (Arhan Canli)",
+   "date": "2026-11-09",
+   "checker": "collections/originals/checkers/orig_numth.py",
+   "page": "problems/gauss-jacobsthal.md"
+  },
+  {
    "id": "gauss-prime-ap",
    "field": "Number theory",
    "title": "Arithmetic progressions of Gaussian primes",
@@ -204,6 +216,18 @@
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_codes.py",
    "page": "problems/e8-idcode.md"
+  },
+  {
+   "id": "prime-code",
+   "field": "Coding theory",
+   "title": "Error-correcting codes made of primes",
+   "status": "open",
+   "objective": "maximize",
+   "best_known": "299",
+   "holder": "Quantavane (Arhan Canli)",
+   "date": "2026-11-09",
+   "checker": "collections/originals/checkers/orig_codes.py",
+   "page": "problems/prime-code.md"
   },
   {
    "id": "prime-cover",
@@ -278,6 +302,18 @@
    "page": "problems/ga-ising.md"
   },
   {
+   "id": "mclaughlin-ising",
+   "field": "Physics",
+   "title": "Ising antiferromagnet on the McLaughlin graph",
+   "status": "open",
+   "objective": "minimize",
+   "best_known": "-2968",
+   "holder": "Quantavane (Arhan Canli)",
+   "date": "2026-11-09",
+   "checker": "collections/originals/checkers/orig_phys.py",
+   "page": "problems/mclaughlin-ising.md"
+  },
+  {
    "id": "paley-ising",
    "field": "Physics",
    "title": "Ground states of the Paley Ising model",
@@ -348,6 +384,42 @@
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_chem.py",
    "page": "problems/cata-kemeny.md"
+  },
+  {
+   "id": "diamond-bonds",
+   "field": "Chemistry and materials",
+   "title": "Pieces of diamond with the fewest dangling bonds",
+   "status": "open",
+   "objective": "minimize",
+   "best_known": "72",
+   "holder": "Quantavane (Arhan Canli)",
+   "date": "2026-11-09",
+   "checker": "collections/originals/checkers/orig_chem.py",
+   "page": "problems/diamond-bonds.md"
+  },
+  {
+   "id": "diamond-knot",
+   "field": "Chemistry and materials",
+   "title": "The smallest knotted ring in the diamond lattice",
+   "status": "open",
+   "objective": "minimize",
+   "best_known": "36",
+   "holder": "Quantavane (Arhan Canli)",
+   "date": "2026-11-09",
+   "checker": "collections/originals/checkers/orig_chem.py",
+   "page": "problems/diamond-knot.md"
+  },
+  {
+   "id": "diamond-link",
+   "field": "Chemistry and materials",
+   "title": "The smallest catenane in the diamond lattice",
+   "status": "open",
+   "objective": "minimize",
+   "best_known": "28",
+   "holder": "Quantavane (Arhan Canli)",
+   "date": "2026-11-09",
+   "checker": "collections/originals/checkers/orig_chem.py",
+   "page": "problems/diamond-link.md"
   },
   {
    "id": "lj-fcc",

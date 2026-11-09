@@ -17,7 +17,16 @@ an integer or p/q); it exits 0 only for a well-formed configuration and 1 otherw
   polytope-potts KIND Q FILE
                          FILE: one colour 0..Q-1 per vertex of the polytope graph (KIND as above), separated by spaces
                          or newlines, in the checker's vertex order. Value: the energy of the Q-state Potts
-                         antiferromagnet, the number of edges whose two ends have the same colour."""
+                         antiferromagnet, the number of edges whose two ends have the same colour.
+  mclaughlin-ising FILE  FILE: 275 spins, written as + and - (or 1 and -1), in the vertex order of mclaughlin_graph: the
+                         McLaughlin graph, the unique strongly regular graph with parameters (275, 112, 30, 56), built
+                         from the Steiner system S(4,7,23) (the octads of the extended binary Golay code through the
+                         point 0, with 0 removed: 253 heptads on the points 1..23); vertices: the 22 points 2..23, then
+                         the 77 heptads through the point 1, then the 176 heptads avoiding it (heptads sorted); a point
+                         is adjacent to the heptads through 1 that miss it and to the heptads avoiding 1 that contain
+                         it, two heptads of the same kind are adjacent when they meet in one point, a heptad through 1
+                         and one avoiding it when they meet in three points (A. E. Brouwer's 22 + 77 + 176
+                         construction). Value: the antiferromagnetic Ising energy E(s) = sum over edges uv of s_u s_v."""
 import itertools
 from fractions import Fraction as F
 import sys
@@ -228,8 +237,66 @@ def polytope_potts(args, path):
     return 0
 
 
+GOLAY_B = ["110111000101", "101110001011", "011100010111", "111000101101", "110001011011", "100010110111",
+           "000101101111", "001011011101", "010110111001", "101101110001", "011011100011", "111111111110"]
+
+
+def golay_octads():
+    """The 759 octads of the extended binary Golay code from its generator matrix [I | B], as sets of 0..23."""
+    rows = [(1 << (23 - i)) | int(GOLAY_B[i], 2) for i in range(12)]
+    words = set()
+    for mask in range(1 << 12):
+        w = 0
+        for i in range(12):
+            if mask >> i & 1:
+                w ^= rows[i]
+        if bin(w).count("1") == 8:
+            words.add(w)
+    return [frozenset(23 - j for j in range(24) if w >> j & 1) for w in words]
+
+
+def mclaughlin_graph():
+    hept = sorted(tuple(sorted(o - {0})) for o in golay_octads() if 0 in o)
+    through = [set(h) for h in hept if 1 in h]
+    avoid = [set(h) for h in hept if 1 not in h]
+    verts = [("p", q) for q in range(2, 24)] + [("B", b) for b in through] + [("C", c) for c in avoid]
+    edges = []
+    for i in range(len(verts)):
+        ti, a = verts[i]
+        for j in range(i + 1, len(verts)):
+            tj, b = verts[j]
+            if ti == "p" and tj == "p":
+                continue
+            if ti == "p":
+                ok = (a not in b) if tj == "B" else (a in b)
+            else:
+                k = len(a & b)
+                ok = (k == 1) if ti == tj else (k == 3)
+            if ok:
+                edges.append((i, j))
+    return len(verts), edges
+
+
+def mclaughlin_ising(args, path):
+    n, edges = mclaughlin_graph()
+    s = spins(path, n)
+    deg = [0] * n
+    for a, b in edges:
+        deg[a] += 1
+        deg[b] += 1
+    if n != 275 or len(edges) != 15400 or set(deg) != {112}:
+        print("internal error: the McLaughlin graph was not built correctly")
+        return 1
+    e = sum(s[a] * s[b] for a, b in edges)
+    cut = sum(1 for a, b in edges if s[a] != s[b])
+    print(f"McLaughlin graph: 275 vertices, 15400 edges; {cut} edges joining opposite spins; E = {e}")
+    print(f"RESULT {e}")
+    return 0
+
+
 PROBLEMS = {"paley-ising": (1, paley_ising), "polytope-ising": (1, polytope_ising),
-            "polytope-potts": (2, polytope_potts)}
+            "polytope-potts": (2, polytope_potts),
+            "mclaughlin-ising": (0, mclaughlin_ising)}
 
 
 def main():

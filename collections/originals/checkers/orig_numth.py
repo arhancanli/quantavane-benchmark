@@ -32,7 +32,13 @@ valid certificate and 1 otherwise. Problems:
                                  consecutive terms are all equal and every term is a Gaussian prime of norm at most N:
                                  x^2 + y^2 is a prime when x and y are both nonzero, and |x + yi| is a prime congruent
                                  to 3 mod 4 when one of them is 0 (deterministic Miller-Rabin for large numbers).
-                                 Value: the number of terms."""
+                                 Value: the number of terms.
+  gauss-jacobsthal X FILE        FILE: one line "x0 y0 s", the s x s square of Gaussian integers x + yi with
+                                 x0 <= x < x0 + s and y0 <= y < y0 + s. Valid when every one of them is divisible by a
+                                 Gaussian prime of norm at most X (none is coprime to the product of those primes):
+                                 1 + i divides x + yi when x + y is even, the prime ideal (p, i - r) of norm
+                                 p = 1 (mod 4) when x + y r = 0 (mod p), the prime q = 3 (mod 4) (norm q^2 <= X) when q
+                                 divides x and y. Value: s, the side of the square."""
 import sys
 
 
@@ -266,9 +272,33 @@ def gauss_prime_ap(args, path):
     print(f"RESULT {k}")
     return 0
 
+def gauss_jacobsthal(args, path):
+    x_max = int(args[0])
+    rows = ints(path)
+    if len(rows) != 1 or len(rows[0]) != 3:
+        print("expected one line 'x0 y0 s'")
+        return 1
+    x0, y0, side = rows[0]
+    if side < 1 or side > 1000:
+        print("the side s must be between 1 and 1000")
+        return 1
+    ideals = prime_ideals(4, x_max)
+    for j in range(side):
+        for k in range(side):
+            x, y = x0 + j, y0 + k
+            if not any(res(x, y) in (0, (0, 0)) for norm, name, res in ideals):
+                print(f"{x} + {y}i is coprime to every Gaussian prime of norm <= {x_max}")
+                return 1
+    print(f"the {side} x {side} square with corner {x0} + {y0}i: each of its {side * side} Gaussian integers is "
+          f"divisible by one of the {len(ideals)} Gaussian primes (up to units) of norm <= {x_max}")
+    print(f"RESULT {side}")
+    return 0
+
+
 PROBLEMS = {"gauss-admissible": (2, gauss_admissible), "quad-admissible": (1, quad_admissible),
             "cubic-admissible": (1, cubic_admissible), "qr-sumfree": (1, qr_sumfree),
-            "eisenstein-triples": (0, eisenstein_triples), "gauss-prime-ap": (1, gauss_prime_ap)}
+            "eisenstein-triples": (0, eisenstein_triples), "gauss-prime-ap": (1, gauss_prime_ap),
+            "gauss-jacobsthal": (1, gauss_jacobsthal)}
 
 
 def main():

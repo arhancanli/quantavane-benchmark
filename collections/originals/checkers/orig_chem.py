@@ -21,7 +21,24 @@ exits 0 only for a valid certificate and 1 otherwise. Problems:
                             Lennard-Jones energy with the nearest-neighbour distance at the minimum of the pair
                             potential, cut off at 2.5 sigma: the sum over the pairs at squared distance q <= 8 (the
                             first four shells) of 64/q^6 - 16/q^3 (each nearest-neighbour pair counts -1), in exact
-                            rational arithmetic."""
+                            rational arithmetic.
+  diamond-bonds N FILE      FILE: N lines "x y z", distinct sites of the diamond lattice: either all three coordinates
+                            even with x + y + z = 0 (mod 4) (sublattice A) or all three odd with x + y + z = 3 (mod 4)
+                            (sublattice B = A + (1, 1, 1)); two sites are bonded when their squared distance is 3 (each
+                            site has four bonds in the crystal). Valid when the N atoms are connected through bonds (one
+                            molecule). Value: the number of dangling bonds, 4N - 2B with B the bonds between the atoms:
+                            the number of hydrogen atoms of the hydrocarbon C_N H_(4N-2B) cut from diamond.
+  diamond-knot FILE         FILE: lines "x y z", the atoms of a ring in order: distinct sites of the diamond lattice,
+                            each bonded (squared distance 3) to the next and the last to the first (a closed
+                            self-avoiding polygon of the lattice). Valid when the ring is knotted, as certified by its
+                            knot determinant |Delta(-1)| (computed from a regular projection: the Fox colouring matrix
+                            of the diagram with one row and one column removed) being larger than 1 (1 for the unknot,
+                            3 for the trefoil, 5 for the figure-eight knot). Value: the number of atoms.
+  diamond-link FILE         FILE: two rings of the diamond lattice, each as lines "x y z" in order (distinct sites,
+                            each bonded to the next and the last to the first), separated by a line holding only "-".
+                            Valid when the rings share no site and are linked: their linking number, half the sum of
+                            the signs of the crossings between them in a regular projection, is not zero (a [2]catenane).
+                            Value: the total number of atoms."""
 import sys
 from fractions import Fraction
 
@@ -166,7 +183,265 @@ def lj_fcc(args, path):
     return 0
 
 
-PROBLEMS = {"benzenoid-kemeny": (1, benzenoid_kemeny), "cata-kemeny": (1, cata_kemeny), "lj-fcc": (1, lj_fcc)}
+def diamond_site(x, y, z):
+    if x % 2 == 0 and y % 2 == 0 and z % 2 == 0:
+        return (x + y + z) % 4 == 0
+    if x % 2 == 1 and y % 2 == 1 and z % 2 == 1:
+        return (x + y + z) % 4 == 3
+    return False
+
+
+def diamond_bonds(args, path):
+    n = int(args[0])
+    pts = []
+    for line in open(path, encoding="ascii", errors="replace"):
+        line = line.split("#")[0].strip()
+        if line:
+            x, y, z = (int(t) for t in line.split())
+            pts.append((x, y, z))
+    if len(pts) != n or len(set(pts)) != n:
+        print(f"expected {n} distinct sites, found {len(pts)} ({len(set(pts))} distinct)")
+        return 1
+    bad = [p for p in pts if not diamond_site(*p)]
+    if bad:
+        print(f"{bad[0]} is not a site of the diamond lattice")
+        return 1
+    where = set(pts)
+    steps = [(a, b, c) for a in (1, -1) for b in (1, -1) for c in (1, -1)]
+    nbrs = {p: [q for q in ((p[0] + a, p[1] + b, p[2] + c) for a, b, c in steps) if q in where] for p in pts}
+    bonds = sum(len(v) for v in nbrs.values()) // 2
+    seen, stack = {pts[0]}, [pts[0]]
+    while stack:
+        for q in nbrs[stack.pop()]:
+            if q not in seen:
+                seen.add(q)
+                stack.append(q)
+    if len(seen) != n:
+        print(f"the atoms are not connected: {len(seen)} of {n} reachable from the first one")
+        return 1
+    print(f"{n} atoms of the diamond lattice, connected, {bonds} bonds; dangling bonds (hydrogens) 4N - 2B = {4 * n - 2 * bonds}: C{n}H{4 * n - 2 * bonds}")
+    print(f"RESULT {4 * n - 2 * bonds}")
+    return 0
+
+
+KNOT_DIRS = [(1, 3, 7), (2, 5, 11), (3, 7, 13), (5, 2, 9), (7, 11, 4), (4, 9, 17), (11, 6, 5), (13, 17, 3)]
+
+
+def _cross3(a, b):
+    return (a[1] * b[2] - a[2] * b[1], a[2] * b[0] - a[0] * b[2], a[0] * b[1] - a[1] * b[0])
+
+
+def _dot3(a, b):
+    return a[0] * b[0] + a[1] * b[1] + a[2] * b[2]
+
+
+def _orient(p, q, r):
+    return (q[0] - p[0]) * (r[1] - p[1]) - (q[1] - p[1]) * (r[0] - p[0])
+
+
+def _on_seg(a, b, c):
+    return min(a[0], b[0]) <= c[0] <= max(a[0], b[0]) and min(a[1], b[1]) <= c[1] <= max(a[1], b[1])
+
+
+def knot_diagram(pts, d):
+    """The crossings of the projection of the closed polygon pts along the direction d, as (point, segment i,
+    parameter s, segment j, parameter t, True when segment i passes over), or None when the projection is not
+    regular (two vertices on one point, a vertex on another segment, adjacent segments collinear, two crossings at
+    one point)."""
+    e = (1, 0, 0) if d[0] == 0 else (0, 1, 0)
+    u = _cross3(d, e)
+    v = _cross3(d, u)
+    P = [(_dot3(u, p), _dot3(v, p)) for p in pts]
+    H = [_dot3(d, p) for p in pts]
+    n = len(pts)
+    if len(set(P)) != n:
+        return None
+    out = []
+    for i in range(n):
+        a, b = P[i], P[(i + 1) % n]
+        for j in range(i + 1, n):
+            c, dd = P[j], P[(j + 1) % n]
+            if j == i + 1 or (i == 0 and j == n - 1):
+                if _orient(a, b, dd if j == i + 1 else c) == 0:
+                    return None
+                continue
+            o1, o2, o3, o4 = _orient(a, b, c), _orient(a, b, dd), _orient(c, dd, a), _orient(c, dd, b)
+            if 0 in (o1, o2, o3, o4):
+                if (o1 == 0 and _on_seg(a, b, c)) or (o2 == 0 and _on_seg(a, b, dd)) or \
+                        (o3 == 0 and _on_seg(c, dd, a)) or (o4 == 0 and _on_seg(c, dd, b)):
+                    return None
+                continue
+            if (o1 > 0) != (o2 > 0) and (o3 > 0) != (o4 > 0):
+                s_, t_ = Fraction(o3, o3 - o4), Fraction(o1, o1 - o2)
+                hi = H[i] + s_ * (H[(i + 1) % n] - H[i])
+                hj = H[j] + t_ * (H[(j + 1) % n] - H[j])
+                if hi == hj:
+                    return None
+                out.append(((a[0] + s_ * (b[0] - a[0]), a[1] + s_ * (b[1] - a[1])), i, s_, j, t_, hi > hj))
+    if len({c[0] for c in out}) != len(out):
+        return None
+    return out
+
+
+def knot_determinant(pts):
+    """|Delta(-1)| of a closed polygon given by integer points, from the first regular projection in KNOT_DIRS."""
+    for d in KNOT_DIRS:
+        cr = knot_diagram(pts, d)
+        if cr is not None:
+            break
+    else:
+        raise ValueError("no regular projection found among the built-in directions")
+    if not cr:
+        return 1
+    unders = [((j, t), (i, s_), k) if i_over else ((i, s_), (j, t), k) for k, (pt, i, s_, j, t, i_over) in enumerate(cr)]
+    cuts = sorted(u for u, o, k in unders)
+    m = len(cuts)
+    rows = []
+    for under, over, k in unders:
+        r_out = cuts.index(under)
+        r_over = (sum(1 for c in cuts if c < over) - 1) % m
+        row = [0] * m
+        row[r_over] += 2
+        row[(r_out - 1) % m] -= 1
+        row[r_out] -= 1
+        rows.append(row)
+    A = [[Fraction(x) for x in row[1:]] for row in rows[1:]]
+    det = Fraction(1)
+    for c in range(len(A)):
+        piv = next((r for r in range(c, len(A)) if A[r][c] != 0), None)
+        if piv is None:
+            return 0
+        if piv != c:
+            A[c], A[piv] = A[piv], A[c]
+            det = -det
+        det *= A[c][c]
+        for r in range(c + 1, len(A)):
+            if A[r][c] != 0:
+                f = A[r][c] / A[c][c]
+                A[r] = [x - f * y for x, y in zip(A[r], A[c])]
+    return abs(int(det))
+
+
+def diamond_knot(args, path):
+    pts = []
+    for line in open(path, encoding="ascii", errors="replace"):
+        line = line.split("#")[0].strip()
+        if line:
+            x, y, z = (int(t) for t in line.split())
+            pts.append((x, y, z))
+    n = len(pts)
+    if n < 6 or len(set(pts)) != n:
+        print(f"expected at least 6 distinct sites, found {n} ({len(set(pts))} distinct)")
+        return 1
+    bad = [p for p in pts if not diamond_site(*p)]
+    if bad:
+        print(f"{bad[0]} is not a site of the diamond lattice")
+        return 1
+    for i in range(n):
+        if sum((a - b) ** 2 for a, b in zip(pts[i], pts[(i + 1) % n])) != 3:
+            print(f"atoms {i} and {(i + 1) % n} are not bonded (squared distance 3)")
+            return 1
+    det = knot_determinant(pts)
+    if det == 1:
+        print(f"a ring of {n} atoms whose knot determinant is 1: not certified knotted")
+        return 1
+    print(f"a ring of {n} atoms of the diamond lattice, knotted: knot determinant |Delta(-1)| = {det}")
+    print(f"RESULT {n}")
+    return 0
+
+
+def linking_number(A, B):
+    """The linking number of two disjoint closed polygons (integer points), from the first projection direction in
+    KNOT_DIRS that is regular for the pair: the signed crossings where A passes over B (the crossings where B passes
+    over A give the same number, which is checked)."""
+    for d in KNOT_DIRS:
+        e = (1, 0, 0) if d[0] == 0 else (0, 1, 0)
+        u = _cross3(d, e)
+        v = _cross3(d, u)
+        PA = [(_dot3(u, p), _dot3(v, p)) for p in A]
+        PB = [(_dot3(u, p), _dot3(v, p)) for p in B]
+        HA = [_dot3(d, p) for p in A]
+        HB = [_dot3(d, p) for p in B]
+        if len(set(PA) | set(PB)) != len(A) + len(B):
+            continue
+        over, under, points, regular = 0, 0, set(), True
+        for i in range(len(A)):
+            a, b = PA[i], PA[(i + 1) % len(A)]
+            for j in range(len(B)):
+                c, dd = PB[j], PB[(j + 1) % len(B)]
+                o1, o2, o3, o4 = _orient(a, b, c), _orient(a, b, dd), _orient(c, dd, a), _orient(c, dd, b)
+                if 0 in (o1, o2, o3, o4):
+                    if (o1 == 0 and _on_seg(a, b, c)) or (o2 == 0 and _on_seg(a, b, dd)) or \
+                            (o3 == 0 and _on_seg(c, dd, a)) or (o4 == 0 and _on_seg(c, dd, b)):
+                        regular = False
+                    continue
+                if (o1 > 0) != (o2 > 0) and (o3 > 0) != (o4 > 0):
+                    s_, t_ = Fraction(o3, o3 - o4), Fraction(o1, o1 - o2)
+                    ha = HA[i] + s_ * (HA[(i + 1) % len(A)] - HA[i])
+                    hb = HB[j] + t_ * (HB[(j + 1) % len(B)] - HB[j])
+                    pt = (a[0] + s_ * (b[0] - a[0]), a[1] + s_ * (b[1] - a[1]))
+                    if ha == hb or pt in points:
+                        regular = False
+                    points.add(pt)
+                    cr = (b[0] - a[0]) * (dd[1] - c[1]) - (b[1] - a[1]) * (dd[0] - c[0])
+                    sign = 1 if cr > 0 else -1
+                    if ha > hb:           # A over B: sign of (over direction x under direction)
+                        over += sign
+                    else:                 # B over A: the same product taken the other way round
+                        under -= sign
+            if not regular:
+                break
+        if regular:
+            if over != under:
+                raise ValueError("inconsistent crossing signs")
+            return over
+    raise ValueError("no regular projection found among the built-in directions")
+
+
+def diamond_link(args, path):
+    rings, cur = [], []
+    for line in open(path, encoding="ascii", errors="replace"):
+        line = line.split("#")[0].strip()
+        if line == "-":
+            rings.append(cur)
+            cur = []
+        elif line:
+            x, y, z = (int(t) for t in line.split())
+            cur.append((x, y, z))
+    rings.append(cur)
+    if len(rings) != 2:
+        print(f"expected two rings separated by a line '-', found {len(rings)}")
+        return 1
+    for k, ring in enumerate(rings):
+        n = len(ring)
+        if n < 6 or len(set(ring)) != n:
+            print(f"ring {k + 1}: expected at least 6 distinct sites, found {n}")
+            return 1
+        bad = [p for p in ring if not diamond_site(*p)]
+        if bad:
+            print(f"ring {k + 1}: {bad[0]} is not a site of the diamond lattice")
+            return 1
+        for i in range(n):
+            if sum((a - b) ** 2 for a, b in zip(ring[i], ring[(i + 1) % n])) != 3:
+                print(f"ring {k + 1}: atoms {i} and {(i + 1) % n} are not bonded (squared distance 3)")
+                return 1
+    if set(rings[0]) & set(rings[1]):
+        print("the two rings share a site")
+        return 1
+    lk = linking_number(rings[0], rings[1])
+    if lk == 0:
+        print("linking number 0: the rings are not certified linked")
+        return 1
+    total = len(rings[0]) + len(rings[1])
+    print(f"two rings of {len(rings[0])} and {len(rings[1])} atoms of the diamond lattice, linking number {lk}")
+    print(f"RESULT {total}")
+    return 0
+
+
+PROBLEMS = {"benzenoid-kemeny": (1, benzenoid_kemeny), "cata-kemeny": (1, cata_kemeny), "lj-fcc": (1, lj_fcc),
+            "diamond-bonds": (1, diamond_bonds),
+            "diamond-knot": (0, diamond_knot),
+            "diamond-link": (0, diamond_link)}
 
 
 def main():
