@@ -1,0 +1,3 @@
+# two DNA sequences of length 20 with 917147 optimal alignments (unit costs)
+TCGCTTCCAGAAAAACAGCG
+AAAGGGGTTTTCCCTGGTTT

@@ -1,16 +1,16 @@
 {
  "collection": "Quantavane Originals",
- "problems": 35,
+ "problems": 39,
  "by_field": {
   "Combinatorics and graph theory": 7,
   "Number theory": 6,
-  "Coding theory": 2,
-  "Discrete geometry": 2,
+  "Coding theory": 3,
+  "Discrete geometry": 3,
   "Physics": 5,
-  "Chemistry and materials": 2,
+  "Chemistry and materials": 3,
   "Astronomy": 4,
   "Computing and operations research": 5,
-  "Biology": 2
+  "Biology": 3
  },
  "items": [
   {
@@ -194,6 +194,30 @@
    "page": "problems/e8-idcode.md"
   },
   {
+   "id": "prime-cover",
+   "field": "Coding theory",
+   "title": "Covering the five-digit primes by one-digit changes",
+   "status": "open",
+   "objective": "minimize",
+   "best_known": "1219",
+   "holder": "Quantavane (Arhan Canli)",
+   "date": "2026-11-09",
+   "checker": "collections/originals/checkers/orig_codes.py",
+   "page": "problems/prime-cover.md"
+  },
+  {
+   "id": "tetra-distinct",
+   "field": "Discrete geometry",
+   "title": "Distinct distances in the tetrahedral grid",
+   "status": "open",
+   "objective": "maximize",
+   "best_known": "16",
+   "holder": "Quantavane (Arhan Canli)",
+   "date": "2026-11-09",
+   "checker": "collections/originals/checkers/orig_geom.py",
+   "page": "problems/tetra-distinct.md"
+  },
+  {
    "id": "tri-areas",
    "field": "Discrete geometry",
    "title": "Distinct triangle areas in the triangular grid",
@@ -302,6 +326,18 @@
    "page": "problems/cata-kemeny.md"
   },
   {
+   "id": "lj-fcc",
+   "field": "Chemistry and materials",
+   "title": "Lennard-Jones clusters on the face-centred cubic lattice",
+   "status": "open",
+   "objective": "minimize",
+   "best_known": "-789723697/1492992",
+   "holder": "Quantavane (Arhan Canli)",
+   "date": "2026-11-09",
+   "checker": "collections/originals/checkers/orig_chem.py",
+   "page": "problems/lj-fcc.md"
+  },
+  {
    "id": "nrm-segments",
    "field": "Astronomy",
    "title": "Non-redundant aperture masks for segmented mirrors",
@@ -408,6 +444,18 @@
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_comp.py",
    "page": "problems/tsp-sunflower.md"
+  },
+  {
+   "id": "align-ambiguity",
+   "field": "Biology",
+   "title": "The most ambiguous pair of DNA sequences",
+   "status": "open",
+   "objective": "maximize",
+   "best_known": "917147",
+   "holder": "Quantavane (Arhan Canli)",
+   "date": "2026-11-09",
+   "checker": "collections/originals/checkers/orig_bio.py",
+   "page": "problems/align-ambiguity.md"
   },
   {
    "id": "hp-tri",

@@ -49,6 +49,10 @@ def problems():
     return out
 
 
+def problems_by_id():
+    return {p["id"]: p for p in problems()}
+
+
 def args_of(p):
     return [os.path.join(ROOT, a) if a.startswith("collections/") else a for a in p["checker"]["args"]]
 
@@ -214,6 +218,26 @@ def controls():
         t = " ".join(lines_of(certificates(P["e8-resolving"]))).split()
         refuse("e8-resolving", " ".join(t[:6]) + "\n", "6 of its vertices (at least 11 are needed)")
         refuse("e8-resolving", " ".join(["240"] + t[1:]) + "\n", "a vertex number out of range")
+    if "lj-fcc" in P:
+        L = lines_of(certificates(P["lj-fcc"]))
+        x, y, z = map(int, L[0].split())
+        refuse("lj-fcc", "\n".join([f"{x + 1} {y} {z}"] + L[1:]) + "\n", "a point with an odd coordinate sum (not a lattice site)")
+        refuse("lj-fcc", "\n".join(L[:-1] + [L[0]]) + "\n", "an atom placed twice")
+    if "align-ambiguity" in P:
+        L = lines_of(certificates(P["align-ambiguity"]))
+        refuse("align-ambiguity", L[0].replace("T", "U") + "\n" + L[1] + "\n", "an RNA letter U")
+    if "tetra-distinct" in P:
+        L = lines_of(certificates(P["tetra-distinct"]))
+        pts = [tuple(map(int, l.split())) for l in L]
+        nn = int(P["tetra-distinct"]["checker"]["args"][1])
+        qf = lambda p, r: sum((p[k] - r[k]) ** 2 for k in range(3)) + (p[0] - r[0]) * (p[1] - r[1]) + (p[1] - r[1]) * (p[2] - r[2]) + (p[0] - r[0]) * (p[2] - r[2])
+        used = {qf(p, r) for p, r in itertools.combinations(pts, 2)}
+        extra = next((a, b, c) for a in range(nn) for b in range(nn - a) for c in range(nn - a - b) if (a, b, c) not in pts and any(qf((a, b, c), r) in used for r in pts))
+        refuse("tetra-distinct", "\n".join(L + ["%d %d %d" % extra]) + "\n", "a point repeating a distance")
+    if "prime-cover" in P:
+        t = " ".join(lines_of(certificates(P["prime-cover"]))).split()
+        refuse("prime-cover", " ".join(t[1:]) + "\n", "the code without its first prime (every prime of it is needed)")
+        refuse("prime-cover", " ".join(t + ["10001"]) + "\n", "a code containing 10001 = 73 x 137")
     if "slew-tour" in P:
         t = " ".join(lines_of(certificates(P["slew-tour"]))).split()
         refuse("slew-tour", " ".join(t[:-1] + [t[0]]) + "\n", "a tour visiting one star twice")
@@ -403,6 +427,67 @@ def cross_checks():
                 queue.append(w)
     expect("cross e8-resolving BFS distances from a root: 1, 56, 182, 1 at 0..3, as the inner products predict",
            bfs == predicted and [bfs.count(k) for k in range(4)] == [1, 56, 182, 1], [bfs.count(k) for k in range(4)])
+    # Lennard-Jones on the fcc lattice (cutoff q <= 8): the regular tetrahedron (six nearest-neighbour pairs) has energy
+    # exactly -6, and the certificate's exact energy agrees with an independent floating-point sum
+    code, res, _ = run("collections/originals/checkers/orig_chem.py", ["lj-fcc", 4, write("tet.txt", "0 0 0\n1 1 0\n1 0 1\n0 1 1\n")])
+    expect("cross lj-fcc the tetrahedron has energy -6", res == "-6", res)
+    code, res, _ = run("collections/originals/checkers/orig_chem.py", ["lj-fcc", 2, write("far.txt", "0 0 0\n3 1 0\n")])
+    expect("cross lj-fcc a pair at squared distance 10 (beyond the cutoff) has energy 0", res == "0", res)
+    if "lj-fcc" in problems_by_id():
+        pp = problems_by_id()["lj-fcc"]
+        pts = [tuple(map(int, l.split())) for l in lines_of(certificates(pp))]
+        fl = sum(64.0 / q ** 6 - 16.0 / q ** 3 for q in (sum((a - b) ** 2 for a, b in zip(u, v)) for u, v in itertools.combinations(pts, 2)) if q <= 8)
+        from fractions import Fraction
+        val = float(Fraction(pp["best_known"]["exact"]))
+        expect(f"cross lj-fcc exact energy {val:.9f} agrees with a floating-point sum", abs(val - fl) < 1e-9, fl)
+    # alignment counts: A(1..3) = 1, 3, 5 by enumerating every alignment path of every pair
+    def paths(i, j):
+        if i == 0 and j == 0:
+            yield ()
+            return
+        if i and j:
+            for p in paths(i - 1, j - 1):
+                yield p + ("D",)
+        if i:
+            for p in paths(i - 1, j):
+                yield p + ("H",)
+        if j:
+            for p in paths(i, j - 1):
+                yield p + ("V",)
+    def costs(x, y, p):
+        i = j = c = 0
+        for st in p:
+            if st == "D":
+                c += x[i] != y[j]
+                i += 1
+                j += 1
+            elif st == "H":
+                c += 1
+                i += 1
+            else:
+                c += 1
+                j += 1
+        return c
+    for n, want in ((1, 1), (2, 3), (3, 5)):
+        allp = list(paths(n, n))
+        best = 0
+        for x in itertools.product("ACGT", repeat=n):
+            for y in itertools.product("ACGT", repeat=n):
+                cs = [costs(x, y, p) for p in allp]
+                best = max(best, cs.count(min(cs)))
+        expect(f"cross align-ambiguity A({n}) = {want} by enumerating all paths of all pairs", best == want, best)
+    # tetrahedral grid: no 5 points of side 4 have distinct distances, 4 have (exhaustive)
+    tp = [(a, b, c) for a in range(4) for b in range(4 - a) for c in range(4 - a - b)]
+    qf = lambda p, r: sum((p[k] - r[k]) ** 2 for k in range(3)) + (p[0] - r[0]) * (p[1] - r[1]) + (p[1] - r[1]) * (p[2] - r[2]) + (p[0] - r[0]) * (p[2] - r[2])
+    dd = lambda S: len({qf(p, r) for p, r in itertools.combinations(S, 2)}) == len(S) * (len(S) - 1) // 2
+    has5 = any(dd(S) for S in itertools.combinations(tp, 5))
+    has4 = any(dd(S) for S in itertools.combinations(tp, 4))
+    expect("cross tetra-distinct side 4: 4 points but not 5 (exhaustive)", has4 and not has5, (has4, has5))
+    # covering the two-digit primes by one-digit changes: no 3 primes do it, 4 do (brute force)
+    p2 = [q for q in range(10, 100) if all(q % d for d in range(2, q))]
+    nbh = {q: {r for r in p2 if r == q or sum(a != b for a, b in zip(str(q), str(r))) == 1} for q in p2}
+    covers = lambda C: set().union(*(nbh[c] for c in C)) == set(p2)
+    expect("cross prime-cover two-digit primes need 4 (brute force)", not any(covers(C) for C in itertools.combinations(p2, 3)) and any(covers(C) for C in itertools.combinations(p2, 4)))
     # the uniform three-part splitting has largest overlap exactly 1/3
     code, res, _ = run("collections/originals/checkers/orig_comb.py", ["overlap-three", 3, 3, write("uni3.txt", "1 1 1\n1 1 1\n1 1 1\n")])
     expect(f"cross overlap-three the uniform splitting scores 1/3", res == "1/3", res)

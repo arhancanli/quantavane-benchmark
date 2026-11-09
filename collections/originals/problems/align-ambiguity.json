@@ -1,0 +1,143 @@
+{
+ "id": "align-ambiguity",
+ "collection": "originals",
+ "field": "Biology",
+ "title": "The most ambiguous pair of DNA sequences",
+ "status": "open",
+ "statement": "Two DNA sequences x and y of length n over A, C, G, T are aligned globally with unit costs: a mismatch costs 1, a gap (one letter inserted or deleted) costs 1, a match costs 0. An alignment is a path from (0, 0) to (n, n) in the edit graph with diagonal, horizontal and vertical steps, and the optimal alignments are the paths of least total cost (the edit distance). Let A(n) be the largest number of optimal alignments of a pair of sequences of length n. We find A(n) exactly for n <= 7 (1, 3, 5, 12, 24, 53, 114). The headline cell is n = 20: find a pair of DNA sequences of length 20 with more than 917,147 optimal alignments (ours).",
+ "objective": "maximize",
+ "submission": "Text file: two lines, the DNA sequences x and y, each of 20 letters A, C, G, T.",
+ "checker": {
+  "program": "collections/originals/checkers/orig_bio.py",
+  "args": [
+   "align-ambiguity",
+   "20"
+  ],
+  "value": "result"
+ },
+ "score": "the number of optimal alignments, an integer (larger is better)",
+ "best_known": {
+  "value": "917147",
+  "exact": "917147",
+  "source": "Quantavane (Arhan Canli), 9 November 2026: local search on pairs (change one letter, keep the change when the count does not fall, with a small chance of accepting a worse pair), 60 seconds (tools/src/alignamb.c)",
+  "kind": "our construction (Quantavane Originals)",
+  "provenance": {
+   "keeper": "Quantavane Originals",
+   "url": "collections/originals/problems/align-ambiguity.md",
+   "read": "2026-11-09",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true,
+   "certificate": "collections/originals/refs/align-ambiguity.txt"
+  }
+ },
+ "verified_pending": [],
+ "added": "originals-1",
+ "quantavane_record": true,
+ "context": "Alignments underlie almost every comparison of biological sequences, and when several alignments have the same optimal score the one a program reports is an arbitrary choice: the positions of gaps, and the mutations and indels read off them, can change from one co-optimal alignment to another. Counting the co-optimal alignments of two given sequences is a textbook dynamic program (Gusfield 1997; the Rosalind exercise 'Counting optimal alignments'). How ambiguous can it get? For the longest common subsequence, Greenberg (2003) bounded the number of optimal embeddings and of distinct common subsequences, and for parametric alignment the number of distinct optimal alignment summaries is of order n^(2/3) (Gusfield et al.; Vinzant). Here the scoring is fixed (unit edit costs), the alphabet is DNA, and the question is the pair with the most optimal alignments. The exact values grow roughly by a factor of two per letter: A(7) = 114. The first six values 1, 3, 5, 12, 24, 53 coincide with OEIS A026786 (the middle column of a path-counting triangle of Kimberling), but the next term there is 117, not 114, so the coincidence ends. The growth rate of A(n) and the shape of the extremal pairs are open.",
+ "references": [
+  "S. B. Needleman, C. D. Wunsch, A general method applicable to the search for similarities in the amino acid sequence of two proteins, J. Mol. Biol. 48 (1970) 443-453",
+  "D. Gusfield, Algorithms on Strings, Trees, and Sequences, Cambridge University Press (1997)",
+  "R. I. Greenberg, Bounds on the number of longest common subsequences, arXiv:cs/0301030 (2003)",
+  "C. Vinzant, Lower bounds for optimal alignments of binary sequences, arXiv:0807.0051",
+  "Rosalind, Counting optimal alignments (problem CTEA), https://rosalind.info/problems/ctea/"
+ ],
+ "novelty": {
+  "checked": "2026-11-09",
+  "file": "novelty/align-ambiguity.json",
+  "verdict": "new. Counting the optimal alignments of given sequences is standard; no result was found on the pair of sequences of a given length with the most optimal alignments under unit costs. Our first values match an unrelated OEIS sequence for six terms and differ at the seventh.",
+  "closest": [
+   "R. I. Greenberg (2003): the largest number of longest-common-subsequence embeddings and of distinct LCS strings (indels only, no substitutions); here substitutions cost 1 as well.",
+   "Parametric alignment (Gusfield et al.; Vinzant): the number of distinct optimal alignment summaries as the scores vary, not the number of optimal paths for one scoring.",
+   "OEIS A026786 and A027246 (Kimberling's triangle A026780): agree with our values 1, 3, 5, 12, 24, 53 and then give 117, where A(7) = 114."
+  ],
+  "benchmark": "no alignment family in the benchmark"
+ },
+ "first_values": {
+  "columns": [
+   "n",
+   "most optimal alignments A(n)",
+   "an extremal pair x / y",
+   "how"
+  ],
+  "rows": [
+   [
+    1,
+    1,
+    "A / A",
+    "exact (every pair)"
+   ],
+   [
+    2,
+    3,
+    "AC / CA",
+    "exact (every pair)"
+   ],
+   [
+    3,
+    5,
+    "ACC / CAA",
+    "exact (every pair)"
+   ],
+   [
+    4,
+    12,
+    "ACGA / GAAC",
+    "exact (every pair)"
+   ],
+   [
+    5,
+    24,
+    "ACCGG / CGACA",
+    "exact (every pair)"
+   ],
+   [
+    6,
+    53,
+    "ACCGGT / CGTACG",
+    "exact (every pair)"
+   ],
+   [
+    7,
+    114,
+    "ACCGGTT / CGTACGA",
+    "exact (every pair)"
+   ],
+   [
+    8,
+    249,
+    "ACTAGCTG / GGCCTTAA",
+    "best known (ours, local search)"
+   ],
+   [
+    10,
+    1081,
+    "AAGGGCCCTT / TGCCTAGGCA",
+    "best known (ours, local search)"
+   ],
+   [
+    12,
+    4334,
+    "TTGGGCCCCAAA / CGCCAATGGCCG",
+    "best known (ours, local search)"
+   ],
+   [
+    16,
+    50253,
+    "AAGCCCCCCTTGGTTG / TTCTTTGGGGCCACCT",
+    "best known (ours, local search)"
+   ],
+   [
+    20,
+    917147,
+    "TCGCTTCCAGAAAAACAGCG / AAAGGGGTTTTCCCTGGTTT",
+    "best known (ours, local search)"
+   ]
+  ],
+  "note": "Exact values by trying every pair (x with its letters in order of first appearance; tools/src/alignamb.c, mode exact). Larger n: local search, lower bounds only."
+ },
+ "baseline": {
+  "date": "2026-11-09",
+  "holder": "Quantavane (Arhan Canli)",
+  "text": "917,147 optimal alignments, held by Quantavane (Arhan Canli), 9 November 2026: the pair in `refs/align-ambiguity.txt` (TCGCTTCCAGAAAAACAGCG / AAAGGGGTTTTCCCTGGTTT)."
+ }
+}

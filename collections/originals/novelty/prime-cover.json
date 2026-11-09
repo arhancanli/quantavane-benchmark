@@ -1,0 +1,317 @@
+{
+ "id": "prime-cover",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:primes AND all:\"Hamming distance\" AND all:\"covering code\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3Aprimes+AND+all%3A%22Hamming+distance%22+AND+all%3A%22covering+code%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T16:44:45Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"digitally delicate primes\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22digitally+delicate+primes%22&start=0&max_results=10&sortBy=relevance",
+   "results": 3,
+   "top": [
+    {
+     "arxiv": "2109.03923v3",
+     "year": "2021",
+     "first_author": "Jon Grantham",
+     "title": "Finding a Widely Digitally Delicate Prime"
+    },
+    {
+     "arxiv": "1510.03401v2",
+     "year": "2015",
+     "first_author": "Jackson Hopper",
+     "title": "Digitally delicate primes"
+    },
+    {
+     "arxiv": "2209.10646v1",
+     "year": "2022",
+     "first_author": "Michael Filaseta",
+     "title": "Consecutive primes which are widely digitally delicate and Brier numbers"
+    }
+   ],
+   "run": "2026-11-09T16:44:49Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:primes AND all:\"one digit\" AND all:graph AND all:domination",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3Aprimes+AND+all%3A%22one+digit%22+AND+all%3Agraph+AND+all%3Adomination&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T16:44:54Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "primes differ in one digit",
+   "url": "https://oeis.org/search?q=primes+differ+in+one+digit&fmt=json",
+   "results": 10,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A090910",
+     "name": "a(n+1) is the least positive integer k such that (1) k is a one-digit number or the concatenation of two or more consecutive numbers; (2) |k-a(n)| is prime; (3) k is not already in the sequence; and (4) |k-a(n)| is not the absolute difference of two previous consecutive members of the sequence."
+    },
+    {
+     "oeis": "A100369",
+     "name": "Largest primes arising in A099756 which were built up from n distinct digits. This sequence differs from A007810 because more than one copy of each digit is permitted."
+    },
+    {
+     "oeis": "A103900",
+     "name": "Rearrangement of two-digit primes such that each term differs from previous just in one digit."
+    },
+    {
+     "oeis": "A048853",
+     "name": "Number of primes (different from n) that can be produced by altering one digit of decimal expansion of n (without changing the number of digits)."
+    },
+    {
+     "oeis": "A235154",
+     "name": "Primes which have one or more occurrences of exactly two different digits."
+    },
+    {
+     "oeis": "A068853",
+     "name": "a(1) = 2; a(n+1) is the smallest prime > a(n) which differs from it in every digit."
+    },
+    {
+     "oeis": "A235157",
+     "name": "Primes which have one or more occurrences of exactly five different digits."
+    },
+    {
+     "oeis": "A108388",
+     "name": "Transmutable primes: Primes with distinct digits d_i, i=1,m (2<=m<=4) such that simultaneously exchanging all occurrences of any one pair (d_i,d_j), i<>j results in a prime."
+    },
+    {
+     "oeis": "A246488",
+     "name": "Gridgeman pairs in increasing order: pairs of palindromic primes which differ only in their middle digits whose difference is equal to 1."
+    },
+    {
+     "oeis": "A376500",
+     "name": "Primes that contain at least one even digit and two different odd digits where any permutation of the odd digits leaving the even digits fixed produces a prime."
+    }
+   ],
+   "run": "2026-11-09T16:44:59Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "dominating set primes digits",
+   "url": "https://oeis.org/search?q=dominating+set+primes+digits&fmt=json",
+   "results": 9,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A372309",
+     "name": "The smallest number whose prime factor concatenation, when written in base n, contains all digits 0,1,...,(n-1)."
+    },
+    {
+     "oeis": "A370612",
+     "name": "The smallest number whose prime factor concatenation, when written in base n, does not contain 0 and contains all digits 1,...,(n-1) at least once."
+    },
+    {
+     "oeis": "A000110",
+     "name": "Bell or exponential numbers: number of ways to partition a set of n labeled elements."
+    },
+    {
+     "oeis": "A000045",
+     "name": "Fibonacci numbers: F(n) = F(n-1) + F(n-2) with F(0) = 0 and F(1) = 1."
+    },
+    {
+     "oeis": "A000108",
+     "name": "Catalan numbers: C(n) = binomial(2n,n)/(n+1) = (2n)!/(n!(n+1)!)."
+    },
+    {
+     "oeis": "A000225",
+     "name": "a(n) = 2^n - 1. (Sometimes called Mersenne numbers, although that name is usually reserved for A001348.)"
+    },
+    {
+     "oeis": "A001045",
+     "name": "Jacobsthal sequence (or Jacobsthal numbers): a(n) = a(n-1) + 2*a(n-2), with a(0) = 0, a(1) = 1; also a(n) = nearest integer to 2^n/3."
+    },
+    {
+     "oeis": "A001906",
+     "name": "F(2n) = bisection of Fibonacci sequence: a(n) = 3*a(n-1) - a(n-2)."
+    },
+    {
+     "oeis": "A003422",
+     "name": "Left factorials: !n = Sum_{k=0..n-1} k!."
+    }
+   ],
+   "run": "2026-11-09T16:45:04Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"covering code\" AND all:primes",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22covering+code%22+AND+all%3Aprimes&start=0&max_results=10&sortBy=relevance",
+   "results": 8,
+   "top": [
+    {
+     "arxiv": "2608.24856v2",
+     "year": "2026",
+     "first_author": "Hengzhuo Li",
+     "title": "The Optimal Asymptotic Rate of Generalized Covering Codes"
+    },
+    {
+     "arxiv": "0904.3835v1",
+     "year": "2009",
+     "first_author": "Alexander A. Davydov",
+     "title": "Linear nonbinary covering codes and saturating sets in projective spaces"
+    },
+    {
+     "arxiv": "2108.13609v2",
+     "year": "2021",
+     "first_author": "Alexander A. Davydov",
+     "title": "Upper bounds on the length function for covering codes with covering radius $R$ and codimension $tR+1$"
+    },
+    {
+     "arxiv": "2310.02715v2",
+     "year": "2023",
+     "first_author": "Alexander A. Davydov",
+     "title": "Further results on covering codes with radius R and codimension tR + 1"
+    },
+    {
+     "arxiv": "2607.14840v2",
+     "year": "2026",
+     "first_author": "Tuvi Etzion",
+     "title": "Covering Sequences and Covering-Sequences Codes"
+    },
+    {
+     "arxiv": "2305.11955v1",
+     "year": "2023",
+     "first_author": "Alexander A. Davydov",
+     "title": "New bounds for covering codes of radius 3 and codimension 3t+1"
+    },
+    {
+     "arxiv": "2609.07910v1",
+     "year": "2026",
+     "first_author": "Sasank Annapureddy",
+     "title": "PRIMUS: Identity, Governance, and Verification for Multi-Agent Federations"
+    },
+    {
+     "arxiv": "2008.13459v3",
+     "year": "2020",
+     "first_author": "Lins Denaux",
+     "title": "Constructing saturating sets in projective spaces using subgeometries"
+    }
+   ],
+   "run": "2026-11-09T17:08:05Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"dominating set\" AND all:\"prime numbers\" AND all:digits",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22dominating+set%22+AND+all%3A%22prime+numbers%22+AND+all%3Adigits&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T17:08:09Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "4,22",
+   "url": "https://oeis.org/search?q=4%2C22&fmt=json",
+   "results": 10,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A002293",
+     "name": "Number of dissections of a polygon: binomial(4*n, n)/(3*n + 1)."
+    },
+    {
+     "oeis": "A181819",
+     "name": "Prime shadow of n: a(1) = 1; for n>1, if n = Product prime(i)^e(i), then a(n) = Product prime(e(i))."
+    },
+    {
+     "oeis": "A057163",
+     "name": "Signature-permutation of a Catalan automorphism: Reflect a rooted plane binary tree; Deutsch's 1998 involution on Dyck paths."
+    },
+    {
+     "oeis": "A116608",
+     "name": "Triangle read by rows: T(n,k) is number of partitions of n having k distinct parts (n>=1, k>=1)."
+    },
+    {
+     "oeis": "A360005",
+     "name": "Two times the median of the multiset of prime indices of n."
+    },
+    {
+     "oeis": "A006753",
+     "name": "Smith (or joke) numbers: composite numbers k such that sum of digits of k = sum of digits of prime factors of k (counted with multiplicity)."
+    },
+    {
+     "oeis": "A318360",
+     "name": "Number of set multipartitions (multisets of sets) of a multiset whose multiplicities are the prime indices of n."
+    },
+    {
+     "oeis": "A238352",
+     "name": "Irregular triangle T(n,k) read by rows: T(n,k) is the number of partitions p(1), p(2), ..., p(m) of n (as weakly ascending list of parts) with k parts p at position p (fixed points), n>=0, 0<=k<= (column index of last nonzero term in row n)."
+    },
+    {
+     "oeis": "A057505",
+     "name": "Signature-permutation of a Catalan Automorphism: Donaghey's map M acting on the parenthesizations encoded by A014486."
+    },
+    {
+     "oeis": "A326042",
+     "name": "a(n) = A064989(sigma(A003961(n))), where A003961 shifts the prime factorization of n one step towards larger primes, and A064989 shifts it back towards smaller primes."
+    }
+   ],
+   "run": "2026-11-09T17:08:14Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "domination number primes one digit",
+   "url": "https://oeis.org/search?q=domination+number+primes+one+digit&fmt=json",
+   "results": 10,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A014499",
+     "name": "Number of 1's in binary representation of n-th prime."
+    },
+    {
+     "oeis": "A000045",
+     "name": "Fibonacci numbers: F(n) = F(n-1) + F(n-2) with F(0) = 0 and F(1) = 1."
+    },
+    {
+     "oeis": "A000108",
+     "name": "Catalan numbers: C(n) = binomial(2n,n)/(n+1) = (2n)!/(n!(n+1)!)."
+    },
+    {
+     "oeis": "A000110",
+     "name": "Bell or exponential numbers: number of ways to partition a set of n labeled elements."
+    },
+    {
+     "oeis": "A000225",
+     "name": "a(n) = 2^n - 1. (Sometimes called Mersenne numbers, although that name is usually reserved for A001348.)"
+    },
+    {
+     "oeis": "A001045",
+     "name": "Jacobsthal sequence (or Jacobsthal numbers): a(n) = a(n-1) + 2*a(n-2), with a(0) = 0, a(1) = 1; also a(n) = nearest integer to 2^n/3."
+    },
+    {
+     "oeis": "A144912",
+     "name": "Unreduced numerators of digital mean, dm_num(b, n), with rows n in {2, 3, 4, ...} and columns b in {2, 3, 4, ..., n}."
+    },
+    {
+     "oeis": "A001906",
+     "name": "F(2n) = bisection of Fibonacci sequence: a(n) = 3*a(n-1) - a(n-2)."
+    },
+    {
+     "oeis": "A003422",
+     "name": "Left factorials: !n = Sum_{k=0..n-1} k!."
+    },
+    {
+     "oeis": "A060294",
+     "name": "Decimal expansion of Buffon's constant 2/Pi."
+    }
+   ],
+   "run": "2026-11-09T17:08:54Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "smallest set of primes such that every five-digit prime differs from one of them in at most one digit dominating set \"prime graph\" digits change one digit",
+   "date": "2026-11-09",
+   "found": "sum-dominant sets of primes, OEIS entries on primes differing in every digit and on five-digit primes with distinct digits; nothing on covering or dominating the primes by one-digit changes"
+  }
+ ]
+}

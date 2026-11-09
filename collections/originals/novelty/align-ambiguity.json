@@ -1,0 +1,310 @@
+{
+ "id": "align-ambiguity",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"number of optimal alignments\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22number+of+optimal+alignments%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T15:33:48Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"co-optimal alignments\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22co-optimal+alignments%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T15:33:53Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"optimal alignments\" AND all:\"edit distance\" AND all:number AND all:maximum",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22optimal+alignments%22+AND+all%3A%22edit+distance%22+AND+all%3Anumber+AND+all%3Amaximum&start=0&max_results=10&sortBy=relevance",
+   "results": 1,
+   "top": [
+    {
+     "arxiv": "2207.00090v1",
+     "year": "2022",
+     "first_author": "Timo Gervens",
+     "title": "Graph Similarity Based on Matrix Norms"
+    }
+   ],
+   "run": "2026-11-09T15:33:57Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "number of optimal alignments",
+   "url": "https://oeis.org/search?q=number+of+optimal+alignments&fmt=json",
+   "results": 10,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A124484",
+     "name": "Maximum number of unit squares aligned with unit-spaced horizontal lines that can be enclosed by a circle of radius n."
+    },
+    {
+     "oeis": "A374505",
+     "name": "Maximum number of unit squares aligned with unit-spaced horizontal lines that can be enclosed by a circle of diameter n."
+    },
+    {
+     "oeis": "A000629",
+     "name": "Number of necklaces of partitions of n+1 labeled beads."
+    },
+    {
+     "oeis": "A227133",
+     "name": "Given a square grid with side n consisting of n^2 cells (or points), a(n) is the maximum number of points that can be painted so that no four of the painted ones form a square with sides parallel to the grid."
+    },
+    {
+     "oeis": "A225227",
+     "name": "The n X n X n dots problem: minimal number of straight lines (connected at their endpoints) required to pass through n^3 dots arranged in an n X n X n grid, without exiting from the box [0, n] X [0, n] X [0, n]."
+    },
+    {
+     "oeis": "A152125",
+     "name": "Consider a square grid with side n consisting of n^2 cells (or points); a(n) is the minimal number of points that can be painted black so that, out of any four points forming a square with sides parallel to the sides of the grid, at least one of the four is black."
+    },
+    {
+     "oeis": "A318165",
+     "name": "The n^n dots problem: minimal number of straight lines (connected at their endpoints) required to pass through n^n dots arranged in an n X n X ... X n grid."
+    },
+    {
+     "oeis": "A374149",
+     "name": "Decimal expansion of the minimum volume of an axis-aligned bounding box which includes the shortest minimum-link polygonal chain joining all the vertices of the cube {0,1}^3."
+    },
+    {
+     "oeis": "A272719",
+     "name": "Maximal number of steps in a nontouching path on an n X n grid such that each step has a different length."
+    },
+    {
+     "oeis": "A371154",
+     "name": "Maximum number of vertices for a given diameter n of a Cayley digraph on the cyclic group with generators s=1 and t>s."
+    }
+   ],
+   "run": "2026-11-09T15:34:02Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"co-optimal\" AND all:alignment AND all:number",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22co-optimal%22+AND+all%3Aalignment+AND+all%3Anumber&start=0&max_results=10&sortBy=relevance",
+   "results": 3,
+   "top": [
+    {
+     "arxiv": "2504.02337v1",
+     "year": "2025",
+     "first_author": "Ming-Jia Yang",
+     "title": "LPA3D: 3D Room-Level Scene Generation from In-the-Wild Images"
+    },
+    {
+     "arxiv": "2510.15542v2",
+     "year": "2025",
+     "first_author": "Ivan Kartashov",
+     "title": "SpikeFit: Towards Optimal Deployment of Spiking Networks on Neuromorphic Hardware"
+    },
+    {
+     "arxiv": "2603.04097v2",
+     "year": "2026",
+     "first_author": "Steve Cabrel Teguia Kouam",
+     "title": "Selective Vibronic Excitation for Coherent Energy Transport in Photosynthetic and Agrivoltaic Systems"
+    }
+   ],
+   "run": "2026-11-09T15:44:36Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"number of optimal alignments\" AND all:sequences",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22number+of+optimal+alignments%22+AND+all%3Asequences&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T15:44:40Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"optimal alignments\" AND all:\"maximum number\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22optimal+alignments%22+AND+all%3A%22maximum+number%22&start=0&max_results=10&sortBy=relevance",
+   "results": 2,
+   "top": [
+    {
+     "arxiv": "0807.0051v2",
+     "year": "2008",
+     "first_author": "Cynthia Vinzant",
+     "title": "Lower Bounds for Optimal Alignments of Binary Sequences"
+    },
+    {
+     "arxiv": "1702.01870v1",
+     "year": "2017",
+     "first_author": "A. Pasha Hosseinbor",
+     "title": "A New Point-set Registration Algorithm for Fingerprint Matching"
+    }
+   ],
+   "run": "2026-11-09T15:44:44Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"optimal alignments\" AND all:\"number of\" AND all:\"edit distance\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22optimal+alignments%22+AND+all%3A%22number+of%22+AND+all%3A%22edit+distance%22&start=0&max_results=10&sortBy=relevance",
+   "results": 1,
+   "top": [
+    {
+     "arxiv": "2207.00090v1",
+     "year": "2022",
+     "first_author": "Timo Gervens",
+     "title": "Graph Similarity Based on Matrix Norms"
+    }
+   ],
+   "run": "2026-11-09T17:07:22Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"longest common subsequences\" AND all:\"number of\" AND all:bounds",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22longest+common+subsequences%22+AND+all%3A%22number+of%22+AND+all%3Abounds&start=0&max_results=10&sortBy=relevance",
+   "results": 16,
+   "top": [
+    {
+     "arxiv": "cs/0301030v2",
+     "year": "2003",
+     "first_author": "Ronald I. Greenberg",
+     "title": "Bounds on the Number of Longest Common Subsequences"
+    },
+    {
+     "arxiv": "2405.00131v2",
+     "year": "2024",
+     "first_author": "Yuto Shida",
+     "title": "Finding Diverse Strings and Longest Common Subsequences in a Graph"
+    },
+    {
+     "arxiv": "2407.10925v1",
+     "year": "2024",
+     "first_author": "George T. Heineman",
+     "title": "Improved Lower Bounds on the Expected Length of Longest Common Subsequences"
+    },
+    {
+     "arxiv": "0912.0368v1",
+     "year": "2009",
+     "first_author": "Paola Bonizzoni",
+     "title": "Variants of Constrained Longest Common Subsequence"
+    },
+    {
+     "arxiv": "1904.00725v1",
+     "year": "2019",
+     "first_author": "Mohamed Slim Kammoun",
+     "title": "On the longest common subsequence of independent random permutations invariant under conjugation"
+    },
+    {
+     "arxiv": "1803.00938v1",
+     "year": "2018",
+     "first_author": "Karl Bringmann",
+     "title": "Multivariate Fine-Grained Complexity of Longest Common Subsequence"
+    },
+    {
+     "arxiv": "2609.05017v1",
+     "year": "2026",
+     "first_author": "Neehar Verma",
+     "title": "Algebraic Geometry Codes Approach the Half-Singleton Bound with Constant Field Size"
+    },
+    {
+     "arxiv": "1502.01063v2",
+     "year": "2015",
+     "first_author": "Karl Bringmann",
+     "title": "Quadratic Conditional Lower Bounds for String Problems and Dynamic Time Warping"
+    },
+    {
+     "arxiv": "2512.10132v1",
+     "year": "2025",
+     "first_author": "Logan Nye",
+     "title": "Universal Hirschberg for Width Bounded Dynamic Programs"
+    },
+    {
+     "arxiv": "2209.11882v3",
+     "year": "2022",
+     "first_author": "Noga Alon",
+     "title": "Logarithmically larger deletion codes of all distances"
+    }
+   ],
+   "run": "2026-11-09T17:07:27Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "1,3,5,12,24,53",
+   "url": "https://oeis.org/search?q=1%2C3%2C5%2C12%2C24%2C53&fmt=json",
+   "results": 2,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A026786",
+     "name": "a(n) = T(n, floor(n/2)), T given by A026780."
+    },
+    {
+     "oeis": "A027246",
+     "name": "a(n) = greatest number in row n of array T given by A026780."
+    }
+   ],
+   "run": "2026-11-09T17:07:31Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "3,5,12,24,53",
+   "url": "https://oeis.org/search?q=3%2C5%2C12%2C24%2C53&fmt=json",
+   "results": 2,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A026786",
+     "name": "a(n) = T(n, floor(n/2)), T given by A026780."
+    },
+    {
+     "oeis": "A027246",
+     "name": "a(n) = greatest number in row n of array T given by A026780."
+    }
+   ],
+   "run": "2026-11-09T17:07:35Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "number of optimal alignments maximum",
+   "url": "https://oeis.org/search?q=number+of+optimal+alignments+maximum&fmt=json",
+   "results": 6,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A124484",
+     "name": "Maximum number of unit squares aligned with unit-spaced horizontal lines that can be enclosed by a circle of radius n."
+    },
+    {
+     "oeis": "A374505",
+     "name": "Maximum number of unit squares aligned with unit-spaced horizontal lines that can be enclosed by a circle of diameter n."
+    },
+    {
+     "oeis": "A227133",
+     "name": "Given a square grid with side n consisting of n^2 cells (or points), a(n) is the maximum number of points that can be painted so that no four of the painted ones form a square with sides parallel to the grid."
+    },
+    {
+     "oeis": "A371154",
+     "name": "Maximum number of vertices for a given diameter n of a Cayley digraph on the cyclic group with generators s=1 and t>s."
+    },
+    {
+     "oeis": "A000292",
+     "name": "Tetrahedral (or triangular pyramidal) numbers: a(n) = C(n+2,3) = n*(n+1)*(n+2)/6."
+    },
+    {
+     "oeis": "A000982",
+     "name": "a(n) = ceiling(n^2/2)."
+    }
+   ],
+   "run": "2026-11-09T17:07:40Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "maximum number of co-optimal alignments two sequences length n edit distance worst case number of optimal alignment paths",
+   "date": "2026-11-09",
+   "found": "Vinzant's lower bounds for parametric alignment summaries, Greenberg's bounds on the number of LCS, the Rosalind exercise on counting optimal alignments; no maximum over pairs for unit edit costs"
+  },
+  {
+   "engine": "OEIS entry (read)",
+   "query": "A026786",
+   "date": "2026-11-09",
+   "found": "a(n) = T(n, floor(n/2)) for Kimberling's triangle A026780 (T(n,k) = T(n-1,k-1) + T(n-2,k-1) + T(n-1,k) for k <= n/2): 1, 1, 3, 5, 12, 24, 53, 117, 246, ...; no alignments; differs from A(7) = 114"
+  }
+ ]
+}

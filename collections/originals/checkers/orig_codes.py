@@ -11,7 +11,11 @@ valid certificate and 1 otherwise. Problems:
   e8-idcode FILE       the same for the graph of the E8 root polytope 4_21: the 240 roots of E8 (doubled to integer
                        vectors: two entries +-2, or eight entries +-1 with an even number of minus signs), sorted,
                        adjacent when their inner product is 4 (1 in the usual scaling; 56 neighbours each). FILE:
-                       vertex numbers 0..239 in that order. Value: |C|."""
+                       vertex numbers 0..239 in that order. Value: |C|.
+  prime-cover N FILE   FILE: N-digit primes (the code), separated by spaces or newlines. Valid when every N-digit
+                       prime is in the code or differs from a prime of the code in exactly one digit (the leading
+                       digit stays nonzero): a covering code of radius 1 inside the N-digit primes, with the Hamming
+                       distance on digits. Value: the number of code primes."""
 import sys
 
 
@@ -135,7 +139,33 @@ def cell600_idcode(args, path):
     return 0
 
 
-PROBLEMS = {"cell600-idcode": (0, cell600_idcode), "e8-idcode": (0, e8_idcode)}
+def prime_cover(args, path):
+    n = int(args[0])
+    lo, hi = 10 ** (n - 1), 10 ** n
+    sieve = bytearray([1]) * hi
+    sieve[0] = sieve[1] = 0
+    for i in range(2, int(hi ** 0.5) + 1):
+        if sieve[i]:
+            sieve[i * i::i] = bytearray(len(sieve[i * i::i]))
+    primes = [p for p in range(lo, hi) if sieve[p]]
+    code = [int(t) for line in open(path) for t in line.split("#")[0].split()]
+    if len(set(code)) != len(code) or any(not (lo <= c < hi and sieve[c]) for c in code):
+        print(f"the code must consist of distinct {n}-digit primes")
+        return 1
+    cs = set(code)
+    for p in primes:
+        if p in cs:
+            continue
+        s = str(p)
+        if not any(int(s[:k] + d + s[k + 1:]) in cs for k in range(n) for d in "0123456789" if d != s[k] and not (k == 0 and d == "0")):
+            print(f"{p} is neither in the code nor one digit away from it")
+            return 1
+    print(f"{len(code)} primes cover all {len(primes)} {n}-digit primes within one changed digit")
+    print(f"RESULT {len(code)}")
+    return 0
+
+
+PROBLEMS = {"cell600-idcode": (0, cell600_idcode), "e8-idcode": (0, e8_idcode), "prime-cover": (1, prime_cover)}
 
 
 def main():

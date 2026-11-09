@@ -17,7 +17,11 @@ valid certificate and 1 otherwise. Problems:
                                Fibonacci number) on the triangular lattice (site a + b e^(i pi/3)). Valid when the
                                sites are distinct and consecutive sites are lattice neighbours (differences (1,0),
                                (0,1), (-1,1), (-1,0), (0,-1), (1,-1)). Value: the energy, minus the number of pairs of
-                               H monomers on neighbouring sites that are not consecutive in the chain."""
+                               H monomers on neighbouring sites that are not consecutive in the chain.
+  align-ambiguity N FILE       FILE: two lines, DNA sequences x and y of length N over A, C, G, T. Value: the number
+                               of optimal global alignments of x and y with unit costs (mismatch 1, gap 1, match 0):
+                               paths in the edit graph from (0, 0) to (N, N) with diagonal, horizontal and vertical
+                               steps and the least total cost, counted exactly by dynamic programming."""
 import sys
 
 PAIRS = {("A", "U"), ("U", "A"), ("G", "C"), ("C", "G"), ("G", "U"), ("U", "G")}
@@ -103,7 +107,37 @@ def hp_tri(args, path):
     return 0
 
 
-PROBLEMS = {"nussinov-degeneracy": (1, nussinov_degeneracy), "hp-tri": (1, hp_tri)}
+def align_ambiguity(args, path):
+    n = int(args[0])
+    seqs = [l.strip().upper() for l in open(path, encoding="ascii", errors="replace") if l.strip() and not l.startswith("#")]
+    if len(seqs) != 2 or any(len(t) != n or set(t) - set("ACGT") for t in seqs):
+        print(f"expected two DNA sequences of length {n}")
+        return 1
+    x, y = seqs
+    INF = 10 ** 9
+    D = [[INF] * (n + 1) for _ in range(n + 1)]
+    C = [[0] * (n + 1) for _ in range(n + 1)]
+    D[0][0], C[0][0] = 0, 1
+    for i in range(n + 1):
+        for j in range(n + 1):
+            if i == 0 and j == 0:
+                continue
+            cands = []
+            if i and j:
+                cands.append((D[i - 1][j - 1] + (x[i - 1] != y[j - 1]), C[i - 1][j - 1]))
+            if i:
+                cands.append((D[i - 1][j] + 1, C[i - 1][j]))
+            if j:
+                cands.append((D[i][j - 1] + 1, C[i][j - 1]))
+            best = min(c for c, _ in cands)
+            D[i][j] = best
+            C[i][j] = sum(k for c, k in cands if c == best)
+    print(f"{x} / {y}: edit distance {D[n][n]}, {C[n][n]} optimal alignments")
+    print(f"RESULT {C[n][n]}")
+    return 0
+
+
+PROBLEMS = {"align-ambiguity": (1, align_ambiguity), "nussinov-degeneracy": (1, nussinov_degeneracy), "hp-tri": (1, hp_tri)}
 
 
 def main():

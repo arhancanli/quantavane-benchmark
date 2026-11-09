@@ -15,7 +15,13 @@ exits 0 only for a valid certificate and 1 otherwise. Problems:
                             1/(1 - lambda).)
   cata-kemeny H FILE        the same for catacondensed benzenoids: valid only if the molecular graph has no internal
                             vertex (every carbon atom on the perimeter; equivalently 4H + 2 vertices and no three
-                            hexagons sharing a vertex). Value: Kemeny's constant, exactly."""
+                            hexagons sharing a vertex). Value: Kemeny's constant, exactly.
+  lj-fcc N FILE             FILE: N lines "x y z", distinct integer points with x + y + z even (sites of the
+                            face-centred cubic lattice, nearest neighbours at squared distance 2). Value: the
+                            Lennard-Jones energy with the nearest-neighbour distance at the minimum of the pair
+                            potential, cut off at 2.5 sigma: the sum over the pairs at squared distance q <= 8 (the
+                            first four shells) of 64/q^6 - 16/q^3 (each nearest-neighbour pair counts -1), in exact
+                            rational arithmetic."""
 import sys
 from fractions import Fraction
 
@@ -134,7 +140,33 @@ def cata_kemeny(args, path):
     return benzenoid_kemeny(args, path)
 
 
-PROBLEMS = {"benzenoid-kemeny": (1, benzenoid_kemeny), "cata-kemeny": (1, cata_kemeny)}
+def lj_fcc(args, path):
+    n = int(args[0])
+    pts = []
+    for line in open(path, encoding="ascii", errors="replace"):
+        line = line.split("#")[0].strip()
+        if line:
+            x, y, z = (int(t) for t in line.split())
+            pts.append((x, y, z))
+    if len(pts) != n or len(set(pts)) != n:
+        print(f"expected {n} distinct points")
+        return 1
+    if any((x + y + z) % 2 for x, y, z in pts):
+        print("a point with an odd coordinate sum is not a site of the face-centred cubic lattice")
+        return 1
+    terms = {}
+    for i in range(n):
+        for j in range(i + 1, n):
+            q = sum((a - b) ** 2 for a, b in zip(pts[i], pts[j]))
+            if q <= 8:
+                terms[q] = terms.get(q, 0) + 1
+    energy = sum(Fraction(64 * c, q ** 6) - Fraction(16 * c, q ** 3) for q, c in terms.items())
+    print(f"{n} atoms, {terms.get(2, 0)} nearest-neighbour pairs; energy {float(energy):.9f}")
+    print(f"RESULT {energy.numerator}/{energy.denominator}" if energy.denominator != 1 else f"RESULT {energy.numerator}")
+    return 0
+
+
+PROBLEMS = {"benzenoid-kemeny": (1, benzenoid_kemeny), "cata-kemeny": (1, cata_kemeny), "lj-fcc": (1, lj_fcc)}
 
 
 def main():

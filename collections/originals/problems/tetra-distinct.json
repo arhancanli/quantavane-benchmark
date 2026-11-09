@@ -1,0 +1,182 @@
+{
+ "id": "tetra-distinct",
+ "collection": "originals",
+ "field": "Discrete geometry",
+ "title": "Distinct distances in the tetrahedral grid",
+ "status": "open",
+ "statement": "The tetrahedral grid of side n is the set of the n(n + 1)(n + 2)/6 points a*e1 + b*e2 + c*e3 with integers a, b, c >= 0 and a + b + c <= n - 1, where e1, e2, e3 are unit vectors at 60 degrees to each other: a tetrahedral piece of the face-centred cubic lattice, in which the squared distance between two points is da^2 + db^2 + dc^2 + da*db + db*dc + da*dc. What is the largest set of grid points whose pairwise distances are all different? For n <= 10 the answer is n (exhaustive search). The headline cell is n = 20 (1,540 points): find more than 16 points with all distances different.",
+ "objective": "maximize",
+ "submission": "Text file: one line 'a b c' per point (a, b, c >= 0, a + b + c <= 19), all points distinct.",
+ "checker": {
+  "program": "collections/originals/checkers/orig_geom.py",
+  "args": [
+   "tetra-distinct",
+   "20"
+  ],
+  "value": "result"
+ },
+ "score": "the number of points, an integer (larger is better)",
+ "best_known": {
+  "value": "16",
+  "exact": "16",
+  "source": "Quantavane (Arhan Canli), 9 November 2026: local search that moves one point at a time to the grid point creating the fewest repeated distances, with a tabu list (tools/src/tetradist.c, mode ls)",
+  "kind": "our construction (Quantavane Originals)",
+  "provenance": {
+   "keeper": "Quantavane Originals",
+   "url": "collections/originals/problems/tetra-distinct.md",
+   "read": "2026-11-09",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true,
+   "certificate": "collections/originals/refs/tetra-distinct.txt"
+  }
+ },
+ "verified_pending": [],
+ "added": "originals-1",
+ "quantavane_record": true,
+ "context": "Erdos's distinct distances problem asks how few distances n points can determine; its opposite, how many points can have all their distances different, is a Golomb-ruler question in higher dimensions. Erdos and Guy (1970) asked it for the n x n square grid, where the largest sets have order n^(2/3) up to logarithmic factors, and in the triangular grid (our problem tri-distinct) the answers stay below n. The face-centred cubic lattice is the densest lattice packing of spheres and the three-dimensional counterpart of the triangular lattice, and its tetrahedral pieces are the natural regions: the corners of a tetrahedron of side n - 1. Here the answer is exactly n for every n <= 10, by exhaustive search; beyond that our searches find fewer than n points (16 for n = 20), and whether the exact values stay at n for a while longer is open. Counting gives an upper bound: the squared distances are integers from 1 to (n - 1)^2, so k points need k(k - 1)/2 <= (n - 1)^2, which allows about 1.41n. Whether the largest sets grow like n, or like a larger multiple of n, is open.",
+ "references": [
+  "P. Erdos, On sets of distances of n points, Amer. Math. Monthly 53 (1946) 248-250",
+  "P. Erdos, R. K. Guy, Distinct distances between lattice points, Elemente der Mathematik 25 (1970) 121-123",
+  "J. H. Conway, N. J. A. Sloane, Sphere Packings, Lattices and Groups, 3rd ed., Springer (1999) (the face-centred cubic lattice A3)",
+  "Our problem tri-distinct (distinct distances in the triangular grid)"
+ ],
+ "novelty": {
+  "checked": "2026-11-09",
+  "file": "novelty/tetra-distinct.json",
+  "verdict": "new. Distinct-distance subsets of the square grid were studied by Erdos and Guy, and of the triangular grid in our problem tri-distinct; no result was found for the face-centred cubic lattice or its tetrahedral pieces.",
+  "closest": [
+   "Our problem tri-distinct: the same question in the triangular grid (two dimensions), where the answers stay below n.",
+   "P. Erdos and R. K. Guy (1970): the n x n square grid, largest sets of order n^(2/3) up to logarithmic factors; a different lattice and dimension."
+  ],
+  "benchmark": "no distinct-distance family in the benchmark"
+ },
+ "first_values": {
+  "columns": [
+   "n",
+   "grid points",
+   "largest set with distinct distances",
+   "how"
+  ],
+  "rows": [
+   [
+    1,
+    1,
+    1,
+    "exact (exhaustive search)"
+   ],
+   [
+    2,
+    4,
+    2,
+    "exact (exhaustive search)"
+   ],
+   [
+    3,
+    10,
+    3,
+    "exact (exhaustive search)"
+   ],
+   [
+    4,
+    20,
+    4,
+    "exact (exhaustive search)"
+   ],
+   [
+    5,
+    35,
+    5,
+    "exact (exhaustive search)"
+   ],
+   [
+    6,
+    56,
+    6,
+    "exact (exhaustive search)"
+   ],
+   [
+    7,
+    84,
+    7,
+    "exact (exhaustive search)"
+   ],
+   [
+    8,
+    120,
+    8,
+    "exact (exhaustive search)"
+   ],
+   [
+    9,
+    165,
+    9,
+    "exact (exhaustive search)"
+   ],
+   [
+    10,
+    220,
+    10,
+    "exact (exhaustive search)"
+   ],
+   [
+    11,
+    286,
+    10,
+    "best known (ours, local search); at most 14"
+   ],
+   [
+    12,
+    364,
+    11,
+    "best known (ours, local search); at most 16"
+   ],
+   [
+    13,
+    455,
+    11,
+    "best known (ours, local search); at most 17"
+   ],
+   [
+    14,
+    560,
+    12,
+    "best known (ours, local search); at most 18"
+   ],
+   [
+    15,
+    680,
+    13,
+    "best known (ours, local search); at most 20"
+   ],
+   [
+    16,
+    816,
+    13,
+    "best known (ours, local search); at most 21"
+   ],
+   [
+    18,
+    1140,
+    14,
+    "best known (ours, local search); at most 24"
+   ],
+   [
+    20,
+    1540,
+    16,
+    "best known (ours, local search); at most 27"
+   ]
+  ],
+  "note": "Exact values from an exhaustive depth-first search (tools/src/tetradist.c, mode exact; n = 10 took 6 minutes). Upper bounds from counting distances. An OEIS search of 1..10 only returns the natural numbers, so the exact terms do not identify a sequence."
+ },
+ "baseline": {
+  "date": "2026-11-09",
+  "holder": "Quantavane (Arhan Canli)",
+  "text": "16 points, held by Quantavane (Arhan Canli), 9 November 2026: the set in `refs/tetra-distinct.txt`. Upper bound 27 (k(k - 1)/2 <= 19^2 = 361)."
+ },
+ "bound": {
+  "value": "27",
+  "kind": "upper bound",
+  "source": "the k(k - 1)/2 distances are different integers between 1 and 19^2 = 361"
+ }
+}

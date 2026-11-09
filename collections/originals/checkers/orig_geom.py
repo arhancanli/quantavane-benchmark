@@ -10,7 +10,12 @@ their triangle in units of sqrt(3)/4, the area of a unit triangle). Problems:
 
   tri-distinct N FILE      points of T_N with all pairwise distances distinct. Value: the number of points.
   tri-areas N FILE         points of T_N such that every three of them form a triangle of nonzero area and all
-                           these areas are different. Value: the number of points."""
+                           these areas are different. Value: the number of points.
+  tetra-distinct N FILE    FILE: lines "a b c", points of the tetrahedral grid (a, b, c >= 0, a + b + c <= N - 1), the
+                           point a e1 + b e2 + c e3 with unit vectors at 60 degrees to each other (a piece of the
+                           face-centred cubic lattice); squared distance da^2 + db^2 + dc^2 + da db + db dc + da dc.
+                           Valid when the points are distinct and all pairwise distances are different. Value: the
+                           number of points."""
 import sys
 from itertools import combinations
 
@@ -70,7 +75,31 @@ def tri_areas(args, path):
     return 0
 
 
-PROBLEMS = {"tri-distinct": (1, tri_distinct), "tri-areas": (1, tri_areas)}
+def tetra_distinct(args, path):
+    n = int(args[0])
+    pts = []
+    for line in open(path, encoding="ascii", errors="replace"):
+        line = line.split("#")[0].strip()
+        if line:
+            pts.append(tuple(int(t) for t in line.split()))
+    if any(len(p) != 3 or min(p) < 0 or sum(p) > n - 1 for p in pts) or len(set(pts)) != len(pts):
+        print(f"the points must be distinct (a, b, c) with a, b, c >= 0 and a + b + c <= {n - 1}")
+        return 1
+    seen = {}
+    for i in range(len(pts)):
+        for j in range(i + 1, len(pts)):
+            a, b, c = (pts[i][k] - pts[j][k] for k in range(3))
+            q = a * a + b * b + c * c + a * b + b * c + a * c
+            if q in seen:
+                print(f"squared distance {q} occurs twice: {pts[i]}, {pts[j]} and {seen[q]}")
+                return 1
+            seen[q] = (pts[i], pts[j])
+    print(f"{len(pts)} points of the tetrahedral grid of side {n}, all {len(seen)} distances different")
+    print(f"RESULT {len(pts)}")
+    return 0
+
+
+PROBLEMS = {"tetra-distinct": (1, tetra_distinct), "tri-distinct": (1, tri_distinct), "tri-areas": (1, tri_areas)}
 
 
 def main():

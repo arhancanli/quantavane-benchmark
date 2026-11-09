@@ -1,0 +1,102 @@
+{
+ "id": "prime-cover",
+ "collection": "originals",
+ "field": "Coding theory",
+ "title": "Covering the five-digit primes by one-digit changes",
+ "status": "open",
+ "statement": "Two n-digit primes are neighbours when they differ in exactly one digit (the leading digit stays nonzero), as in a word ladder: 10007 and 10009, or 10007 and 10607. A covering code of radius 1 inside the n-digit primes is a set C of n-digit primes such that every n-digit prime is in C or is a neighbour of a prime in C. Let c(n) be the smallest size of such a code. The headline cell is n = 5, the 8,363 five-digit primes (the answers of Primel): find a covering code with fewer than 1,219 primes.",
+ "objective": "minimize",
+ "submission": "Text file: the five-digit primes of the code, separated by spaces or newlines.",
+ "checker": {
+  "program": "collections/originals/checkers/orig_codes.py",
+  "args": [
+   "prime-cover",
+   "5"
+  ],
+  "value": "result"
+ },
+ "score": "the number of primes in the code (smaller is better)",
+ "best_known": {
+  "value": "1219",
+  "exact": "1219",
+  "source": "Quantavane (Arhan Canli), 9 November 2026: greedy construction, then iterated removal of one to three random code primes, greedy repair and pruning, 300 seconds (tools/src/dominate.c)",
+  "kind": "our construction (Quantavane Originals)",
+  "provenance": {
+   "keeper": "Quantavane Originals",
+   "url": "collections/originals/problems/prime-cover.md",
+   "read": "2026-11-09",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true,
+   "certificate": "collections/originals/refs/prime-cover.txt"
+  }
+ },
+ "verified_pending": [],
+ "added": "originals-1",
+ "quantavane_record": true,
+ "context": "Covering codes ask for the fewest words such that every word of a space is within a given distance of one of them; in the Hamming spaces they are the football-pool problem and its relatives (Cohen, Honkala, Litsyn and Lobstein 1997). Restricting the space to the primes makes the neighbourhoods irregular: a five-digit prime has between 1 and 16 prime neighbours, and primes that agree except in one place form cliques, which makes packing arguments weak. Primes with no prime neighbour at all, the digitally delicate primes, would have to belong to every code; Tao (2011) proved that a positive proportion of primes are digitally delicate, and the smallest one is 294001, so the five-digit primes have none. The prime graph on the 8,363 five-digit primes is the graph behind Primel's answers (problem primel). A fractional count gives c(5) >= 686 (every prime needs a code prime among its neighbours, and a code prime covers at most 17 primes); the best code found has 1,219 primes, and the gap is open.",
+ "references": [
+  "G. Cohen, I. Honkala, S. Litsyn, A. Lobstein, Covering Codes, North-Holland (1997)",
+  "T. Tao, A remark on primality testing and decimal expansions, J. Aust. Math. Soc. 91 (2011) 405-413",
+  "OEIS A050249 (weakly primes, or digitally delicate primes: 294001, 505447, ...)"
+ ],
+ "novelty": {
+  "checked": "2026-11-09",
+  "file": "novelty/prime-cover.json",
+  "verdict": "new. Covering codes of Hamming spaces and digitally delicate primes are studied; no result was found on covering codes inside the primes with the digit (Hamming) distance.",
+  "closest": [
+   "Covering codes and the football-pool problem in Hamming spaces (Cohen, Honkala, Litsyn and Lobstein): the whole space, regular neighbourhoods; here only primes.",
+   "Digitally delicate primes (Tao 2011; Filaseta and others): primes with no prime neighbour, which would be forced into any code; none has five digits."
+  ],
+  "benchmark": "the benchmark's covering-design and code families concern whole Hamming or Johnson spaces, not primes"
+ },
+ "first_values": {
+  "columns": [
+   "n (digits)",
+   "n-digit primes",
+   "smallest code found",
+   "how",
+   "fractional lower bound"
+  ],
+  "rows": [
+   [
+    2,
+    21,
+    4,
+    "exact (every set of 3 fails)",
+    3
+   ],
+   [
+    3,
+    143,
+    22,
+    "best known (ours)",
+    14
+   ],
+   [
+    4,
+    1061,
+    157,
+    "best known (ours, local search, 15 s)",
+    93
+   ],
+   [
+    5,
+    8363,
+    1219,
+    "best known (ours, local search, 300 s)",
+    686
+   ]
+  ],
+  "note": "Lower bound: the sum over all n-digit primes u of 1/(largest closed neighbourhood among u and its neighbours), rounded up. Codes from tools/src/dominate.c."
+ },
+ "baseline": {
+  "date": "2026-11-09",
+  "holder": "Quantavane (Arhan Canli)",
+  "text": "1,219 primes, held by Quantavane (Arhan Canli), 9 November 2026: the code in `refs/prime-cover.txt`. Lower bound 686 (fractional count)."
+ },
+ "bound": {
+  "value": "686",
+  "kind": "lower bound",
+  "source": "the sum over the five-digit primes u of 1/(largest closed neighbourhood among u and its neighbours) is 685.95"
+ }
+}

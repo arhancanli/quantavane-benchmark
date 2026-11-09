@@ -1,0 +1,83 @@
+{
+ "id": "lj-fcc",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"Lennard-Jones\" AND all:\"fcc lattice\" AND all:clusters AND all:\"global minimum\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22Lennard-Jones%22+AND+all%3A%22fcc+lattice%22+AND+all%3Aclusters+AND+all%3A%22global+minimum%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T15:33:00Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"lattice search\" AND all:\"Lennard-Jones clusters\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22lattice+search%22+AND+all%3A%22Lennard-Jones+clusters%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T15:33:05Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"lattice\" AND all:\"Lennard-Jones clusters\" AND all:restricted",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22lattice%22+AND+all%3A%22Lennard-Jones+clusters%22+AND+all%3Arestricted&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T15:33:09Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"Lennard-Jones\" AND all:fcc AND all:cluster AND all:\"lattice-based\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22Lennard-Jones%22+AND+all%3Afcc+AND+all%3Acluster+AND+all%3A%22lattice-based%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T15:45:15Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"Lennard-Jones\" AND all:\"fcc\" AND all:\"lattice gas\" AND all:cluster",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22Lennard-Jones%22+AND+all%3A%22fcc%22+AND+all%3A%22lattice+gas%22+AND+all%3Acluster&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T16:45:27Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"discrete\" AND all:\"Lennard-Jones\" AND all:\"lattice\" AND all:\"global optimization\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22discrete%22+AND+all%3A%22Lennard-Jones%22+AND+all%3A%22lattice%22+AND+all%3A%22global+optimization%22&start=0&max_results=10&sortBy=relevance",
+   "results": 1,
+   "top": [
+    {
+     "arxiv": "1701.00557v2",
+     "year": "2017",
+     "first_author": "Carlos Barrón-Romero",
+     "title": "Discrete Optimal Global Convergence of an Evolutionary Algorithm for Clusters under the Potential of Lennard Jones"
+    }
+   ],
+   "run": "2026-11-09T16:45:32Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"Lennard-Jones\" AND all:\"face-centred cubic\" AND all:clusters AND all:\"magic numbers\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22Lennard-Jones%22+AND+all%3A%22face-centred+cubic%22+AND+all%3Aclusters+AND+all%3A%22magic+numbers%22&start=0&max_results=10&sortBy=relevance",
+   "results": 1,
+   "top": [
+    {
+     "arxiv": "cond-mat/0512147v1",
+     "year": "2005",
+     "first_author": "Eva G. Noya",
+     "title": "Structural transitions in the 309-atom magic number Lennard-Jones cluster"
+    }
+   ],
+   "run": "2026-11-09T17:08:00Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "Lennard-Jones clusters restricted to fcc lattice sites global minimum energy N atoms lattice optimization table exact",
+   "date": "2026-11-09",
+   "found": "the Cambridge Cluster Database and basin-hopping minima (relaxed), the fcc truncated octahedron as LJ38's global minimum, Northby's icosahedral lattice search; no table of fcc-restricted minima"
+  }
+ ]
+}
