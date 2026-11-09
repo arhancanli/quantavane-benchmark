@@ -9,7 +9,9 @@ a row to `leaderboard.json` with your name or handle.
     python3 -I obb.py check PROBLEM CERTIFICATE
 
 The checker prints the exact value it proves and whether it improves the best known value on the source page and the
-best verified value still in review. A certificate the checker does not accept scores nothing.
+best verified value still in review. A certificate the checker does not accept scores nothing. PROBLEM is a single problem or a family cell
+(`python3 -I obb.py show PROBLEM` prints its statement and the format of its certificate). The project-scheduling
+cells need the instance file from the set's page on the Solutions Update site, unpacked under `instances/rcpsp/`.
 
 ## 2. Write the record
 

@@ -3,6 +3,28 @@
 The version is in `VERSION`; each problem file says in `added` which version first had it. A problem's best known
 value can change within a version when its source table changes; the file then says when the value was read.
 
+## 2.0 (9 Nov 2026): 149,351 problems
+
+- Families: one statement and one checker applied to a whole table kept by someone else, one cell per entry of the
+  table (`families/NAME/family.json` and `families/NAME/cells.jsonl`). A cell holds its parameters, the best known
+  value read from the table, the bound on the other side, and who holds the value when the table names them; the
+  family holds the keeper, the address, the date read, the revision read, how open cells were chosen and what was left
+  out. 148,977 cells in six families: `project-scheduling` 59,170 (RCPSP, Solutions Update, Ghent University),
+  `covering-design` 55,985 (Covering Repository), `linear-code` 15,255 (codetables.de), `spherical-code` 14,782 (H.
+  Cohn's table), `covering-array` 2,651 (ca-tools) and `constant-weight-code` 1,134 (A. E. Brouwer's table). 2,655
+  cells hold a value of ours (`quantavane_record`). Cells that are already single problems stay single problems.
+- `index.json`: the folder of single problems and the six cell files, each with its count and SHA-256.
+- `obb.py`: new commands `families`, `show`, `sample` and `index`; `list FAMILY`, `check` and `verify` take family
+  cells; `list` without a family prints the single problems and the size of each family.
+- New checkers: `ca_check.py` (covering arrays), `lincode_check.py` (exact minimum distance of linear codes over
+  GF(q), q <= 9) and `rcpsp_check.py` (project schedules in Patterson, PSPLIB and NetRes formats).
+- `covering_check.py`: same command and output (and a last line `RESULT B`); for t = m a bit array of ranks instead of
+  a set of tuples, for m > t an exact branch-and-bound search that finishes on designs where the v1 search did not.
+- Tests: `tests/units.py` (known objects with their exact values, red controls, cross-checks against brute force) and
+  `tests/sample_cells.py` (a few random cells of every family: an object of ours that must be certified and must not
+  improve, and a red control that must be refused); `test.sh` runs both and checks `index.json`.
+- `tools/import_families.py` rebuilds every family from the saved table files.
+
 ## 1.1 (8 Nov 2026): 374 problems
 
 - 257 new problems, each with an exact checker of ours:
