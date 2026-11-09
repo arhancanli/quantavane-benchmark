@@ -1,0 +1,60 @@
+{
+ "id": "e8-idcode",
+ "collection": "originals",
+ "field": "Coding theory",
+ "title": "Identifying codes of the E8 root polytope",
+ "status": "open",
+ "statement": "Let G be the graph on the 240 roots of E8 in which two roots are adjacent when their inner product is 1 (the 1-skeleton of the Gosset polytope 4_21; 56 neighbours each). A set C of roots is an identifying code if the sets N[v] & C, where N[v] is v together with its neighbours, are nonempty and pairwise different for all 240 roots v. Determine the smallest size of an identifying code of G. Known: 9 <= minimum <= 15; find an identifying code with 14 or fewer roots, or prove a better lower bound.",
+ "objective": "minimize",
+ "submission": "Text file: the vertex numbers (0 to 239) of the code in the checker's order: the roots doubled to integer vectors (two entries +-2 and six zeros, or eight entries +-1 with an even number of minus signs), sorted as tuples; see e8_graph in checkers/orig_codes.py.",
+ "checker": {
+  "program": "collections/originals/checkers/orig_codes.py",
+  "args": [
+   "e8-idcode"
+  ],
+  "value": "result"
+ },
+ "score": "the number of roots in the code (smaller is better)",
+ "best_known": {
+  "value": "15",
+  "exact": "15",
+  "source": "Quantavane (Arhan Canli), 9 November 2026: an identifying code of 15 roots found by simulated annealing on the number of unidentified vertices (tools/graph_sets.py, 120 s)",
+  "kind": "our construction (Quantavane Originals)",
+  "provenance": {
+   "keeper": "Quantavane Originals",
+   "url": "collections/originals/problems/e8-idcode.md",
+   "read": "2026-11-09",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true,
+   "certificate": "collections/originals/refs/e8-idcode.txt"
+  }
+ },
+ "verified_pending": [],
+ "added": "originals-1",
+ "quantavane_record": true,
+ "context": "Identifying codes (Karpovsky, Chakrabarty and Levitin, IEEE Trans. Inform. Theory 1998) locate a single faulty node from the set of codewords that see it; their counting bound gives |C| >= 2n/(Delta + 2) = 480/58 for this graph, so at least 9 roots. The E8 root system is the most symmetric configuration in eight dimensions (its graph is distance-regular with spectrum 56, 28, 8, -2, -4), and its large automorphism group (the Weyl group of order 696,729,600) suggests that orbit constructions could give much smaller codes than the 15 found by local search; the gap between 9 and 15 is wide. The 600-cell version of the question is the separate problem cell600-idcode.",
+ "references": [
+  "M. G. Karpovsky, K. Chakrabarty, L. B. Levitin, On a new class of codes for identifying vertices in graphs, IEEE Trans. Inform. Theory 44 (1998) 599-611",
+  "J. H. Conway, N. J. A. Sloane, Sphere Packings, Lattices and Groups (Springer, 3rd ed. 1999), chapter 4 (the E8 root system)"
+ ],
+ "novelty": {
+  "checked": "2026-11-09",
+  "file": "novelty/e8-idcode.json",
+  "verdict": "new. Our arXiv searches found no identifying, locating or dominating code of the E8 root graph (the Gosset polytope 4_21), and a web search on identifying codes of polytope graphs found none either.",
+  "closest": [
+   "Identifying codes of hypercubes, grids and other standard families; none for root-system or polytope graphs."
+  ],
+  "benchmark": "no identifying-code family"
+ },
+ "first_values": null,
+ "baseline": {
+  "date": "2026-11-09",
+  "holder": "Quantavane (Arhan Canli)",
+  "text": "15, held by Quantavane (Arhan Canli), 9 November 2026: the code in `refs/e8-idcode.txt` (simulated annealing, tools/graph_sets.py). Lower bound 9 from the counting bound 2n/(Delta + 2) = 480/58."
+ },
+ "bound": {
+  "value": "9",
+  "kind": "lower bound",
+  "source": "counting bound |C| >= 2n/(Delta + 2) = 8.27..."
+ }
+}

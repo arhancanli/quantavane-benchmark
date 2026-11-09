@@ -1,0 +1,29 @@
+{
+ "id": "qr-xor",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"XOR count\" AND all:circulant AND all:\"quadratic residue\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22XOR+count%22+AND+all%3Acirculant+AND+all%3A%22quadratic+residue%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T12:53:17Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"shortest linear program\" AND all:circulant",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22shortest+linear+program%22+AND+all%3Acirculant&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T12:53:21Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "XOR count OR \"straight-line program\" quadratic residue circulant matrix GF(2) encoder quadratic residue code XOR gates minimum",
+   "date": "2026-11-09",
+   "found": "general shortest-linear-program work and XOR counts of MDS circulants; nothing on quadratic-residue circulants or QR-code encoders"
+  }
+ ]
+}

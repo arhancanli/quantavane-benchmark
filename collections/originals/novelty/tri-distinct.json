@@ -1,0 +1,150 @@
+{
+ "id": "tri-distinct",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"distinct distances\" AND all:\"Eisenstein\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22distinct+distances%22+AND+all%3A%22Eisenstein%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T12:54:05Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"Erdos-Guy\" OR all:\"distinct distances\" AND all:\"lattice\" AND all:subset",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22Erdos-Guy%22+OR+all%3A%22distinct+distances%22+AND+all%3A%22lattice%22+AND+all%3Asubset&start=0&max_results=10&sortBy=relevance",
+   "results": 3,
+   "top": [
+    {
+     "arxiv": "1608.02775v2",
+     "year": "2016",
+     "first_author": "Oliver Roche-Newton",
+     "title": "On sets with few distinct distances"
+    },
+    {
+     "arxiv": "2009.12450v2",
+     "year": "2020",
+     "first_author": "Elzbieta Boldyriew",
+     "title": "Tinkering with Lattices: A New Take on the Erdős Distance Problem"
+    },
+    {
+     "arxiv": "2601.09102v2",
+     "year": "2026",
+     "first_author": "Benjamin Grayzel",
+     "title": "Solution to a Problem of Erdős Concerning Distances and Points"
+    }
+   ],
+   "run": "2026-11-09T12:54:09Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "1,2,3,3,4,5,5,6,6,7,7,8,8,9,9,10",
+   "url": "https://oeis.org/search?q=1%2C2%2C3%2C3%2C4%2C5%2C5%2C6%2C6%2C7%2C7%2C8%2C8%2C9%2C9%2C10&fmt=json",
+   "results": 1,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A027923",
+     "name": "a(n) = least k such that E{1,2,...,k} >= 1^2 + 2^2 + ... + n^2, where E = 2nd elementary symmetric function."
+    }
+   ],
+   "run": "2026-11-09T12:54:14Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "distinct distances triangular grid",
+   "url": "https://oeis.org/search?q=distinct+distances+triangular+grid&fmt=json",
+   "results": 9,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A394698",
+     "name": "a(n) is the number of different ways to move from A to B along grid paths in an equilateral triangular grid ABC of side n units such that the distance between A and each successive point of the path increases while the direction of movement changes at each grid point."
+    },
+    {
+     "oeis": "A393796",
+     "name": "a(n) is the number of different ways to move from A to B along grid paths in an equilateral triangular grid ABC of side n units such that the distance between A and each successive point of the path increases."
+    },
+    {
+     "oeis": "A000217",
+     "name": "Triangular numbers: a(n) = binomial(n+1,2) = n*(n+1)/2 = 0 + 1 + 2 + ... + n."
+    },
+    {
+     "oeis": "A000012",
+     "name": "The simplest sequence of positive numbers: the all 1's sequence."
+    },
+    {
+     "oeis": "A002061",
+     "name": "Central polygonal numbers: a(n) = n^2 - n + 1."
+    },
+    {
+     "oeis": "A001519",
+     "name": "a(n) = 3*a(n-1) - a(n-2) for n >= 2, with a(0) = a(1) = 1."
+    },
+    {
+     "oeis": "A000931",
+     "name": "Padovan sequence (or Padovan numbers): a(n) = a(n-2) + a(n-3) with a(0) = 1, a(1) = a(2) = 0."
+    },
+    {
+     "oeis": "A003136",
+     "name": "Loeschian numbers: numbers of the form x^2 + xy + y^2; norms of vectors in A2 lattice."
+    },
+    {
+     "oeis": "A077043",
+     "name": "\"Three-quarter squares\": a(n) = n^2 - A002620(n)."
+    }
+   ],
+   "run": "2026-11-09T12:54:18Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "distinct distances grid points",
+   "url": "https://oeis.org/search?q=distinct+distances+grid+points&fmt=json",
+   "results": 10,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A290190",
+     "name": "Minimum sum of mutual Manhattan distances of n distinct grid points in a cubic lattice."
+    },
+    {
+     "oeis": "A393008",
+     "name": "a(n) is the sum of mutual Manhattan distances of the A117609(n) distinct grid points (x_i,y_i,z_i) in a cubic lattice such that x_i^2 + y_i^2 + z_i^2 <= n."
+    },
+    {
+     "oeis": "A393009",
+     "name": "a(n) is the sum of mutual Manhattan distances of the A000328(n) distinct grid points (x_i,y_i) in a square lattice such that x_i^2 + y_i^2 <= n^2."
+    },
+    {
+     "oeis": "A393010",
+     "name": "a(n) is the sum of mutual Manhattan distances of the A001845(n) distinct grid points (x_i,y_i,z_i) in a cubic lattice such that |x_i| + |y_i| + |z_i| <= n."
+    },
+    {
+     "oeis": "A306385",
+     "name": "a(n) is the maximum number of distinct distances possible between points in a hyperrectangular grid the sum of whose dimensions is n."
+    },
+    {
+     "oeis": "A193838",
+     "name": "Size k of smallest square of k X k lattice points from which n points with distinct mutual distances can be chosen."
+    },
+    {
+     "oeis": "A359931",
+     "name": "Number of distinct circles that can be constructed from an n x n square grid of points using only a compass."
+    },
+    {
+     "oeis": "A271490",
+     "name": "Size of largest subset of points of n X n grid such that no two points are at the same distance."
+    },
+    {
+     "oeis": "A359932",
+     "name": "Number of vertices among all distinct circles that can be constructed from an n x n square grid of points using only a compass."
+    },
+    {
+     "oeis": "A359935",
+     "name": "Irregular table read by rows: T(n,k) is the number of k-gons, k>=2, among all distinct circles that can be constructed from an n x n square grid of points using only a compass."
+    }
+   ],
+   "run": "2026-11-09T13:13:54Z"
+  }
+ ]
+}

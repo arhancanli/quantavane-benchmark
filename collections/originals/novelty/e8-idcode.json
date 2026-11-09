@@ -1,0 +1,98 @@
+{
+ "id": "e8-idcode",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"identifying code\" AND all:E8",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22identifying+code%22+AND+all%3AE8&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T14:12:21Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"identifying codes\" AND all:\"root system\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22identifying+codes%22+AND+all%3A%22root+system%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T14:12:26Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"Gosset\" AND all:\"identifying\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22Gosset%22+AND+all%3A%22identifying%22&start=0&max_results=10&sortBy=relevance",
+   "results": 37,
+   "top": [
+    {
+     "arxiv": "1003.0046v1",
+     "year": "2010",
+     "first_author": "Bertram Kostant",
+     "title": "Experimental evidence for the occurrence of E8 in nature and the radii of the Gosset circles"
+    },
+    {
+     "arxiv": "0905.3025v2",
+     "year": "2009",
+     "first_author": "Jae-Hyouk Lee",
+     "title": "Gosset Polytopes in Picard groups of del Pezzo Surfaces"
+    },
+    {
+     "arxiv": "astro-ph/0607170v1",
+     "year": "2006",
+     "first_author": "M. Pierre",
+     "title": "The XMM-LSS Survey: A well controlled X-ray cluster sample over the D1 CFHTLS area"
+    },
+    {
+     "arxiv": "1704.00690v1",
+     "year": "2017",
+     "first_author": "Sergey Bravyi",
+     "title": "Quantum advantage with shallow circuits"
+    },
+    {
+     "arxiv": "1406.0994v1",
+     "year": "2014",
+     "first_author": "Brajesh Kumar",
+     "title": "Investigation of the stellar content in the western part of the Carina nebula"
+    },
+    {
+     "arxiv": "0909.0486v2",
+     "year": "2009",
+     "first_author": "H. Sana",
+     "title": "The massive star binary fraction in young open clusters - II. NGC 6611 (Eagle Nebula)"
+    },
+    {
+     "arxiv": "2602.03605v1",
+     "year": "2026",
+     "first_author": "Benjamin Wong",
+     "title": "Lee-Yang tensors and Hamiltonian complexity"
+    },
+    {
+     "arxiv": "astro-ph/0508003v1",
+     "year": "2005",
+     "first_author": "J. P. Willis",
+     "title": "The XMM Large-Scale Structure Survey: An initial sample of galaxy groups and clusters to a redshift z<0.6"
+    },
+    {
+     "arxiv": "1107.0267v1",
+     "year": "2011",
+     "first_author": "R. Blomme",
+     "title": "Variability in the CoRoT photometry of three hot O-type stars. HD 46223, HD 46150 and HD 46966"
+    },
+    {
+     "arxiv": "2607.24390v1",
+     "year": "2026",
+     "first_author": "Eric Gosset",
+     "title": "A Detailed Spectroscopic Study of the WN6ha + O5 Colliding-wind Binary WR 25"
+    }
+   ],
+   "run": "2026-11-09T14:12:30Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "\"identifying code\" OR \"identifying codes\" OR \"locating-dominating\" \"600-cell\" OR \"120-cell\" OR \"regular 4-polytope\" graph",
+   "date": "2026-11-09",
+   "found": "nothing on polytope or root-system graphs"
+  }
+ ]
+}

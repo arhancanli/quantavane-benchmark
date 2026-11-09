@@ -1,0 +1,100 @@
+{
+ "id": "polytope-ising",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"600-cell\" AND all:Ising",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22600-cell%22+AND+all%3AIsing&start=0&max_results=10&sortBy=relevance",
+   "results": 1,
+   "top": [
+    {
+     "arxiv": "1204.4567v2",
+     "year": "2012",
+     "first_author": "Mehmet Koca",
+     "title": "Radii of the E8 Gosset Circles as the Mass Excitations in the Ising Model"
+    }
+   ],
+   "run": "2026-11-09T12:22:59Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"600-cell\" AND all:antiferromagnet",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22600-cell%22+AND+all%3Aantiferromagnet&start=0&max_results=10&sortBy=relevance",
+   "results": 1,
+   "top": [
+    {
+     "arxiv": "2207.11077v1",
+     "year": "2022",
+     "first_author": "N. P. Konstantinidis",
+     "title": "Classical magnetization of a four-dimensional Platonic solid"
+    }
+   ],
+   "run": "2026-11-09T12:23:03Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"120-cell\" AND all:Ising",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22120-cell%22+AND+all%3AIsing&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T12:23:07Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"max-cut\" AND all:\"600-cell\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22max-cut%22+AND+all%3A%22600-cell%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T12:52:00Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"Gosset\" AND all:\"max-cut\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22Gosset%22+AND+all%3A%22max-cut%22&start=0&max_results=10&sortBy=relevance",
+   "results": 4,
+   "top": [
+    {
+     "arxiv": "2209.02589v3",
+     "year": "2022",
+     "first_author": "Robbie King",
+     "title": "An Improved Approximation Algorithm for Quantum Max-Cut"
+    },
+    {
+     "arxiv": "2003.14394v1",
+     "year": "2020",
+     "first_author": "Anurag Anshu",
+     "title": "Beyond product state approximations for a quantum analogue of Max Cut"
+    },
+    {
+     "arxiv": "1208.3757v2",
+     "year": "2012",
+     "first_author": "Edward Farhi",
+     "title": "The performance of the quantum adiabatic algorithm on random instances of two optimization problems on regular hypergraphs"
+    },
+    {
+     "arxiv": "2602.03605v1",
+     "year": "2026",
+     "first_author": "Benjamin Wong",
+     "title": "Lee-Yang tensors and Hamiltonian complexity"
+    }
+   ],
+   "run": "2026-11-09T12:52:05Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:E8 AND all:\"root system\" AND all:\"maximum cut\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3AE8+AND+all%3A%22root+system%22+AND+all%3A%22maximum+cut%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T12:52:09Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "600-cell graph maximum cut OR \"Ising antiferromagnet\" 600-cell ground state frustrated edges icosahedral polytope {3,3,5} Ising",
+   "date": "2026-11-09",
+   "found": "nothing on the 600-cell's maximum cut or Ising ground state"
+  }
+ ]
+}

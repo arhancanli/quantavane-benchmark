@@ -1,0 +1,50 @@
+{
+ "id": "cell600-forest",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"decycling number\" AND all:polytope",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22decycling+number%22+AND+all%3Apolytope&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T13:14:53Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"feedback vertex set\" AND all:\"600-cell\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22feedback+vertex+set%22+AND+all%3A%22600-cell%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T13:14:57Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"induced forest\" AND all:polytope",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22induced+forest%22+AND+all%3Apolytope&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T13:35:53Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"decycling number\" AND all:regular AND all:graphs",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22decycling+number%22+AND+all%3Aregular+AND+all%3Agraphs&start=0&max_results=10&sortBy=relevance",
+   "results": 2,
+   "top": [
+    {
+     "arxiv": "2003.00538v2",
+     "year": "2020",
+     "first_author": "Lyuben Lichev",
+     "title": "On the Decycling Number of $4$-regular Random Graphs"
+    },
+    {
+     "arxiv": "1302.3064v1",
+     "year": "2013",
+     "first_author": "Turker Biyikoglu",
+     "title": "Bounding Castelnuovo-Mumford regularity of graphs via Lozin's transformation"
+    }
+   ],
+   "run": "2026-11-09T13:35:58Z"
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+# Benzenoids with the smallest Kemeny constant
+
+`benzenoid-kemeny` · Chemistry and materials · status: **open** · added 9 November 2026 (Quantavane Originals)
+
+Best known value: **14813904881/113347080** (minimize), Quantavane (Arhan Canli), 9 November 2026: circumcoronene (C54H18), the best of a beam search over benzenoids with 10 to 19 hexagons (tools/benzenoid_beam.py)
+
+## Statement
+
+A benzenoid system with h hexagons is a connected set of h cells of the hexagonal tiling, joined through shared edges, that encloses no hole; its molecular graph has the hexagons' corners as vertices and their sides as edges. Kemeny's constant K(G) of a connected graph is the expected time for the simple random walk to reach a target vertex drawn from the stationary distribution (the same for every start), K = sum over the eigenvalues lambda != 1 of the transition matrix of 1/(1 - lambda) = (1/(2m)) sum over pairs {i,j} of d_i d_j R_ij (R: resistance distance; d: degrees; m: number of edges). For each h, which benzenoid with h hexagons minimises K? The headline cell is h = 19: circumcoronene gives K = 14813904881/113347080 = 130.695072...; find a benzenoid with 19 hexagons and a smaller Kemeny constant, or prove that circumcoronene is the minimiser.
+
+## Why it is interesting
+
+Kemeny's constant measures how fast a random walk mixes on a network, and through K = Kf*(G)/(2m) it equals the degree-Kirchhoff (multiplicative degree-Kirchhoff) index of chemical graph theory divided by twice the number of bonds. For hexagonal chains, the unbranched catacondensed benzenoids, the extremes are known: the linear chain maximises Kemeny's constant and the helicene chain minimises it (MATCH, 2026). Over all benzenoids, including pericondensed ones, our exhaustive computation up to h = 10 shows that the minimisers are the most compact systems (the fewest carbon atoms, 2h + 1 + ceil(sqrt(12h - 3)), as for coronene at h = 7), but compactness alone does not decide: at h = 6 three systems with 22 atoms have different constants (42.391, 42.678 and 43.299). Whether the coronene series (coronene, circumcoronene, ...) always minimises K when h = 3k(k+1) + 1 is open.
+
+## Novelty check
+
+Checked 9 November 2026, before the problem was added. Every search below is in [`novelty/benzenoid-kemeny.json`](../novelty/benzenoid-kemeny.json) with its address, the time it ran and its first results.
+
+- arXiv API, 5 searches:
+  - `all:Kemeny AND all:benzenoid`: 0 results
+  - `all:Kemeny AND all:hexagonal`: 1 result
+  - `all:"degree-Kirchhoff" AND all:hexagonal`: 1 result
+  - `all:Kemeny AND all:"hexagonal chains"`: 0 results
+  - `all:"degree-Kirchhoff" AND all:benzenoid`: 0 results
+- OEIS, 2 searches:
+  - `benzenoid Kemeny`: 0 results
+  - `1,1,3,7,22,81,331,1435,6505,30086`: 1 result (A018190)
+- Web search (general web search), `minimum Kirchhoff index benzenoid systems with h hexagons extremal "Kirchhoff index" hexagonal systems`: Kemeny's constant of hexagonal chains (MATCH 2026, chains only) and other indices; no extremal result over all benzenoids
+- Web search (general web search), `"benzenoid" "minimum Kirchhoff index" OR "minimal Kirchhoff index" OR "Kemeny's constant" benzenoid systems with given number of hexagons pericondensed extremal`: arXiv:2504.12781 (iterated hexagonal graphs) and unrelated indices; nothing on the minimum over all benzenoids
+- Open Problems Benchmark v2.0 (its 26 families and the keeper tables they come from): no chemical-graph family.
+
+Closest work found, and how this problem differs:
+- Kemeny's constant of hexagonal chains (MATCH, 2026): extremes among unbranched catacondensed benzenoids. Here the class is all benzenoids, and the minimisers found are compact pericondensed systems, not chains.
+- Li, Chen and Liu (arXiv:2504.12781): Kemeny's constant of iterated hexagonal graphs, a family of formulas, not an extremal problem.
+
+Verdict: new as stated. Kemeny's constant has been studied for hexagonal chains (unbranched catacondensed systems) and for special families; no work was found on its minimum over all benzenoid systems with h hexagons, and the values below are not in any table.
+
+## First values
+
+| h | benzenoids | smallest Kemeny constant | vertices | how |
+| --- | --- | --- | --- | --- |
+| 1 | 1 | 35/6 = 5.833333 | 6 | exact (all benzenoids) |
+| 2 | 1 | 2157/154 = 14.006494 | 10 | exact (all benzenoids) |
+| 3 | 3 | 199/10 = 19.900000 | 13 | exact (all benzenoids) |
+| 4 | 7 | 279187/10374 = 26.912184 | 16 | exact (all benzenoids) |
+| 5 | 22 | 2417157/69782 = 34.638689 | 19 | exact (all benzenoids) |
+| 6 | 81 | 76994761/1816290 = 42.391227 | 22 | exact (all benzenoids) |
+| 7 | 331 | 10969/240 = 45.704167 | 24 | exact (all benzenoids) |
+| 8 | 1435 | 399387/7280 = 54.860852 | 27 | exact (all benzenoids) |
+| 9 | 6505 | 5341847/84048 = 63.557098 | 30 | exact (all benzenoids) |
+| 10 | 30086 | 1088376637/16008696 = 67.986589 | 32 | exact (all benzenoids) |
+| 11 |  | 179361558043/2322240210 = 77.236436 | 35 | best known (ours, beam search) |
+| 12 |  | 34560131/424368 = 81.439060 | 37 | best known (ours, beam search) |
+| 13 |  | 202164921187/2212455198 = 91.375826 | 40 | best known (ours, beam search) |
+| 14 |  | 3032949380643/31566898022 = 96.080058 | 42 | best known (ours, beam search) |
+| 15 |  | 9000533173361/84653913546 = 106.321525 | 45 | best known (ours, beam search) |
+| 16 |  | 282754760114627/2536955997750 = 111.454341 | 47 | best known (ours, beam search) |
+| 17 |  | 7356427873459/60848154774 = 120.898126 | 50 | best known (ours, beam search) |
+| 18 |  | 110690468980247/878154901470 = 126.048911 | 52 | best known (ours, beam search) |
+| 19 |  | 14813904881/113347080 = 130.695073 | 54 | best known (ours, beam search) |
+
+Exact for h <= 10: every benzenoid enumerated (counts agree with OEIS A018190) and the three smallest recomputed in exact rational arithmetic (tools/benzenoids.py). For h >= 11 the values are the best found by a beam search of width 60 (tools/benzenoid_beam.py), upper bounds only.
+
+## Best known value
+
+14813904881/113347080 = 130.695072877... for h = 19 (circumcoronene, `refs/benzenoid-kemeny.txt`), held by Quantavane (Arhan Canli), 9 November 2026 as the best value found; the beam search over h = 10 to 19 found nothing smaller. No lower bound beyond the trivial one is proved.
+
+## Submitting and checking
+
+Format: Text file: 19 lines 'q r', the axial coordinates of the hexagons (the neighbours of (q, r) are (q+-1, r), (q, r+-1), (q+1, r-1) and (q-1, r+1)).
+
+Score: Kemeny's constant of the molecular graph, an exact rational number (smaller is better). A submission improves the problem when its exact value is smaller than the best known value.
+
+    python3 -I obb.py check benzenoid-kemeny FILE               # from the benchmark's root
+    python3 -I collections/originals/checkers/orig_chem.py benzenoid-kemeny 19 FILE
+
+The checker is ours (standard library only); it prints the exact value as its last line `RESULT v` and exits 0 only for a valid certificate. Our certificate: `collections/originals/refs/benzenoid-kemeny.txt`.
+
+## References
+
+- J. G. Kemeny, J. L. Snell, Finite Markov Chains (Van Nostrand, 1960)
+- H. Chen, F. Zhang, Resistance distance and the normalized Laplacian spectrum, Discrete Applied Math. 155 (2007) 654-661 (degree-Kirchhoff index; K = Kf*/2m)
+- Kemeny's constant of hexagonal chains (linear chain maximal, helicene minimal), MATCH Commun. Math. Comput. Chem. 2026 (found by web search; read as data)
+- F. Harary, H. Harborth, Extremal animals, J. Combin. Inform. System Sci. 1 (1976) 1-8 (fewest vertices of a polyhex)
+- OEIS A018190 (number of benzenoids with h hexagons; our enumeration reproduces 1, 1, 3, 7, 22, 81, 331, 1435, 6505, 30086)

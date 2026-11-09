@@ -1,0 +1,37 @@
+{
+ "id": "overlap-three",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"minimum overlap\" AND all:partition AND all:sets",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22minimum+overlap%22+AND+all%3Apartition+AND+all%3Asets&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T14:07:41Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"minimum overlap\" AND all:\"three sets\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22minimum+overlap%22+AND+all%3A%22three+sets%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T14:07:55Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"minimum overlap\" AND all:\"k sets\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22minimum+overlap%22+AND+all%3A%22k+sets%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T14:07:59Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "Erdős minimum overlap problem generalization three sets OR \"k parts\" OR \"several sets\" partition {1,...,kn} differences between parts",
+   "date": "2026-11-09",
+   "found": "only the two-part problem (MathWorld, Wikipedia, arXiv:2201.05704, arXiv:1609.08000, OEIS A393584)"
+  }
+ ]
+}

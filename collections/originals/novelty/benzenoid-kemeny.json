@@ -1,0 +1,96 @@
+{
+ "id": "benzenoid-kemeny",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:Kemeny AND all:benzenoid",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3AKemeny+AND+all%3Abenzenoid&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T12:23:50Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:Kemeny AND all:hexagonal",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3AKemeny+AND+all%3Ahexagonal&start=0&max_results=10&sortBy=relevance",
+   "results": 1,
+   "top": [
+    {
+     "arxiv": "2504.12781v1",
+     "year": "2025",
+     "first_author": "Hao Li",
+     "title": "Hexagonal and k-hexagonal graph's normalized Laplacian spectrum and applications"
+    }
+   ],
+   "run": "2026-11-09T12:23:54Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"degree-Kirchhoff\" AND all:hexagonal",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22degree-Kirchhoff%22+AND+all%3Ahexagonal&start=0&max_results=10&sortBy=relevance",
+   "results": 1,
+   "top": [
+    {
+     "arxiv": "2504.12781v1",
+     "year": "2025",
+     "first_author": "Hao Li",
+     "title": "Hexagonal and k-hexagonal graph's normalized Laplacian spectrum and applications"
+    }
+   ],
+   "run": "2026-11-09T12:23:58Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:Kemeny AND all:\"hexagonal chains\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3AKemeny+AND+all%3A%22hexagonal+chains%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T13:15:19Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"degree-Kirchhoff\" AND all:benzenoid",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22degree-Kirchhoff%22+AND+all%3Abenzenoid&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T13:15:24Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "benzenoid Kemeny",
+   "url": "https://oeis.org/search?q=benzenoid+Kemeny&fmt=json",
+   "results": 0,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [],
+   "run": "2026-11-09T13:20:01Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "1,1,3,7,22,81,331,1435,6505,30086",
+   "url": "https://oeis.org/search?q=1%2C1%2C3%2C7%2C22%2C81%2C331%2C1435%2C6505%2C30086&fmt=json",
+   "results": 1,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A018190",
+     "name": "Number of planar simply-connected polyhexes (or benzenoid hydrocarbons) with n hexagons."
+    }
+   ],
+   "run": "2026-11-09T13:24:03Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "minimum Kirchhoff index benzenoid systems with h hexagons extremal \"Kirchhoff index\" hexagonal systems",
+   "date": "2026-11-09",
+   "found": "Kemeny's constant of hexagonal chains (MATCH 2026, chains only) and other indices; no extremal result over all benzenoids"
+  },
+  {
+   "engine": "general web search",
+   "query": "\"benzenoid\" \"minimum Kirchhoff index\" OR \"minimal Kirchhoff index\" OR \"Kemeny's constant\" benzenoid systems with given number of hexagons pericondensed extremal",
+   "date": "2026-11-09",
+   "found": "arXiv:2504.12781 (iterated hexagonal graphs) and unrelated indices; nothing on the minimum over all benzenoids"
+  }
+ ]
+}

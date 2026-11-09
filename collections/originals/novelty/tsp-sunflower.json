@@ -1,0 +1,21 @@
+{
+ "id": "tsp-sunflower",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"traveling salesman\" AND all:sunflower",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22traveling+salesman%22+AND+all%3Asunflower&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T12:25:08Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"traveling salesman\" AND all:\"Fibonacci lattice\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22traveling+salesman%22+AND+all%3A%22Fibonacci+lattice%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T12:25:13Z"
+  }
+ ]
+}

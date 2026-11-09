@@ -1,0 +1,156 @@
+{
+ "id": "nussinov-degeneracy",
+ "collection": "originals",
+ "field": "Biology",
+ "title": "The most ambiguous RNA under base-pair maximization",
+ "status": "open",
+ "statement": "In the base-pair maximization (Nussinov) model an RNA sequence over A, C, G, U folds into a secondary structure: a set of base pairs from {AU, UA, GC, CG, GU, UG}, each base in at most one pair, every pair (i, j) with j - i >= 4 (a hairpin loop of at least three bases), and no two pairs crossing (i < k < j < l). The predicted structures are those with the largest number of pairs. Let N(s) be the number of such optimal structures of the sequence s and D(n) the largest N(s) over sequences of length n. Determine D(n); the headline cell is n = 30: find a sequence of length 30 with more than 100,603 optimal structures.",
+ "objective": "maximize",
+ "submission": "Text file: an RNA sequence of length 30 over A, C, G, U (whitespace and lines starting with # are ignored).",
+ "checker": {
+  "program": "collections/originals/checkers/orig_bio.py",
+  "args": [
+   "nussinov-degeneracy",
+   "30"
+  ],
+  "value": "result"
+ },
+ "score": "the number N(s) of structures with the maximum number of base pairs, computed exactly by the checker (larger is better)",
+ "best_known": {
+  "value": "100603",
+  "exact": "100603",
+  "source": "Quantavane (Arhan Canli), 9 November 2026: the sequence UUUUUUGGCAUCGGGAAAAAAAAAGGGAGA (7 pairs, 100,603 optimal structures), found by simulated annealing over sequences (tools/src/nussdeg.c)",
+  "kind": "our construction (Quantavane Originals)",
+  "provenance": {
+   "keeper": "Quantavane Originals",
+   "url": "collections/originals/problems/nussinov-degeneracy.md",
+   "read": "2026-11-09",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true,
+   "certificate": "collections/originals/refs/nussinov-degeneracy.txt"
+  }
+ },
+ "verified_pending": [],
+ "added": "originals-1",
+ "quantavane_record": true,
+ "context": "Base-pair maximization (Nussinov and Jacobson, PNAS 1980) is the simplest RNA folding model and the core of the dynamic programs behind energy-based prediction; its optimum is often far from unique, and the number of co-optimal and suboptimal structures is how prediction ambiguity is measured (Wuchty, Fontana, Hofacker and Schuster, Biopolymers 1999). The total number of secondary structures of a length-n chain grows exponentially (Stein and Waterman 1979); D(n) asks how much of that can be concentrated on the optimum by one sequence, a worst case for structure prediction. The exact first values below grow quickly (D(13) = 63) and the best sequences found mix G-U wobble stretches with A-U and G-C blocks, but neither the growth rate of D(n) nor the shape of the extremal sequences is known.",
+ "references": [
+  "R. Nussinov, A. B. Jacobson, Fast algorithm for predicting the secondary structure of single-stranded RNA, PNAS 77 (1980) 6309-6313",
+  "P. R. Stein, M. S. Waterman, On some new sequences generalizing the Catalan and Motzkin numbers, Discrete Math. 26 (1979) 261-272",
+  "S. Wuchty, W. Fontana, I. L. Hofacker, P. Schuster, Complete suboptimal folding of RNA and the stability of secondary structures, Biopolymers 49 (1999) 145-165"
+ ],
+ "novelty": {
+  "checked": "2026-11-09",
+  "file": "novelty/nussinov-degeneracy.json",
+  "verdict": "new. No paper, table or OEIS entry was found for the largest number of co-optimal structures under base-pair maximization; the exact sequence D(1), ..., D(13) is not in the OEIS.",
+  "closest": [
+   "Counting of all secondary structures (Stein-Waterman numbers) and suboptimal-structure enumeration for given sequences; neither maximizes the number of optimal structures over sequences."
+  ],
+  "benchmark": "no RNA family"
+ },
+ "first_values": {
+  "columns": [
+   "n",
+   "D(n)",
+   "how"
+  ],
+  "rows": [
+   [
+    1,
+    1,
+    "exact (all 4^n sequences)"
+   ],
+   [
+    2,
+    1,
+    "exact (all 4^n sequences)"
+   ],
+   [
+    3,
+    1,
+    "exact (all 4^n sequences)"
+   ],
+   [
+    4,
+    1,
+    "exact (all 4^n sequences)"
+   ],
+   [
+    5,
+    1,
+    "exact (all 4^n sequences)"
+   ],
+   [
+    6,
+    3,
+    "exact (all 4^n sequences)"
+   ],
+   [
+    7,
+    5,
+    "exact (all 4^n sequences)"
+   ],
+   [
+    8,
+    7,
+    "exact (all 4^n sequences)"
+   ],
+   [
+    9,
+    13,
+    "exact (all 4^n sequences)"
+   ],
+   [
+    10,
+    22,
+    "exact (all 4^n sequences)"
+   ],
+   [
+    11,
+    27,
+    "exact (all 4^n sequences)"
+   ],
+   [
+    12,
+    48,
+    "exact (all 4^n sequences)"
+   ],
+   [
+    13,
+    63,
+    "exact (all 4^n sequences)"
+   ],
+   [
+    16,
+    247,
+    "best known (ours)"
+   ],
+   [
+    20,
+    1368,
+    "best known (ours)"
+   ],
+   [
+    25,
+    10310,
+    "best known (ours)"
+   ],
+   [
+    30,
+    100603,
+    "best known (ours)"
+   ]
+  ],
+  "note": "Exact values: every sequence of length n (tools/src/nussdeg.c exhaustive). Best known values: simulated annealing over sequences, 60 s each. Trivial upper bound: the number of all secondary structures on n bases (568 for n = 13, 240,944,076 for n = 30)."
+ },
+ "baseline": {
+  "date": "2026-11-09",
+  "holder": "Quantavane (Arhan Canli)",
+  "text": "100,603 for n = 30, held by Quantavane (Arhan Canli), 9 November 2026: the sequence in `refs/nussinov-degeneracy.txt`. Upper bound 240,944,076, the number of all secondary structures of a 30-base chain with hairpins of at least 3 bases."
+ },
+ "bound": {
+  "value": "240944076",
+  "kind": "upper bound (trivial)",
+  "source": "all secondary structures on 30 bases with hairpin loops of at least 3"
+ }
+}

@@ -1,0 +1,10 @@
+# 9 points of T_30 with distinct triangle areas
+0 15
+2 4
+6 0
+7 22
+14 13
+19 9
+20 3
+20 6
+24 1

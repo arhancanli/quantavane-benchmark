@@ -1,0 +1,320 @@
+{
+ "id": "gauss-admissible",
+ "collection": "originals",
+ "field": "Number theory",
+ "title": "Admissible constellations of smallest diameter in the Gaussian integers",
+ "status": "open",
+ "statement": "A finite set H of Gaussian integers is admissible if, for every prime ideal P of Z[i], the elements of H do not meet every residue class modulo P. Only prime ideals of norm at most |H| can be covered, so admissibility is a finite check: H must avoid one of the 2 classes modulo (1+i) (all its elements x + yi have x + y of the same parity), one of the p classes modulo each of the two prime ideals above a prime p = 1 (mod 4) with p <= |H|, and one of the p^2 classes modulo an inert prime p = 3 (mod 4) with p^2 <= |H|. The diameter of H is the largest squared distance |h - h'|^2 between two of its elements. Let D(k) be the least diameter of an admissible set of k Gaussian integers. Determine D(k); the headline cell is k = 50: find an admissible 50-set of diameter less than 218. The same question in the Eisenstein integers Z[w], w = (-1 + sqrt(-3))/2, with squared distance x^2 - xy + y^2 for x + yw, is part of the problem (second column of the table).",
+ "objective": "minimize",
+ "submission": "Text file: 50 lines 'x y', one Gaussian integer x + yi per line (lines starting with # are ignored). For the Eisenstein version, run the checker with RING 3 instead of 4.",
+ "checker": {
+  "program": "collections/originals/checkers/orig_numth.py",
+  "args": [
+   "gauss-admissible",
+   "4",
+   "50"
+  ],
+  "value": "result"
+ },
+ "score": "the diameter, max |h - h'|^2 over the 50 points, an integer (smaller is better)",
+ "best_known": {
+  "value": "218",
+  "exact": "218",
+  "source": "Quantavane (Arhan Canli), 9 November 2026: an admissible 50-set of diameter 218 found by a greedy sieve in a disc followed by local repair (tools/admissible_sieve.py)",
+  "kind": "our construction (Quantavane Originals)",
+  "provenance": {
+   "keeper": "Quantavane Originals",
+   "url": "collections/originals/problems/gauss-admissible.md",
+   "read": "2026-11-09",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true,
+   "certificate": "collections/originals/refs/gauss-admissible.txt"
+  }
+ },
+ "verified_pending": [],
+ "added": "originals-1",
+ "quantavane_record": true,
+ "context": "For rational integers the least width H(k) of an admissible k-tuple is the quantity behind bounded gaps between primes: Zhang, Maynard and Polymath8b showed that the Dickson-Hardy-Littlewood statement DHL[k,2] gives infinitely many pairs of primes at distance at most H(k), and Engelsma's exact values (k <= 342) and Sutherland's tables of narrow admissible tuples are the record lists [Maynard, arXiv:1311.4600; Polymath, arXiv:1407.4897]. Maynard's sieve carries over to number fields, giving bounded gaps between prime elements of a fixed number field [Castillo, Hall, Lemke Oliver, Pollack and Thompson, arXiv:1403.5808], and in Z[i] the analogue of H(k) is the smallest diameter D(k) defined here: if the Hardy-Littlewood conjecture for Gaussian primes holds, every admissible set has infinitely many translates made of Gaussian primes. Renze, Wagon and Wick catalogued the 52 maximal admissible connected sets of Gaussian primes (The Gaussian Zoo, Experimental Math. 10 (2001)); smallest diameters for every k had not been computed.",
+ "references": [
+  "J. Maynard, Small gaps between primes, Ann. of Math. 181 (2015) 383-413, arXiv:1311.4600",
+  "D. H. J. Polymath, Variants of the Selberg sieve, and bounded intervals containing many primes, Res. Math. Sci. 1 (2014) 12, arXiv:1407.4897",
+  "A. Castillo, C. Hall, R. J. Lemke Oliver, P. Pollack, L. Thompson, Bounded gaps between primes in number fields and function fields, Proc. AMS 143 (2015) 2841-2856, arXiv:1403.5808",
+  "J. Renze, S. Wagon, B. Wick, The Gaussian zoo, Experimental Mathematics 10 (2001) 161-173",
+  "T. J. Engelsma, k-tuple permissible patterns (tables of H(k) for k <= 342); A. V. Sutherland, narrow admissible tuples (math.mit.edu/~primegaps)"
+ ],
+ "novelty": {
+  "checked": "2026-11-09",
+  "file": "novelty/gauss-admissible.json",
+  "verdict": "new. No paper, OEIS entry or table of smallest-diameter admissible sets of Gaussian or Eisenstein integers was found; the sequences of exact values below are not in the OEIS. The closest work catalogues connected admissible patterns (The Gaussian Zoo), a different question with finitely many answers.",
+  "closest": [
+   "Renze, Wagon and Wick, The Gaussian Zoo (2001): all 52 maximal admissible connected sets of Gaussian primes. Connectedness bounds the size; here sets need not be connected and the question is the least diameter for every k, the analogue of H(k).",
+   "Engelsma's and Sutherland's tables of H(k) for rational integers: the one-dimensional problem this one extends."
+  ],
+  "benchmark": "no entry; the benchmark has no prime-pattern family"
+ },
+ "first_values": {
+  "columns": [
+   "k",
+   "D(k) in Z[i]",
+   "D(k) in Z[w] (norm x^2 - xy + y^2)"
+  ],
+  "rows": [
+   [
+    1,
+    "0 (exact)",
+    "0 (exact)"
+   ],
+   [
+    2,
+    "2 (exact)",
+    "1 (exact)"
+   ],
+   [
+    3,
+    "4 (exact)",
+    "3 (exact)"
+   ],
+   [
+    4,
+    "4 (exact)",
+    "4 (exact)"
+   ],
+   [
+    5,
+    "10 (exact)",
+    "4 (exact)"
+   ],
+   [
+    6,
+    "10 (exact)",
+    "4 (exact)"
+   ],
+   [
+    7,
+    "16 (exact)",
+    "12 (exact)"
+   ],
+   [
+    8,
+    "16 (exact)",
+    "12 (exact)"
+   ],
+   [
+    9,
+    "20 (exact)",
+    "12 (exact)"
+   ],
+   [
+    10,
+    "20 (exact)",
+    "16 (exact)"
+   ],
+   [
+    11,
+    "32 (exact)",
+    "21 (exact)"
+   ],
+   [
+    12,
+    "32 (exact)",
+    "21 (exact)"
+   ],
+   [
+    13,
+    "40 (exact)",
+    "28 (exact)"
+   ],
+   [
+    14,
+    "40 (exact)",
+    "28 (exact)"
+   ],
+   [
+    15,
+    "50 (exact)",
+    "28 (exact)"
+   ],
+   [
+    16,
+    "52 (exact)",
+    "36 (exact)"
+   ],
+   [
+    17,
+    "52 (exact)",
+    "39 (exact)"
+   ],
+   [
+    18,
+    "58 (exact)",
+    "39 (exact)"
+   ],
+   [
+    19,
+    "58 (exact)",
+    "39 (exact)"
+   ],
+   [
+    20,
+    "68 (exact)",
+    "48 (exact)"
+   ],
+   [
+    21,
+    "68 (exact)",
+    "49 (exact)"
+   ],
+   [
+    22,
+    "74 (exact)",
+    "49 (exact)"
+   ],
+   [
+    23,
+    "80 (exact)",
+    "52 (exact)"
+   ],
+   [
+    24,
+    "90 (exact)",
+    "52 (exact)"
+   ],
+   [
+    25,
+    "90 (exact)",
+    "63 (exact)"
+   ],
+   [
+    26,
+    "100",
+    "63 (exact)"
+   ],
+   [
+    27,
+    "100",
+    "63 (exact)"
+   ],
+   [
+    28,
+    "104",
+    "64 (exact)"
+   ],
+   [
+    29,
+    "106",
+    "76"
+   ],
+   [
+    30,
+    "106",
+    "76"
+   ],
+   [
+    31,
+    "122",
+    "84"
+   ],
+   [
+    32,
+    "122",
+    "84"
+   ],
+   [
+    33,
+    "130",
+    "84"
+   ],
+   [
+    34,
+    "136",
+    "91"
+   ],
+   [
+    35,
+    "144",
+    "93"
+   ],
+   [
+    36,
+    "144",
+    "93"
+   ],
+   [
+    37,
+    "160",
+    "97"
+   ],
+   [
+    38,
+    "164",
+    "103"
+   ],
+   [
+    39,
+    "164",
+    "109"
+   ],
+   [
+    40,
+    "170",
+    "112"
+   ],
+   [
+    42,
+    "178",
+    "112"
+   ],
+   [
+    44,
+    "180",
+    "124"
+   ],
+   [
+    46,
+    "200",
+    "133"
+   ],
+   [
+    48,
+    "202",
+    "133"
+   ],
+   [
+    50,
+    "218",
+    "147"
+   ],
+   [
+    52,
+    "234",
+    "156"
+   ],
+   [
+    56,
+    "260",
+    "163"
+   ],
+   [
+    60,
+    "290",
+    "183"
+   ],
+   [
+    64,
+    "298",
+    "196"
+   ]
+  ],
+  "note": "Exact values come from an exhaustive branch and bound (tools/src/admissible_exact.c: translate so that the lexicographically least point is 0, add points in a fixed order, prune when a prime ideal's classes are all covered). The other values are our best known upper bounds (tools/admissible_sieve.py), held by Quantavane (Arhan Canli), 9 November 2026. Exact searches were stopped at k = 26 for Z[i] and k = 29 for Z[w]."
+ },
+ "baseline": {
+  "date": "2026-11-09",
+  "holder": "Quantavane (Arhan Canli)",
+  "text": "218 for k = 50 in Z[i], held by Quantavane (Arhan Canli), 9 November 2026: the set in `refs/gauss-admissible.txt`, found by sieving a disc (for each prime ideal of norm <= 50, smallest norm first, delete the residue class holding the fewest points) and then exchanging points on the diameter (tools/admissible_sieve.py). In Z[w], our best 50-set has diameter 147. Lower bound: D(50) >= D(25) = 90, since removing points keeps a set admissible; nothing better is proved."
+ },
+ "bound": {
+  "value": "90",
+  "kind": "lower bound",
+  "source": "D(50) >= D(25) = 90 (exact value by exhaustive search; D is non-decreasing)"
+ }
+}

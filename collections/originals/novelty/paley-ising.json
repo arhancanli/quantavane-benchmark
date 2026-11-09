@@ -1,0 +1,62 @@
+{
+ "id": "paley-ising",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:Paley AND all:Ising",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3APaley+AND+all%3AIsing&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T12:22:46Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"Legendre symbol\" AND all:\"spin glass\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22Legendre+symbol%22+AND+all%3A%22spin+glass%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T12:22:50Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"quadratic residue\" AND all:Ising",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22quadratic+residue%22+AND+all%3AIsing&start=0&max_results=10&sortBy=relevance",
+   "results": 1,
+   "top": [
+    {
+     "arxiv": "2609.24042v1",
+     "year": "2026",
+     "first_author": "Ruotong Yang",
+     "title": "Q-DEQ: Discrete Solving and Quantization for Deep Equilibrium Models in Time Series Forecasting under Edge Deployment Coding Constraints"
+    }
+   ],
+   "run": "2026-11-09T12:22:55Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "4,20,32,72,108,124",
+   "url": "https://oeis.org/search?q=4%2C20%2C32%2C72%2C108%2C124&fmt=json",
+   "results": 0,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [],
+   "run": "2026-11-09T12:35:54Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "-4,-20,-32,-72",
+   "url": "https://oeis.org/search?q=-4%2C-20%2C-32%2C-72&fmt=json",
+   "results": 0,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [],
+   "run": "2026-11-09T12:35:58Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "Ising spin glass couplings Legendre symbol quadratic residues \"Paley\" ground state energy deterministic spin model",
+   "date": "2026-11-09",
+   "found": "the sine-model papers (cond-mat/9511019, cond-mat/0006476) with Legendre-symbol ground states; nothing with Legendre-symbol couplings"
+  }
+ ]
+}

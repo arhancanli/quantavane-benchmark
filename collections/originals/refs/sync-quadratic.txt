@@ -1,0 +1,2 @@
+# reset word of length 31 for Q_101 (beam search over subsets, Quantavane, 9 Nov 2026)
+bbabbaababbabbbbaababbabaabbabb

@@ -1,0 +1,55 @@
+{
+ "id": "quad-admissible",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:admissible AND all:\"n^2+1\" AND all:tuples",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3Aadmissible+AND+all%3A%22n%5E2%2B1%22+AND+all%3Atuples&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T13:38:02Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"Bateman-Horn\" AND all:admissible AND all:quadratic AND all:\"k-tuples\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22Bateman-Horn%22+AND+all%3Aadmissible+AND+all%3Aquadratic+AND+all%3A%22k-tuples%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T13:38:07Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"prime constellations\" AND all:quadratic AND all:polynomials",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22prime+constellations%22+AND+all%3Aquadratic+AND+all%3Apolynomials&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T13:38:11Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "1,3,7,9,13,20,22,27,31,34,38,44,50,52",
+   "url": "https://oeis.org/search?q=1%2C3%2C7%2C9%2C13%2C20%2C22%2C27%2C31%2C34%2C38%2C44%2C50%2C52&fmt=json",
+   "results": 0,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [],
+   "run": "2026-11-09T13:38:58Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "n^2+h admissible",
+   "url": "https://oeis.org/search?q=n%5E2%2Bh+admissible&fmt=json",
+   "results": 0,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [],
+   "run": "2026-11-09T13:39:03Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "admissible set of shifts for n^2 + h prime constellations quadratic \"n^2+1\" \"n^2+3\" \"n^2+7\" \"n^2+9\" all prime densest patterns Bateman-Horn",
+   "date": "2026-11-09",
+   "found": "admissibility definitions for polynomial tuples (arXiv:2605.01155) and densest linear patterns (arXiv:1901.03785); nothing on least shift sets for n^2 + h"
+  }
+ ]
+}

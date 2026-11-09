@@ -1,0 +1,53 @@
+{
+ "id": "cell600-idcode",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"identifying codes\" AND all:polytope",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22identifying+codes%22+AND+all%3Apolytope&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T12:52:47Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"identifying code\" AND all:\"600-cell\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22identifying+code%22+AND+all%3A%22600-cell%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T12:52:51Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"domination\" AND all:\"600-cell\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22domination%22+AND+all%3A%22600-cell%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T12:52:56Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"identifying code\" AND all:\"regular polytope\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22identifying+code%22+AND+all%3A%22regular+polytope%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T13:14:35Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"identifying codes\" AND all:icosahedron",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22identifying+codes%22+AND+all%3Aicosahedron&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T13:14:40Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "\"identifying code\" OR \"identifying codes\" OR \"locating-dominating\" \"600-cell\" OR \"120-cell\" OR \"regular 4-polytope\" graph",
+   "date": "2026-11-09",
+   "found": "general identifying-code literature (grids, cubic graphs, rook's graphs, vector-space graphs); nothing on the 600-cell or other 4-polytopes"
+  }
+ ]
+}

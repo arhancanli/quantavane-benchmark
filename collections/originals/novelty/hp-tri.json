@@ -1,0 +1,42 @@
+{
+ "id": "hp-tri",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"HP model\" AND all:\"triangular lattice\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22HP+model%22+AND+all%3A%22triangular+lattice%22&start=0&max_results=10&sortBy=relevance",
+   "results": 2,
+   "top": [
+    {
+     "arxiv": "cond-mat/9708049v2",
+     "year": "1997",
+     "first_author": "Anders Irbäck",
+     "title": "Local Interactions and Protein Folding: A Model Study on the Square and Triangular Lattices"
+    },
+    {
+     "arxiv": "2511.06617v1",
+     "year": "2025",
+     "first_author": "Bjørn Kjos-Hanssen",
+     "title": "Concatenative nonmonotonicity and optimal links in HP protein folding models"
+    }
+   ],
+   "run": "2026-11-09T12:25:21Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"HP model\" AND all:Fibonacci",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22HP+model%22+AND+all%3AFibonacci&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T12:25:25Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "HP lattice protein model Fibonacci sequences ground state energy square lattice OR triangular lattice \"Fibonacci\" HP sequence benchmark",
+   "date": "2026-11-09",
+   "found": "Fibonacci sequences only in the off-lattice AB model (cond-mat/0302545); HP benchmark sequences on lattices are other sequences"
+  }
+ ]
+}

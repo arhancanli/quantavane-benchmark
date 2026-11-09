@@ -1,0 +1,136 @@
+{
+ "id": "sync-quadratic",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:synchronizing AND all:automata AND all:quadratic",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3Asynchronizing+AND+all%3Aautomata+AND+all%3Aquadratic&start=0&max_results=10&sortBy=relevance",
+   "results": 24,
+   "top": [
+    {
+     "arxiv": "1812.04050v1",
+     "year": "2018",
+     "first_author": "Henk Don",
+     "title": "Counting symbol switches in synchronizing automata"
+    },
+    {
+     "arxiv": "1608.01268v1",
+     "year": "2016",
+     "first_author": "Andrzej Kisielewicz",
+     "title": "Synchronizing Automata with Extremal Properties"
+    },
+    {
+     "arxiv": "1203.3402v1",
+     "year": "2012",
+     "first_author": "Mikhail V. Berlinkov",
+     "title": "Synchronizing Automata on Quasi Eulerian Digraph"
+    },
+    {
+     "arxiv": "1602.07556v1",
+     "year": "2016",
+     "first_author": "Balázs Gerencsér",
+     "title": "Primitive sets of nonnegative matrices and synchronizing automata"
+    },
+    {
+     "arxiv": "2208.05956v5",
+     "year": "2022",
+     "first_author": "Robert Ferens",
+     "title": "Completely reachable automata: a quadratic decision algorithm and a quadratic upper bound on the reaching threshold"
+    },
+    {
+     "arxiv": "1801.10436v3",
+     "year": "2018",
+     "first_author": "Michiel de Bondt",
+     "title": "Lower Bounds for Synchronizing Word Lengths in Partial Automata"
+    },
+    {
+     "arxiv": "2610.25138v1",
+     "year": "2026",
+     "first_author": "Michael Blondin",
+     "title": "On the Complexity of Level-Synchronized Tree Automata for Quantum Circuit Verification"
+    },
+    {
+     "arxiv": "2410.18540v1",
+     "year": "2024",
+     "first_author": "Parosh Aziz Abdulla",
+     "title": "Verifying Quantum Circuits with Level-Synchronized Tree Automata (Technical Report)"
+    },
+    {
+     "arxiv": "1401.2553v4",
+     "year": "2014",
+     "first_author": "Mikhail V. Berlinkov",
+     "title": "Testing for Synchronization"
+    },
+    {
+     "arxiv": "2502.05989v3",
+     "year": "2025",
+     "first_author": "Ivan Baburin",
+     "title": "Universality Frontier for Asynchronous Cellular Automata"
+    }
+   ],
+   "run": "2026-11-09T12:24:52Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"synchronizing word\" AND all:prime AND all:automaton",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22synchronizing+word%22+AND+all%3Aprime+AND+all%3Aautomaton&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T12:24:56Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"reset word\" AND all:\"quadratic map\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22reset+word%22+AND+all%3A%22quadratic+map%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T12:53:08Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:synchronizing AND all:automaton AND all:\"x^2\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3Asynchronizing+AND+all%3Aautomaton+AND+all%3A%22x%5E2%22&start=0&max_results=10&sortBy=relevance",
+   "results": 1,
+   "top": [
+    {
+     "arxiv": "2611.01481v1",
+     "year": "2026",
+     "first_author": "Alex Shvets",
+     "title": "Linear-exponent bounds for the automatic complexity of rational diagonals modulo prime powers"
+    }
+   ],
+   "run": "2026-11-09T12:53:12Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "synchronizing quadratic automaton",
+   "url": "https://oeis.org/search?q=synchronizing+quadratic+automaton&fmt=json",
+   "results": 3,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A141105",
+     "name": "Upper Even Swappage of Upper Wythoff Sequence."
+    },
+    {
+     "oeis": "A141106",
+     "name": "Lower Odd Swappage of Upper Wythoff Sequence."
+    },
+    {
+     "oeis": "A141107",
+     "name": "Upper Odd Swappage of Upper Wythoff Sequence."
+    }
+   ],
+   "run": "2026-11-09T13:15:38Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "3,5,9,12,10,8,16,17,16,21,19,14,24,28,23",
+   "url": "https://oeis.org/search?q=3%2C5%2C9%2C12%2C10%2C8%2C16%2C17%2C16%2C21%2C19%2C14%2C24%2C28%2C23&fmt=json",
+   "results": 0,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [],
+   "run": "2026-11-09T13:19:56Z"
+  }
+ ]
+}

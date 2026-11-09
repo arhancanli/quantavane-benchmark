@@ -1,0 +1,145 @@
+{
+ "id": "tri-areas",
+ "collection": "originals",
+ "field": "Discrete geometry",
+ "title": "Distinct triangle areas in the triangular grid",
+ "status": "open",
+ "statement": "In the triangular grid T_n (the points a + b e^(i pi/3) with integers a, b >= 0 and a + b <= n - 1), the area of a triangle with vertices in T_n is an integer multiple |da1 db2 - da2 db1| of the unit triangle's area sqrt(3)/4. Let t(n) be the largest number of points of T_n such that every three of them span a triangle of nonzero area and all these C(t,3) areas are different. Determine t(n); the headline cell is n = 30: find 10 or more points of T_30 with all triangle areas distinct and nonzero.",
+ "objective": "maximize",
+ "submission": "Text file: one point per line, 'a b' with a, b >= 0 and a + b <= 29.",
+ "checker": {
+  "program": "collections/originals/checkers/orig_geom.py",
+  "args": [
+   "tri-areas",
+   "30"
+  ],
+  "value": "result"
+ },
+ "score": "the number of points (larger is better)",
+ "best_known": {
+  "value": "9",
+  "exact": "9",
+  "source": "Quantavane (Arhan Canli), 9 November 2026: 9 points of T_30 with distinct nonzero triangle areas, found by randomized greedy construction with local search (tools/tri_distinct_search.py, mode areas)",
+  "kind": "our construction (Quantavane Originals)",
+  "provenance": {
+   "keeper": "Quantavane Originals",
+   "url": "collections/originals/problems/tri-areas.md",
+   "read": "2026-11-09",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true,
+   "certificate": "collections/originals/refs/tri-areas.txt"
+  }
+ },
+ "verified_pending": [],
+ "added": "originals-1",
+ "quantavane_record": true,
+ "context": "Erdos and Purdy asked how many distinct areas the triangles of n points must span; the grid version, choosing as many grid points as possible with all triangle areas different, is a two-dimensional relative of Sidon sets (all sums different) and Golomb rulers, and its square-grid form appears in the OEIS (A322740, smallest rectangle containing n points with distinct triangle areas). In the triangular grid areas are measured in units of the unit triangle and are the absolute values of 2 x 2 determinants of lattice vectors, so the problem asks for point sets whose determinant triples never repeat; with all areas at most (n - 1)^2, C(t,3) <= (n - 1)^2 gives t(n) = O(n^(2/3)), and how close the truth is to that bound is open.",
+ "references": [
+  "P. Brass, W. Moser, J. Pach, Research Problems in Discrete Geometry (Springer, 2005): problems of Erdos and Purdy on distinct areas",
+  "OEIS A322740 (the square-grid relative: least rectangle area from which n points with distinct triangle areas can be chosen)"
+ ],
+ "novelty": {
+  "checked": "2026-11-09",
+  "file": "novelty/tri-areas.json",
+  "verdict": "new. The sequence t(n) is not in the OEIS and no paper on distinct triangle areas in the triangular grid was found; the square-grid question in A322740 is the closest.",
+  "closest": [
+   "OEIS A322740: least area of a grid rectangle containing n points whose triangles all have distinct areas (square grid; a different objective on a different lattice)."
+  ],
+  "benchmark": "no entry"
+ },
+ "first_values": {
+  "columns": [
+   "n",
+   "t(n)",
+   "how"
+  ],
+  "rows": [
+   [
+    1,
+    1,
+    "exact (exhaustive)"
+   ],
+   [
+    2,
+    3,
+    "exact (exhaustive)"
+   ],
+   [
+    3,
+    3,
+    "exact (exhaustive)"
+   ],
+   [
+    4,
+    4,
+    "exact (exhaustive)"
+   ],
+   [
+    5,
+    4,
+    "exact (exhaustive)"
+   ],
+   [
+    6,
+    5,
+    "exact (exhaustive)"
+   ],
+   [
+    7,
+    5,
+    "exact (exhaustive)"
+   ],
+   [
+    8,
+    5,
+    "exact (exhaustive)"
+   ],
+   [
+    9,
+    6,
+    "exact (exhaustive)"
+   ],
+   [
+    10,
+    6,
+    "exact (exhaustive)"
+   ],
+   [
+    11,
+    6,
+    "exact (exhaustive)"
+   ],
+   [
+    12,
+    7,
+    "exact (exhaustive)"
+   ],
+   [
+    13,
+    7,
+    "exact (exhaustive)"
+   ],
+   [
+    14,
+    7,
+    "exact (exhaustive)"
+   ],
+   [
+    30,
+    9,
+    "best known (ours)"
+   ]
+  ],
+  "note": "Exact values by exhaustive search over subsets of T_n (tools/src/trigrid.c areas); n = 30 is our best known lower bound."
+ },
+ "baseline": {
+  "date": "2026-11-09",
+  "holder": "Quantavane (Arhan Canli)",
+  "text": "9 for n = 30, held by Quantavane (Arhan Canli), 9 November 2026: the points in `refs/tri-areas.txt`. Upper bound: the C(t,3) areas are distinct integers between 1 and 29^2 = 841, so C(t,3) <= 841 and t(30) <= 18."
+ },
+ "bound": {
+  "value": "18",
+  "kind": "upper bound",
+  "source": "C(t,3) <= 841 distinct nonzero areas (in units of sqrt(3)/4)"
+ }
+}

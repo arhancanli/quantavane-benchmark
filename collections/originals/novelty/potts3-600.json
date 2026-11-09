@@ -1,0 +1,42 @@
+{
+ "id": "potts3-600",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:Potts AND all:\"600-cell\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3APotts+AND+all%3A%22600-cell%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T13:35:40Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"600-cell\" AND all:coloring",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22600-cell%22+AND+all%3Acoloring&start=0&max_results=10&sortBy=relevance",
+   "results": 2,
+   "top": [
+    {
+     "arxiv": "0802.2533v1",
+     "year": "2008",
+     "first_author": "Steve Fisk",
+     "title": "Coloring the 600 Cell"
+    },
+    {
+     "arxiv": "0911.2289v2",
+     "year": "2009",
+     "first_author": "Mordecai Waegell",
+     "title": "Critical noncolorings of the 600-cell proving the Bell-Kochen-Specker theorem"
+    }
+   ],
+   "run": "2026-11-09T13:35:44Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:Potts AND all:antiferromagnet AND all:polytope",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3APotts+AND+all%3Aantiferromagnet+AND+all%3Apolytope&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T13:35:49Z"
+  }
+ ]
+}

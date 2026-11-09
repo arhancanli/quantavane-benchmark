@@ -1,0 +1,60 @@
+{
+ "id": "cell600-idcode",
+ "collection": "originals",
+ "field": "Coding theory",
+ "title": "Identifying codes of the 600-cell",
+ "status": "open",
+ "statement": "Let G be the graph of the 600-cell {3,3,5}: 120 vertices, each adjacent to its 12 nearest neighbours. A set C of vertices is an identifying code if the sets N[v] & C, where N[v] is v together with its neighbours, are nonempty and pairwise different for all 120 vertices v; then every vertex is recognised from the set of codewords within distance 1 of it. Determine the smallest size of an identifying code of G. Known: 18 <= minimum <= 20; find an identifying code with 19 or fewer vertices, or prove that 20 is optimal.",
+ "objective": "minimize",
+ "submission": "Text file: the vertex numbers (0 to 119) of the code, separated by spaces or newlines, in the checker's vertex order (the 600-cell's vertices as exact coordinates in Q(sqrt 5), sorted; see cell600_graph in checkers/orig_codes.py).",
+ "checker": {
+  "program": "collections/originals/checkers/orig_codes.py",
+  "args": [
+   "cell600-idcode"
+  ],
+  "value": "result"
+ },
+ "score": "the number of vertices in the code (smaller is better)",
+ "best_known": {
+  "value": "20",
+  "exact": "20",
+  "source": "Quantavane (Arhan Canli), 9 November 2026: an identifying code of 20 vertices found by simulated annealing on the number of unidentified vertices (tools/graph_sets.py)",
+  "kind": "our construction (Quantavane Originals)",
+  "provenance": {
+   "keeper": "Quantavane Originals",
+   "url": "collections/originals/problems/cell600-idcode.md",
+   "read": "2026-11-09",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true,
+   "certificate": "collections/originals/refs/cell600-idcode.txt"
+  }
+ },
+ "verified_pending": [],
+ "added": "originals-1",
+ "quantavane_record": true,
+ "context": "Identifying codes were introduced by Karpovsky, Chakrabarty and Levitin for locating faulty processors in multiprocessor networks (IEEE Trans. Inform. Theory 44 (1998) 599-611); their counting argument gives |C| >= 2n/(Delta + 2) for a graph of maximum degree Delta, here 240/14, so |C| >= 18. Exact values are known for few families (paths, cycles, some grids and hypercubes in small dimensions), and the highly symmetric polytope graphs are natural test cases where the counting bound might be close to tight: a code meeting it would need almost every vertex to see exactly two codewords. The 600-cell's graph is locally icosahedral and vertex-transitive, so symmetric constructions (orbits of subgroups of the icosians) are an obvious place to look.",
+ "references": [
+  "M. G. Karpovsky, K. Chakrabarty, L. B. Levitin, On a new class of codes for identifying vertices in graphs, IEEE Trans. Inform. Theory 44 (1998) 599-611",
+  "H. S. M. Coxeter, Regular Polytopes (3rd ed., Dover 1973): the 600-cell"
+ ],
+ "novelty": {
+  "checked": "2026-11-09",
+  "file": "novelty/cell600-idcode.json",
+  "verdict": "new. No identifying code, domination or locating result for the 600-cell (or other regular 4-polytopes) was found on arXiv, in the OEIS or by web search.",
+  "closest": [
+   "Identifying codes of hypercubes and grids (the standard test families); the 600-cell graph is neither."
+  ],
+  "benchmark": "no identifying-code family"
+ },
+ "first_values": null,
+ "baseline": {
+  "date": "2026-11-09",
+  "holder": "Quantavane (Arhan Canli)",
+  "text": "20, held by Quantavane (Arhan Canli), 9 November 2026: the code in `refs/cell600-idcode.txt` (simulated annealing, tools/graph_sets.py). Lower bound 18 from the counting bound 2n/(Delta + 2) = 240/14."
+ },
+ "bound": {
+  "value": "18",
+  "kind": "lower bound",
+  "source": "Karpovsky-Chakrabarty-Levitin counting bound |C| >= 2n/(Delta + 2) = 17.14..."
+ }
+}

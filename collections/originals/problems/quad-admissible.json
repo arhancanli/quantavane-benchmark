@@ -1,0 +1,193 @@
+{
+ "id": "quad-admissible",
+ "collection": "originals",
+ "field": "Number theory",
+ "title": "Densest admissible patterns of primes n^2 + h",
+ "status": "open",
+ "statement": "Call a set H of positive integers admissible for n^2 + h if for every prime p there is an integer n with n^2 + h not divisible by p for all h in H; equivalently, the residues -h (mod p) miss at least one of the (p+1)/2 values of n^2 (mod p), 0 included. Only primes p <= 2|H| - 1 need checking. Admissibility is necessary for n^2 + h to be prime for all h in H at once for infinitely many n, and by the Bateman-Horn conjecture it is sufficient. Let m(k) be the least m such that some admissible k-set lies in [1, m]. Determine m(k); the headline cell is k = 50: find an admissible 50-set with largest element below 247.",
+ "objective": "minimize",
+ "submission": "Text file: 50 distinct positive integers h, separated by spaces or newlines (lines starting with # are ignored).",
+ "checker": {
+  "program": "collections/originals/checkers/orig_numth.py",
+  "args": [
+   "quad-admissible",
+   "50"
+  ],
+  "value": "result"
+ },
+ "score": "the largest element of the set (smaller is better)",
+ "best_known": {
+  "value": "247",
+  "exact": "247",
+  "source": "Quantavane (Arhan Canli), 9 November 2026: an admissible 50-set with largest element 247 found by a randomized greedy sieve (tools/quad_sieve.py: for each prime p <= 99 delete the h whose -h falls in the least used square class)",
+  "kind": "our construction (Quantavane Originals)",
+  "provenance": {
+   "keeper": "Quantavane Originals",
+   "url": "collections/originals/problems/quad-admissible.md",
+   "read": "2026-11-09",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true,
+   "certificate": "collections/originals/refs/quad-admissible.txt"
+  }
+ },
+ "verified_pending": [],
+ "added": "originals-1",
+ "quantavane_record": true,
+ "context": "For linear shifts n + h, the least width of an admissible k-tuple, H(k), is the classical quantity behind bounded gaps between primes (Engelsma's and Sutherland's tables; Polymath8b). Quadratic families are the next case of the Bateman-Horn conjecture: whether n^2 + 1 is prime infinitely often is one of Landau's problems, and Hardy and Littlewood's Conjecture F gives the predicted density. The dense patterns here are the quadratic analogue of prime k-tuples: {1, 3, 7, 9} gives 5, 7, 11, 13 at n = 2, and the question is how tightly k such polynomials can be packed without a fixed prime divisor. Admissibility for n^2 + h is a covering condition on the square classes modulo each prime (a class is blocked by every h with -h in it), so it differs from the linear case already at p = 3, where only the classes 0 and 1 need covering.",
+ "references": [
+  "P. T. Bateman, R. A. Horn, A heuristic asymptotic formula concerning the distribution of prime numbers, Math. Comp. 16 (1962) 363-367",
+  "G. H. Hardy, J. E. Littlewood, Some problems of 'Partitio numerorum' III, Acta Math. 44 (1923) 1-70 (Conjecture F on n^2 + 1)",
+  "D. H. J. Polymath, Variants of the Selberg sieve, and bounded intervals containing many primes, arXiv:1407.4897 (H(k) for linear tuples)",
+  "W. Banks, K. Ford, Sets of integers satisfying Bateman-Horn statistics, arXiv:2605.01155",
+  "A. Kourbatov, M. Wolf, Predicting maximal gaps in sets of primes, arXiv:1901.03785 (densest linear patterns)"
+ ],
+ "novelty": {
+  "checked": "2026-11-09",
+  "file": "novelty/quad-admissible.json",
+  "verdict": "new. No table or study of least admissible shift sets for the family n^2 + h was found (arXiv, web search); the sequence m(k) is not in the OEIS. Densest admissible tuples are studied only for linear shifts.",
+  "closest": [
+   "Linear admissible k-tuples and their least width H(k) (Engelsma, Sutherland, Polymath8b; Kourbatov and Wolf on densest patterns, arXiv:1901.03785): the linear case of this problem."
+  ],
+  "benchmark": "no prime-pattern family"
+ },
+ "first_values": {
+  "columns": [
+   "k",
+   "m(k)",
+   "how"
+  ],
+  "rows": [
+   [
+    1,
+    1,
+    "exact (exhaustive)"
+   ],
+   [
+    2,
+    3,
+    "exact (exhaustive)"
+   ],
+   [
+    3,
+    7,
+    "exact (exhaustive)"
+   ],
+   [
+    4,
+    9,
+    "exact (exhaustive)"
+   ],
+   [
+    5,
+    13,
+    "exact (exhaustive)"
+   ],
+   [
+    6,
+    20,
+    "exact (exhaustive)"
+   ],
+   [
+    7,
+    22,
+    "exact (exhaustive)"
+   ],
+   [
+    8,
+    27,
+    "exact (exhaustive)"
+   ],
+   [
+    9,
+    31,
+    "exact (exhaustive)"
+   ],
+   [
+    10,
+    34,
+    "exact (exhaustive)"
+   ],
+   [
+    11,
+    38,
+    "exact (exhaustive)"
+   ],
+   [
+    12,
+    44,
+    "exact (exhaustive)"
+   ],
+   [
+    13,
+    50,
+    "exact (exhaustive)"
+   ],
+   [
+    14,
+    52,
+    "exact (exhaustive)"
+   ],
+   [
+    15,
+    57,
+    "exact (exhaustive)"
+   ],
+   [
+    16,
+    63,
+    "exact (exhaustive)"
+   ],
+   [
+    17,
+    67,
+    "exact (exhaustive)"
+   ],
+   [
+    18,
+    73,
+    "exact (exhaustive)"
+   ],
+   [
+    19,
+    77,
+    "exact (exhaustive)"
+   ],
+   [
+    20,
+    84,
+    "best known (ours)"
+   ],
+   [
+    25,
+    112,
+    "best known (ours)"
+   ],
+   [
+    30,
+    140,
+    "best known (ours)"
+   ],
+   [
+    40,
+    190,
+    "best known (ours)"
+   ],
+   [
+    50,
+    247,
+    "best known (ours)"
+   ]
+  ],
+  "note": "Exact values by exhaustive search (tools/quad_admissible.py, sets with largest element m for increasing m); the sieve (tools/quad_sieve.py) reproduces every exact value and gives the upper bounds for larger k."
+ },
+ "baseline": {
+  "date": "2026-11-09",
+  "holder": "Quantavane (Arhan Canli)",
+  "text": "247 for k = 50, held by Quantavane (Arhan Canli), 9 November 2026: the set in `refs/quad-admissible.txt`. Lower bound: m(50) >= m(19) = 77 (removing elements keeps a set admissible); nothing better is proved."
+ },
+ "bound": {
+  "value": "77",
+  "kind": "lower bound",
+  "source": "m(k) is non-decreasing and m(19) = 77 exactly"
+ }
+}

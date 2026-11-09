@@ -10,10 +10,13 @@
   python3 -I obb.py verify RECORD.json          check a submission record (SUBMITTING.md) and print its leaderboard row
   python3 -I obb.py leaderboard [PROBLEM]       the verified results in leaderboard.json, best first
   python3 -I obb.py index                       check index.json against the files it lists (counts and SHA-256)
+  python3 -I obb.py list originals              the Quantavane Originals: new problems of ours (collections/originals)
 
 A problem is either a single problem, with its own file in problems/, or a cell of a family: one statement and one
 checker in families/NAME/family.json, and one line per cell in families/NAME/cells.jsonl (its parameters, the best
-known value read from the keeper's table and who holds it). index.json lists both, with counts and SHA-256. Every
+known value read from the keeper's table and who holds it), or a problem of a collection of our own: one file per
+problem in collections/NAME/problems/ (the Quantavane Originals: new problems, each with its novelty check, its
+checker in collections/NAME/checkers/ and our first value). index.json lists both, with counts and SHA-256. Every
 problem has an exact checker in checkers/ (our own code, from the definitions on the source pages; standard library
 only). A submission scores the exact value its checker proves; it "improves" a
 problem when that value beats the best known one. Two reference values are kept apart: the best value on the
@@ -52,6 +55,24 @@ def families():
             path = os.path.join(FAMILIES, name, "family.json")
             if os.path.exists(path):
                 out[name] = json.load(open(path))
+    return out
+
+
+COLLECTIONS = os.path.join(HERE, "collections")
+
+
+def collections():
+    """Collections of problems of our own (collections/NAME/problems/ID.json): {name: {id: problem}}."""
+    out = {}
+    if os.path.isdir(COLLECTIONS):
+        for name in sorted(os.listdir(COLLECTIONS)):
+            d = os.path.join(COLLECTIONS, name, "problems")
+            if os.path.isdir(d):
+                out[name] = {}
+                for f in sorted(os.listdir(d)):
+                    if f.endswith(".json"):
+                        p = json.load(open(os.path.join(d, f)))
+                        out[name][p["id"]] = p
     return out
 
 
@@ -111,6 +132,13 @@ def find_problem(pid):
         p = json.load(open(path))
         if p["id"] == pid:
             return p
+    if re.fullmatch(r"[A-Za-z0-9_.+-]+", pid) and os.path.isdir(COLLECTIONS):
+        for name in sorted(os.listdir(COLLECTIONS)):
+            path = os.path.join(COLLECTIONS, name, "problems", pid + ".json")
+            if os.path.exists(path):
+                p = json.load(open(path))
+                if p["id"] == pid:
+                    return p
     key = '{"id": "' + pid + '"'
     for fam in families().values():
         if not any(pid.startswith(x) for x in fam["id_prefixes"]):
@@ -137,18 +165,24 @@ def native(program):
     return exe
 
 
+def checker_path(program):
+    """checkers/PROGRAM, or a path inside the benchmark (a collection's own checkers: collections/NAME/checkers/X)."""
+    return os.path.join(HERE, program) if "/" in program else os.path.join(HERE, "checkers", program)
+
+
 def run_checker(p, path):
     """Run the problem's checker on a submission; return (exact value proved, the checker's output)."""
     c = p["checker"]
-    args = [os.path.join(HERE, a) if a.startswith("instances/") else a for a in c["args"]]  # fetched by fetch.sh
+    args = [os.path.join(HERE, a) if a.startswith(("instances/", "collections/")) else a  # instances/: fetch.sh
+            for a in c["args"]]
     if c["value"] == "ramsey":                      # ramsey_check S T FILE: exit 0 = no red K_S and no blue K_T
         r = subprocess.run([native(c["program"])] + args + [path], capture_output=True, text=True)
         m = re.search(r"^n (\d+) red_K\d+ none blue_K\d+ none", r.stdout, re.M)
         return (Fraction(int(m.group(1))) if r.returncode == 0 and m else None), r.stdout + r.stderr
     if c["value"] == "spherical":                  # sph_check.py FILE D N: the file comes first
-        cmd = [sys.executable, "-I", os.path.join(HERE, "checkers", c["program"]), path] + args
+        cmd = [sys.executable, "-I", checker_path(c["program"]), path] + args
     else:
-        cmd = [sys.executable, "-I", os.path.join(HERE, "checkers", c["program"])] + args + [path]
+        cmd = [sys.executable, "-I", checker_path(c["program"])] + args + [path]
     r = subprocess.run(cmd, capture_output=True, text=True)
     text = r.stdout + r.stderr
     if r.returncode != 0:
@@ -203,7 +237,16 @@ def better(p, a, b):
 def cmd_list(family=None):
     probs = problems()
     fams = families()
+    cols = collections()
     shown = 0
+    if family in cols:
+        for pid, p in cols[family].items():
+            shown += 1
+            print(f"{pid:28s} {p['objective']:8s} best {p['best_known']['value']:>24s}   {p.get('status', 'open')}, "
+                  f"{p.get('field', '')}")
+            print(f"{'':28s} {p['title']}")
+        print(f"\n{shown} problems in the collection {family} (collections/{family}/README.md)")
+        return
     for pid, p in probs.items():
         if family and p.get("family") != family:
             continue
@@ -231,6 +274,9 @@ def cmd_list(family=None):
           f"{n_cells} family cells); by family: " + ", ".join(f"{k} {v}" for k, v in sorted(counts.items())))
     if not family and fams:
         print("A family's cells: python3 -I obb.py list FAMILY (families: " + ", ".join(fams) + ")")
+    if not family and cols:
+        print("Collections of our own (not counted above): " + ", ".join(f"{k} ({len(v)} problems, python3 -I obb.py "
+                                                                       f"list {k})" for k, v in cols.items()))
 
 
 def cmd_families():

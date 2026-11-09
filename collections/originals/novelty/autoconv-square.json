@@ -1,0 +1,62 @@
+{
+ "id": "autoconv-square",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:autoconvolution AND all:\"two-dimensional\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3Aautoconvolution+AND+all%3A%22two-dimensional%22&start=0&max_results=10&sortBy=relevance",
+   "results": 3,
+   "top": [
+    {
+     "arxiv": "2210.14093v1",
+     "year": "2022",
+     "first_author": "Yu Deng",
+     "title": "Deautoconvolution in the two-dimensional case"
+    },
+    {
+     "arxiv": "cond-mat/0306543v1",
+     "year": "2003",
+     "first_author": "Luciano da F. Costa",
+     "title": "An Analytical Approach to Neuronal Connectivity"
+    },
+    {
+     "arxiv": "cond-mat/0310669v1",
+     "year": "2003",
+     "first_author": "Luciano da Fontoura Costa",
+     "title": "An Analytical Approach to Connectivity in Regular Neuronal Networks"
+    }
+   ],
+   "run": "2026-11-09T12:17:53Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:Sidon AND all:\"two-dimensional\" AND all:\"B_2[g]\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3ASidon+AND+all%3A%22two-dimensional%22+AND+all%3A%22B_2%5Bg%5D%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T12:17:57Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"Sidon sets\" AND all:\"higher dimensions\" AND all:autoconvolution",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22Sidon+sets%22+AND+all%3A%22higher+dimensions%22+AND+all%3Aautoconvolution&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-09T12:18:01Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "two-dimensional autoconvolution inequality sup norm f*f nonnegative function supported on square constant Sidon sets in Z^2 g-Sidon \"B_2[g]\" two dimensions",
+   "date": "2026-11-09",
+   "found": "only the one-dimensional work (Matolcsi-Vinuesa, Cloninger-Steinerberger, Cilleruelo-Ruzsa-Vinuesa)"
+  },
+  {
+   "engine": "general web search",
+   "query": "\"generalized Sidon\" OR \"B_2[g]\" sets in \"N^d\" OR \"Z^d\" OR \"dimension d\" maximal size constant autoconvolution Cilleruelo",
+   "date": "2026-11-09",
+   "found": "one-dimensional and cyclic-group results only (Cilleruelo-Ruzsa-Vinuesa; Martin-O'Bryant; Kravitz)"
+  }
+ ]
+}

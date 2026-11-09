@@ -1,0 +1,92 @@
+{
+ "id": "potts3-600",
+ "collection": "originals",
+ "field": "Physics",
+ "title": "Three-state Potts antiferromagnet on the 600-cell",
+ "status": "open",
+ "statement": "Colour the 120 vertices of the 600-cell {3,3,5} with three colours (a 3-state Potts spin on each vertex) and count the monochromatic edges among its 720 edges: this is the energy of the 3-state Potts antiferromagnet, H(c) = number of edges uv with c_u = c_v. Determine the ground-state energy min H. Bounds: 120 <= min H <= 134; find a colouring with at most 133 monochromatic edges, or prove 134 optimal.",
+ "objective": "minimize",
+ "submission": "Text file: 120 colours 0, 1 or 2, separated by spaces or newlines, one per vertex in the checker's vertex order (the 600-cell's vertices as exact coordinates in Q(sqrt 5), sorted; see polytope_graph in checkers/orig_phys.py).",
+ "checker": {
+  "program": "collections/originals/checkers/orig_phys.py",
+  "args": [
+   "polytope-potts",
+   "600",
+   "3"
+  ],
+  "value": "result"
+ },
+ "score": "the number of monochromatic edges (smaller is better)",
+ "best_known": {
+  "value": "134",
+  "exact": "134",
+  "source": "Quantavane (Arhan Canli), 9 November 2026: simulated annealing over colourings (tools/potts.py, 6 restarts of 4,000 sweeps)",
+  "kind": "our construction (Quantavane Originals)",
+  "provenance": {
+   "keeper": "Quantavane Originals",
+   "url": "collections/originals/problems/potts3-600.md",
+   "read": "2026-11-09",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true,
+   "certificate": "collections/originals/refs/potts3-600.txt"
+  }
+ },
+ "verified_pending": [],
+ "added": "originals-1",
+ "quantavane_record": true,
+ "context": "Potts antiferromagnets on frustrated structures (the triangular, kagome and pyrochlore lattices) are a standard source of ground-state degeneracy and order by disorder. The 600-cell, the curved-space template of icosahedral order (Nelson 1983), is maximally frustrated for them: it is made of 600 tetrahedral cells, and in any 3-colouring each cell has a monochromatic edge; since each edge lies in 5 cells, at least 120 edges are monochromatic. With 5 colours the graph can be coloured properly (our annealer finds a proper 5-colouring, and 5 is needed because every vertex neighbourhood is an icosahedron, which needs 4 colours), so the 3- and 4-state models are the frustrated ones; for 4 colours our best colouring has 66 monochromatic edges. The Ising case (2 colours) is the separate problem polytope-ising.",
+ "references": [
+  "D. R. Nelson, Order, frustration, and defects in liquids and glasses, Phys. Rev. B 28 (1983) 5515",
+  "R. J. Baxter, Exactly Solved Models in Statistical Mechanics (Academic Press, 1982): Potts models",
+  "M. Waegell, P. K. Aravind et al., Critical noncolorings of the 600-cell proving the Bell-Kochen-Specker theorem, arXiv:0911.2289 (a different colouring problem on the 600-cell's rays)"
+ ],
+ "novelty": {
+  "checked": "2026-11-09",
+  "file": "novelty/potts3-600.json",
+  "verdict": "new. Our arXiv searches found no paper or table on Potts antiferromagnets (or minimum monochromatic edges of colourings) of the 600-cell graph; the 600-cell colouring papers found on arXiv concern Kochen-Specker colourings of its rays, a different problem.",
+  "closest": [
+   "Kochen-Specker colourings of the 600-cell's 60 rays (arXiv:0802.2533, arXiv:0911.2289): assignments to orthogonal tetrads, not vertex colourings of the polytope graph."
+  ],
+  "benchmark": "no spin-model family"
+ },
+ "first_values": {
+  "columns": [
+   "colours q",
+   "fewest monochromatic edges",
+   "status"
+  ],
+  "rows": [
+   [
+    2,
+    280,
+    "open; equals the Ising problem polytope-ising (E = 2*280 - 720 = -160); lower bound 249"
+   ],
+   [
+    3,
+    134,
+    "open; lower bound 120 (one per tetrahedral cell, 5 cells per edge)"
+   ],
+   [
+    4,
+    66,
+    "open; lower bound 18 (one per closed neighbourhood, 7 per edge)"
+   ],
+   [
+    5,
+    0,
+    "exact: proper 5-colouring found; 5 colours are needed"
+   ]
+  ],
+  "note": "Upper bounds from our annealer (tools/potts.py); the checker scores any q (python3 -I collections/originals/checkers/orig_phys.py polytope-potts 600 Q FILE)."
+ },
+ "baseline": {
+  "date": "2026-11-09",
+  "holder": "Quantavane (Arhan Canli)",
+  "text": "134, held by Quantavane (Arhan Canli), 9 November 2026: the colouring in `refs/potts3-600.txt`. Lower bound 120: each of the 600 tetrahedral cells (copies of K4) has a monochromatic edge in any 3-colouring, and each edge lies in exactly 5 cells."
+ },
+ "bound": {
+  "value": "120",
+  "kind": "lower bound",
+  "source": "600 tetrahedral cells, each with a monochromatic edge in any 3-colouring; 5 cells per edge"
+ }
+}
