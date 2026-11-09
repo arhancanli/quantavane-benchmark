@@ -1,0 +1,39 @@
+{
+ "family": "constant-weight-code",
+ "title": "Binary constant weight codes A(n,d,w)",
+ "added": "2.0",
+ "objective": "maximize",
+ "id_prefixes": [
+  "cw-"
+ ],
+ "keeper": "A. E. Brouwer, bounds for binary constant weight codes (aeb.win.tue.nl/codes/Andw.html)",
+ "page": "https://aeb.win.tue.nl/codes/Andw.html",
+ "read": "2026-11-09",
+ "revision": "Andw.html read 9 Nov 2026 04:27 UTC (last modified 5 Nov 2026 22:34 GMT)",
+ "template": {
+  "title": "Constant weight code A({n},{d},{w})",
+  "statement": "Find binary words of length {n}, each with exactly {w} ones and any two differing in at least {d} positions, as many as possible: a lower bound on A({n},{d},{w}).",
+  "submission": "Text file: one word per line, the {w} positions of its ones, distinct integers from 1..{n} separated by spaces.",
+  "args": [
+   "{n}",
+   "{d}",
+   "{w}"
+  ]
+ },
+ "checker": {
+  "program": "cw_check.py",
+  "value": "words"
+ },
+ "score": "the number of code words (more is better)",
+ "best_text": "The best known lower bound in Andries Brouwer's table is {best} ({holder}); a code with more words improves it.",
+ "bound_kind": "upper bound",
+ "bound_source": "the upper bound in the same table, when it gives one",
+ "holder_unknown": "the table gives no label for this entry",
+ "holder_sources": "the entry's label, read with the table's own key (sections Constructions and References for labels)",
+ "open_rule": "every entry not marked optimal whose lower bound is below its upper bound (or has none)",
+ "left_out": "203 entries marked optimal or with equal bounds",
+ "cells": "cells.jsonl",
+ "count": 1134,
+ "quantavane_records": 7,
+ "single_problems_left_out": 32
+}

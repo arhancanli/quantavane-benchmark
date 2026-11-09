@@ -1,0 +1,40 @@
+{
+ "family": "linear-code",
+ "title": "Linear codes [n,k] over GF(q) with the largest minimum distance",
+ "added": "2.0",
+ "objective": "maximize",
+ "id_prefixes": [
+  "code-"
+ ],
+ "keeper": "M. Grassl, bounds on the minimum distance of linear codes (codetables.de)",
+ "page": "https://www.codetables.de/",
+ "cell_url": "https://www.codetables.de/BKLC/BKLC.php?q={q}&n={n}&k={k}",
+ "read": "2026-11-09",
+ "revision": "the bounds tables (Tables.php) for q = 2, 3, 4, 5, 7, 8, 9, read 9 Nov 2026 04:25-04:27 UTC",
+ "template": {
+  "title": "Linear code [{n},{k}] over GF({q})",
+  "statement": "Find a linear code of length {n} and dimension {k} over GF({q}) whose minimum distance is as large as possible.",
+  "submission": "Text file: a generator matrix, {k} rows of {n} elements of GF({q}) written as integers below {q} (for q = 4, 8, 9 the base-p digits of the integer are the coefficients of a polynomial in x modulo the Conway polynomial; see checkers/lincode_check.py).",
+  "args": [
+   "{q}",
+   "{n}",
+   "{k}"
+  ]
+ },
+ "checker": {
+  "program": "lincode_check.py",
+  "value": "result"
+ },
+ "score": "the minimum distance (larger is better)",
+ "best_text": "The best known lower bound in Markus Grassl's tables is {best}; a code with a larger minimum distance improves it.",
+ "bound_kind": "upper bound",
+ "bound_source": "the upper bound in the same table",
+ "holder_unknown": "the construction and its source are on the entry's page at codetables.de",
+ "holder_sources": "the bounds tables list values only; each entry's page names its construction",
+ "open_rule": "every entry whose lower bound is below its upper bound",
+ "left_out": "19522 entries with equal bounds (solved); 91256 entries whose check would list more than 2^25 codewords (the work grows as q^min(k, n-k))",
+ "cells": "cells.jsonl",
+ "count": 15255,
+ "quantavane_records": 0,
+ "single_problems_left_out": 0
+}

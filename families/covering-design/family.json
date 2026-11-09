@@ -1,0 +1,50 @@
+{
+ "family": "covering-design",
+ "title": "Covering designs C(v,k,t) and C(v,k,t,m)",
+ "added": "2.0",
+ "objective": "minimize",
+ "id_prefixes": [
+  "covering-"
+ ],
+ "keeper": "Covering Repository (coveringrepository.com), successor of D. Gordon's La Jolla Covering Repository",
+ "page": "https://www.coveringrepository.com/",
+ "read": "2026-11-08",
+ "revision": "the site's own CSV export of every entry (v,k,t,m,b), made 8 Nov 2026 17:58 +04: 92,155 entries, SHA-256 fede393f052210e44f68514fa067fe9fc6d4e86b75a490854586c93ddc3c4c15",
+ "template": {
+  "title": "Covering design C({v},{k},{t})",
+  "statement": "Find {k}-subsets (blocks) of {{1, ..., {v}}} such that every {t}-subset lies in some block, with as few blocks as possible.",
+  "submission": "Text file: one block per line, {k} distinct points from 1..{v} separated by spaces.",
+  "args": [
+   "{v}",
+   "{k}",
+   "{t}",
+   "{m}"
+  ]
+ },
+ "variants": {
+  "lotto": {
+   "title": "Covering design C({v},{k},{t},{m})",
+   "statement": "Find {k}-subsets (blocks) of {{1, ..., {v}}} such that every {m}-subset meets some block in at least {t} points, with as few blocks as possible."
+  }
+ },
+ "checker": {
+  "program": "covering_check.py",
+  "value": "blocks"
+ },
+ "score": "the number of blocks (smaller is better)",
+ "best_text": "The best known size in the Covering Repository is {best} blocks ({holder}); a design with fewer blocks improves it.",
+ "bound_kind": "lower bound",
+ "bound_source": "the larger of Schönheim's bound and the La Jolla Covering Repository's listed lower bound (m = t); for m > t the counting bound C(v,m) / (the m-subsets one block meets in at least t points) and, for t = 2, Turán's theorem (the pairs inside blocks form a graph with no independent m-set: at least C(v,2) - t(v,m-1) edges, C(k,2) per block); the method is named after the value",
+ "holder_unknown": "not named in the site's export; see the entry on coveringrepository.com",
+ "holder_sources": "our own records (quantavane-covering-records); the site's list of recent uploads and derived coverings, read with each daily export since 1 Nov 2026; for entries unchanged since then, the credit in the La Jolla Covering Repository's final data (frozen 1 March 2026)",
+ "open_rule": "every entry whose best known size is above the lower bound named in the cell; entries that equal it are solved and left out. A cell may still be optimal by a sharper bound than these.",
+ "left_out": "16566 entries equal to their lower bound (solved); 5155 entries with m > t and at most 3 blocks (a short case analysis settles them); 14439 entries whose check would be very long: t = m with more than 10^8 t-subsets to mark (blocks x C(k,t)), or m > t with more than 1,000 blocks",
+ "counts": {
+  "t = m": 6087,
+  "m > t": 49908
+ },
+ "cells": "cells.jsonl",
+ "count": 55985,
+ "quantavane_records": 128,
+ "single_problems_left_out": 10
+}

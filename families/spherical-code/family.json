@@ -1,0 +1,38 @@
+{
+ "family": "spherical-code",
+ "title": "Spherical codes: N points on the sphere in R^d with the smallest largest cosine",
+ "added": "2.0",
+ "objective": "minimize",
+ "id_prefixes": [
+  "sphere-"
+ ],
+ "keeper": "H. Cohn, table of spherical codes (spherical-codes.org)",
+ "page": "https://spherical-codes.org/",
+ "cell_url": "https://spherical-codes.org/data/{d}/{n}",
+ "read": "2026-11-09",
+ "revision": "the table's front page, read 9 Nov 2026 04:23 UTC (14,825 entries; SHA-256 0f9353613fea9193...)",
+ "exact_values": false,
+ "template": {
+  "title": "Spherical code: {n} points on the sphere in R^{d}",
+  "statement": "Place {n} points on the unit sphere in R^{d} so that the largest cosine between two distinct points is as small as possible.",
+  "submission": "Text file: {n} lines, each one point given by its {d} coordinates separated by commas (any length: the checker normalises every point in 50-digit decimal arithmetic); other lines are ignored, as on spherical-codes.org.",
+  "args": [
+   "{d}",
+   "{n}"
+  ]
+ },
+ "checker": {
+  "program": "sph_check.py",
+  "value": "spherical"
+ },
+ "score": "the largest cosine between two of the points (smaller is better)",
+ "best_text": "The best known value in Henry Cohn's table is {best} ({holder}), rounded up to 12 decimals; a code improves it when its largest cosine is smaller by at least one unit in the 12th decimal.",
+ "holder_unknown": "not named in the table",
+ "holder_sources": "the first reference or credit in the entry's notes on the table's front page",
+ "open_rule": "every entry not marked optimal (*) in the table",
+ "left_out": "32 entries marked optimal",
+ "cells": "cells.jsonl",
+ "count": 14782,
+ "quantavane_records": 432,
+ "single_problems_left_out": 11
+}

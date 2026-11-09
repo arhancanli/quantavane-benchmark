@@ -1,0 +1,39 @@
+{
+ "family": "covering-array",
+ "title": "Covering arrays CAN(t,k,v)",
+ "added": "2.0",
+ "objective": "minimize",
+ "id_prefixes": [
+  "ca-"
+ ],
+ "keeper": "C. Smolen's ca-tools table (github.com/chrispbsmolen/ca-tools), the live successor of C. J. Colbourn's covering array tables",
+ "page": "https://github.com/chrispbsmolen/ca-tools",
+ "read": "2026-11-09",
+ "revision": "table/ca_table.csv at commit 0e0bf0d (9 Nov 2026 03:36 UTC), 15,112 rows",
+ "template": {
+  "title": "Covering array CAN({t},{k},{v})",
+  "statement": "Find an array with {k} columns over {v} symbols (the integers below {v}) in which every {t} columns show all {v}^{t} tuples of symbols in some row (a covering array of strength {t}), with as few rows as possible.",
+  "submission": "Text file: one row per line, {k} symbols (integers below {v}) separated by spaces.",
+  "args": [
+   "{t}",
+   "{k}",
+   "{v}"
+  ]
+ },
+ "checker": {
+  "program": "ca_check.py",
+  "value": "result"
+ },
+ "score": "the number of rows (smaller is better)",
+ "best_text": "The best known size in the ca-tools table is {best} rows ({holder}); an array with fewer rows improves it.",
+ "bound_kind": "lower bound",
+ "bound_source": "v^t, the number of tuples every t columns must show",
+ "holder_unknown": "not named in the table",
+ "holder_sources": "the table's source of the row that gives the best value (by its own rule: the fewest rows among CITED and VERIFIED rows with at least k columns)",
+ "open_rule": "every row of the table (CITED or VERIFIED) that is a step of its staircase (no row with more columns has as few rows), above v^t, leaving out strength 2 over 2 symbols (solved exactly by Kleitman and Spencer and by Katona)",
+ "left_out": "2190 rows beaten by a row with more columns; 134 cells solved (v^t rows, or t = v = 2); 9230 cells whose check would take more than 2 x 10^8 set intersections (C(k,t) v^t)",
+ "cells": "cells.jsonl",
+ "count": 2651,
+ "quantavane_records": 0,
+ "single_problems_left_out": 0
+}

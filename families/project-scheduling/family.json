@@ -1,0 +1,75 @@
+{
+ "family": "project-scheduling",
+ "title": "Resource-constrained project scheduling (RCPSP), shortest makespan",
+ "added": "2.0",
+ "objective": "minimize",
+ "id_prefixes": [
+  "rcpsp-"
+ ],
+ "keeper": "Solutions Update (solutionsupdate.ugent.be), M. Vanhoucke and J. Coelho, OR&S group, Ghent University",
+ "page": "http://solutionsupdate.ugent.be/index.php/rcpsp",
+ "cell_url": "http://solutionsupdate.ugent.be/",
+ "read": "2026-11-09",
+ "revision": "for each set with open instances, its dataset file (LB, UB and references) and best known solutions file: CV, DC2, J60, J90, J120, RG30 and RG300 read 9 Nov 2026 04:47-05:02 UTC; the seven NetRes sets as last modified on the site 6 Nov 2026 11:40 GMT (unchanged on 9 Nov; content read 6 Nov 2026 20:20 UTC)",
+ "template": {
+  "title": "RCPSP instance {file} ({set})",
+  "statement": "Schedule the activities of instance {file} of the {set} set so that every activity starts after its predecessors finish and no renewable resource is used beyond its capacity, finishing as early as possible (the instance file is on the set's page of the Solutions Update site).",
+  "submission": "Text file: the start time of every activity of the instance, in its order (the dummy first and last activities included), integers separated by spaces, commas or semicolons.",
+  "args": [
+   "rcp",
+   "instances/rcpsp/{set}/{file}"
+  ]
+ },
+ "variants": {
+  "sm": {
+   "args": [
+    "sm",
+    "instances/rcpsp/{set}/{file}"
+   ]
+  },
+  "netres": {
+   "title": "RCPSP instance {id} of {set} (NetRes network {file}, resource profile {profile} of {resources})",
+   "statement": "Schedule the activities of instance {id} of the NetRes set {set} (network {file} of NetRes.zip, with resource profile {profile} of {resources}) so that every activity starts after its predecessors finish and no renewable resource is used beyond its capacity, finishing as early as possible.",
+   "args": [
+    "rcp+res",
+    "instances/rcpsp/NetRes/MT30/{file}",
+    "instances/rcpsp/NetRes/ResSet/{resources}",
+    "{profile}"
+   ]
+  }
+ },
+ "checker": {
+  "program": "rcpsp_check.py",
+  "value": "result"
+ },
+ "score": "the makespan (smaller is better)",
+ "best_text": "The best known makespan on the Solutions Update site is {best} ({holder}); a feasible schedule that finishes earlier improves it.",
+ "bound_kind": "lower bound",
+ "bound_source": "the lower bound in the set's dataset file",
+ "holder_unknown": "not named in the dataset file",
+ "holder_sources": "the reference of the upper bound in the set's dataset file (its list of references); when the set's best known solutions file holds a smaller makespan, that value, with no author",
+ "open_rule": "every instance whose best known makespan is above its lower bound and which neither file marks optimal",
+ "left_out": "3756013 closed instances of 3815183 in the sets read",
+ "sets_not_read": "the highRD, lowRU and 1k variants of the sets (Vanhoucke and Coelho, 2021): their dataset files date from April 2021, many of their upper bounds are the trivial sum of all durations, and some pairs of their best known solutions files are byte-identical; the 1k subsets of NetRes and the sets J30, DC1, Patterson, sD and VNR, which have no open instance",
+ "instances": "Instance files are not copied here. Download a set's archive from its page on the Solutions Update site and unpack it under instances/rcpsp/SET/ (the NetRes sets: NetRes.zip under instances/rcpsp/NetRes/, so that MT30/<folder>/<file> and ResSet/<file> exist, with each folder's own zip unpacked in MT30).",
+ "open_by_set": {
+  "CV": 4,
+  "DC2": 140,
+  "J60": 16,
+  "J90": 66,
+  "J120": 272,
+  "RG30": 4,
+  "RG300": 327,
+  "NR_AD": 23060,
+  "NR_LA": 6,
+  "NR_RC": 5644,
+  "NR_RU": 1900,
+  "NR_SP": 13675,
+  "NR_TF": 12288,
+  "NR_VAR": 1768
+ },
+ "cells": "cells.jsonl",
+ "count": 59170,
+ "quantavane_records": 2088,
+ "single_problems_left_out": 0
+}

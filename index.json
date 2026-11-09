@@ -1,0 +1,106 @@
+{
+ "benchmark_version": "2.0",
+ "problems": 149351,
+ "by_family": {
+  "cage": 40,
+  "cap-set": 2,
+  "circulant-weighing-matrix": 12,
+  "coil-in-the-box": 5,
+  "constant": 7,
+  "constant-weight-code": 1166,
+  "covering-array": 2651,
+  "covering-design": 55995,
+  "degree-diameter": 20,
+  "golomb-ruler": 2,
+  "hadamard": 4,
+  "kissing-number": 16,
+  "linear-code": 15255,
+  "multicolour-ramsey": 14,
+  "no-three-in-line": 2,
+  "project-scheduling": 59170,
+  "ramsey": 133,
+  "schur": 4,
+  "shannon-capacity": 1,
+  "snake-in-the-box": 5,
+  "sorting-network": 21,
+  "spherical-code": 14793,
+  "superpermutation": 4,
+  "van-der-waerden": 10,
+  "vehicle-routing": 14,
+  "weak-schur": 5
+ },
+ "shards": [
+  {
+   "kind": "problems",
+   "path": "problems",
+   "count": 374,
+   "about": "single problems, one JSON file each"
+  },
+  {
+   "kind": "family",
+   "family": "constant-weight-code",
+   "path": "families/constant-weight-code/cells.jsonl",
+   "definition": "families/constant-weight-code/family.json",
+   "count": 1134,
+   "sha256": "6ef7a4d5023bb394d4029b4a9b531c5dcb21293ca43bfd0ed9b89d659a736ded",
+   "keeper": "A. E. Brouwer, bounds for binary constant weight codes (aeb.win.tue.nl/codes/Andw.html)",
+   "read": "2026-11-09",
+   "checker": "cw_check.py"
+  },
+  {
+   "kind": "family",
+   "family": "covering-array",
+   "path": "families/covering-array/cells.jsonl",
+   "definition": "families/covering-array/family.json",
+   "count": 2651,
+   "sha256": "e1beb9a99bf0341a4abb4a47b90e14b9ba82d4068797d73674c52713f9f26577",
+   "keeper": "C. Smolen's ca-tools table (github.com/chrispbsmolen/ca-tools), the live successor of C. J. Colbourn's covering array tables",
+   "read": "2026-11-09",
+   "checker": "ca_check.py"
+  },
+  {
+   "kind": "family",
+   "family": "covering-design",
+   "path": "families/covering-design/cells.jsonl",
+   "definition": "families/covering-design/family.json",
+   "count": 55985,
+   "sha256": "65ca1b70cbc2a6347b47f1cac8225b6a5de3dfc356f288d1e70fd98155f3e993",
+   "keeper": "Covering Repository (coveringrepository.com), successor of D. Gordon's La Jolla Covering Repository",
+   "read": "2026-11-08",
+   "checker": "covering_check.py"
+  },
+  {
+   "kind": "family",
+   "family": "linear-code",
+   "path": "families/linear-code/cells.jsonl",
+   "definition": "families/linear-code/family.json",
+   "count": 15255,
+   "sha256": "4d2c330935506a60f4258264a15604589a705b763932d382442ac03bcc037f7d",
+   "keeper": "M. Grassl, bounds on the minimum distance of linear codes (codetables.de)",
+   "read": "2026-11-09",
+   "checker": "lincode_check.py"
+  },
+  {
+   "kind": "family",
+   "family": "project-scheduling",
+   "path": "families/project-scheduling/cells.jsonl",
+   "definition": "families/project-scheduling/family.json",
+   "count": 59170,
+   "sha256": "244bbf87e85a94ea753c90ec074e030ccd7d75794429a3db51af5d521714a150",
+   "keeper": "Solutions Update (solutionsupdate.ugent.be), M. Vanhoucke and J. Coelho, OR&S group, Ghent University",
+   "read": "2026-11-09",
+   "checker": "rcpsp_check.py"
+  },
+  {
+   "kind": "family",
+   "family": "spherical-code",
+   "path": "families/spherical-code/cells.jsonl",
+   "definition": "families/spherical-code/family.json",
+   "count": 14782,
+   "sha256": "3019bdbe31d174e8b7760a050851ccbe43bbe76c2565604b1b4059be86219747",
+   "keeper": "H. Cohn, table of spherical codes (spherical-codes.org)",
+   "read": "2026-11-09",
+   "checker": "sph_check.py"
+  }
+ ]
+}

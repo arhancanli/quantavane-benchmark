@@ -1,0 +1,1134 @@
+{"id": "cw-8-6-4", "params": {"n": 8, "d": 6, "w": 4}, "best": "2"}
+{"id": "cw-9-6-4", "params": {"n": 9, "d": 6, "w": 4}, "best": "3", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-10-6-4", "params": {"n": 10, "d": 6, "w": 4}, "best": "5", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-10-6-5", "params": {"n": 10, "d": 6, "w": 5}, "best": "6", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-10-8-5", "params": {"n": 10, "d": 8, "w": 5}, "best": "2"}
+{"id": "cw-11-6-4", "params": {"n": 11, "d": 6, "w": 4}, "best": "6"}
+{"id": "cw-11-6-5", "params": {"n": 11, "d": 6, "w": 5}, "best": "11", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-11-8-5", "params": {"n": 11, "d": 8, "w": 5}, "best": "2"}
+{"id": "cw-12-6-4", "params": {"n": 12, "d": 6, "w": 4}, "best": "9"}
+{"id": "cw-12-6-5", "params": {"n": 12, "d": 6, "w": 5}, "best": "12", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-12-6-6", "params": {"n": 12, "d": 6, "w": 6}, "best": "22", "holder": "label H in the table"}
+{"id": "cw-12-8-5", "params": {"n": 12, "d": 8, "w": 5}, "best": "3"}
+{"id": "cw-12-8-6", "params": {"n": 12, "d": 8, "w": 6}, "best": "4", "holder": "construction: doubling (special case of j: A(2n,2d,2w) ≥ A(n,d,w))"}
+{"id": "cw-12-10-6", "params": {"n": 12, "d": 10, "w": 6}, "best": "2"}
+{"id": "cw-13-4-5", "params": {"n": 13, "d": 4, "w": 5}, "best": "123"}
+{"id": "cw-13-4-6", "params": {"n": 13, "d": 4, "w": 6}, "best": "166"}
+{"id": "cw-13-6-4", "params": {"n": 13, "d": 6, "w": 4}, "best": "13"}
+{"id": "cw-13-6-5", "params": {"n": 13, "d": 6, "w": 5}, "best": "18", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-13-6-6", "params": {"n": 13, "d": 6, "w": 6}, "best": "26", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-13-8-5", "params": {"n": 13, "d": 8, "w": 5}, "best": "3"}
+{"id": "cw-13-8-6", "params": {"n": 13, "d": 8, "w": 6}, "best": "4"}
+{"id": "cw-13-10-6", "params": {"n": 13, "d": 10, "w": 6}, "best": "2"}
+{"id": "cw-14-4-5", "params": {"n": 14, "d": 4, "w": 5}, "best": "169", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-14-4-6", "params": {"n": 14, "d": 4, "w": 6}, "best": "278"}
+{"id": "cw-14-4-7", "params": {"n": 14, "d": 4, "w": 7}, "best": "325"}
+{"id": "cw-14-6-4", "params": {"n": 14, "d": 6, "w": 4}, "best": "14"}
+{"id": "cw-14-6-5", "params": {"n": 14, "d": 6, "w": 5}, "best": "28", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-14-6-6", "params": {"n": 14, "d": 6, "w": 6}, "best": "42", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-14-6-7", "params": {"n": 14, "d": 6, "w": 7}, "best": "42"}
+{"id": "cw-14-8-5", "params": {"n": 14, "d": 8, "w": 5}, "best": "4"}
+{"id": "cw-14-8-6", "params": {"n": 14, "d": 8, "w": 6}, "best": "7", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-14-8-7", "params": {"n": 14, "d": 8, "w": 7}, "best": "8", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-14-10-6", "params": {"n": 14, "d": 10, "w": 6}, "best": "2"}
+{"id": "cw-14-10-7", "params": {"n": 14, "d": 10, "w": 7}, "best": "2"}
+{"id": "cw-14-12-7", "params": {"n": 14, "d": 12, "w": 7}, "best": "2"}
+{"id": "cw-15-4-5", "params": {"n": 15, "d": 4, "w": 5}, "best": "243", "holder": "Oscar Sanchez, email 2026-10-14, shows A(31,10,12) ≥ 961"}
+{"id": "cw-15-4-6", "params": {"n": 15, "d": 4, "w": 6}, "best": "399", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-15-4-7", "params": {"n": 15, "d": 4, "w": 7}, "best": "585", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-15-6-4", "params": {"n": 15, "d": 6, "w": 4}, "best": "15"}
+{"id": "cw-15-6-5", "params": {"n": 15, "d": 6, "w": 5}, "best": "42", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-15-6-6", "params": {"n": 15, "d": 6, "w": 6}, "best": "70", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-15-6-7", "params": {"n": 15, "d": 6, "w": 7}, "best": "69", "holder": "label G Ö in the table"}
+{"id": "cw-15-8-5", "params": {"n": 15, "d": 8, "w": 5}, "best": "6"}
+{"id": "cw-15-8-6", "params": {"n": 15, "d": 8, "w": 6}, "best": "10", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-15-8-7", "params": {"n": 15, "d": 8, "w": 7}, "best": "15", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-15-10-6", "params": {"n": 15, "d": 10, "w": 6}, "best": "3"}
+{"id": "cw-15-10-7", "params": {"n": 15, "d": 10, "w": 7}, "best": "3"}
+{"id": "cw-15-12-7", "params": {"n": 15, "d": 12, "w": 7}, "best": "2"}
+{"id": "cw-16-4-5", "params": {"n": 16, "d": 4, "w": 5}, "best": "322", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-16-4-6", "params": {"n": 16, "d": 4, "w": 6}, "best": "624", "holder": "Michael Braun, Joshua Humpich, Antti Laaksonen & Patric R. J. Östergård"}
+{"id": "cw-16-4-7", "params": {"n": 16, "d": 4, "w": 7}, "best": "836", "holder": "label sb in the table"}
+{"id": "cw-16-4-8", "params": {"n": 16, "d": 4, "w": 8}, "best": "1170"}
+{"id": "cw-16-6-4", "params": {"n": 16, "d": 6, "w": 4}, "best": "20", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-16-6-5", "params": {"n": 16, "d": 6, "w": 5}, "best": "48", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-16-6-6", "params": {"n": 16, "d": 6, "w": 6}, "best": "112", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-16-6-7", "params": {"n": 16, "d": 6, "w": 7}, "best": "109", "bound": "122", "holder": "label G in the table"}
+{"id": "cw-16-6-8", "params": {"n": 16, "d": 6, "w": 8}, "best": "120", "bound": "138", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-16-8-5", "params": {"n": 16, "d": 8, "w": 5}, "best": "6"}
+{"id": "cw-16-8-6", "params": {"n": 16, "d": 8, "w": 6}, "best": "16", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-16-8-7", "params": {"n": 16, "d": 8, "w": 7}, "best": "16", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-16-8-8", "params": {"n": 16, "d": 8, "w": 8}, "best": "30", "holder": "label H in the table"}
+{"id": "cw-16-10-6", "params": {"n": 16, "d": 10, "w": 6}, "best": "3"}
+{"id": "cw-16-10-7", "params": {"n": 16, "d": 10, "w": 7}, "best": "4"}
+{"id": "cw-16-10-8", "params": {"n": 16, "d": 10, "w": 8}, "best": "4"}
+{"id": "cw-16-12-7", "params": {"n": 16, "d": 12, "w": 7}, "best": "2"}
+{"id": "cw-16-12-8", "params": {"n": 16, "d": 12, "w": 8}, "best": "2"}
+{"id": "cw-16-14-8", "params": {"n": 16, "d": 14, "w": 8}, "best": "2"}
+{"id": "cw-17-4-5", "params": {"n": 17, "d": 4, "w": 5}, "best": "444", "holder": "Moshe Milshtein"}
+{"id": "cw-17-4-6", "params": {"n": 17, "d": 4, "w": 6}, "best": "854", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-17-4-7", "params": {"n": 17, "d": 4, "w": 7}, "best": "1416", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-17-4-8", "params": {"n": 17, "d": 4, "w": 8}, "best": "1770", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-17-6-4", "params": {"n": 17, "d": 6, "w": 4}, "best": "20"}
+{"id": "cw-17-6-5", "params": {"n": 17, "d": 6, "w": 5}, "best": "68", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-17-6-6", "params": {"n": 17, "d": 6, "w": 6}, "best": "113", "bound": "124", "holder": "Yeow Meng Chee; Patric R. J. Östergård"}
+{"id": "cw-17-6-7", "params": {"n": 17, "d": 6, "w": 7}, "best": "166", "bound": "206", "holder": "label GPo in the table"}
+{"id": "cw-17-6-8", "params": {"n": 17, "d": 6, "w": 8}, "best": "184", "bound": "259", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-17-8-5", "params": {"n": 17, "d": 8, "w": 5}, "best": "7"}
+{"id": "cw-17-8-6", "params": {"n": 17, "d": 8, "w": 6}, "best": "17", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-17-8-7", "params": {"n": 17, "d": 8, "w": 7}, "best": "24", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-17-8-8", "params": {"n": 17, "d": 8, "w": 8}, "best": "34", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-17-10-6", "params": {"n": 17, "d": 10, "w": 6}, "best": "3"}
+{"id": "cw-17-10-7", "params": {"n": 17, "d": 10, "w": 7}, "best": "5"}
+{"id": "cw-17-10-8", "params": {"n": 17, "d": 10, "w": 8}, "best": "6"}
+{"id": "cw-17-12-7", "params": {"n": 17, "d": 12, "w": 7}, "best": "2"}
+{"id": "cw-17-12-8", "params": {"n": 17, "d": 12, "w": 8}, "best": "2"}
+{"id": "cw-17-14-8", "params": {"n": 17, "d": 14, "w": 8}, "best": "2"}
+{"id": "cw-18-4-5", "params": {"n": 18, "d": 4, "w": 5}, "best": "544", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-18-4-6", "params": {"n": 18, "d": 4, "w": 6}, "best": "1260", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-18-4-7", "params": {"n": 18, "d": 4, "w": 7}, "best": "2042", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-18-4-8", "params": {"n": 18, "d": 4, "w": 8}, "best": "3186", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-18-4-9", "params": {"n": 18, "d": 4, "w": 9}, "best": "3540", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-18-6-4", "params": {"n": 18, "d": 6, "w": 4}, "best": "22"}
+{"id": "cw-18-6-5", "params": {"n": 18, "d": 6, "w": 5}, "best": "69", "bound": "72", "holder": "Hui Kheng Aw, Yeow Meng Chee & Alan C. H. Ling"}
+{"id": "cw-18-6-6", "params": {"n": 18, "d": 6, "w": 6}, "best": "133", "bound": "186", "holder": "Christopher D. Rosin"}
+{"id": "cw-18-6-7", "params": {"n": 18, "d": 6, "w": 7}, "best": "243", "bound": "309", "holder": "label GCha in the table"}
+{"id": "cw-18-6-8", "params": {"n": 18, "d": 6, "w": 8}, "best": "260", "bound": "427", "holder": "label KKT in the table"}
+{"id": "cw-18-6-9", "params": {"n": 18, "d": 6, "w": 9}, "best": "320", "bound": "424", "holder": "label gKKT in the table"}
+{"id": "cw-18-8-5", "params": {"n": 18, "d": 8, "w": 5}, "best": "9"}
+{"id": "cw-18-8-6", "params": {"n": 18, "d": 8, "w": 6}, "best": "21", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-18-8-7", "params": {"n": 18, "d": 8, "w": 7}, "best": "33", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1); Patric R. J. Östergård"}
+{"id": "cw-18-8-8", "params": {"n": 18, "d": 8, "w": 8}, "best": "46", "bound": "49", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1); Patric R. J. Östergård"}
+{"id": "cw-18-8-9", "params": {"n": 18, "d": 8, "w": 9}, "best": "48", "bound": "58", "holder": "label sbÖ in the table"}
+{"id": "cw-18-10-6", "params": {"n": 18, "d": 10, "w": 6}, "best": "4"}
+{"id": "cw-18-10-7", "params": {"n": 18, "d": 10, "w": 7}, "best": "6"}
+{"id": "cw-18-10-8", "params": {"n": 18, "d": 10, "w": 8}, "best": "9", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-18-10-9", "params": {"n": 18, "d": 10, "w": 9}, "best": "10", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-18-12-7", "params": {"n": 18, "d": 12, "w": 7}, "best": "3"}
+{"id": "cw-18-12-8", "params": {"n": 18, "d": 12, "w": 8}, "best": "3", "holder": "construction: doubling (special case of j: A(2n,2d,2w) ≥ A(n,d,w))"}
+{"id": "cw-18-12-9", "params": {"n": 18, "d": 12, "w": 9}, "best": "4", "holder": "construction: juxtaposition"}
+{"id": "cw-18-14-8", "params": {"n": 18, "d": 14, "w": 8}, "best": "2"}
+{"id": "cw-18-14-9", "params": {"n": 18, "d": 14, "w": 9}, "best": "2"}
+{"id": "cw-18-16-9", "params": {"n": 18, "d": 16, "w": 9}, "best": "2"}
+{"id": "cw-19-4-5", "params": {"n": 19, "d": 4, "w": 5}, "best": "692", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-19-4-6", "params": {"n": 19, "d": 4, "w": 6}, "best": "1620", "holder": "label sb in the table"}
+{"id": "cw-19-4-7", "params": {"n": 19, "d": 4, "w": 7}, "best": "3172", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-19-4-8", "params": {"n": 19, "d": 4, "w": 8}, "best": "4698", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-19-4-9", "params": {"n": 19, "d": 4, "w": 9}, "best": "6726", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-19-6-4", "params": {"n": 19, "d": 6, "w": 4}, "best": "25"}
+{"id": "cw-19-6-5", "params": {"n": 19, "d": 6, "w": 5}, "best": "76", "bound": "83", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-19-6-6", "params": {"n": 19, "d": 6, "w": 6}, "best": "172", "bound": "228", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-19-6-7", "params": {"n": 19, "d": 6, "w": 7}, "best": "338", "bound": "460", "holder": "label sbCha in the table"}
+{"id": "cw-19-6-8", "params": {"n": 19, "d": 6, "w": 8}, "best": "408", "bound": "667", "holder": "construction: code with specified group of automorphisms; Jiang Chang"}
+{"id": "cw-19-6-9", "params": {"n": 19, "d": 6, "w": 9}, "best": "504", "bound": "789", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-19-8-5", "params": {"n": 19, "d": 8, "w": 5}, "best": "12", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-19-8-6", "params": {"n": 19, "d": 8, "w": 6}, "best": "28", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-19-8-7", "params": {"n": 19, "d": 8, "w": 7}, "best": "52", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1); Patric R. J. Östergård"}
+{"id": "cw-19-8-8", "params": {"n": 19, "d": 8, "w": 8}, "best": "78", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1); Patric R. J. Östergård"}
+{"id": "cw-19-8-9", "params": {"n": 19, "d": 8, "w": 9}, "best": "88", "bound": "103", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-19-10-6", "params": {"n": 19, "d": 10, "w": 6}, "best": "4"}
+{"id": "cw-19-10-7", "params": {"n": 19, "d": 10, "w": 7}, "best": "8"}
+{"id": "cw-19-10-8", "params": {"n": 19, "d": 10, "w": 8}, "best": "12"}
+{"id": "cw-19-10-9", "params": {"n": 19, "d": 10, "w": 9}, "best": "19", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-19-12-7", "params": {"n": 19, "d": 12, "w": 7}, "best": "3"}
+{"id": "cw-19-12-8", "params": {"n": 19, "d": 12, "w": 8}, "best": "3"}
+{"id": "cw-19-12-9", "params": {"n": 19, "d": 12, "w": 9}, "best": "4"}
+{"id": "cw-19-14-8", "params": {"n": 19, "d": 14, "w": 8}, "best": "2"}
+{"id": "cw-19-14-9", "params": {"n": 19, "d": 14, "w": 9}, "best": "2"}
+{"id": "cw-19-16-9", "params": {"n": 19, "d": 16, "w": 9}, "best": "2"}
+{"id": "cw-20-4-5", "params": {"n": 20, "d": 4, "w": 5}, "best": "874"}
+{"id": "cw-20-4-6", "params": {"n": 20, "d": 4, "w": 6}, "best": "2304", "holder": "Kari J. Nurmela, Markku K. Kaikkonen & Patric R. J. Östergård"}
+{"id": "cw-20-4-7", "params": {"n": 20, "d": 4, "w": 7}, "best": "4213", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-20-4-8", "params": {"n": 20, "d": 4, "w": 8}, "best": "7830", "holder": "Michael Braun, Joshua Humpich, Antti Laaksonen & Patric R. J. Östergård"}
+{"id": "cw-20-4-9", "params": {"n": 20, "d": 4, "w": 9}, "best": "10048", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-20-4-10", "params": {"n": 20, "d": 4, "w": 10}, "best": "13452", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-20-6-4", "params": {"n": 20, "d": 6, "w": 4}, "best": "30"}
+{"id": "cw-20-6-5", "params": {"n": 20, "d": 6, "w": 5}, "best": "90", "bound": "100", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-20-6-6", "params": {"n": 20, "d": 6, "w": 6}, "best": "232", "bound": "276", "holder": "label t in the table"}
+{"id": "cw-20-6-7", "params": {"n": 20, "d": 6, "w": 7}, "best": "462", "bound": "651", "holder": "label t in the table"}
+{"id": "cw-20-6-8", "params": {"n": 20, "d": 6, "w": 8}, "best": "597", "bound": "1084", "holder": "label MiPo in the table"}
+{"id": "cw-20-6-9", "params": {"n": 20, "d": 6, "w": 9}, "best": "832", "bound": "1363", "holder": "label t in the table"}
+{"id": "cw-20-6-10", "params": {"n": 20, "d": 6, "w": 10}, "best": "944", "bound": "1420", "holder": "label tKKT in the table"}
+{"id": "cw-20-8-5", "params": {"n": 20, "d": 8, "w": 5}, "best": "16", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-20-8-6", "params": {"n": 20, "d": 8, "w": 6}, "best": "40", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-20-8-7", "params": {"n": 20, "d": 8, "w": 7}, "best": "80", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-20-8-8", "params": {"n": 20, "d": 8, "w": 8}, "best": "130", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1); Patric R. J. Östergård"}
+{"id": "cw-20-8-9", "params": {"n": 20, "d": 8, "w": 9}, "best": "160", "bound": "173", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-20-8-10", "params": {"n": 20, "d": 8, "w": 10}, "best": "176", "bound": "206", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-20-10-6", "params": {"n": 20, "d": 10, "w": 6}, "best": "5"}
+{"id": "cw-20-10-7", "params": {"n": 20, "d": 10, "w": 7}, "best": "10", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-20-10-8", "params": {"n": 20, "d": 10, "w": 8}, "best": "17"}
+{"id": "cw-20-10-9", "params": {"n": 20, "d": 10, "w": 9}, "best": "20", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-20-10-10", "params": {"n": 20, "d": 10, "w": 10}, "best": "38", "holder": "label H in the table"}
+{"id": "cw-20-12-7", "params": {"n": 20, "d": 12, "w": 7}, "best": "3"}
+{"id": "cw-20-12-8", "params": {"n": 20, "d": 12, "w": 8}, "best": "5", "holder": "construction: doubling (special case of j: A(2n,2d,2w) ≥ A(n,d,w))"}
+{"id": "cw-20-12-9", "params": {"n": 20, "d": 12, "w": 9}, "best": "5", "holder": "construction: juxtaposition"}
+{"id": "cw-20-12-10", "params": {"n": 20, "d": 12, "w": 10}, "best": "6", "holder": "construction: doubling (special case of j: A(2n,2d,2w) ≥ A(n,d,w))"}
+{"id": "cw-20-14-8", "params": {"n": 20, "d": 14, "w": 8}, "best": "2"}
+{"id": "cw-20-14-9", "params": {"n": 20, "d": 14, "w": 9}, "best": "2"}
+{"id": "cw-20-14-10", "params": {"n": 20, "d": 14, "w": 10}, "best": "2"}
+{"id": "cw-20-16-9", "params": {"n": 20, "d": 16, "w": 9}, "best": "2"}
+{"id": "cw-20-16-10", "params": {"n": 20, "d": 16, "w": 10}, "best": "2"}
+{"id": "cw-20-18-10", "params": {"n": 20, "d": 18, "w": 10}, "best": "2"}
+{"id": "cw-21-4-5", "params": {"n": 21, "d": 4, "w": 5}, "best": "1113", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-21-4-6", "params": {"n": 21, "d": 4, "w": 6}, "best": "2880", "holder": "Michael Braun, Joshua Humpich, Antti Laaksonen & Patric R. J. Östergård"}
+{"id": "cw-21-4-7", "params": {"n": 21, "d": 4, "w": 7}, "best": "6161", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-21-4-8", "params": {"n": 21, "d": 4, "w": 8}, "best": "10767", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-21-4-9", "params": {"n": 21, "d": 4, "w": 9}, "best": "17177", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-21-4-10", "params": {"n": 21, "d": 4, "w": 10}, "best": "20654", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-21-6-4", "params": {"n": 21, "d": 6, "w": 4}, "best": "31"}
+{"id": "cw-21-6-5", "params": {"n": 21, "d": 6, "w": 5}, "best": "110", "bound": "126", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-21-6-6", "params": {"n": 21, "d": 6, "w": 6}, "best": "273", "bound": "350", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-21-6-7", "params": {"n": 21, "d": 6, "w": 7}, "best": "570", "bound": "828", "holder": "label sb in the table"}
+{"id": "cw-21-6-8", "params": {"n": 21, "d": 6, "w": 8}, "best": "775", "bound": "1665", "holder": "label Po in the table"}
+{"id": "cw-21-6-9", "params": {"n": 21, "d": 6, "w": 9}, "best": "1186", "bound": "2328", "holder": "label Po in the table"}
+{"id": "cw-21-6-10", "params": {"n": 21, "d": 6, "w": 10}, "best": "1474", "bound": "2685", "holder": "label S in the table"}
+{"id": "cw-21-8-5", "params": {"n": 21, "d": 8, "w": 5}, "best": "21", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-21-8-6", "params": {"n": 21, "d": 8, "w": 6}, "best": "56", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-21-8-7", "params": {"n": 21, "d": 8, "w": 7}, "best": "120", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-21-8-8", "params": {"n": 21, "d": 8, "w": 8}, "best": "210", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-21-8-9", "params": {"n": 21, "d": 8, "w": 9}, "best": "280", "bound": "294", "holder": "label sPo in the table"}
+{"id": "cw-21-8-10", "params": {"n": 21, "d": 8, "w": 10}, "best": "336", "bound": "363", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-21-10-6", "params": {"n": 21, "d": 10, "w": 6}, "best": "7"}
+{"id": "cw-21-10-7", "params": {"n": 21, "d": 10, "w": 7}, "best": "13"}
+{"id": "cw-21-10-8", "params": {"n": 21, "d": 10, "w": 8}, "best": "21", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-21-10-9", "params": {"n": 21, "d": 10, "w": 9}, "best": "27", "bound": "35"}
+{"id": "cw-21-10-10", "params": {"n": 21, "d": 10, "w": 10}, "best": "38", "bound": "42"}
+{"id": "cw-21-12-7", "params": {"n": 21, "d": 12, "w": 7}, "best": "3"}
+{"id": "cw-21-12-8", "params": {"n": 21, "d": 12, "w": 8}, "best": "5"}
+{"id": "cw-21-12-9", "params": {"n": 21, "d": 12, "w": 9}, "best": "7", "holder": "construction: juxtaposition"}
+{"id": "cw-21-12-10", "params": {"n": 21, "d": 12, "w": 10}, "best": "7", "holder": "construction: juxtaposition"}
+{"id": "cw-21-14-8", "params": {"n": 21, "d": 14, "w": 8}, "best": "3"}
+{"id": "cw-21-14-9", "params": {"n": 21, "d": 14, "w": 9}, "best": "3"}
+{"id": "cw-21-14-10", "params": {"n": 21, "d": 14, "w": 10}, "best": "3"}
+{"id": "cw-21-16-9", "params": {"n": 21, "d": 16, "w": 9}, "best": "2"}
+{"id": "cw-21-16-10", "params": {"n": 21, "d": 16, "w": 10}, "best": "2"}
+{"id": "cw-21-18-10", "params": {"n": 21, "d": 18, "w": 10}, "best": "2"}
+{"id": "cw-22-4-6", "params": {"n": 22, "d": 4, "w": 6}, "best": "3927", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-22-4-7", "params": {"n": 22, "d": 4, "w": 7}, "best": "8338", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-22-4-8", "params": {"n": 22, "d": 4, "w": 8}, "best": "16527", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-22-4-9", "params": {"n": 22, "d": 4, "w": 9}, "best": "25902", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-22-4-10", "params": {"n": 22, "d": 4, "w": 10}, "best": "37127", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-22-4-11", "params": {"n": 22, "d": 4, "w": 11}, "best": "40624", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-22-6-4", "params": {"n": 22, "d": 6, "w": 4}, "best": "37"}
+{"id": "cw-22-6-5", "params": {"n": 22, "d": 6, "w": 5}, "best": "132", "bound": "136", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-22-6-6", "params": {"n": 22, "d": 6, "w": 6}, "best": "343", "bound": "462", "holder": "Michael Braun, Joshua Humpich, Antti Laaksonen & Patric R. J. Östergård"}
+{"id": "cw-22-6-7", "params": {"n": 22, "d": 6, "w": 7}, "best": "759", "bound": "1100", "holder": "label G in the table"}
+{"id": "cw-22-6-8", "params": {"n": 22, "d": 6, "w": 8}, "best": "1145", "bound": "2277", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-22-6-9", "params": {"n": 22, "d": 6, "w": 9}, "best": "1818", "bound": "3736", "holder": "label S in the table"}
+{"id": "cw-22-6-10", "params": {"n": 22, "d": 6, "w": 10}, "best": "2184", "bound": "4415", "holder": "label OlS in the table"}
+{"id": "cw-22-6-11", "params": {"n": 22, "d": 6, "w": 11}, "best": "2636", "bound": "5033", "holder": "label tMo in the table"}
+{"id": "cw-22-8-5", "params": {"n": 22, "d": 8, "w": 5}, "best": "21"}
+{"id": "cw-22-8-6", "params": {"n": 22, "d": 8, "w": 6}, "best": "77", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-22-8-7", "params": {"n": 22, "d": 8, "w": 7}, "best": "176", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-22-8-8", "params": {"n": 22, "d": 8, "w": 8}, "best": "330", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-22-8-9", "params": {"n": 22, "d": 8, "w": 9}, "best": "292", "bound": "440", "holder": "label RPo in the table"}
+{"id": "cw-22-8-10", "params": {"n": 22, "d": 8, "w": 10}, "best": "616", "holder": "label s Po in the table"}
+{"id": "cw-22-8-11", "params": {"n": 22, "d": 8, "w": 11}, "best": "672", "holder": "label s Po in the table"}
+{"id": "cw-22-10-6", "params": {"n": 22, "d": 10, "w": 6}, "best": "7"}
+{"id": "cw-22-10-7", "params": {"n": 22, "d": 10, "w": 7}, "best": "16", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-22-10-8", "params": {"n": 22, "d": 10, "w": 8}, "best": "25", "bound": "33", "holder": "Christopher D. Rosin"}
+{"id": "cw-22-10-9", "params": {"n": 22, "d": 10, "w": 9}, "best": "35", "bound": "51", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-22-10-10", "params": {"n": 22, "d": 10, "w": 10}, "best": "46", "bound": "71", "holder": "label NuPo in the table"}
+{"id": "cw-22-10-11", "params": {"n": 22, "d": 10, "w": 11}, "best": "46", "bound": "79", "holder": "label cPo in the table"}
+{"id": "cw-22-12-7", "params": {"n": 22, "d": 12, "w": 7}, "best": "4"}
+{"id": "cw-22-12-8", "params": {"n": 22, "d": 12, "w": 8}, "best": "6", "holder": "construction: doubling (special case of j: A(2n,2d,2w) ≥ A(n,d,w))"}
+{"id": "cw-22-12-9", "params": {"n": 22, "d": 12, "w": 9}, "best": "8", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-22-12-10", "params": {"n": 22, "d": 12, "w": 10}, "best": "11", "holder": "construction: doubling (special case of j: A(2n,2d,2w) ≥ A(n,d,w))"}
+{"id": "cw-22-12-11", "params": {"n": 22, "d": 12, "w": 11}, "best": "12", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-22-14-8", "params": {"n": 22, "d": 14, "w": 8}, "best": "3"}
+{"id": "cw-22-14-9", "params": {"n": 22, "d": 14, "w": 9}, "best": "3"}
+{"id": "cw-22-14-10", "params": {"n": 22, "d": 14, "w": 10}, "best": "4"}
+{"id": "cw-22-14-11", "params": {"n": 22, "d": 14, "w": 11}, "best": "4"}
+{"id": "cw-22-16-9", "params": {"n": 22, "d": 16, "w": 9}, "best": "2"}
+{"id": "cw-22-16-10", "params": {"n": 22, "d": 16, "w": 10}, "best": "2"}
+{"id": "cw-22-16-11", "params": {"n": 22, "d": 16, "w": 11}, "best": "2"}
+{"id": "cw-22-18-10", "params": {"n": 22, "d": 18, "w": 10}, "best": "2"}
+{"id": "cw-22-18-11", "params": {"n": 22, "d": 18, "w": 11}, "best": "2"}
+{"id": "cw-23-4-7", "params": {"n": 23, "d": 4, "w": 7}, "best": "11696", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-23-4-8", "params": {"n": 23, "d": 4, "w": 8}, "best": "23467", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-23-4-9", "params": {"n": 23, "d": 4, "w": 9}, "best": "41413", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-23-4-10", "params": {"n": 23, "d": 4, "w": 10}, "best": "58659", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-23-4-11", "params": {"n": 23, "d": 4, "w": 11}, "best": "76233", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-23-6-4", "params": {"n": 23, "d": 6, "w": 4}, "best": "40"}
+{"id": "cw-23-6-5", "params": {"n": 23, "d": 6, "w": 5}, "best": "147", "bound": "170", "holder": "label t in the table"}
+{"id": "cw-23-6-6", "params": {"n": 23, "d": 6, "w": 6}, "best": "399", "bound": "521", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-23-6-7", "params": {"n": 23, "d": 6, "w": 7}, "best": "969", "bound": "1518", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-23-6-8", "params": {"n": 23, "d": 6, "w": 8}, "best": "1439", "bound": "3162"}
+{"id": "cw-23-6-9", "params": {"n": 23, "d": 6, "w": 9}, "best": "2278", "bound": "5819"}
+{"id": "cw-23-6-10", "params": {"n": 23, "d": 6, "w": 10}, "best": "2992", "bound": "7521"}
+{"id": "cw-23-6-11", "params": {"n": 23, "d": 6, "w": 11}, "best": "3588", "bound": "7953"}
+{"id": "cw-23-8-5", "params": {"n": 23, "d": 8, "w": 5}, "best": "23"}
+{"id": "cw-23-8-6", "params": {"n": 23, "d": 8, "w": 6}, "best": "77", "bound": "80"}
+{"id": "cw-23-8-7", "params": {"n": 23, "d": 8, "w": 7}, "best": "253", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-23-8-8", "params": {"n": 23, "d": 8, "w": 8}, "best": "506", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-23-8-9", "params": {"n": 23, "d": 8, "w": 9}, "best": "412", "bound": "662", "holder": "label RPo in the table"}
+{"id": "cw-23-8-10", "params": {"n": 23, "d": 8, "w": 10}, "best": "648", "bound": "1012", "holder": "Christopher D. Rosin"}
+{"id": "cw-23-8-11", "params": {"n": 23, "d": 8, "w": 11}, "best": "1288", "holder": "label s S in the table"}
+{"id": "cw-23-10-6", "params": {"n": 23, "d": 10, "w": 6}, "best": "8"}
+{"id": "cw-23-10-7", "params": {"n": 23, "d": 10, "w": 7}, "best": "20", "holder": "Klaus-Uwe Koschnick"}
+{"id": "cw-23-10-8", "params": {"n": 23, "d": 10, "w": 8}, "best": "33", "bound": "46", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-23-10-9", "params": {"n": 23, "d": 10, "w": 9}, "best": "45", "bound": "78", "holder": "construction: circulant, or code with cyclic group; Beniamin Mounits, Tuvi Etzion & Simon Litsyn"}
+{"id": "cw-23-10-10", "params": {"n": 23, "d": 10, "w": 10}, "best": "54", "bound": "116", "holder": "label Po in the table"}
+{"id": "cw-23-10-11", "params": {"n": 23, "d": 10, "w": 11}, "best": "65", "bound": "135", "holder": "Kari J. Nurmela, Markku K. Kaikkonen & Patric R. J. Östergård"}
+{"id": "cw-23-12-7", "params": {"n": 23, "d": 12, "w": 7}, "best": "4"}
+{"id": "cw-23-12-8", "params": {"n": 23, "d": 12, "w": 8}, "best": "6"}
+{"id": "cw-23-12-9", "params": {"n": 23, "d": 12, "w": 9}, "best": "10", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-23-12-10", "params": {"n": 23, "d": 12, "w": 10}, "best": "16"}
+{"id": "cw-23-12-11", "params": {"n": 23, "d": 12, "w": 11}, "best": "23", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-23-14-8", "params": {"n": 23, "d": 14, "w": 8}, "best": "3"}
+{"id": "cw-23-14-9", "params": {"n": 23, "d": 14, "w": 9}, "best": "3"}
+{"id": "cw-23-14-10", "params": {"n": 23, "d": 14, "w": 10}, "best": "4"}
+{"id": "cw-23-14-11", "params": {"n": 23, "d": 14, "w": 11}, "best": "4"}
+{"id": "cw-23-16-9", "params": {"n": 23, "d": 16, "w": 9}, "best": "2"}
+{"id": "cw-23-16-10", "params": {"n": 23, "d": 16, "w": 10}, "best": "2"}
+{"id": "cw-23-16-11", "params": {"n": 23, "d": 16, "w": 11}, "best": "2"}
+{"id": "cw-23-18-10", "params": {"n": 23, "d": 18, "w": 10}, "best": "2"}
+{"id": "cw-23-18-11", "params": {"n": 23, "d": 18, "w": 11}, "best": "2"}
+{"id": "cw-24-4-5", "params": {"n": 24, "d": 4, "w": 5}, "best": "1920", "holder": "Michael Braun, Joshua Humpich, Antti Laaksonen & Patric R. J. Östergård"}
+{"id": "cw-24-4-7", "params": {"n": 24, "d": 4, "w": 7}, "best": "15656", "holder": "Tuvi Etzion & Sara Bitan, On the chromatic number, colorings, and codes of the Johnson graph, Discrete Appl. Math. 70..."}
+{"id": "cw-24-4-8", "params": {"n": 24, "d": 4, "w": 8}, "best": "34914", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-24-4-9", "params": {"n": 24, "d": 4, "w": 9}, "best": "59904", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-24-4-10", "params": {"n": 24, "d": 4, "w": 10}, "best": "98852", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-24-4-11", "params": {"n": 24, "d": 4, "w": 11}, "best": "118422", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-24-4-12", "params": {"n": 24, "d": 4, "w": 12}, "best": "151484", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-24-6-4", "params": {"n": 24, "d": 6, "w": 4}, "best": "42", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-24-6-5", "params": {"n": 24, "d": 6, "w": 5}, "best": "168", "bound": "192", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-24-6-6", "params": {"n": 24, "d": 6, "w": 6}, "best": "532", "bound": "680", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-24-6-7", "params": {"n": 24, "d": 6, "w": 7}, "best": "1368", "bound": "1786", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-24-6-8", "params": {"n": 24, "d": 6, "w": 8}, "best": "1915", "bound": "4554", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-24-6-9", "params": {"n": 24, "d": 6, "w": 9}, "best": "3080", "bound": "8432", "holder": "Michael Braun, Joshua Humpich, Antti Laaksonen & Patric R. J. Östergård"}
+{"id": "cw-24-6-10", "params": {"n": 24, "d": 6, "w": 10}, "best": "4237", "bound": "12186"}
+{"id": "cw-24-6-11", "params": {"n": 24, "d": 6, "w": 11}, "best": "5376", "bound": "14682", "holder": "Michael Braun, Joshua Humpich, Antti Laaksonen & Patric R. J. Östergård"}
+{"id": "cw-24-6-12", "params": {"n": 24, "d": 6, "w": 12}, "best": "5617", "bound": "15906", "holder": "Moshe Milshtein"}
+{"id": "cw-24-8-5", "params": {"n": 24, "d": 8, "w": 5}, "best": "24"}
+{"id": "cw-24-8-6", "params": {"n": 24, "d": 8, "w": 6}, "best": "78", "bound": "92"}
+{"id": "cw-24-8-7", "params": {"n": 24, "d": 8, "w": 7}, "best": "253", "bound": "274"}
+{"id": "cw-24-8-8", "params": {"n": 24, "d": 8, "w": 8}, "best": "759", "holder": "label G in the table"}
+{"id": "cw-24-8-9", "params": {"n": 24, "d": 8, "w": 9}, "best": "656", "bound": "968", "holder": "label RPo in the table"}
+{"id": "cw-24-8-10", "params": {"n": 24, "d": 8, "w": 10}, "best": "960", "bound": "1551", "holder": "label GS in the table"}
+{"id": "cw-24-8-11", "params": {"n": 24, "d": 8, "w": 11}, "best": "1378", "bound": "2142", "holder": "label RS in the table"}
+{"id": "cw-24-8-12", "params": {"n": 24, "d": 8, "w": 12}, "best": "2576", "holder": "label G in the table"}
+{"id": "cw-24-10-6", "params": {"n": 24, "d": 10, "w": 6}, "best": "9"}
+{"id": "cw-24-10-7", "params": {"n": 24, "d": 10, "w": 7}, "best": "24", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-24-10-8", "params": {"n": 24, "d": 10, "w": 8}, "best": "39", "bound": "60", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-24-10-9", "params": {"n": 24, "d": 10, "w": 9}, "best": "56", "bound": "116", "holder": "construction: circulant, or code with cyclic group; Beniamin Mounits, Tuvi Etzion & Simon Litsyn"}
+{"id": "cw-24-10-10", "params": {"n": 24, "d": 10, "w": 10}, "best": "72", "bound": "170", "holder": "label cKKT in the table"}
+{"id": "cw-24-10-11", "params": {"n": 24, "d": 10, "w": 11}, "best": "95", "bound": "222", "holder": "label NuKKT in the table"}
+{"id": "cw-24-10-12", "params": {"n": 24, "d": 10, "w": 12}, "best": "123", "bound": "246", "holder": "label KKT in the table"}
+{"id": "cw-24-12-7", "params": {"n": 24, "d": 12, "w": 7}, "best": "4"}
+{"id": "cw-24-12-8", "params": {"n": 24, "d": 12, "w": 8}, "best": "9", "holder": "construction: doubling (special case of j: A(2n,2d,2w) ≥ A(n,d,w))"}
+{"id": "cw-24-12-9", "params": {"n": 24, "d": 12, "w": 9}, "best": "16", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-24-12-10", "params": {"n": 24, "d": 12, "w": 10}, "best": "24", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-24-12-11", "params": {"n": 24, "d": 12, "w": 11}, "best": "24", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-24-12-12", "params": {"n": 24, "d": 12, "w": 12}, "best": "46", "holder": "label H in the table"}
+{"id": "cw-24-14-8", "params": {"n": 24, "d": 14, "w": 8}, "best": "3"}
+{"id": "cw-24-14-9", "params": {"n": 24, "d": 14, "w": 9}, "best": "4"}
+{"id": "cw-24-14-10", "params": {"n": 24, "d": 14, "w": 10}, "best": "5"}
+{"id": "cw-24-14-11", "params": {"n": 24, "d": 14, "w": 11}, "best": "6"}
+{"id": "cw-24-14-12", "params": {"n": 24, "d": 14, "w": 12}, "best": "6"}
+{"id": "cw-24-16-9", "params": {"n": 24, "d": 16, "w": 9}, "best": "3"}
+{"id": "cw-24-16-10", "params": {"n": 24, "d": 16, "w": 10}, "best": "3"}
+{"id": "cw-24-16-11", "params": {"n": 24, "d": 16, "w": 11}, "best": "3"}
+{"id": "cw-24-16-12", "params": {"n": 24, "d": 16, "w": 12}, "best": "4"}
+{"id": "cw-24-18-10", "params": {"n": 24, "d": 18, "w": 10}, "best": "2"}
+{"id": "cw-24-18-11", "params": {"n": 24, "d": 18, "w": 11}, "best": "2"}
+{"id": "cw-24-18-12", "params": {"n": 24, "d": 18, "w": 12}, "best": "2"}
+{"id": "cw-25-4-5", "params": {"n": 25, "d": 4, "w": 5}, "best": "2380", "holder": "Michael Braun, Joshua Humpich, Antti Laaksonen & Patric R. J. Östergård"}
+{"id": "cw-25-4-6", "params": {"n": 25, "d": 4, "w": 6}, "best": "7787", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-25-4-7", "params": {"n": 25, "d": 4, "w": 7}, "best": "21220", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-25-4-8", "params": {"n": 25, "d": 4, "w": 8}, "best": "47265", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-25-4-9", "params": {"n": 25, "d": 4, "w": 9}, "best": "89742", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-25-4-10", "params": {"n": 25, "d": 4, "w": 10}, "best": "142373", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-25-4-11", "params": {"n": 25, "d": 4, "w": 11}, "best": "198387", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-25-4-12", "params": {"n": 25, "d": 4, "w": 12}, "best": "231530", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-25-6-4", "params": {"n": 25, "d": 6, "w": 4}, "best": "50", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-25-6-5", "params": {"n": 25, "d": 6, "w": 5}, "best": "210", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-25-6-6", "params": {"n": 25, "d": 6, "w": 6}, "best": "700", "bound": "800", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-25-6-7", "params": {"n": 25, "d": 6, "w": 7}, "best": "1900", "bound": "2428", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-25-6-8", "params": {"n": 25, "d": 6, "w": 8}, "best": "2646", "bound": "5581", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-25-6-9", "params": {"n": 25, "d": 6, "w": 9}, "best": "4260", "bound": "12620", "holder": "label sb in the table"}
+{"id": "cw-25-6-10", "params": {"n": 25, "d": 6, "w": 10}, "best": "6600", "bound": "19037", "holder": "Michael Braun, Joshua Humpich, Antti Laaksonen & Patric R. J. Östergård"}
+{"id": "cw-25-6-11", "params": {"n": 25, "d": 6, "w": 11}, "best": "8720", "bound": "24630", "holder": "Antoine Olivier, emails 2026-10-10/19/22, with 2+10+3 new codes"}
+{"id": "cw-25-6-12", "params": {"n": 25, "d": 6, "w": 12}, "best": "9895", "bound": "30587", "holder": "Pliny the Liberator (elder-plinius), emails, 2026-10-13,16, with 30 new codes"}
+{"id": "cw-25-8-5", "params": {"n": 25, "d": 8, "w": 5}, "best": "30"}
+{"id": "cw-25-8-6", "params": {"n": 25, "d": 8, "w": 6}, "best": "100", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-25-8-7", "params": {"n": 25, "d": 8, "w": 7}, "best": "255", "bound": "328", "holder": "Christopher D. Rosin"}
+{"id": "cw-25-8-8", "params": {"n": 25, "d": 8, "w": 8}, "best": "759", "bound": "850", "holder": "label Po in the table"}
+{"id": "cw-25-8-9", "params": {"n": 25, "d": 8, "w": 9}, "best": "837", "bound": "1366", "holder": "label RPo in the table"}
+{"id": "cw-25-8-10", "params": {"n": 25, "d": 8, "w": 10}, "best": "1248", "bound": "2333", "holder": "label S in the table"}
+{"id": "cw-25-8-11", "params": {"n": 25, "d": 8, "w": 11}, "best": "1722", "bound": "3422", "holder": "label ES in the table"}
+{"id": "cw-25-8-12", "params": {"n": 25, "d": 8, "w": 12}, "best": "2610", "bound": "4087", "holder": "label RS in the table"}
+{"id": "cw-25-10-6", "params": {"n": 25, "d": 10, "w": 6}, "best": "10"}
+{"id": "cw-25-10-7", "params": {"n": 25, "d": 10, "w": 7}, "best": "28", "bound": "32", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-25-10-8", "params": {"n": 25, "d": 10, "w": 8}, "best": "51", "bound": "75"}
+{"id": "cw-25-10-9", "params": {"n": 25, "d": 10, "w": 9}, "best": "75", "bound": "157", "holder": "Oscar Sanchez, email 2026-10-14, shows A(31,10,12) ≥ 961; Beniamin Mounits, Tuvi Etzion & Simon Litsyn"}
+{"id": "cw-25-10-10", "params": {"n": 25, "d": 10, "w": 10}, "best": "100", "bound": "262", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-25-10-11", "params": {"n": 25, "d": 10, "w": 11}, "best": "125", "bound": "379", "holder": "label cKT in the table"}
+{"id": "cw-25-10-12", "params": {"n": 25, "d": 10, "w": 12}, "best": "141", "bound": "433", "holder": "label EKT in the table"}
+{"id": "cw-25-12-7", "params": {"n": 25, "d": 12, "w": 7}, "best": "5"}
+{"id": "cw-25-12-8", "params": {"n": 25, "d": 12, "w": 8}, "best": "10", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-25-12-9", "params": {"n": 25, "d": 12, "w": 9}, "best": "25", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-25-12-10", "params": {"n": 25, "d": 12, "w": 10}, "best": "28", "bound": "36", "holder": "label cKT in the table"}
+{"id": "cw-25-12-11", "params": {"n": 25, "d": 12, "w": 11}, "best": "36", "bound": "42", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-25-12-12", "params": {"n": 25, "d": 12, "w": 12}, "best": "50", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-25-14-8", "params": {"n": 25, "d": 14, "w": 8}, "best": "3"}
+{"id": "cw-25-14-9", "params": {"n": 25, "d": 14, "w": 9}, "best": "5"}
+{"id": "cw-25-14-10", "params": {"n": 25, "d": 14, "w": 10}, "best": "6"}
+{"id": "cw-25-14-11", "params": {"n": 25, "d": 14, "w": 11}, "best": "7"}
+{"id": "cw-25-14-12", "params": {"n": 25, "d": 14, "w": 12}, "best": "8"}
+{"id": "cw-25-16-9", "params": {"n": 25, "d": 16, "w": 9}, "best": "3"}
+{"id": "cw-25-16-10", "params": {"n": 25, "d": 16, "w": 10}, "best": "3"}
+{"id": "cw-25-16-11", "params": {"n": 25, "d": 16, "w": 11}, "best": "3"}
+{"id": "cw-25-16-12", "params": {"n": 25, "d": 16, "w": 12}, "best": "4"}
+{"id": "cw-25-18-10", "params": {"n": 25, "d": 18, "w": 10}, "best": "2"}
+{"id": "cw-25-18-11", "params": {"n": 25, "d": 18, "w": 11}, "best": "2"}
+{"id": "cw-25-18-12", "params": {"n": 25, "d": 18, "w": 12}, "best": "2"}
+{"id": "cw-26-4-5", "params": {"n": 26, "d": 4, "w": 5}, "best": "2816", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-26-4-6", "params": {"n": 26, "d": 4, "w": 6}, "best": "10010", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-26-4-7", "params": {"n": 26, "d": 4, "w": 7}, "best": "27050", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-26-4-8", "params": {"n": 26, "d": 4, "w": 8}, "best": "66352", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-26-4-9", "params": {"n": 26, "d": 4, "w": 9}, "best": "129708", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-26-4-10", "params": {"n": 26, "d": 4, "w": 10}, "best": "222775", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-26-4-11", "params": {"n": 26, "d": 4, "w": 11}, "best": "320584", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-26-4-12", "params": {"n": 26, "d": 4, "w": 12}, "best": "401937", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-26-4-13", "params": {"n": 26, "d": 4, "w": 13}, "best": "431724", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-26-6-4", "params": {"n": 26, "d": 6, "w": 4}, "best": "52"}
+{"id": "cw-26-6-5", "params": {"n": 26, "d": 6, "w": 5}, "best": "260", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-26-6-6", "params": {"n": 26, "d": 6, "w": 6}, "best": "910", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-26-6-7", "params": {"n": 26, "d": 6, "w": 7}, "best": "2600", "bound": "2971", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-26-6-8", "params": {"n": 26, "d": 6, "w": 8}, "best": "3603", "bound": "7891", "holder": "Pliny the Liberator (elder-plinius), emails, 2026-10-13,16, with 30 new codes"}
+{"id": "cw-26-6-9", "params": {"n": 26, "d": 6, "w": 9}, "best": "5997", "bound": "16122", "holder": "Jean François Gutierrez, email 2026-10-18, shows A(26,6,9) ≥ 5997"}
+{"id": "cw-26-6-10", "params": {"n": 26, "d": 6, "w": 10}, "best": "9025", "bound": "28893", "holder": "Chris Dzoba, email 2026-10-09, 2026-10-15, 2026-10-19 with 5+7+2 new codes"}
+{"id": "cw-26-6-11", "params": {"n": 26, "d": 6, "w": 11}, "best": "12222", "bound": "42017", "holder": "Pliny the Liberator (elder-plinius), emails, 2026-10-13,16, with 30 new codes; B. Mounits, T. Etzion & S. Litsyn"}
+{"id": "cw-26-6-12", "params": {"n": 26, "d": 6, "w": 12}, "best": "14854", "bound": "50169", "holder": "label gsS in the table"}
+{"id": "cw-26-6-13", "params": {"n": 26, "d": 6, "w": 13}, "best": "16225", "bound": "61174", "holder": "Pliny the Liberator (elder-plinius), emails, 2026-10-13,16, with 30 new codes"}
+{"id": "cw-26-8-5", "params": {"n": 26, "d": 8, "w": 5}, "best": "30"}
+{"id": "cw-26-8-6", "params": {"n": 26, "d": 8, "w": 6}, "best": "130", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-26-8-7", "params": {"n": 26, "d": 8, "w": 7}, "best": "264", "bound": "371", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-26-8-8", "params": {"n": 26, "d": 8, "w": 8}, "best": "763", "bound": "1066", "holder": "Christopher D. Rosin"}
+{"id": "cw-26-8-9", "params": {"n": 26, "d": 8, "w": 9}, "best": "890", "bound": "1901", "holder": "label EPo in the table"}
+{"id": "cw-26-8-10", "params": {"n": 26, "d": 8, "w": 10}, "best": "1519", "bound": "3496", "holder": "label GS in the table"}
+{"id": "cw-26-8-11", "params": {"n": 26, "d": 8, "w": 11}, "best": "2044", "bound": "5208", "holder": "label OlKT in the table"}
+{"id": "cw-26-8-12", "params": {"n": 26, "d": 8, "w": 12}, "best": "3070", "bound": "6741", "holder": "label GS in the table"}
+{"id": "cw-26-8-13", "params": {"n": 26, "d": 8, "w": 13}, "best": "3588", "bound": "7080", "holder": "label sbS in the table"}
+{"id": "cw-26-10-6", "params": {"n": 26, "d": 10, "w": 6}, "best": "13"}
+{"id": "cw-26-10-7", "params": {"n": 26, "d": 10, "w": 7}, "best": "30", "bound": "36", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-26-10-8", "params": {"n": 26, "d": 10, "w": 8}, "best": "68", "bound": "104", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-26-10-9", "params": {"n": 26, "d": 10, "w": 9}, "best": "91", "bound": "213", "holder": "label NuKKT in the table"}
+{"id": "cw-26-10-10", "params": {"n": 26, "d": 10, "w": 10}, "best": "130", "bound": "397", "holder": "label cPo in the table"}
+{"id": "cw-26-10-11", "params": {"n": 26, "d": 10, "w": 11}, "best": "168", "bound": "565", "holder": "label cKT in the table"}
+{"id": "cw-26-10-12", "params": {"n": 26, "d": 10, "w": 12}, "best": "208", "bound": "691", "holder": "label gKT in the table"}
+{"id": "cw-26-10-13", "params": {"n": 26, "d": 10, "w": 13}, "best": "234", "bound": "754", "holder": "label ES in the table"}
+{"id": "cw-26-12-7", "params": {"n": 26, "d": 12, "w": 7}, "best": "5"}
+{"id": "cw-26-12-8", "params": {"n": 26, "d": 12, "w": 8}, "best": "13", "holder": "construction: doubling (special case of j: A(2n,2d,2w) ≥ A(n,d,w))"}
+{"id": "cw-26-12-9", "params": {"n": 26, "d": 12, "w": 9}, "best": "26", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-26-12-10", "params": {"n": 26, "d": 12, "w": 10}, "best": "33", "bound": "37", "holder": "Kari J. Nurmela, Markku K. Kaikkonen & Patric R. J. Östergård"}
+{"id": "cw-26-12-11", "params": {"n": 26, "d": 12, "w": 11}, "best": "41", "bound": "66", "holder": "label gS in the table"}
+{"id": "cw-26-12-12", "params": {"n": 26, "d": 12, "w": 12}, "best": "54", "bound": "83", "holder": "Iiro Honkala, Heikki Hämäläinen & Markku Kaikkonen"}
+{"id": "cw-26-12-13", "params": {"n": 26, "d": 12, "w": 13}, "best": "58", "bound": "91", "holder": "label HoS in the table"}
+{"id": "cw-26-14-8", "params": {"n": 26, "d": 14, "w": 8}, "best": "4"}
+{"id": "cw-26-14-9", "params": {"n": 26, "d": 14, "w": 9}, "best": "6"}
+{"id": "cw-26-14-10", "params": {"n": 26, "d": 14, "w": 10}, "best": "8"}
+{"id": "cw-26-14-11", "params": {"n": 26, "d": 14, "w": 11}, "best": "10"}
+{"id": "cw-26-14-12", "params": {"n": 26, "d": 14, "w": 12}, "best": "13", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-26-14-13", "params": {"n": 26, "d": 14, "w": 13}, "best": "14", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-26-16-9", "params": {"n": 26, "d": 16, "w": 9}, "best": "3"}
+{"id": "cw-26-16-10", "params": {"n": 26, "d": 16, "w": 10}, "best": "3"}
+{"id": "cw-26-16-11", "params": {"n": 26, "d": 16, "w": 11}, "best": "4"}
+{"id": "cw-26-16-12", "params": {"n": 26, "d": 16, "w": 12}, "best": "4"}
+{"id": "cw-26-16-13", "params": {"n": 26, "d": 16, "w": 13}, "best": "4"}
+{"id": "cw-26-18-10", "params": {"n": 26, "d": 18, "w": 10}, "best": "2"}
+{"id": "cw-26-18-11", "params": {"n": 26, "d": 18, "w": 11}, "best": "2"}
+{"id": "cw-26-18-12", "params": {"n": 26, "d": 18, "w": 12}, "best": "2"}
+{"id": "cw-26-18-13", "params": {"n": 26, "d": 18, "w": 13}, "best": "2"}
+{"id": "cw-27-4-5", "params": {"n": 27, "d": 4, "w": 5}, "best": "3456", "holder": "Michael Braun, Joshua Humpich, Antti Laaksonen & Patric R. J. Östergård"}
+{"id": "cw-27-4-7", "params": {"n": 27, "d": 4, "w": 7}, "best": "35874", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-27-4-8", "params": {"n": 27, "d": 4, "w": 8}, "best": "88604", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-27-4-9", "params": {"n": 27, "d": 4, "w": 9}, "best": "188561", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-27-4-10", "params": {"n": 27, "d": 4, "w": 10}, "best": "334859", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-27-4-11", "params": {"n": 27, "d": 4, "w": 11}, "best": "518014", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-27-4-12", "params": {"n": 27, "d": 4, "w": 12}, "best": "686164", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-27-4-13", "params": {"n": 27, "d": 4, "w": 13}, "best": "791461", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-27-6-4", "params": {"n": 27, "d": 6, "w": 4}, "best": "54"}
+{"id": "cw-27-6-5", "params": {"n": 27, "d": 6, "w": 5}, "best": "262", "bound": "280", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-27-6-6", "params": {"n": 27, "d": 6, "w": 6}, "best": "1170", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-27-6-7", "params": {"n": 27, "d": 6, "w": 7}, "best": "3510", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-27-6-8", "params": {"n": 27, "d": 6, "w": 8}, "best": "4828", "bound": "10027", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-27-6-9", "params": {"n": 27, "d": 6, "w": 9}, "best": "8325", "bound": "23673", "holder": "Pliny the Liberator (elder-plinius), emails, 2026-10-13,16, with 30 new codes"}
+{"id": "cw-27-6-10", "params": {"n": 27, "d": 6, "w": 10}, "best": "13338", "bound": "43529", "holder": "Chris Dzoba, email 2026-10-09, 2026-10-15, 2026-10-19 with 5+7+2 new codes"}
+{"id": "cw-27-6-11", "params": {"n": 27, "d": 6, "w": 11}, "best": "19344", "bound": "66078", "holder": "label OlKKT in the table"}
+{"id": "cw-27-6-12", "params": {"n": 27, "d": 6, "w": 12}, "best": "24804", "bound": "84573", "holder": "label DzKKT in the table"}
+{"id": "cw-27-6-13", "params": {"n": 27, "d": 6, "w": 13}, "best": "27783", "bound": "91079", "holder": "label DzKKT in the table"}
+{"id": "cw-27-8-5", "params": {"n": 27, "d": 8, "w": 5}, "best": "31", "bound": "32", "holder": "Hui Kheng Aw, Yeow Meng Chee & Alan C. H. Ling"}
+{"id": "cw-27-8-6", "params": {"n": 27, "d": 8, "w": 6}, "best": "130", "bound": "135"}
+{"id": "cw-27-8-7", "params": {"n": 27, "d": 8, "w": 7}, "best": "303", "bound": "500", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1); construction: doubling (special case of j: A(2n,2d,2w) ≥ A(n,d,w))"}
+{"id": "cw-27-8-8", "params": {"n": 27, "d": 8, "w": 8}, "best": "776", "bound": "1252", "holder": "Guan-Ying Huang, email 2026-10-20 with 32 new codes"}
+{"id": "cw-27-8-9", "params": {"n": 27, "d": 8, "w": 9}, "best": "1044", "bound": "2616", "holder": "label OlPo in the table"}
+{"id": "cw-27-8-10", "params": {"n": 27, "d": 8, "w": 10}, "best": "1737", "bound": "4986", "holder": "Pliny the Liberator (elder-plinius), emails, 2026-10-13,16, with 30 new codes"}
+{"id": "cw-27-8-11", "params": {"n": 27, "d": 8, "w": 11}, "best": "2422", "bound": "7754", "holder": "label OlKT in the table"}
+{"id": "cw-27-8-12", "params": {"n": 27, "d": 8, "w": 12}, "best": "3337", "bound": "10460", "holder": "label EKT in the table"}
+{"id": "cw-27-8-13", "params": {"n": 27, "d": 8, "w": 13}, "best": "4094", "bound": "11897", "holder": "label NuKKT in the table"}
+{"id": "cw-27-10-6", "params": {"n": 27, "d": 10, "w": 6}, "best": "14"}
+{"id": "cw-27-10-7", "params": {"n": 27, "d": 10, "w": 7}, "best": "36", "bound": "48", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-27-10-8", "params": {"n": 27, "d": 10, "w": 8}, "best": "76", "bound": "121", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-27-10-9", "params": {"n": 27, "d": 10, "w": 9}, "best": "118", "bound": "291", "holder": "label NuPo in the table"}
+{"id": "cw-27-10-10", "params": {"n": 27, "d": 10, "w": 10}, "best": "162", "bound": "555", "holder": "label NuPo in the table"}
+{"id": "cw-27-10-11", "params": {"n": 27, "d": 10, "w": 11}, "best": "243", "bound": "871", "holder": "label gKT in the table"}
+{"id": "cw-27-10-12", "params": {"n": 27, "d": 10, "w": 12}, "best": "351", "bound": "1190", "holder": "label sKT in the table"}
+{"id": "cw-27-10-13", "params": {"n": 27, "d": 10, "w": 13}, "best": "425", "bound": "1406", "holder": "label EKT in the table"}
+{"id": "cw-27-12-7", "params": {"n": 27, "d": 12, "w": 7}, "best": "6"}
+{"id": "cw-27-12-8", "params": {"n": 27, "d": 12, "w": 8}, "best": "15", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-27-12-9", "params": {"n": 27, "d": 12, "w": 9}, "best": "39", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-27-12-10", "params": {"n": 27, "d": 12, "w": 10}, "best": "39", "bound": "58", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-27-12-11", "params": {"n": 27, "d": 12, "w": 11}, "best": "54", "bound": "90", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-27-12-12", "params": {"n": 27, "d": 12, "w": 12}, "best": "82", "bound": "139", "holder": "label KKT in the table"}
+{"id": "cw-27-12-13", "params": {"n": 27, "d": 12, "w": 13}, "best": "87", "bound": "155", "holder": "label BoKKT in the table"}
+{"id": "cw-27-14-8", "params": {"n": 27, "d": 14, "w": 8}, "best": "4"}
+{"id": "cw-27-14-9", "params": {"n": 27, "d": 14, "w": 9}, "best": "6"}
+{"id": "cw-27-14-10", "params": {"n": 27, "d": 14, "w": 10}, "best": "9"}
+{"id": "cw-27-14-11", "params": {"n": 27, "d": 14, "w": 11}, "best": "13", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-27-14-12", "params": {"n": 27, "d": 14, "w": 12}, "best": "19", "bound": "20", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-27-14-13", "params": {"n": 27, "d": 14, "w": 13}, "best": "27", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-27-16-9", "params": {"n": 27, "d": 16, "w": 9}, "best": "3"}
+{"id": "cw-27-16-10", "params": {"n": 27, "d": 16, "w": 10}, "best": "3"}
+{"id": "cw-27-16-11", "params": {"n": 27, "d": 16, "w": 11}, "best": "5"}
+{"id": "cw-27-16-12", "params": {"n": 27, "d": 16, "w": 12}, "best": "5"}
+{"id": "cw-27-16-13", "params": {"n": 27, "d": 16, "w": 13}, "best": "6"}
+{"id": "cw-27-18-10", "params": {"n": 27, "d": 18, "w": 10}, "best": "3"}
+{"id": "cw-27-18-11", "params": {"n": 27, "d": 18, "w": 11}, "best": "3"}
+{"id": "cw-27-18-12", "params": {"n": 27, "d": 18, "w": 12}, "best": "3"}
+{"id": "cw-27-18-13", "params": {"n": 27, "d": 18, "w": 13}, "best": "3"}
+{"id": "cw-28-4-6", "params": {"n": 28, "d": 4, "w": 6}, "best": "15288", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-28-4-7", "params": {"n": 28, "d": 4, "w": 7}, "best": "44915", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-28-4-8", "params": {"n": 28, "d": 4, "w": 8}, "best": "122685", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-28-4-9", "params": {"n": 28, "d": 4, "w": 9}, "best": "263008", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-28-4-10", "params": {"n": 28, "d": 4, "w": 10}, "best": "508952", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-28-4-11", "params": {"n": 28, "d": 4, "w": 11}, "best": "819041", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-28-4-12", "params": {"n": 28, "d": 4, "w": 12}, "best": "1167909", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-28-4-13", "params": {"n": 28, "d": 4, "w": 13}, "best": "1420920", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-28-4-14", "params": {"n": 28, "d": 4, "w": 14}, "best": "1535756", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-28-6-4", "params": {"n": 28, "d": 6, "w": 4}, "best": "63"}
+{"id": "cw-28-6-5", "params": {"n": 28, "d": 6, "w": 5}, "best": "280", "bound": "302", "holder": "Kari J. Nurmela, Markku K. Kaikkonen & Patric R. J. Östergård"}
+{"id": "cw-28-6-6", "params": {"n": 28, "d": 6, "w": 6}, "best": "1174", "bound": "1306", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-28-6-7", "params": {"n": 28, "d": 6, "w": 7}, "best": "4680", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-28-6-8", "params": {"n": 28, "d": 6, "w": 8}, "best": "6356", "bound": "12285", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-28-6-9", "params": {"n": 28, "d": 6, "w": 9}, "best": "11388", "bound": "31195", "holder": "Chris Dzoba, email 2026-10-09, 2026-10-15, 2026-10-19 with 5+7+2 new codes"}
+{"id": "cw-28-6-10", "params": {"n": 28, "d": 6, "w": 10}, "best": "19110", "bound": "63756", "holder": "Chris Dzoba, email 2026-10-09, 2026-10-15, 2026-10-19 with 5+7+2 new codes"}
+{"id": "cw-28-6-11", "params": {"n": 28, "d": 6, "w": 11}, "best": "29484", "bound": "104230", "holder": "label NuKKT in the table"}
+{"id": "cw-28-6-12", "params": {"n": 28, "d": 6, "w": 12}, "best": "40237", "bound": "142117", "holder": "Lingfei Jin & Chaoping Xing"}
+{"id": "cw-28-6-13", "params": {"n": 28, "d": 6, "w": 13}, "best": "49510", "bound": "164219", "holder": "label JXKKT in the table"}
+{"id": "cw-28-6-14", "params": {"n": 28, "d": 6, "w": 14}, "best": "53046", "bound": "169739", "holder": "label JXKKT in the table"}
+{"id": "cw-28-8-5", "params": {"n": 28, "d": 8, "w": 5}, "best": "33"}
+{"id": "cw-28-8-6", "params": {"n": 28, "d": 8, "w": 6}, "best": "132", "bound": "149", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-28-8-7", "params": {"n": 28, "d": 8, "w": 7}, "best": "321", "bound": "540", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-28-8-8", "params": {"n": 28, "d": 8, "w": 8}, "best": "1057", "bound": "1750"}
+{"id": "cw-28-8-9", "params": {"n": 28, "d": 8, "w": 9}, "best": "1406", "bound": "3855", "holder": "Pliny the Liberator (elder-plinius), emails, 2026-10-13,16, with 30 new codes"}
+{"id": "cw-28-8-10", "params": {"n": 28, "d": 8, "w": 10}, "best": "2103", "bound": "7016", "holder": "label ES in the table"}
+{"id": "cw-28-8-11", "params": {"n": 28, "d": 8, "w": 11}, "best": "3791", "bound": "11896", "holder": "label OlKT in the table"}
+{"id": "cw-28-8-12", "params": {"n": 28, "d": 8, "w": 12}, "best": "4962", "bound": "17008", "holder": "label PlKT in the table"}
+{"id": "cw-28-8-13", "params": {"n": 28, "d": 8, "w": 13}, "best": "6848", "bound": "21148", "holder": "label gKT in the table"}
+{"id": "cw-28-8-14", "params": {"n": 28, "d": 8, "w": 14}, "best": "6359", "bound": "22710", "holder": "label PlS in the table"}
+{"id": "cw-28-10-6", "params": {"n": 28, "d": 10, "w": 6}, "best": "16"}
+{"id": "cw-28-10-7", "params": {"n": 28, "d": 10, "w": 7}, "best": "40", "bound": "56", "holder": "Warren Smith, email 2026-11-02, shows A(28,10,7) ≥ 40"}
+{"id": "cw-28-10-8", "params": {"n": 28, "d": 10, "w": 8}, "best": "85", "bound": "168", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-28-10-9", "params": {"n": 28, "d": 10, "w": 9}, "best": "140", "bound": "376", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-28-10-10", "params": {"n": 28, "d": 10, "w": 10}, "best": "219", "bound": "785", "holder": "construction: code with specified group of automorphisms; Beniamin Mounits, Tuvi Etzion & Simon Litsyn"}
+{"id": "cw-28-10-11", "params": {"n": 28, "d": 10, "w": 11}, "best": "308", "bound": "1351", "holder": "label gKT in the table"}
+{"id": "cw-28-10-12", "params": {"n": 28, "d": 10, "w": 12}, "best": "390", "bound": "1977", "holder": "label gS in the table"}
+{"id": "cw-28-10-13", "params": {"n": 28, "d": 10, "w": 13}, "best": "756", "bound": "2438", "holder": "Kari J. Nurmela, Markku K. Kaikkonen & Patric R. J. Östergård"}
+{"id": "cw-28-10-14", "params": {"n": 28, "d": 10, "w": 14}, "best": "817", "bound": "2628", "holder": "label OlKKT in the table"}
+{"id": "cw-28-12-7", "params": {"n": 28, "d": 12, "w": 7}, "best": "8"}
+{"id": "cw-28-12-8", "params": {"n": 28, "d": 12, "w": 8}, "best": "19"}
+{"id": "cw-28-12-9", "params": {"n": 28, "d": 12, "w": 9}, "best": "39", "bound": "45"}
+{"id": "cw-28-12-10", "params": {"n": 28, "d": 12, "w": 10}, "best": "56", "bound": "87", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-28-12-11", "params": {"n": 28, "d": 12, "w": 11}, "best": "65", "bound": "147", "holder": "Kari J. Nurmela, Markku K. Kaikkonen & Patric R. J. Östergård"}
+{"id": "cw-28-12-12", "params": {"n": 28, "d": 12, "w": 12}, "best": "119", "bound": "198", "holder": "label gKKT in the table"}
+{"id": "cw-28-12-13", "params": {"n": 28, "d": 12, "w": 13}, "best": "112", "bound": "244", "holder": "label gKKT in the table"}
+{"id": "cw-28-12-14", "params": {"n": 28, "d": 12, "w": 14}, "best": "172", "bound": "264", "holder": "label NuKKT in the table"}
+{"id": "cw-28-14-8", "params": {"n": 28, "d": 14, "w": 8}, "best": "4"}
+{"id": "cw-28-14-9", "params": {"n": 28, "d": 14, "w": 9}, "best": "7"}
+{"id": "cw-28-14-10", "params": {"n": 28, "d": 14, "w": 10}, "best": "11", "holder": "construction: lexmin code"}
+{"id": "cw-28-14-11", "params": {"n": 28, "d": 14, "w": 11}, "best": "21", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-28-14-12", "params": {"n": 28, "d": 14, "w": 12}, "best": "28", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-28-14-13", "params": {"n": 28, "d": 14, "w": 13}, "best": "28", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-28-14-14", "params": {"n": 28, "d": 14, "w": 14}, "best": "54", "holder": "label H in the table"}
+{"id": "cw-28-16-9", "params": {"n": 28, "d": 16, "w": 9}, "best": "3"}
+{"id": "cw-28-16-10", "params": {"n": 28, "d": 16, "w": 10}, "best": "4"}
+{"id": "cw-28-16-11", "params": {"n": 28, "d": 16, "w": 11}, "best": "5"}
+{"id": "cw-28-16-12", "params": {"n": 28, "d": 16, "w": 12}, "best": "7"}
+{"id": "cw-28-16-13", "params": {"n": 28, "d": 16, "w": 13}, "best": "7"}
+{"id": "cw-28-16-14", "params": {"n": 28, "d": 16, "w": 14}, "best": "8"}
+{"id": "cw-28-18-10", "params": {"n": 28, "d": 18, "w": 10}, "best": "3"}
+{"id": "cw-28-18-11", "params": {"n": 28, "d": 18, "w": 11}, "best": "3"}
+{"id": "cw-28-18-12", "params": {"n": 28, "d": 18, "w": 12}, "best": "3"}
+{"id": "cw-28-18-13", "params": {"n": 28, "d": 18, "w": 13}, "best": "4"}
+{"id": "cw-28-18-14", "params": {"n": 28, "d": 18, "w": 14}, "best": "4"}
+{"id": "cw-29-4-6", "params": {"n": 29, "d": 4, "w": 6}, "best": "17710", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-29-4-7", "params": {"n": 29, "d": 4, "w": 7}, "best": "57943", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-29-4-8", "params": {"n": 29, "d": 4, "w": 8}, "best": "157734", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-29-4-9", "params": {"n": 29, "d": 4, "w": 9}, "best": "365699", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-29-4-10", "params": {"n": 29, "d": 4, "w": 10}, "best": "728330", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-29-4-11", "params": {"n": 29, "d": 4, "w": 11}, "best": "1266026", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-29-4-12", "params": {"n": 29, "d": 4, "w": 12}, "best": "1895939", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-29-4-13", "params": {"n": 29, "d": 4, "w": 13}, "best": "2499311", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-29-4-14", "params": {"n": 29, "d": 4, "w": 14}, "best": "2870880", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-29-6-4", "params": {"n": 29, "d": 6, "w": 4}, "best": "65"}
+{"id": "cw-29-6-5", "params": {"n": 29, "d": 6, "w": 5}, "best": "315", "bound": "364", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-29-6-6", "params": {"n": 29, "d": 6, "w": 6}, "best": "1204", "bound": "1459"}
+{"id": "cw-29-6-7", "params": {"n": 29, "d": 6, "w": 7}, "best": "4689", "bound": "5410", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-29-6-8", "params": {"n": 29, "d": 6, "w": 8}, "best": "8148", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-29-6-9", "params": {"n": 29, "d": 6, "w": 9}, "best": "14781", "holder": "Chris Dzoba, email 2026-10-09, 2026-10-15, 2026-10-19 with 5+7+2 new codes"}
+{"id": "cw-29-6-10", "params": {"n": 29, "d": 6, "w": 10}, "best": "27183", "holder": "Chris Dzoba, email 2026-10-09, 2026-10-15, 2026-10-19 with 5+7+2 new codes"}
+{"id": "cw-29-6-11", "params": {"n": 29, "d": 6, "w": 11}, "best": "42042", "holder": "Chris Dzoba, email 2026-10-09, 2026-10-15, 2026-10-19 with 5+7+2 new codes"}
+{"id": "cw-29-6-12", "params": {"n": 29, "d": 6, "w": 12}, "best": "61823", "holder": "Pliny the Liberator (elder-plinius), emails, 2026-10-13,16, with 30 new codes"}
+{"id": "cw-29-6-13", "params": {"n": 29, "d": 6, "w": 13}, "best": "80837", "holder": "construction: code with specified group of automorphisms; construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-29-6-14", "params": {"n": 29, "d": 6, "w": 14}, "best": "92366", "holder": "construction: code with specified group of automorphisms; construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-29-8-5", "params": {"n": 29, "d": 8, "w": 5}, "best": "36", "bound": "39", "holder": "Iliya Bluskov"}
+{"id": "cw-29-8-6", "params": {"n": 29, "d": 8, "w": 6}, "best": "137", "bound": "159", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-29-8-7", "params": {"n": 29, "d": 8, "w": 7}, "best": "352", "bound": "617", "holder": "Guan-Ying Huang, email 2026-10-20 with 32 new codes"}
+{"id": "cw-29-8-8", "params": {"n": 29, "d": 8, "w": 8}, "best": "1064", "holder": "Guan-Ying Huang, email 2026-10-20 with 32 new codes"}
+{"id": "cw-29-10-6", "params": {"n": 29, "d": 10, "w": 6}, "best": "20"}
+{"id": "cw-29-10-7", "params": {"n": 29, "d": 10, "w": 7}, "best": "42", "bound": "66", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-29-10-8", "params": {"n": 29, "d": 10, "w": 8}, "best": "96", "bound": "203", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-29-10-9", "params": {"n": 29, "d": 10, "w": 9}, "best": "168", "bound": "523", "holder": "label gPo in the table"}
+{"id": "cw-29-10-10", "params": {"n": 29, "d": 10, "w": 10}, "best": "266", "bound": "1090", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-29-10-11", "params": {"n": 29, "d": 10, "w": 11}, "best": "406", "bound": "2036", "holder": "label gPo in the table"}
+{"id": "cw-29-10-12", "params": {"n": 29, "d": 10, "w": 12}, "best": "543", "bound": "3091", "holder": "label Po in the table"}
+{"id": "cw-29-10-13", "params": {"n": 29, "d": 10, "w": 13}, "best": "759", "bound": "4282", "holder": "label BoPo in the table"}
+{"id": "cw-29-10-14", "params": {"n": 29, "d": 10, "w": 14}, "best": "1458", "bound": "4927", "holder": "label gPo in the table"}
+{"id": "cw-29-12-8", "params": {"n": 29, "d": 12, "w": 8}, "best": "22", "bound": "26", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-29-12-9", "params": {"n": 29, "d": 12, "w": 9}, "best": "42", "bound": "59", "holder": "label gPo in the table"}
+{"id": "cw-29-12-10", "params": {"n": 29, "d": 12, "w": 10}, "best": "70", "bound": "126", "holder": "label EPo in the table"}
+{"id": "cw-29-12-11", "params": {"n": 29, "d": 12, "w": 11}, "best": "87", "bound": "197", "holder": "construction: circulant, or code with cyclic group; Christian Lysenstøen"}
+{"id": "cw-29-12-12", "params": {"n": 29, "d": 12, "w": 12}, "best": "120", "bound": "298", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes; Christian Lysenstøen"}
+{"id": "cw-29-12-13", "params": {"n": 29, "d": 12, "w": 13}, "best": "153", "bound": "441", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-29-12-14", "params": {"n": 29, "d": 12, "w": 14}, "best": "174", "bound": "492", "holder": "label EPo in the table"}
+{"id": "cw-29-14-9", "params": {"n": 29, "d": 14, "w": 9}, "best": "7"}
+{"id": "cw-29-14-10", "params": {"n": 29, "d": 14, "w": 10}, "best": "15", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-29-14-11", "params": {"n": 29, "d": 14, "w": 11}, "best": "28", "bound": "29", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-29-14-12", "params": {"n": 29, "d": 14, "w": 12}, "best": "29", "bound": "47", "holder": "label cPo in the table"}
+{"id": "cw-29-14-13", "params": {"n": 29, "d": 14, "w": 13}, "best": "38", "bound": "50", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-29-14-14", "params": {"n": 29, "d": 14, "w": 14}, "best": "58", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-29-16-10", "params": {"n": 29, "d": 16, "w": 10}, "best": "4"}
+{"id": "cw-29-16-11", "params": {"n": 29, "d": 16, "w": 11}, "best": "6", "holder": "construction: lexmin code"}
+{"id": "cw-29-16-12", "params": {"n": 29, "d": 16, "w": 12}, "best": "7"}
+{"id": "cw-29-16-13", "params": {"n": 29, "d": 16, "w": 13}, "best": "9", "holder": "construction: lexmin code"}
+{"id": "cw-29-16-14", "params": {"n": 29, "d": 16, "w": 14}, "best": "10", "holder": "construction: lexmin code"}
+{"id": "cw-29-18-11", "params": {"n": 29, "d": 18, "w": 11}, "best": "3"}
+{"id": "cw-29-18-12", "params": {"n": 29, "d": 18, "w": 12}, "best": "3"}
+{"id": "cw-29-18-13", "params": {"n": 29, "d": 18, "w": 13}, "best": "4"}
+{"id": "cw-29-18-14", "params": {"n": 29, "d": 18, "w": 14}, "best": "4"}
+{"id": "cw-30-4-5", "params": {"n": 30, "d": 4, "w": 5}, "best": "5148", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-30-4-6", "params": {"n": 30, "d": 4, "w": 6}, "best": "21931", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-30-4-7", "params": {"n": 30, "d": 4, "w": 7}, "best": "73853", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-30-4-8", "params": {"n": 30, "d": 4, "w": 8}, "best": "214545", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-30-4-9", "params": {"n": 30, "d": 4, "w": 9}, "best": "514015", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-30-4-10", "params": {"n": 30, "d": 4, "w": 10}, "best": "1085000", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-30-4-11", "params": {"n": 30, "d": 4, "w": 11}, "best": "1977548", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-30-4-12", "params": {"n": 30, "d": 4, "w": 12}, "best": "3143989", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-30-4-13", "params": {"n": 30, "d": 4, "w": 13}, "best": "4325235", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-30-4-14", "params": {"n": 30, "d": 4, "w": 14}, "best": "5313399", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-30-4-15", "params": {"n": 30, "d": 4, "w": 15}, "best": "5697080", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-30-6-4", "params": {"n": 30, "d": 6, "w": 4}, "best": "67"}
+{"id": "cw-30-6-5", "params": {"n": 30, "d": 6, "w": 5}, "best": "343", "bound": "390", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-30-6-6", "params": {"n": 30, "d": 6, "w": 6}, "best": "1316", "bound": "1820", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-30-8-5", "params": {"n": 30, "d": 8, "w": 5}, "best": "41", "bound": "42", "holder": "Iliya Bluskov"}
+{"id": "cw-30-8-6", "params": {"n": 30, "d": 8, "w": 6}, "best": "155", "bound": "195"}
+{"id": "cw-30-8-7", "params": {"n": 30, "d": 8, "w": 7}, "best": "405", "bound": "681", "holder": "Guan-Ying Huang, email 2026-10-20 with 32 new codes"}
+{"id": "cw-30-8-8", "params": {"n": 30, "d": 8, "w": 8}, "best": "1166", "holder": "Pliny the Liberator (elder-plinius), emails, 2026-10-13,16, with 30 new codes"}
+{"id": "cw-30-10-6", "params": {"n": 30, "d": 10, "w": 6}, "best": "25"}
+{"id": "cw-30-10-7", "params": {"n": 30, "d": 10, "w": 7}, "best": "48", "bound": "85", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-30-10-8", "params": {"n": 30, "d": 10, "w": 8}, "best": "108", "bound": "247", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-30-10-9", "params": {"n": 30, "d": 10, "w": 9}, "best": "203", "bound": "657", "holder": "label Po in the table"}
+{"id": "cw-30-10-10", "params": {"n": 30, "d": 10, "w": 10}, "best": "322", "bound": "1569", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-30-10-11", "params": {"n": 30, "d": 10, "w": 11}, "best": "514", "bound": "2924", "holder": "label OlPo in the table"}
+{"id": "cw-30-10-12", "params": {"n": 30, "d": 10, "w": 12}, "best": "768", "bound": "5008", "holder": "label Po in the table"}
+{"id": "cw-30-10-13", "params": {"n": 30, "d": 10, "w": 13}, "best": "940", "bound": "6724", "holder": "label OlPo in the table"}
+{"id": "cw-30-10-14", "params": {"n": 30, "d": 10, "w": 14}, "best": "1467", "bound": "8146", "holder": "label BoPo in the table"}
+{"id": "cw-30-10-15", "params": {"n": 30, "d": 10, "w": 15}, "best": "1458", "bound": "8948", "holder": "label Po in the table"}
+{"id": "cw-30-12-9", "params": {"n": 30, "d": 12, "w": 9}, "best": "44", "bound": "74", "holder": "label Po in the table"}
+{"id": "cw-30-12-10", "params": {"n": 30, "d": 12, "w": 10}, "best": "101", "bound": "159", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro...; Christian Lysenstøen"}
+{"id": "cw-30-12-11", "params": {"n": 30, "d": 12, "w": 11}, "best": "120", "bound": "268", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1); Christian Lysenstøen"}
+{"id": "cw-30-12-12", "params": {"n": 30, "d": 12, "w": 12}, "best": "190", "bound": "492", "holder": "label sPo in the table"}
+{"id": "cw-30-12-13", "params": {"n": 30, "d": 12, "w": 13}, "best": "239", "bound": "642", "holder": "label EPo in the table"}
+{"id": "cw-30-12-14", "params": {"n": 30, "d": 12, "w": 14}, "best": "289", "bound": "801", "holder": "label Po in the table"}
+{"id": "cw-30-12-15", "params": {"n": 30, "d": 12, "w": 15}, "best": "302", "bound": "894", "holder": "label sbPo in the table"}
+{"id": "cw-30-14-9", "params": {"n": 30, "d": 14, "w": 9}, "best": "10", "holder": "construction: lexmin code"}
+{"id": "cw-30-14-10", "params": {"n": 30, "d": 14, "w": 10}, "best": "21", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-30-14-11", "params": {"n": 30, "d": 14, "w": 11}, "best": "30", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-30-14-12", "params": {"n": 30, "d": 14, "w": 12}, "best": "36", "bound": "62", "holder": "label cPo in the table"}
+{"id": "cw-30-14-13", "params": {"n": 30, "d": 14, "w": 13}, "best": "46", "bound": "78", "holder": "label EPo in the table"}
+{"id": "cw-30-14-14", "params": {"n": 30, "d": 14, "w": 14}, "best": "58", "bound": "95", "holder": "label Po in the table"}
+{"id": "cw-30-14-15", "params": {"n": 30, "d": 14, "w": 15}, "best": "62", "bound": "104", "holder": "label cPo in the table"}
+{"id": "cw-30-16-10", "params": {"n": 30, "d": 16, "w": 10}, "best": "6", "holder": "construction: lexmin code"}
+{"id": "cw-30-16-11", "params": {"n": 30, "d": 16, "w": 11}, "best": "6"}
+{"id": "cw-30-16-12", "params": {"n": 30, "d": 16, "w": 12}, "best": "10"}
+{"id": "cw-30-16-13", "params": {"n": 30, "d": 16, "w": 13}, "best": "12"}
+{"id": "cw-30-16-14", "params": {"n": 30, "d": 16, "w": 14}, "best": "15", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-30-16-15", "params": {"n": 30, "d": 16, "w": 15}, "best": "16", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-30-18-11", "params": {"n": 30, "d": 18, "w": 11}, "best": "3"}
+{"id": "cw-30-18-12", "params": {"n": 30, "d": 18, "w": 12}, "best": "5"}
+{"id": "cw-30-18-13", "params": {"n": 30, "d": 18, "w": 13}, "best": "5"}
+{"id": "cw-30-18-14", "params": {"n": 30, "d": 18, "w": 14}, "best": "5"}
+{"id": "cw-30-18-15", "params": {"n": 30, "d": 18, "w": 15}, "best": "6"}
+{"id": "cw-31-4-5", "params": {"n": 31, "d": 4, "w": 5}, "best": "6138", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-31-6-4", "params": {"n": 31, "d": 6, "w": 4}, "best": "76"}
+{"id": "cw-31-6-5", "params": {"n": 31, "d": 6, "w": 5}, "best": "372", "bound": "415", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-31-6-6", "params": {"n": 31, "d": 6, "w": 6}, "best": "1457", "bound": "2015", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-31-8-5", "params": {"n": 31, "d": 8, "w": 5}, "best": "43", "holder": "D.R. Stinson, R.Wei & J. Yin"}
+{"id": "cw-31-8-6", "params": {"n": 31, "d": 8, "w": 6}, "best": "159", "bound": "217", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-31-8-7", "params": {"n": 31, "d": 8, "w": 7}, "best": "476", "bound": "863", "holder": "Guan-Ying Huang, email 2026-10-20 with 32 new codes"}
+{"id": "cw-31-8-8", "params": {"n": 31, "d": 8, "w": 8}, "best": "1353", "holder": "Guan-Ying Huang, email 2026-10-20 with 32 new codes"}
+{"id": "cw-31-10-6", "params": {"n": 31, "d": 10, "w": 6}, "best": "31"}
+{"id": "cw-31-10-7", "params": {"n": 31, "d": 10, "w": 7}, "best": "62", "bound": "109", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-31-10-8", "params": {"n": 31, "d": 10, "w": 8}, "best": "124", "bound": "322", "holder": "label cPo in the table"}
+{"id": "cw-31-10-9", "params": {"n": 31, "d": 10, "w": 9}, "best": "232", "bound": "822", "holder": "label cPo in the table"}
+{"id": "cw-31-10-10", "params": {"n": 31, "d": 10, "w": 10}, "best": "465", "bound": "2036", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-31-10-11", "params": {"n": 31, "d": 10, "w": 11}, "best": "651", "bound": "4141", "holder": "label sPo in the table"}
+{"id": "cw-31-10-12", "params": {"n": 31, "d": 10, "w": 12}, "best": "1015", "bound": "7259", "holder": "label SanPo in the table"}
+{"id": "cw-31-10-13", "params": {"n": 31, "d": 10, "w": 13}, "best": "1395", "bound": "10530", "holder": "label gPo in the table"}
+{"id": "cw-31-10-14", "params": {"n": 31, "d": 10, "w": 14}, "best": "1539", "bound": "13519", "holder": "label EPo in the table"}
+{"id": "cw-31-10-15", "params": {"n": 31, "d": 10, "w": 15}, "best": "1922", "bound": "15031", "holder": "label Po in the table"}
+{"id": "cw-31-12-9", "params": {"n": 31, "d": 12, "w": 9}, "best": "50", "bound": "94", "holder": "label cPo in the table"}
+{"id": "cw-31-12-10", "params": {"n": 31, "d": 12, "w": 10}, "best": "108", "bound": "197", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro...; Christian Lysenstøen"}
+{"id": "cw-31-12-11", "params": {"n": 31, "d": 12, "w": 11}, "best": "186", "bound": "380", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1); Christian Lysenstøen"}
+{"id": "cw-31-12-12", "params": {"n": 31, "d": 12, "w": 12}, "best": "310", "bound": "679", "holder": "label sPo in the table"}
+{"id": "cw-31-12-13", "params": {"n": 31, "d": 12, "w": 13}, "best": "400", "bound": "958", "holder": "label CXYPo in the table"}
+{"id": "cw-31-12-14", "params": {"n": 31, "d": 12, "w": 14}, "best": "510", "bound": "1238", "holder": "label CXYPo in the table"}
+{"id": "cw-31-12-15", "params": {"n": 31, "d": 12, "w": 15}, "best": "572", "bound": "1435", "holder": "label sPo in the table"}
+{"id": "cw-31-14-9", "params": {"n": 31, "d": 14, "w": 9}, "best": "10"}
+{"id": "cw-31-14-10", "params": {"n": 31, "d": 14, "w": 10}, "best": "31", "holder": "label bibd in the table"}
+{"id": "cw-31-14-11", "params": {"n": 31, "d": 14, "w": 11}, "best": "35", "bound": "46", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-31-14-12", "params": {"n": 31, "d": 14, "w": 12}, "best": "45", "bound": "77", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-31-14-13", "params": {"n": 31, "d": 14, "w": 13}, "best": "60", "bound": "129", "holder": "label cPo in the table"}
+{"id": "cw-31-14-14", "params": {"n": 31, "d": 14, "w": 14}, "best": "66", "bound": "167", "holder": "construction: circulant, or code with cyclic group; Christian Lysenstøen"}
+{"id": "cw-31-14-15", "params": {"n": 31, "d": 14, "w": 15}, "best": "72", "bound": "183", "holder": "construction: circulant, or code with cyclic group; Christian Lysenstøen"}
+{"id": "cw-31-16-10", "params": {"n": 31, "d": 16, "w": 10}, "best": "6"}
+{"id": "cw-31-16-11", "params": {"n": 31, "d": 16, "w": 11}, "best": "8", "holder": "construction: lexmin code"}
+{"id": "cw-31-16-12", "params": {"n": 31, "d": 16, "w": 12}, "best": "11"}
+{"id": "cw-31-16-15", "params": {"n": 31, "d": 16, "w": 15}, "best": "31", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-31-18-11", "params": {"n": 31, "d": 18, "w": 11}, "best": "3"}
+{"id": "cw-31-18-12", "params": {"n": 31, "d": 18, "w": 12}, "best": "5"}
+{"id": "cw-31-18-13", "params": {"n": 31, "d": 18, "w": 13}, "best": "5"}
+{"id": "cw-31-18-14", "params": {"n": 31, "d": 18, "w": 14}, "best": "6"}
+{"id": "cw-31-18-15", "params": {"n": 31, "d": 18, "w": 15}, "best": "6"}
+{"id": "cw-32-4-5", "params": {"n": 32, "d": 4, "w": 5}, "best": "6758", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-32-6-4", "params": {"n": 32, "d": 6, "w": 4}, "best": "80"}
+{"id": "cw-32-6-5", "params": {"n": 32, "d": 6, "w": 5}, "best": "416", "bound": "486", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-32-6-6", "params": {"n": 32, "d": 6, "w": 6}, "best": "1643", "bound": "2213", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-32-8-5", "params": {"n": 32, "d": 8, "w": 5}, "best": "44", "holder": "Iliya Bluskov"}
+{"id": "cw-32-8-6", "params": {"n": 32, "d": 8, "w": 6}, "best": "192", "bound": "229", "holder": "label SHP in the table"}
+{"id": "cw-32-8-7", "params": {"n": 32, "d": 8, "w": 7}, "best": "514", "bound": "992", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-32-8-8", "params": {"n": 32, "d": 8, "w": 8}, "best": "1713", "holder": "Qihong Lin, email Oct. 2026, with 7 improved lower bounds for A(n,8,8), 32≤n≤39"}
+{"id": "cw-32-10-6", "params": {"n": 32, "d": 10, "w": 6}, "best": "31"}
+{"id": "cw-32-10-7", "params": {"n": 32, "d": 10, "w": 7}, "best": "64", "bound": "124", "holder": "construction: circulant, or code with cyclic group; Serg Rodriguez, email 2026-11-05"}
+{"id": "cw-32-10-8", "params": {"n": 32, "d": 10, "w": 8}, "best": "145", "bound": "402", "holder": "label Po in the table"}
+{"id": "cw-32-10-9", "params": {"n": 32, "d": 10, "w": 9}, "best": "307", "bound": "1143", "holder": "Antoine Olivier, emails 2026-10-10/19/22, with 2+10+3 new codes"}
+{"id": "cw-32-10-10", "params": {"n": 32, "d": 10, "w": 10}, "best": "558", "bound": "2630", "holder": "Oscar Sanchez, email 2026-10-14, shows A(31,10,12) ≥ 961"}
+{"id": "cw-32-10-11", "params": {"n": 32, "d": 10, "w": 11}, "best": "992", "bound": "5696", "holder": "label gPo in the table"}
+{"id": "cw-32-10-12", "params": {"n": 32, "d": 10, "w": 12}, "best": "1395", "bound": "10446", "holder": "label gPo in the table"}
+{"id": "cw-32-10-13", "params": {"n": 32, "d": 10, "w": 13}, "best": "1984", "bound": "16755", "holder": "label gPo in the table"}
+{"id": "cw-32-10-14", "params": {"n": 32, "d": 10, "w": 14}, "best": "2325", "bound": "22213", "holder": "label gPo in the table"}
+{"id": "cw-32-10-15", "params": {"n": 32, "d": 10, "w": 15}, "best": "2635", "bound": "26361", "holder": "label gPo in the table"}
+{"id": "cw-32-10-16", "params": {"n": 32, "d": 10, "w": 16}, "best": "3038", "bound": "27429", "holder": "label Po in the table"}
+{"id": "cw-32-12-9", "params": {"n": 32, "d": 12, "w": 9}, "best": "60", "bound": "110", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-32-12-10", "params": {"n": 32, "d": 12, "w": 10}, "best": "123", "bound": "245", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes; Christian Lysenstøen"}
+{"id": "cw-32-12-11", "params": {"n": 32, "d": 12, "w": 11}, "best": "187", "bound": "573", "holder": "label BoPo in the table"}
+{"id": "cw-32-12-12", "params": {"n": 32, "d": 12, "w": 12}, "best": "496", "bound": "952", "holder": "label BCHPo in the table"}
+{"id": "cw-32-12-13", "params": {"n": 32, "d": 12, "w": 13}, "best": "434", "bound": "1497", "holder": "label Po in the table"}
+{"id": "cw-32-12-14", "params": {"n": 32, "d": 12, "w": 14}, "best": "900", "bound": "2140", "holder": "label CXYPo in the table"}
+{"id": "cw-32-12-15", "params": {"n": 32, "d": 12, "w": 15}, "best": "629", "bound": "2511", "holder": "Christian Lysenstøen"}
+{"id": "cw-32-12-16", "params": {"n": 32, "d": 12, "w": 16}, "best": "1144", "bound": "2652", "holder": "Christian Lysenstøen"}
+{"id": "cw-32-14-9", "params": {"n": 32, "d": 14, "w": 9}, "best": "12"}
+{"id": "cw-32-14-10", "params": {"n": 32, "d": 14, "w": 10}, "best": "32", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-32-14-11", "params": {"n": 32, "d": 14, "w": 11}, "best": "40", "bound": "68", "holder": "label Po in the table"}
+{"id": "cw-32-14-12", "params": {"n": 32, "d": 14, "w": 12}, "best": "55", "bound": "118", "holder": "label cPo in the table"}
+{"id": "cw-32-14-13", "params": {"n": 32, "d": 14, "w": 13}, "best": "70", "bound": "183", "holder": "construction: circulant, or code with cyclic group; Christian Lysenstøen"}
+{"id": "cw-32-14-14", "params": {"n": 32, "d": 14, "w": 14}, "best": "96", "bound": "233", "holder": "construction: code with specified group of automorphisms; Christian Lysenstøen"}
+{"id": "cw-32-14-15", "params": {"n": 32, "d": 14, "w": 15}, "best": "96", "bound": "277", "holder": "construction: code with specified group of automorphisms; Christian Lysenstøen"}
+{"id": "cw-32-14-16", "params": {"n": 32, "d": 14, "w": 16}, "best": "122", "bound": "295", "holder": "construction: code with specified group of automorphisms; Christian Lysenstøen"}
+{"id": "cw-32-16-10", "params": {"n": 32, "d": 16, "w": 10}, "best": "6"}
+{"id": "cw-32-16-11", "params": {"n": 32, "d": 16, "w": 11}, "best": "9", "holder": "construction: lexmin code"}
+{"id": "cw-32-16-12", "params": {"n": 32, "d": 16, "w": 12}, "best": "16"}
+{"id": "cw-32-16-13", "params": {"n": 32, "d": 16, "w": 13}, "best": "25", "bound": "27", "holder": "Christopher D. Rosin"}
+{"id": "cw-32-16-16", "params": {"n": 32, "d": 16, "w": 16}, "best": "62", "holder": "label H in the table"}
+{"id": "cw-32-18-11", "params": {"n": 32, "d": 18, "w": 11}, "best": "4"}
+{"id": "cw-32-18-12", "params": {"n": 32, "d": 18, "w": 12}, "best": "5"}
+{"id": "cw-32-18-13", "params": {"n": 32, "d": 18, "w": 13}, "best": "6"}
+{"id": "cw-32-18-14", "params": {"n": 32, "d": 18, "w": 14}, "best": "7"}
+{"id": "cw-32-18-15", "params": {"n": 32, "d": 18, "w": 15}, "best": "8"}
+{"id": "cw-32-18-16", "params": {"n": 32, "d": 18, "w": 16}, "best": "8"}
+{"id": "cw-33-6-4", "params": {"n": 33, "d": 6, "w": 4}, "best": "82"}
+{"id": "cw-33-6-5", "params": {"n": 33, "d": 6, "w": 5}, "best": "462", "bound": "528", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-33-8-5", "params": {"n": 33, "d": 8, "w": 5}, "best": "48", "bound": "51", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-33-8-6", "params": {"n": 33, "d": 8, "w": 6}, "best": "196", "bound": "242", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-33-8-7", "params": {"n": 33, "d": 8, "w": 7}, "best": "558", "bound": "1079", "holder": "Guan-Ying Huang, email 2026-10-20 with 32 new codes"}
+{"id": "cw-33-8-8", "params": {"n": 33, "d": 8, "w": 8}, "best": "1852", "holder": "Qihong Lin, email Oct. 2026, with 7 improved lower bounds for A(n,8,8), 32≤n≤39"}
+{"id": "cw-33-10-6", "params": {"n": 33, "d": 10, "w": 6}, "best": "31", "bound": "32"}
+{"id": "cw-33-10-7", "params": {"n": 33, "d": 10, "w": 7}, "best": "72", "bound": "150", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-33-10-8", "params": {"n": 33, "d": 10, "w": 8}, "best": "165", "bound": "573", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-33-12-8", "params": {"n": 33, "d": 12, "w": 8}, "best": "36", "bound": "41"}
+{"id": "cw-33-12-12", "params": {"n": 33, "d": 12, "w": 12}, "best": "497", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-33-14-14", "params": {"n": 33, "d": 14, "w": 14}, "best": "112", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-34-6-4", "params": {"n": 34, "d": 6, "w": 4}, "best": "92"}
+{"id": "cw-34-8-5", "params": {"n": 34, "d": 8, "w": 5}, "best": "52", "bound": "54"}
+{"id": "cw-34-8-6", "params": {"n": 34, "d": 8, "w": 6}, "best": "238", "bound": "289", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-34-8-7", "params": {"n": 34, "d": 8, "w": 7}, "best": "604", "bound": "1175", "holder": "Guan-Ying Huang, email 2026-10-20 with 32 new codes"}
+{"id": "cw-34-8-8", "params": {"n": 34, "d": 8, "w": 8}, "best": "2013", "holder": "Qihong Lin, email Oct. 2026, with 7 improved lower bounds for A(n,8,8), 32≤n≤39"}
+{"id": "cw-34-10-6", "params": {"n": 34, "d": 10, "w": 6}, "best": "34", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-34-10-7", "params": {"n": 34, "d": 10, "w": 7}, "best": "85", "bound": "160", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-34-10-8", "params": {"n": 34, "d": 10, "w": 8}, "best": "181", "bound": "637", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-34-12-8", "params": {"n": 34, "d": 12, "w": 8}, "best": "39", "bound": "46", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-34-12-12", "params": {"n": 34, "d": 12, "w": 12}, "best": "552"}
+{"id": "cw-34-14-14", "params": {"n": 34, "d": 14, "w": 14}, "best": "132", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-35-6-4", "params": {"n": 35, "d": 6, "w": 4}, "best": "96"}
+{"id": "cw-35-8-5", "params": {"n": 35, "d": 8, "w": 5}, "best": "56", "holder": "D.R. Stinson, R.Wei & J. Yin"}
+{"id": "cw-35-8-6", "params": {"n": 35, "d": 8, "w": 6}, "best": "240", "bound": "315", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-35-8-7", "params": {"n": 35, "d": 8, "w": 7}, "best": "670", "bound": "1445", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-35-8-8", "params": {"n": 35, "d": 8, "w": 8}, "best": "2202", "holder": "Qihong Lin, email Oct. 2026, with 7 improved lower bounds for A(n,8,8), 32≤n≤39"}
+{"id": "cw-35-10-6", "params": {"n": 35, "d": 10, "w": 6}, "best": "35", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-35-10-7", "params": {"n": 35, "d": 10, "w": 7}, "best": "102", "bound": "170", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-35-10-8", "params": {"n": 35, "d": 10, "w": 8}, "best": "210", "bound": "700", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-35-12-8", "params": {"n": 35, "d": 12, "w": 8}, "best": "44", "bound": "52", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-35-12-12", "params": {"n": 35, "d": 12, "w": 12}, "best": "664"}
+{"id": "cw-35-14-14", "params": {"n": 35, "d": 14, "w": 14}, "best": "163"}
+{"id": "cw-36-6-4", "params": {"n": 36, "d": 6, "w": 4}, "best": "99"}
+{"id": "cw-36-6-6", "params": {"n": 36, "d": 6, "w": 6}, "best": "2604", "bound": "3864", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-36-8-5", "params": {"n": 36, "d": 8, "w": 5}, "best": "57", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-36-8-6", "params": {"n": 36, "d": 8, "w": 6}, "best": "276", "bound": "336", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-36-8-7", "params": {"n": 36, "d": 8, "w": 7}, "best": "754", "bound": "1620", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-36-8-8", "params": {"n": 36, "d": 8, "w": 8}, "best": "2742"}
+{"id": "cw-36-10-6", "params": {"n": 36, "d": 10, "w": 6}, "best": "37", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-36-10-7", "params": {"n": 36, "d": 10, "w": 7}, "best": "116", "bound": "180", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-36-10-8", "params": {"n": 36, "d": 10, "w": 8}, "best": "245", "bound": "765", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-36-12-8", "params": {"n": 36, "d": 12, "w": 8}, "best": "52", "bound": "66", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-36-12-12", "params": {"n": 36, "d": 12, "w": 12}, "best": "836"}
+{"id": "cw-36-14-14", "params": {"n": 36, "d": 14, "w": 14}, "best": "218"}
+{"id": "cw-37-4-5", "params": {"n": 37, "d": 4, "w": 5}, "best": "12473", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-37-6-4", "params": {"n": 37, "d": 6, "w": 4}, "best": "111"}
+{"id": "cw-37-6-5", "params": {"n": 37, "d": 6, "w": 5}, "best": "666", "bound": "732", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-37-6-6", "params": {"n": 37, "d": 6, "w": 6}, "best": "3108", "bound": "4261", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-37-8-5", "params": {"n": 37, "d": 8, "w": 5}, "best": "65"}
+{"id": "cw-37-8-6", "params": {"n": 37, "d": 8, "w": 6}, "best": "284", "bound": "351", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-37-8-7", "params": {"n": 37, "d": 8, "w": 7}, "best": "873", "bound": "1776", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-37-8-8", "params": {"n": 37, "d": 8, "w": 8}, "best": "2860", "holder": "Qihong Lin, email Oct. 2026, with 7 improved lower bounds for A(n,8,8), 32≤n≤39"}
+{"id": "cw-37-10-6", "params": {"n": 37, "d": 10, "w": 6}, "best": "38", "bound": "43", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-37-10-7", "params": {"n": 37, "d": 10, "w": 7}, "best": "134", "bound": "222", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-37-10-8", "params": {"n": 37, "d": 10, "w": 8}, "best": "259", "bound": "832", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-37-12-8", "params": {"n": 37, "d": 12, "w": 8}, "best": "54", "bound": "74", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-37-14-14", "params": {"n": 37, "d": 14, "w": 14}, "best": "271"}
+{"id": "cw-38-6-4", "params": {"n": 38, "d": 6, "w": 4}, "best": "114"}
+{"id": "cw-38-6-5", "params": {"n": 38, "d": 6, "w": 5}, "best": "714", "bound": "842", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-38-8-5", "params": {"n": 38, "d": 8, "w": 5}, "best": "66", "bound": "68", "holder": "Ankan Sadhu, email 2026-07-25, shows A(38,8,5) ≥ 66, A(39,8,5) ≥ 68, A(47,8,5) ≥ 101, A(48,8,5) ≥ 103"}
+{"id": "cw-38-8-6", "params": {"n": 38, "d": 8, "w": 6}, "best": "305", "bound": "411", "holder": "Guan-Ying Huang, email 2026-10-20 with 32 new codes"}
+{"id": "cw-38-8-7", "params": {"n": 38, "d": 8, "w": 7}, "best": "975", "bound": "1905", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-38-8-8", "params": {"n": 38, "d": 8, "w": 8}, "best": "3088", "holder": "Qihong Lin, email Oct. 2026, with 7 improved lower bounds for A(n,8,8), 32≤n≤39"}
+{"id": "cw-38-10-6", "params": {"n": 38, "d": 10, "w": 6}, "best": "44", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-38-10-7", "params": {"n": 38, "d": 10, "w": 7}, "best": "152", "bound": "233", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-38-10-8", "params": {"n": 38, "d": 10, "w": 8}, "best": "285", "bound": "1053", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-38-12-8", "params": {"n": 38, "d": 12, "w": 8}, "best": "60", "bound": "80", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-38-14-14", "params": {"n": 38, "d": 14, "w": 14}, "best": "343", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-39-6-4", "params": {"n": 39, "d": 6, "w": 4}, "best": "117"}
+{"id": "cw-39-6-5", "params": {"n": 39, "d": 6, "w": 5}, "best": "819", "bound": "889", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-39-6-6", "params": {"n": 39, "d": 6, "w": 6}, "best": "3822", "bound": "5473", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-39-8-5", "params": {"n": 39, "d": 8, "w": 5}, "best": "68", "bound": "70", "holder": "Ankan Sadhu, email 2026-07-25, shows A(38,8,5) ≥ 66, A(39,8,5) ≥ 68, A(47,8,5) ≥ 101, A(48,8,5) ≥ 103"}
+{"id": "cw-39-8-6", "params": {"n": 39, "d": 8, "w": 6}, "best": "323", "bound": "442", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-39-8-7", "params": {"n": 39, "d": 8, "w": 7}, "best": "1118", "bound": "2289", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-39-8-8", "params": {"n": 39, "d": 8, "w": 8}, "best": "3424", "holder": "Qihong Lin, email Oct. 2026, with 7 improved lower bounds for A(n,8,8), 32≤n≤39"}
+{"id": "cw-39-10-6", "params": {"n": 39, "d": 10, "w": 6}, "best": "44", "bound": "45"}
+{"id": "cw-39-10-7", "params": {"n": 39, "d": 10, "w": 7}, "best": "170", "bound": "245", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-39-10-8", "params": {"n": 39, "d": 10, "w": 8}, "best": "312", "bound": "1135", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-39-12-7", "params": {"n": 39, "d": 12, "w": 7}, "best": "21", "bound": "22"}
+{"id": "cw-39-12-8", "params": {"n": 39, "d": 12, "w": 8}, "best": "68", "bound": "92", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-39-14-14", "params": {"n": 39, "d": 14, "w": 14}, "best": "457"}
+{"id": "cw-40-6-4", "params": {"n": 40, "d": 6, "w": 4}, "best": "130"}
+{"id": "cw-40-6-6", "params": {"n": 40, "d": 6, "w": 6}, "best": "4212", "bound": "5926", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-40-8-5", "params": {"n": 40, "d": 8, "w": 5}, "best": "72", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-40-8-6", "params": {"n": 40, "d": 8, "w": 6}, "best": "338", "bound": "466", "holder": "Guan-Ying Huang, email 2026-10-20 with 32 new codes"}
+{"id": "cw-40-8-7", "params": {"n": 40, "d": 8, "w": 7}, "best": "1231", "bound": "2525", "holder": "Guan-Ying Huang, email 2026-10-20 with 32 new codes"}
+{"id": "cw-40-8-8", "params": {"n": 40, "d": 8, "w": 8}, "best": "3687", "holder": "Antoine Olivier, emails 2026-10-10/19/22, with 2+10+3 new codes"}
+{"id": "cw-40-10-6", "params": {"n": 40, "d": 10, "w": 6}, "best": "45", "bound": "46", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-40-10-7", "params": {"n": 40, "d": 10, "w": 7}, "best": "189", "bound": "257", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-40-10-8", "params": {"n": 40, "d": 10, "w": 8}, "best": "360", "bound": "1225", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-40-12-8", "params": {"n": 40, "d": 12, "w": 8}, "best": "85", "bound": "110", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-40-14-14", "params": {"n": 40, "d": 14, "w": 14}, "best": "492"}
+{"id": "cw-41-4-5", "params": {"n": 41, "d": 4, "w": 5}, "best": "19258", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-41-6-4", "params": {"n": 41, "d": 6, "w": 4}, "best": "133"}
+{"id": "cw-41-6-5", "params": {"n": 41, "d": 6, "w": 5}, "best": "943", "bound": "1066", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-41-6-6", "params": {"n": 41, "d": 6, "w": 6}, "best": "4680", "bound": "6396", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-41-8-5", "params": {"n": 41, "d": 8, "w": 5}, "best": "82", "holder": "label S in the table"}
+{"id": "cw-41-8-6", "params": {"n": 41, "d": 8, "w": 6}, "best": "384", "bound": "492"}
+{"id": "cw-41-8-7", "params": {"n": 41, "d": 8, "w": 7}, "best": "1295", "bound": "2729", "holder": "Guan-Ying Huang, email 2026-10-20 with 32 new codes"}
+{"id": "cw-41-8-8", "params": {"n": 41, "d": 8, "w": 8}, "best": "4510", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-41-10-6", "params": {"n": 41, "d": 10, "w": 6}, "best": "49", "bound": "53", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-41-10-7", "params": {"n": 41, "d": 10, "w": 7}, "best": "212", "bound": "269", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-41-10-8", "params": {"n": 41, "d": 10, "w": 8}, "best": "380", "bound": "1317", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-41-12-7", "params": {"n": 41, "d": 12, "w": 7}, "best": "26", "bound": "29", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-41-12-8", "params": {"n": 41, "d": 12, "w": 8}, "best": "85", "bound": "128"}
+{"id": "cw-41-14-14", "params": {"n": 41, "d": 14, "w": 14}, "best": "615", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-42-4-5", "params": {"n": 42, "d": 4, "w": 5}, "best": "21320", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-42-6-4", "params": {"n": 42, "d": 6, "w": 4}, "best": "136"}
+{"id": "cw-42-8-5", "params": {"n": 42, "d": 8, "w": 5}, "best": "84", "holder": "D.R. Stinson, R.Wei & J. Yin"}
+{"id": "cw-42-8-6", "params": {"n": 42, "d": 8, "w": 6}, "best": "448", "bound": "574", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-42-8-7", "params": {"n": 42, "d": 8, "w": 7}, "best": "1394", "bound": "2952", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-42-8-8", "params": {"n": 42, "d": 8, "w": 8}, "best": "5136"}
+{"id": "cw-42-10-6", "params": {"n": 42, "d": 10, "w": 6}, "best": "55", "bound": "56"}
+{"id": "cw-42-10-7", "params": {"n": 42, "d": 10, "w": 7}, "best": "233", "bound": "318", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-42-10-8", "params": {"n": 42, "d": 10, "w": 8}, "best": "441", "bound": "1412", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-42-12-7", "params": {"n": 42, "d": 12, "w": 7}, "best": "30", "bound": "34", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-42-12-8", "params": {"n": 42, "d": 12, "w": 8}, "best": "105", "bound": "157", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-42-14-14", "params": {"n": 42, "d": 14, "w": 14}, "best": "820", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-43-4-5", "params": {"n": 43, "d": 4, "w": 5}, "best": "23478", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-43-6-4", "params": {"n": 43, "d": 6, "w": 4}, "best": "149"}
+{"id": "cw-43-6-5", "params": {"n": 43, "d": 6, "w": 5}, "best": "1082", "bound": "1169", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-43-6-6", "params": {"n": 43, "d": 6, "w": 6}, "best": "5719", "bound": "8005", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-43-8-5", "params": {"n": 43, "d": 8, "w": 5}, "best": "86", "holder": "D.R. Stinson, R.Wei & J. Yin"}
+{"id": "cw-43-8-6", "params": {"n": 43, "d": 8, "w": 6}, "best": "457", "bound": "602", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-43-8-7", "params": {"n": 43, "d": 8, "w": 7}, "best": "1591", "bound": "3526", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-43-8-8", "params": {"n": 43, "d": 8, "w": 8}, "best": "5418", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-43-10-6", "params": {"n": 43, "d": 10, "w": 6}, "best": "55", "bound": "57"}
+{"id": "cw-43-10-7", "params": {"n": 43, "d": 10, "w": 7}, "best": "250", "bound": "344", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-43-10-8", "params": {"n": 43, "d": 10, "w": 8}, "best": "470", "bound": "1709", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-43-12-7", "params": {"n": 43, "d": 12, "w": 7}, "best": "32", "bound": "38", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-43-12-8", "params": {"n": 43, "d": 12, "w": 8}, "best": "111", "bound": "192", "holder": "label sb in the table"}
+{"id": "cw-44-4-5", "params": {"n": 44, "d": 4, "w": 5}, "best": "25564", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-44-6-4", "params": {"n": 44, "d": 6, "w": 4}, "best": "154"}
+{"id": "cw-44-6-6", "params": {"n": 44, "d": 6, "w": 6}, "best": "6020", "bound": "8572", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-44-8-5", "params": {"n": 44, "d": 8, "w": 5}, "best": "88", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-44-8-6", "params": {"n": 44, "d": 8, "w": 6}, "best": "475", "bound": "630", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-44-8-7", "params": {"n": 44, "d": 8, "w": 7}, "best": "1806", "bound": "3784", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-44-8-8", "params": {"n": 44, "d": 8, "w": 8}, "best": "6622", "holder": "construction: code with specified group of automorphisms; Christian Lysenstøen"}
+{"id": "cw-44-10-6", "params": {"n": 44, "d": 10, "w": 6}, "best": "56", "bound": "58", "holder": "Ankan Sadhu, email 2026-07-25, shows A(38,8,5) ≥ 66, A(39,8,5) ≥ 68, A(47,8,5) ≥ 101, A(48,8,5) ≥ 103"}
+{"id": "cw-44-10-7", "params": {"n": 44, "d": 10, "w": 7}, "best": "273", "bound": "358", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-44-10-8", "params": {"n": 44, "d": 10, "w": 8}, "best": "550", "bound": "1892", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-44-12-7", "params": {"n": 44, "d": 12, "w": 7}, "best": "38", "bound": "44", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-44-12-8", "params": {"n": 44, "d": 12, "w": 8}, "best": "124", "bound": "234", "holder": "label sb in the table"}
+{"id": "cw-45-4-5", "params": {"n": 45, "d": 4, "w": 5}, "best": "28413", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-45-6-4", "params": {"n": 45, "d": 6, "w": 4}, "best": "157"}
+{"id": "cw-45-6-6", "params": {"n": 45, "d": 6, "w": 6}, "best": "6840", "bound": "9832", "holder": "label MS2 in the table"}
+{"id": "cw-45-8-5", "params": {"n": 45, "d": 8, "w": 5}, "best": "99", "holder": "label S in the table"}
+{"id": "cw-45-8-6", "params": {"n": 45, "d": 8, "w": 6}, "best": "493", "bound": "660", "holder": "Guan-Ying Huang, email 2026-10-20 with 32 new codes"}
+{"id": "cw-45-8-7", "params": {"n": 45, "d": 8, "w": 7}, "best": "1907", "bound": "4050", "holder": "Pliny the Liberator (elder-plinius), emails, 2026-10-13,16, with 30 new codes"}
+{"id": "cw-45-8-8", "params": {"n": 45, "d": 8, "w": 8}, "best": "7391"}
+{"id": "cw-45-10-6", "params": {"n": 45, "d": 10, "w": 6}, "best": "58", "bound": "60", "holder": "Ankan Sadhu, email 2026-07-25, shows A(38,8,5) ≥ 66, A(39,8,5) ≥ 68, A(47,8,5) ≥ 101, A(48,8,5) ≥ 103"}
+{"id": "cw-45-10-7", "params": {"n": 45, "d": 10, "w": 7}, "best": "293", "bound": "372", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-45-10-8", "params": {"n": 45, "d": 10, "w": 8}, "best": "627", "bound": "2013", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-45-12-8", "params": {"n": 45, "d": 12, "w": 8}, "best": "144", "bound": "247", "holder": "label sb in the table"}
+{"id": "cw-46-6-4", "params": {"n": 46, "d": 6, "w": 4}, "best": "171"}
+{"id": "cw-46-6-6", "params": {"n": 46, "d": 6, "w": 6}, "best": "7580", "bound": "10626"}
+{"id": "cw-46-8-5", "params": {"n": 46, "d": 8, "w": 5}, "best": "99", "bound": "101"}
+{"id": "cw-46-8-6", "params": {"n": 46, "d": 8, "w": 6}, "best": "527", "bound": "759", "holder": "Guan-Ying Huang, email 2026-10-20 with 32 new codes"}
+{"id": "cw-46-8-7", "params": {"n": 46, "d": 8, "w": 7}, "best": "2181", "bound": "4337"}
+{"id": "cw-46-8-8", "params": {"n": 46, "d": 8, "w": 8}, "best": "8747", "holder": "label sb in the table"}
+{"id": "cw-46-10-6", "params": {"n": 46, "d": 10, "w": 6}, "best": "60", "bound": "67", "holder": "Ankan Sadhu, email 2026-07-25, shows A(38,8,5) ≥ 66, A(39,8,5) ≥ 68, A(47,8,5) ≥ 101, A(48,8,5) ≥ 103"}
+{"id": "cw-46-10-7", "params": {"n": 46, "d": 10, "w": 7}, "best": "315", "bound": "394", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-46-10-8", "params": {"n": 46, "d": 10, "w": 8}, "best": "759", "bound": "2139", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-46-12-7", "params": {"n": 46, "d": 12, "w": 7}, "best": "45", "bound": "46"}
+{"id": "cw-46-12-8", "params": {"n": 46, "d": 12, "w": 8}, "best": "171", "bound": "258", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-47-6-4", "params": {"n": 47, "d": 6, "w": 4}, "best": "176"}
+{"id": "cw-47-6-6", "params": {"n": 47, "d": 6, "w": 6}, "best": "8648", "bound": "11311", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-47-8-5", "params": {"n": 47, "d": 8, "w": 5}, "best": "101", "bound": "103", "holder": "Ankan Sadhu, email 2026-07-25, shows A(38,8,5) ≥ 66, A(39,8,5) ≥ 68, A(47,8,5) ≥ 101, A(48,8,5) ≥ 103"}
+{"id": "cw-47-8-6", "params": {"n": 47, "d": 8, "w": 6}, "best": "600", "bound": "791", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-47-8-7", "params": {"n": 47, "d": 8, "w": 7}, "best": "2517", "bound": "5095", "holder": "Guan-Ying Huang, email 2026-10-20 with 32 new codes"}
+{"id": "cw-47-8-8", "params": {"n": 47, "d": 8, "w": 8}, "best": "10535", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-47-10-6", "params": {"n": 47, "d": 10, "w": 6}, "best": "63", "bound": "70", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-47-10-7", "params": {"n": 47, "d": 10, "w": 7}, "best": "333", "bound": "462", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-47-10-8", "params": {"n": 47, "d": 10, "w": 8}, "best": "795", "bound": "2314", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-47-12-7", "params": {"n": 47, "d": 12, "w": 7}, "best": "45", "bound": "47"}
+{"id": "cw-47-12-8", "params": {"n": 47, "d": 12, "w": 8}, "best": "205", "bound": "270", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-48-4-5", "params": {"n": 48, "d": 4, "w": 5}, "best": "36809", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-48-6-4", "params": {"n": 48, "d": 6, "w": 4}, "best": "180"}
+{"id": "cw-48-6-5", "params": {"n": 48, "d": 6, "w": 5}, "best": "1452", "bound": "1689", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-48-6-6", "params": {"n": 48, "d": 6, "w": 6}, "best": "9729", "bound": "12856", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-48-8-5", "params": {"n": 48, "d": 8, "w": 5}, "best": "103", "bound": "105", "holder": "Ankan Sadhu, email 2026-07-25, shows A(38,8,5) ≥ 66, A(39,8,5) ≥ 68, A(47,8,5) ≥ 101, A(48,8,5) ≥ 103"}
+{"id": "cw-48-8-6", "params": {"n": 48, "d": 8, "w": 6}, "best": "672", "bound": "824", "holder": "Guan-Ying Huang, email 2026-10-20 with 32 new codes"}
+{"id": "cw-48-8-7", "params": {"n": 48, "d": 8, "w": 7}, "best": "2872", "bound": "5424"}
+{"id": "cw-48-8-8", "params": {"n": 48, "d": 8, "w": 8}, "best": "12642", "holder": "label Tap in the table"}
+{"id": "cw-48-10-6", "params": {"n": 48, "d": 10, "w": 6}, "best": "72", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-48-10-7", "params": {"n": 48, "d": 10, "w": 7}, "best": "350", "bound": "480"}
+{"id": "cw-48-10-8", "params": {"n": 48, "d": 10, "w": 8}, "best": "905", "bound": "2772", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-48-12-8", "params": {"n": 48, "d": 12, "w": 8}, "best": "246", "bound": "282", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-49-4-5", "params": {"n": 49, "d": 4, "w": 5}, "best": "40740", "holder": "Arhan Canli, email 2026-11-03/04, 11+28 new bounds", "quantavane_record": true}
+{"id": "cw-49-6-4", "params": {"n": 49, "d": 6, "w": 4}, "best": "196"}
+{"id": "cw-49-6-5", "params": {"n": 49, "d": 6, "w": 5}, "best": "1617", "bound": "1764", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-49-6-6", "params": {"n": 49, "d": 6, "w": 6}, "best": "10094", "bound": "13793"}
+{"id": "cw-49-8-5", "params": {"n": 49, "d": 8, "w": 5}, "best": "108", "bound": "116", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-49-8-6", "params": {"n": 49, "d": 8, "w": 6}, "best": "687", "bound": "857", "holder": "Guan-Ying Huang, email 2026-10-20 with 32 new codes"}
+{"id": "cw-49-8-7", "params": {"n": 49, "d": 8, "w": 7}, "best": "3288", "bound": "5768"}
+{"id": "cw-49-10-6", "params": {"n": 49, "d": 10, "w": 6}, "best": "72", "bound": "73"}
+{"id": "cw-49-10-7", "params": {"n": 49, "d": 10, "w": 7}, "best": "385", "bound": "504"}
+{"id": "cw-49-10-8", "params": {"n": 49, "d": 10, "w": 8}, "best": "1036", "bound": "2940", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-50-4-5", "params": {"n": 50, "d": 4, "w": 5}, "best": "43372"}
+{"id": "cw-50-6-4", "params": {"n": 50, "d": 6, "w": 4}, "best": "200"}
+{"id": "cw-50-6-6", "params": {"n": 50, "d": 6, "w": 6}, "best": "10825", "bound": "14700"}
+{"id": "cw-50-8-5", "params": {"n": 50, "d": 8, "w": 5}, "best": "120", "holder": "D.R. Stinson, R.Wei & J. Yin"}
+{"id": "cw-50-8-6", "params": {"n": 50, "d": 8, "w": 6}, "best": "705", "bound": "966", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-50-8-7", "params": {"n": 50, "d": 8, "w": 7}, "best": "3445", "bound": "6121"}
+{"id": "cw-50-10-6", "params": {"n": 50, "d": 10, "w": 6}, "best": "73", "bound": "75", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-50-10-7", "params": {"n": 50, "d": 10, "w": 7}, "best": "403", "bound": "521", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-50-10-8", "params": {"n": 50, "d": 10, "w": 8}, "best": "1193", "bound": "3150", "holder": "Guan-Ying Huang, email 2026-10-20 with 32 new codes"}
+{"id": "cw-50-12-7", "params": {"n": 50, "d": 12, "w": 7}, "best": "56", "bound": "57"}
+{"id": "cw-51-4-5", "params": {"n": 51, "d": 4, "w": 5}, "best": "47460", "holder": "Arhan Canli, email 2026-11-03/04, 11+28 new bounds", "quantavane_record": true}
+{"id": "cw-51-6-4", "params": {"n": 51, "d": 6, "w": 4}, "best": "204"}
+{"id": "cw-51-8-5", "params": {"n": 51, "d": 8, "w": 5}, "best": "121", "bound": "122", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-51-8-6", "params": {"n": 51, "d": 8, "w": 6}, "best": "728", "bound": "1020", "holder": "Guan-Ying Huang, email 2026-10-20 with 32 new codes"}
+{"id": "cw-51-8-7", "params": {"n": 51, "d": 8, "w": 7}, "best": "3608", "bound": "7038"}
+{"id": "cw-51-10-6", "params": {"n": 51, "d": 10, "w": 6}, "best": "76", "bound": "85", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-51-10-7", "params": {"n": 51, "d": 10, "w": 7}, "best": "411", "bound": "546", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-51-10-8", "params": {"n": 51, "d": 10, "w": 8}, "best": "1372", "bound": "3321", "holder": "Guan-Ying Huang, email 2026-10-20 with 32 new codes"}
+{"id": "cw-51-12-7", "params": {"n": 51, "d": 12, "w": 7}, "best": "56", "bound": "58"}
+{"id": "cw-51-12-8", "params": {"n": 51, "d": 12, "w": 8}, "best": "350", "bound": "363"}
+{"id": "cw-52-4-5", "params": {"n": 52, "d": 4, "w": 5}, "best": "51420", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-52-6-4", "params": {"n": 52, "d": 6, "w": 4}, "best": "221"}
+{"id": "cw-52-6-6", "params": {"n": 52, "d": 6, "w": 6}, "best": "12220", "bound": "17680", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-52-8-5", "params": {"n": 52, "d": 8, "w": 5}, "best": "123", "bound": "124", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-52-8-6", "params": {"n": 52, "d": 8, "w": 6}, "best": "799", "bound": "1057"}
+{"id": "cw-52-8-7", "params": {"n": 52, "d": 8, "w": 7}, "best": "3799", "bound": "7577", "holder": "Pliny the Liberator (elder-plinius), emails, 2026-10-13,16, with 30 new codes"}
+{"id": "cw-52-10-6", "params": {"n": 52, "d": 10, "w": 6}, "best": "78", "bound": "86", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-52-10-7", "params": {"n": 52, "d": 10, "w": 7}, "best": "421", "bound": "630", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-52-10-8", "params": {"n": 52, "d": 10, "w": 8}, "best": "1574", "bound": "3549", "holder": "Guan-Ying Huang, email 2026-10-20 with 32 new codes"}
+{"id": "cw-52-12-7", "params": {"n": 52, "d": 12, "w": 7}, "best": "57", "bound": "59", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-52-12-8", "params": {"n": 52, "d": 12, "w": 8}, "best": "350", "bound": "377"}
+{"id": "cw-52-14-8", "params": {"n": 52, "d": 14, "w": 8}, "best": "27", "bound": "28", "holder": "label SHP in the table"}
+{"id": "cw-53-4-5", "params": {"n": 53, "d": 4, "w": 5}, "best": "56251", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-53-6-4", "params": {"n": 53, "d": 6, "w": 4}, "best": "225"}
+{"id": "cw-53-6-6", "params": {"n": 53, "d": 6, "w": 6}, "best": "13780", "bound": "18735", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-53-8-5", "params": {"n": 53, "d": 8, "w": 5}, "best": "133", "bound": "136"}
+{"id": "cw-53-8-6", "params": {"n": 53, "d": 8, "w": 6}, "best": "894", "bound": "1095"}
+{"id": "cw-53-8-7", "params": {"n": 53, "d": 8, "w": 7}, "best": "3987", "bound": "8003", "holder": "Pliny the Liberator (elder-plinius), emails, 2026-10-13,16, with 30 new codes"}
+{"id": "cw-53-10-6", "params": {"n": 53, "d": 10, "w": 6}, "best": "80", "bound": "88", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-53-10-7", "params": {"n": 53, "d": 10, "w": 7}, "best": "434", "bound": "651", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-53-10-8", "params": {"n": 53, "d": 10, "w": 8}, "best": "1823", "bound": "4173", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-53-12-7", "params": {"n": 53, "d": 12, "w": 7}, "best": "58", "bound": "60", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-53-12-8", "params": {"n": 53, "d": 12, "w": 8}, "best": "350", "bound": "390"}
+{"id": "cw-53-14-8", "params": {"n": 53, "d": 14, "w": 8}, "best": "31", "bound": "32", "holder": "label SHP in the table"}
+{"id": "cw-54-4-5", "params": {"n": 54, "d": 4, "w": 5}, "best": "59943", "holder": "Arhan Canli, email 2026-11-03/04, 11+28 new bounds", "quantavane_record": true}
+{"id": "cw-54-6-4", "params": {"n": 54, "d": 6, "w": 4}, "best": "229"}
+{"id": "cw-54-6-6", "params": {"n": 54, "d": 6, "w": 6}, "best": "14469", "bound": "21069", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-54-8-5", "params": {"n": 54, "d": 8, "w": 5}, "best": "135", "bound": "140", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-54-8-6", "params": {"n": 54, "d": 8, "w": 6}, "best": "1001", "bound": "1224"}
+{"id": "cw-54-8-7", "params": {"n": 54, "d": 8, "w": 7}, "best": "4193", "bound": "8447", "holder": "Pliny the Liberator (elder-plinius), emails, 2026-10-13,16, with 30 new codes"}
+{"id": "cw-54-10-6", "params": {"n": 54, "d": 10, "w": 6}, "best": "87", "bound": "90"}
+{"id": "cw-54-10-7", "params": {"n": 54, "d": 10, "w": 7}, "best": "460", "bound": "678", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-54-10-8", "params": {"n": 54, "d": 10, "w": 8}, "best": "2095", "bound": "4394", "holder": "Guan-Ying Huang, email 2026-10-20 with 32 new codes"}
+{"id": "cw-54-12-7", "params": {"n": 54, "d": 12, "w": 7}, "best": "59", "bound": "61", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-54-12-8", "params": {"n": 54, "d": 12, "w": 8}, "best": "350", "bound": "405"}
+{"id": "cw-55-4-5", "params": {"n": 55, "d": 4, "w": 5}, "best": "65164", "holder": "Arhan Canli, email 2026-11-03/04, 11+28 new bounds", "quantavane_record": true}
+{"id": "cw-55-6-4", "params": {"n": 55, "d": 6, "w": 4}, "best": "246"}
+{"id": "cw-55-6-6", "params": {"n": 55, "d": 6, "w": 6}, "best": "16116", "bound": "22275", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-55-8-5", "params": {"n": 55, "d": 8, "w": 5}, "best": "143", "holder": "D.R. Stinson, R.Wei & J. Yin"}
+{"id": "cw-55-8-6", "params": {"n": 55, "d": 8, "w": 6}, "best": "1117", "bound": "1283"}
+{"id": "cw-55-8-7", "params": {"n": 55, "d": 8, "w": 7}, "best": "4426", "bound": "9617", "holder": "Pliny the Liberator (elder-plinius), emails, 2026-10-13,16, with 30 new codes"}
+{"id": "cw-55-10-6", "params": {"n": 55, "d": 10, "w": 6}, "best": "91", "holder": "Ankan Sadhu, email 2026-07-25, shows A(38,8,5) ≥ 66, A(39,8,5) ≥ 68, A(47,8,5) ≥ 101, A(48,8,5) ≥ 103"}
+{"id": "cw-55-10-7", "params": {"n": 55, "d": 10, "w": 7}, "best": "519", "bound": "707", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-55-10-8", "params": {"n": 55, "d": 10, "w": 8}, "best": "2422", "bound": "4661", "holder": "Guan-Ying Huang, email 2026-10-20 with 32 new codes"}
+{"id": "cw-55-12-7", "params": {"n": 55, "d": 12, "w": 7}, "best": "63", "bound": "69", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-55-12-8", "params": {"n": 55, "d": 12, "w": 8}, "best": "355", "bound": "419", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-56-4-5", "params": {"n": 56, "d": 4, "w": 5}, "best": "70208", "holder": "Arhan Canli, email 2026-11-03/04, 11+28 new bounds", "quantavane_record": true}
+{"id": "cw-56-6-4", "params": {"n": 56, "d": 6, "w": 4}, "best": "252"}
+{"id": "cw-56-6-6", "params": {"n": 56, "d": 6, "w": 6}, "best": "18046", "bound": "23510", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-56-8-5", "params": {"n": 56, "d": 8, "w": 5}, "best": "145", "holder": "D.R. Stinson, R.Wei & J. Yin"}
+{"id": "cw-56-8-6", "params": {"n": 56, "d": 8, "w": 6}, "best": "1164", "bound": "1334", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-56-8-7", "params": {"n": 56, "d": 8, "w": 7}, "best": "4685", "bound": "10264", "holder": "Pliny the Liberator (elder-plinius), emails, 2026-10-13,16, with 30 new codes"}
+{"id": "cw-56-10-6", "params": {"n": 56, "d": 10, "w": 6}, "best": "93", "bound": "101", "holder": "Ankan Sadhu, email 2026-07-25, shows A(38,8,5) ≥ 66, A(39,8,5) ≥ 68, A(47,8,5) ≥ 101, A(48,8,5) ≥ 103"}
+{"id": "cw-56-10-7", "params": {"n": 56, "d": 10, "w": 7}, "best": "587", "bound": "728", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-56-10-8", "params": {"n": 56, "d": 10, "w": 8}, "best": "2794", "bound": "4949", "holder": "Guan-Ying Huang, email 2026-10-20 with 32 new codes"}
+{"id": "cw-56-12-7", "params": {"n": 56, "d": 12, "w": 7}, "best": "71", "bound": "72"}
+{"id": "cw-56-12-8", "params": {"n": 56, "d": 12, "w": 8}, "best": "371", "bound": "483", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-57-4-5", "params": {"n": 57, "d": 4, "w": 5}, "best": "75550", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-57-6-4", "params": {"n": 57, "d": 6, "w": 4}, "best": "256"}
+{"id": "cw-57-6-5", "params": {"n": 57, "d": 6, "w": 5}, "best": "2565", "bound": "2872", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-57-6-6", "params": {"n": 57, "d": 6, "w": 6}, "best": "20167", "bound": "26172", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-57-8-5", "params": {"n": 57, "d": 8, "w": 5}, "best": "158", "holder": "D.R. Stinson, R.Wei & J. Yin"}
+{"id": "cw-57-8-6", "params": {"n": 57, "d": 8, "w": 6}, "best": "1199", "bound": "1377"}
+{"id": "cw-57-8-7", "params": {"n": 57, "d": 8, "w": 7}, "best": "5027", "bound": "10862"}
+{"id": "cw-57-10-6", "params": {"n": 57, "d": 10, "w": 6}, "best": "95", "bound": "104", "holder": "construction: circulant, or code with cyclic group"}
+{"id": "cw-57-10-7", "params": {"n": 57, "d": 10, "w": 7}, "best": "600", "bound": "822", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-57-10-8", "params": {"n": 57, "d": 10, "w": 8}, "best": "2859", "bound": "5187", "holder": "Guan-Ying Huang, email 2026-10-20 with 32 new codes"}
+{"id": "cw-57-12-7", "params": {"n": 57, "d": 12, "w": 7}, "best": "71", "bound": "73"}
+{"id": "cw-57-12-8", "params": {"n": 57, "d": 12, "w": 8}, "best": "375", "bound": "513", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-58-4-5", "params": {"n": 58, "d": 4, "w": 5}, "best": "80896", "holder": "Arhan Canli, email 2026-11-03/04, 11+28 new bounds", "quantavane_record": true}
+{"id": "cw-58-6-4", "params": {"n": 58, "d": 6, "w": 4}, "best": "274"}
+{"id": "cw-58-6-6", "params": {"n": 58, "d": 6, "w": 6}, "best": "22493", "bound": "27762", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-58-8-5", "params": {"n": 58, "d": 8, "w": 5}, "best": "158", "bound": "162"}
+{"id": "cw-58-8-6", "params": {"n": 58, "d": 8, "w": 6}, "best": "1232", "bound": "1527", "holder": "Guan-Ying Huang, email 2026-10-20 with 32 new codes"}
+{"id": "cw-58-8-7", "params": {"n": 58, "d": 8, "w": 7}, "best": "5613", "bound": "11409", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-58-10-6", "params": {"n": 58, "d": 10, "w": 6}, "best": "97", "bound": "106", "holder": "Ankan Sadhu, email 2026-07-25, shows A(38,8,5) ≥ 66, A(39,8,5) ≥ 68, A(47,8,5) ≥ 101, A(48,8,5) ≥ 103"}
+{"id": "cw-58-10-7", "params": {"n": 58, "d": 10, "w": 7}, "best": "612", "bound": "861", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-58-10-8", "params": {"n": 58, "d": 10, "w": 8}, "best": "2927", "bound": "5959", "holder": "Guan-Ying Huang, email 2026-10-20 with 32 new codes"}
+{"id": "cw-58-12-7", "params": {"n": 58, "d": 12, "w": 7}, "best": "71", "bound": "74"}
+{"id": "cw-58-12-8", "params": {"n": 58, "d": 12, "w": 8}, "best": "401", "bound": "529", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-58-14-8", "params": {"n": 58, "d": 14, "w": 8}, "best": "57", "bound": "58"}
+{"id": "cw-59-4-5", "params": {"n": 59, "d": 4, "w": 5}, "best": "87261", "holder": "label MS2 in the table"}
+{"id": "cw-59-6-4", "params": {"n": 59, "d": 6, "w": 4}, "best": "280"}
+{"id": "cw-59-6-5", "params": {"n": 59, "d": 6, "w": 5}, "best": "2870", "bound": "3233", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-59-6-6", "params": {"n": 59, "d": 6, "w": 6}, "best": "25039", "bound": "29195", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-59-8-5", "params": {"n": 59, "d": 8, "w": 5}, "best": "158", "bound": "165"}
+{"id": "cw-59-8-6", "params": {"n": 59, "d": 8, "w": 6}, "best": "1267", "bound": "1593", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-59-8-7", "params": {"n": 59, "d": 8, "w": 7}, "best": "6366", "bound": "12870", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-59-10-6", "params": {"n": 59, "d": 10, "w": 6}, "best": "99", "bound": "108", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-59-10-7", "params": {"n": 59, "d": 10, "w": 7}, "best": "623", "bound": "893", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-59-10-8", "params": {"n": 59, "d": 10, "w": 8}, "best": "3000", "bound": "6349", "holder": "Guan-Ying Huang, email 2026-10-20 with 32 new codes"}
+{"id": "cw-59-12-7", "params": {"n": 59, "d": 12, "w": 7}, "best": "72", "bound": "75", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-59-12-8", "params": {"n": 59, "d": 12, "w": 8}, "best": "425", "bound": "545", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-59-14-8", "params": {"n": 59, "d": 14, "w": 8}, "best": "57", "bound": "59"}
+{"id": "cw-60-4-5", "params": {"n": 60, "d": 4, "w": 5}, "best": "93206", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-60-6-4", "params": {"n": 60, "d": 6, "w": 4}, "best": "285"}
+{"id": "cw-60-6-6", "params": {"n": 60, "d": 6, "w": 6}, "best": "27821", "bound": "32330", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-60-8-5", "params": {"n": 60, "d": 8, "w": 5}, "best": "168", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-60-8-6", "params": {"n": 60, "d": 8, "w": 6}, "best": "1320", "bound": "1650", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-60-8-7", "params": {"n": 60, "d": 8, "w": 7}, "best": "7206", "bound": "13654", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-60-10-6", "params": {"n": 60, "d": 10, "w": 6}, "best": "105", "bound": "110", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-60-10-7", "params": {"n": 60, "d": 10, "w": 7}, "best": "638", "bound": "925", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-60-10-8", "params": {"n": 60, "d": 10, "w": 8}, "best": "3079", "bound": "6697", "holder": "Guan-Ying Huang, email 2026-10-20 with 32 new codes"}
+{"id": "cw-60-12-7", "params": {"n": 60, "d": 12, "w": 7}, "best": "74", "bound": "77", "holder": "Ankan Sadhu, email 2026-07-25, shows A(38,8,5) ≥ 66, A(39,8,5) ≥ 68, A(47,8,5) ≥ 101, A(48,8,5) ≥ 103"}
+{"id": "cw-60-12-8", "params": {"n": 60, "d": 12, "w": 8}, "best": "450", "bound": "562", "holder": "label sb in the table"}
+{"id": "cw-60-14-8", "params": {"n": 60, "d": 14, "w": 8}, "best": "57", "bound": "60"}
+{"id": "cw-61-4-5", "params": {"n": 61, "d": 4, "w": 5}, "best": "100527", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-61-6-4", "params": {"n": 61, "d": 6, "w": 4}, "best": "305"}
+{"id": "cw-61-6-5", "params": {"n": 61, "d": 6, "w": 5}, "best": "3306", "bound": "3477", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-61-6-6", "params": {"n": 61, "d": 6, "w": 6}, "best": "30856", "bound": "34160", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-61-8-5", "params": {"n": 61, "d": 8, "w": 5}, "best": "183", "holder": "label S in the table"}
+{"id": "cw-61-8-6", "params": {"n": 61, "d": 8, "w": 6}, "best": "1464", "bound": "1708", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-61-8-7", "params": {"n": 61, "d": 8, "w": 7}, "best": "8140", "bound": "14378", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-61-10-6", "params": {"n": 61, "d": 10, "w": 6}, "best": "111", "bound": "122", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-61-10-7", "params": {"n": 61, "d": 10, "w": 7}, "best": "675", "bound": "958", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-61-10-8", "params": {"n": 61, "d": 10, "w": 8}, "best": "3307", "bound": "7053", "holder": "Guan-Ying Huang, email 2026-10-20 with 32 new codes"}
+{"id": "cw-61-12-7", "params": {"n": 61, "d": 12, "w": 7}, "best": "77", "bound": "86", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-61-12-8", "params": {"n": 61, "d": 12, "w": 8}, "best": "474", "bound": "587", "holder": "label sb in the table"}
+{"id": "cw-61-14-8", "params": {"n": 61, "d": 14, "w": 8}, "best": "57", "bound": "61"}
+{"id": "cw-62-4-5", "params": {"n": 62, "d": 4, "w": 5}, "best": "106445", "holder": "Arhan Canli, email 2026-11-03/04, 11+28 new bounds", "quantavane_record": true}
+{"id": "cw-62-6-4", "params": {"n": 62, "d": 6, "w": 4}, "best": "310"}
+{"id": "cw-62-6-5", "params": {"n": 62, "d": 6, "w": 5}, "best": "3596", "bound": "3782", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-62-6-6", "params": {"n": 62, "d": 6, "w": 6}, "best": "34162", "bound": "35929", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-62-8-5", "params": {"n": 62, "d": 8, "w": 5}, "best": "186", "holder": "D.R. Stinson, R.Wei & J. Yin"}
+{"id": "cw-62-8-6", "params": {"n": 62, "d": 8, "w": 6}, "best": "1550", "bound": "1891", "holder": "construction: code with specified group of automorphisms"}
+{"id": "cw-62-8-7", "params": {"n": 62, "d": 8, "w": 7}, "best": "9176", "bound": "15128", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-62-10-6", "params": {"n": 62, "d": 10, "w": 6}, "best": "114", "bound": "124", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-62-10-7", "params": {"n": 62, "d": 10, "w": 7}, "best": "755", "bound": "1079", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-62-10-8", "params": {"n": 62, "d": 10, "w": 8}, "best": "3730", "bound": "7424", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-62-12-7", "params": {"n": 62, "d": 12, "w": 7}, "best": "79", "bound": "88", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-62-12-8", "params": {"n": 62, "d": 12, "w": 8}, "best": "497", "bound": "666", "holder": "William Echols, arXiv:2608.13906 (with 126 new codes) and email 2026-08-08 (with 6 new codes, removing five items fro..."}
+{"id": "cw-62-14-8", "params": {"n": 62, "d": 14, "w": 8}, "best": "58", "bound": "62", "holder": "Ankan Sadhu, email 2026-07-25, shows A(38,8,5) ≥ 66, A(39,8,5) ≥ 68, A(47,8,5) ≥ 101, A(48,8,5) ≥ 103"}
+{"id": "cw-63-4-5", "params": {"n": 63, "d": 4, "w": 5}, "best": "113553"}
+{"id": "cw-63-6-4", "params": {"n": 63, "d": 6, "w": 4}, "best": "315"}
+{"id": "cw-63-6-6", "params": {"n": 63, "d": 6, "w": 6}, "best": "37758", "bound": "39711", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-63-8-5", "params": {"n": 63, "d": 8, "w": 5}, "best": "189", "holder": "D.R. Stinson, R.Wei & J. Yin"}
+{"id": "cw-63-8-6", "params": {"n": 63, "d": 8, "w": 6}, "best": "1599", "bound": "1953", "holder": "Guan-Ying Huang, email 2026-10-20 with 32 new codes"}
+{"id": "cw-63-8-7", "params": {"n": 63, "d": 8, "w": 7}, "best": "10323", "bound": "17019", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-63-10-6", "params": {"n": 63, "d": 10, "w": 6}, "best": "126", "holder": "label SHP in the table"}
+{"id": "cw-63-10-7", "params": {"n": 63, "d": 10, "w": 7}, "best": "837", "bound": "1116", "holder": "Guan-Ying Huang, email 2026-10-20 with 32 new codes"}
+{"id": "cw-63-10-8", "params": {"n": 63, "d": 10, "w": 8}, "best": "4228", "bound": "8497", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-63-12-7", "params": {"n": 63, "d": 12, "w": 7}, "best": "88", "bound": "90"}
+{"id": "cw-63-12-8", "params": {"n": 63, "d": 12, "w": 8}, "best": "520", "bound": "693"}
+{"id": "cw-64-4-5", "params": {"n": 64, "d": 4, "w": 5}, "best": "121902", "holder": "using partitions, see [BSSS] and here. Most of these bounds are from the Brouwer-Etzion paper"}
+{"id": "cw-64-6-4", "params": {"n": 64, "d": 6, "w": 4}, "best": "336"}
+{"id": "cw-64-8-5", "params": {"n": 64, "d": 8, "w": 5}, "best": "192", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-64-8-7", "params": {"n": 64, "d": 8, "w": 7}, "best": "10508", "bound": "17856", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-64-10-6", "params": {"n": 64, "d": 10, "w": 6}, "best": "126", "bound": "128"}
+{"id": "cw-64-10-8", "params": {"n": 64, "d": 10, "w": 8}, "best": "4779", "bound": "8928", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-64-12-7", "params": {"n": 64, "d": 12, "w": 7}, "best": "88", "bound": "91"}
+{"id": "cw-64-12-8", "params": {"n": 64, "d": 12, "w": 8}, "best": "521", "bound": "720", "holder": "Jordan Boisclair, email 2026-08-22 with 18 new codes, email 2026-08-30 with 90 new codes"}
+{"id": "cw-71-14-8", "params": {"n": 71, "d": 14, "w": 8}, "best": "80", "bound": "87", "holder": "construction: shortened code (from code of length n+1 and weight w or w+1)"}
+{"id": "cw-72-14-8", "params": {"n": 72, "d": 14, "w": 8}, "best": "89", "bound": "90"}
