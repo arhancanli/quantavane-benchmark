@@ -15,6 +15,12 @@ value can change within a version when its source table changes; the file then s
   and listed by `list NAME`; a checker may live in the collection (`collections/NAME/checkers/`), and arguments that
   start with `collections/` are read from the benchmark's folder.
 - `test.sh` runs `collections/originals/tests/test_originals.py`.
+- `collections/originals/cells/`: cells, counted the way the table families are: each question at every value of its
+  natural parameter, one line per cell with its value, whether it is exact (an exhaustive search finished) or the best
+  known, how it was found and its certificate (`refs/cells/ID/`). `tools/cells.py` writes them by running every
+  certificate through the family's checker, so every value is one the checker proves. `index.json` counts the
+  questions and the cells apart (`questions`, `cells`, `cells_exact`). `obb.py check` and `show` take a cell id (for
+  example `y-array-20`), and `obb.py list originals` gives the number of cells.
 
 ## 2.1 (9 Nov 2026): 149,372 problems and the Prestige 100 collection
 

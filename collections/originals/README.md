@@ -7,7 +7,7 @@ known value, a holder and a date. All of them are open.
 
 Each question is a family of cells: the same question at each value of its natural parameter (the number of antennas,
 the side of a grid, the number of digits, ...), each cell with our first value, its certificate in `refs/cells/` and
-the family's exact checker, the way the benchmark's table families are counted. There are <!--cells-->525<!--/cells-->
+the family's exact checker, the way the benchmark's table families are counted. There are <!--cells-->736<!--/cells-->
 cells. The questions and the cells are counted apart (`index.json`: `questions`, `cells`, `cells_exact`); each cell says
 whether its value is exact (an exhaustive search finished) or the best known (ours), and a family without a cells file
 is one cell, its headline. A cell is checked like any problem: `python3 -I obb.py check CELL FILE`.
@@ -58,7 +58,7 @@ and is credited by name on the problem's page and in `leaderboard.json`.
 | [Error-correcting codes made of primes](problems/prime-code.md) | Coding theory | maximize | 299 | 1 (0) |
 | [Covering the five-digit primes by one-digit changes](problems/prime-cover.md) | Coding theory | minimize | 1219 | 1 (0) |
 | [Vertices of the 120-cell with no three on a great circle](problems/cell120-great.md) | Discrete geometry | maximize | 57 | 1 (0) |
-| [Charges on the roots of E8](problems/e8-coulomb.md) | Discrete geometry | minimize | 304375/1152 | 1 (0) |
+| [Charges on the roots of E8](problems/e8-coulomb.md) | Discrete geometry | minimize | 304375/1152 | 118 (1) |
 | [Distinct distances in the tetrahedral grid](problems/tetra-distinct.md) | Discrete geometry | maximize | 16 | 16 (8) |
 | [Distinct triangle areas in the triangular grid](problems/tri-areas.md) | Discrete geometry | maximize | 9 | 27 (11) |
 | [Distinct distances in the triangular grid](problems/tri-distinct.md) | Discrete geometry | maximize | 14 | 27 (13) |
@@ -70,7 +70,7 @@ and is credited by name on the problem's page and in `leaderboard.json`.
 | [Ising antiferromagnet on the snub 24-cell](problems/snub24-ising.md) | Physics | minimize | -144 | 1 (0) |
 | [Benzenoids with the smallest Kemeny constant](problems/benzenoid-kemeny.md) | Chemistry and materials | minimize | 14813904881/113347080 | 1 (0) |
 | [Catacondensed benzenoids with the smallest Kemeny constant](problems/cata-kemeny.md) | Chemistry and materials | minimize | 59617087737367409/159902997431616 | 1 (0) |
-| [Pieces of diamond with the fewest dangling bonds](problems/diamond-bonds.md) | Chemistry and materials | minimize | 72 | 1 (0) |
+| [Pieces of diamond with the fewest dangling bonds](problems/diamond-bonds.md) | Chemistry and materials | minimize | 72 | 95 (12) |
 | [The smallest knotted ring in the diamond lattice](problems/diamond-knot.md) | Chemistry and materials | minimize | 36 | 1 (0) |
 | [The smallest catenane in the diamond lattice](problems/diamond-link.md) | Chemistry and materials | minimize | 28 | 1 (0) |
 | [Lennard-Jones clusters on the face-centred cubic lattice](problems/lj-fcc.md) | Chemistry and materials | minimize | -789723697/1492992 | 1 (0) |

@@ -83,6 +83,112 @@ Exact values: every connected cluster of the diamond lattice with N <= 17 atoms,
 
 72 dangling bonds (C100H72: 100 atoms, 164 bonds), held by Quantavane (Arhan Canli), 9 November 2026: the cluster in `refs/diamond-bonds.txt`.
 
+## Cells
+
+The same question at each value of its parameter (N, the number of atoms): 95 cells, 12 of them exact (an exhaustive search finished) and 83 best known (ours). Each cell has its certificate in `refs/cells/diamond-bonds/` (the headline cell uses `collections/originals/refs/diamond-bonds.txt`) and is checked with the family's checker:
+
+    python3 -I obb.py check CELL FILE                  # for example diamond-bonds-6
+
+| cell | N | value | status |
+| --- | --- | --- | --- |
+| `diamond-bonds-6` | 6 | 12 | exact |
+| `diamond-bonds-7` | 7 | 14 | exact |
+| `diamond-bonds-8` | 8 | 16 | exact |
+| `diamond-bonds-9` | 9 | 16 | exact |
+| `diamond-bonds-10` | 10 | 16 | exact |
+| `diamond-bonds-11` | 11 | 18 | exact |
+| `diamond-bonds-12` | 12 | 20 | exact |
+| `diamond-bonds-13` | 13 | 20 | exact |
+| `diamond-bonds-14` | 14 | 20 | exact |
+| `diamond-bonds-15` | 15 | 22 | exact |
+| `diamond-bonds-16` | 16 | 24 | exact |
+| `diamond-bonds-17` | 17 | 24 | exact |
+| `diamond-bonds-18` | 18 | 24 | best known |
+| `diamond-bonds-19` | 19 | 26 | best known |
+| `diamond-bonds-20` | 20 | 28 | best known |
+| `diamond-bonds-21` | 21 | 28 | best known |
+| `diamond-bonds-22` | 22 | 28 | best known |
+| `diamond-bonds-23` | 23 | 30 | best known |
+| `diamond-bonds-24` | 24 | 30 | best known |
+| `diamond-bonds-25` | 25 | 30 | best known |
+| `diamond-bonds-26` | 26 | 30 | best known |
+| `diamond-bonds-27` | 27 | 32 | best known |
+| `diamond-bonds-28` | 28 | 34 | best known |
+| `diamond-bonds-29` | 29 | 34 | best known |
+| `diamond-bonds-30` | 30 | 34 | best known |
+| `diamond-bonds-31` | 31 | 36 | best known |
+| `diamond-bonds-32` | 32 | 36 | best known |
+| `diamond-bonds-33` | 33 | 36 | best known |
+| `diamond-bonds-34` | 34 | 36 | best known |
+| `diamond-bonds-35` | 35 | 36 | best known |
+| `diamond-bonds-36` | 36 | 38 | best known |
+| `diamond-bonds-37` | 37 | 40 | best known |
+| `diamond-bonds-38` | 38 | 40 | best known |
+| `diamond-bonds-39` | 39 | 40 | best known |
+| `diamond-bonds-40` | 40 | 42 | best known |
+| `diamond-bonds-41` | 41 | 42 | best known |
+| `diamond-bonds-42` | 42 | 42 | best known |
+| `diamond-bonds-43` | 43 | 42 | best known |
+| `diamond-bonds-44` | 44 | 42 | best known |
+| `diamond-bonds-45` | 45 | 44 | best known |
+| `diamond-bonds-46` | 46 | 46 | best known |
+| `diamond-bonds-47` | 47 | 46 | best known |
+| `diamond-bonds-48` | 48 | 46 | best known |
+| `diamond-bonds-49` | 49 | 48 | best known |
+| `diamond-bonds-50` | 50 | 48 | best known |
+| `diamond-bonds-51` | 51 | 48 | best known |
+| `diamond-bonds-52` | 52 | 48 | best known |
+| `diamond-bonds-53` | 53 | 48 | best known |
+| `diamond-bonds-54` | 54 | 50 | best known |
+| `diamond-bonds-55` | 55 | 52 | best known |
+| `diamond-bonds-56` | 56 | 52 | best known |
+| `diamond-bonds-57` | 57 | 52 | best known |
+| `diamond-bonds-58` | 58 | 54 | best known |
+| `diamond-bonds-59` | 59 | 54 | best known |
+| `diamond-bonds-60` | 60 | 54 | best known |
+| `diamond-bonds-61` | 61 | 54 | best known |
+| `diamond-bonds-62` | 62 | 54 | best known |
+| `diamond-bonds-63` | 63 | 56 | best known |
+| `diamond-bonds-64` | 64 | 56 | best known |
+| `diamond-bonds-65` | 65 | 56 | best known |
+| `diamond-bonds-66` | 66 | 56 | best known |
+| `diamond-bonds-67` | 67 | 56 | best known |
+| `diamond-bonds-68` | 68 | 56 | best known |
+| `diamond-bonds-69` | 69 | 58 | best known |
+| `diamond-bonds-70` | 70 | 60 | best known |
+| `diamond-bonds-71` | 71 | 60 | best known |
+| `diamond-bonds-72` | 72 | 60 | best known |
+| `diamond-bonds-73` | 73 | 62 | best known |
+| `diamond-bonds-74` | 74 | 62 | best known |
+| `diamond-bonds-75` | 75 | 62 | best known |
+| `diamond-bonds-76` | 76 | 62 | best known |
+| `diamond-bonds-77` | 77 | 62 | best known |
+| `diamond-bonds-78` | 78 | 64 | best known |
+| `diamond-bonds-79` | 79 | 64 | best known |
+| `diamond-bonds-80` | 80 | 64 | best known |
+| `diamond-bonds-81` | 81 | 64 | best known |
+| `diamond-bonds-82` | 82 | 64 | best known |
+| `diamond-bonds-83` | 83 | 64 | best known |
+| `diamond-bonds-84` | 84 | 64 | best known |
+| `diamond-bonds-85` | 85 | 66 | best known |
+| `diamond-bonds-86` | 86 | 68 | best known |
+| `diamond-bonds-87` | 87 | 68 | best known |
+| `diamond-bonds-88` | 88 | 68 | best known |
+| `diamond-bonds-89` | 89 | 70 | best known |
+| `diamond-bonds-90` | 90 | 70 | best known |
+| `diamond-bonds-91` | 91 | 70 | best known |
+| `diamond-bonds-92` | 92 | 70 | best known |
+| `diamond-bonds-93` | 93 | 70 | best known |
+| `diamond-bonds-94` | 94 | 72 | best known |
+| `diamond-bonds-95` | 95 | 72 | best known |
+| `diamond-bonds-96` | 96 | 72 | best known |
+| `diamond-bonds-97` | 97 | 72 | best known |
+| `diamond-bonds-98` | 98 | 72 | best known |
+| `diamond-bonds-99` | 99 | 72 | best known |
+| `diamond-bonds-100` | 100 | 72 | best known (headline) |
+
+Exact cells: the value of the enumeration of every connected cluster with at most 17 sites (Redelmeier's method, tools/src/diamond.c, mode exact); the certificate is a cluster of that value. Best known cells: simulated annealing over connected clusters (tools/src/diamond.c, mode anneal).
+
 ## Submitting and checking
 
 Format: Text file: 100 lines 'x y z', distinct sites of the diamond lattice (all coordinates even with x + y + z = 0 mod 4, or all odd with x + y + z = 3 mod 4), connected through bonds (pairs at squared distance 3).

@@ -193,5 +193,26 @@
   "date": "2026-11-09",
   "holder": "Quantavane (Arhan Canli)",
   "text": "304375/1152 = 264.214410 (1560, 3960, 1560 and 60 pairs at 60, 90, 120 and 180 degrees), held by Quantavane (Arhan Canli), 9 November 2026: the 120 roots in `refs/e8-coulomb.txt`."
+ },
+ "cells": {
+  "params": [
+   "N"
+  ],
+  "about": "N, the number of charges, up to 120; N charges and the 240 - N on the other roots have the same minimisers, since E(240 - N) = E(240) - N c + E(N) with c the energy of one root against all others",
+  "headline": {
+   "N": 120
+  },
+  "args": [
+   "e8-coulomb",
+   "{N}"
+  ],
+  "title": "{N} charges on the roots of E8",
+  "statement": "Choose {N} of the 240 roots of E8 (norm 2) so that the Coulomb energy of unit charges on them in eight dimensions, the sum over pairs of 1/r^6 (r the distance between two roots: 1/8, 1/64, 1/216 or 1/512 for inner products 1, 0, -1 and -2), is as small as possible.",
+  "submission": "Text file: {N} lines of 8 integers, distinct roots of E8 written doubled: a permutation of (+-2, +-2, 0, 0, 0, 0, 0, 0), or (+-1, ..., +-1) with an even number of minus signs.",
+  "exact": [
+   "3"
+  ],
+  "exact_how": "brute force over the pairs of roots added to a fixed root (the Weyl group is transitive on roots)",
+  "how": "simulated annealing over N-subsets with restarts (tools/src/e8coulomb.c); an upper bound"
  }
 }

@@ -3,8 +3,8 @@
  "problems": 46,
  "counting": "questions: one per problem file (a family); cells: the family's question at each value of its natural parameter, each with its certificate (a family without a cells file is one cell)",
  "questions": 46,
- "cells": 525,
- "cells_exact": 169,
+ "cells": 736,
+ "cells_exact": 182,
  "by_field": {
   "Combinatorics and graph theory": 7,
   "Number theory": 7,
@@ -20,9 +20,9 @@
   "Combinatorics and graph theory": 7,
   "Number theory": 321,
   "Coding theory": 5,
-  "Discrete geometry": 72,
+  "Discrete geometry": 189,
   "Physics": 41,
-  "Chemistry and materials": 6,
+  "Chemistry and materials": 100,
   "Astronomy": 38,
   "Computing and operations research": 31,
   "Biology": 4
@@ -319,8 +319,8 @@
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_geom.py",
    "page": "problems/e8-coulomb.md",
-   "cells": 1,
-   "cells_exact": 0
+   "cells": 118,
+   "cells_exact": 1
   },
   {
    "id": "tetra-distinct",
@@ -487,8 +487,8 @@
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_chem.py",
    "page": "problems/diamond-bonds.md",
-   "cells": 1,
-   "cells_exact": 0
+   "cells": 95,
+   "cells_exact": 12
   },
   {
    "id": "diamond-knot",

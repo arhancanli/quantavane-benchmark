@@ -65,6 +65,135 @@ Energies from the exact checker (checkers/orig_geom.py); subsets from tools/src/
 
 304375/1152 = 264.214410 (1560, 3960, 1560 and 60 pairs at 60, 90, 120 and 180 degrees), held by Quantavane (Arhan Canli), 9 November 2026: the 120 roots in `refs/e8-coulomb.txt`.
 
+## Cells
+
+The same question at each value of its parameter (N, the number of charges, up to 120; N charges and the 240 - N on the other roots have the same minimisers, since E(240 - N) = E(240) - N c + E(N) with c the energy of one root against all others): 118 cells, 1 of them exact (an exhaustive search finished) and 117 best known (ours). Each cell has its certificate in `refs/cells/e8-coulomb/` (the headline cell uses `collections/originals/refs/e8-coulomb.txt`) and is checked with the family's checker:
+
+    python3 -I obb.py check CELL FILE                  # for example e8-coulomb-3
+
+| cell | N | value | status |
+| --- | --- | --- | --- |
+| `e8-coulomb-3` | 3 | 1/72 | exact |
+| `e8-coulomb-4` | 4 | 43/864 | best known |
+| `e8-coulomb-5` | 5 | 175/1728 | best known |
+| `e8-coulomb-6` | 6 | 97/576 | best known |
+| `e8-coulomb-7` | 7 | 217/864 | best known |
+| `e8-coulomb-8` | 8 | 151/432 | best known |
+| `e8-coulomb-9` | 9 | 89/192 | best known |
+| `e8-coulomb-10` | 10 | 1025/1728 | best known |
+| `e8-coulomb-11` | 11 | 1147/1536 | best known |
+| `e8-coulomb-12` | 12 | 259/288 | best known |
+| `e8-coulomb-13` | 13 | 3871/3456 | best known |
+| `e8-coulomb-14` | 14 | 679/512 | best known |
+| `e8-coulomb-15` | 15 | 791/512 | best known |
+| `e8-coulomb-16` | 16 | 113/64 | best known |
+| `e8-coulomb-17` | 17 | 4163/1728 | best known |
+| `e8-coulomb-18` | 18 | 42227/13824 | best known |
+| `e8-coulomb-19` | 19 | 2137/576 | best known |
+| `e8-coulomb-20` | 20 | 10075/2304 | best known |
+| `e8-coulomb-21` | 21 | 22561/4608 | best known |
+| `e8-coulomb-22` | 22 | 75017/13824 | best known |
+| `e8-coulomb-23` | 23 | 82489/13824 | best known |
+| `e8-coulomb-24` | 24 | 7499/1152 | best known |
+| `e8-coulomb-25` | 25 | 8611/1152 | best known |
+| `e8-coulomb-26` | 26 | 12967/1536 | best known |
+| `e8-coulomb-27` | 27 | 3617/384 | best known |
+| `e8-coulomb-28` | 28 | 5983/576 | best known |
+| `e8-coulomb-29` | 29 | 155503/13824 | best known |
+| `e8-coulomb-30` | 30 | 167285/13824 | best known |
+| `e8-coulomb-31` | 31 | 59735/4608 | best known |
+| `e8-coulomb-32` | 32 | 11947/864 | best known |
+| `e8-coulomb-33` | 33 | 1451/96 | best known |
+| `e8-coulomb-34` | 34 | 226763/13824 | best known |
+| `e8-coulomb-35` | 35 | 15295/864 | best known |
+| `e8-coulomb-36` | 36 | 2431/128 | best known |
+| `e8-coulomb-37` | 37 | 92969/4608 | best known |
+| `e8-coulomb-38` | 38 | 10931/512 | best known |
+| `e8-coulomb-39` | 39 | 103835/4608 | best known |
+| `e8-coulomb-40` | 40 | 27325/1152 | best known |
+| `e8-coulomb-41` | 41 | 87535/3456 | best known |
+| `e8-coulomb-42` | 42 | 372407/13824 | best known |
+| `e8-coulomb-43` | 43 | 10967/384 | best known |
+| `e8-coulomb-44` | 44 | 6517/216 | best known |
+| `e8-coulomb-45` | 45 | 48655/1536 | best known |
+| `e8-coulomb-46` | 46 | 458573/13824 | best known |
+| `e8-coulomb-47` | 47 | 479389/13824 | best known |
+| `e8-coulomb-48` | 48 | 20843/576 | best known |
+| `e8-coulomb-49` | 49 | 21955/576 | best known |
+| `e8-coulomb-50` | 50 | 20505/512 | best known |
+| `e8-coulomb-51` | 51 | 24187/576 | best known |
+| `e8-coulomb-52` | 52 | 16867/384 | best known |
+| `e8-coulomb-53` | 53 | 632467/13824 | best known |
+| `e8-coulomb-54` | 54 | 657593/13824 | best known |
+| `e8-coulomb-55` | 55 | 25291/512 | best known |
+| `e8-coulomb-56` | 56 | 177037/3456 | best known |
+| `e8-coulomb-57` | 57 | 61607/1152 | best known |
+| `e8-coulomb-58` | 58 | 770447/13824 | best known |
+| `e8-coulomb-59` | 59 | 200437/3456 | best known |
+| `e8-coulomb-60` | 60 | 34705/576 | best known |
+| `e8-coulomb-61` | 61 | 31949/512 | best known |
+| `e8-coulomb-62` | 62 | 99133/1536 | best known |
+| `e8-coulomb-63` | 63 | 307303/4608 | best known |
+| `e8-coulomb-64` | 64 | 9913/144 | best known |
+| `e8-coulomb-65` | 65 | 30851/432 | best known |
+| `e8-coulomb-66` | 66 | 1022843/13824 | best known |
+| `e8-coulomb-67` | 67 | 11027/144 | best known |
+| `e8-coulomb-68` | 68 | 273553/3456 | best known |
+| `e8-coulomb-69` | 69 | 376121/4608 | best known |
+| `e8-coulomb-70` | 70 | 1162385/13824 | best known |
+| `e8-coulomb-71` | 71 | 1196545/13824 | best known |
+| `e8-coulomb-72` | 72 | 34187/384 | best known |
+| `e8-coulomb-73` | 73 | 35299/384 | best known |
+| `e8-coulomb-74` | 74 | 48549/512 | best known |
+| `e8-coulomb-75` | 75 | 112585/1152 | best known |
+| `e8-coulomb-76` | 76 | 28981/288 | best known |
+| `e8-coulomb-77` | 77 | 1429687/13824 | best known |
+| `e8-coulomb-78` | 78 | 1468157/13824 | best known |
+| `e8-coulomb-79` | 79 | 502255/4608 | best known |
+| `e8-coulomb-80` | 80 | 193175/1728 | best known |
+| `e8-coulomb-81` | 81 | 66245/576 | best known |
+| `e8-coulomb-82` | 82 | 1634387/13824 | best known |
+| `e8-coulomb-83` | 83 | 209879/1728 | best known |
+| `e8-coulomb-84` | 84 | 143629/1152 | best known |
+| `e8-coulomb-85` | 85 | 588865/4608 | best known |
+| `e8-coulomb-86` | 86 | 67019/512 | best known |
+| `e8-coulomb-87` | 87 | 205841/1536 | best known |
+| `e8-coulomb-88` | 88 | 52657/384 | best known |
+| `e8-coulomb-89` | 89 | 486145/3456 | best known |
+| `e8-coulomb-90` | 90 | 1993535/13824 | best known |
+| `e8-coulomb-91` | 91 | 170219/1152 | best known |
+| `e8-coulomb-92` | 92 | 261449/1728 | best known |
+| `e8-coulomb-93` | 93 | 713029/4608 | best known |
+| `e8-coulomb-94` | 94 | 2186453/13824 | best known |
+| `e8-coulomb-95` | 95 | 2233957/13824 | best known |
+| `e8-coulomb-96` | 96 | 47531/288 | best known |
+| `e8-coulomb-97` | 97 | 48643/288 | best known |
+| `e8-coulomb-98` | 98 | 265363/1536 | best known |
+| `e8-coulomb-99` | 99 | 16957/96 | best known |
+| `e8-coulomb-100` | 100 | 207935/1152 | best known |
+| `e8-coulomb-101` | 101 | 2547163/13824 | best known |
+| `e8-coulomb-102` | 102 | 2598977/13824 | best known |
+| `e8-coulomb-103` | 103 | 883643/4608 | best known |
+| `e8-coulomb-104` | 104 | 675727/3456 | best known |
+| `e8-coulomb-105` | 105 | 76687/384 | best known |
+| `e8-coulomb-106` | 106 | 2818583/13824 | best known |
+| `e8-coulomb-107` | 107 | 719143/3456 | best known |
+| `e8-coulomb-108` | 108 | 10189/48 | best known |
+| `e8-coulomb-109` | 109 | 996941/4608 | best known |
+| `e8-coulomb-110` | 110 | 112855/512 | best known |
+| `e8-coulomb-111` | 111 | 1034495/4608 | best known |
+| `e8-coulomb-112` | 112 | 131663/576 | best known |
+| `e8-coulomb-113` | 113 | 402773/1728 | best known |
+| `e8-coulomb-114` | 114 | 3284483/13824 | best known |
+| `e8-coulomb-115` | 115 | 15495/64 | best known |
+| `e8-coulomb-116` | 116 | 852307/3456 | best known |
+| `e8-coulomb-117` | 117 | 128521/512 | best known |
+| `e8-coulomb-118` | 118 | 3530777/13824 | best known |
+| `e8-coulomb-119` | 119 | 3591625/13824 | best known |
+| `e8-coulomb-120` | 120 | 304375/1152 | best known (headline) |
+
+Exact cells: brute force over the pairs of roots added to a fixed root (the Weyl group is transitive on roots). Best known cells: simulated annealing over N-subsets with restarts (tools/src/e8coulomb.c); an upper bound.
+
 ## Submitting and checking
 
 Format: Text file: 120 lines of 8 integers, distinct roots of E8 written doubled: a permutation of (+-2, +-2, 0, 0, 0, 0, 0, 0), or eight entries +-1 with an even number of minus signs.

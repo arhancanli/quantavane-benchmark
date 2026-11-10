@@ -272,5 +272,37 @@
   "date": "2026-11-09",
   "holder": "Quantavane (Arhan Canli)",
   "text": "72 dangling bonds (C100H72: 100 atoms, 164 bonds), held by Quantavane (Arhan Canli), 9 November 2026: the cluster in `refs/diamond-bonds.txt`."
+ },
+ "cells": {
+  "params": [
+   "N"
+  ],
+  "about": "N, the number of atoms",
+  "headline": {
+   "N": 100
+  },
+  "args": [
+   "diamond-bonds",
+   "{N}"
+  ],
+  "title": "Piece of diamond with {N} atoms and the fewest dangling bonds",
+  "statement": "Choose {N} distinct sites of the diamond lattice (integer points with all three coordinates even and x + y + z = 0 mod 4, or all three odd and x + y + z = 3 mod 4), connected through bonds (pairs at squared distance 3), with the most bonds B among them, that is the fewest dangling bonds 4 x {N} - 2B (the hydrogen atoms of the hydrocarbon C_{N}H_(4 x {N} - 2B)).",
+  "submission": "Text file: {N} lines 'x y z', distinct connected sites of the diamond lattice.",
+  "exact": [
+   "6",
+   "7",
+   "8",
+   "9",
+   "10",
+   "11",
+   "12",
+   "13",
+   "14",
+   "15",
+   "16",
+   "17"
+  ],
+  "exact_how": "the value of the enumeration of every connected cluster with at most 17 sites (Redelmeier's method, tools/src/diamond.c, mode exact); the certificate is a cluster of that value",
+  "how": "simulated annealing over connected clusters (tools/src/diamond.c, mode anneal)"
  }
 }
