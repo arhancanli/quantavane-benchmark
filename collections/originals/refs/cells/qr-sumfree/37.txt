@@ -1,0 +1,2 @@
+# sum-free subset of the quadratic residues mod 37: 10 elements
+1 3 7 11 16 21 26 30 34 36

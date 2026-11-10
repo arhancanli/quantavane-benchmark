@@ -66,6 +66,75 @@ Exact values by exhaustive search (tools/quad_admissible.py, sets with largest e
 
 247 for k = 50, held by Quantavane (Arhan Canli), 9 November 2026: the set in `refs/quad-admissible.txt`. Lower bound: m(50) >= m(19) = 77 (removing elements keeps a set admissible); nothing better is proved.
 
+## Cells
+
+The same question at each value of its parameter (k, the number of shifts): 58 cells, 17 of them exact (an exhaustive search finished) and 41 best known (ours). Each cell has its certificate in `refs/cells/quad-admissible/` (the headline cell uses `collections/originals/refs/quad-admissible.txt`) and is checked with the family's checker:
+
+    python3 -I obb.py check CELL FILE                  # for example quad-admissible-3
+
+| cell | k | value | status |
+| --- | --- | --- | --- |
+| `quad-admissible-3` | 3 | 7 | exact |
+| `quad-admissible-4` | 4 | 9 | exact |
+| `quad-admissible-5` | 5 | 13 | exact |
+| `quad-admissible-6` | 6 | 20 | exact |
+| `quad-admissible-7` | 7 | 22 | exact |
+| `quad-admissible-8` | 8 | 27 | exact |
+| `quad-admissible-9` | 9 | 31 | exact |
+| `quad-admissible-10` | 10 | 34 | exact |
+| `quad-admissible-11` | 11 | 38 | exact |
+| `quad-admissible-12` | 12 | 44 | exact |
+| `quad-admissible-13` | 13 | 50 | exact |
+| `quad-admissible-14` | 14 | 52 | exact |
+| `quad-admissible-15` | 15 | 57 | exact |
+| `quad-admissible-16` | 16 | 63 | exact |
+| `quad-admissible-17` | 17 | 67 | exact |
+| `quad-admissible-18` | 18 | 73 | exact |
+| `quad-admissible-19` | 19 | 77 | exact |
+| `quad-admissible-20` | 20 | 84 | best known |
+| `quad-admissible-21` | 21 | 88 | best known |
+| `quad-admissible-22` | 22 | 93 | best known |
+| `quad-admissible-23` | 23 | 97 | best known |
+| `quad-admissible-24` | 24 | 104 | best known |
+| `quad-admissible-25` | 25 | 112 | best known |
+| `quad-admissible-26` | 26 | 117 | best known |
+| `quad-admissible-27` | 27 | 121 | best known |
+| `quad-admissible-28` | 28 | 130 | best known |
+| `quad-admissible-29` | 29 | 134 | best known |
+| `quad-admissible-30` | 30 | 140 | best known |
+| `quad-admissible-31` | 31 | 142 | best known |
+| `quad-admissible-32` | 32 | 148 | best known |
+| `quad-admissible-33` | 33 | 154 | best known |
+| `quad-admissible-34` | 34 | 158 | best known |
+| `quad-admissible-35` | 35 | 160 | best known |
+| `quad-admissible-36` | 36 | 164 | best known |
+| `quad-admissible-37` | 37 | 169 | best known |
+| `quad-admissible-38` | 38 | 183 | best known |
+| `quad-admissible-39` | 39 | 188 | best known |
+| `quad-admissible-40` | 40 | 190 | best known |
+| `quad-admissible-41` | 41 | 200 | best known |
+| `quad-admissible-42` | 42 | 202 | best known |
+| `quad-admissible-43` | 43 | 211 | best known |
+| `quad-admissible-44` | 44 | 213 | best known |
+| `quad-admissible-45` | 45 | 218 | best known |
+| `quad-admissible-46` | 46 | 220 | best known |
+| `quad-admissible-47` | 47 | 232 | best known |
+| `quad-admissible-48` | 48 | 241 | best known |
+| `quad-admissible-49` | 49 | 244 | best known |
+| `quad-admissible-50` | 50 | 247 | best known (headline) |
+| `quad-admissible-51` | 51 | 253 | best known |
+| `quad-admissible-52` | 52 | 262 | best known |
+| `quad-admissible-53` | 53 | 272 | best known |
+| `quad-admissible-54` | 54 | 274 | best known |
+| `quad-admissible-55` | 55 | 280 | best known |
+| `quad-admissible-56` | 56 | 290 | best known |
+| `quad-admissible-57` | 57 | 298 | best known |
+| `quad-admissible-58` | 58 | 302 | best known |
+| `quad-admissible-59` | 59 | 307 | best known |
+| `quad-admissible-60` | 60 | 309 | best known |
+
+Exact cells: exhaustive search over the sets with largest element m, m increasing (tools/quad_admissible.py). Best known cells: randomized greedy sieve deleting one square class per prime, the best of 300 trials (tools/quad_sieve.py); an upper bound.
+
 Bound on the other side: 77 (lower bound; m(k) is non-decreasing and m(19) = 77 exactly).
 
 ## Submitting and checking

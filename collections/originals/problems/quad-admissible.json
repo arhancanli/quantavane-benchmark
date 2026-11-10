@@ -189,5 +189,42 @@
   "value": "77",
   "kind": "lower bound",
   "source": "m(k) is non-decreasing and m(19) = 77 exactly"
+ },
+ "cells": {
+  "params": [
+   "k"
+  ],
+  "about": "k, the number of shifts",
+  "headline": {
+   "k": 50
+  },
+  "args": [
+   "quad-admissible",
+   "{k}"
+  ],
+  "title": "Densest admissible {k}-pattern of primes n^2 + h",
+  "statement": "Find an admissible set of {k} positive integers h for n^2 + h (for every prime p the residues -h modulo p miss one of the values of n^2 modulo p, 0 included) with the smallest largest element m({k}).",
+  "submission": "Text file: {k} distinct positive integers h, separated by spaces or newlines.",
+  "exact": [
+   "3",
+   "4",
+   "5",
+   "6",
+   "7",
+   "8",
+   "9",
+   "10",
+   "11",
+   "12",
+   "13",
+   "14",
+   "15",
+   "16",
+   "17",
+   "18",
+   "19"
+  ],
+  "exact_how": "exhaustive search over the sets with largest element m, m increasing (tools/quad_admissible.py)",
+  "how": "randomized greedy sieve deleting one square class per prime, the best of 300 trials (tools/quad_sieve.py); an upper bound"
  }
 }

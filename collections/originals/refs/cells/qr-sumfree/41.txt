@@ -1,0 +1,2 @@
+# sum-free subset of the quadratic residues mod 41: 10 elements
+2 5 8 9 20 21 32 33 36 39

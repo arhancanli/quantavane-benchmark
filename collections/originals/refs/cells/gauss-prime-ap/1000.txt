@@ -1,0 +1,10 @@
+# 9 Gaussian primes in arithmetic progression with norms at most 10^3
+-13 -2
+-10 -1
+-7 0
+-4 1
+-1 2
+2 3
+5 4
+8 5
+11 6

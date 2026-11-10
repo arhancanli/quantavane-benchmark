@@ -1,6 +1,10 @@
 {
  "collection": "Quantavane Originals",
  "problems": 46,
+ "counting": "questions: one per problem file (a family); cells: the family's question at each value of its natural parameter, each with its certificate (a family without a cells file is one cell)",
+ "questions": 46,
+ "cells": 347,
+ "cells_exact": 108,
  "by_field": {
   "Combinatorics and graph theory": 7,
   "Number theory": 7,
@@ -10,6 +14,17 @@
   "Chemistry and materials": 6,
   "Astronomy": 2,
   "Computing and operations research": 4,
+  "Biology": 4
+ },
+ "cells_by_field": {
+  "Combinatorics and graph theory": 7,
+  "Number theory": 143,
+  "Coding theory": 5,
+  "Discrete geometry": 72,
+  "Physics": 41,
+  "Chemistry and materials": 6,
+  "Astronomy": 38,
+  "Computing and operations research": 31,
   "Biology": 4
  },
  "items": [
@@ -23,7 +38,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_comb.py",
-   "page": "problems/ap-cover.md"
+   "page": "problems/ap-cover.md",
+   "cells": 1,
+   "cells_exact": 0
   },
   {
    "id": "autoconv-square",
@@ -35,7 +52,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_comb.py",
-   "page": "problems/autoconv-square.md"
+   "page": "problems/autoconv-square.md",
+   "cells": 1,
+   "cells_exact": 0
   },
   {
    "id": "cell600-forest",
@@ -47,7 +66,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_comb.py",
-   "page": "problems/cell600-forest.md"
+   "page": "problems/cell600-forest.md",
+   "cells": 1,
+   "cells_exact": 0
   },
   {
    "id": "e8-goodman",
@@ -59,7 +80,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_comb.py",
-   "page": "problems/e8-goodman.md"
+   "page": "problems/e8-goodman.md",
+   "cells": 1,
+   "cells_exact": 0
   },
   {
    "id": "e8-resolving",
@@ -71,7 +94,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_comb.py",
-   "page": "problems/e8-resolving.md"
+   "page": "problems/e8-resolving.md",
+   "cells": 1,
+   "cells_exact": 0
   },
   {
    "id": "overlap-square",
@@ -83,7 +108,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_comb.py",
-   "page": "problems/overlap-square.md"
+   "page": "problems/overlap-square.md",
+   "cells": 1,
+   "cells_exact": 0
   },
   {
    "id": "overlap-three",
@@ -95,7 +122,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_comb.py",
-   "page": "problems/overlap-three.md"
+   "page": "problems/overlap-three.md",
+   "cells": 1,
+   "cells_exact": 0
   },
   {
    "id": "cubic-admissible",
@@ -107,7 +136,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_numth.py",
-   "page": "problems/cubic-admissible.md"
+   "page": "problems/cubic-admissible.md",
+   "cells": 1,
+   "cells_exact": 0
   },
   {
    "id": "eisenstein-triples",
@@ -119,7 +150,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_numth.py",
-   "page": "problems/eisenstein-triples.md"
+   "page": "problems/eisenstein-triples.md",
+   "cells": 1,
+   "cells_exact": 0
   },
   {
    "id": "gauss-admissible",
@@ -131,7 +164,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_numth.py",
-   "page": "problems/gauss-admissible.md"
+   "page": "problems/gauss-admissible.md",
+   "cells": 1,
+   "cells_exact": 0
   },
   {
    "id": "gauss-jacobsthal",
@@ -143,7 +178,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_numth.py",
-   "page": "problems/gauss-jacobsthal.md"
+   "page": "problems/gauss-jacobsthal.md",
+   "cells": 1,
+   "cells_exact": 0
   },
   {
    "id": "gauss-prime-ap",
@@ -155,7 +192,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_numth.py",
-   "page": "problems/gauss-prime-ap.md"
+   "page": "problems/gauss-prime-ap.md",
+   "cells": 10,
+   "cells_exact": 7
   },
   {
    "id": "qr-sumfree",
@@ -167,7 +206,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_numth.py",
-   "page": "problems/qr-sumfree.md"
+   "page": "problems/qr-sumfree.md",
+   "cells": 71,
+   "cells_exact": 21
   },
   {
    "id": "quad-admissible",
@@ -179,7 +220,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_numth.py",
-   "page": "problems/quad-admissible.md"
+   "page": "problems/quad-admissible.md",
+   "cells": 58,
+   "cells_exact": 17
   },
   {
    "id": "cell120-coil",
@@ -191,7 +234,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_codes.py",
-   "page": "problems/cell120-coil.md"
+   "page": "problems/cell120-coil.md",
+   "cells": 1,
+   "cells_exact": 0
   },
   {
    "id": "cell600-idcode",
@@ -203,7 +248,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_codes.py",
-   "page": "problems/cell600-idcode.md"
+   "page": "problems/cell600-idcode.md",
+   "cells": 1,
+   "cells_exact": 0
   },
   {
    "id": "e8-idcode",
@@ -215,7 +262,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_codes.py",
-   "page": "problems/e8-idcode.md"
+   "page": "problems/e8-idcode.md",
+   "cells": 1,
+   "cells_exact": 0
   },
   {
    "id": "prime-code",
@@ -227,7 +276,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_codes.py",
-   "page": "problems/prime-code.md"
+   "page": "problems/prime-code.md",
+   "cells": 1,
+   "cells_exact": 0
   },
   {
    "id": "prime-cover",
@@ -239,7 +290,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_codes.py",
-   "page": "problems/prime-cover.md"
+   "page": "problems/prime-cover.md",
+   "cells": 1,
+   "cells_exact": 0
   },
   {
    "id": "cell120-great",
@@ -251,7 +304,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_geom.py",
-   "page": "problems/cell120-great.md"
+   "page": "problems/cell120-great.md",
+   "cells": 1,
+   "cells_exact": 0
   },
   {
    "id": "e8-coulomb",
@@ -263,7 +318,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_geom.py",
-   "page": "problems/e8-coulomb.md"
+   "page": "problems/e8-coulomb.md",
+   "cells": 1,
+   "cells_exact": 0
   },
   {
    "id": "tetra-distinct",
@@ -275,7 +332,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_geom.py",
-   "page": "problems/tetra-distinct.md"
+   "page": "problems/tetra-distinct.md",
+   "cells": 16,
+   "cells_exact": 8
   },
   {
    "id": "tri-areas",
@@ -287,7 +346,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_geom.py",
-   "page": "problems/tri-areas.md"
+   "page": "problems/tri-areas.md",
+   "cells": 27,
+   "cells_exact": 11
   },
   {
    "id": "tri-distinct",
@@ -299,7 +360,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_geom.py",
-   "page": "problems/tri-distinct.md"
+   "page": "problems/tri-distinct.md",
+   "cells": 27,
+   "cells_exact": 13
   },
   {
    "id": "ga-ising",
@@ -311,7 +374,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_phys.py",
-   "page": "problems/ga-ising.md"
+   "page": "problems/ga-ising.md",
+   "cells": 1,
+   "cells_exact": 0
   },
   {
    "id": "mclaughlin-ising",
@@ -323,7 +388,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_phys.py",
-   "page": "problems/mclaughlin-ising.md"
+   "page": "problems/mclaughlin-ising.md",
+   "cells": 1,
+   "cells_exact": 0
   },
   {
    "id": "paley-ising",
@@ -331,11 +398,13 @@
    "title": "Ground states of the Paley Ising model",
    "status": "open",
    "objective": "minimize",
-   "best_known": "-480",
+   "best_known": "-492",
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_phys.py",
-   "page": "problems/paley-ising.md"
+   "page": "problems/paley-ising.md",
+   "cells": 36,
+   "cells_exact": 3
   },
   {
    "id": "polytope-ising",
@@ -347,7 +416,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_phys.py",
-   "page": "problems/polytope-ising.md"
+   "page": "problems/polytope-ising.md",
+   "cells": 1,
+   "cells_exact": 0
   },
   {
    "id": "potts3-600",
@@ -359,7 +430,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_phys.py",
-   "page": "problems/potts3-600.md"
+   "page": "problems/potts3-600.md",
+   "cells": 1,
+   "cells_exact": 0
   },
   {
    "id": "snub24-ising",
@@ -371,7 +444,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_phys.py",
-   "page": "problems/snub24-ising.md"
+   "page": "problems/snub24-ising.md",
+   "cells": 1,
+   "cells_exact": 0
   },
   {
    "id": "benzenoid-kemeny",
@@ -383,7 +458,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_chem.py",
-   "page": "problems/benzenoid-kemeny.md"
+   "page": "problems/benzenoid-kemeny.md",
+   "cells": 1,
+   "cells_exact": 0
   },
   {
    "id": "cata-kemeny",
@@ -395,7 +472,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_chem.py",
-   "page": "problems/cata-kemeny.md"
+   "page": "problems/cata-kemeny.md",
+   "cells": 1,
+   "cells_exact": 0
   },
   {
    "id": "diamond-bonds",
@@ -407,7 +486,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_chem.py",
-   "page": "problems/diamond-bonds.md"
+   "page": "problems/diamond-bonds.md",
+   "cells": 1,
+   "cells_exact": 0
   },
   {
    "id": "diamond-knot",
@@ -419,7 +500,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_chem.py",
-   "page": "problems/diamond-knot.md"
+   "page": "problems/diamond-knot.md",
+   "cells": 1,
+   "cells_exact": 0
   },
   {
    "id": "diamond-link",
@@ -431,7 +514,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_chem.py",
-   "page": "problems/diamond-link.md"
+   "page": "problems/diamond-link.md",
+   "cells": 1,
+   "cells_exact": 0
   },
   {
    "id": "lj-fcc",
@@ -443,7 +528,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_chem.py",
-   "page": "problems/lj-fcc.md"
+   "page": "problems/lj-fcc.md",
+   "cells": 1,
+   "cells_exact": 0
   },
   {
    "id": "nrm-segments",
@@ -455,7 +542,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_astro.py",
-   "page": "problems/nrm-segments.md"
+   "page": "problems/nrm-segments.md",
+   "cells": 1,
+   "cells_exact": 0
   },
   {
    "id": "y-array",
@@ -467,7 +556,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_astro.py",
-   "page": "problems/y-array.md"
+   "page": "problems/y-array.md",
+   "cells": 37,
+   "cells_exact": 10
   },
   {
    "id": "qr-xor",
@@ -479,7 +570,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_comp.py",
-   "page": "problems/qr-xor.md"
+   "page": "problems/qr-xor.md",
+   "cells": 1,
+   "cells_exact": 0
   },
   {
    "id": "sync-quadratic",
@@ -491,7 +584,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_comp.py",
-   "page": "problems/sync-quadratic.md"
+   "page": "problems/sync-quadratic.md",
+   "cells": 28,
+   "cells_exact": 18
   },
   {
    "id": "tsp-gaussian",
@@ -503,7 +598,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_comp.py",
-   "page": "problems/tsp-gaussian.md"
+   "page": "problems/tsp-gaussian.md",
+   "cells": 1,
+   "cells_exact": 0
   },
   {
    "id": "tsp-sunflower",
@@ -515,7 +612,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_comp.py",
-   "page": "problems/tsp-sunflower.md"
+   "page": "problems/tsp-sunflower.md",
+   "cells": 1,
+   "cells_exact": 0
   },
   {
    "id": "align-ambiguity",
@@ -527,7 +626,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_bio.py",
-   "page": "problems/align-ambiguity.md"
+   "page": "problems/align-ambiguity.md",
+   "cells": 1,
+   "cells_exact": 0
   },
   {
    "id": "hp-tri",
@@ -539,7 +640,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_bio.py",
-   "page": "problems/hp-tri.md"
+   "page": "problems/hp-tri.md",
+   "cells": 1,
+   "cells_exact": 0
   },
   {
    "id": "nussinov-degeneracy",
@@ -551,7 +654,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_bio.py",
-   "page": "problems/nussinov-degeneracy.md"
+   "page": "problems/nussinov-degeneracy.md",
+   "cells": 1,
+   "cells_exact": 0
   },
   {
    "id": "six-frame",
@@ -563,7 +668,9 @@
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_bio.py",
-   "page": "problems/six-frame.md"
+   "page": "problems/six-frame.md",
+   "cells": 1,
+   "cells_exact": 0
   }
  ]
 }

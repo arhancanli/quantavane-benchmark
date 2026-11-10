@@ -1,0 +1,2 @@
+# sum-free subset of the quadratic residues mod 113: 22 elements
+1 4 9 11 14 16 26 31 36 44 49 64 69 77 82 87 97 99 102 104 109 112

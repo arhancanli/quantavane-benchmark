@@ -1,0 +1,13 @@
+# 12 points of T_23 with distinct distances
+0 0
+0 22
+1 0
+1 2
+1 20
+3 12
+3 16
+5 6
+6 16
+10 0
+11 7
+14 8

@@ -1,0 +1,2 @@
+# sum-free subset of the quadratic residues mod 59: 12 elements
+1 5 9 12 16 20 27 35 46 49 53 57

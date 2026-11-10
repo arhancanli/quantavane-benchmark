@@ -244,5 +244,46 @@
   "date": "2026-11-09",
   "holder": "Quantavane (Arhan Canli)",
   "text": "174 for p = 1009, held by Quantavane (Arhan Canli), 9 November 2026: the set in `refs/qr-sumfree.txt`. Lower bound from the general theory: at least |QR_p|/3 + O(|QR_p|/p), about 168; upper bound: trivially at most 504, and no better bound is proved here."
+ },
+ "cells": {
+  "params": [
+   "p"
+  ],
+  "about": "p, a prime",
+  "headline": {
+   "p": 1009
+  },
+  "args": [
+   "qr-sumfree",
+   "{p}"
+  ],
+  "title": "Largest sum-free set of quadratic residues modulo {p}",
+  "statement": "Find the largest subset A of the (p-1)/2 nonzero squares modulo p = {p} that is sum-free: a + b = c (mod {p}) has no solution with a, b, c in A (a = b allowed). s({p}) is its size.",
+  "submission": "Text file: the elements of A, distinct nonzero squares modulo {p} written as integers in 1..{p}-1.",
+  "exact": [
+   "29",
+   "31",
+   "37",
+   "41",
+   "43",
+   "47",
+   "53",
+   "59",
+   "61",
+   "67",
+   "71",
+   "73",
+   "79",
+   "83",
+   "89",
+   "97",
+   "101",
+   "103",
+   "107",
+   "109",
+   "113"
+  ],
+  "exact_how": "the value of the exhaustive branch and bound over subsets of the squares (9 November 2026); the certificate is a set of that size found by our local search",
+  "how": "randomized greedy construction and local search (tools/qr_sumfree_search.py); a lower bound"
  }
 }

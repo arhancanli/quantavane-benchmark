@@ -201,11 +201,11 @@
    ],
    [
     127,
-    "<= 50 (ours), >= 24",
+    "<= 49 (ours), >= 24",
     "open"
    ]
   ],
-  "note": "Exact values: breadth-first search over the subsets of states reached from the full set (tools/src/syncq.c); where that search exceeded 14 million subsets, the depth it completed is a lower bound and our beam search gives the upper bound."
+  "note": "Exact values: breadth-first search over the subsets of states reached from the full set (tools/src/syncq.c); where that search exceeded 14 million subsets, the depth it completed is a lower bound and our beam search gives the upper bound. Rows improved on 10 November 2026 show the value of the cell (see Cells)."
  },
  "baseline": {
   "date": "2026-11-09",
@@ -216,5 +216,43 @@
   "value": "25",
   "kind": "lower bound",
   "source": "exhaustive breadth-first search over all subsets reachable by words of length <= 24"
+ },
+ "cells": {
+  "params": [
+   "p"
+  ],
+  "about": "p, a prime",
+  "headline": {
+   "p": 101
+  },
+  "args": [
+   "sync-quadratic",
+   "{p}"
+  ],
+  "title": "Shortest reset word of the quadratic automaton modulo {p}",
+  "statement": "The automaton Q_{p} has states 0, 1, ..., {p}-1 and two letters, a: x -> x + 1 and b: x -> x^2 (mod {p}). Find a shortest reset word, a word that sends every state to one and the same state; r({p}) is its length.",
+  "submission": "Text file: a word over the letters a and b, applied letter by letter from the left.",
+  "exact": [
+   "7",
+   "11",
+   "13",
+   "17",
+   "19",
+   "23",
+   "29",
+   "31",
+   "37",
+   "41",
+   "43",
+   "47",
+   "53",
+   "61",
+   "73",
+   "89",
+   "97",
+   "113"
+  ],
+  "exact_how": "breadth-first search over the subsets of Z_p reached from Z_p, finished (tools/src/syncq.c)",
+  "how": "beam search over subsets keeping the 300,000 smallest per level (tools/src/syncbeam.c); an upper bound"
  }
 }

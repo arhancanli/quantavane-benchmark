@@ -64,13 +64,52 @@ Verdict: new. The automaton x -> x + 1, x -> x^2 (mod p) and its reset threshold
 | 107 | <= 47 (ours), >= 24 | open |
 | 109 | <= 33 (ours), >= 25 | open |
 | 113 | 19 | exact (breadth-first search over subsets) |
-| 127 | <= 50 (ours), >= 24 | open |
+| 127 | <= 49 (ours), >= 24 | open |
 
-Exact values: breadth-first search over the subsets of states reached from the full set (tools/src/syncq.c); where that search exceeded 14 million subsets, the depth it completed is a lower bound and our beam search gives the upper bound.
+Exact values: breadth-first search over the subsets of states reached from the full set (tools/src/syncq.c); where that search exceeded 14 million subsets, the depth it completed is a lower bound and our beam search gives the upper bound. Rows improved on 10 November 2026 show the value of the cell (see Cells).
 
 ## Best known value
 
 31 for p = 101, held by Quantavane (Arhan Canli), 9 November 2026: the word in `refs/sync-quadratic.txt`. Lower bound 25: the breadth-first search finished every word of length at most 24 without reaching a single state (tools/src/syncq.c).
+
+## Cells
+
+The same question at each value of its parameter (p, a prime): 28 cells, 18 of them exact (an exhaustive search finished) and 10 best known (ours). Each cell has its certificate in `refs/cells/sync-quadratic/` (the headline cell uses `collections/originals/refs/sync-quadratic.txt`) and is checked with the family's checker:
+
+    python3 -I obb.py check CELL FILE                  # for example sync-quadratic-7
+
+| cell | p | value | status |
+| --- | --- | --- | --- |
+| `sync-quadratic-7` | 7 | 9 | exact |
+| `sync-quadratic-11` | 11 | 12 | exact |
+| `sync-quadratic-13` | 13 | 10 | exact |
+| `sync-quadratic-17` | 17 | 8 | exact |
+| `sync-quadratic-19` | 19 | 16 | exact |
+| `sync-quadratic-23` | 23 | 17 | exact |
+| `sync-quadratic-29` | 29 | 16 | exact |
+| `sync-quadratic-31` | 31 | 21 | exact |
+| `sync-quadratic-37` | 37 | 19 | exact |
+| `sync-quadratic-41` | 41 | 14 | exact |
+| `sync-quadratic-43` | 43 | 24 | exact |
+| `sync-quadratic-47` | 47 | 28 | exact |
+| `sync-quadratic-53` | 53 | 23 | exact |
+| `sync-quadratic-59` | 59 | 34 | best known |
+| `sync-quadratic-61` | 61 | 21 | exact |
+| `sync-quadratic-67` | 67 | 38 | best known |
+| `sync-quadratic-71` | 71 | 33 | best known |
+| `sync-quadratic-73` | 73 | 19 | exact |
+| `sync-quadratic-79` | 79 | 39 | best known |
+| `sync-quadratic-83` | 83 | 37 | best known |
+| `sync-quadratic-89` | 89 | 23 | exact |
+| `sync-quadratic-97` | 97 | 14 | exact |
+| `sync-quadratic-101` | 101 | 31 | best known (headline) |
+| `sync-quadratic-103` | 103 | 46 | best known |
+| `sync-quadratic-107` | 107 | 47 | best known |
+| `sync-quadratic-109` | 109 | 33 | best known |
+| `sync-quadratic-113` | 113 | 19 | exact |
+| `sync-quadratic-127` | 127 | 49 | best known |
+
+Exact cells: breadth-first search over the subsets of Z_p reached from Z_p, finished (tools/src/syncq.c). Best known cells: beam search over subsets keeping the 300,000 smallest per level (tools/src/syncbeam.c); an upper bound.
 
 Bound on the other side: 25 (lower bound; exhaustive breadth-first search over all subsets reachable by words of length <= 24).
 

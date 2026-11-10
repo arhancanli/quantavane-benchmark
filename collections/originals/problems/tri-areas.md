@@ -56,6 +56,44 @@ Exact values by exhaustive search over subsets of T_n (tools/src/trigrid.c areas
 
 9 for n = 30, held by Quantavane (Arhan Canli), 9 November 2026: the points in `refs/tri-areas.txt`. Upper bound: the C(t,3) areas are distinct integers between 1 and 29^2 = 841, so C(t,3) <= 841 and t(30) <= 18.
 
+## Cells
+
+The same question at each value of its parameter (N, the side of the triangular grid): 27 cells, 11 of them exact (an exhaustive search finished) and 16 best known (ours). Each cell has its certificate in `refs/cells/tri-areas/` (the headline cell uses `collections/originals/refs/tri-areas.txt`) and is checked with the family's checker:
+
+    python3 -I obb.py check CELL FILE                  # for example tri-areas-4
+
+| cell | N | value | status |
+| --- | --- | --- | --- |
+| `tri-areas-4` | 4 | 4 | exact |
+| `tri-areas-5` | 5 | 4 | exact |
+| `tri-areas-6` | 6 | 5 | exact |
+| `tri-areas-7` | 7 | 5 | exact |
+| `tri-areas-8` | 8 | 5 | exact |
+| `tri-areas-9` | 9 | 6 | exact |
+| `tri-areas-10` | 10 | 6 | exact |
+| `tri-areas-11` | 11 | 6 | exact |
+| `tri-areas-12` | 12 | 7 | exact |
+| `tri-areas-13` | 13 | 7 | exact |
+| `tri-areas-14` | 14 | 7 | exact |
+| `tri-areas-15` | 15 | 7 | best known |
+| `tri-areas-16` | 16 | 7 | best known |
+| `tri-areas-17` | 17 | 7 | best known |
+| `tri-areas-18` | 18 | 8 | best known |
+| `tri-areas-19` | 19 | 8 | best known |
+| `tri-areas-20` | 20 | 8 | best known |
+| `tri-areas-21` | 21 | 8 | best known |
+| `tri-areas-22` | 22 | 8 | best known |
+| `tri-areas-23` | 23 | 8 | best known |
+| `tri-areas-24` | 24 | 8 | best known |
+| `tri-areas-25` | 25 | 9 | best known |
+| `tri-areas-26` | 26 | 9 | best known |
+| `tri-areas-27` | 27 | 9 | best known |
+| `tri-areas-28` | 28 | 9 | best known |
+| `tri-areas-29` | 29 | 9 | best known |
+| `tri-areas-30` | 30 | 9 | best known (headline) |
+
+Exact cells: exhaustive branch and bound over the subsets of T_N (tools/src/trigrid.c, mode areas). Best known cells: randomized greedy construction and local search (tools/tri_distinct_search.py, mode areas).
+
 Bound on the other side: 18 (upper bound; C(t,3) <= 841 distinct nonzero areas (in units of sqrt(3)/4)).
 
 ## Submitting and checking

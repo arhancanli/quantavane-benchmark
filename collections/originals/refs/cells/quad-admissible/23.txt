@@ -1,0 +1,2 @@
+# admissible 23-set for n^2 + h with largest element 97
+1 3 7 13 15 21 25 27 31 37 43 45 51 55 57 63 67 73 81 85 91 93 97

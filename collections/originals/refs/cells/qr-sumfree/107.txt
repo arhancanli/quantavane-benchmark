@@ -1,0 +1,2 @@
+# sum-free subset of the quadratic residues mod 107: 20 elements
+3 10 11 19 23 27 35 39 40 47 48 52 56 64 76 81 85 89 101 105

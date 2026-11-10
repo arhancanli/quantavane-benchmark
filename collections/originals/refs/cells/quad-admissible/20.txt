@@ -1,0 +1,2 @@
+# admissible 20-set for n^2 + h with largest element 84
+4 6 12 16 18 22 28 34 36 42 46 48 54 58 64 72 76 78 82 84

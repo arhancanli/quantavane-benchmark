@@ -4,7 +4,7 @@
  "field": "Physics",
  "title": "Ground states of the Paley Ising model",
  "status": "open",
- "statement": "Let p be a prime with p = 1 (mod 4) and let chi be the Legendre symbol modulo p. The Paley Ising model on p spins s_0, ..., s_(p-1) in {+1, -1} has energy E_p(s) = sum over 0 <= i < j <= p-1 of chi(j - i) s_i s_j: the couplings are +1 (antiferromagnetic) on the edges of the Paley graph P_p and -1 (ferromagnetic) on its non-edges. Determine the ground-state energy E_p = min over s of E_p(s). The headline cell is p = 101: find a configuration with E_101(s) < -480. Every E_p(s) is divisible by 4, and E_p >= -p^(3/2)/2 because the coupling matrix has eigenvalues +sqrt(p), -sqrt(p) and 0.",
+ "statement": "Let p be a prime with p = 1 (mod 4) and let chi be the Legendre symbol modulo p. The Paley Ising model on p spins s_0, ..., s_(p-1) in {+1, -1} has energy E_p(s) = sum over 0 <= i < j <= p-1 of chi(j - i) s_i s_j: the couplings are +1 (antiferromagnetic) on the edges of the Paley graph P_p and -1 (ferromagnetic) on its non-edges. Determine the ground-state energy E_p = min over s of E_p(s). The headline cell is p = 101: find a configuration with E_101(s) < -492. Every E_p(s) is divisible by 4, and E_p >= -p^(3/2)/2 because the coupling matrix has eigenvalues +sqrt(p), -sqrt(p) and 0.",
  "objective": "minimize",
  "submission": "Text file: the 101 spins s_0, ..., s_100 as a string of + and - (whitespace and lines starting with # are ignored), or as 101 integers 1 and -1.",
  "checker": {
@@ -17,9 +17,9 @@
  },
  "score": "the energy E_101(s), an integer (smaller is better)",
  "best_known": {
-  "value": "-480",
-  "exact": "-480",
-  "source": "Quantavane (Arhan Canli), 9 November 2026: a configuration of energy -480 found by simulated annealing with single-flip descent (tools/src/ising.c)",
+  "value": "-492",
+  "exact": "-492",
+  "source": "Quantavane (Arhan Canli), 10 November 2026: a configuration of energy -492 found by simulated annealing with single-flip descent (tools/src/ising.c; -480 on 9 November 2026)",
   "kind": "our construction (Quantavane Originals)",
   "provenance": {
    "keeper": "Quantavane Originals",
@@ -138,7 +138,7 @@
    ],
    [
     101,
-    -480,
+    -492,
     "best known (ours)",
     "",
     -504
@@ -152,28 +152,28 @@
    ],
    [
     113,
-    -572,
+    -580,
     "best known (ours)",
     "",
     -600
    ],
    [
     137,
-    -756,
+    -760,
     "best known (ours)",
     "",
     -800
    ],
    [
     149,
-    -856,
+    -860,
     "best known (ours)",
     "",
     -908
    ],
    [
     157,
-    -924,
+    -928,
     "best known (ours)",
     "",
     -980
@@ -194,29 +194,52 @@
    ],
    [
     193,
-    -1260,
+    -1268,
     "best known (ours)",
     "",
     -1340
    ],
    [
     197,
-    -1296,
+    -1300,
     "best known (ours)",
     "",
     -1380
    ]
   ],
-  "note": "Exact values come from enumerating all 2^(p-1) configurations with s_0 = +1 (the energy is invariant under s -> -s). Best known values for p >= 37 are ours (simulated annealing, 30 restarts of 20,000 sweeps, then single-flip descent); they are upper bounds."
+  "note": "Exact values come from enumerating all 2^(p-1) configurations with s_0 = +1 (the energy is invariant under s -> -s). Best known values for p >= 37 are ours (simulated annealing, 30 restarts of 20,000 sweeps, then single-flip descent); they are upper bounds. Rows improved on 10 November 2026 show the value of the cell (see Cells)."
  },
  "baseline": {
   "date": "2026-11-09",
   "holder": "Quantavane (Arhan Canli)",
-  "text": "-480 for p = 101, held by Quantavane (Arhan Canli), 9 November 2026: the configuration in `refs/paley-ising.txt`, found by simulated annealing (tools/src/ising.c, `ising anneal`). The exact values for p <= 29 come from `ising exact` (all configurations, Gray code). Lower bound for p = 101: -504 (spectral bound -p^(3/2)/2 = -507.5..., rounded up to a multiple of 4)."
+  "text": "-492 for p = 101, held by Quantavane (Arhan Canli), 10 November 2026 (our first value, 9 November, was -480): the configuration in `refs/paley-ising.txt`, found by simulated annealing (tools/src/ising.c, `ising anneal`). The exact values for p <= 29 come from `ising exact` (all configurations, Gray code). Lower bound for p = 101: -504 (spectral bound -p^(3/2)/2 = -507.5..., rounded up to a multiple of 4)."
  },
  "bound": {
   "value": "-504",
   "kind": "lower bound",
   "source": "E_p >= -p^(3/2)/2 (eigenvalues of the Paley conference matrix) and E_p = 0 mod 4"
+ },
+ "cells": {
+  "params": [
+   "p"
+  ],
+  "about": "p, a prime with p = 1 (mod 4)",
+  "headline": {
+   "p": 101
+  },
+  "args": [
+   "paley-ising",
+   "{p}"
+  ],
+  "title": "Ground state of the Paley Ising model on {p} spins",
+  "statement": "Spins s_0, ..., s_({p}-1) in {{+1, -1}} have energy E(s) = sum over 0 <= i < j <= {p}-1 of chi(j - i) s_i s_j, chi the Legendre symbol modulo {p} (antiferromagnetic couplings on the edges of the Paley graph, ferromagnetic on its non-edges). Determine the ground-state energy E_{p} = min over s of E(s).",
+  "submission": "Text file: the {p} spins s_0, ..., s_({p}-1) as a string of + and -, or as {p} integers 1 and -1.",
+  "exact": [
+   "13",
+   "17",
+   "29"
+  ],
+  "exact_how": "all 2^(p-1) configurations with s_0 = +1 (tools/src/ising.c, mode exact)",
+  "how": "simulated annealing, 40 restarts of 20,000 sweeps, then single-flip descent (tools/src/ising.c, mode anneal)"
  }
 }

@@ -71,6 +71,88 @@ Exact values for every prime p <= 113 by exhaustive branch and bound (each candi
 
 174 for p = 1009, held by Quantavane (Arhan Canli), 9 November 2026: the set in `refs/qr-sumfree.txt`. Lower bound from the general theory: at least |QR_p|/3 + O(|QR_p|/p), about 168; upper bound: trivially at most 504, and no better bound is proved here.
 
+## Cells
+
+The same question at each value of its parameter (p, a prime): 71 cells, 21 of them exact (an exhaustive search finished) and 50 best known (ours). Each cell has its certificate in `refs/cells/qr-sumfree/` (the headline cell uses `collections/originals/refs/qr-sumfree.txt`) and is checked with the family's checker:
+
+    python3 -I obb.py check CELL FILE                  # for example qr-sumfree-29
+
+| cell | p | value | status |
+| --- | --- | --- | --- |
+| `qr-sumfree-29` | 29 | 8 | exact |
+| `qr-sumfree-31` | 31 | 5 | exact |
+| `qr-sumfree-37` | 37 | 10 | exact |
+| `qr-sumfree-41` | 41 | 10 | exact |
+| `qr-sumfree-43` | 43 | 9 | exact |
+| `qr-sumfree-47` | 47 | 8 | exact |
+| `qr-sumfree-53` | 53 | 14 | exact |
+| `qr-sumfree-59` | 59 | 12 | exact |
+| `qr-sumfree-61` | 61 | 16 | exact |
+| `qr-sumfree-67` | 67 | 13 | exact |
+| `qr-sumfree-71` | 71 | 12 | exact |
+| `qr-sumfree-73` | 73 | 16 | exact |
+| `qr-sumfree-79` | 79 | 13 | exact |
+| `qr-sumfree-83` | 83 | 16 | exact |
+| `qr-sumfree-89` | 89 | 16 | exact |
+| `qr-sumfree-97` | 97 | 18 | exact |
+| `qr-sumfree-101` | 101 | 22 | exact |
+| `qr-sumfree-103` | 103 | 17 | exact |
+| `qr-sumfree-107` | 107 | 20 | exact |
+| `qr-sumfree-109` | 109 | 24 | exact |
+| `qr-sumfree-113` | 113 | 22 | exact |
+| `qr-sumfree-127` | 127 | 21 | best known |
+| `qr-sumfree-131` | 131 | 24 | best known |
+| `qr-sumfree-137` | 137 | 26 | best known |
+| `qr-sumfree-139` | 139 | 25 | best known |
+| `qr-sumfree-149` | 149 | 32 | best known |
+| `qr-sumfree-151` | 151 | 25 | best known |
+| `qr-sumfree-157` | 157 | 34 | best known |
+| `qr-sumfree-163` | 163 | 29 | best known |
+| `qr-sumfree-167` | 167 | 28 | best known |
+| `qr-sumfree-173` | 173 | 38 | best known |
+| `qr-sumfree-179` | 179 | 31 | best known |
+| `qr-sumfree-181` | 181 | 40 | best known |
+| `qr-sumfree-191` | 191 | 32 | best known |
+| `qr-sumfree-193` | 193 | 36 | best known |
+| `qr-sumfree-197` | 197 | 44 | best known |
+| `qr-sumfree-199` | 199 | 33 | best known |
+| `qr-sumfree-211` | 211 | 36 | best known |
+| `qr-sumfree-223` | 223 | 37 | best known |
+| `qr-sumfree-227` | 227 | 41 | best known |
+| `qr-sumfree-229` | 229 | 46 | best known |
+| `qr-sumfree-233` | 233 | 44 | best known |
+| `qr-sumfree-239` | 239 | 40 | best known |
+| `qr-sumfree-241` | 241 | 42 | best known |
+| `qr-sumfree-251` | 251 | 44 | best known |
+| `qr-sumfree-257` | 257 | 46 | best known |
+| `qr-sumfree-263` | 263 | 44 | best known |
+| `qr-sumfree-269` | 269 | 52 | best known |
+| `qr-sumfree-271` | 271 | 45 | best known |
+| `qr-sumfree-277` | 277 | 60 | best known |
+| `qr-sumfree-281` | 281 | 50 | best known |
+| `qr-sumfree-283` | 283 | 50 | best known |
+| `qr-sumfree-293` | 293 | 60 | best known |
+| `qr-sumfree-307` | 307 | 54 | best known |
+| `qr-sumfree-311` | 311 | 52 | best known |
+| `qr-sumfree-313` | 313 | 56 | best known |
+| `qr-sumfree-317` | 317 | 66 | best known |
+| `qr-sumfree-331` | 331 | 56 | best known |
+| `qr-sumfree-337` | 337 | 62 | best known |
+| `qr-sumfree-347` | 347 | 60 | best known |
+| `qr-sumfree-349` | 349 | 68 | best known |
+| `qr-sumfree-353` | 353 | 56 | best known |
+| `qr-sumfree-359` | 359 | 60 | best known |
+| `qr-sumfree-367` | 367 | 61 | best known |
+| `qr-sumfree-373` | 373 | 78 | best known |
+| `qr-sumfree-379` | 379 | 64 | best known |
+| `qr-sumfree-383` | 383 | 64 | best known |
+| `qr-sumfree-389` | 389 | 76 | best known |
+| `qr-sumfree-397` | 397 | 80 | best known |
+| `qr-sumfree-401` | 401 | 70 | best known |
+| `qr-sumfree-1009` | 1009 | 174 | best known (headline) |
+
+Exact cells: the value of the exhaustive branch and bound over subsets of the squares (9 November 2026); the certificate is a set of that size found by our local search. Best known cells: randomized greedy construction and local search (tools/qr_sumfree_search.py); a lower bound.
+
 ## Submitting and checking
 
 Format: Text file: the elements of A, distinct nonzero squares modulo 1009 written as integers in 1..1008, separated by spaces or newlines.

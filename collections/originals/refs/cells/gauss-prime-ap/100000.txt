@@ -1,0 +1,12 @@
+# 11 Gaussian primes in arithmetic progression with norms at most 10^5
+-100 -67
+-80 -67
+-60 -67
+-40 -67
+-20 -67
+0 -67
+20 -67
+40 -67
+60 -67
+80 -67
+100 -67

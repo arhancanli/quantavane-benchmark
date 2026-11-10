@@ -1,0 +1,2 @@
+# sum-free subset of the quadratic residues mod 131: 24 elements
+7 9 20 21 33 34 35 36 46 48 49 59 60 61 62 74 75 99 100 101 112 113 114 125

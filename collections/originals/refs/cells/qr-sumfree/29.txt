@@ -1,0 +1,2 @@
+# sum-free subset of the quadratic residues mod 29: 8 elements
+1 5 7 13 16 22 24 28

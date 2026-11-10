@@ -1,0 +1,2 @@
+# sum-free subset of the quadratic residues mod 47: 8 elements
+6 7 8 9 21 24 25 37

@@ -1,0 +1,2 @@
+# sum-free subset of the quadratic residues mod 43: 9 elements
+6 9 13 16 23 24 31 38 41

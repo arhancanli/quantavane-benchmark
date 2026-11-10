@@ -1,0 +1,9 @@
+# 8 points of T_19 with distinct triangle areas
+0 1
+0 17
+1 9
+3 10
+5 13
+8 3
+16 0
+18 0

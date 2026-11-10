@@ -1,0 +1,2 @@
+# sum-free subset of the quadratic residues mod 101: 22 elements
+4 5 14 17 23 24 30 33 36 43 49 52 58 65 68 71 77 78 84 87 96 97

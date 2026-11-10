@@ -1,0 +1,2 @@
+# sum-free subset of the quadratic residues mod 53: 14 elements
+1 4 7 10 13 15 24 29 38 40 43 46 49 52

@@ -1,0 +1,2 @@
+# sum-free subset of the quadratic residues mod 199: 33 elements
+2 10 13 14 18 25 29 33 45 49 53 56 57 61 64 65 72 80 92 100 103 104 111 115 123 131 139 158 162 177 178 182 193

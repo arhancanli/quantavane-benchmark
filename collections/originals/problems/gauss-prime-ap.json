@@ -168,5 +168,32 @@
   "date": "2026-11-09",
   "holder": "Quantavane (Arhan Canli)",
   "text": "18 terms, held by Quantavane (Arhan Canli), 9 November 2026: the progression in `refs/gauss-prime-ap.txt` (a = -23189 + 4404i, d = 1105 + 1105i, largest norm 557,124,937). No progression of 19 Gaussian primes is known to us."
+ },
+ "cells": {
+  "params": [
+   "N"
+  ],
+  "about": "N, the bound on the norms",
+  "headline": {
+   "N": 100000000000
+  },
+  "args": [
+   "gauss-prime-ap",
+   "{N}"
+  ],
+  "title": "The longest progression of Gaussian primes with norms at most {N}",
+  "statement": "Find the longest arithmetic progression a, a + d, ..., a + (k - 1)d (d a nonzero Gaussian integer) of Gaussian primes all of whose norms are at most {N}.",
+  "submission": "Text file: one line 'x y' per term x + yi of the progression, in order; every term a Gaussian prime of norm at most {N}.",
+  "exact": [
+   "100",
+   "1000",
+   "10000",
+   "100000",
+   "1000000",
+   "10000000",
+   "100000000"
+  ],
+  "exact_how": "the least largest norms M(k), exact for k <= 18 (tools/src/gaussap.c): the longest progression below N has the largest k with M(k) <= N, proved exact when M(k + 1) > N is proved",
+  "how": "our 18-term progression (tools/src/gaussap.c); no 19-term progression is known, and none exists below norm 1.4 x 10^9 with d in 1105(1 + i)Z[i]"
  }
 }

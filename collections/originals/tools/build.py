@@ -25,7 +25,10 @@ def day(iso):
 def load():
     out = []
     for f in sorted(glob.glob(os.path.join(HERE, "problems", "*.json"))):
-        out.append(json.load(open(f)))
+        p = json.load(open(f))
+        path = os.path.join(HERE, "cells", p["id"] + ".jsonl")
+        p["_cells"] = [json.loads(l) for l in open(path) if l.strip()] if os.path.exists(path) else []
+        out.append(p)
     out.sort(key=lambda p: (FIELDS.index(p["field"]), p["id"]))
     return out
 
@@ -68,6 +71,25 @@ def table_md(fv):
     return "\n".join(out)
 
 
+def cells_md(p):
+    cs = p["_cells"]
+    blk = p["cells"]
+    ex = sum(c["exact"] for c in cs)
+    lines = [f"The same question at each value of its parameter ({blk['about']}): {len(cs)} cells, {ex} of them exact "
+             f"(an exhaustive search finished) and {len(cs) - ex} best known (ours). Each cell has its certificate in "
+             f"`refs/cells/{p['id']}/` (the headline cell uses `{p['best_known']['provenance']['certificate']}`) "
+             f"and is checked with the family's checker:", "",
+             f"    python3 -I obb.py check CELL FILE                  # for example {cs[0]['id']}", "",
+             "| cell | " + " | ".join(blk["params"]) + " | value | status |",
+             "| --- | " + " | ".join("---" for _ in blk["params"]) + " | --- | --- |"]
+    for c in cs:
+        st = "exact" if c["exact"] else "best known"
+        lines.append(f"| `{c['id']}` | " + " | ".join(str(c["params"][n]) for n in blk["params"]) +
+                     f" | {c['best']} | {st}{' (headline)' if c.get('headline') else ''} |")
+    lines += ["", f"Exact cells: {blk['exact_how']}. Best known cells: {blk['how']}."]
+    return "\n".join(lines)
+
+
 def page(p):
     bk = p["best_known"]
     c = p["checker"]
@@ -82,6 +104,8 @@ def page(p):
     if p.get("first_values"):
         parts += ["## First values", "", table_md(p["first_values"]), ""]
     parts += ["## Best known value", "", p["baseline"]["text"], ""]
+    if p["_cells"]:
+        parts += ["## Cells", "", cells_md(p), ""]
     if p.get("bound"):
         parts += [f"Bound on the other side: {p['bound']['value']} ({p['bound']['kind']}; {p['bound']['source']}).", ""]
     parts += ["## Submitting and checking", "", f"Format: {p['submission']}", "",
@@ -102,28 +126,36 @@ def main():
         with open(os.path.join(HERE, "problems", p["id"] + ".md"), "w") as f:
             f.write(page(p))
     by = {fld: [p for p in probs if p["field"] == fld] for fld in FIELDS}
+    ncell = lambda p: len(p["_cells"]) or 1
     idx = {"collection": "Quantavane Originals", "problems": len(probs),
+           "counting": "questions: one per problem file (a family); cells: the family's question at each value of its "
+                       "natural parameter, each with its certificate (a family without a cells file is one cell)",
+           "questions": len(probs), "cells": sum(ncell(p) for p in probs),
+           "cells_exact": sum(sum(c["exact"] for c in p["_cells"]) for p in probs),
            "by_field": {k: len(v) for k, v in by.items() if v},
+           "cells_by_field": {k: sum(ncell(p) for p in v) for k, v in by.items() if v},
            "items": [{"id": p["id"], "field": p["field"], "title": p["title"], "status": p["status"],
                       "objective": p["objective"], "best_known": p["best_known"]["value"],
                       "holder": p["best_known"]["provenance"]["holder"], "date": p["baseline"]["date"],
-                      "checker": p["checker"]["program"], "page": f"problems/{p['id']}.md"} for p in probs]}
+                      "checker": p["checker"]["program"], "page": f"problems/{p['id']}.md", "cells": ncell(p),
+                      "cells_exact": sum(c["exact"] for c in p["_cells"])} for p in probs]}
     with open(os.path.join(HERE, "index.json"), "w") as f:
         json.dump(idx, f, indent=1, ensure_ascii=False)
         f.write("\n")
-    rows = ["| Problem | Field | Objective | Best known (ours, " + day(probs[0]["baseline"]["date"]) + ") |",
-            "| --- | --- | --- | --- |"] if probs else []
+    rows = ["| Problem | Field | Objective | Best known (ours, " + day(max(p["baseline"]["date"] for p in probs)) +
+            ") | Cells (exact) |", "| --- | --- | --- | --- | --- |"] if probs else []
     for p in probs:
         rows.append(f"| [{p['title']}](problems/{p['id']}.md) | {p['field']} | {p['objective']} | "
-                    f"{p['best_known']['value']} |")
+                    f"{p['best_known']['value']} | {ncell(p)} ({sum(c['exact'] for c in p['_cells'])}) |")
     readme = os.path.join(HERE, "README.md")
     text = open(readme).read()
     text = re.sub(r"<!--table-->.*?<!--/table-->", "<!--table-->\n" + "\n".join(rows) + "\n<!--/table-->", text,
                   flags=re.S)
     text = re.sub(r"<!--count-->.*?<!--/count-->", f"<!--count-->{len(probs)}<!--/count-->", text)
+    text = re.sub(r"<!--cells-->.*?<!--/cells-->", f"<!--cells-->{idx['cells']}<!--/cells-->", text)
     with open(readme, "w") as f:
         f.write(text)
-    print(f"{len(probs)} problems: " + ", ".join(f"{k} {len(v)}" for k, v in by.items() if v))
+    print(f"{len(probs)} questions, {idx['cells']} cells ({idx['cells_exact']} exact): " + ", ".join(f"{k} {len(v)}" for k, v in by.items() if v))
 
 
 if __name__ == "__main__":

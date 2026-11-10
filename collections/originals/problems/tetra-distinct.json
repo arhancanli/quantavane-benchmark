@@ -178,5 +178,33 @@
   "value": "27",
   "kind": "upper bound",
   "source": "the k(k - 1)/2 distances are different integers between 1 and 19^2 = 361"
+ },
+ "cells": {
+  "params": [
+   "N"
+  ],
+  "about": "N, the side of the tetrahedral grid",
+  "headline": {
+   "N": 20
+  },
+  "args": [
+   "tetra-distinct",
+   "{N}"
+  ],
+  "title": "Distinct distances in the tetrahedral grid of side {N}",
+  "statement": "Choose as many points as possible of the tetrahedral grid of side {N} (the points a e1 + b e2 + c e3 with a, b, c >= 0 and a + b + c <= {N} - 1, unit vectors at 60 degrees, a piece of the face-centred cubic lattice) so that all pairwise distances between them are different.",
+  "submission": "Text file: one point 'a b c' per line (a, b, c >= 0, a + b + c <= {N} - 1).",
+  "exact": [
+   "3",
+   "4",
+   "5",
+   "6",
+   "7",
+   "8",
+   "9",
+   "10"
+  ],
+  "exact_how": "exhaustive depth-first search over the subsets of the grid (tools/src/tetradist.c, mode exact)",
+  "how": "local search moving one point at a time to the position creating the fewest repeated distances, with a tabu list (tools/src/tetradist.c, mode ls)"
  }
 }

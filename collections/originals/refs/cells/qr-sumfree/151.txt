@@ -1,0 +1,2 @@
+# sum-free subset of the quadratic residues mod 151: 25 elements
+1 4 9 17 20 22 25 36 38 49 62 78 81 86 91 94 97 99 110 118 123 128 136 139 144

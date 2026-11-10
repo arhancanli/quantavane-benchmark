@@ -6,7 +6,7 @@ Best known value: **165** (minimize), Quantavane (Arhan Canli), 9 November 2026:
 
 ## Statement
 
-A Y-shaped interferometer, like the Very Large Array, places its antennas on three straight arms that meet at 120 degrees. Put antennas at whole-number distances 1, 2, 3, ... from the centre (the centre itself unused). Two antennas on one arm at distances a and a' are |a - a'| apart; two on different arms are sqrt(a^2 + ab + b^2) apart. Each baseline length gives one sample of the visibility of a circularly symmetric source, so we ask that all N(N - 1)/2 baseline lengths be different. Let L(N) be the shortest arm length for which N antennas fit. We find L(N) exactly for N <= 12. The headline cell is N = 27, the number of antennas of the VLA: find a Y array of 27 antennas with all 351 baseline lengths different and arms shorter than 165 (ours).
+A Y-shaped interferometer, like the Very Large Array, places its antennas on three straight arms that meet at 120 degrees. Put antennas at whole-number distances 1, 2, 3, ... from the centre (the centre itself unused). Two antennas on one arm at distances a and a' are |a - a'| apart; two on different arms are sqrt(a^2 + ab + b^2) apart. Each baseline length gives one sample of the visibility of a circularly symmetric source, so we ask that all N(N - 1)/2 baseline lengths be different. Let L(N) be the shortest arm length for which N antennas fit. We find L(N) exactly for N <= 13. The headline cell is N = 27, the number of antennas of the VLA: find a Y array of 27 antennas with all 351 baseline lengths different and arms shorter than 165 (ours).
 
 ## Why it is interesting
 
@@ -52,15 +52,64 @@ Verdict: new question: non-redundant Y arrays are built with different baseline 
 | 10 | 14 | 1,2,10,13 / 4,8,14 / 5,7,12 | exact (exhaustive search) |
 | 11 | 17 | 1,2,7,15,17 / 3,10,14 / 4,13,16 | exact (exhaustive search) |
 | 12 | 21 | 1,2,9,21 / 3,8,12,18 / 4,6,17,20 | exact (exhaustive search) |
-| 15 | 35 | 4,7,11,27,33,35 / 1,12,22,31 / 2,16,17,29,34 | best known (ours, local search) |
+| 13 | 25 | 1,2,9,23,25 / 3,12,16,22 / 4,7,19,24 | exact (exhaustive search, 10 November 2026) |
+| 15 | 34 | 1,6,18,19,33 / 2,13,23,32 / 3,5,11,27,31,34 | best known (ours, local search) |
 | 20 | 73 | 14,15,18,42,60,68 / 1,6,26,40,61,63,73 / 5,12,21,34,53,64,70 | best known (ours, local search) |
 | 27 | 165 | 2,13,15,36,117,139,143,153,158 / 1,4,33,51,71,78,113,156,164,165 / 10,47,75,100,106,130,146,163 | best known (ours, local search) |
 
-Exact values from tools/src/yarray.c (mode exact: depth-first search over arms and distances, increasing L). OEIS has no sequence with the exact terms 1, 2, 3, 5, 6, 7, 9, 11, 14, 17, 21.
+Exact values from tools/src/yarray.c (mode exact: depth-first search over arms and distances, increasing L). OEIS has no sequence with the exact terms 1, 2, 3, 5, 6, 7, 9, 11, 14, 17, 21. Rows improved on 10 November 2026 show the value of the cell (see Cells).
 
 ## Best known value
 
 arm length 165, held by Quantavane (Arhan Canli), 9 November 2026: the array in `refs/y-array.txt` (arms of 9, 10, 8 antennas). Lower bound 109.
+
+## Cells
+
+The same question at each value of its parameter (N, the number of antennas): 37 cells, 10 of them exact (an exhaustive search finished) and 27 best known (ours). Each cell has its certificate in `refs/cells/y-array/` (the headline cell uses `collections/originals/refs/y-array.txt`) and is checked with the family's checker:
+
+    python3 -I obb.py check CELL FILE                  # for example y-array-4
+
+| cell | N | value | status |
+| --- | --- | --- | --- |
+| `y-array-4` | 4 | 3 | exact |
+| `y-array-5` | 5 | 5 | exact |
+| `y-array-6` | 6 | 6 | exact |
+| `y-array-7` | 7 | 7 | exact |
+| `y-array-8` | 8 | 9 | exact |
+| `y-array-9` | 9 | 11 | exact |
+| `y-array-10` | 10 | 14 | exact |
+| `y-array-11` | 11 | 17 | exact |
+| `y-array-12` | 12 | 21 | exact |
+| `y-array-13` | 13 | 25 | exact |
+| `y-array-14` | 14 | 30 | best known |
+| `y-array-15` | 15 | 34 | best known |
+| `y-array-16` | 16 | 41 | best known |
+| `y-array-17` | 17 | 49 | best known |
+| `y-array-18` | 18 | 56 | best known |
+| `y-array-19` | 19 | 65 | best known |
+| `y-array-20` | 20 | 73 | best known |
+| `y-array-21` | 21 | 86 | best known |
+| `y-array-22` | 22 | 96 | best known |
+| `y-array-23` | 23 | 105 | best known |
+| `y-array-24` | 24 | 120 | best known |
+| `y-array-25` | 25 | 137 | best known |
+| `y-array-26` | 26 | 151 | best known |
+| `y-array-27` | 27 | 165 | best known (headline) |
+| `y-array-28` | 28 | 186 | best known |
+| `y-array-29` | 29 | 202 | best known |
+| `y-array-30` | 30 | 223 | best known |
+| `y-array-31` | 31 | 245 | best known |
+| `y-array-32` | 32 | 264 | best known |
+| `y-array-33` | 33 | 290 | best known |
+| `y-array-34` | 34 | 311 | best known |
+| `y-array-35` | 35 | 345 | best known |
+| `y-array-36` | 36 | 369 | best known |
+| `y-array-37` | 37 | 402 | best known |
+| `y-array-38` | 38 | 423 | best known |
+| `y-array-39` | 39 | 463 | best known |
+| `y-array-40` | 40 | 490 | best known |
+
+Exact cells: depth-first search over arms and distances with L increasing, finished (tools/src/yarray.c, mode exact). Best known cells: local search moving one antenna at a time to the place creating the fewest repeated lengths, with a tabu list, shortening the arms while it succeeds (tools/src/yarray.c, mode ls).
 
 Bound on the other side: 109 (lower bound; the arms carry at least 108 pairs of antennas (sizes 9, 9, 9 minimise the count), whose differences are different integers between 1 and L - 1).
 

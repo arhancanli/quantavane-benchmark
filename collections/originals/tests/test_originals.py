@@ -677,6 +677,85 @@ def cross_checks():
     expect("cross e8-coulomb three roots: the minimum energy is 1/72 (brute force)", best3 == Fraction(1, 72), best3)
 
 
+def cell_lines(pid):
+    path = os.path.join(HERE, "cells", pid + ".jsonl")
+    return [json.loads(l) for l in open(path) if l.strip()] if os.path.exists(path) else []
+
+
+def cells():
+    """Cells (one question at each value of its parameter): tools/cells.py runs every cell's certificate through the
+    family's checker and writes the cells files; they must come out unchanged, so every stated value is the value the
+    checker proves. One cell per family through obb.py; a red control per family: the certificate of its largest cell
+    checked as its smallest cell (the parameter must be enforced), and one broken certificate."""
+    before = {f: open(os.path.join(HERE, "cells", f)).read() for f in os.listdir(os.path.join(HERE, "cells"))} \
+        if os.path.isdir(os.path.join(HERE, "cells")) else {}
+    r = subprocess.run([sys.executable, "-I", os.path.join(HERE, "tools", "cells.py")], capture_output=True, text=True)
+    after = {f: open(os.path.join(HERE, "cells", f)).read() for f in os.listdir(os.path.join(HERE, "cells"))}
+    expect(f"cells every certificate is certified with its stated value; cells files up to date ({len(after)} families,"
+           f" {sum(t.count(chr(10)) for t in after.values())} cells)", before == after and r.returncode == 0,
+           (r.stdout + r.stderr)[-400:])
+    P = problems_by_id()
+    for f in sorted(after):
+        pid = f[:-6]
+        cs = cell_lines(pid)
+        blk = P[pid]["cells"]
+        expect(f"cells {pid}: every cell is under its family, with a unique id, parameters and a certificate",
+               len({c["id"] for c in cs}) == len(cs) and all(c["family"] == pid and c["id"].startswith(pid + "-")
+                                                             and set(c["params"]) == set(blk["params"]) for c in cs)
+               and sum(bool(c.get("headline")) for c in cs) == 1, pid)
+        sample = next((c for c in cs if not c.get("headline")), cs[0])
+        rr = subprocess.run([sys.executable, "-I", os.path.join(ROOT, "obb.py"), "check", sample["id"],
+                             os.path.join(ROOT, sample["certificate"])], capture_output=True, text=True)
+        expect(f"cells {sample['id']}: obb.py check certifies the cell and says it does not improve",
+               "does not improve" in rr.stdout and f"certified value" in rr.stdout, rr.stdout[-300:])
+        if len(cs) >= 2:
+            lo, hi = (cs[0], cs[-1]) if pid not in SMALL_AS_LARGE else (cs[-1], cs[0])
+            vals = {k: v for k, v in lo["params"].items()}
+            args = [a.format(**vals) for a in blk["args"]]
+            code, res, out = run(P[pid]["checker"]["program"], [os.path.join(ROOT, a) if a.startswith("collections/") else a
+                                                                 for a in args] + [os.path.join(ROOT, hi["certificate"])])
+            expect(f"red   {pid}: the certificate of {hi['id']} checked as {lo['id']} is refused", code == 1,
+                   f"exit {code}: {out[-200:]}")
+        broken = CELL_CONTROLS.get(pid)
+        if broken:
+            ex = [c for c in cs if c["exact"]]
+            c = ex[len(ex) // 2] if pid in EXACT_CONTROL and ex else cs[len(cs) // 2]
+            text, why = broken(open(os.path.join(ROOT, c["certificate"])).read(), c["params"])
+            args = [a.format(**c["params"]) for a in blk["args"]]
+            code, res, out = run(P[pid]["checker"]["program"], [os.path.join(ROOT, a) if a.startswith("collections/") else a
+                                                                 for a in args] + [write(f"cellctl_{c['id']}.txt", text)])
+            expect(f"red   {c['id']}: {why} is refused", code == 1, f"exit {code}: {out[-200:]}")
+
+
+def _drop_last_line(text, params):
+    L = lines_of(text)
+    return "\n".join(L[:-1]) + "\n", "the certificate without its last line"
+
+
+def _dup_first_point(text, params):
+    L = lines_of(text)
+    return "\n".join(L + [L[0]]) + "\n", "the certificate with its first point repeated"
+
+
+def _flip_spin(text, params):
+    s = "".join(lines_of(text))
+    return s[:-1] + "\n", "a configuration with one spin missing"
+
+
+SMALL_AS_LARGE = {"sync-quadratic"}     # a long reset word also resets a smaller automaton; a short one cannot reset a large
+EXACT_CONTROL = {"sync-quadratic"}      # the control removes a letter from a shortest word (an exact cell)
+
+
+def _drop_last_letter(text, params):
+    return "".join(lines_of(text))[:-1] + "\n", "a shortest reset word without its last letter"
+
+
+CELL_CONTROLS = {"sync-quadratic": _drop_last_letter, "tri-distinct": _dup_first_point, "tri-areas": _dup_first_point, "tetra-distinct": _dup_first_point,
+                 "paley-ising": _flip_spin,
+                 "y-array": lambda t, p: ("\n".join([lines_of(t)[0] + " " + lines_of(t)[0].split()[0]] + lines_of(t)[1:])
+                                          + "\n", "an arm with one distance used twice")}
+
+
 def pages():
     """The generated pages, index.json and README table match the problem files."""
     before = {f: open(os.path.join(HERE, f)).read() for f in ("index.json", "README.md")}
@@ -692,6 +771,7 @@ if __name__ == "__main__":
     references()
     controls()
     cross_checks()
+    cells()
     pages()
     print(f"{len(failures)} failures" if failures else "all originals tests passed")
     sys.exit(1 if failures else 0)

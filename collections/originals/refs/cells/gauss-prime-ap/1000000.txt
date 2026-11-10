@@ -1,0 +1,13 @@
+# 12 Gaussian primes in arithmetic progression with norms at most 10^6
+-268 -73
+-213 -58
+-158 -43
+-103 -28
+-48 -13
+7 2
+62 17
+117 32
+172 47
+227 62
+282 77
+337 92

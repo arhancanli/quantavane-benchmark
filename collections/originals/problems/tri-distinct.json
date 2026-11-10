@@ -162,5 +162,38 @@
   "value": "22",
   "kind": "upper bound",
   "source": "C(g,2) <= 236, the number of nonzero Loschian numbers a^2 + ab + b^2 <= 841"
+ },
+ "cells": {
+  "params": [
+   "N"
+  ],
+  "about": "N, the side of the triangular grid",
+  "headline": {
+   "N": 30
+  },
+  "args": [
+   "tri-distinct",
+   "{N}"
+  ],
+  "title": "Distinct distances in the triangular grid of side {N}",
+  "statement": "Choose as many points as possible of the triangular grid T_{N} (the points a + b e^(i pi/3) with a, b >= 0 and a + b <= {N} - 1) so that all pairwise distances between them are different.",
+  "submission": "Text file: one point 'a b' per line (a, b >= 0, a + b <= {N} - 1).",
+  "exact": [
+   "4",
+   "5",
+   "6",
+   "7",
+   "8",
+   "9",
+   "10",
+   "11",
+   "12",
+   "13",
+   "14",
+   "15",
+   "16"
+  ],
+  "exact_how": "exhaustive branch and bound over the subsets of T_N (tools/src/trigrid.c, mode dist)",
+  "how": "randomized greedy construction and local search (tools/tri_distinct_search.py)"
  }
 }

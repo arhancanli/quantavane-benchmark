@@ -1,0 +1,2 @@
+# sum-free subset of the quadratic residues mod 137: 26 elements
+2 8 15 18 22 25 28 32 38 49 59 65 68 69 72 78 88 99 105 109 112 115 119 122 129 135

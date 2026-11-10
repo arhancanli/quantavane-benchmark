@@ -1,0 +1,2 @@
+# sum-free subset of the quadratic residues mod 67: 13 elements
+10 14 15 16 33 35 36 37 54 55 56 59 60

@@ -61,6 +61,44 @@ Exact values by exhaustive branch and bound over all subsets of T_n (tools/src/t
 
 14 for n = 30, held by Quantavane (Arhan Canli), 9 November 2026: the points in `refs/tri-distinct.txt`, found by randomized greedy construction with local search (tools/tri_distinct_search.py). Upper bound: the C(g, 2) squared distances are distinct nonzero Loschian numbers at most (n - 1)^2 = 841, and there are 236 of them, so C(g, 2) <= 236 and g(30) <= 22.
 
+## Cells
+
+The same question at each value of its parameter (N, the side of the triangular grid): 27 cells, 13 of them exact (an exhaustive search finished) and 14 best known (ours). Each cell has its certificate in `refs/cells/tri-distinct/` (the headline cell uses `collections/originals/refs/tri-distinct.txt`) and is checked with the family's checker:
+
+    python3 -I obb.py check CELL FILE                  # for example tri-distinct-4
+
+| cell | N | value | status |
+| --- | --- | --- | --- |
+| `tri-distinct-4` | 4 | 3 | exact |
+| `tri-distinct-5` | 5 | 4 | exact |
+| `tri-distinct-6` | 6 | 5 | exact |
+| `tri-distinct-7` | 7 | 5 | exact |
+| `tri-distinct-8` | 8 | 6 | exact |
+| `tri-distinct-9` | 9 | 6 | exact |
+| `tri-distinct-10` | 10 | 7 | exact |
+| `tri-distinct-11` | 11 | 7 | exact |
+| `tri-distinct-12` | 12 | 8 | exact |
+| `tri-distinct-13` | 13 | 8 | exact |
+| `tri-distinct-14` | 14 | 9 | exact |
+| `tri-distinct-15` | 15 | 9 | exact |
+| `tri-distinct-16` | 16 | 10 | exact |
+| `tri-distinct-17` | 17 | 10 | best known |
+| `tri-distinct-18` | 18 | 10 | best known |
+| `tri-distinct-19` | 19 | 11 | best known |
+| `tri-distinct-20` | 20 | 11 | best known |
+| `tri-distinct-21` | 21 | 11 | best known |
+| `tri-distinct-22` | 22 | 12 | best known |
+| `tri-distinct-23` | 23 | 12 | best known |
+| `tri-distinct-24` | 24 | 12 | best known |
+| `tri-distinct-25` | 25 | 12 | best known |
+| `tri-distinct-26` | 26 | 14 | best known |
+| `tri-distinct-27` | 27 | 14 | best known |
+| `tri-distinct-28` | 28 | 14 | best known |
+| `tri-distinct-29` | 29 | 14 | best known |
+| `tri-distinct-30` | 30 | 14 | best known (headline) |
+
+Exact cells: exhaustive branch and bound over the subsets of T_N (tools/src/trigrid.c, mode dist). Best known cells: randomized greedy construction and local search (tools/tri_distinct_search.py).
+
 Bound on the other side: 22 (upper bound; C(g,2) <= 236, the number of nonzero Loschian numbers a^2 + ab + b^2 <= 841).
 
 ## Submitting and checking

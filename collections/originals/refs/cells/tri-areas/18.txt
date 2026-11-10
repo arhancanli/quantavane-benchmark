@@ -1,0 +1,9 @@
+# 8 points of T_18 with distinct triangle areas
+0 6
+0 17
+1 0
+2 12
+3 5
+9 7
+10 7
+12 1

@@ -1,0 +1,2 @@
+# sum-free subset of the quadratic residues mod 79: 13 elements
+2 11 16 21 25 26 31 40 44 49 67 72 76

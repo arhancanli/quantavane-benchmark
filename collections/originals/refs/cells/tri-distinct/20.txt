@@ -1,0 +1,12 @@
+# 11 points of T_20 with distinct distances
+0 0
+0 9
+1 1
+1 17
+4 8
+5 13
+11 5
+12 0
+15 3
+16 2
+18 0

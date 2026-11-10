@@ -141,5 +141,36 @@
   "value": "18",
   "kind": "upper bound",
   "source": "C(t,3) <= 841 distinct nonzero areas (in units of sqrt(3)/4)"
+ },
+ "cells": {
+  "params": [
+   "N"
+  ],
+  "about": "N, the side of the triangular grid",
+  "headline": {
+   "N": 30
+  },
+  "args": [
+   "tri-areas",
+   "{N}"
+  ],
+  "title": "Distinct triangle areas in the triangular grid of side {N}",
+  "statement": "Choose as many points as possible of the triangular grid T_{N} (the points a + b e^(i pi/3) with a, b >= 0 and a + b <= {N} - 1) so that no three are collinear and all the triangles they form have different areas.",
+  "submission": "Text file: one point 'a b' per line (a, b >= 0, a + b <= {N} - 1).",
+  "exact": [
+   "4",
+   "5",
+   "6",
+   "7",
+   "8",
+   "9",
+   "10",
+   "11",
+   "12",
+   "13",
+   "14"
+  ],
+  "exact_how": "exhaustive branch and bound over the subsets of T_N (tools/src/trigrid.c, mode areas)",
+  "how": "randomized greedy construction and local search (tools/tri_distinct_search.py, mode areas)"
  }
 }

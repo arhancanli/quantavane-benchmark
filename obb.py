@@ -16,7 +16,9 @@ A problem is either a single problem, with its own file in problems/, or a cell 
 checker in families/NAME/family.json, and one line per cell in families/NAME/cells.jsonl (its parameters, the best
 known value read from the keeper's table and who holds it), or a problem of a collection of our own: one file per
 problem in collections/NAME/problems/ (the Quantavane Originals: new problems, each with its novelty check, its
-checker in collections/NAME/checkers/ and our first value). index.json lists both, with counts and SHA-256. Every
+checker in collections/NAME/checkers/ and our first value), or a cell of such a problem: the same question at one
+value of its natural parameter, one line per cell in collections/NAME/cells/ID.jsonl with its certificate (the
+questions and the cells are counted apart). index.json lists both, with counts and SHA-256. Every
 problem has an exact checker in checkers/ (our own code, from the definitions on the source pages; standard library
 only). A submission scores the exact value its checker proves; it "improves" a
 problem when that value beats the best known one. Two reference values are kept apart: the best value on the
@@ -125,6 +127,27 @@ def materialize(fam, cell):
     return p
 
 
+def collection_cell(name, cell):
+    """A cell of a collection's family (collections/NAME/cells/FAMILY.jsonl), written out like a problem file: the
+    family's question at one value of its parameter, with the family's checker and the cell's certificate."""
+    fam = json.load(open(os.path.join(COLLECTIONS, name, "problems", cell["family"] + ".json")))
+    blk = fam["cells"]
+    values = dict(cell["params"], best=cell["best"])
+    status = (f"Exact: {cell['best']} ({cell['how']})." if cell["exact"] else
+              f"Best known: {cell['best']} (ours, {cell['how']}).")
+    p = {k: v for k, v in fam.items() if k not in ("cells", "first_values", "baseline", "bound")}
+    p.update(id=cell["id"], family=fam["id"], title=fill(blk["title"], values),
+             statement=fill(blk["statement"], values) + " " + status,
+             submission=fill(blk["submission"], values), exact_cell=cell["exact"])
+    p["checker"] = dict(fam["checker"], args=fill(blk["args"], values))
+    holder = fam["best_known"]["provenance"]["holder"]
+    p["best_known"] = {"value": cell["best"], "exact": cell["best"],
+                       "source": f"{holder}, {cell['date']}: {cell['how']}", "kind": "our construction (cell)",
+                       "provenance": dict(fam["best_known"]["provenance"], read=cell["date"],
+                                          certificate=cell["certificate"])}
+    return p
+
+
 def find_problem(pid):
     """A single problem (problems/PID.json) or a family cell, or None."""
     path = os.path.join(HERE, "problems", pid + ".json")
@@ -140,6 +163,14 @@ def find_problem(pid):
                 if p["id"] == pid:
                     return p
     key = '{"id": "' + pid + '"'
+    if re.fullmatch(r"[A-Za-z0-9_.+-]+", pid) and os.path.isdir(COLLECTIONS):
+        for name in sorted(os.listdir(COLLECTIONS)):
+            cdir = os.path.join(COLLECTIONS, name, "cells")
+            for f in sorted(os.listdir(cdir)) if os.path.isdir(cdir) else []:
+                if f.endswith(".jsonl") and pid.startswith(f[:-6] + "-"):
+                    for line in open(os.path.join(cdir, f)):
+                        if line.startswith(key + ","):
+                            return collection_cell(name, json.loads(line))
     for fam in families().values():
         if not any(pid.startswith(x) for x in fam["id_prefixes"]):
             continue
@@ -246,6 +277,12 @@ def cmd_list(family=None):
                   f"{p.get('field', '')}")
             print(f"{'':28s} {p['title']}")
         print(f"\n{shown} problems in the collection {family} (collections/{family}/README.md)")
+        cdir = os.path.join(COLLECTIONS, family, "cells")
+        if os.path.isdir(cdir):
+            n = {f[:-6]: sum(1 for l in open(os.path.join(cdir, f)) if l.strip())
+                 for f in sorted(os.listdir(cdir)) if f.endswith(".jsonl")}
+            print(f"{sum(n.values())} cells in {len(n)} of these families (each the family's question at one value of "
+                  f"its parameter; collections/{family}/cells/FAMILY.jsonl, checked with obb.py check CELL FILE)")
         return
     for pid, p in probs.items():
         if family and p.get("family") != family:

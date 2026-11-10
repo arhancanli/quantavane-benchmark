@@ -1,0 +1,2 @@
+# sum-free subset of the quadratic residues mod 31: 5 elements
+4 5 14 16 25

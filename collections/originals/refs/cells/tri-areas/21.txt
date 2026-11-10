@@ -1,0 +1,9 @@
+# 8 points of T_21 with distinct triangle areas
+0 14
+1 19
+2 1
+2 5
+5 4
+7 12
+11 0
+15 5

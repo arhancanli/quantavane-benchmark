@@ -65,6 +65,33 @@ Exact values from an exhaustive depth-first search (tools/src/tetradist.c, mode 
 
 16 points, held by Quantavane (Arhan Canli), 9 November 2026: the set in `refs/tetra-distinct.txt`. Upper bound 27 (k(k - 1)/2 <= 19^2 = 361).
 
+## Cells
+
+The same question at each value of its parameter (N, the side of the tetrahedral grid): 16 cells, 8 of them exact (an exhaustive search finished) and 8 best known (ours). Each cell has its certificate in `refs/cells/tetra-distinct/` (the headline cell uses `collections/originals/refs/tetra-distinct.txt`) and is checked with the family's checker:
+
+    python3 -I obb.py check CELL FILE                  # for example tetra-distinct-3
+
+| cell | N | value | status |
+| --- | --- | --- | --- |
+| `tetra-distinct-3` | 3 | 3 | exact |
+| `tetra-distinct-4` | 4 | 4 | exact |
+| `tetra-distinct-5` | 5 | 5 | exact |
+| `tetra-distinct-6` | 6 | 6 | exact |
+| `tetra-distinct-7` | 7 | 7 | exact |
+| `tetra-distinct-8` | 8 | 8 | exact |
+| `tetra-distinct-9` | 9 | 9 | exact |
+| `tetra-distinct-10` | 10 | 10 | exact |
+| `tetra-distinct-11` | 11 | 10 | best known |
+| `tetra-distinct-12` | 12 | 11 | best known |
+| `tetra-distinct-13` | 13 | 11 | best known |
+| `tetra-distinct-14` | 14 | 12 | best known |
+| `tetra-distinct-15` | 15 | 12 | best known |
+| `tetra-distinct-16` | 16 | 13 | best known |
+| `tetra-distinct-17` | 17 | 14 | best known |
+| `tetra-distinct-20` | 20 | 16 | best known (headline) |
+
+Exact cells: exhaustive depth-first search over the subsets of the grid (tools/src/tetradist.c, mode exact). Best known cells: local search moving one point at a time to the position creating the fewest repeated distances, with a tabu list (tools/src/tetradist.c, mode ls).
+
 Bound on the other side: 27 (upper bound; the k(k - 1)/2 distances are different integers between 1 and 19^2 = 361).
 
 ## Submitting and checking

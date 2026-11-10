@@ -1,0 +1,9 @@
+# 8 points of T_23 with distinct triangle areas
+0 4
+2 14
+4 1
+5 16
+6 9
+12 0
+17 4
+17 5

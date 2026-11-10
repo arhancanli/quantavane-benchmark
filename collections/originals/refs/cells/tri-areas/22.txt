@@ -1,0 +1,9 @@
+# 8 points of T_22 with distinct triangle areas
+0 0
+0 19
+1 4
+3 2
+4 8
+6 15
+9 7
+20 0

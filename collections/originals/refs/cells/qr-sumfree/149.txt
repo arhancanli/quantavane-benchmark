@@ -1,0 +1,2 @@
+# sum-free subset of the quadratic residues mod 149: 32 elements
+5 9 19 22 25 29 35 36 39 42 46 49 53 63 69 73 76 80 86 96 100 103 107 110 113 114 120 124 127 130 140 144

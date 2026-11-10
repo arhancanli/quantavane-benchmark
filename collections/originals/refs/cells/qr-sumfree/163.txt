@@ -1,0 +1,2 @@
+# sum-free subset of the quadratic residues mod 163: 29 elements
+9 10 33 34 49 51 53 54 55 69 71 74 90 91 93 95 111 113 115 131 132 133 134 135 136 151 152 155 156

@@ -63,6 +63,27 @@ Exact values from tools/src/gaussap.c: mode exact (every pair of terms) for k <=
 
 18 terms, held by Quantavane (Arhan Canli), 9 November 2026: the progression in `refs/gauss-prime-ap.txt` (a = -23189 + 4404i, d = 1105 + 1105i, largest norm 557,124,937). No progression of 19 Gaussian primes is known to us.
 
+## Cells
+
+The same question at each value of its parameter (N, the bound on the norms): 10 cells, 7 of them exact (an exhaustive search finished) and 3 best known (ours). Each cell has its certificate in `refs/cells/gauss-prime-ap/` (the headline cell uses `collections/originals/refs/gauss-prime-ap.txt`) and is checked with the family's checker:
+
+    python3 -I obb.py check CELL FILE                  # for example gauss-prime-ap-100
+
+| cell | N | value | status |
+| --- | --- | --- | --- |
+| `gauss-prime-ap-100` | 100 | 8 | exact |
+| `gauss-prime-ap-1000` | 1000 | 9 | exact |
+| `gauss-prime-ap-10000` | 10000 | 10 | exact |
+| `gauss-prime-ap-100000` | 100000 | 11 | exact |
+| `gauss-prime-ap-1000000` | 1000000 | 12 | exact |
+| `gauss-prime-ap-10000000` | 10000000 | 14 | exact |
+| `gauss-prime-ap-100000000` | 100000000 | 15 | exact |
+| `gauss-prime-ap-1000000000` | 1000000000 | 18 | best known |
+| `gauss-prime-ap-10000000000` | 10000000000 | 18 | best known |
+| `gauss-prime-ap-100000000000` | 100000000000 | 18 | best known (headline) |
+
+Exact cells: the least largest norms M(k), exact for k <= 18 (tools/src/gaussap.c): the longest progression below N has the largest k with M(k) <= N, proved exact when M(k + 1) > N is proved. Best known cells: our 18-term progression (tools/src/gaussap.c); no 19-term progression is known, and none exists below norm 1.4 x 10^9 with d in 1105(1 + i)Z[i].
+
 ## Submitting and checking
 
 Format: Text file: one line 'x y' per term x + yi of the progression, in order; every term a Gaussian prime of norm at most 10^11.

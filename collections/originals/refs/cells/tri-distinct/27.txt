@@ -1,0 +1,15 @@
+# 14 points of T_27 with distinct distances (the set found for T_26)
+0 0
+0 13
+0 24
+1 15
+2 2
+4 2
+5 19
+7 14
+7 18
+8 13
+15 4
+16 0
+22 0
+25 0

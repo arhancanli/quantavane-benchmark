@@ -4,7 +4,7 @@
  "field": "Astronomy",
  "title": "Y-shaped arrays with all baseline lengths different",
  "status": "open",
- "statement": "A Y-shaped interferometer, like the Very Large Array, places its antennas on three straight arms that meet at 120 degrees. Put antennas at whole-number distances 1, 2, 3, ... from the centre (the centre itself unused). Two antennas on one arm at distances a and a' are |a - a'| apart; two on different arms are sqrt(a^2 + ab + b^2) apart. Each baseline length gives one sample of the visibility of a circularly symmetric source, so we ask that all N(N - 1)/2 baseline lengths be different. Let L(N) be the shortest arm length for which N antennas fit. We find L(N) exactly for N <= 12. The headline cell is N = 27, the number of antennas of the VLA: find a Y array of 27 antennas with all 351 baseline lengths different and arms shorter than 165 (ours).",
+ "statement": "A Y-shaped interferometer, like the Very Large Array, places its antennas on three straight arms that meet at 120 degrees. Put antennas at whole-number distances 1, 2, 3, ... from the centre (the centre itself unused). Two antennas on one arm at distances a and a' are |a - a'| apart; two on different arms are sqrt(a^2 + ab + b^2) apart. Each baseline length gives one sample of the visibility of a circularly symmetric source, so we ask that all N(N - 1)/2 baseline lengths be different. Let L(N) be the shortest arm length for which N antennas fit. We find L(N) exactly for N <= 13. The headline cell is N = 27, the number of antennas of the VLA: find a Y array of 27 antennas with all 351 baseline lengths different and arms shorter than 165 (ours).",
  "objective": "minimize",
  "submission": "Text file: three lines, the distances (positive integers) of the antennas on each arm ('-' for an empty arm), 27 antennas in all.",
  "checker": {
@@ -127,9 +127,15 @@
     "exact (exhaustive search)"
    ],
    [
+    13,
+    25,
+    "1,2,9,23,25 / 3,12,16,22 / 4,7,19,24",
+    "exact (exhaustive search, 10 November 2026)"
+   ],
+   [
     15,
-    35,
-    "4,7,11,27,33,35 / 1,12,22,31 / 2,16,17,29,34",
+    34,
+    "1,6,18,19,33 / 2,13,23,32 / 3,5,11,27,31,34",
     "best known (ours, local search)"
    ],
    [
@@ -145,7 +151,7 @@
     "best known (ours, local search)"
    ]
   ],
-  "note": "Exact values from tools/src/yarray.c (mode exact: depth-first search over arms and distances, increasing L). OEIS has no sequence with the exact terms 1, 2, 3, 5, 6, 7, 9, 11, 14, 17, 21."
+  "note": "Exact values from tools/src/yarray.c (mode exact: depth-first search over arms and distances, increasing L). OEIS has no sequence with the exact terms 1, 2, 3, 5, 6, 7, 9, 11, 14, 17, 21. Rows improved on 10 November 2026 show the value of the cell (see Cells)."
  },
  "baseline": {
   "date": "2026-11-09",
@@ -156,5 +162,35 @@
   "value": "109",
   "kind": "lower bound",
   "source": "the arms carry at least 108 pairs of antennas (sizes 9, 9, 9 minimise the count), whose differences are different integers between 1 and L - 1"
+ },
+ "cells": {
+  "params": [
+   "N"
+  ],
+  "about": "N, the number of antennas",
+  "headline": {
+   "N": 27
+  },
+  "args": [
+   "y-array",
+   "{N}"
+  ],
+  "title": "Y-shaped array of {N} antennas with all baseline lengths different",
+  "statement": "Place {N} antennas on the three arms of a Y (arms at 120 degrees, antennas at whole-number distances 1, 2, 3, ... from the unused centre) so that all {N}({N} - 1)/2 baseline lengths are different, with the shortest possible arm length L({N}), the largest distance used.",
+  "submission": "Text file: three lines, the distances (positive integers) of the antennas on each arm ('-' for an empty arm), {N} antennas in all.",
+  "exact": [
+   "4",
+   "5",
+   "6",
+   "7",
+   "8",
+   "9",
+   "10",
+   "11",
+   "12",
+   "13"
+  ],
+  "exact_how": "depth-first search over arms and distances with L increasing, finished (tools/src/yarray.c, mode exact)",
+  "how": "local search moving one antenna at a time to the place creating the fewest repeated lengths, with a tabu list, shortening the arms while it succeeds (tools/src/yarray.c, mode ls)"
  }
 }

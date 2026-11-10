@@ -1,0 +1,2 @@
+# sum-free subset of the quadratic residues mod 191: 32 elements
+1 4 6 16 18 23 26 40 43 45 48 50 60 65 67 72 75 77 92 97 102 104 109 121 136 138 153 158 160 163 170 180
