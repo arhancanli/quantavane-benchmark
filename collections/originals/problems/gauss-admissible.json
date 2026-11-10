@@ -212,7 +212,7 @@
    [
     31,
     "122",
-    "84"
+    "76"
    ],
    [
     32,
@@ -241,8 +241,8 @@
    ],
    [
     37,
-    "160",
-    "97"
+    "148",
+    "93"
    ],
    [
     38,
@@ -256,8 +256,8 @@
    ],
    [
     40,
-    "170",
-    "112"
+    "164",
+    "111"
    ],
    [
     42,
@@ -292,7 +292,7 @@
    [
     56,
     "260",
-    "163"
+    "156"
    ],
    [
     60,
@@ -301,11 +301,11 @@
    ],
    [
     64,
-    "298",
+    "296",
     "196"
    ]
   ],
-  "note": "Exact values come from an exhaustive branch and bound (tools/src/admissible_exact.c: translate so that the lexicographically least point is 0, add points in a fixed order, prune when a prime ideal's classes are all covered). The other values are our best known upper bounds (tools/admissible_sieve.py), held by Quantavane (Arhan Canli), 9 November 2026. Exact searches were stopped at k = 26 for Z[i] and k = 29 for Z[w]."
+  "note": "Exact values come from an exhaustive branch and bound (tools/src/admissible_exact.c: translate so that the lexicographically least point is 0, add points in a fixed order, prune when a prime ideal's classes are all covered). The other values are our best known upper bounds (tools/admissible_sieve.py), held by Quantavane (Arhan Canli), 9 November 2026. Exact searches were stopped at k = 26 for Z[i] and k = 29 for Z[w]. Rows improved on 10 November 2026 show the value of the cell (see Cells; tools/src/admsieve.c, the same sieve in C)."
  },
  "baseline": {
   "date": "2026-11-09",
@@ -316,5 +316,75 @@
   "value": "90",
   "kind": "lower bound",
   "source": "D(50) >= D(25) = 90 (exact value by exhaustive search; D is non-decreasing)"
+ },
+ "cells": {
+  "params": [
+   "ring",
+   "k"
+  ],
+  "about": "the ring (4: the Gaussian integers Z[i]; 3: the Eisenstein integers Z[w]) and k, the number of points",
+  "headline": {
+   "ring": 4,
+   "k": 50
+  },
+  "args": [
+   "gauss-admissible",
+   "{ring}",
+   "{k}"
+  ],
+  "title": "Admissible constellation of {k} points of smallest diameter (ring {ring})",
+  "statement": "Find an admissible set of {k} elements of the ring (ring 4: the Gaussian integers x + yi, diameter the largest x^2 + y^2 between two elements; ring 3: the Eisenstein integers x + yw, w = (-1 + sqrt(-3))/2, diameter the largest x^2 - xy + y^2), admissible meaning that for every prime ideal P of norm at most {k} the elements miss a residue class modulo P, with the smallest diameter.",
+  "submission": "Text file: {k} lines 'x y', one element per line.",
+  "exact": [
+   "4_4",
+   "3_4",
+   "4_5",
+   "3_5",
+   "4_6",
+   "3_6",
+   "4_7",
+   "3_7",
+   "4_8",
+   "3_8",
+   "4_9",
+   "3_9",
+   "4_10",
+   "3_10",
+   "4_11",
+   "3_11",
+   "4_12",
+   "3_12",
+   "4_13",
+   "3_13",
+   "4_14",
+   "3_14",
+   "4_15",
+   "3_15",
+   "4_16",
+   "3_16",
+   "4_17",
+   "3_17",
+   "4_18",
+   "3_18",
+   "4_19",
+   "3_19",
+   "4_20",
+   "3_20",
+   "4_21",
+   "3_21",
+   "4_22",
+   "3_22",
+   "4_23",
+   "3_23",
+   "4_24",
+   "3_24",
+   "4_25",
+   "3_25",
+   "3_26",
+   "3_27",
+   "3_28"
+  ],
+  "exact_how": "exhaustive branch and bound (tools/src/admissible_exact.c, 9 November 2026), the certificate a set of that diameter found by the sieve (tools/src/admsieve.c)",
+  "how": "greedy sieve in a disc with local repair, the method of tools/admissible_sieve.py in C (tools/src/admsieve.c, the best of three runs of 400 trials); an upper bound"
  }
 }

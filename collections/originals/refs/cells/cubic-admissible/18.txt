@@ -1,0 +1,2 @@
+# admissible 18-set for n^3 + h with largest element 72
+2 6 12 14 18 24 26 32 38 42 44 48 54 56 62 66 68 72

@@ -3,8 +3,8 @@
  "problems": 46,
  "counting": "questions: one per problem file (a family); cells: the family's question at each value of its natural parameter, each with its certificate (a family without a cells file is one cell)",
  "questions": 46,
- "cells": 347,
- "cells_exact": 108,
+ "cells": 525,
+ "cells_exact": 169,
  "by_field": {
   "Combinatorics and graph theory": 7,
   "Number theory": 7,
@@ -18,7 +18,7 @@
  },
  "cells_by_field": {
   "Combinatorics and graph theory": 7,
-  "Number theory": 143,
+  "Number theory": 321,
   "Coding theory": 5,
   "Discrete geometry": 72,
   "Physics": 41,
@@ -137,8 +137,8 @@
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_numth.py",
    "page": "problems/cubic-admissible.md",
-   "cells": 1,
-   "cells_exact": 0
+   "cells": 58,
+   "cells_exact": 14
   },
   {
    "id": "eisenstein-triples",
@@ -165,8 +165,8 @@
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_numth.py",
    "page": "problems/gauss-admissible.md",
-   "cells": 1,
-   "cells_exact": 0
+   "cells": 122,
+   "cells_exact": 47
   },
   {
    "id": "gauss-jacobsthal",

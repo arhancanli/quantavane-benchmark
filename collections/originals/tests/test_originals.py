@@ -751,7 +751,10 @@ def _drop_last_letter(text, params):
 
 
 CELL_CONTROLS = {"sync-quadratic": _drop_last_letter, "tri-distinct": _dup_first_point, "tri-areas": _dup_first_point, "tetra-distinct": _dup_first_point,
-                 "paley-ising": _flip_spin,
+                 "paley-ising": _flip_spin, "gauss-admissible": _dup_first_point, "e8-coulomb": _dup_first_point,
+                 "diamond-bonds": _dup_first_point, "lj-fcc": _dup_first_point, "nrm-segments": _dup_first_point,
+                 "hp-tri": _drop_last_line, "tsp-sunflower": _dup_first_point, "tsp-gaussian": _dup_first_point,
+                 "quad-admissible": _dup_first_point, "cubic-admissible": _dup_first_point,
                  "y-array": lambda t, p: ("\n".join([lines_of(t)[0] + " " + lines_of(t)[0].split()[0]] + lines_of(t)[1:])
                                           + "\n", "an arm with one distance used twice")}
 

@@ -1,0 +1,5 @@
+# ring 3 k 4 diameter 4
+0 0
+0 1
+1 0
+1 2

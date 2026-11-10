@@ -1,0 +1,2 @@
+# admissible 20-set for n^3 + h with largest element 82
+2 4 10 14 16 20 26 32 34 40 44 46 52 56 62 70 74 76 80 82

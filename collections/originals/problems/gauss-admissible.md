@@ -68,31 +68,164 @@ Verdict: new. No paper, OEIS entry or table of smallest-diameter admissible sets
 | 28 | 104 | 64 (exact) |
 | 29 | 106 | 76 |
 | 30 | 106 | 76 |
-| 31 | 122 | 84 |
+| 31 | 122 | 76 |
 | 32 | 122 | 84 |
 | 33 | 130 | 84 |
 | 34 | 136 | 91 |
 | 35 | 144 | 93 |
 | 36 | 144 | 93 |
-| 37 | 160 | 97 |
+| 37 | 148 | 93 |
 | 38 | 164 | 103 |
 | 39 | 164 | 109 |
-| 40 | 170 | 112 |
+| 40 | 164 | 111 |
 | 42 | 178 | 112 |
 | 44 | 180 | 124 |
 | 46 | 200 | 133 |
 | 48 | 202 | 133 |
 | 50 | 218 | 147 |
 | 52 | 234 | 156 |
-| 56 | 260 | 163 |
+| 56 | 260 | 156 |
 | 60 | 290 | 183 |
-| 64 | 298 | 196 |
+| 64 | 296 | 196 |
 
-Exact values come from an exhaustive branch and bound (tools/src/admissible_exact.c: translate so that the lexicographically least point is 0, add points in a fixed order, prune when a prime ideal's classes are all covered). The other values are our best known upper bounds (tools/admissible_sieve.py), held by Quantavane (Arhan Canli), 9 November 2026. Exact searches were stopped at k = 26 for Z[i] and k = 29 for Z[w].
+Exact values come from an exhaustive branch and bound (tools/src/admissible_exact.c: translate so that the lexicographically least point is 0, add points in a fixed order, prune when a prime ideal's classes are all covered). The other values are our best known upper bounds (tools/admissible_sieve.py), held by Quantavane (Arhan Canli), 9 November 2026. Exact searches were stopped at k = 26 for Z[i] and k = 29 for Z[w]. Rows improved on 10 November 2026 show the value of the cell (see Cells; tools/src/admsieve.c, the same sieve in C).
 
 ## Best known value
 
 218 for k = 50 in Z[i], held by Quantavane (Arhan Canli), 9 November 2026: the set in `refs/gauss-admissible.txt`, found by sieving a disc (for each prime ideal of norm <= 50, smallest norm first, delete the residue class holding the fewest points) and then exchanging points on the diameter (tools/admissible_sieve.py). In Z[w], our best 50-set has diameter 147. Lower bound: D(50) >= D(25) = 90, since removing points keeps a set admissible; nothing better is proved.
+
+## Cells
+
+The same question at each value of its parameter (the ring (4: the Gaussian integers Z[i]; 3: the Eisenstein integers Z[w]) and k, the number of points): 122 cells, 47 of them exact (an exhaustive search finished) and 75 best known (ours). Each cell has its certificate in `refs/cells/gauss-admissible/` (the headline cell uses `collections/originals/refs/gauss-admissible.txt`) and is checked with the family's checker:
+
+    python3 -I obb.py check CELL FILE                  # for example gauss-admissible-3-4
+
+| cell | ring | k | value | status |
+| --- | --- | --- | --- | --- |
+| `gauss-admissible-3-4` | 3 | 4 | 4 | exact |
+| `gauss-admissible-3-5` | 3 | 5 | 4 | exact |
+| `gauss-admissible-3-6` | 3 | 6 | 4 | exact |
+| `gauss-admissible-3-7` | 3 | 7 | 12 | exact |
+| `gauss-admissible-3-8` | 3 | 8 | 12 | exact |
+| `gauss-admissible-3-9` | 3 | 9 | 12 | exact |
+| `gauss-admissible-3-10` | 3 | 10 | 16 | exact |
+| `gauss-admissible-3-11` | 3 | 11 | 21 | exact |
+| `gauss-admissible-3-12` | 3 | 12 | 21 | exact |
+| `gauss-admissible-3-13` | 3 | 13 | 28 | exact |
+| `gauss-admissible-3-14` | 3 | 14 | 28 | exact |
+| `gauss-admissible-3-15` | 3 | 15 | 28 | exact |
+| `gauss-admissible-3-16` | 3 | 16 | 36 | exact |
+| `gauss-admissible-3-17` | 3 | 17 | 39 | exact |
+| `gauss-admissible-3-18` | 3 | 18 | 39 | exact |
+| `gauss-admissible-3-19` | 3 | 19 | 39 | exact |
+| `gauss-admissible-3-20` | 3 | 20 | 48 | exact |
+| `gauss-admissible-3-21` | 3 | 21 | 49 | exact |
+| `gauss-admissible-3-22` | 3 | 22 | 49 | exact |
+| `gauss-admissible-3-23` | 3 | 23 | 52 | exact |
+| `gauss-admissible-3-24` | 3 | 24 | 52 | exact |
+| `gauss-admissible-3-25` | 3 | 25 | 63 | exact |
+| `gauss-admissible-3-26` | 3 | 26 | 63 | exact |
+| `gauss-admissible-3-27` | 3 | 27 | 63 | exact |
+| `gauss-admissible-3-28` | 3 | 28 | 64 | exact |
+| `gauss-admissible-3-29` | 3 | 29 | 76 | best known |
+| `gauss-admissible-3-30` | 3 | 30 | 76 | best known |
+| `gauss-admissible-3-31` | 3 | 31 | 76 | best known |
+| `gauss-admissible-3-32` | 3 | 32 | 84 | best known |
+| `gauss-admissible-3-33` | 3 | 33 | 84 | best known |
+| `gauss-admissible-3-34` | 3 | 34 | 91 | best known |
+| `gauss-admissible-3-35` | 3 | 35 | 93 | best known |
+| `gauss-admissible-3-36` | 3 | 36 | 93 | best known |
+| `gauss-admissible-3-37` | 3 | 37 | 93 | best known |
+| `gauss-admissible-3-38` | 3 | 38 | 103 | best known |
+| `gauss-admissible-3-39` | 3 | 39 | 109 | best known |
+| `gauss-admissible-3-40` | 3 | 40 | 111 | best known |
+| `gauss-admissible-3-41` | 3 | 41 | 112 | best known |
+| `gauss-admissible-3-42` | 3 | 42 | 112 | best known |
+| `gauss-admissible-3-43` | 3 | 43 | 117 | best known |
+| `gauss-admissible-3-44` | 3 | 44 | 124 | best known |
+| `gauss-admissible-3-45` | 3 | 45 | 124 | best known |
+| `gauss-admissible-3-46` | 3 | 46 | 133 | best known |
+| `gauss-admissible-3-47` | 3 | 47 | 133 | best known |
+| `gauss-admissible-3-48` | 3 | 48 | 133 | best known |
+| `gauss-admissible-3-49` | 3 | 49 | 147 | best known |
+| `gauss-admissible-3-50` | 3 | 50 | 147 | best known |
+| `gauss-admissible-3-51` | 3 | 51 | 148 | best known |
+| `gauss-admissible-3-52` | 3 | 52 | 156 | best known |
+| `gauss-admissible-3-53` | 3 | 53 | 156 | best known |
+| `gauss-admissible-3-54` | 3 | 54 | 156 | best known |
+| `gauss-admissible-3-55` | 3 | 55 | 156 | best known |
+| `gauss-admissible-3-56` | 3 | 56 | 156 | best known |
+| `gauss-admissible-3-57` | 3 | 57 | 171 | best known |
+| `gauss-admissible-3-58` | 3 | 58 | 172 | best known |
+| `gauss-admissible-3-59` | 3 | 59 | 172 | best known |
+| `gauss-admissible-3-60` | 3 | 60 | 183 | best known |
+| `gauss-admissible-3-61` | 3 | 61 | 189 | best known |
+| `gauss-admissible-3-62` | 3 | 62 | 196 | best known |
+| `gauss-admissible-3-63` | 3 | 63 | 196 | best known |
+| `gauss-admissible-3-64` | 3 | 64 | 196 | best known |
+| `gauss-admissible-4-4` | 4 | 4 | 4 | exact |
+| `gauss-admissible-4-5` | 4 | 5 | 10 | exact |
+| `gauss-admissible-4-6` | 4 | 6 | 10 | exact |
+| `gauss-admissible-4-7` | 4 | 7 | 16 | exact |
+| `gauss-admissible-4-8` | 4 | 8 | 16 | exact |
+| `gauss-admissible-4-9` | 4 | 9 | 20 | exact |
+| `gauss-admissible-4-10` | 4 | 10 | 20 | exact |
+| `gauss-admissible-4-11` | 4 | 11 | 32 | exact |
+| `gauss-admissible-4-12` | 4 | 12 | 32 | exact |
+| `gauss-admissible-4-13` | 4 | 13 | 40 | exact |
+| `gauss-admissible-4-14` | 4 | 14 | 40 | exact |
+| `gauss-admissible-4-15` | 4 | 15 | 50 | exact |
+| `gauss-admissible-4-16` | 4 | 16 | 52 | exact |
+| `gauss-admissible-4-17` | 4 | 17 | 52 | exact |
+| `gauss-admissible-4-18` | 4 | 18 | 58 | exact |
+| `gauss-admissible-4-19` | 4 | 19 | 58 | exact |
+| `gauss-admissible-4-20` | 4 | 20 | 68 | exact |
+| `gauss-admissible-4-21` | 4 | 21 | 68 | exact |
+| `gauss-admissible-4-22` | 4 | 22 | 74 | exact |
+| `gauss-admissible-4-23` | 4 | 23 | 80 | exact |
+| `gauss-admissible-4-24` | 4 | 24 | 90 | exact |
+| `gauss-admissible-4-25` | 4 | 25 | 90 | exact |
+| `gauss-admissible-4-26` | 4 | 26 | 100 | best known |
+| `gauss-admissible-4-27` | 4 | 27 | 100 | best known |
+| `gauss-admissible-4-28` | 4 | 28 | 104 | best known |
+| `gauss-admissible-4-29` | 4 | 29 | 106 | best known |
+| `gauss-admissible-4-30` | 4 | 30 | 106 | best known |
+| `gauss-admissible-4-31` | 4 | 31 | 122 | best known |
+| `gauss-admissible-4-32` | 4 | 32 | 122 | best known |
+| `gauss-admissible-4-33` | 4 | 33 | 130 | best known |
+| `gauss-admissible-4-34` | 4 | 34 | 136 | best known |
+| `gauss-admissible-4-35` | 4 | 35 | 144 | best known |
+| `gauss-admissible-4-36` | 4 | 36 | 144 | best known |
+| `gauss-admissible-4-37` | 4 | 37 | 148 | best known |
+| `gauss-admissible-4-38` | 4 | 38 | 164 | best known |
+| `gauss-admissible-4-39` | 4 | 39 | 164 | best known |
+| `gauss-admissible-4-40` | 4 | 40 | 164 | best known |
+| `gauss-admissible-4-41` | 4 | 41 | 164 | best known |
+| `gauss-admissible-4-42` | 4 | 42 | 178 | best known |
+| `gauss-admissible-4-43` | 4 | 43 | 180 | best known |
+| `gauss-admissible-4-44` | 4 | 44 | 180 | best known |
+| `gauss-admissible-4-45` | 4 | 45 | 194 | best known |
+| `gauss-admissible-4-46` | 4 | 46 | 200 | best known |
+| `gauss-admissible-4-47` | 4 | 47 | 200 | best known |
+| `gauss-admissible-4-48` | 4 | 48 | 202 | best known |
+| `gauss-admissible-4-49` | 4 | 49 | 208 | best known |
+| `gauss-admissible-4-50` | 4 | 50 | 218 | best known (headline) |
+| `gauss-admissible-4-51` | 4 | 51 | 218 | best known |
+| `gauss-admissible-4-52` | 4 | 52 | 234 | best known |
+| `gauss-admissible-4-53` | 4 | 53 | 244 | best known |
+| `gauss-admissible-4-54` | 4 | 54 | 244 | best known |
+| `gauss-admissible-4-55` | 4 | 55 | 250 | best known |
+| `gauss-admissible-4-56` | 4 | 56 | 260 | best known |
+| `gauss-admissible-4-57` | 4 | 57 | 260 | best known |
+| `gauss-admissible-4-58` | 4 | 58 | 260 | best known |
+| `gauss-admissible-4-59` | 4 | 59 | 272 | best known |
+| `gauss-admissible-4-60` | 4 | 60 | 290 | best known |
+| `gauss-admissible-4-61` | 4 | 61 | 290 | best known |
+| `gauss-admissible-4-62` | 4 | 62 | 290 | best known |
+| `gauss-admissible-4-63` | 4 | 63 | 292 | best known |
+| `gauss-admissible-4-64` | 4 | 64 | 296 | best known |
+
+Exact cells: exhaustive branch and bound (tools/src/admissible_exact.c, 9 November 2026), the certificate a set of that diameter found by the sieve (tools/src/admsieve.c). Best known cells: greedy sieve in a disc with local repair, the method of tools/admissible_sieve.py in C (tools/src/admsieve.c, the best of three runs of 400 trials); an upper bound.
 
 Bound on the other side: 90 (lower bound; D(50) >= D(25) = 90 (exact value by exhaustive search; D is non-decreasing)).
 

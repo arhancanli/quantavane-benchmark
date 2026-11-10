@@ -51,14 +51,83 @@ Verdict: new. No table of least admissible shift sets for n^3 + h was found (arX
 | 16 | 63 | exact (exhaustive) |
 | 20 | 82 | best known (ours) |
 | 30 | 141 | best known (ours) |
-| 40 | 190 | best known (ours) |
+| 40 | 189 | best known (ours) |
 | 50 | 255 | best known (ours) |
 
-Exact values by exhaustive search (tools/cubic_admissible.py exact); the sieve reproduces m(12) = 45 and m(16) = 63 and gives the upper bounds for larger k.
+Exact values by exhaustive search (tools/cubic_admissible.py exact); the sieve reproduces m(12) = 45 and m(16) = 63 and gives the upper bounds for larger k. Rows improved on 10 November 2026 show the value of the cell (see Cells).
 
 ## Best known value
 
 255 for k = 50, held by Quantavane (Arhan Canli), 9 November 2026: the set in `refs/cubic-admissible.txt`. Lower bound m(50) >= m(16) = 63; nothing better is proved.
+
+## Cells
+
+The same question at each value of its parameter (k, the number of shifts): 58 cells, 14 of them exact (an exhaustive search finished) and 44 best known (ours). Each cell has its certificate in `refs/cells/cubic-admissible/` (the headline cell uses `collections/originals/refs/cubic-admissible.txt`) and is checked with the family's checker:
+
+    python3 -I obb.py check CELL FILE                  # for example cubic-admissible-3
+
+| cell | k | value | status |
+| --- | --- | --- | --- |
+| `cubic-admissible-3` | 3 | 7 | exact |
+| `cubic-admissible-4` | 4 | 9 | exact |
+| `cubic-admissible-5` | 5 | 14 | exact |
+| `cubic-admissible-6` | 6 | 19 | exact |
+| `cubic-admissible-7` | 7 | 23 | exact |
+| `cubic-admissible-8` | 8 | 28 | exact |
+| `cubic-admissible-9` | 9 | 31 | exact |
+| `cubic-admissible-10` | 10 | 35 | exact |
+| `cubic-admissible-11` | 11 | 37 | exact |
+| `cubic-admissible-12` | 12 | 45 | exact |
+| `cubic-admissible-13` | 13 | 49 | exact |
+| `cubic-admissible-14` | 14 | 52 | exact |
+| `cubic-admissible-15` | 15 | 58 | exact |
+| `cubic-admissible-16` | 16 | 63 | exact |
+| `cubic-admissible-17` | 17 | 68 | best known |
+| `cubic-admissible-18` | 18 | 72 | best known |
+| `cubic-admissible-19` | 19 | 77 | best known |
+| `cubic-admissible-20` | 20 | 82 | best known |
+| `cubic-admissible-21` | 21 | 86 | best known |
+| `cubic-admissible-22` | 22 | 94 | best known |
+| `cubic-admissible-23` | 23 | 98 | best known |
+| `cubic-admissible-24` | 24 | 105 | best known |
+| `cubic-admissible-25` | 25 | 112 | best known |
+| `cubic-admissible-26` | 26 | 120 | best known |
+| `cubic-admissible-27` | 27 | 123 | best known |
+| `cubic-admissible-28` | 28 | 128 | best known |
+| `cubic-admissible-29` | 29 | 134 | best known |
+| `cubic-admissible-30` | 30 | 141 | best known |
+| `cubic-admissible-31` | 31 | 144 | best known |
+| `cubic-admissible-32` | 32 | 149 | best known |
+| `cubic-admissible-33` | 33 | 154 | best known |
+| `cubic-admissible-34` | 34 | 159 | best known |
+| `cubic-admissible-35` | 35 | 164 | best known |
+| `cubic-admissible-36` | 36 | 170 | best known |
+| `cubic-admissible-37` | 37 | 177 | best known |
+| `cubic-admissible-38` | 38 | 184 | best known |
+| `cubic-admissible-39` | 39 | 185 | best known |
+| `cubic-admissible-40` | 40 | 189 | best known |
+| `cubic-admissible-41` | 41 | 192 | best known |
+| `cubic-admissible-42` | 42 | 202 | best known |
+| `cubic-admissible-43` | 43 | 204 | best known |
+| `cubic-admissible-44` | 44 | 214 | best known |
+| `cubic-admissible-45` | 45 | 214 | best known |
+| `cubic-admissible-46` | 46 | 222 | best known |
+| `cubic-admissible-47` | 47 | 234 | best known |
+| `cubic-admissible-48` | 48 | 241 | best known |
+| `cubic-admissible-49` | 49 | 246 | best known |
+| `cubic-admissible-50` | 50 | 255 | best known (headline) |
+| `cubic-admissible-51` | 51 | 259 | best known |
+| `cubic-admissible-52` | 52 | 269 | best known |
+| `cubic-admissible-53` | 53 | 271 | best known |
+| `cubic-admissible-54` | 54 | 275 | best known |
+| `cubic-admissible-55` | 55 | 287 | best known |
+| `cubic-admissible-56` | 56 | 289 | best known |
+| `cubic-admissible-57` | 57 | 300 | best known |
+| `cubic-admissible-58` | 58 | 305 | best known |
+| `cubic-admissible-59` | 59 | 306 | best known |
+| `cubic-admissible-60` | 60 | 319 | best known |
+
+Exact cells: exhaustive search over the sets with largest element m, m increasing (tools/cubic_admissible.py, mode exact). Best known cells: randomized greedy sieve deleting one cube class per prime, the best of 300 trials (tools/cubic_admissible.py, mode sieve); an upper bound.
 
 Bound on the other side: 63 (lower bound; m(k) is non-decreasing and m(16) = 63 exactly).
 

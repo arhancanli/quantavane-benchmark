@@ -147,7 +147,7 @@
    ],
    [
     40,
-    190,
+    189,
     "best known (ours)"
    ],
    [
@@ -156,7 +156,7 @@
     "best known (ours)"
    ]
   ],
-  "note": "Exact values by exhaustive search (tools/cubic_admissible.py exact); the sieve reproduces m(12) = 45 and m(16) = 63 and gives the upper bounds for larger k."
+  "note": "Exact values by exhaustive search (tools/cubic_admissible.py exact); the sieve reproduces m(12) = 45 and m(16) = 63 and gives the upper bounds for larger k. Rows improved on 10 November 2026 show the value of the cell (see Cells)."
  },
  "baseline": {
   "date": "2026-11-09",
@@ -167,5 +167,39 @@
   "value": "63",
   "kind": "lower bound",
   "source": "m(k) is non-decreasing and m(16) = 63 exactly"
+ },
+ "cells": {
+  "params": [
+   "k"
+  ],
+  "about": "k, the number of shifts",
+  "headline": {
+   "k": 50
+  },
+  "args": [
+   "cubic-admissible",
+   "{k}"
+  ],
+  "title": "Densest admissible {k}-pattern of primes n^3 + h",
+  "statement": "Find an admissible set of {k} positive integers h for n^3 + h (for every prime p the residues -h modulo p miss one of the values of n^3 modulo p, 0 included) with the smallest largest element m({k}).",
+  "submission": "Text file: {k} distinct positive integers h, separated by spaces or newlines.",
+  "exact": [
+   "3",
+   "4",
+   "5",
+   "6",
+   "7",
+   "8",
+   "9",
+   "10",
+   "11",
+   "12",
+   "13",
+   "14",
+   "15",
+   "16"
+  ],
+  "exact_how": "exhaustive search over the sets with largest element m, m increasing (tools/cubic_admissible.py, mode exact)",
+  "how": "randomized greedy sieve deleting one cube class per prime, the best of 300 trials (tools/cubic_admissible.py, mode sieve); an upper bound"
  }
 }

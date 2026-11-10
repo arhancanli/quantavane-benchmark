@@ -1,0 +1,2 @@
+# admissible 23-set for n^3 + h with largest element 98
+2 4 10 14 22 28 32 38 40 44 50 52 58 64 68 70 74 80 82 88 92 94 98

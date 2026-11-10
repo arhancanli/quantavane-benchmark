@@ -7,7 +7,7 @@ known value, a holder and a date. All of them are open.
 
 Each question is a family of cells: the same question at each value of its natural parameter (the number of antennas,
 the side of a grid, the number of digits, ...), each cell with our first value, its certificate in `refs/cells/` and
-the family's exact checker, the way the benchmark's table families are counted. There are <!--cells-->347<!--/cells-->
+the family's exact checker, the way the benchmark's table families are counted. There are <!--cells-->525<!--/cells-->
 cells. The questions and the cells are counted apart (`index.json`: `questions`, `cells`, `cells_exact`); each cell says
 whether its value is exact (an exhaustive search finished) or the best known (ours), and a family without a cells file
 is one cell, its headline. A cell is checked like any problem: `python3 -I obb.py check CELL FILE`.
@@ -45,9 +45,9 @@ and is credited by name on the problem's page and in `leaderboard.json`.
 | [The metric dimension of the E8 root graph](problems/e8-resolving.md) | Combinatorics and graph theory | minimize | 12 | 1 (0) |
 | [The minimum overlap constant of the square](problems/overlap-square.md) | Combinatorics and graph theory | minimize | 150615/262144 | 1 (0) |
 | [The minimum overlap problem for three parts](problems/overlap-three.md) | Combinatorics and graph theory | minimize | 56061/200000 | 1 (0) |
-| [Densest admissible patterns of primes n^3 + h](problems/cubic-admissible.md) | Number theory | minimize | 255 | 1 (0) |
+| [Densest admissible patterns of primes n^3 + h](problems/cubic-admissible.md) | Number theory | minimize | 255 | 58 (14) |
 | [Two-colourings with no monochromatic 120-degree triangle](problems/eisenstein-triples.md) | Number theory | maximize | 19200 | 1 (0) |
-| [Admissible constellations of smallest diameter in the Gaussian integers](problems/gauss-admissible.md) | Number theory | minimize | 218 | 1 (0) |
+| [Admissible constellations of smallest diameter in the Gaussian integers](problems/gauss-admissible.md) | Number theory | minimize | 218 | 122 (47) |
 | [The Jacobsthal function of the Gaussian integers](problems/gauss-jacobsthal.md) | Number theory | maximize | 15 | 1 (0) |
 | [Arithmetic progressions of Gaussian primes](problems/gauss-prime-ap.md) | Number theory | maximize | 18 | 10 (7) |
 | [Largest sum-free set of quadratic residues](problems/qr-sumfree.md) | Number theory | maximize | 174 | 71 (21) |
