@@ -154,5 +154,28 @@
   "value": "36",
   "kind": "upper bound",
   "source": "counting: the h(h - 1)/2 baselines of a mask with h holes are distinct vectors of hexagonal norm at most 20, of which there are 630 up to sign, so h(h - 1)/2 <= 630"
+ },
+ "cells": {
+  "params": [
+   "s"
+  ],
+  "about": "s, the number of rings of segments",
+  "headline": {
+   "s": 10
+  },
+  "args": [
+   "nrm-segments",
+   "{s}"
+  ],
+  "title": "Non-redundant aperture mask for a segmented mirror of {s} rings",
+  "statement": "A segmented mirror with {s} rings of hexagonal segments around a missing central segment has its segments centred at the points a + b*w of the triangular lattice (w = e^(i pi/3)) with hexagonal norm max(|a|, |b|, |a + b|) from 1 to {s}. Put one hole on each of as many segments as possible so that no baseline repeats: the vectors joining two holes are all different, a vector and its negative counting as the same baseline. h({s}) is the largest number of holes.",
+  "submission": "Text file: one line 'a b' per hole, the segment a + b*w (hexagonal norm 1..{s}), each segment at most once.",
+  "exact": [
+   "2",
+   "3",
+   "4"
+  ],
+  "exact_how": "exhaustive search over the sets of segments (tools/src/nrm.c, mode max)",
+  "how": "local search moving one hole at a time to the position creating the fewest repeated baselines (tools/src/nrm.c, mode ls); a lower bound"
  }
 }

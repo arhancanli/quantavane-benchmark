@@ -10,7 +10,7 @@ A catacondensed benzenoid is a benzenoid system in which no carbon atom is inter
 
 ## Why it is interesting
 
-Among hexagonal chains (unbranched catacondensed benzenoids) the extremes of Kemeny's constant are known: the linear chain maximises it and the helicene chain minimises it (Y. Yang and W. Li, MATCH 2026). Branching changes the picture. Our exhaustive computation over all catacondensed benzenoids (the counts 1, 2, 5, 12, 36, 118, 411, 1489, 5572 of OEIS A038142 for h = 2..10) shows that from h = 4 on the minimum is always attained by a branched system (triphenylene at h = 4), well below every chain (at h = 10: 137.90, against 176.39 for the best planar chain and 172.18 for the helicene, which is a planar benzenoid only up to h = 5). Which branched architectures minimise the random-walk mixing time as h grows, and whether the minimisers are the most branched systems, is open; the problem is the catacondensed counterpart of benzenoid-kemeny, where pericondensed systems are allowed and compact ones win.
+Among hexagonal chains (unbranched catacondensed benzenoids) the extremes of Kemeny's constant are known: the linear chain maximises it and the helicene chain minimises it (Y. Yang and W. Li, MATCH 2026). Branching changes the picture. Our exhaustive computation over all catacondensed benzenoids (the counts 1, 2, 5, 12, 36, 118, 411, 1489, 5572 of OEIS A038142 for h = 2..10) shows that from h = 4 on the minimum is always attained by a branched system (triphenylene at h = 4), well below every chain (at h = 10 the minimum over all 5,572 systems is 137.90, attained by a branched system). Which branched architectures minimise the random-walk mixing time as h grows, and whether the minimisers are the most branched systems, is open; the problem is the catacondensed counterpart of benzenoid-kemeny, where pericondensed systems are allowed and compact ones win.
 
 ## Novelty check
 
@@ -35,28 +35,28 @@ Verdict: new as stated. Kemeny's constant is known on hexagonal chains (unbranch
 
 ## First values
 
-| h | catacondensed benzenoids | smallest Kemeny constant | minimiser | smallest among planar chains | how |
-| --- | --- | --- | --- | --- | --- |
-| 2 | 1 | 2157/154 = 14.006494 | unbranched | 14.006494 | exact (all) |
-| 3 | 2 | 40643/1632 = 24.903799 | unbranched | 24.903799 | exact (all) |
-| 4 | 5 | 50521/1386 = 36.450938 | branched | 38.384897 | exact (all) |
-| 5 | 12 | 4642381/90012 = 51.575134 | branched | 54.403918 | exact (all) |
-| 6 | 36 | 341945/5208 = 65.657642 | branched | 73.632526 | exact (all) |
-| 7 | 118 | 354425627/4229928 = 83.789991 | branched | 95.265507 | exact (all) |
-| 8 | 411 | 18090949/179826 = 100.602521 | branched | 119.275691 | exact (all) |
-| 9 | 1489 | 76472594/636939 = 120.062665 | branched | 146.647331 | exact (all) |
-| 10 | 5572 | 436031/3162 = 137.897217 | branched | 176.388147 | exact (all) |
-| 11 |  | 353290036/2193051 = 161.095221 |  |  | best known (ours, beam search) |
-| 12 |  | 736859064061/4009799010 = 183.764588 |  |  | best known (ours, beam search) |
-| 13 |  | 63351576841933/303429537180 = 208.785135 |  |  | best known (ours, beam search) |
-| 14 |  | 88031905628/377469015 = 233.216243 |  |  | best known (ours, beam search) |
-| 15 |  | 21315415985969/82350709188 = 258.837066 |  |  | best known (ours, beam search) |
-| 16 |  | 2138411927/7505190 = 284.924423 |  |  | best known (ours, beam search) |
-| 17 |  | 2572810144859/8172722244 = 314.804550 |  |  | best known (ours, beam search) |
-| 18 |  | 40030782928281217/117027590999592 = 342.062778 |  |  | best known (ours, beam search) |
-| 19 |  | 59617087737367409/159902997431616 = 372.832834 |  |  | best known (ours, beam search) |
+| h | catacondensed benzenoids | smallest Kemeny constant | minimiser | how |
+| --- | --- | --- | --- | --- |
+| 2 | 1 | 2157/154 = 14.006494 | unbranched | exact (all) |
+| 3 | 2 | 40643/1632 = 24.903799 | unbranched | exact (all) |
+| 4 | 5 | 50521/1386 = 36.450938 | branched | exact (all) |
+| 5 | 12 | 4642381/90012 = 51.575134 | branched | exact (all) |
+| 6 | 36 | 341945/5208 = 65.657642 | branched | exact (all) |
+| 7 | 118 | 354425627/4229928 = 83.789991 | branched | exact (all) |
+| 8 | 411 | 18090949/179826 = 100.602521 | branched | exact (all) |
+| 9 | 1489 | 76472594/636939 = 120.062665 | branched | exact (all) |
+| 10 | 5572 | 436031/3162 = 137.897217 | branched | exact (all) |
+| 11 |  | 353290036/2193051 = 161.095221 |  | best known (ours, beam search) |
+| 12 |  | 736859064061/4009799010 = 183.764588 |  | best known (ours, beam search) |
+| 13 |  | 63351576841933/303429537180 = 208.785135 |  | best known (ours, beam search) |
+| 14 |  | 88031905628/377469015 = 233.216243 |  | best known (ours, beam search) |
+| 15 |  | 21315415985969/82350709188 = 258.837066 |  | best known (ours, beam search) |
+| 16 |  | 2138411927/7505190 = 284.924423 |  | best known (ours, beam search) |
+| 17 |  | 2572810144859/8172722244 = 314.804550 |  | best known (ours, beam search) |
+| 18 |  | 40030782928281217/117027590999592 = 342.062778 |  | best known (ours, beam search) |
+| 19 |  | 59617087737367409/159902997431616 = 372.832834 |  | best known (ours, beam search) |
 
-Exact for h <= 10 (every catacondensed benzenoid enumerated; the minimum recomputed in exact arithmetic); for h >= 11 the values are the best found by our beam search (upper bounds), which reproduces the exact value at h = 10.
+Exact for h <= 10 (every catacondensed benzenoid enumerated; the minimum recomputed in exact arithmetic); for h >= 11 the values are the best found by our beam search (upper bounds), which reproduces the exact value at h = 10. A column of values without saved certificates (smallest among planar chains) was removed in the audit of 10 November 2026.
 
 ## Best known value
 

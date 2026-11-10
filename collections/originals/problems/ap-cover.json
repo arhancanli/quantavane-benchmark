@@ -107,7 +107,18 @@
     "open"
    ]
   ],
-  "note": "Exact values by depth-first search with iterative deepening (tools/ap_cover.py exact); for p = 17 the search ruled out 45 or fewer before its node limit. Upper bounds for larger p from our local search."
+  "note": "Exact values by depth-first search with iterative deepening (tools/ap_cover.py exact); for p = 17 the search ruled out 45 or fewer before its node limit. Upper bounds for larger p from our local search.",
+  "certified": {
+   "5": {
+    "args": [
+     "ap-cover",
+     "5",
+     "3"
+    ],
+    "certificate": "collections/originals/refs/table/ap-cover/5.txt",
+    "value": "4"
+   }
+  }
  },
  "baseline": {
   "date": "2026-11-09",
@@ -118,5 +129,29 @@
   "value": "155",
   "kind": "lower bound",
   "source": "Schonheim bound ceil(31 ceil(30/2) / 3)"
+ },
+ "cells": {
+  "params": [
+   "p"
+  ],
+  "about": "p, a prime",
+  "headline": {
+   "p": 31
+  },
+  "args": [
+   "ap-cover",
+   "{p}",
+   "3"
+  ],
+  "title": "Covering all pairs of Z_{p} by three-term progressions",
+  "statement": "Find the fewest blocks {{a, a + d, a + 2d}} modulo {p} (three-term progressions, d not 0) that together contain every pair of elements of Z_{p}; A({p}) is that number.",
+  "submission": "Text file: one progression per line, 'a d' (the block {{a, a+d, a+2d}} mod {p}, d not 0).",
+  "exact": [
+   "7",
+   "11",
+   "13"
+  ],
+  "exact_how": "exhaustive search over sets of progressions (tools/ap_cover.py, mode exact, 9 November 2026); the certificate is a covering of that size found by the local search",
+  "how": "greedy covering followed by local search, removing blocks and repairing greedily (tools/ap_cover.py, mode search); an upper bound"
  }
 }

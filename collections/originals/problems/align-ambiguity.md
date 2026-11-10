@@ -55,14 +55,43 @@ Verdict: new question: counting the optimal alignments of given sequences is sta
 | 8 | 249 | ACTAGCTG / GGCCTTAA | best known (ours, local search) |
 | 10 | 1081 | AAGGGCCCTT / TGCCTAGGCA | best known (ours, local search) |
 | 12 | 4334 | TTGGGCCCCAAA / CGCCAATGGCCG | best known (ours, local search) |
-| 16 | 50253 | AAGCCCCCCTTGGTTG / TTCTTTGGGGCCACCT | best known (ours, local search) |
+| 16 | 52567 | GTCGGCCTTTGGTTGG / AATTTAGGGGCCCACC | best known (ours, local search) |
 | 20 | 917147 | TCGCTTCCAGAAAAACAGCG / AAAGGGGTTTTCCCTGGTTT | best known (ours, local search) |
 
-Exact values by trying every pair (x with its letters in order of first appearance; tools/src/alignamb.c, mode exact). Larger n: local search, lower bounds only.
+Exact values by trying every pair (x with its letters in order of first appearance; tools/src/alignamb.c, mode exact). Larger n: local search, lower bounds only. Rows improved on 10 November 2026 show the value of the cell (see Cells).
 
 ## Best known value
 
 917,147 optimal alignments, held by Quantavane (Arhan Canli), 9 November 2026: the pair in `refs/align-ambiguity.txt` (TCGCTTCCAGAAAAACAGCG / AAAGGGGTTTTCCCTGGTTT).
+
+## Cells
+
+The same question at each value of its parameter (n, the length of the two sequences): 18 cells, 5 of them exact (an exhaustive search finished) and 13 best known (ours). Each cell has its certificate in `refs/cells/align-ambiguity/` (the headline cell uses `collections/originals/refs/align-ambiguity.txt`) and is checked with the family's checker:
+
+    python3 -I obb.py check CELL FILE                  # for example align-ambiguity-3
+
+| cell | n | value | status |
+| --- | --- | --- | --- |
+| `align-ambiguity-3` | 3 | 5 | exact |
+| `align-ambiguity-4` | 4 | 12 | exact |
+| `align-ambiguity-5` | 5 | 24 | exact |
+| `align-ambiguity-6` | 6 | 53 | exact |
+| `align-ambiguity-7` | 7 | 114 | exact |
+| `align-ambiguity-8` | 8 | 249 | best known |
+| `align-ambiguity-9` | 9 | 491 | best known |
+| `align-ambiguity-10` | 10 | 1081 | best known |
+| `align-ambiguity-11` | 11 | 2144 | best known |
+| `align-ambiguity-12` | 12 | 4334 | best known |
+| `align-ambiguity-13` | 13 | 8763 | best known |
+| `align-ambiguity-14` | 14 | 14221 | best known |
+| `align-ambiguity-15` | 15 | 26031 | best known |
+| `align-ambiguity-16` | 16 | 52567 | best known |
+| `align-ambiguity-17` | 17 | 124107 | best known |
+| `align-ambiguity-18` | 18 | 206133 | best known |
+| `align-ambiguity-19` | 19 | 401341 | best known |
+| `align-ambiguity-20` | 20 | 917147 | best known (headline) |
+
+Exact cells: every pair of sequences, up to renaming letters, reversal and swapping (tools/src/alignamb.c, mode exact). Best known cells: local search changing one letter at a time (tools/src/alignamb.c, mode ls); a lower bound.
 
 ## Submitting and checking
 

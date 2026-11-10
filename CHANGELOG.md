@@ -21,6 +21,30 @@ value can change within a version when its source table changes; the file then s
   certificate through the family's checker, so every value is one the checker proves. `index.json` counts the
   questions and the cells apart (`questions`, `cells`, `cells_exact`). `obb.py check` and `show` take a cell id (for
   example `y-array-20`), and `obb.py list originals` gives the number of cells.
+- 10 Nov 2026, audit of every value the Originals publish: each headline value, each cell and each row of the
+  first-values tables now has a certificate in the repository that passes its checker. A row is backed by its cell,
+  by the headline certificate, or by a table certificate (`refs/table/ID/`, listed under `first_values.certified`).
+  Rows that report someone else's value or no value say why (`first_values.context`). `tests/test_originals.py`
+  (`tables()`) checks all of it. New checker modes, so that the context rows can be certified: the 5-, 8-, 16- and
+  24-cells and the Gosset polytope 3_21 (`polytope-ising`), two subgraphs of the McLaughlin graph (`mclaughlin-sub`),
+  the 600-cell's great circles (`cell600-great`) and induced paths in the 120-cell (`cell120-snake`). Corrections,
+  each now showing the best value we can certify:
+  - hp-tri, N = 3: the table said 0 (exact); the minimum is -1, since HPH folds into a triangle with one contact.
+  - hp-tri, N = 34: -29 had no saved certificate and could not be reproduced (three runs of 300 and 600 seconds);
+    the row now says -28.
+  - overlap-square, the 8 x 8 grid: 0.5803 was a floating-point value before rounding, never certified; the certified
+    value is 2459/4096 = 0.600342.
+  - autoconv-square, the 8 x 8 grid: 2.34383 had no saved certificate and could not be reproduced (runs of 20,000 and
+    60,000 steps); the row now says 351221187259904/149842105482001 = 2.343942.
+  - Two columns of values without certificates were removed (the product functions of autoconv-square and the planar
+    chains of cata-kemeny), with two such numbers from the cata-kemeny context.
+  Values the audit runs improved: the coil in the 120-cell, 202 to 208 (the headline), and its longest snake (an
+  induced path), 214 to 226; the three-part overlap,
+  56061/200000 = 0.280305 to 268741/960000 = 0.279938 with 120 cells (the headline); the covering of the four-digit
+  primes, 157 to 154; the autoconvolution ratio on the 16 x 16 grid, 2.26079 to 2.235115, and the three-part overlap
+  with 24 cells, 0.28199 to 0.280310 (both had been floats without certificates). The values of align-ambiguity at
+  n = 12 (4334, the pair printed in the table), nrm-segments at s = 8 (20) and tetra-distinct at n = 15 (13) were
+  reproduced.
 
 ## 2.1 (9 Nov 2026): 149,372 problems and the Prestige 100 collection
 

@@ -32,13 +32,13 @@ Verdict: new. No paper, table or repository entry was found for the autoconvolut
 
 ## First values
 
-| grid M x M | best ratio found (ours) | same grid, best product g(x)g(y) found (ours) |
-| --- | --- | --- |
-| 8 x 8 | 2.34383 | 2.49946 (= 1.58097^2) |
-| 16 x 16 | 2.26079 | 2.41038 (= 1.55254^2) |
-| 24 x 24 | 5687487427963392/2559015127450681 = 2.222530 |  |
+| grid M x M | best ratio found (ours) |
+| --- | --- |
+| 8 x 8 | 351221187259904/149842105482001 = 2.343942 |
+| 16 x 16 | 405707158409728/181515127290025 = 2.235115 |
+| 24 x 24 | 5687487427963392/2559015127450681 = 2.222530 |
 
-Upper bounds by step functions on finer grids. The product column uses our own one-dimensional optimizer at the same number of steps; the best known one-dimensional bound, 1.5027435, gives the product bound 2.25823. Exact values of our certificates are rational numbers recomputed by the checker.
+Upper bounds by step functions on finer grids. The product column uses our own one-dimensional optimizer at the same number of steps; the best known one-dimensional bound, 1.5027435, gives the product bound 2.25823. Exact values of our certificates are rational numbers recomputed by the checker. A column of values without saved certificates (same grid, best product g(x)g(y) found (ours)) was removed in the audit of 10 November 2026.
 
 ## Best known value
 

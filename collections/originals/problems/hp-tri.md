@@ -39,7 +39,7 @@ Verdict: new. No ground-state energies of Fibonacci HP chains on any lattice wer
 | 8 | HPHHPHPH | -6 | exact (all conformations) |
 | 13 | HPHHPHPHHPHHP | -10 | exact (all conformations) |
 | 21 | S_8 | -19 | best known (ours) |
-| 34 | S_9 | -29 | best known (ours) |
+| 34 | S_9 | -28 | best known (ours); corrected on 10 November 2026: the earlier -29 had no saved certificate and could not be reproduced |
 | 55 | S_10 | -44 | best known (ours) |
 
 Exact values: every self-avoiding conformation enumerated (tools/hp_tri.py exact); larger chains: our best annealed folds (upper bounds). S_10 has 34 H and 21 P monomers.
@@ -47,6 +47,25 @@ Exact values: every self-avoiding conformation enumerated (tools/hp_tri.py exact
 ## Best known value
 
 -44 for S_10 (length 55), held by Quantavane (Arhan Canli), 9 November 2026: the fold in `refs/hp-tri.txt`. Lower bound -69: each H monomer has at most 4 neighbouring sites besides its chain neighbours (5 at a chain end), so 34 H monomers make at most 69 contacts.
+
+## Cells
+
+The same question at each value of its parameter (N = F_k, the length of the Fibonacci word): 8 cells, 2 of them exact (an exhaustive search finished) and 6 best known (ours). Each cell has its certificate in `refs/cells/hp-tri/` (the headline cell uses `collections/originals/refs/hp-tri.txt`) and is checked with the family's checker:
+
+    python3 -I obb.py check CELL FILE                  # for example hp-tri-8
+
+| cell | N | value | status |
+| --- | --- | --- | --- |
+| `hp-tri-8` | 8 | -6 | exact |
+| `hp-tri-13` | 13 | -10 | exact |
+| `hp-tri-21` | 21 | -19 | best known |
+| `hp-tri-34` | 34 | -28 | best known |
+| `hp-tri-55` | 55 | -44 | best known (headline) |
+| `hp-tri-89` | 89 | -65 | best known |
+| `hp-tri-144` | 144 | -100 | best known |
+| `hp-tri-233` | 233 | -153 | best known |
+
+Exact cells: exhaustive search over the self-avoiding conformations (tools/hp_tri.py, mode exact); the certificate is a conformation of that energy found by annealing. Best known cells: simulated annealing with pivot and local moves (tools/hp_tri.py, mode anneal); an upper bound.
 
 Bound on the other side: -69 (lower bound (trivial); at most 4 free neighbours per H monomer (5 at an end); 34 H monomers).
 

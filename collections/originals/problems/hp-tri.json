@@ -103,8 +103,8 @@
    [
     34,
     "S_9",
-    -29,
-    "best known (ours)"
+    -28,
+    "best known (ours); corrected on 10 November 2026: the earlier -29 had no saved certificate and could not be reproduced"
    ],
    [
     55,
@@ -158,5 +158,27 @@
   "value": "-69",
   "kind": "lower bound (trivial)",
   "source": "at most 4 free neighbours per H monomer (5 at an end); 34 H monomers"
+ },
+ "cells": {
+  "params": [
+   "N"
+  ],
+  "about": "N = F_k, the length of the Fibonacci word",
+  "headline": {
+   "N": 55
+  },
+  "args": [
+   "hp-tri",
+   "{N}"
+  ],
+  "title": "Ground state of the Fibonacci HP protein of length {N} on the triangular lattice",
+  "statement": "Fold the Fibonacci word of length {N} (S_1 = P, S_2 = H, S_k = S_(k-1) S_(k-2); H hydrophobic, P polar) as a self-avoiding chain on the triangular lattice, consecutive monomers on neighbouring sites, so as to minimise the energy: minus the number of pairs of H monomers on neighbouring sites that are not consecutive in the chain.",
+  "submission": "Text file: {N} lines 'a b', the lattice site a + b e^(i pi/3) of each monomer in chain order.",
+  "exact": [
+   "8",
+   "13"
+  ],
+  "exact_how": "exhaustive search over the self-avoiding conformations (tools/hp_tri.py, mode exact); the certificate is a conformation of that energy found by annealing",
+  "how": "simulated annealing with pivot and local moves (tools/hp_tri.py, mode anneal); an upper bound"
  }
 }

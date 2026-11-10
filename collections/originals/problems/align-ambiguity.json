@@ -122,8 +122,8 @@
    ],
    [
     16,
-    50253,
-    "AAGCCCCCCTTGGTTG / TTCTTTGGGGCCACCT",
+    52567,
+    "GTCGGCCTTTGGTTGG / AATTTAGGGGCCCACC",
     "best known (ours, local search)"
    ],
    [
@@ -133,7 +133,7 @@
     "best known (ours, local search)"
    ]
   ],
-  "note": "Exact values by trying every pair (x with its letters in order of first appearance; tools/src/alignamb.c, mode exact). Larger n: local search, lower bounds only.",
+  "note": "Exact values by trying every pair (x with its letters in order of first appearance; tools/src/alignamb.c, mode exact). Larger n: local search, lower bounds only. Rows improved on 10 November 2026 show the value of the cell (see Cells).",
   "certified": {
    "1": {
     "args": [
@@ -157,5 +157,33 @@
   "date": "2026-11-09",
   "holder": "Quantavane (Arhan Canli)",
   "text": "917,147 optimal alignments, held by Quantavane (Arhan Canli), 9 November 2026: the pair in `refs/align-ambiguity.txt` (TCGCTTCCAGAAAAACAGCG / AAAGGGGTTTTCCCTGGTTT)."
+ },
+ "cells": {
+  "params": [
+   "n"
+  ],
+  "about": "n, the length of the two sequences",
+  "headline": {
+   "n": 20
+  },
+  "args": [
+   "align-ambiguity",
+   "{n}"
+  ],
+  "title": "The most ambiguous pair of DNA sequences of length {n}",
+  "statement": "Find two DNA sequences x and y of length {n} over A, C, G, T with the most optimal global alignments under unit costs (mismatch 1, gap 1, match 0): the most least-cost paths from (0, 0) to ({n}, {n}) in the edit graph. A({n}) is that number.",
+  "submission": "Text file: two lines, the DNA sequences x and y, each of {n} letters A, C, G, T.",
+  "exact": [
+   "3",
+   "4",
+   "5",
+   "6",
+   "7"
+  ],
+  "exact_how": "every pair of sequences, up to renaming letters, reversal and swapping (tools/src/alignamb.c, mode exact)",
+  "how": "local search changing one letter at a time (tools/src/alignamb.c, mode ls); a lower bound",
+  "how_by_cell": {
+   "12": "the pair published in the first-values table of 9 November 2026 (local search, tools/src/alignamb.c, mode ls)"
+  }
  }
 }

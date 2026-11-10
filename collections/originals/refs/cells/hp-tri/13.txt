@@ -1,0 +1,14 @@
+# Fibonacci HP chain of length 13 (HPHHPHPHHPHHP) on the triangular lattice: energy -10
+-169 -37
+-168 -37
+-168 -38
+-167 -39
+-167 -40
+-168 -39
+-169 -39
+-169 -38
+-170 -37
+-171 -36
+-171 -37
+-170 -38
+-171 -38

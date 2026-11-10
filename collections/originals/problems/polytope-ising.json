@@ -111,7 +111,63 @@
   "note": "Graph spectra computed numerically (Jacobi rotations) and checked against the multiplicities: 600-cell 12, 9.708 (4), 6.472 (9), 3 (16), 0 (25), -2 (36), -2.472 (9), -3 (16), -3.708 (4); 4_21: 56, 28 (8), 8 (35), -2 (112), -4 (84). The checker can score the 120-cell and 4_21 too (KIND 120 or e8).",
   "headline_rows": [
    "600-cell"
-  ]
+  ],
+  "certified": {
+   "5": {
+    "args": [
+     "polytope-ising",
+     "5"
+    ],
+    "certificate": "collections/originals/refs/table/polytope-ising/5.txt",
+    "value": "-2",
+    "row": "5-cell (K5)"
+   },
+   "8": {
+    "args": [
+     "polytope-ising",
+     "8"
+    ],
+    "certificate": "collections/originals/refs/table/polytope-ising/8.txt",
+    "value": "-32",
+    "row": "8-cell (tesseract)"
+   },
+   "16": {
+    "args": [
+     "polytope-ising",
+     "16"
+    ],
+    "certificate": "collections/originals/refs/table/polytope-ising/16.txt",
+    "value": "-8",
+    "row": "16-cell"
+   },
+   "24": {
+    "args": [
+     "polytope-ising",
+     "24"
+    ],
+    "certificate": "collections/originals/refs/table/polytope-ising/24.txt",
+    "value": "-32",
+    "row": "24-cell"
+   },
+   "120": {
+    "args": [
+     "polytope-ising",
+     "120"
+    ],
+    "certificate": "collections/originals/refs/table/polytope-ising/120.txt",
+    "value": "-720",
+    "row": "120-cell"
+   },
+   "e8": {
+    "args": [
+     "polytope-ising",
+     "e8"
+    ],
+    "certificate": "collections/originals/refs/table/polytope-ising/e8.txt",
+    "value": "-480",
+    "row": "4_21 (240 roots of E8)"
+   }
+  }
  },
  "baseline": {
   "date": "2026-11-09",

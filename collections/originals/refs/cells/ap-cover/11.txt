@@ -1,0 +1,21 @@
+# 20 3-term progressions covering every pair of Z_11 (lines: start a, difference d)
+0 10
+4 8
+0 3
+8 7
+3 9
+9 5
+5 6
+3 2
+2 7
+4 3
+6 2
+0 1
+5 8
+9 4
+6 10
+0 9
+2 1
+7 6
+6 6
+8 4

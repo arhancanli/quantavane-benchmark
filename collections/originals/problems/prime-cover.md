@@ -42,14 +42,30 @@ Verdict: new question: covering codes of Hamming spaces and digitally delicate p
 | --- | --- | --- | --- | --- |
 | 2 | 21 | 4 | exact (every set of 3 fails) | 3 |
 | 3 | 143 | 22 | best known (ours) | 14 |
-| 4 | 1061 | 157 | best known (ours, local search, 15 s) | 93 |
+| 4 | 1061 | 154 | best known (ours, local search, 15 s) | 93 |
 | 5 | 8363 | 1219 | best known (ours, local search, 300 s) | 686 |
 
-Lower bound: the sum over all n-digit primes u of 1/(largest closed neighbourhood among u and its neighbours), rounded up. Codes from tools/src/dominate.c.
+Lower bound: the sum over all n-digit primes u of 1/(largest closed neighbourhood among u and its neighbours), rounded up. Codes from tools/src/dominate.c. Rows improved on 10 November 2026 show the value of the cell (see Cells).
 
 ## Best known value
 
 1,219 primes, held by Quantavane (Arhan Canli), 9 November 2026: the code in `refs/prime-cover.txt`. Lower bound 686 (fractional count).
+
+## Cells
+
+The same question at each value of its parameter (n, the number of digits): 5 cells, 1 of them exact (an exhaustive search finished) and 4 best known (ours). Each cell has its certificate in `refs/cells/prime-cover/` (the headline cell uses `collections/originals/refs/prime-cover.txt`) and is checked with the family's checker:
+
+    python3 -I obb.py check CELL FILE                  # for example prime-cover-2
+
+| cell | n | value | status |
+| --- | --- | --- | --- |
+| `prime-cover-2` | 2 | 4 | exact |
+| `prime-cover-3` | 3 | 22 | best known |
+| `prime-cover-4` | 4 | 154 | best known |
+| `prime-cover-5` | 5 | 1219 | best known (headline) |
+| `prime-cover-6` | 6 | 10359 | best known |
+
+Exact cells: every set of 3 two-digit primes fails (the table of 9 November 2026). Best known cells: greedy construction, then iterated removal of one to three code primes, greedy repair and pruning (tools/src/dominate.c on the graph of tools/prime_graph.py); an upper bound.
 
 Bound on the other side: 686 (lower bound; the sum over the five-digit primes u of 1/(largest closed neighbourhood among u and its neighbours) is 685.95).
 

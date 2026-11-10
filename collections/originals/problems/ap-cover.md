@@ -46,6 +46,28 @@ Exact values by depth-first search with iterative deepening (tools/ap_cover.py e
 
 165 for p = 31, held by Quantavane (Arhan Canli), 9 November 2026: the progressions in `refs/ap-cover.txt`. Lower bound 155 (Schonheim); an answer of 155 would be a Steiner triple system made of progressions.
 
+## Cells
+
+The same question at each value of its parameter (p, a prime): 11 cells, 3 of them exact (an exhaustive search finished) and 8 best known (ours). Each cell has its certificate in `refs/cells/ap-cover/` (the headline cell uses `collections/originals/refs/ap-cover.txt`) and is checked with the family's checker:
+
+    python3 -I obb.py check CELL FILE                  # for example ap-cover-7
+
+| cell | p | value | status |
+| --- | --- | --- | --- |
+| `ap-cover-7` | 7 | 9 | exact |
+| `ap-cover-11` | 11 | 20 | exact |
+| `ap-cover-13` | 13 | 27 | exact |
+| `ap-cover-17` | 17 | 48 | best known |
+| `ap-cover-19` | 19 | 59 | best known |
+| `ap-cover-23` | 23 | 88 | best known |
+| `ap-cover-29` | 29 | 140 | best known |
+| `ap-cover-31` | 31 | 165 | best known (headline) |
+| `ap-cover-37` | 37 | 229 | best known |
+| `ap-cover-41` | 41 | 282 | best known |
+| `ap-cover-43` | 43 | 312 | best known |
+
+Exact cells: exhaustive search over sets of progressions (tools/ap_cover.py, mode exact, 9 November 2026); the certificate is a covering of that size found by the local search. Best known cells: greedy covering followed by local search, removing blocks and repairing greedily (tools/ap_cover.py, mode search); an upper bound.
+
 Bound on the other side: 155 (lower bound; Schonheim bound ceil(31 ceil(30/2) / 3)).
 
 ## Submitting and checking

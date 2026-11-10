@@ -75,7 +75,7 @@
    [
     4,
     1061,
-    157,
+    154,
     "best known (ours, local search, 15 s)",
     93
    ],
@@ -87,7 +87,7 @@
     686
    ]
   ],
-  "note": "Lower bound: the sum over all n-digit primes u of 1/(largest closed neighbourhood among u and its neighbours), rounded up. Codes from tools/src/dominate.c."
+  "note": "Lower bound: the sum over all n-digit primes u of 1/(largest closed neighbourhood among u and its neighbours), rounded up. Codes from tools/src/dominate.c. Rows improved on 10 November 2026 show the value of the cell (see Cells)."
  },
  "baseline": {
   "date": "2026-11-09",
@@ -98,5 +98,26 @@
   "value": "686",
   "kind": "lower bound",
   "source": "the sum over the five-digit primes u of 1/(largest closed neighbourhood among u and its neighbours) is 685.95"
+ },
+ "cells": {
+  "params": [
+   "n"
+  ],
+  "about": "n, the number of digits",
+  "headline": {
+   "n": 5
+  },
+  "args": [
+   "prime-cover",
+   "{n}"
+  ],
+  "title": "Covering the {n}-digit primes by one-digit changes",
+  "statement": "Find the smallest set C of {n}-digit primes such that every {n}-digit prime is in C or differs from a prime of C in exactly one digit (the leading digit stays nonzero): a covering code of radius 1 inside the {n}-digit primes.",
+  "submission": "Text file: the primes of the code, separated by spaces or newlines.",
+  "exact": [
+   "2"
+  ],
+  "exact_how": "every set of 3 two-digit primes fails (the table of 9 November 2026)",
+  "how": "greedy construction, then iterated removal of one to three code primes, greedy repair and pruning (tools/src/dominate.c on the graph of tools/prime_graph.py); an upper bound"
  }
 }

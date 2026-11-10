@@ -58,7 +58,7 @@
   "rows": [
    [
     "8 x 8 (values in 1/64)",
-    "0.5803 (float, before rounding)"
+    "2459/4096 = 0.600342"
    ],
    [
     "16 x 16 (values in 1/64)",
@@ -68,7 +68,19 @@
   "note": "For comparison: cylinder functions built from the best known one-dimensional functions give 2 mu, about 0.7617.",
   "headline_rows": [
    "16 x 16 (values in 1/64)"
-  ]
+  ],
+  "certified": {
+   "8": {
+    "args": [
+     "overlap-square",
+     "8",
+     "64"
+    ],
+    "certificate": "collections/originals/refs/table/overlap-square/8.txt",
+    "value": "2459/4096",
+    "row": "8 x 8 (values in 1/64)"
+   }
+  }
  },
  "baseline": {
   "date": "2026-11-09",

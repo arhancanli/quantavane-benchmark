@@ -3,8 +3,8 @@
  "problems": 46,
  "counting": "questions: one per problem file (a family); cells: the family's question at each value of its natural parameter, each with its certificate (a family without a cells file is one cell)",
  "questions": 46,
- "cells": 1003,
- "cells_exact": 212,
+ "cells": 1049,
+ "cells_exact": 226,
  "by_field": {
   "Combinatorics and graph theory": 7,
   "Number theory": 7,
@@ -17,15 +17,15 @@
   "Biology": 4
  },
  "cells_by_field": {
-  "Combinatorics and graph theory": 7,
+  "Combinatorics and graph theory": 17,
   "Number theory": 331,
-  "Coding theory": 10,
+  "Coding theory": 14,
   "Discrete geometry": 191,
   "Physics": 42,
   "Chemistry and materials": 278,
-  "Astronomy": 38,
+  "Astronomy": 46,
   "Computing and operations research": 78,
-  "Biology": 28
+  "Biology": 52
  },
  "items": [
   {
@@ -39,8 +39,8 @@
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_comb.py",
    "page": "problems/ap-cover.md",
-   "cells": 1,
-   "cells_exact": 0
+   "cells": 11,
+   "cells_exact": 3
   },
   {
    "id": "autoconv-square",
@@ -118,7 +118,7 @@
    "title": "The minimum overlap problem for three parts",
    "status": "open",
    "objective": "minimize",
-   "best_known": "56061/200000",
+   "best_known": "268741/960000",
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_comb.py",
@@ -230,7 +230,7 @@
    "title": "Coils in the 120-cell",
    "status": "open",
    "objective": "maximize",
-   "best_known": "202",
+   "best_known": "208",
    "holder": "Quantavane (Arhan Canli)",
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_codes.py",
@@ -291,8 +291,8 @@
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_codes.py",
    "page": "problems/prime-cover.md",
-   "cells": 1,
-   "cells_exact": 0
+   "cells": 5,
+   "cells_exact": 1
   },
   {
    "id": "cell120-great",
@@ -543,8 +543,8 @@
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_astro.py",
    "page": "problems/nrm-segments.md",
-   "cells": 1,
-   "cells_exact": 0
+   "cells": 9,
+   "cells_exact": 3
   },
   {
    "id": "y-array",
@@ -627,8 +627,8 @@
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_bio.py",
    "page": "problems/align-ambiguity.md",
-   "cells": 1,
-   "cells_exact": 0
+   "cells": 18,
+   "cells_exact": 5
   },
   {
    "id": "hp-tri",
@@ -641,8 +641,8 @@
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_bio.py",
    "page": "problems/hp-tri.md",
-   "cells": 1,
-   "cells_exact": 0
+   "cells": 8,
+   "cells_exact": 2
   },
   {
    "id": "nussinov-degeneracy",

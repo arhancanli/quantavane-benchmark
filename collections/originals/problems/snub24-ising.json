@@ -90,6 +90,15 @@
     "certificate": "collections/originals/refs/table/snub24-ising/600-cell.txt",
     "value": "-160",
     "row": "600-cell"
+   },
+   "gosset": {
+    "args": [
+     "polytope-ising",
+     "gosset"
+    ],
+    "certificate": "collections/originals/refs/table/snub24-ising/gosset.txt",
+    "value": "-84",
+    "row": "Gosset polytope 3_21"
    }
   },
   "headline_rows": [

@@ -1,0 +1,5 @@
+# 4 3-term progressions covering every pair of Z_5 (lines: start a, difference d)
+2 3
+2 2
+1 2
+0 4

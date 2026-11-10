@@ -82,7 +82,17 @@
   "note": "Exact arithmetic in Q(sqrt 5) throughout (checkers/orig_geom.py); the decagon partition is computed and verified by tools/greatcircle.py (mode partition).",
   "headline_rows": [
    "120-cell"
-  ]
+  ],
+  "certified": {
+   "600-cell": {
+    "args": [
+     "cell600-great"
+    ],
+    "certificate": "collections/originals/refs/table/cell120-great/600-cell.txt",
+    "value": "20",
+    "row": "600-cell"
+   }
+  }
  },
  "baseline": {
   "date": "2026-11-09",

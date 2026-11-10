@@ -92,7 +92,27 @@
   "note": "Energies from the exact checker (checkers/orig_phys.py builds the graph from the Golay code and checks the parameters); configurations from tools/src/ising.c (simulated annealing, 20,000 sweeps, 20 to 30 restarts); the graph files from tools/mclaughlin_graph.py. The bound for the McLaughlin graph is m - 2 floor(n(k - theta_min)/4 - 1/2) = 15400 - 2 x 9624, the parity argument removing one edge from n(k - theta_min)/4 = 9625.",
   "headline_rows": [
    "McLaughlin graph, srg(275, 112, 30, 56)"
-  ]
+  ],
+  "certified": {
+   "mclaughlin-local": {
+    "args": [
+     "mclaughlin-sub",
+     "local"
+    ],
+    "certificate": "collections/originals/refs/table/mclaughlin-ising/mclaughlin-local.txt",
+    "value": "-560",
+    "row": "its local graph: GQ(3,9), srg(112, 30, 2, 10)"
+   },
+   "mclaughlin-second": {
+    "args": [
+     "mclaughlin-sub",
+     "second"
+    ],
+    "certificate": "collections/originals/refs/table/mclaughlin-ising/mclaughlin-second.txt",
+    "value": "-1296",
+    "row": "its second subconstituent: local McLaughlin graph, srg(162, 56, 10, 24)"
+   }
+  }
  },
  "bound": {
   "value": "-3848",

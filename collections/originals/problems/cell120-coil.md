@@ -2,11 +2,11 @@
 
 `cell120-coil` · Coding theory · status: **open** · added 9 November 2026 (Quantavane Originals)
 
-Best known value: **202** (maximize), Quantavane (Arhan Canli), 9 November 2026: randomised greedy growth of induced paths that prefers the step blocking the fewest free vertices, recording every closing induced cycle, many restarts (tools/src/coil.c)
+Best known value: **208** (maximize), Quantavane (Arhan Canli), 9 November 2046: randomised greedy growth of induced paths that prefers the step blocking the fewest free vertices, recording every closing induced cycle, many restarts (tools/src/coil.c)
 
 ## Statement
 
-The 120-cell is the regular 4-dimensional polytope with 600 vertices; its graph is 4-regular with girth 5. Its vertices correspond to the 600 tetrahedral cells of the 600-cell, two vertices being adjacent when their cells share a triangle. A coil (coil-in-the-box) is an induced cycle: a cycle in the graph with no edge between two of its vertices other than the cycle's own edges. How long can a coil in the 120-cell be? Best known: 202 vertices (ours); every coil has at most 400.
+The 120-cell is the regular 4-dimensional polytope with 600 vertices; its graph is 4-regular with girth 5. Its vertices correspond to the 600 tetrahedral cells of the 600-cell, two vertices being adjacent when their cells share a triangle. A coil (coil-in-the-box) is an induced cycle: a cycle in the graph with no edge between two of its vertices other than the cycle's own edges. How long can a coil in the 120-cell be? Best known: 208 vertices (ours); every coil has at most 400.
 
 ## Why it is interesting
 
@@ -35,14 +35,14 @@ Verdict: new question for this graph: snake-in-the-box and coil-in-the-box are s
 
 | quantity | best found (ours) | upper bound |
 | --- | --- | --- |
-| coil (induced cycle), vertices | 202 | 400 |
-| snake (induced path), vertices | 214 |  |
+| coil (induced cycle), vertices | 208 | 400 |
+| snake (induced path), vertices | 226 |  |
 
 tools/src/coil.c with 30 s and 400 s of search; the certificate lists the cells of the 600-cell.
 
 ## Best known value
 
-202 vertices, held by Quantavane (Arhan Canli), 9 November 2026: the coil in `refs/cell120-coil.txt`. Upper bound 400 (counting edges between the coil and the rest).
+208 vertices, held by Quantavane (Arhan Canli), 10 November 2026 (202 on 9 November): the coil in `refs/cell120-coil.txt`. Upper bound 400 (counting edges between the coil and the rest).
 
 Bound on the other side: 400 (upper bound; each of the c coil vertices has 2 neighbours off the coil and each of the other 600 - c vertices at most 4, so 2c <= 4(600 - c)).
 

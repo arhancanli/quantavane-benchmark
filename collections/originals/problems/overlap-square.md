@@ -30,7 +30,7 @@ Verdict: new. No paper or table on a two-dimensional (or square) version of Erdo
 
 | grid | best overlap found (ours) |
 | --- | --- |
-| 8 x 8 (values in 1/64) | 0.5803 (float, before rounding) |
+| 8 x 8 (values in 1/64) | 2459/4096 = 0.600342 |
 | 16 x 16 (values in 1/64) | 150615/262144 = 0.574551 |
 
 For comparison: cylinder functions built from the best known one-dimensional functions give 2 mu, about 0.7617.

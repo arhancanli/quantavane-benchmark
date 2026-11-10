@@ -1,0 +1,5 @@
+# covering code of radius 1 inside the 2-digit primes: 4 primes
+13
+67
+71
+79

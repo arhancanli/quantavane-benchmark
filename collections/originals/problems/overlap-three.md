@@ -2,11 +2,11 @@
 
 `overlap-three` · Combinatorics and graph theory · status: **open** · added 9 November 2026 (Quantavane Originals)
 
-Best known value: **56061/200000** (minimize), Quantavane (Arhan Canli), 9 November 2026: a 60-cell step splitting found by multiplicative gradient steps on a smoothed maximum with Sinkhorn rebalancing (tools/overlap3.py), rounded to multiples of 1/600
+Best known value: **268741/960000** (minimize), Quantavane (Arhan Canli), 10 November 2026 (56061/200000 with 60 cells on 9 November): multiplicative gradient steps on a smoothed maximum over a 120-cell splitting, rounded to multiples of 1/600 (tools/overlap3.py)
 
 ## Statement
 
-Split [0,3] into three parts of equal measure, allowing fractional membership: measurable f_1, f_2, f_3: [0,3] -> [0,1] with f_1 + f_2 + f_3 = 1 and the integral of each f_a equal to 1. The overlap of parts a != b at shift x is the integral of f_a(t) f_b(t - x) dt (the continuous count of differences x between part a and part b). Let mu_3 be the infimum, over all such splittings, of the largest overlap over all pairs a != b and shifts x. Determine mu_3. This is the three-part version of Erdos's minimum overlap problem (two parts of {1, ..., 2n}, constant mu = 0.380...). Known: 1/6 <= mu_3 <= 56061/200000 = 0.280305; find a splitting with a smaller largest overlap.
+Split [0,3] into three parts of equal measure, allowing fractional membership: measurable f_1, f_2, f_3: [0,3] -> [0,1] with f_1 + f_2 + f_3 = 1 and the integral of each f_a equal to 1. The overlap of parts a != b at shift x is the integral of f_a(t) f_b(t - x) dt (the continuous count of differences x between part a and part b). Let mu_3 be the infimum, over all such splittings, of the largest overlap over all pairs a != b and shifts x. Determine mu_3. This is the three-part version of Erdos's minimum overlap problem (two parts of {1, ..., 2n}, constant mu = 0.380...). Known: 1/6 <= mu_3 <= 268741/960000 = 0.279938 (ours, 10 November 2026; 56061/200000 = 0.280305 on 9 November); find a splitting with a smaller largest overlap.
 
 ## Why it is interesting
 
@@ -32,26 +32,26 @@ Verdict: new. No version of Erdos's minimum overlap problem with three or more p
 
 | cells | best largest overlap found (ours) |
 | --- | --- |
-| 24 | 0.28199 (float) |
+| 24 | 807293/2880000 = 0.280310 |
 | 60 | 56061/200000 = 0.280305 |
-| 120 | 0.28062 (float; the optimizer did not improve on 60 cells) |
+| 120 | 268741/960000 = 0.279938 |
 
 Upper bounds; the uniform splitting gives 1/3 and the averaging bound is 1/6.
 
 ## Best known value
 
-56061/200000 = 0.280305 (60-cell splitting in `refs/overlap-three.txt`), held by Quantavane (Arhan Canli), 9 November 2026. Lower bound 1/6 by averaging the overlaps of one pair over all shifts.
+268741/960000 = 0.279938 (120-cell splitting in `refs/overlap-three.txt`), held by Quantavane (Arhan Canli), 10 November 2026 (our first value, 9 November, was 56061/200000 = 0.280305 with 60 cells). Lower bound 1/6 by averaging the overlaps of one pair over all shifts.
 
 Bound on the other side: 1/6 (lower bound; the overlaps of a pair integrate to 1 over shifts in [-3, 3]).
 
 ## Submitting and checking
 
-Format: Text file: 60 lines of three integers between 0 and 600, the values of f_1, f_2, f_3 (times 600) on the 60 cells of width 1/20 of [0,3]; each line must sum to 600 and each column to 12000. Other grids and denominators can be checked with the checker's M and DEN arguments.
+Format: Text file: 120 lines of three integers between 0 and 600, the values of f_1, f_2, f_3 (times 600) on the 120 cells of width 1/40 of [0,3]; each line must sum to 600 and each column to 24000. Other grids and denominators can be checked with the checker's M and DEN arguments.
 
 Score: the largest overlap of the step functions, an exact rational number (smaller is better). A submission improves the problem when its exact value is smaller than the best known value.
 
     python3 -I obb.py check overlap-three FILE               # from the benchmark's root
-    python3 -I collections/originals/checkers/orig_comb.py overlap-three 60 600 FILE
+    python3 -I collections/originals/checkers/orig_comb.py overlap-three 120 600 FILE
 
 The checker is ours (standard library only); it prints the exact value as its last line `RESULT v` and exits 0 only for a valid certificate. Our certificate: `collections/originals/refs/overlap-three.txt`.
 

@@ -87,6 +87,15 @@
     ],
     "certificate": "collections/originals/refs/table/potts3-600/2.txt",
     "value": "280"
+   },
+   "5": {
+    "args": [
+     "polytope-potts",
+     "600",
+     "5"
+    ],
+    "certificate": "collections/originals/refs/table/potts3-600/5.txt",
+    "value": "0"
    }
   }
  },

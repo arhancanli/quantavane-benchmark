@@ -85,7 +85,7 @@ The same question at each value of its parameter (N, the side of the tetrahedral
 | `tetra-distinct-12` | 12 | 11 | best known |
 | `tetra-distinct-13` | 13 | 11 | best known |
 | `tetra-distinct-14` | 14 | 12 | best known |
-| `tetra-distinct-15` | 15 | 12 | best known |
+| `tetra-distinct-15` | 15 | 13 | best known |
 | `tetra-distinct-16` | 16 | 13 | best known |
 | `tetra-distinct-17` | 17 | 14 | best known |
 | `tetra-distinct-18` | 18 | 14 | best known |

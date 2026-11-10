@@ -63,6 +63,26 @@ Exact values from tools/src/nrm.c (mode max: depth-first search over segments wi
 
 23 holes, held by Quantavane (Arhan Canli), 9 November 2026: the mask in `refs/nrm-segments.txt` (253 baselines, all different). Counting baselines (the 630 baseline vectors of hexagonal norm at most 20, up to sign) gives h(10) <= 36.
 
+## Cells
+
+The same question at each value of its parameter (s, the number of rings of segments): 9 cells, 3 of them exact (an exhaustive search finished) and 6 best known (ours). Each cell has its certificate in `refs/cells/nrm-segments/` (the headline cell uses `collections/originals/refs/nrm-segments.txt`) and is checked with the family's checker:
+
+    python3 -I obb.py check CELL FILE                  # for example nrm-segments-2
+
+| cell | s | value | status |
+| --- | --- | --- | --- |
+| `nrm-segments-2` | 2 | 7 | exact |
+| `nrm-segments-3` | 3 | 9 | exact |
+| `nrm-segments-4` | 4 | 12 | exact |
+| `nrm-segments-5` | 5 | 14 | best known |
+| `nrm-segments-6` | 6 | 16 | best known |
+| `nrm-segments-7` | 7 | 18 | best known |
+| `nrm-segments-8` | 8 | 20 | best known |
+| `nrm-segments-9` | 9 | 21 | best known |
+| `nrm-segments-10` | 10 | 23 | best known (headline) |
+
+Exact cells: exhaustive search over the sets of segments (tools/src/nrm.c, mode max). Best known cells: local search moving one hole at a time to the position creating the fewest repeated baselines (tools/src/nrm.c, mode ls); a lower bound.
+
 Bound on the other side: 36 (upper bound; counting: the h(h - 1)/2 baselines of a mask with h holes are distinct vectors of hexagonal norm at most 20, of which there are 630 up to sign, so h(h - 1)/2 <= 630).
 
 ## Submitting and checking

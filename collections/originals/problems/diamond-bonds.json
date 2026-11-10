@@ -307,6 +307,22 @@
     ],
     "certificate": "collections/originals/refs/table/diamond-bonds/5.txt",
     "value": "12"
+   },
+   "147": {
+    "args": [
+     "diamond-bonds",
+     "147"
+    ],
+    "certificate": "collections/originals/refs/table/diamond-bonds/147.txt",
+    "value": "96"
+   },
+   "200": {
+    "args": [
+     "diamond-bonds",
+     "200"
+    ],
+    "certificate": "collections/originals/refs/table/diamond-bonds/200.txt",
+    "value": "118"
    }
   }
  },

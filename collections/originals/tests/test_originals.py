@@ -856,6 +856,7 @@ if __name__ == "__main__":
     controls()
     cross_checks()
     cells()
+    tables()
     pages()
     print(f"{len(failures)} failures" if failures else "all originals tests passed")
     sys.exit(1 if failures else 0)
