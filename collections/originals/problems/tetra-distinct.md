@@ -67,7 +67,7 @@ Exact values from an exhaustive depth-first search (tools/src/tetradist.c, mode 
 
 ## Cells
 
-The same question at each value of its parameter (N, the side of the tetrahedral grid): 16 cells, 8 of them exact (an exhaustive search finished) and 8 best known (ours). Each cell has its certificate in `refs/cells/tetra-distinct/` (the headline cell uses `collections/originals/refs/tetra-distinct.txt`) and is checked with the family's checker:
+The same question at each value of its parameter (N, the side of the tetrahedral grid): 18 cells, 8 of them exact (an exhaustive search finished) and 10 best known (ours). Each cell has its certificate in `refs/cells/tetra-distinct/` (the headline cell uses `collections/originals/refs/tetra-distinct.txt`) and is checked with the family's checker:
 
     python3 -I obb.py check CELL FILE                  # for example tetra-distinct-3
 
@@ -88,6 +88,8 @@ The same question at each value of its parameter (N, the side of the tetrahedral
 | `tetra-distinct-15` | 15 | 12 | best known |
 | `tetra-distinct-16` | 16 | 13 | best known |
 | `tetra-distinct-17` | 17 | 14 | best known |
+| `tetra-distinct-18` | 18 | 14 | best known |
+| `tetra-distinct-19` | 19 | 15 | best known |
 | `tetra-distinct-20` | 20 | 16 | best known (headline) |
 
 Exact cells: exhaustive depth-first search over the subsets of the grid (tools/src/tetradist.c, mode exact). Best known cells: local search moving one point at a time to the position creating the fewest repeated distances, with a tabu list (tools/src/tetradist.c, mode ls).

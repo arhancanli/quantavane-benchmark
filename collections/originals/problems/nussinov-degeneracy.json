@@ -152,5 +152,33 @@
   "value": "240944076",
   "kind": "upper bound (trivial)",
   "source": "all secondary structures on 30 bases with hairpin loops of at least 3"
+ },
+ "cells": {
+  "params": [
+   "n"
+  ],
+  "about": "n, the length of the RNA",
+  "headline": {
+   "n": 30
+  },
+  "args": [
+   "nussinov-degeneracy",
+   "{n}"
+  ],
+  "title": "The most ambiguous RNA of length {n} under base-pair maximization",
+  "statement": "Find an RNA sequence of length {n} over A, C, G, U with the most optimal secondary structures in the base-pair maximization (Nussinov) model: pairs AU, UA, GC, CG, GU, UG, each base in at most one pair, every pair (i, j) with j - i >= 4, no two pairs crossing; N(s) counts the structures with the most pairs, and D({n}) is the largest N(s).",
+  "submission": "Text file: an RNA sequence of length {n} over A, C, G, U.",
+  "exact": [
+   "6",
+   "7",
+   "8",
+   "9",
+   "10",
+   "11",
+   "12",
+   "13"
+  ],
+  "exact_how": "every sequence of length n, a sequence and its reversal counted once (tools/src/nussdeg.c, mode exhaustive)",
+  "how": "simulated annealing over sequences with single-letter changes (tools/src/nussdeg.c, mode anneal); a lower bound"
  }
 }

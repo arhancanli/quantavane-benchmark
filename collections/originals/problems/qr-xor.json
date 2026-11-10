@@ -85,7 +85,7 @@
     19,
     9,
     152,
-    98
+    96
    ],
    [
     23,
@@ -97,7 +97,7 @@
     29,
     14,
     377,
-    209
+    206
    ],
    [
     31,
@@ -109,13 +109,13 @@
     37,
     18,
     629,
-    323
+    321
    ],
    [
     41,
     20,
     779,
-    396
+    393
    ],
    [
     43,
@@ -127,10 +127,10 @@
     47,
     23,
     1034,
-    508
+    506
    ]
   ],
-  "note": "Upper bounds from 60 randomized runs of Paar's greedy method (cancellation-free). Circuits that use cancellation (as in the Boyar-Peralta heuristic) may do better; no lower bound beyond the trivial p is proved."
+  "note": "Upper bounds from 60 randomized runs of Paar's greedy method (cancellation-free). Circuits that use cancellation (as in the Boyar-Peralta heuristic) may do better; no lower bound beyond the trivial p is proved. Rows improved on 10 November 2026 show the value of the cell (see Cells)."
  },
  "baseline": {
   "date": "2026-11-09",
@@ -141,5 +141,24 @@
   "value": "31",
   "kind": "lower bound (trivial)",
   "source": "the 31 outputs are distinct non-input signals"
+ },
+ "cells": {
+  "params": [
+   "p"
+  ],
+  "about": "p, a prime",
+  "headline": {
+   "p": 31
+  },
+  "args": [
+   "qr-xor",
+   "{p}"
+  ],
+  "title": "XOR circuit for the quadratic-residue circulant of order {p}",
+  "statement": "Q_{p} is the {p} x {p} circulant matrix over GF(2) with Q[i][j] = 1 exactly when j - i is a nonzero square modulo {p}. Find an XOR circuit (linear straight-line program) from the inputs x_0, ..., x_({p}-1) with the fewest gates s = a XOR b that produces every output y_i = sum over j of Q[i][j] x_j as one of its signals.",
+  "submission": "Text file: a first line '{p} G', then G lines 'a b' (gate k is signal {p} - 1 + k), then one line of {p} signal numbers giving the outputs in order.",
+  "exact": [],
+  "exact_how": "none",
+  "how": "the best of 60 randomized runs of Paar's greedy method (tools/qr_xor.py); an upper bound"
  }
 }

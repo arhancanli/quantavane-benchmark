@@ -58,6 +58,42 @@ Exact values: every sequence of length n (tools/src/nussdeg.c exhaustive). Best 
 
 100,603 for n = 30, held by Quantavane (Arhan Canli), 9 November 2026: the sequence in `refs/nussinov-degeneracy.txt`. Upper bound 240,944,076, the number of all secondary structures of a 30-base chain with hairpins of at least 3 bases.
 
+## Cells
+
+The same question at each value of its parameter (n, the length of the RNA): 25 cells, 8 of them exact (an exhaustive search finished) and 17 best known (ours). Each cell has its certificate in `refs/cells/nussinov-degeneracy/` (the headline cell uses `collections/originals/refs/nussinov-degeneracy.txt`) and is checked with the family's checker:
+
+    python3 -I obb.py check CELL FILE                  # for example nussinov-degeneracy-6
+
+| cell | n | value | status |
+| --- | --- | --- | --- |
+| `nussinov-degeneracy-6` | 6 | 3 | exact |
+| `nussinov-degeneracy-7` | 7 | 5 | exact |
+| `nussinov-degeneracy-8` | 8 | 7 | exact |
+| `nussinov-degeneracy-9` | 9 | 13 | exact |
+| `nussinov-degeneracy-10` | 10 | 22 | exact |
+| `nussinov-degeneracy-11` | 11 | 27 | exact |
+| `nussinov-degeneracy-12` | 12 | 48 | exact |
+| `nussinov-degeneracy-13` | 13 | 63 | exact |
+| `nussinov-degeneracy-14` | 14 | 101 | best known |
+| `nussinov-degeneracy-15` | 15 | 166 | best known |
+| `nussinov-degeneracy-16` | 16 | 247 | best known |
+| `nussinov-degeneracy-17` | 17 | 368 | best known |
+| `nussinov-degeneracy-18` | 18 | 571 | best known |
+| `nussinov-degeneracy-19` | 19 | 913 | best known |
+| `nussinov-degeneracy-20` | 20 | 1368 | best known |
+| `nussinov-degeneracy-21` | 21 | 1967 | best known |
+| `nussinov-degeneracy-22` | 22 | 2868 | best known |
+| `nussinov-degeneracy-23` | 23 | 4612 | best known |
+| `nussinov-degeneracy-24` | 24 | 7883 | best known |
+| `nussinov-degeneracy-25` | 25 | 10310 | best known |
+| `nussinov-degeneracy-26` | 26 | 16145 | best known |
+| `nussinov-degeneracy-27` | 27 | 24702 | best known |
+| `nussinov-degeneracy-28` | 28 | 40244 | best known |
+| `nussinov-degeneracy-29` | 29 | 62836 | best known |
+| `nussinov-degeneracy-30` | 30 | 100603 | best known (headline) |
+
+Exact cells: every sequence of length n, a sequence and its reversal counted once (tools/src/nussdeg.c, mode exhaustive). Best known cells: simulated annealing over sequences with single-letter changes (tools/src/nussdeg.c, mode anneal); a lower bound.
+
 Bound on the other side: 240944076 (upper bound (trivial); all secondary structures on 30 bases with hairpin loops of at least 3).
 
 ## Submitting and checking

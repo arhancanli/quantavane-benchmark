@@ -35,20 +35,45 @@ Verdict: new. No XOR count or straight-line program for quadratic-residue circul
 | 11 | 5 | 44 | 34 |
 | 13 | 6 | 65 | 46 |
 | 17 | 8 | 119 | 76 |
-| 19 | 9 | 152 | 98 |
+| 19 | 9 | 152 | 96 |
 | 23 | 11 | 230 | 136 |
-| 29 | 14 | 377 | 209 |
+| 29 | 14 | 377 | 206 |
 | 31 | 15 | 434 | 238 |
-| 37 | 18 | 629 | 323 |
-| 41 | 20 | 779 | 396 |
+| 37 | 18 | 629 | 321 |
+| 41 | 20 | 779 | 393 |
 | 43 | 21 | 860 | 430 |
-| 47 | 23 | 1034 | 508 |
+| 47 | 23 | 1034 | 506 |
 
-Upper bounds from 60 randomized runs of Paar's greedy method (cancellation-free). Circuits that use cancellation (as in the Boyar-Peralta heuristic) may do better; no lower bound beyond the trivial p is proved.
+Upper bounds from 60 randomized runs of Paar's greedy method (cancellation-free). Circuits that use cancellation (as in the Boyar-Peralta heuristic) may do better; no lower bound beyond the trivial p is proved. Rows improved on 10 November 2026 show the value of the cell (see Cells).
 
 ## Best known value
 
 238 gates for p = 31, held by Quantavane (Arhan Canli), 9 November 2026: the circuit in `refs/qr-xor.txt` (Paar's greedy method, tools/qr_xor.py). Lower bound: 31 (the 31 outputs are distinct and none is an input, so each is a different gate); nothing better is proved.
+
+## Cells
+
+The same question at each value of its parameter (p, a prime): 14 cells, 0 of them exact (an exhaustive search finished) and 14 best known (ours). Each cell has its certificate in `refs/cells/qr-xor/` (the headline cell uses `collections/originals/refs/qr-xor.txt`) and is checked with the family's checker:
+
+    python3 -I obb.py check CELL FILE                  # for example qr-xor-11
+
+| cell | p | value | status |
+| --- | --- | --- | --- |
+| `qr-xor-11` | 11 | 34 | best known |
+| `qr-xor-13` | 13 | 46 | best known |
+| `qr-xor-17` | 17 | 76 | best known |
+| `qr-xor-19` | 19 | 96 | best known |
+| `qr-xor-23` | 23 | 136 | best known |
+| `qr-xor-29` | 29 | 206 | best known |
+| `qr-xor-31` | 31 | 238 | best known (headline) |
+| `qr-xor-37` | 37 | 321 | best known |
+| `qr-xor-41` | 41 | 393 | best known |
+| `qr-xor-43` | 43 | 430 | best known |
+| `qr-xor-47` | 47 | 506 | best known |
+| `qr-xor-53` | 53 | 627 | best known |
+| `qr-xor-59` | 59 | 768 | best known |
+| `qr-xor-61` | 61 | 811 | best known |
+
+Exact cells: none. Best known cells: the best of 60 randomized runs of Paar's greedy method (tools/qr_xor.py); an upper bound.
 
 Bound on the other side: 31 (lower bound (trivial); the 31 outputs are distinct non-input signals).
 

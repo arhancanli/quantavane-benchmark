@@ -115,5 +115,24 @@
   "date": "2026-11-09",
   "holder": "Quantavane (Arhan Canli)",
   "text": "-789723697/1492992 = -528.953736524 (435 nearest-neighbour pairs), held by Quantavane (Arhan Canli), 9 November 2026: the cluster in `refs/lj-fcc.txt`."
+ },
+ "cells": {
+  "params": [
+   "N"
+  ],
+  "about": "N, the number of atoms",
+  "headline": {
+   "N": 100
+  },
+  "args": [
+   "lj-fcc",
+   "{N}"
+  ],
+  "title": "Lennard-Jones cluster of {N} atoms on the face-centred cubic lattice",
+  "statement": "Place {N} atoms on distinct sites of the face-centred cubic lattice (integer points with x + y + z even, nearest neighbours at squared distance 2) so as to minimise the Lennard-Jones energy with the nearest-neighbour distance at the potential's minimum and the cutoff at 2.5 sigma: a pair at squared distance q <= 8 contributes 64/q^6 - 16/q^3 (exactly -1 for nearest neighbours), pairs further apart nothing.",
+  "submission": "Text file: {N} lines 'x y z', distinct integer points with x + y + z even.",
+  "exact": [],
+  "exact_how": "none",
+  "how": "simulated annealing over lattice clusters with restarts (tools/src/ljfcc.c); an upper bound"
  }
 }

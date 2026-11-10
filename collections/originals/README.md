@@ -7,7 +7,7 @@ known value, a holder and a date. All of them are open.
 
 Each question is a family of cells: the same question at each value of its natural parameter (the number of antennas,
 the side of a grid, the number of digits, ...), each cell with our first value, its certificate in `refs/cells/` and
-the family's exact checker, the way the benchmark's table families are counted. There are <!--cells-->736<!--/cells-->
+the family's exact checker, the way the benchmark's table families are counted. There are <!--cells-->921<!--/cells-->
 cells. The questions and the cells are counted apart (`index.json`: `questions`, `cells`, `cells_exact`); each cell says
 whether its value is exact (an exhaustive search finished) or the best known (ours), and a family without a cells file
 is one cell, its headline. A cell is checked like any problem: `python3 -I obb.py check CELL FILE`.
@@ -59,7 +59,7 @@ and is credited by name on the problem's page and in `leaderboard.json`.
 | [Covering the five-digit primes by one-digit changes](problems/prime-cover.md) | Coding theory | minimize | 1219 | 1 (0) |
 | [Vertices of the 120-cell with no three on a great circle](problems/cell120-great.md) | Discrete geometry | maximize | 57 | 1 (0) |
 | [Charges on the roots of E8](problems/e8-coulomb.md) | Discrete geometry | minimize | 304375/1152 | 118 (1) |
-| [Distinct distances in the tetrahedral grid](problems/tetra-distinct.md) | Discrete geometry | maximize | 16 | 16 (8) |
+| [Distinct distances in the tetrahedral grid](problems/tetra-distinct.md) | Discrete geometry | maximize | 16 | 18 (8) |
 | [Distinct triangle areas in the triangular grid](problems/tri-areas.md) | Discrete geometry | maximize | 9 | 27 (11) |
 | [Distinct distances in the triangular grid](problems/tri-distinct.md) | Discrete geometry | maximize | 14 | 27 (13) |
 | [Ising antiferromagnet on the grand antiprism](problems/ga-ising.md) | Physics | minimize | -140 | 1 (0) |
@@ -73,15 +73,15 @@ and is credited by name on the problem's page and in `leaderboard.json`.
 | [Pieces of diamond with the fewest dangling bonds](problems/diamond-bonds.md) | Chemistry and materials | minimize | 72 | 95 (12) |
 | [The smallest knotted ring in the diamond lattice](problems/diamond-knot.md) | Chemistry and materials | minimize | 36 | 1 (0) |
 | [The smallest catenane in the diamond lattice](problems/diamond-link.md) | Chemistry and materials | minimize | 28 | 1 (0) |
-| [Lennard-Jones clusters on the face-centred cubic lattice](problems/lj-fcc.md) | Chemistry and materials | minimize | -789723697/1492992 | 1 (0) |
+| [Lennard-Jones clusters on the face-centred cubic lattice](problems/lj-fcc.md) | Chemistry and materials | minimize | -789723697/1492992 | 147 (0) |
 | [Non-redundant aperture masks for segmented mirrors](problems/nrm-segments.md) | Astronomy | maximize | 23 | 1 (0) |
 | [Y-shaped arrays with all baseline lengths different](problems/y-array.md) | Astronomy | minimize | 165 | 37 (10) |
-| [XOR circuits for the quadratic-residue circulant](problems/qr-xor.md) | Computing and operations research | minimize | 238 | 1 (0) |
+| [XOR circuits for the quadratic-residue circulant](problems/qr-xor.md) | Computing and operations research | minimize | 238 | 14 (0) |
 | [Shortest reset words of the quadratic automaton modulo p](problems/sync-quadratic.md) | Computing and operations research | minimize | 31 | 28 (18) |
 | [The travelling salesman tour of the Gaussian primes](problems/tsp-gaussian.md) | Computing and operations research | minimize | 11298548 | 1 (0) |
 | [The travelling salesman tour of a sunflower](problems/tsp-sunflower.md) | Computing and operations research | minimize | 17245349 | 1 (0) |
 | [The most ambiguous pair of DNA sequences](problems/align-ambiguity.md) | Biology | maximize | 917147 | 1 (0) |
 | [Fibonacci proteins on the triangular lattice](problems/hp-tri.md) | Biology | minimize | -44 | 1 (0) |
-| [The most ambiguous RNA under base-pair maximization](problems/nussinov-degeneracy.md) | Biology | maximize | 100603 | 1 (0) |
+| [The most ambiguous RNA under base-pair maximization](problems/nussinov-degeneracy.md) | Biology | maximize | 100603 | 25 (8) |
 | [DNA open in all six reading frames](problems/six-frame.md) | Biology | minimize | 72 | 1 (0) |
 <!--/table-->
