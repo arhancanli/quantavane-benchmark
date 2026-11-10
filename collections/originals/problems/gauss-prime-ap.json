@@ -162,7 +162,153 @@
     "search up to norm 1.4 x 10^9"
    ]
   ],
-  "note": "Exact values from tools/src/gaussap.c: mode exact (every pair of terms) for k <= 11; for larger k the necessary divisibility of d and the case split by small prime ideals (modes fast, big and through), each search complete up to a norm bound above the value found. M(k) never decreases with k, so M(18) = M(17)."
+  "note": "Exact values from tools/src/gaussap.c: mode exact (every pair of terms) for k <= 11; for larger k the necessary divisibility of d and the case split by small prime ideals (modes fast, big and through), each search complete up to a norm bound above the value found. M(k) never decreases with k, so M(18) = M(17).",
+  "certified": {
+   "3": {
+    "args": [
+     "gauss-prime-ap",
+     "9"
+    ],
+    "certificate": "collections/originals/refs/table/gauss-prime-ap/3.txt",
+    "value": "3",
+    "row_value": "9"
+   },
+   "4": {
+    "args": [
+     "gauss-prime-ap",
+     "9"
+    ],
+    "certificate": "collections/originals/refs/table/gauss-prime-ap/4.txt",
+    "value": "4",
+    "row_value": "9"
+   },
+   "5": {
+    "args": [
+     "gauss-prime-ap",
+     "17"
+    ],
+    "certificate": "collections/originals/refs/table/gauss-prime-ap/5.txt",
+    "value": "5",
+    "row_value": "17"
+   },
+   "6": {
+    "args": [
+     "gauss-prime-ap",
+     "17"
+    ],
+    "certificate": "collections/originals/refs/table/gauss-prime-ap/6.txt",
+    "value": "6",
+    "row_value": "17"
+   },
+   "7": {
+    "args": [
+     "gauss-prime-ap",
+     "29"
+    ],
+    "certificate": "collections/originals/refs/table/gauss-prime-ap/7.txt",
+    "value": "7",
+    "row_value": "29"
+   },
+   "8": {
+    "args": [
+     "gauss-prime-ap",
+     "29"
+    ],
+    "certificate": "collections/originals/refs/table/gauss-prime-ap/8.txt",
+    "value": "8",
+    "row_value": "29"
+   },
+   "9": {
+    "args": [
+     "gauss-prime-ap",
+     "173"
+    ],
+    "certificate": "collections/originals/refs/table/gauss-prime-ap/9.txt",
+    "value": "9",
+    "row_value": "173"
+   },
+   "10": {
+    "args": [
+     "gauss-prime-ap",
+     "1013"
+    ],
+    "certificate": "collections/originals/refs/table/gauss-prime-ap/10.txt",
+    "value": "10",
+    "row_value": "1013"
+   },
+   "11": {
+    "args": [
+     "gauss-prime-ap",
+     "14489"
+    ],
+    "certificate": "collections/originals/refs/table/gauss-prime-ap/11.txt",
+    "value": "11",
+    "row_value": "14489"
+   },
+   "12": {
+    "args": [
+     "gauss-prime-ap",
+     "122033"
+    ],
+    "certificate": "collections/originals/refs/table/gauss-prime-ap/12.txt",
+    "value": "12",
+    "row_value": "122033"
+   },
+   "13": {
+    "args": [
+     "gauss-prime-ap",
+     "7114409"
+    ],
+    "certificate": "collections/originals/refs/table/gauss-prime-ap/13.txt",
+    "value": "13",
+    "row_value": "7114409"
+   },
+   "14": {
+    "args": [
+     "gauss-prime-ap",
+     "8565209"
+    ],
+    "certificate": "collections/originals/refs/table/gauss-prime-ap/14.txt",
+    "value": "14",
+    "row_value": "8565209"
+   },
+   "15": {
+    "args": [
+     "gauss-prime-ap",
+     "82467349"
+    ],
+    "certificate": "collections/originals/refs/table/gauss-prime-ap/15.txt",
+    "value": "15",
+    "row_value": "82467349"
+   },
+   "16": {
+    "args": [
+     "gauss-prime-ap",
+     "140768753"
+    ],
+    "certificate": "collections/originals/refs/table/gauss-prime-ap/16.txt",
+    "value": "16",
+    "row_value": "140768753"
+   },
+   "17": {
+    "args": [
+     "gauss-prime-ap",
+     "557124937"
+    ],
+    "certificate": "collections/originals/refs/table/gauss-prime-ap/17.txt",
+    "value": "17",
+    "row_value": "557124937"
+   },
+   "18": {
+    "args": [
+     "gauss-prime-ap",
+     "557124937"
+    ],
+    "certificate": "collections/originals/refs/table/gauss-prime-ap/18.txt",
+    "value": "18",
+    "row_value": "557124937"
+   }
+  }
  },
  "baseline": {
   "date": "2026-11-09",

@@ -36,7 +36,7 @@ Verdict: new. No paper, table or repository entry was found for the autoconvolut
 | --- | --- | --- |
 | 8 x 8 | 2.34383 | 2.49946 (= 1.58097^2) |
 | 16 x 16 | 2.26079 | 2.41038 (= 1.55254^2) |
-| 24 x 24 | 2.22253 |  |
+| 24 x 24 | 5687487427963392/2559015127450681 = 2.222530 |  |
 
 Upper bounds by step functions on finer grids. The product column uses our own one-dimensional optimizer at the same number of steps; the best known one-dimensional bound, 1.5027435, gives the product bound 2.25823. Exact values of our certificates are rational numbers recomputed by the checker.
 

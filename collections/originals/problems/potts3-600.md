@@ -42,6 +42,19 @@ Upper bounds from our annealer (tools/potts.py); the checker scores any q (pytho
 
 134, held by Quantavane (Arhan Canli), 9 November 2026: the colouring in `refs/potts3-600.txt`. Lower bound 120: each of the 600 tetrahedral cells (copies of K4) has a monochromatic edge in any 3-colouring, and each edge lies in exactly 5 cells.
 
+## Cells
+
+The same question at each value of its parameter (q, the number of colours (q = 2 is the Ising problem polytope-ising; from q = 5 a proper colouring exists)): 2 cells, 0 of them exact (an exhaustive search finished) and 2 best known (ours). Each cell has its certificate in `refs/cells/potts3-600/` (the headline cell uses `collections/originals/refs/potts3-600.txt`) and is checked with the family's checker:
+
+    python3 -I obb.py check CELL FILE                  # for example potts3-600-3
+
+| cell | q | value | status |
+| --- | --- | --- | --- |
+| `potts3-600-3` | 3 | 134 | best known (headline) |
+| `potts3-600-4` | 4 | 66 | best known |
+
+Exact cells: none. Best known cells: simulated annealing over colourings with restarts (tools/potts.py); an upper bound.
+
 Bound on the other side: 120 (lower bound; 600 tetrahedral cells, each with a monochromatic edge in any 3-colouring; 5 cells per edge).
 
 ## Submitting and checking

@@ -70,11 +70,14 @@
    ],
    [
     "24 x 24",
-    "2.22253",
+    "5687487427963392/2559015127450681 = 2.222530",
     ""
    ]
   ],
-  "note": "Upper bounds by step functions on finer grids. The product column uses our own one-dimensional optimizer at the same number of steps; the best known one-dimensional bound, 1.5027435, gives the product bound 2.25823. Exact values of our certificates are rational numbers recomputed by the checker."
+  "note": "Upper bounds by step functions on finer grids. The product column uses our own one-dimensional optimizer at the same number of steps; the best known one-dimensional bound, 1.5027435, gives the product bound 2.25823. Exact values of our certificates are rational numbers recomputed by the checker.",
+  "headline_rows": [
+   "24 x 24"
+  ]
  },
  "baseline": {
   "date": "2026-11-09",

@@ -130,7 +130,17 @@
     506
    ]
   ],
-  "note": "Upper bounds from 60 randomized runs of Paar's greedy method (cancellation-free). Circuits that use cancellation (as in the Boyar-Peralta heuristic) may do better; no lower bound beyond the trivial p is proved. Rows improved on 10 November 2026 show the value of the cell (see Cells)."
+  "note": "Upper bounds from 60 randomized runs of Paar's greedy method (cancellation-free). Circuits that use cancellation (as in the Boyar-Peralta heuristic) may do better; no lower bound beyond the trivial p is proved. Rows improved on 10 November 2026 show the value of the cell (see Cells).",
+  "certified": {
+   "7": {
+    "args": [
+     "qr-xor",
+     "7"
+    ],
+    "certificate": "collections/originals/refs/table/qr-xor/7.txt",
+    "value": "14"
+   }
+  }
  },
  "baseline": {
   "date": "2026-11-09",

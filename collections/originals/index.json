@@ -3,8 +3,8 @@
  "problems": 46,
  "counting": "questions: one per problem file (a family); cells: the family's question at each value of its natural parameter, each with its certificate (a family without a cells file is one cell)",
  "questions": 46,
- "cells": 921,
- "cells_exact": 190,
+ "cells": 1003,
+ "cells_exact": 212,
  "by_field": {
   "Combinatorics and graph theory": 7,
   "Number theory": 7,
@@ -18,13 +18,13 @@
  },
  "cells_by_field": {
   "Combinatorics and graph theory": 7,
-  "Number theory": 321,
-  "Coding theory": 5,
+  "Number theory": 331,
+  "Coding theory": 10,
   "Discrete geometry": 191,
-  "Physics": 41,
-  "Chemistry and materials": 246,
+  "Physics": 42,
+  "Chemistry and materials": 278,
   "Astronomy": 38,
-  "Computing and operations research": 44,
+  "Computing and operations research": 78,
   "Biology": 28
  },
  "items": [
@@ -179,8 +179,8 @@
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_numth.py",
    "page": "problems/gauss-jacobsthal.md",
-   "cells": 1,
-   "cells_exact": 0
+   "cells": 11,
+   "cells_exact": 5
   },
   {
    "id": "gauss-prime-ap",
@@ -277,8 +277,8 @@
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_codes.py",
    "page": "problems/prime-code.md",
-   "cells": 1,
-   "cells_exact": 0
+   "cells": 6,
+   "cells_exact": 1
   },
   {
    "id": "prime-cover",
@@ -431,7 +431,7 @@
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_phys.py",
    "page": "problems/potts3-600.md",
-   "cells": 1,
+   "cells": 2,
    "cells_exact": 0
   },
   {
@@ -459,8 +459,8 @@
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_chem.py",
    "page": "problems/benzenoid-kemeny.md",
-   "cells": 1,
-   "cells_exact": 0
+   "cells": 17,
+   "cells_exact": 8
   },
   {
    "id": "cata-kemeny",
@@ -473,8 +473,8 @@
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_chem.py",
    "page": "problems/cata-kemeny.md",
-   "cells": 1,
-   "cells_exact": 0
+   "cells": 17,
+   "cells_exact": 8
   },
   {
    "id": "diamond-bonds",
@@ -585,7 +585,7 @@
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_comp.py",
    "page": "problems/sync-quadratic.md",
-   "cells": 28,
+   "cells": 51,
    "cells_exact": 18
   },
   {
@@ -599,7 +599,7 @@
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_comp.py",
    "page": "problems/tsp-gaussian.md",
-   "cells": 1,
+   "cells": 6,
    "cells_exact": 0
   },
   {
@@ -613,7 +613,7 @@
    "date": "2026-11-09",
    "checker": "collections/originals/checkers/orig_comp.py",
    "page": "problems/tsp-sunflower.md",
-   "cells": 1,
+   "cells": 7,
    "cells_exact": 0
   },
   {

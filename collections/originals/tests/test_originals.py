@@ -759,6 +759,87 @@ CELL_CONTROLS = {"sync-quadratic": _drop_last_letter, "tri-distinct": _dup_first
                                           + "\n", "an arm with one distance used twice")}
 
 
+# first-values tables: (parameter columns, value column); a row is matched to the cell with those parameters
+TABLE_SPEC = {"y-array": ((0,), 1), "paley-ising": ((0,), 1), "sync-quadratic": ((0,), 1), "tri-distinct": ((0,), 1),
+              "tri-areas": ((0,), 1), "tetra-distinct": ((0,), 2), "qr-sumfree": ((0,), 2), "quad-admissible": ((0,), 1),
+              "cubic-admissible": ((0,), 1), "diamond-bonds": ((0,), 2), "nussinov-degeneracy": ((0,), 1),
+              "qr-xor": ((0,), 3), "lj-fcc": ((0,), 2), "align-ambiguity": ((0,), 1), "nrm-segments": ((0,), 2),
+              "hp-tri": ((0,), 2), "benzenoid-kemeny": ((0,), 2), "cata-kemeny": ((0,), 2),
+              "gauss-jacobsthal": ((0,), 2), "tsp-sunflower": ((0,), 1), "potts3-600": ((0,), 1),
+              "prime-code": ((0, 1), 3), "prime-cover": ((0,), 2), "ap-cover": ((0,), 1), "e8-coulomb": ((0,), 1),
+              "gauss-prime-ap": ((0,), 1), "gauss-admissible": ((0,), {"4": 1, "3": 2})}
+
+
+def table_number(x, objective):
+    """The value a table entry claims: '68 (exact)' -> 68, '<= 59 (ours)' -> 59, '46 to 48' -> our 48 (minimize),
+    '9 or 10' -> our 9 (maximize), 'p/q = decimal' -> p/q; None for text and for decimals without a fraction."""
+    from fractions import Fraction
+    s = str(x).strip().replace(",", "")
+    m = re.match(r"^(-?\d+) (to|or) (-?\d+)", s)
+    if m:
+        lo, hi = int(m.group(1)), int(m.group(3))
+        return Fraction(hi if objective == "minimize" else lo)
+    m = re.match(r"^(?:<=|>=)?\s*(-?\d+(?:/\d+)?)(?![\d.])", s)
+    return Fraction(m.group(1)) if m else None
+
+
+def tables():
+    """Every value a first-values table publishes is backed by a certificate in the repository that passes its
+    checker: the row's cell (same parameters, same value), the headline certificate, or a table certificate
+    (first_values.certified: checker arguments and a file in refs/table/, run here); rows that publish someone else's
+    value or no value are listed in first_values.context with the reason. Anything else fails."""
+    from fractions import Fraction
+    E8ALL, E8C = Fraction(637975, 576), 56 * Fraction(1, 8) + 126 * Fraction(1, 64) + 56 * Fraction(1, 216) + Fraction(1, 512)
+    for p in problems():
+        fv = p.get("first_values")
+        if not fv:
+            continue
+        pid = p["id"]
+        cells = {tuple(str(v) for v in c["params"].values()): Fraction(c["best"]) for c in cell_lines(pid)}
+        certified, context = fv.get("certified", {}), fv.get("context", {})
+        bad = []
+        for key, entry in certified.items():
+            code, res, out = run(entry.get("program", p["checker"]["program"]), [os.path.join(ROOT, a) if a.startswith("collections/") else a
+                                                            for a in entry["args"]] + [os.path.join(ROOT, entry["certificate"])])
+            if code != 0 or res is None or Fraction(res) != Fraction(entry["value"]):
+                bad.append(f"table certificate {key}: exit {code}, RESULT {res}, stated {entry['value']}")
+        spec = TABLE_SPEC.get(pid)
+        for r in fv["rows"]:
+            label = str(r[0])
+            if spec is None:
+                if label in context:
+                    continue
+                cv = next((e for k, e in certified.items() if e.get("row", k) == label), None)
+                if cv is not None:
+                    if any(table_number(x, p["objective"]) == Fraction(cv.get("row_value", cv["value"])) for x in r):
+                        continue
+                    bad.append(f"row {label}: the table does not show the certified value {cv.get('row_value', cv['value'])}")
+                    continue
+                if label in fv.get("headline_rows", []) and any(table_number(x, p["objective"]) == Fraction(p["best_known"]["exact"])
+                                                                 for x in r):
+                    continue
+                bad.append(f"row {label}: no certificate and no reason")
+                continue
+            pc, vc = spec
+            for ring, col in (vc.items() if isinstance(vc, dict) else [(None, vc)]):
+                v = table_number(r[col], p["objective"])
+                if v is None:
+                    continue
+                key = ((ring,) if ring else ()) + tuple(str(r[i]) for i in pc)
+                stem = "_".join(key)
+                cv = certified.get(stem)
+                if cells.get(key) == v or (cv and Fraction(cv.get("row_value", cv["value"])) == v):
+                    continue
+                if pid == "e8-coulomb" and 120 < int(r[0]) < 240 and (str(240 - int(r[0])),) in cells and \
+                        E8ALL - (240 - int(r[0])) * E8C + cells[(str(240 - int(r[0])),)] == v:
+                    continue        # the complement of the cell for 240 - N
+                if stem in context:
+                    continue
+                bad.append(f"row {stem}: {r[col]} (cell {cells.get(key)})")
+        expect(f"table {pid}: every published value has a certificate ({len(fv['rows'])} rows, {len(certified)} table "
+               f"certificates)", not bad, "; ".join(bad[:6]))
+
+
 def pages():
     """The generated pages, index.json and README table match the problem files."""
     before = {f: open(os.path.join(HERE, f)).read() for f in ("index.json", "README.md")}

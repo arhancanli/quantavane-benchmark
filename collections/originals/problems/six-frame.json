@@ -115,7 +115,23 @@
     "ours (tools/src/sixframe.c)"
    ]
   ],
-  "note": "A length with no sequence found is not proved impossible; only 62 is a proved lower bound."
+  "note": "A length with no sequence found is not proved impossible; only 62 is a proved lower bound.",
+  "headline_rows": [
+   "shortest found"
+  ],
+  "context": {
+   "lower bound": "a proved lower bound (each frame needs 20 codons), not a value to certify",
+   "length 62": "a search that found no sequence of this length: no value is claimed",
+   "length 63": "a search that found no sequence of this length: no value is claimed",
+   "length 64": "a search that found no sequence of this length: no value is claimed",
+   "length 65": "a search that found no sequence of this length: no value is claimed",
+   "length 66": "a search that found no sequence of this length: no value is claimed",
+   "length 67": "a search that found no sequence of this length: no value is claimed",
+   "length 68": "a search that found no sequence of this length: no value is claimed",
+   "length 69": "a search that found no sequence of this length: no value is claimed",
+   "length 70": "a search that found no sequence of this length: no value is claimed",
+   "length 71": "a search that found no sequence of this length: no value is claimed"
+  }
  },
  "baseline": {
   "date": "2026-11-09",

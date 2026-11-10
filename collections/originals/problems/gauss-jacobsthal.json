@@ -146,11 +146,62 @@
     "best known (ours; 16 not reached)"
    ]
   ],
-  "note": "Exact values: tools/src/gjacob.c, mode exact (s + 1 proved impossible: X = 37 in 4 s, X = 41 in 520 s); exhaustive searches over all residue classes for X = 5 and X = 13 in the tests agree. For X = 49 the exhaustive search covered the 9 x 9 square but did not settle 10 x 10 within 900 s. Best known values: mode search (weighted local search, 20 s for each attempt, two seeds); the gaps above them are open. The X = 100 square is in refs/gauss-jacobsthal.txt."
+  "note": "Exact values: tools/src/gjacob.c, mode exact (s + 1 proved impossible: X = 37 in 4 s, X = 41 in 520 s); exhaustive searches over all residue classes for X = 5 and X = 13 in the tests agree. For X = 49 the exhaustive search covered the 9 x 9 square but did not settle 10 x 10 within 900 s. Best known values: mode search (weighted local search, 20 s for each attempt, two seeds); the gaps above them are open. The X = 100 square is in refs/gauss-jacobsthal.txt.",
+  "certified": {
+   "2": {
+    "args": [
+     "gauss-jacobsthal",
+     "2"
+    ],
+    "certificate": "collections/originals/refs/table/gauss-jacobsthal/2.txt",
+    "value": "1"
+   },
+   "5": {
+    "args": [
+     "gauss-jacobsthal",
+     "5"
+    ],
+    "certificate": "collections/originals/refs/table/gauss-jacobsthal/5.txt",
+    "value": "2"
+   },
+   "9": {
+    "args": [
+     "gauss-jacobsthal",
+     "9"
+    ],
+    "certificate": "collections/originals/refs/table/gauss-jacobsthal/9.txt",
+    "value": "2"
+   }
+  }
  },
  "baseline": {
   "date": "2026-11-09",
   "holder": "Quantavane (Arhan Canli)",
   "text": "15: the 15 x 15 square with corner 326020023537680738 + 705589564511901608 i, every element divisible by a Gaussian prime of norm at most 100, held by Quantavane (Arhan Canli), 9 November 2026 (`refs/gauss-jacobsthal.txt`)."
+ },
+ "cells": {
+  "params": [
+   "X"
+  ],
+  "about": "X, the bound on the norms of the primes",
+  "headline": {
+   "X": 100
+  },
+  "args": [
+   "gauss-jacobsthal",
+   "{X}"
+  ],
+  "title": "The Jacobsthal function of the Gaussian integers at norm {X}",
+  "statement": "Find the largest square block of Gaussian integers {{x + yi : x0 <= x < x0 + s, y0 <= y < y0 + s}} in which every element is divisible by some Gaussian prime of norm at most {X}; s({X}) is its side.",
+  "submission": "Text file: one line 'x0 y0 s', the corner x0 + y0 i and the side s of the square.",
+  "exact": [
+   "13",
+   "17",
+   "29",
+   "37",
+   "41"
+  ],
+  "exact_how": "exhaustive search over one residue class per prime (tools/src/gjacob.c, mode exact: the next side is not coverable), the square placed by the Chinese remainder theorem (tools/gauss_jacobsthal.py)",
+  "how": "weighted local search over residue classes (tools/src/gjacob.c, mode search), the square placed by the Chinese remainder theorem (tools/gauss_jacobsthal.py); a lower bound"
  }
 }

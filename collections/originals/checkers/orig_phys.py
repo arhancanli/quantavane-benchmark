@@ -11,7 +11,9 @@ an integer or p/q); it exits 0 only for a well-formed configuration and 1 otherw
   polytope-ising KIND FILE
                          FILE: one spin per vertex of the graph of a 4-dimensional polytope or of the E8 root polytope
                          (KIND 600: the 600-cell, 120 vertices; KIND snub: the snub 24-cell, 96 vertices; KIND ga: the
-                         grand antiprism, 100 vertices; KIND 120: the 120-cell, 600 vertices; KIND e8: the 4_21 polytope, 240 vertices), as + and - in the vertex order of this checker (see
+                         grand antiprism, 100 vertices; KIND 120: the 120-cell, 600 vertices; KIND e8: the 4_21 polytope, 240 vertices;
+                         KIND 5, 8, 16, 24: the 5-cell, tesseract, 16-cell and 24-cell; KIND gosset: the Gosset
+                         polytope 3_21, 56 vertices; see polytope_graph for each vertex order), as + and - in the vertex order of this checker (see
                          polytope_graph). Value: the antiferromagnetic Ising energy E(s) = sum over edges uv of s_u s_v
                          (each satisfied edge gives -1, each frustrated edge +1).
   polytope-potts KIND Q FILE
@@ -26,7 +28,11 @@ an integer or p/q); it exits 0 only for a well-formed configuration and 1 otherw
                          is adjacent to the heptads through 1 that miss it and to the heptads avoiding 1 that contain
                          it, two heptads of the same kind are adjacent when they meet in one point, a heptad through 1
                          and one avoiding it when they meet in three points (A. E. Brouwer's 22 + 77 + 176
-                         construction). Value: the antiferromagnetic Ising energy E(s) = sum over edges uv of s_u s_v."""
+                         construction). Value: the antiferromagnetic Ising energy E(s) = sum over edges uv of s_u s_v.
+  mclaughlin-sub KIND FILE
+                         the same on a subgraph of the McLaughlin graph: KIND local, the 112 neighbours of vertex 0
+                         (srg(112, 30, 2, 10)); KIND second, the 162 vertices not adjacent to vertex 0 (srg(162, 56, 10,
+                         24)); spins in the McLaughlin graph's vertex order."""
 import itertools
 from fractions import Fraction as F
 import sys
@@ -210,7 +216,29 @@ def polytope_graph(kind):
                  if sum(x * y for x, y in zip(roots[a], roots[b])) == 4]
         assert len(edges) == 6720
         return 240, edges
-    raise ValueError("KIND must be 600, snub, ga, 120 or e8")
+    if kind == "5":                 # the 5-cell: K5
+        return 5, [(a, b) for a in range(5) for b in range(a + 1, 5)]
+    if kind == "8":                 # the 8-cell (tesseract): vertex a in 0..15 as a bit vector, edges at Hamming distance 1
+        return 16, [(a, b) for a in range(16) for b in range(a + 1, 16) if bin(a ^ b).count("1") == 1]
+    if kind == "16":                # the 16-cell: vertices +e_0, -e_0, +e_1, ...; every pair except opposite vertices
+        return 8, [(a, b) for a in range(8) for b in range(a + 1, 8) if a // 2 != b // 2]
+    if kind == "24":                # the 24-cell: the 24 vertices of the 600-cell with rational coordinates, in the
+        pts = _cell600_points()     # 600-cell's vertex order, adjacent at inner product 1/2
+        keep = [p for p in pts if all(c[1] == 0 for c in p)]
+        edges = [(a, b) for a in range(24) for b in range(a + 1, 24)
+                 if sum(x[0] * y[0] for x, y in zip(keep[a], keep[b])) == F(1, 2)]
+        assert len(keep) == 24 and len(edges) == 96
+        return 24, edges
+    if kind == "gosset":            # the Gosset polytope 3_21: the 56 roots of E8 (doubled, as for KIND e8) with inner
+        n8, e8 = polytope_graph("e8")   # product 1 with the first root, adjacent at inner product 1 (27 neighbours)
+        nb = sorted(b for a, b in e8 if a == 0) + sorted(a for a, b in e8 if b == 0)
+        nb = sorted(nb)
+        idx = {v: i for i, v in enumerate(nb)}
+        es = set(e8)
+        edges = [(idx[a], idx[b]) for a in nb for b in nb if a < b and (a, b) in es]
+        assert len(nb) == 56 and len(edges) == 756
+        return 56, edges
+    raise ValueError("KIND must be 600, snub, ga, 120, e8, 5, 8, 16, 24 or gosset")
 
 
 def polytope_ising(args, path):
@@ -294,7 +322,29 @@ def mclaughlin_ising(args, path):
     return 0
 
 
-PROBLEMS = {"paley-ising": (1, paley_ising), "polytope-ising": (1, polytope_ising),
+def mclaughlin_sub(args, path):
+    """KIND local: the subgraph induced on the 112 neighbours of vertex 0 (srg(112, 30, 2, 10), the collinearity graph of
+    GQ(3, 9)); KIND second: on the 162 vertices other than 0 not adjacent to it (srg(162, 56, 10, 24)); vertices in
+    the McLaughlin graph's order."""
+    n, edges = mclaughlin_graph()
+    nb = {b for a, b in edges if a == 0} | {a for a, b in edges if b == 0}
+    keep = sorted(nb) if args[0] == "local" else sorted(set(range(1, n)) - nb) if args[0] == "second" else None
+    if keep is None:
+        print("KIND must be local or second")
+        return 1
+    idx = {v: i for i, v in enumerate(keep)}
+    sub = [(idx[a], idx[b]) for a, b in edges if a in idx and b in idx]
+    if (len(keep), len(sub)) not in ((112, 1680), (162, 4536)):
+        print("internal error: the subgraph was not built correctly")
+        return 1
+    s = spins(path, len(keep))
+    e = sum(s[a] * s[b] for a, b in sub)
+    print(f"McLaughlin subgraph {args[0]}: {len(keep)} vertices, {len(sub)} edges; E = {e}")
+    print(f"RESULT {e}")
+    return 0
+
+
+PROBLEMS = {"paley-ising": (1, paley_ising), "polytope-ising": (1, polytope_ising), "mclaughlin-sub": (1, mclaughlin_sub),
             "polytope-potts": (2, polytope_potts),
             "mclaughlin-ising": (0, mclaughlin_ising)}
 

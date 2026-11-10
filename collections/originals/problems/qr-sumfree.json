@@ -238,7 +238,73 @@
     "best known (ours)"
    ]
   ],
-  "note": "Exact values for every prime p <= 113 by exhaustive branch and bound (each candidate residue checked against all sums of chosen ones); the p = 1009 value is our best known lower bound. Our heuristic reproduces every exact value it was tried on (p = 61, 101)."
+  "note": "Exact values for every prime p <= 113 by exhaustive branch and bound (each candidate residue checked against all sums of chosen ones); the p = 1009 value is our best known lower bound. Our heuristic reproduces every exact value it was tried on (p = 61, 101).",
+  "certified": {
+   "3": {
+    "args": [
+     "qr-sumfree",
+     "3"
+    ],
+    "certificate": "collections/originals/refs/table/qr-sumfree/3.txt",
+    "value": "1"
+   },
+   "5": {
+    "args": [
+     "qr-sumfree",
+     "5"
+    ],
+    "certificate": "collections/originals/refs/table/qr-sumfree/5.txt",
+    "value": "2"
+   },
+   "7": {
+    "args": [
+     "qr-sumfree",
+     "7"
+    ],
+    "certificate": "collections/originals/refs/table/qr-sumfree/7.txt",
+    "value": "1"
+   },
+   "11": {
+    "args": [
+     "qr-sumfree",
+     "11"
+    ],
+    "certificate": "collections/originals/refs/table/qr-sumfree/11.txt",
+    "value": "3"
+   },
+   "13": {
+    "args": [
+     "qr-sumfree",
+     "13"
+    ],
+    "certificate": "collections/originals/refs/table/qr-sumfree/13.txt",
+    "value": "4"
+   },
+   "17": {
+    "args": [
+     "qr-sumfree",
+     "17"
+    ],
+    "certificate": "collections/originals/refs/table/qr-sumfree/17.txt",
+    "value": "4"
+   },
+   "19": {
+    "args": [
+     "qr-sumfree",
+     "19"
+    ],
+    "certificate": "collections/originals/refs/table/qr-sumfree/19.txt",
+    "value": "4"
+   },
+   "23": {
+    "args": [
+     "qr-sumfree",
+     "23"
+    ],
+    "certificate": "collections/originals/refs/table/qr-sumfree/23.txt",
+    "value": "4"
+   }
+  }
  },
  "baseline": {
   "date": "2026-11-09",

@@ -71,7 +71,13 @@
     "best known (ours, tools/diamond_link.py)"
    ]
   ],
-  "note": "The checker computes the linking number exactly from a regular projection (crossing signs between the two rings, counted both ways and checked equal); our tests also check it on a Hopf link of two circles (1 up to sign), on two separate circles (0) and with one ring reversed (the sign flips)."
+  "note": "The checker computes the linking number exactly from a regular projection (crossing signs between the two rings, counted both ways and checked equal); our tests also check it on a Hopf link of two circles (1 up to sign), on two separate circles (0) and with one ring reversed (the sign flips).",
+  "headline_rows": [
+   "two rings of 14 atoms"
+  ],
+  "context": {
+   "a ring of 6 atoms (a chair) with any other ring": "a proved fact (six-membered rings cannot link), not a value to certify"
+  }
  },
  "baseline": {
   "date": "2026-11-09",

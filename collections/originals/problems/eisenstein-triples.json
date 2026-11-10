@@ -102,7 +102,60 @@
     "found (ours), the best known"
    ]
   ],
-  "note": "Triples counted by the checker's exact enumeration (factorisations of 3x^2) and cross-checked against a direct search; colourings found by tools/src/eiswalk.c. At n = 19,300 the search stopped with 5 monochromatic triples after 240 s. Control: the same program on Pythagorean triples (x^2 + y^2 = z^2, 60 s per step) reaches 6,800 and stops at 6,900."
+  "note": "Triples counted by the checker's exact enumeration (factorisations of 3x^2) and cross-checked against a direct search; colourings found by tools/src/eiswalk.c. At n = 19,300 the search stopped with 5 monochromatic triples after 240 s. Control: the same program on Pythagorean triples (x^2 + y^2 = z^2, 60 s per step) reaches 6,800 and stops at 6,900.",
+  "certified": {
+   "1000": {
+    "args": [
+     "eisenstein-triples"
+    ],
+    "certificate": "collections/originals/refs/table/eisenstein-triples/1000.txt",
+    "value": "1000",
+    "row": "1000"
+   },
+   "5000": {
+    "args": [
+     "eisenstein-triples"
+    ],
+    "certificate": "collections/originals/refs/table/eisenstein-triples/5000.txt",
+    "value": "5000",
+    "row": "5000"
+   },
+   "7825": {
+    "args": [
+     "eisenstein-triples"
+    ],
+    "certificate": "collections/originals/refs/table/eisenstein-triples/7825.txt",
+    "value": "7825",
+    "row": "7825"
+   },
+   "10000": {
+    "args": [
+     "eisenstein-triples"
+    ],
+    "certificate": "collections/originals/refs/table/eisenstein-triples/10000.txt",
+    "value": "10000",
+    "row": "10000"
+   },
+   "15000": {
+    "args": [
+     "eisenstein-triples"
+    ],
+    "certificate": "collections/originals/refs/table/eisenstein-triples/15000.txt",
+    "value": "15000",
+    "row": "15000"
+   },
+   "17500": {
+    "args": [
+     "eisenstein-triples"
+    ],
+    "certificate": "collections/originals/refs/table/eisenstein-triples/17500.txt",
+    "value": "17500",
+    "row": "17500"
+   }
+  },
+  "headline_rows": [
+   "19200"
+  ]
  },
  "baseline": {
   "date": "2026-11-09",

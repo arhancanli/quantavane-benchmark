@@ -67,7 +67,10 @@
     ""
    ]
   ],
-  "note": "tools/src/coil.c with 30 s and 400 s of search; the certificate lists the cells of the 600-cell."
+  "note": "tools/src/coil.c with 30 s and 400 s of search; the certificate lists the cells of the 600-cell.",
+  "headline_rows": [
+   "coil (induced cycle), vertices"
+  ]
  },
  "baseline": {
   "date": "2026-11-09",

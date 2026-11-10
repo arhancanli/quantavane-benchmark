@@ -64,6 +64,28 @@ Exact values: tools/src/gjacob.c, mode exact (s + 1 proved impossible: X = 37 in
 
 15: the 15 x 15 square with corner 326020023537680738 + 705589564511901608 i, every element divisible by a Gaussian prime of norm at most 100, held by Quantavane (Arhan Canli), 9 November 2026 (`refs/gauss-jacobsthal.txt`).
 
+## Cells
+
+The same question at each value of its parameter (X, the bound on the norms of the primes): 11 cells, 5 of them exact (an exhaustive search finished) and 6 best known (ours). Each cell has its certificate in `refs/cells/gauss-jacobsthal/` (the headline cell uses `collections/originals/refs/gauss-jacobsthal.txt`) and is checked with the family's checker:
+
+    python3 -I obb.py check CELL FILE                  # for example gauss-jacobsthal-13
+
+| cell | X | value | status |
+| --- | --- | --- | --- |
+| `gauss-jacobsthal-13` | 13 | 4 | exact |
+| `gauss-jacobsthal-17` | 17 | 5 | exact |
+| `gauss-jacobsthal-29` | 29 | 7 | exact |
+| `gauss-jacobsthal-37` | 37 | 9 | exact |
+| `gauss-jacobsthal-41` | 41 | 9 | exact |
+| `gauss-jacobsthal-49` | 49 | 9 | best known |
+| `gauss-jacobsthal-53` | 53 | 11 | best known |
+| `gauss-jacobsthal-61` | 61 | 11 | best known |
+| `gauss-jacobsthal-73` | 73 | 13 | best known |
+| `gauss-jacobsthal-89` | 89 | 15 | best known |
+| `gauss-jacobsthal-100` | 100 | 15 | best known (headline) |
+
+Exact cells: exhaustive search over one residue class per prime (tools/src/gjacob.c, mode exact: the next side is not coverable), the square placed by the Chinese remainder theorem (tools/gauss_jacobsthal.py). Best known cells: weighted local search over residue classes (tools/src/gjacob.c, mode search), the square placed by the Chinese remainder theorem (tools/gauss_jacobsthal.py); a lower bound.
+
 ## Submitting and checking
 
 Format: Text file: one line 'x0 y0 s', the corner x0 + y0 i and the side s of the square (x0 and y0 may be large integers).

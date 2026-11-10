@@ -133,7 +133,17 @@
     "best known (ours, local search)"
    ]
   ],
-  "note": "Exact values from tools/src/nrm.c (mode max: depth-first search over segments with the baselines used so far marked); the local search (mode ls) reproduces them. Larger values are lower bounds."
+  "note": "Exact values from tools/src/nrm.c (mode max: depth-first search over segments with the baselines used so far marked); the local search (mode ls) reproduces them. Larger values are lower bounds.",
+  "certified": {
+   "1": {
+    "args": [
+     "nrm-segments",
+     "1"
+    ],
+    "certificate": "collections/originals/refs/table/nrm-segments/1.txt",
+    "value": "4"
+   }
+  }
  },
  "baseline": {
   "date": "2026-11-09",

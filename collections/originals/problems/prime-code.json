@@ -96,7 +96,27 @@
     360
    ]
   ],
-  "note": "Codes from tools/src/primecode.c; the checker (checkers/orig_codes.py) sieves the n-digit primes and checks every pair. The upper bounds count the possible (first, ..., last) digit tuples on n - D + 1 positions."
+  "note": "Codes from tools/src/primecode.c; the checker (checkers/orig_codes.py) sieves the n-digit primes and checks every pair. The upper bounds count the possible (first, ..., last) digit tuples on n - D + 1 positions.",
+  "certified": {
+   "2_2": {
+    "args": [
+     "prime-code",
+     "2",
+     "2"
+    ],
+    "certificate": "collections/originals/refs/table/prime-code/2_2.txt",
+    "value": "4"
+   },
+   "3_3": {
+    "args": [
+     "prime-code",
+     "3",
+     "3"
+    ],
+    "certificate": "collections/originals/refs/table/prime-code/3_3.txt",
+    "value": "4"
+   }
+  }
  },
  "bound": {
   "value": "360",
@@ -107,5 +127,29 @@
   "date": "2026-11-09",
   "holder": "Quantavane (Arhan Canli)",
   "text": "299 five-digit primes, any two differing in at least three digits, held by Quantavane (Arhan Canli), 9 November 2026: the code in `refs/prime-code.txt`."
+ },
+ "cells": {
+  "params": [
+   "n",
+   "D"
+  ],
+  "about": "n, the number of digits, and D, the minimum number of digits in which two code primes differ",
+  "headline": {
+   "n": 5,
+   "D": 3
+  },
+  "args": [
+   "prime-code",
+   "{n}",
+   "{D}"
+  ],
+  "title": "Codes of {n}-digit primes with minimum distance {D}",
+  "statement": "Find the largest set of {n}-digit primes any two of which differ in at least {D} of their {n} digits.",
+  "submission": "Text file: the primes of the code, separated by spaces or newlines.",
+  "exact": [
+   "4_3"
+  ],
+  "exact_how": "the construction meets the bound (9 first digits x 4 last digits)",
+  "how": "iterated local search with (1,2)-swaps for a maximum independent set of the conflict graph (tools/src/primecode.c); a lower bound"
  }
 }

@@ -194,11 +194,57 @@
     "best known (ours, beam search)"
    ]
   ],
-  "note": "Exact for h <= 10: every benzenoid enumerated (counts agree with OEIS A018190) and the three smallest recomputed in exact rational arithmetic (tools/benzenoids.py). For h >= 11 the values are the best found by a beam search of width 60 (tools/benzenoid_beam.py), upper bounds only."
+  "note": "Exact for h <= 10: every benzenoid enumerated (counts agree with OEIS A018190) and the three smallest recomputed in exact rational arithmetic (tools/benzenoids.py). For h >= 11 the values are the best found by a beam search of width 60 (tools/benzenoid_beam.py), upper bounds only.",
+  "certified": {
+   "1": {
+    "args": [
+     "benzenoid-kemeny",
+     "1"
+    ],
+    "certificate": "collections/originals/refs/table/benzenoid-kemeny/1.txt",
+    "value": "35/6"
+   },
+   "2": {
+    "args": [
+     "benzenoid-kemeny",
+     "2"
+    ],
+    "certificate": "collections/originals/refs/table/benzenoid-kemeny/2.txt",
+    "value": "2157/154"
+   }
+  }
  },
  "baseline": {
   "date": "2026-11-09",
   "holder": "Quantavane (Arhan Canli)",
   "text": "14813904881/113347080 = 130.695072877... for h = 19 (circumcoronene, `refs/benzenoid-kemeny.txt`), held by Quantavane (Arhan Canli), 9 November 2026 as the best value found; the beam search over h = 10 to 19 found nothing smaller. No lower bound beyond the trivial one is proved."
+ },
+ "cells": {
+  "params": [
+   "h"
+  ],
+  "about": "h, the number of hexagons",
+  "headline": {
+   "h": 19
+  },
+  "args": [
+   "benzenoid-kemeny",
+   "{h}"
+  ],
+  "title": "Benzenoid with {h} hexagons and the smallest Kemeny constant",
+  "statement": "Among the benzenoid systems with {h} hexagons (connected sets of {h} cells of the hexagonal tiling joined through shared edges, enclosing no hole), find one whose molecular graph has the smallest Kemeny constant K = (1/(2m)) sum over vertex pairs of d_i d_j R_ij (R the resistance distance, d the degrees, m the edges), in exact rational arithmetic.",
+  "submission": "Text file: {h} lines 'q r', the axial coordinates of the hexagons.",
+  "exact": [
+   "3",
+   "4",
+   "5",
+   "6",
+   "7",
+   "8",
+   "9",
+   "10"
+  ],
+  "exact_how": "every benzenoid with h hexagons (tools/benzenoids.py)",
+  "how": "beam search over h, keeping 300 shapes per size (tools/benzenoid_beam.py); an upper bound"
  }
 }

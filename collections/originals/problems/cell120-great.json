@@ -79,7 +79,10 @@
     120
    ]
   ],
-  "note": "Exact arithmetic in Q(sqrt 5) throughout (checkers/orig_geom.py); the decagon partition is computed and verified by tools/greatcircle.py (mode partition)."
+  "note": "Exact arithmetic in Q(sqrt 5) throughout (checkers/orig_geom.py); the decagon partition is computed and verified by tools/greatcircle.py (mode partition).",
+  "headline_rows": [
+   "120-cell"
+  ]
  },
  "baseline": {
   "date": "2026-11-09",

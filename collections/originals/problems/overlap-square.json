@@ -65,7 +65,10 @@
     "150615/262144 = 0.574551"
    ]
   ],
-  "note": "For comparison: cylinder functions built from the best known one-dimensional functions give 2 mu, about 0.7617."
+  "note": "For comparison: cylinder functions built from the best known one-dimensional functions give 2 mu, about 0.7617.",
+  "headline_rows": [
+   "16 x 16 (values in 1/64)"
+  ]
  },
  "baseline": {
   "date": "2026-11-09",

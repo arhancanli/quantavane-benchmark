@@ -56,18 +56,37 @@
   "rows": [
    [
     1000,
-    1734027
+    1732473
    ],
    [
     10000,
     17245349
    ]
   ],
-  "note": "Both found with tools/src/tsp2opt.c (10 s for N = 1000, 300 s for N = 10000); upper bounds only. The N = 1000 instance is in instances/sunflower-1000.txt and can be checked with the same checker."
+  "note": "Both found with tools/src/tsp2opt.c (10 s for N = 1000, 300 s for N = 10000); upper bounds only. The N = 1000 instance is in instances/sunflower-1000.txt and can be checked with the same checker. Rows improved on 10 November 2026 show the value of the cell (see Cells)."
  },
  "baseline": {
   "date": "2026-11-09",
   "holder": "Quantavane (Arhan Canli)",
   "text": "17,245,349 for N = 10000, held by Quantavane (Arhan Canli), 9 November 2026: the tour in `refs/tsp-sunflower.txt`. This is a quick local-search tour; a stronger heuristic (Lin-Kernighan type) should improve it, and an exact solver could settle the optimum."
+ },
+ "cells": {
+  "params": [
+   "N"
+  ],
+  "about": "N, the number of points",
+  "headline": {
+   "N": 10000
+  },
+  "args": [
+   "tsp",
+   "collections/originals/instances/sunflower-{N}.txt"
+  ],
+  "title": "The travelling salesman tour of a sunflower of {N} points",
+  "statement": "Find the shortest closed tour through the {N} points of the sunflower S_{N} (point k at (round(1000 sqrt(k) cos(k a)), round(1000 sqrt(k) sin(k a))), a the golden angle; coordinates fixed in collections/originals/instances/sunflower-{N}.txt), with distances the Euclidean distances rounded to the nearest integer.",
+  "submission": "Text file: the point numbers 1..{N} in the order of the tour, each exactly once.",
+  "exact": [],
+  "exact_how": "none",
+  "how": "greedy-edge start, then 2-opt and Or-opt with neighbour lists (tools/src/tsp2opt.c); an upper bound"
  }
 }

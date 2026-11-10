@@ -167,7 +167,25 @@
     "best known (ours, local search); at most 27"
    ]
   ],
-  "note": "Exact values from an exhaustive depth-first search (tools/src/tetradist.c, mode exact; n = 10 took 6 minutes). Upper bounds from counting distances. An OEIS search of 1..10 only returns the natural numbers, so the exact terms do not identify a sequence."
+  "note": "Exact values from an exhaustive depth-first search (tools/src/tetradist.c, mode exact; n = 10 took 6 minutes). Upper bounds from counting distances. An OEIS search of 1..10 only returns the natural numbers, so the exact terms do not identify a sequence.",
+  "certified": {
+   "1": {
+    "args": [
+     "tetra-distinct",
+     "1"
+    ],
+    "certificate": "collections/originals/refs/table/tetra-distinct/1.txt",
+    "value": "1"
+   },
+   "2": {
+    "args": [
+     "tetra-distinct",
+     "2"
+    ],
+    "certificate": "collections/originals/refs/table/tetra-distinct/2.txt",
+    "value": "2"
+   }
+  }
  },
  "baseline": {
   "date": "2026-11-09",

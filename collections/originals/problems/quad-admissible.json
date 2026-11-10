@@ -178,7 +178,25 @@
     "best known (ours)"
    ]
   ],
-  "note": "Exact values by exhaustive search (tools/quad_admissible.py, sets with largest element m for increasing m); the sieve (tools/quad_sieve.py) reproduces every exact value and gives the upper bounds for larger k."
+  "note": "Exact values by exhaustive search (tools/quad_admissible.py, sets with largest element m for increasing m); the sieve (tools/quad_sieve.py) reproduces every exact value and gives the upper bounds for larger k.",
+  "certified": {
+   "1": {
+    "args": [
+     "quad-admissible",
+     "1"
+    ],
+    "certificate": "collections/originals/refs/table/quad-admissible/1.txt",
+    "value": "1"
+   },
+   "2": {
+    "args": [
+     "quad-admissible",
+     "2"
+    ],
+    "certificate": "collections/originals/refs/table/quad-admissible/2.txt",
+    "value": "3"
+   }
+  }
  },
  "baseline": {
   "date": "2026-11-09",

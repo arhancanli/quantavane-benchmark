@@ -53,5 +53,24 @@
   "date": "2026-11-09",
   "holder": "Quantavane (Arhan Canli)",
   "text": "11,298,548, held by Quantavane (Arhan Canli), 9 November 2026: the tour in `refs/tsp-gaussian.txt` (tools/src/tsp2opt.c, 240 s). A quick local-search tour; Lin-Kernighan-type heuristics should improve it, and an exact solver could settle the optimum."
+ },
+ "cells": {
+  "params": [
+   "X"
+  ],
+  "about": "X, the bound on the norms",
+  "headline": {
+   "X": 50000
+  },
+  "args": [
+   "tsp",
+   "collections/originals/instances/gaussian-primes-{X}.txt"
+  ],
+  "title": "The travelling salesman tour of the Gaussian primes of norm at most {X}",
+  "statement": "Find the shortest closed tour through the Gaussian primes a + bi with a > 0, b >= 0 and norm at most {X}, placed at (1000a, 1000b) and listed in collections/originals/instances/gaussian-primes-{X}.txt, with distances the Euclidean distances rounded to the nearest integer.",
+  "submission": "Text file: the point numbers of the instance in the order of the tour, each exactly once.",
+  "exact": [],
+  "exact_how": "none",
+  "how": "greedy-edge start, then 2-opt and Or-opt with neighbour lists (tools/src/tsp2opt.c); an upper bound"
  }
 }

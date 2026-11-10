@@ -5,7 +5,8 @@
    among v0 .. v(k-1) (so the path stays induced); among the allowed u the one that blocks the fewest still-free
    vertices is preferred (random ties, and with probability 0.2 a random allowed u). When a neighbour u of vk is
    adjacent to v0 and to no other path vertex but vk, the cycle v0 .. vk u is induced (a coil) and is recorded.
-   Writes the longest coil found, one vertex per line, and prints its length and the longest snake. */
+   Writes the longest coil found to OUT.txt and the longest snake to OUT.txt.snake, one vertex per line, and prints
+   both lengths. */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -19,7 +20,7 @@ int main(int argc, char **argv) {
   for (int i = 0; i < m; i++) { if (fscanf(f, "%d %d", &ea[i], &eb[i]) != 2) return 2; deg[ea[i]]++; deg[eb[i]]++; }
   for (int v = 0; v < n; v++) { adj[v] = malloc(sizeof(int) * deg[v]); deg[v] = 0; }
   for (int i = 0; i < m; i++) { adj[ea[i]][deg[ea[i]]++] = eb[i]; adj[eb[i]][deg[eb[i]]++] = ea[i]; }
-  int *path = malloc(sizeof(int) * n), *cnt = malloc(sizeof(int) * n), *best = malloc(sizeof(int) * n); char *inP = malloc(n);
+  int *path = malloc(sizeof(int) * n), *cnt = malloc(sizeof(int) * n), *best = malloc(sizeof(int) * n), *bsn = malloc(sizeof(int) * n); char *inP = malloc(n);
   int bestc = 0, bests = 0; clock_t st = clock(); long runs = 0;
   while ((double)(clock() - st) / CLOCKS_PER_SEC < secs) { runs++;
     memset(inP, 0, n); memset(cnt, 0, sizeof(int) * n);   /* cnt[u] = number of path vertices adjacent to u */
@@ -37,6 +38,8 @@ int main(int argc, char **argv) {
       int pick; if (rnd() % 100 < 20) pick = rnd() % nc; else { int bc = 1 << 30, ties = 0; pick = 0;
         for (int i = 0; i < nc; i++) { if (cost[i] < bc) { bc = cost[i]; pick = i; ties = 1; } else if (cost[i] == bc && rnd() % (++ties) == 0) pick = i; } }
       int u = cand[pick]; path[k++] = u; inP[u] = 1; for (int q = 0; q < deg[u]; q++) cnt[adj[u][q]]++; }
-    if (k > bests) bests = k; }
+    if (k > bests) { bests = k; memcpy(bsn, path, sizeof(int) * k); } }
   FILE *o = fopen(argv[4], "w"); for (int i = 0; i < bestc; i++) fprintf(o, "%d\n", best[i]); fclose(o);
+  char sp[4096]; snprintf(sp, sizeof sp, "%s.snake", argv[4]);
+  o = fopen(sp, "w"); for (int i = 0; i < bests; i++) fprintf(o, "%d\n", bsn[i]); fclose(o);
   printf("longest coil %d, longest snake %d vertices (%ld runs)\n", bestc, bests, runs); return 0; }

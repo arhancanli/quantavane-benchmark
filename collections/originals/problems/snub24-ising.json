@@ -80,7 +80,21 @@
     "open (problem polytope-ising)"
    ]
   ],
-  "note": "Spectrum of the snub 24-cell graph (numerical): 9, 7.29 (4), 4.92 (9), 3 (8), 1 (8), 0 (14), -1.20 (9), -2 (24), -2.72 (9), -3 (6), -3.29 (4). Edges: 288 in 3 triangles, 144 in 4."
+  "note": "Spectrum of the snub 24-cell graph (numerical): 9, 7.29 (4), 4.92 (9), 3 (8), 1 (8), 0 (14), -1.20 (9), -2 (24), -2.72 (9), -3 (6), -3.29 (4). Edges: 288 in 3 triangles, 144 in 4.",
+  "certified": {
+   "600-cell": {
+    "args": [
+     "polytope-ising",
+     "600"
+    ],
+    "certificate": "collections/originals/refs/table/snub24-ising/600-cell.txt",
+    "value": "-160",
+    "row": "600-cell"
+   }
+  },
+  "headline_rows": [
+   "snub 24-cell"
+  ]
  },
  "baseline": {
   "date": "2026-11-09",

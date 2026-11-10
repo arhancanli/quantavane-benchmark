@@ -77,7 +77,18 @@
     "exact: proper 5-colouring found; 5 colours are needed"
    ]
   ],
-  "note": "Upper bounds from our annealer (tools/potts.py); the checker scores any q (python3 -I collections/originals/checkers/orig_phys.py polytope-potts 600 Q FILE)."
+  "note": "Upper bounds from our annealer (tools/potts.py); the checker scores any q (python3 -I collections/originals/checkers/orig_phys.py polytope-potts 600 Q FILE).",
+  "certified": {
+   "2": {
+    "args": [
+     "polytope-potts",
+     "600",
+     "2"
+    ],
+    "certificate": "collections/originals/refs/table/potts3-600/2.txt",
+    "value": "280"
+   }
+  }
  },
  "baseline": {
   "date": "2026-11-09",
@@ -88,5 +99,25 @@
   "value": "120",
   "kind": "lower bound",
   "source": "600 tetrahedral cells, each with a monochromatic edge in any 3-colouring; 5 cells per edge"
+ },
+ "cells": {
+  "params": [
+   "q"
+  ],
+  "about": "q, the number of colours (q = 2 is the Ising problem polytope-ising; from q = 5 a proper colouring exists)",
+  "headline": {
+   "q": 3
+  },
+  "args": [
+   "polytope-potts",
+   "600",
+   "{q}"
+  ],
+  "title": "{q}-state Potts antiferromagnet on the 600-cell",
+  "statement": "Colour the 120 vertices of the 600-cell {{3,3,5}} with {q} colours so as to minimise the number of monochromatic edges among its 720 edges (the ground-state energy of the {q}-state Potts antiferromagnet).",
+  "submission": "Text file: 120 colours 0..{q}-1, one per vertex in the checker's vertex order.",
+  "exact": [],
+  "exact_how": "none",
+  "how": "simulated annealing over colourings with restarts (tools/potts.py); an upper bound"
  }
 }

@@ -1,0 +1,2 @@
+{"id": "potts3-600-3", "family": "potts3-600", "params": {"q": 3}, "best": "134", "exact": false, "how": "simulated annealing over colourings with restarts (tools/potts.py); an upper bound", "date": "2026-11-10", "certificate": "collections/originals/refs/potts3-600.txt", "headline": true}
+{"id": "potts3-600-4", "family": "potts3-600", "params": {"q": 4}, "best": "66", "exact": false, "how": "simulated annealing over colourings with restarts (tools/potts.py); an upper bound", "date": "2026-11-10", "certificate": "collections/originals/refs/cells/potts3-600/4.txt"}

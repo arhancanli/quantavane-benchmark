@@ -34,7 +34,7 @@ Verdict: new. No ground-state energies of Fibonacci HP chains on any lattice wer
 | --- | --- | --- | --- |
 | 1 | H | 0 | exact |
 | 2 | HP | 0 | exact |
-| 3 | HPH | 0 | exact |
+| 3 | HPH | -1 | exact (all conformations; corrected on 10 November 2026: the earlier 0 missed the triangle fold, where the two H monomers touch) |
 | 5 | HPHHP | -2 | exact (all conformations) |
 | 8 | HPHHPHPH | -6 | exact (all conformations) |
 | 13 | HPHHPHPHHPHHP | -10 | exact (all conformations) |

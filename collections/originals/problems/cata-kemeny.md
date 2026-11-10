@@ -62,6 +62,34 @@ Exact for h <= 10 (every catacondensed benzenoid enumerated; the minimum recompu
 
 59617087737367409/159902997431616 = 372.8328342... for h = 19, held by Quantavane (Arhan Canli), 9 November 2026: the system in `refs/cata-kemeny.txt` (78 atoms, 96 bonds). No lower bound beyond the trivial one is proved.
 
+## Cells
+
+The same question at each value of its parameter (h, the number of hexagons): 17 cells, 8 of them exact (an exhaustive search finished) and 9 best known (ours). Each cell has its certificate in `refs/cells/cata-kemeny/` (the headline cell uses `collections/originals/refs/cata-kemeny.txt`) and is checked with the family's checker:
+
+    python3 -I obb.py check CELL FILE                  # for example cata-kemeny-3
+
+| cell | h | value | status |
+| --- | --- | --- | --- |
+| `cata-kemeny-3` | 3 | 40643/1632 | exact |
+| `cata-kemeny-4` | 4 | 50521/1386 | exact |
+| `cata-kemeny-5` | 5 | 4642381/90012 | exact |
+| `cata-kemeny-6` | 6 | 341945/5208 | exact |
+| `cata-kemeny-7` | 7 | 354425627/4229928 | exact |
+| `cata-kemeny-8` | 8 | 18090949/179826 | exact |
+| `cata-kemeny-9` | 9 | 76472594/636939 | exact |
+| `cata-kemeny-10` | 10 | 436031/3162 | exact |
+| `cata-kemeny-11` | 11 | 353290036/2193051 | best known |
+| `cata-kemeny-12` | 12 | 736859064061/4009799010 | best known |
+| `cata-kemeny-13` | 13 | 63351576841933/303429537180 | best known |
+| `cata-kemeny-14` | 14 | 88031905628/377469015 | best known |
+| `cata-kemeny-15` | 15 | 21315415985969/82350709188 | best known |
+| `cata-kemeny-16` | 16 | 2138411927/7505190 | best known |
+| `cata-kemeny-17` | 17 | 2572810144859/8172722244 | best known |
+| `cata-kemeny-18` | 18 | 40030782928281217/117027590999592 | best known |
+| `cata-kemeny-19` | 19 | 59617087737367409/159902997431616 | best known (headline) |
+
+Exact cells: every catacondensed benzenoid with h hexagons (tools/cata_kemeny.py, mode exact). Best known cells: beam search over h, keeping 300 shapes per size (tools/cata_kemeny.py, mode beam); an upper bound.
+
 ## Submitting and checking
 
 Format: Text file: 19 lines 'q r', the axial coordinates of the hexagons, forming a catacondensed benzenoid.

@@ -65,6 +65,34 @@ Exact for h <= 10: every benzenoid enumerated (counts agree with OEIS A018190) a
 
 14813904881/113347080 = 130.695072877... for h = 19 (circumcoronene, `refs/benzenoid-kemeny.txt`), held by Quantavane (Arhan Canli), 9 November 2026 as the best value found; the beam search over h = 10 to 19 found nothing smaller. No lower bound beyond the trivial one is proved.
 
+## Cells
+
+The same question at each value of its parameter (h, the number of hexagons): 17 cells, 8 of them exact (an exhaustive search finished) and 9 best known (ours). Each cell has its certificate in `refs/cells/benzenoid-kemeny/` (the headline cell uses `collections/originals/refs/benzenoid-kemeny.txt`) and is checked with the family's checker:
+
+    python3 -I obb.py check CELL FILE                  # for example benzenoid-kemeny-3
+
+| cell | h | value | status |
+| --- | --- | --- | --- |
+| `benzenoid-kemeny-3` | 3 | 199/10 | exact |
+| `benzenoid-kemeny-4` | 4 | 279187/10374 | exact |
+| `benzenoid-kemeny-5` | 5 | 2417157/69782 | exact |
+| `benzenoid-kemeny-6` | 6 | 76994761/1816290 | exact |
+| `benzenoid-kemeny-7` | 7 | 10969/240 | exact |
+| `benzenoid-kemeny-8` | 8 | 399387/7280 | exact |
+| `benzenoid-kemeny-9` | 9 | 5341847/84048 | exact |
+| `benzenoid-kemeny-10` | 10 | 1088376637/16008696 | exact |
+| `benzenoid-kemeny-11` | 11 | 179361558043/2322240210 | best known |
+| `benzenoid-kemeny-12` | 12 | 34560131/424368 | best known |
+| `benzenoid-kemeny-13` | 13 | 202164921187/2212455198 | best known |
+| `benzenoid-kemeny-14` | 14 | 3032949380643/31566898022 | best known |
+| `benzenoid-kemeny-15` | 15 | 9000533173361/84653913546 | best known |
+| `benzenoid-kemeny-16` | 16 | 282754760114627/2536955997750 | best known |
+| `benzenoid-kemeny-17` | 17 | 7356427873459/60848154774 | best known |
+| `benzenoid-kemeny-18` | 18 | 110690468980247/878154901470 | best known |
+| `benzenoid-kemeny-19` | 19 | 14813904881/113347080 | best known (headline) |
+
+Exact cells: every benzenoid with h hexagons (tools/benzenoids.py). Best known cells: beam search over h, keeping 300 shapes per size (tools/benzenoid_beam.py); an upper bound.
+
 ## Submitting and checking
 
 Format: Text file: 19 lines 'q r', the axial coordinates of the hexagons (the neighbours of (q, r) are (q+-1, r), (q, r+-1), (q+1, r-1) and (q-1, r+1)).

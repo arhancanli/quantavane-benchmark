@@ -207,7 +207,17 @@
     -1380
    ]
   ],
-  "note": "Exact values come from enumerating all 2^(p-1) configurations with s_0 = +1 (the energy is invariant under s -> -s). Best known values for p >= 37 are ours (simulated annealing, 30 restarts of 20,000 sweeps, then single-flip descent); they are upper bounds. Rows improved on 10 November 2026 show the value of the cell (see Cells)."
+  "note": "Exact values come from enumerating all 2^(p-1) configurations with s_0 = +1 (the energy is invariant under s -> -s). Best known values for p >= 37 are ours (simulated annealing, 30 restarts of 20,000 sweeps, then single-flip descent); they are upper bounds. Rows improved on 10 November 2026 show the value of the cell (see Cells).",
+  "certified": {
+   "5": {
+    "args": [
+     "paley-ising",
+     "5"
+    ],
+    "certificate": "collections/originals/refs/table/paley-ising/5.txt",
+    "value": "-4"
+   }
+  }
  },
  "baseline": {
   "date": "2026-11-09",

@@ -52,6 +52,23 @@ Codes from tools/src/primecode.c; the checker (checkers/orig_codes.py) sieves th
 
 299 five-digit primes, any two differing in at least three digits, held by Quantavane (Arhan Canli), 9 November 2026: the code in `refs/prime-code.txt`.
 
+## Cells
+
+The same question at each value of its parameter (n, the number of digits, and D, the minimum number of digits in which two code primes differ): 6 cells, 1 of them exact (an exhaustive search finished) and 5 best known (ours). Each cell has its certificate in `refs/cells/prime-code/` (the headline cell uses `collections/originals/refs/prime-code.txt`) and is checked with the family's checker:
+
+    python3 -I obb.py check CELL FILE                  # for example prime-code-3-2
+
+| cell | n | D | value | status |
+| --- | --- | --- | --- | --- |
+| `prime-code-3-2` | 3 | 2 | 36 | best known |
+| `prime-code-4-2` | 4 | 2 | 322 | best known |
+| `prime-code-4-3` | 4 | 3 | 36 | exact |
+| `prime-code-5-2` | 5 | 2 | 2569 | best known |
+| `prime-code-5-3` | 5 | 3 | 299 | best known (headline) |
+| `prime-code-6-3` | 6 | 3 | 2151 | best known |
+
+Exact cells: the construction meets the bound (9 first digits x 4 last digits). Best known cells: iterated local search with (1,2)-swaps for a maximum independent set of the conflict graph (tools/src/primecode.c); a lower bound.
+
 Bound on the other side: 360 (upper bound; two code words agree in at most two of the five digits, so the triples (first digit, second digit, last digit) are all different: at most 9 x 10 x 4, the last digit of a five-digit prime being 1, 3, 7 or 9).
 
 ## Submitting and checking

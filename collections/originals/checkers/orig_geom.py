@@ -22,6 +22,8 @@ their triangle in units of sqrt(3)/4, the area of a unit triangle). Problems:
                            three of the chosen vertices lie on a common great circle, i.e. no three of the centre
                            vectors lie in a plane through the origin (exact arithmetic in Q(sqrt 5)). Value: the
                            number of chosen vertices.
+  cell600-great FILE       the same for the 120 vertices of the 600-cell: FILE lists distinct vertex numbers 0..119 (the
+                           order of cell600_points). Value: the number of vertices.
   e8-coulomb N FILE        FILE: N lines of 8 integers, distinct roots of E8 written doubled: a permutation of
                            (+-2, +-2, 0, 0, 0, 0, 0, 0), or (+-1, ..., +-1) with an even number of minus signs (the
                            240 roots (+-1, +-1, 0^6) and (+-1/2)^8 scaled by 2). Value: the Coulomb energy of unit
@@ -274,7 +276,34 @@ def e8_coulomb(args, path):
     return 0
 
 
-PROBLEMS = {"tetra-distinct": (1, tetra_distinct), "cell120-great": (0, cell120_great), "tri-distinct": (1, tri_distinct), "tri-areas": (1, tri_areas), "e8-coulomb": (1, e8_coulomb)}
+def cell600_great(args, path):
+    """The same question on the 120 vertices of the 600-cell: FILE lists vertex numbers 0..119 (as in cell600_points)."""
+    pts, _ = cell600_points()
+    chosen = [int(x) for line in open(path) for x in line.split("#")[0].split()]
+    if any(not 0 <= v < 120 for v in chosen) or len(set(chosen)) != len(chosen):
+        print("expected distinct vertex numbers 0..119")
+        return 1
+    vecs = [pts[v] for v in chosen]
+    planes = {}
+    for i in range(len(vecs)):
+        for j in range(i + 1, len(vecs)):
+            k = plane_key(vecs[i], vecs[j])
+            if k is None:
+                print(f"vertices {chosen[i]} and {chosen[j]} are opposite: with any third vertex they lie on a great circle")
+                if len(vecs) >= 3:
+                    return 1
+                continue
+            planes.setdefault(k, set()).update((i, j))
+    worst = max((len(v) for v in planes.values()), default=0)
+    if worst >= 3:
+        print(f"{worst} of the vertices lie on one great circle")
+        return 1
+    print(f"{len(vecs)} vertices of the 600-cell, no three on a great circle")
+    print(f"RESULT {len(vecs)}")
+    return 0
+
+
+PROBLEMS = {"tetra-distinct": (1, tetra_distinct), "cell120-great": (0, cell120_great), "cell600-great": (0, cell600_great), "tri-distinct": (1, tri_distinct), "tri-areas": (1, tri_areas), "e8-coulomb": (1, e8_coulomb)}
 
 
 def main():

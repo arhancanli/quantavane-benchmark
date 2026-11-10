@@ -89,7 +89,15 @@
     "best known (ours, this problem)"
    ]
   ],
-  "note": "The diamond row is our shortest ring (refs/diamond-knot.txt), certified by the checker; the other rows are the published minima for comparison. The checker's knot determinant gives 3 for a trefoil curve, 5 for a figure-eight knot and 1 for an unknotted ring in our tests."
+  "note": "The diamond row is our shortest ring (refs/diamond-knot.txt), certified by the checker; the other rows are the published minima for comparison. The checker's knot determinant gives 3 for a trefoil curve, 5 for a figure-eight knot and 1 for an unknotted ring in our tests.",
+  "headline_rows": [
+   "diamond"
+  ],
+  "context": {
+   "face-centred cubic": "a published value of others (Janse van Rensburg and Rechnitzer), cited",
+   "body-centred cubic": "a published value of others (Janse van Rensburg and Rechnitzer), cited",
+   "simple cubic": "a published value of others (Diao 1993), cited"
+  }
  },
  "baseline": {
   "date": "2026-11-09",

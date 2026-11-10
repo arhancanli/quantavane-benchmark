@@ -74,7 +74,7 @@ Exact values: breadth-first search over the subsets of states reached from the f
 
 ## Cells
 
-The same question at each value of its parameter (p, a prime): 28 cells, 18 of them exact (an exhaustive search finished) and 10 best known (ours). Each cell has its certificate in `refs/cells/sync-quadratic/` (the headline cell uses `collections/originals/refs/sync-quadratic.txt`) and is checked with the family's checker:
+The same question at each value of its parameter (p, a prime): 51 cells, 18 of them exact (an exhaustive search finished) and 33 best known (ours). Each cell has its certificate in `refs/cells/sync-quadratic/` (the headline cell uses `collections/originals/refs/sync-quadratic.txt`) and is checked with the family's checker:
 
     python3 -I obb.py check CELL FILE                  # for example sync-quadratic-7
 
@@ -108,6 +108,29 @@ The same question at each value of its parameter (p, a prime): 28 cells, 18 of t
 | `sync-quadratic-109` | 109 | 33 | best known |
 | `sync-quadratic-113` | 113 | 19 | exact |
 | `sync-quadratic-127` | 127 | 49 | best known |
+| `sync-quadratic-131` | 131 | 48 | best known |
+| `sync-quadratic-137` | 137 | 29 | best known |
+| `sync-quadratic-139` | 139 | 51 | best known |
+| `sync-quadratic-149` | 149 | 42 | best known |
+| `sync-quadratic-151` | 151 | 53 | best known |
+| `sync-quadratic-157` | 157 | 39 | best known |
+| `sync-quadratic-163` | 163 | 59 | best known |
+| `sync-quadratic-167` | 167 | 59 | best known |
+| `sync-quadratic-173` | 173 | 33 | best known |
+| `sync-quadratic-179` | 179 | 62 | best known |
+| `sync-quadratic-181` | 181 | 44 | best known |
+| `sync-quadratic-191` | 191 | 61 | best known |
+| `sync-quadratic-193` | 193 | 20 | best known |
+| `sync-quadratic-197` | 197 | 42 | best known |
+| `sync-quadratic-199` | 199 | 62 | best known |
+| `sync-quadratic-211` | 211 | 68 | best known |
+| `sync-quadratic-223` | 223 | 68 | best known |
+| `sync-quadratic-227` | 227 | 71 | best known |
+| `sync-quadratic-229` | 229 | 50 | best known |
+| `sync-quadratic-233` | 233 | 37 | best known |
+| `sync-quadratic-239` | 239 | 71 | best known |
+| `sync-quadratic-241` | 241 | 32 | best known |
+| `sync-quadratic-251` | 251 | 75 | best known |
 
 Exact cells: breadth-first search over the subsets of Z_p reached from Z_p, finished (tools/src/syncq.c). Best known cells: beam search over subsets keeping the 300,000 smallest per level (tools/src/syncbeam.c); an upper bound.
 

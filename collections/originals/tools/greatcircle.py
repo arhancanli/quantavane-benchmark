@@ -5,6 +5,7 @@ Originals, problem cell120-great).
   python3 -I greatcircle.py partition 600|120          the Hopf partition into great decagons (the upper bound)
   python3 -I greatcircle.py exact600                   exhaustive search for the 600-cell (its 60 antipodal pairs)
   python3 -I greatcircle.py search120 SECONDS SEED OUT local search for the 120-cell (its 300 antipodal pairs)
+  python3 -I greatcircle.py search600 SECONDS SEED OUT the same local search for the 600-cell (vertex numbers)
 
 Exact arithmetic in Q(sqrt 5): numbers a + b sqrt5 as pairs of Fractions. The 600-cell's 120 vertices are the unit
 quaternions of the binary icosahedral group, numbered as in checkers/orig_codes.py (cell600_graph); the 120-cell's 600
@@ -159,10 +160,11 @@ def main():
         dfs(0)
         print(f"600-cell: largest set with no three vertices on a great circle: {best[0]} (bound 24 from 12 decagons): {[labels[p] for p in best[1]]}")
         return 0
-    if mode == "search120":
+    if mode in ("search120", "search600"):
         secs, seed, out = float(sys.argv[2]), int(sys.argv[3]), sys.argv[4]
         rng = random.Random(seed)
-        pts, labels = orig_geom.great_points("120")
+        kind = mode[-3:]
+        pts, labels = orig_geom.great_points(kind)
         lines = [l for l in orig_geom.great_lines(pts) if len(l) >= 3]
         n = len(pts)
         on = [[] for _ in range(n)]
@@ -208,8 +210,8 @@ def main():
                 print(f"  {len(best)}", flush=True)
         with open(out, "w") as f:
             for p in best:
-                f.write(" ".join(map(str, labels[p])) + "\n")
-        print(f"120-cell: {len(best)} vertices, no three on a great circle")
+                f.write((" ".join(map(str, labels[p])) if kind == "120" else str(labels[p])) + "\n")
+        print(f"{kind}-cell: {len(best)} vertices, no three on a great circle")
         return 0
     print(__doc__)
     return 2

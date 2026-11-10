@@ -133,7 +133,25 @@
     "best known (ours, local search)"
    ]
   ],
-  "note": "Exact values by trying every pair (x with its letters in order of first appearance; tools/src/alignamb.c, mode exact). Larger n: local search, lower bounds only."
+  "note": "Exact values by trying every pair (x with its letters in order of first appearance; tools/src/alignamb.c, mode exact). Larger n: local search, lower bounds only.",
+  "certified": {
+   "1": {
+    "args": [
+     "align-ambiguity",
+     "1"
+    ],
+    "certificate": "collections/originals/refs/table/align-ambiguity/1.txt",
+    "value": "1"
+   },
+   "2": {
+    "args": [
+     "align-ambiguity",
+     "2"
+    ],
+    "certificate": "collections/originals/refs/table/align-ambiguity/2.txt",
+    "value": "3"
+   }
+  }
  },
  "baseline": {
   "date": "2026-11-09",

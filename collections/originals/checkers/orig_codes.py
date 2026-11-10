@@ -22,6 +22,8 @@ valid certificate and 1 otherwise. Problems:
                        first) share a triangle (three vertices: adjacent vertices of the 120-cell) and any two other
                        cells share at most two vertices (no chord): an induced cycle, a coil-in-the-box. Value: the
                        number of cells.
+  cell120-snake FILE   the same file for an induced path (snake): consecutive cells share a triangle and no two
+                       other cells do. Value: the number of cells.
   prime-code N D FILE  FILE: N-digit primes (separated by spaces or newlines). Valid when they are distinct N-digit
                        primes and any two of them differ in at least D of their N decimal digits (a code of minimum
                        Hamming distance D made of primes; D = 3 corrects one wrong digit). Value: the number of
@@ -232,7 +234,39 @@ def prime_code(args, path):
     return 0
 
 
-PROBLEMS = {"cell600-idcode": (0, cell600_idcode), "e8-idcode": (0, e8_idcode), "prime-cover": (1, prime_cover), "cell120-coil": (0, cell120_coil),
+def cell120_snake(args, path):
+    """An induced path (snake) in the 120-cell: the same file format as cell120-coil; consecutive cells share a
+    triangle and no two other cells do (the two ends included)."""
+    adj = cell600_graph()
+    cells = []
+    for line in open(path):
+        line = line.split("#")[0].strip()
+        if line:
+            t = tuple(sorted(int(x) for x in line.split()))
+            if len(t) != 4 or len(set(t)) != 4 or not all(0 <= x < 120 for x in t) or \
+                    not all(b in adj[a] for i, a in enumerate(t) for b in t[i + 1:]):
+                print(f"line {line!r} is not a tetrahedral cell of the 600-cell")
+                return 1
+            cells.append(set(t))
+    k = len(cells)
+    if k < 2 or len({tuple(sorted(c)) for c in cells}) != k:
+        print("a snake needs at least 2 distinct cells")
+        return 1
+    for i in range(k):
+        for j in range(i + 1, k):
+            shared = len(cells[i] & cells[j])
+            if j == i + 1 and shared != 3:
+                print(f"cells {i + 1} and {j + 1} are consecutive but share {shared} vertices, not a triangle")
+                return 1
+            if j > i + 1 and shared >= 3:
+                print(f"cells {i + 1} and {j + 1} share a triangle: a chord")
+                return 1
+    print(f"an induced path of {k} vertices in the 120-cell")
+    print(f"RESULT {k}")
+    return 0
+
+
+PROBLEMS = {"cell600-idcode": (0, cell600_idcode), "cell120-snake": (0, cell120_snake), "e8-idcode": (0, e8_idcode), "prime-cover": (1, prime_cover), "cell120-coil": (0, cell120_coil),
             "prime-code": (2, prime_code)}
 
 

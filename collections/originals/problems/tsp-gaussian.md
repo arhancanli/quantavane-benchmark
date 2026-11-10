@@ -30,6 +30,23 @@ Verdict: new. No travelling salesman instance on the Gaussian primes was found o
 
 11,298,548, held by Quantavane (Arhan Canli), 9 November 2026: the tour in `refs/tsp-gaussian.txt` (tools/src/tsp2opt.c, 240 s). A quick local-search tour; Lin-Kernighan-type heuristics should improve it, and an exact solver could settle the optimum.
 
+## Cells
+
+The same question at each value of its parameter (X, the bound on the norms): 6 cells, 0 of them exact (an exhaustive search finished) and 6 best known (ours). Each cell has its certificate in `refs/cells/tsp-gaussian/` (the headline cell uses `collections/originals/refs/tsp-gaussian.txt`) and is checked with the family's checker:
+
+    python3 -I obb.py check CELL FILE                  # for example tsp-gaussian-1000
+
+| cell | X | value | status |
+| --- | --- | --- | --- |
+| `tsp-gaussian-1000` | 1000 | 315167 | best known |
+| `tsp-gaussian-2000` | 2000 | 572334 | best known |
+| `tsp-gaussian-5000` | 5000 | 1325134 | best known |
+| `tsp-gaussian-10000` | 10000 | 2517138 | best known |
+| `tsp-gaussian-20000` | 20000 | 4823804 | best known |
+| `tsp-gaussian-50000` | 50000 | 11298548 | best known (headline) |
+
+Exact cells: none. Best known cells: greedy-edge start, then 2-opt and Or-opt with neighbour lists (tools/src/tsp2opt.c); an upper bound.
+
 ## Submitting and checking
 
 Format: Text file: the point numbers 1..5125 in the order of the tour, each exactly once.

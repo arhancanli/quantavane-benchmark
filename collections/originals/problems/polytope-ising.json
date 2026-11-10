@@ -108,7 +108,10 @@
     "open; lower bound -222 (smallest eigenvalue 6 - 6 phi = -3.708...: max cut <= 471)"
    ]
   ],
-  "note": "Graph spectra computed numerically (Jacobi rotations) and checked against the multiplicities: 600-cell 12, 9.708 (4), 6.472 (9), 3 (16), 0 (25), -2 (36), -2.472 (9), -3 (16), -3.708 (4); 4_21: 56, 28 (8), 8 (35), -2 (112), -4 (84). The checker can score the 120-cell and 4_21 too (KIND 120 or e8)."
+  "note": "Graph spectra computed numerically (Jacobi rotations) and checked against the multiplicities: 600-cell 12, 9.708 (4), 6.472 (9), 3 (16), 0 (25), -2 (36), -2.472 (9), -3 (16), -3.708 (4); 4_21: 56, 28 (8), 8 (35), -2 (112), -4 (84). The checker can score the 120-cell and 4_21 too (KIND 120 or e8).",
+  "headline_rows": [
+   "600-cell"
+  ]
  },
  "baseline": {
   "date": "2026-11-09",

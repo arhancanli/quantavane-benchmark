@@ -156,7 +156,25 @@
     "best known (ours)"
    ]
   ],
-  "note": "Exact values by exhaustive search (tools/cubic_admissible.py exact); the sieve reproduces m(12) = 45 and m(16) = 63 and gives the upper bounds for larger k. Rows improved on 10 November 2026 show the value of the cell (see Cells)."
+  "note": "Exact values by exhaustive search (tools/cubic_admissible.py exact); the sieve reproduces m(12) = 45 and m(16) = 63 and gives the upper bounds for larger k. Rows improved on 10 November 2026 show the value of the cell (see Cells).",
+  "certified": {
+   "1": {
+    "args": [
+     "cubic-admissible",
+     "1"
+    ],
+    "certificate": "collections/originals/refs/table/cubic-admissible/1.txt",
+    "value": "1"
+   },
+   "2": {
+    "args": [
+     "cubic-admissible",
+     "2"
+    ],
+    "certificate": "collections/originals/refs/table/cubic-admissible/2.txt",
+    "value": "3"
+   }
+  }
  },
  "baseline": {
   "date": "2026-11-09",

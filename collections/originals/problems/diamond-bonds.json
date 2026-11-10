@@ -266,7 +266,49 @@
     "best known (ours, simulated annealing)"
    ]
   ],
-  "note": "Exact values: every connected cluster of the diamond lattice with N <= 17 atoms, enumerated by Redelmeier's method from an A and from a B origin (tools/src/diamond.c, mode exact; the counts are those of OEIS A039740, with the one-atom cluster counted once from each origin). Best known values: tools/src/diamond.c, mode anneal, 30 s and two seeds for each N (both seeds agree). The checker counts bonds and checks connectivity exactly."
+  "note": "Exact values: every connected cluster of the diamond lattice with N <= 17 atoms, enumerated by Redelmeier's method from an A and from a B origin (tools/src/diamond.c, mode exact; the counts are those of OEIS A039740, with the one-atom cluster counted once from each origin). Best known values: tools/src/diamond.c, mode anneal, 30 s and two seeds for each N (both seeds agree). The checker counts bonds and checks connectivity exactly.",
+  "certified": {
+   "1": {
+    "args": [
+     "diamond-bonds",
+     "1"
+    ],
+    "certificate": "collections/originals/refs/table/diamond-bonds/1.txt",
+    "value": "4"
+   },
+   "2": {
+    "args": [
+     "diamond-bonds",
+     "2"
+    ],
+    "certificate": "collections/originals/refs/table/diamond-bonds/2.txt",
+    "value": "6"
+   },
+   "3": {
+    "args": [
+     "diamond-bonds",
+     "3"
+    ],
+    "certificate": "collections/originals/refs/table/diamond-bonds/3.txt",
+    "value": "8"
+   },
+   "4": {
+    "args": [
+     "diamond-bonds",
+     "4"
+    ],
+    "certificate": "collections/originals/refs/table/diamond-bonds/4.txt",
+    "value": "10"
+   },
+   "5": {
+    "args": [
+     "diamond-bonds",
+     "5"
+    ],
+    "certificate": "collections/originals/refs/table/diamond-bonds/5.txt",
+    "value": "12"
+   }
+  }
  },
  "baseline": {
   "date": "2026-11-09",

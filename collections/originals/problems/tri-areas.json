@@ -130,7 +130,33 @@
     "best known (ours)"
    ]
   ],
-  "note": "Exact values by exhaustive search over subsets of T_n (tools/src/trigrid.c areas); n = 30 is our best known lower bound."
+  "note": "Exact values by exhaustive search over subsets of T_n (tools/src/trigrid.c areas); n = 30 is our best known lower bound.",
+  "certified": {
+   "1": {
+    "args": [
+     "tri-areas",
+     "1"
+    ],
+    "certificate": "collections/originals/refs/table/tri-areas/1.txt",
+    "value": "1"
+   },
+   "2": {
+    "args": [
+     "tri-areas",
+     "2"
+    ],
+    "certificate": "collections/originals/refs/table/tri-areas/2.txt",
+    "value": "3"
+   },
+   "3": {
+    "args": [
+     "tri-areas",
+     "3"
+    ],
+    "certificate": "collections/originals/refs/table/tri-areas/3.txt",
+    "value": "3"
+   }
+  }
  },
  "baseline": {
   "date": "2026-11-09",

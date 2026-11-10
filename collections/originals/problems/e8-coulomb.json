@@ -187,7 +187,17 @@
     "all roots"
    ]
   ],
-  "note": "Energies from the exact checker (checkers/orig_geom.py); subsets from tools/src/e8coulomb.c, 8 s and two seeds for each N (the seeds agree for every N). Our tests check N = 3 by brute force and N = 240 against the counts 56, 126, 56, 1 of the root system."
+  "note": "Energies from the exact checker (checkers/orig_geom.py); subsets from tools/src/e8coulomb.c, 8 s and two seeds for each N (the seeds agree for every N). Our tests check N = 3 by brute force and N = 240 against the counts 56, 126, 56, 1 of the root system.",
+  "certified": {
+   "240": {
+    "args": [
+     "e8-coulomb",
+     "240"
+    ],
+    "certificate": "collections/originals/refs/table/e8-coulomb/240.txt",
+    "value": "637975/576"
+   }
+  }
  },
  "baseline": {
   "date": "2026-11-09",

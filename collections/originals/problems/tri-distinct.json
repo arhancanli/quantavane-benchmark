@@ -151,7 +151,33 @@
     "best known (ours)"
    ]
   ],
-  "note": "Exact values by exhaustive branch and bound over all subsets of T_n (tools/src/trigrid.c dist); larger n are our best known lower bounds."
+  "note": "Exact values by exhaustive branch and bound over all subsets of T_n (tools/src/trigrid.c dist); larger n are our best known lower bounds.",
+  "certified": {
+   "1": {
+    "args": [
+     "tri-distinct",
+     "1"
+    ],
+    "certificate": "collections/originals/refs/table/tri-distinct/1.txt",
+    "value": "1"
+   },
+   "2": {
+    "args": [
+     "tri-distinct",
+     "2"
+    ],
+    "certificate": "collections/originals/refs/table/tri-distinct/2.txt",
+    "value": "2"
+   },
+   "3": {
+    "args": [
+     "tri-distinct",
+     "3"
+    ],
+    "certificate": "collections/originals/refs/table/tri-distinct/3.txt",
+    "value": "3"
+   }
+  }
  },
  "baseline": {
   "date": "2026-11-09",

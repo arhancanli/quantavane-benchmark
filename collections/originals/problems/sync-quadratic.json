@@ -205,7 +205,25 @@
     "open"
    ]
   ],
-  "note": "Exact values: breadth-first search over the subsets of states reached from the full set (tools/src/syncq.c); where that search exceeded 14 million subsets, the depth it completed is a lower bound and our beam search gives the upper bound. Rows improved on 10 November 2026 show the value of the cell (see Cells)."
+  "note": "Exact values: breadth-first search over the subsets of states reached from the full set (tools/src/syncq.c); where that search exceeded 14 million subsets, the depth it completed is a lower bound and our beam search gives the upper bound. Rows improved on 10 November 2026 show the value of the cell (see Cells).",
+  "certified": {
+   "3": {
+    "args": [
+     "sync-quadratic",
+     "3"
+    ],
+    "certificate": "collections/originals/refs/table/sync-quadratic/3.txt",
+    "value": "3"
+   },
+   "5": {
+    "args": [
+     "sync-quadratic",
+     "5"
+    ],
+    "certificate": "collections/originals/refs/table/sync-quadratic/5.txt",
+    "value": "5"
+   }
+  }
  },
  "baseline": {
   "date": "2026-11-09",

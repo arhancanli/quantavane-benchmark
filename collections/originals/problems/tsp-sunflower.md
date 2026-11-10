@@ -30,14 +30,32 @@ Verdict: new. The sunflower (golden-angle spiral) point set does not appear amon
 
 | N | best tour length (ours) |
 | --- | --- |
-| 1000 | 1734027 |
+| 1000 | 1732473 |
 | 10000 | 17245349 |
 
-Both found with tools/src/tsp2opt.c (10 s for N = 1000, 300 s for N = 10000); upper bounds only. The N = 1000 instance is in instances/sunflower-1000.txt and can be checked with the same checker.
+Both found with tools/src/tsp2opt.c (10 s for N = 1000, 300 s for N = 10000); upper bounds only. The N = 1000 instance is in instances/sunflower-1000.txt and can be checked with the same checker. Rows improved on 10 November 2026 show the value of the cell (see Cells).
 
 ## Best known value
 
 17,245,349 for N = 10000, held by Quantavane (Arhan Canli), 9 November 2026: the tour in `refs/tsp-sunflower.txt`. This is a quick local-search tour; a stronger heuristic (Lin-Kernighan type) should improve it, and an exact solver could settle the optimum.
+
+## Cells
+
+The same question at each value of its parameter (N, the number of points): 7 cells, 0 of them exact (an exhaustive search finished) and 7 best known (ours). Each cell has its certificate in `refs/cells/tsp-sunflower/` (the headline cell uses `collections/originals/refs/tsp-sunflower.txt`) and is checked with the family's checker:
+
+    python3 -I obb.py check CELL FILE                  # for example tsp-sunflower-100
+
+| cell | N | value | status |
+| --- | --- | --- | --- |
+| `tsp-sunflower-100` | 100 | 177397 | best known |
+| `tsp-sunflower-200` | 200 | 350973 | best known |
+| `tsp-sunflower-500` | 500 | 870747 | best known |
+| `tsp-sunflower-1000` | 1000 | 1732473 | best known |
+| `tsp-sunflower-2000` | 2000 | 3459670 | best known |
+| `tsp-sunflower-5000` | 5000 | 8606720 | best known |
+| `tsp-sunflower-10000` | 10000 | 17245349 | best known (headline) |
+
+Exact cells: none. Best known cells: greedy-edge start, then 2-opt and Or-opt with neighbour lists (tools/src/tsp2opt.c); an upper bound.
 
 ## Submitting and checking
 
