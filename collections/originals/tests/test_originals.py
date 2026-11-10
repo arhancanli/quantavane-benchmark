@@ -716,7 +716,7 @@ def cells():
                                                                  for a in args] + [os.path.join(ROOT, hi["certificate"])])
             expect(f"red   {pid}: the certificate of {hi['id']} checked as {lo['id']} is refused", code == 1,
                    f"exit {code}: {out[-200:]}")
-        broken = CELL_CONTROLS.get(pid)
+        broken = CELL_CONTROLS.get(pid) or family_cell_control(P[pid])
         if broken:
             ex = [c for c in cs if c["exact"]]
             c = ex[len(ex) // 2] if pid in EXACT_CONTROL and ex else cs[len(cs) // 2]
@@ -768,6 +768,257 @@ TABLE_SPEC = {"y-array": ((0,), 1), "paley-ising": ((0,), 1), "sync-quadratic": 
               "gauss-jacobsthal": ((0,), 2), "tsp-sunflower": ((0,), 1), "potts3-600": ((0,), 1),
               "prime-code": ((0, 1), 3), "prime-cover": ((0,), 2), "ap-cover": ((0,), 1), "e8-coulomb": ((0,), 1),
               "gauss-prime-ap": ((0,), 1), "gauss-admissible": ((0,), {"4": 1, "3": 2})}
+
+
+def family_cell_control(p):
+    """Broken certificates for the cells of the families added on 10 November 2026 (by checker)."""
+    prog = p["checker"]["program"].split("/")[-1]
+    if prog == "orig_lattice.py":
+        return _dup_first_point
+    if prog == "orig_colour.py":
+        return lambda t, params: (_mono(p["checker"]["args"][0], t), "a colouring with a monochromatic solution")
+    if prog == "orig_graphs.py":
+        return lambda t, params: _graph_broken(p["checker"]["args"][0], t)
+    return None
+
+
+def _mono(eq, text):
+    """The colouring with the smallest solution made monochromatic (1, 2, 2, 3 or 1, 5, 7)."""
+    c = list("".join("".join(l.split("#")[0] for l in text.splitlines()).split()))
+    for v in ((1, 2, 3) if eq == "quad-pyth" else (1, 5, 7)):
+        c[v - 1] = c[0]
+    return "".join(c) + "\n"
+
+
+def _graph_broken(mode, text):
+    t = " ".join(l.split("#")[0] for l in text.splitlines()).split()
+    if mode in ("zero-forcing", "power-domination", "locating-dom", "burning", "resolving", "total-dom", "2-domination",
+                "domination"):
+        return t[0] + "\n", "a single vertex"
+    if mode in ("independent-dom", "code", "independent"):
+        return " ".join(t + [t[0]]) + "\n", "the first vertex listed twice"
+    if mode in ("induced-matching", "max-leaf"):
+        pairs = [f"{t[i]} {t[i + 1]}" for i in range(0, len(t), 2)]
+        if mode == "max-leaf":
+            return "\n".join(pairs[:-1]) + "\n", "a tree without its last edge (not spanning)"
+        return "\n".join(pairs + [pairs[0]]) + "\n", "an edge listed twice"
+    if mode in ("l21", "distance2-colouring", "b-colouring", "roman"):
+        return " ".join("0" for _ in t) + "\n", "every label 0"
+    if mode == "grundy":
+        return " ".join("1" for _ in t) + "\n", "every colour 1"
+    if mode == "induced-bipartite":
+        return "".join("0" for c in "".join(t)) + "\n", "every vertex chosen on side 0"
+    if mode in ("bandwidth", "linear-arrangement", "domatic"):
+        return " ".join(t[:-1]) + "\n", "a list missing the last vertex"
+    if mode == "strong-edge":
+        return "\n".join(f"{t[i]} {t[i + 1]} 0" for i in range(0, len(t), 3)) + "\n", "every edge colour 0"
+    if mode == "bisection":
+        return " ".join("0" for _ in t) + "\n", "every vertex in one half"
+    raise ValueError(mode)
+
+
+def families():
+    """The families added on 10 November 2026: lattice point sets (checkers/orig_lattice.py), invariants of the
+    polytope graphs (checkers/orig_graphs.py) and colourings (checkers/orig_colour.py). Red controls: broken
+    certificates refused. Cross-checks: the small exact cells against brute force written here, independently of the
+    checkers and of the searches."""
+    sys.path.insert(0, os.path.join(HERE, "checkers"))
+    import orig_lattice
+    P = problems_by_id()
+
+    def refuse(p, text, why):
+        path = write(f"famctl_{p['id']}.txt", text)
+        code, res, out = run(p["checker"]["program"], args_of(p) + [path])
+        expect(f"red   {p['id']}: {why} is refused", code == 1, f"exit {code}: {out[-200:]}")
+    for p in P.values():
+        prog = p["checker"]["program"].split("/")[-1]
+        text = certificates(p)
+        if prog == "orig_lattice.py":
+            L = lines_of(text)
+            refuse(p, "\n".join(L + [L[0]]) + "\n", "the certificate with a point repeated")
+            lat, prop = p["id"].split("-", 1)
+            n = int(p["checker"]["args"][1])
+            pts = [tuple(int(x) for x in l.split()) for l in L]
+            dim = 2 if lat in ("tri", "hex", "kagome") else 3
+            top = n if dim == 2 else (n if lat == "cube" else 2 * n - 1)
+            region = [q for q in itertools.product(range(top), repeat=dim) if orig_lattice.member(lat, n, q)]
+            extra = next((q for q in region if q not in pts and orig_lattice.check(lat, prop, n, pts + [q])), None)
+            if extra:
+                refuse(p, "\n".join(L + [" ".join(map(str, extra))]) + "\n", f"the certificate with the point {extra} added")
+            outside = (n, 0) if dim == 2 else (top, 0, 0)
+            refuse(p, "\n".join(L[:-1] + [" ".join(map(str, outside))]) + "\n", "a point outside the region")
+        elif prog == "orig_graphs.py":
+            t, why = _graph_broken(p["checker"]["args"][0], text)
+            refuse(p, t, why)
+        elif prog == "orig_colour.py":
+            refuse(p, _mono(p["checker"]["args"][0], text), "the colouring with the smallest solution monochromatic")
+            refuse(p, "".join(lines_of(text)) + "7\n", "a colour outside the range")
+
+    # brute force for the small lattice cells, with distances computed here from complex coordinates and vectors
+    def tri_xy(a, b):
+        return (2 * a + b, b)          # twice the x coordinate, and y in units of sqrt(3)/2: |.|^2 = (X^2 + 3 Y^2) / 4
+    def fcc(p):
+        a, b, c = p
+        return (a + b, a + c, b + c)   # e1, e2, e3 = (1,1,0), (1,0,1), (0,1,1): unit vectors at 60 degrees, scaled by sqrt 2
+    def sq(p, q, lat):
+        if lat in ("tri", "hex", "kagome"):
+            (x1, y1), (x2, y2) = tri_xy(*p), tri_xy(*q)
+            return (x1 - x2) ** 2 + 3 * (y1 - y2) ** 2
+        if lat == "tetra":
+            p, q = fcc(p), fcc(q)
+        return sum((a - b) ** 2 for a, b in zip(p, q))
+    def dot(u, v, lat):
+        if lat in ("tri", "hex", "kagome"):
+            (x1, y1), (x2, y2) = tri_xy(*u), tri_xy(*v)
+            return x1 * x2 + 3 * y1 * y2
+        if lat == "tetra":
+            u, v = fcc(u), fcc(v)
+        return sum(a * b for a, b in zip(u, v))
+    def good(S, lat, prop):
+        if prop == "distinct":
+            ds = [sq(p, q, lat) for p, q in itertools.combinations(S, 2)]
+            return len(ds) == len(set(ds))
+        if prop == "isosceles":
+            return all(len({sq(p, q, lat) for q in S if q != p}) == len(S) - 1 for p in S)
+        if prop == "right":
+            for p in S:
+                vs = [tuple(a - b for a, b in zip(q, p)) for q in S if q != p]
+                if any(dot(u, v, lat) == 0 for u, v in itertools.combinations(vs, 2)):
+                    return False
+            return True
+    def brute(lat, prop, n):
+        pts = [q for q in (itertools.product(range(n), repeat=2) if lat in ("tri", "hex", "kagome") else
+                           itertools.product(range(n if lat == "cube" else 2 * n - 1), repeat=3)) if orig_lattice.member(lat, n, q)]
+        best = 0
+        def grow(S, start):
+            nonlocal best
+            best = max(best, len(S))
+            if len(S) + len(pts) - start <= best:
+                return
+            for i in range(start, len(pts)):
+                T = S + [pts[i]]
+                if good(T, lat, prop):
+                    grow(T, i + 1)
+        grow([], 0)
+        return best
+    for p in P.values():
+        if p["checker"]["program"].endswith("orig_lattice.py"):
+            lat, prop = p["id"].split("-", 1)
+            small = [c for c in cell_lines(p["id"]) if c["exact"] and len([q for q in (itertools.product(range(c["params"]["N"]), repeat=2) if lat in ("tri", "hex", "kagome") else itertools.product(range(c["params"]["N"] if lat == "cube" else 2 * c["params"]["N"] - 1), repeat=3)) if orig_lattice.member(lat, c["params"]["N"], q)]) <= 21]
+            if small:
+                c = small[-1]
+                b = brute(lat, prop, c["params"]["N"])
+                expect(f"cross {c['id']}: brute force over all subsets gives {b}, the cell says {c['best']}", str(b) == c["best"], b)
+
+    # brute force for the small polytope cells: the 5-cell, the 16-cell and the tesseract, every subset
+    import orig_graphs
+    def smallest(kind, ok, maximize=False):
+        n, edges, adj = orig_graphs.graph(kind)
+        sizes = range(n, -1, -1) if maximize else range(n + 1)
+        for k in sizes:
+            for S in itertools.combinations(range(n), k):
+                if ok(n, edges, adj, S):
+                    return k
+    def zf(n, e, adj, S, power=False):
+        black = set(S)
+        if power:
+            for v in S:
+                black |= adj[v]
+        changed = True
+        while changed:
+            changed = False
+            for u in list(black):
+                w = [x for x in adj[u] if x not in black]
+                if len(w) == 1:
+                    black.add(w[0])
+                    changed = True
+        return len(black) == n
+    def ld(n, e, adj, S):
+        D = set(S)
+        keys = [frozenset(adj[v] & D) for v in range(n) if v not in D]
+        return all(keys) and len(set(keys)) == len(keys)
+    checks = {"zero-forcing": lambda *a: zf(*a), "power-domination": lambda *a: zf(*a, power=True), "locating-dom": ld,
+              "total-dom": lambda n, e, adj, S: all(adj[v] & set(S) for v in range(n)),
+              "independent-dom": lambda n, e, adj, S: all(not adj[v] & set(S) for v in S)
+              and all(v in S or adj[v] & set(S) for v in range(n)),
+              "2-domination": lambda n, e, adj, S: all(v in S or len(adj[v] & set(S)) >= 2 for v in range(n))}
+    checks["domination"] = lambda n, e, adj, S: all(v in S or adj[v] & set(S) for v in range(n))
+    for p in P.values():
+        mode = p["checker"]["args"][0]
+        if not p["checker"]["program"].endswith("orig_graphs.py") or mode not in list(checks) + ["independent"]:
+            continue
+        for c in cell_lines(p["id"]):
+            kind = c["params"].get("KIND") or f"assoc-{c['params'].get('M')}"
+            if kind in ("5-cell", "16-cell", "8-cell", "assoc-5", "assoc-6") and c["exact"]:
+                if mode == "independent":
+                    b = smallest(kind, lambda n, e, adj, S: all(not adj[v] & set(S) for v in S), maximize=True)
+                else:
+                    b = smallest(kind, checks[mode])
+                expect(f"cross {c['id']}: brute force over all vertex sets gives {b}, the cell says {c['best']}", str(b) == c["best"], b)
+
+    # the associahedra, rebuilt here from the non-crossing sets of diagonals: Catalan(M - 2) triangulations, (M - 3)-regular,
+    # and the same flips
+    for m in (5, 6, 7, 8):
+        diags = [(a, b) for a in range(m) for b in range(a + 2, m) if (a, b) != (0, m - 1)]
+        cross = lambda d, e: d[0] < e[0] < d[1] < e[1] or e[0] < d[0] < e[1] < d[1]
+        tris = sorted(t for t in itertools.combinations(diags, m - 3) if not any(cross(d, e) for d, e in itertools.combinations(t, 2)))
+        flips = {(i, j) for i in range(len(tris)) for j in range(i + 1, len(tris)) if len(set(tris[i]) & set(tris[j])) == m - 4}
+        n, edges, adj = orig_graphs.graph(f"assoc-{m}")
+        expect(f"cross assoc-{m}: {len(tris)} triangulations and {len(flips)} flips, as the checker builds",
+               n == len(tris) and set(edges) == flips, (n, len(edges)))
+
+    # the permutahedra: exchanging the values k and k + 1 changes the order of exactly one pair of positions, so the
+    # graph distance is the number of pairs of positions i < j with p_i < p_j but q_i > q_j or the reverse (Kendall's
+    # tau); checked for all pairs at N = 4 and from three vertices at N = 5
+    for nn, sources in ((4, None), (5, [0, 37, 119])):
+        n, edges, adj = orig_graphs.graph(f"perm-{nn}")
+        perms = sorted(itertools.permutations(range(1, nn + 1)))
+        def tau(p, q):
+            return sum(1 for i, j in itertools.combinations(range(nn), 2) if (p[i] < p[j]) != (q[i] < q[j]))
+        ok = True
+        for src in (sources if sources is not None else range(n)):
+            d = orig_graphs.bfs(adj, src)
+            ok &= all(d[v] == tau(perms[src], perms[v]) for v in range(n))
+        expect(f"cross perm-{nn}: graph distance is Kendall's tau distance (inversions) for every pair from the sources checked", ok)
+    # the cyclohedra: each centrally symmetric triangulation's neighbours rebuilt by explicit flips (a diameter flipped
+    # inside its quadrilateral, or two opposite diagonals flipped together)
+    def flip(T, d, m):
+        edges = set(T) | {(i, (i + 1) % m) if i + 1 < m else (0, m - 1) for i in range(m)}
+        edges = {tuple(sorted(e)) for e in edges}
+        a, b = d
+        third = [c for c in range(m) if c not in d and tuple(sorted((a, c))) in edges and tuple(sorted((b, c))) in edges]
+        c, e = third
+        return tuple(sorted((set(T) - {d}) | {tuple(sorted((c, e)))}))
+    for nn in (3, 4, 5):
+        m = 2 * nn
+        n, edges, adj = orig_graphs.graph(f"cyclo-{nn}")
+        rot = lambda d: tuple(sorted(((d[0] + nn) % m, (d[1] + nn) % m)))
+        ts = [t for t in orig_graphs.triangulations(m) if set(map(rot, t)) == set(t)]
+        idx = {t: i for i, t in enumerate(ts)}
+        mine = set()
+        for i, T in enumerate(ts):
+            done = set()
+            for d in T:
+                if d in done:
+                    continue
+                if rot(d) == d:
+                    U = flip(T, d, m)
+                else:
+                    U = flip(flip(T, d, m), rot(d), m)
+                done |= {d, rot(d)}
+                mine.add(tuple(sorted((i, idx[U]))))
+        expect(f"cross cyclo-{nn}: {len(ts)} centrally symmetric triangulations, the explicit flips give the checker's "
+               f"{len(edges)} edges", n == len(ts) and mine == set(edges), (n, len(edges), len(mine)))
+
+    # the colouring checkers' solution lists against direct enumeration
+    import orig_colour
+    bq = sorted((x, y, z, w) for w in range(2, 61) for z in range(1, w) for y in range(1, z + 1) for x in range(1, y + 1)
+                if x * x + y * y + z * z == w * w)
+    expect(f"cross quad-pyth: the checker lists the {len(bq)} quadruples with w <= 60 found by direct enumeration",
+           sorted(orig_colour.quad_pyth(60)) == bq, len(bq))
+    ba = sorted((x, z, y) for y in range(1, 201) for z in range(1, y) for x in range(1, z) if x * x + y * y == 2 * z * z)
+    expect(f"cross squares-ap: the checker lists the {len(ba)} solutions with y <= 200 found by direct enumeration",
+           sorted(orig_colour.squares_ap(200)) == ba, len(ba))
 
 
 def table_number(x, objective):
@@ -856,6 +1107,7 @@ if __name__ == "__main__":
     controls()
     cross_checks()
     cells()
+    families()
     tables()
     pages()
     print(f"{len(failures)} failures" if failures else "all originals tests passed")

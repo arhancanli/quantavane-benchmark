@@ -1,0 +1,2 @@
+# bisection on polytope 8: 8 (optimal)
+0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1

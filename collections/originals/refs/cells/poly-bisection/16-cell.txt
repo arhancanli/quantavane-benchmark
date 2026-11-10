@@ -1,0 +1,2 @@
+# bisection on polytope 16: 12 (optimal)
+0 1 1 0 0 1 1 0

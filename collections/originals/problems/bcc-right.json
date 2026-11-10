@@ -1,0 +1,80 @@
+{
+ "id": "bcc-right",
+ "collection": "originals",
+ "field": "Discrete geometry",
+ "title": "Right-angle-free sets in the body-centred cubic crystal",
+ "status": "open",
+ "statement": "Let the body-centred cubic crystal B_N be the points (x, y, z) with 0 <= x, y, z <= 2N - 2 whose coordinates are all even (the N^3 corners of an (N-1) x (N-1) x (N-1) block of cubes of edge 2) or all odd (the (N-1)^3 cube centres); squared distance dx^2 + dy^2 + dz^2, nearest neighbours at squared distance 3. Determine the largest number of points of the body-centred cubic crystal B_N such that no three of them form a right angle (no three points p, q, r with (q - p).(r - p) = 0), as a function of N. The exact values are known (ours) for N <= 3; the headline cell is N = 5: find 16 or more such points of the region of side 5.",
+ "objective": "maximize",
+ "submission": "Text file: one point 'x y z' per line, a point of the region of side 5 (lines starting with # are ignored).",
+ "checker": {
+  "program": "collections/originals/checkers/orig_lattice.py",
+  "args": [
+   "bcc-right",
+   "5"
+  ],
+  "value": "result"
+ },
+ "score": "the number of points (larger is better)",
+ "best_known": {
+  "value": "15",
+  "exact": "15",
+  "source": "Quantavane (Arhan Canli), 10 November 2026: 15 points of the region of side 5 with no right angle (no three points p, q, r with (q - p).(r - p) = 0), the best set CP-SAT found in 10 seconds, started from the set for side N - 1 (tools/lattice_sets.py)",
+  "kind": "our construction (Quantavane Originals)",
+  "provenance": {
+   "keeper": "Quantavane Originals",
+   "url": "collections/originals/problems/bcc-right.md",
+   "read": "2026-11-10",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true,
+   "certificate": "collections/originals/refs/bcc-right.txt"
+  }
+ },
+ "verified_pending": [],
+ "added": "originals-2",
+ "quantavane_record": true,
+ "context": "A set of points is right-angle-free when no three of its points form a right angle. Gamble, Pulleyblank, Reed and Shepherd (1995) studied the largest right-angle-free subsets of the plane and of the square lattice, and related work (Junger and Pulleyblank) shows the problem NP-hard for general point sets; sets without isosceles right triangles in the n x n grid are a separate, active question (OEIS A271906; arXiv:2607.22828, 2026). In the body-centred cubic crystal the cube axes are perpendicular, and so are many face and body diagonals (for example (1, 1, 1) and (1, -1, 0)); how fast the largest right-angle-free sets grow is open.",
+ "references": [
+  "B. Gamble, W. Pulleyblank, B. Reed, B. Shepherd, Right angle free subsets in the plane, Graphs and Combinatorics 11 (1995) 121-129",
+  "A Salem-Spencer-type construction for large subsets of integer grids with no isosceles right triangles, arXiv:2607.22828 (2026)",
+  "OEIS A271906 (largest subsets of the n x n grid with no right isosceles triangle)"
+ ],
+ "novelty": {
+  "checked": "2026-11-10",
+  "file": "novelty/bcc-right.json",
+  "verdict": "new question for this lattice: right-angle-free subsets are studied for the square lattice (Gamble, Pulleyblank, Reed and Shepherd 1995; Junger and Pulleyblank) and isosceles right triangles in the square grid (A271906); no result was found for the body-centred cubic crystal, and it is not in the OEIS by name (too few exact values are known to search by terms).",
+  "closest": [
+   "B. Gamble, W. Pulleyblank, B. Reed and B. Shepherd (1995): right-angle-free subsets of the plane and of the square lattice; another lattice.",
+   "OEIS A271906 and arXiv:2607.22828: no isosceles right triangle in the square grid, a weaker condition in another lattice."
+  ],
+  "benchmark": "no right-angle-free family"
+ },
+ "first_values": null,
+ "baseline": {
+  "date": "2026-11-10",
+  "holder": "Quantavane (Arhan Canli)",
+  "text": "15 for N = 5, held by Quantavane (Arhan Canli), 10 November 2026: the points in `refs/bcc-right.txt` (the best set CP-SAT found in 10 seconds, started from the set for side N - 1 (tools/lattice_sets.py)). Exact values for N = 2..3: 5, 9 (CP-SAT (OR-Tools 9.15, one worker) proved the optimum of the 0/1 model in tools/lattice_sets.py)."
+ },
+ "cells": {
+  "params": [
+   "N"
+  ],
+  "about": "N, the side of the body-centred cubic crystal",
+  "headline": {
+   "N": 5
+  },
+  "args": [
+   "bcc-right",
+   "{N}"
+  ],
+  "title": "Right-angle-free sets in the body-centred cubic crystal of side {N}",
+  "statement": "Choose as many points as possible of the body-centred cubic crystal B_{N} of side {N} so that no three of them form a right angle.",
+  "submission": "Text file: one point 'x y z' per line, a point of the region of side {N}.",
+  "exact": [
+   "2",
+   "3"
+  ],
+  "exact_how": "CP-SAT (OR-Tools 9.15, one worker) proved the optimum of the 0/1 model in tools/lattice_sets.py",
+  "how": "the best set CP-SAT found in 10 seconds, started from the set for side N - 1 (tools/lattice_sets.py)"
+ }
+}

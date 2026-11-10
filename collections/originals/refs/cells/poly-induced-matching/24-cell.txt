@@ -1,0 +1,5 @@
+# induced-matching on polytope 24: 4 (optimal)
+4 9
+6 10
+7 11
+22 23

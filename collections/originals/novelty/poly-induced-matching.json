@@ -1,0 +1,112 @@
+{
+ "id": "poly-induced-matching",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"induced matching\" AND all:\"600-cell\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22induced+matching%22+AND+all%3A%22600-cell%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T15:38:30Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"induced matching\" AND all:polytope",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22induced+matching%22+AND+all%3Apolytope&start=0&max_results=10&sortBy=relevance",
+   "results": 1,
+   "top": [
+    {
+     "arxiv": "2610.23312v1",
+     "year": "2026",
+     "first_author": "Manuel Aprile",
+     "title": "The Strong Total Cover Problem"
+    }
+   ],
+   "run": "2026-11-10T15:38:35Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"strong matching\" AND all:\"regular polytope\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22strong+matching%22+AND+all%3A%22regular+polytope%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T15:38:39Z"
+  },
+  {
+   "engine": "Crossref API",
+   "query": "maximum induced matching regular polytope graph",
+   "url": "https://api.crossref.org/works?query.bibliographic=maximum+induced+matching+regular+polytope+graph&rows=10&select=DOI%2Ctitle%2Cpublished%2Ccontainer-title",
+   "results": 2201044,
+   "note": "relevance-ranked; the total counts every work matching any of the words",
+   "top": [
+    {
+     "doi": "10.7151/dmgt.2001",
+     "year": "2018",
+     "title": "Core index of perfect matching polytope for a 2-connected cubic graph"
+    },
+    {
+     "doi": "10.1007/s00453-012-9625-7",
+     "year": "2012",
+     "title": "Maximum Matching in Regular and Almost Regular Graphs"
+    },
+    {
+     "doi": "10.1007/s00373-007-0757-5",
+     "year": "2007",
+     "title": "Tight Lower Bounds on the Size of a Maximum Matching in a Regular Graph"
+    },
+    {
+     "doi": "10.32614/cran.package.maxmatching",
+     "year": "2017",
+     "title": "maxmatching: Maximum Matching for General Weighted Graph"
+    },
+    {
+     "doi": "10.1016/j.disc.2009.03.009",
+     "year": "2009",
+     "title": "The graph of perfect matching polytope and an extreme problem"
+    },
+    {
+     "doi": "10.1007/978-3-540-30540-8_5",
+     "year": "2005",
+     "title": "Maximum Induced Matchings of Random Regular Graphs"
+    },
+    {
+     "doi": "10.1007/0-306-48332-7_147",
+     "year": "2001",
+     "title": "Assignment and matching; Assignment methods in clustering; Bi-objective assignment problem; Communication network assignment problem; Graph coloring; Maximum constraint satisfaction: Relaxations and upper bounds; Maximum partition matching; Quadratic assignment problemAssignment and matching; Assignment methods in clustering; Bi-objective assignment problem; Communication network assignment problem Graph coloring; Linear ordering problem; Maximum constraint satisfaction: Relaxations and upper bounds; Maximum partition matching; Quadratic assignment problemFREQUENCY ASSIGNMENT PROBLEM"
+    },
+    {
+     "doi": "10.1002/jgt.3190160505",
+     "year": "1992",
+     "title": "Maximum diameter of regular digraphs"
+    },
+    {
+     "doi": "10.5353/th_b5570803",
+     "year": "",
+     "title": "When is the matching polytope box-totally dual integral?"
+    },
+    {
+     "doi": "10.7151/dmgt.1722",
+     "year": "2014",
+     "title": "Maximum hypergraphs without regular subgraphs"
+    }
+   ],
+   "run": "2026-11-10T15:38:47Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"induced matching\" AND (all:\"E8\" OR all:Gosset OR all:\"E_8\")",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22induced+matching%22+AND+%28all%3A%22E8%22+OR+all%3AGosset+OR+all%3A%22E_8%22%29&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T16:41:08Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "\"locating-dominating\" OR \"induced matching\" OR \"burning number\" OR \"metric dimension\" graph of the 600-cell OR 120-cell OR 24-cell polytope",
+   "date": "2026-11-10",
+   "found": "surveys of metric dimension and Bailey's metric dimension of small distance-regular graphs; nothing on locating-dominating sets, induced matchings or burning of the 4-polytope graphs"
+  }
+ ]
+}

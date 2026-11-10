@@ -1,0 +1,2 @@
+# total-dom on polytope e8: 9 (best found)
+16 19 33 126 137 160 178 184 228

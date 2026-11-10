@@ -1,0 +1,79 @@
+{
+ "id": "quad-pyth",
+ "collection": "originals",
+ "field": "Number theory",
+ "title": "Colourings with no monochromatic Pythagorean quadruple",
+ "status": "open",
+ "statement": "A Pythagorean quadruple is a solution of x^2 + y^2 + z^2 = w^2 in positive integers (the edges and the space diagonal of a box with integer sides; the smallest is 1^2 + 2^2 + 2^2 = 3^2, and x, y, z may repeat). Colour the integers 1, 2, ..., n with K colours. What is the largest n for which some colouring has no monochromatic quadruple, i.e. no solution with x, y, z and w all of the same colour? For K = 2 the answer is 104 (ours, exact: every 2-colouring of 1..105 has one). The headline cell is K = 3: we have a colouring of 1..473; find a 3-colouring of 1..474 or more, or prove that none exists. We do not know whether the answer for K = 3 is finite.",
+ "objective": "maximize",
+ "submission": "Text file: the colours of 1, 2, ..., n as digits 0, 1, 2, in order (line breaks and lines starting with # are ignored).",
+ "checker": {
+  "program": "collections/originals/checkers/orig_colour.py",
+  "args": [
+   "quad-pyth",
+   "3"
+  ],
+  "value": "result"
+ },
+ "score": "n, the length of the colouring (larger is better)",
+ "best_known": {
+  "value": "473",
+  "exact": "473",
+  "source": "Quantavane (Arhan Canli), 10 November 2026: a 3-colouring of 1..473 with no monochromatic quadruple, found by an incremental SAT search (CaDiCaL through python-sat; tools/colour_sat.py)",
+  "kind": "our construction (Quantavane Originals)",
+  "provenance": {
+   "keeper": "Quantavane Originals",
+   "url": "collections/originals/problems/quad-pyth.md",
+   "read": "2026-11-10",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true,
+   "certificate": "collections/originals/refs/quad-pyth.txt"
+  }
+ },
+ "verified_pending": [],
+ "added": "originals-2",
+ "quantavane_record": true,
+ "context": "Erdos and Graham asked whether every finite colouring of the positive integers has a monochromatic Pythagorean triple; for two colours Heule, Kullmann and Marek (2016) found the threshold 7825 with a 200-terabyte proof, and the question for more colours is open. Frantzikinakis, Klurman and Moreira proved that every finite colouring has a monochromatic Pythagorean pair (x and y with x^2 + y^2 or x^2 - y^2 a square), and Chow, Lindqvist and Prendiville settled diagonal quadratic equations in five or more variables (so x1^2 + x2^2 + x3^2 + x4^2 = x5^2 is partition regular). Pythagorean quadruples, with four variables, fall between the two: our exact value for two colours (104) shows that two colours do not suffice, but whether every 3-colouring of a long enough interval contains a monochromatic quadruple is open, and the threshold, if finite, is unknown.",
+ "references": [
+  "M. J. H. Heule, O. Kullmann, V. W. Marek, Solving and verifying the Boolean Pythagorean triples problem via cube-and-conquer, SAT 2016, LNCS 9710 (2016) 228-245",
+  "N. Frantzikinakis, O. Klurman, J. Moreira, Partition regularity of Pythagorean pairs, arXiv:2309.10636",
+  "S. Chow, S. Lindqvist, S. Prendiville, Rado's criterion over squares and higher powers, J. Eur. Math. Soc. (2021)"
+ ],
+ "novelty": {
+  "checked": "2026-11-10",
+  "file": "novelty/quad-pyth.json",
+  "verdict": "new. Partition regularity is known for five or more squares (Chow, Lindqvist and Prendiville) and studied for Pythagorean triples and pairs; no colouring threshold, finite or infinite, was found for Pythagorean quadruples (arXiv, Crossref and web searches).",
+  "closest": [
+   "The Boolean Pythagorean triples problem (Heule, Kullmann and Marek 2016): the same question for x^2 + y^2 = z^2, threshold 7825 for two colours.",
+   "Monochromatic almost-Pythagorean quadruples x^2 + y^2 w^2 = z^2 in multiplicatively dense sets (arXiv:2610.04078): a different equation and a density question."
+  ],
+  "benchmark": "no colouring family for Diophantine equations other than our eisenstein-triples"
+ },
+ "first_values": null,
+ "baseline": {
+  "date": "2026-11-10",
+  "holder": "Quantavane (Arhan Canli)",
+  "text": "473 for K = 3, held by Quantavane (Arhan Canli), 10 November 2026: the colouring in `refs/quad-pyth.txt` (incremental SAT search, tools/colour_sat.py). K = 2: exactly 104 (the SAT solver finds 1..104 colourable and proves 1..105 not; CaDiCaL, Glucose and MiniSat agree, tools/colour_exact.py)."
+ },
+ "cells": {
+  "params": [
+   "K"
+  ],
+  "about": "K, the number of colours",
+  "headline": {
+   "K": 3
+  },
+  "args": [
+   "quad-pyth",
+   "{K}"
+  ],
+  "title": "Colourings with {K} colours and no monochromatic Pythagorean quadruple",
+  "statement": "Find the largest n such that 1..n can be coloured with {K} colours without a monochromatic solution of x^2 + y^2 + z^2 = w^2.",
+  "submission": "Text file: the colours of 1..n as digits 0..{K}-1.",
+  "exact": [
+   "2"
+  ],
+  "exact_how": "an incremental SAT search (CaDiCaL 1.9.5 through python-sat; tools/colour_sat.py) colours 1..n and proves 1..n+1 impossible; three solvers (CaDiCaL, Glucose, MiniSat) agree on the formula built from the checker's list of quadruples (tools/colour_exact.py)",
+  "how": "the longest colouring an incremental SAT search found in 300 seconds (tools/colour_sat.py)"
+ }
+}

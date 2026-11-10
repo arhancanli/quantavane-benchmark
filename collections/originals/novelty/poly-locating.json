@@ -1,0 +1,97 @@
+{
+ "id": "poly-locating",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"locating-dominating\" AND all:polytope",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22locating-dominating%22+AND+all%3Apolytope&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T15:38:16Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"locating-dominating\" AND all:\"600-cell\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22locating-dominating%22+AND+all%3A%22600-cell%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T15:38:20Z"
+  },
+  {
+   "engine": "Crossref API",
+   "query": "locating dominating sets polytope graphs",
+   "url": "https://api.crossref.org/works?query.bibliographic=locating+dominating+sets+polytope+graphs&rows=10&select=DOI%2Ctitle%2Cpublished%2Ccontainer-title",
+   "results": 273235,
+   "note": "relevance-ranked; the total counts every work matching any of the words",
+   "top": [
+    {
+     "doi": "10.1016/j.dam.2022.06.025",
+     "year": "2022",
+     "title": "Polyhedra associated with locating-dominating, open locating-dominating and locating total-dominating sets in graphs"
+    },
+    {
+     "doi": "10.1016/j.disc.2022.113124",
+     "year": "2023",
+     "title": "Locating-dominating sets: From graphs to oriented graphs"
+    },
+    {
+     "doi": "10.1007/s00373-026-03067-z",
+     "year": "2026",
+     "title": "The n/2-Bound for Locating-Dominating Sets in Subcubic Graphs"
+    },
+    {
+     "doi": "10.12988/ams.2014.46400",
+     "year": "2014",
+     "title": "Locating dominating sets in graphs"
+    },
+    {
+     "doi": "10.2139/ssrn.7589356",
+     "year": "2026",
+     "title": "Fractional Open-Locating-Dominating Sets"
+    },
+    {
+     "doi": "10.7151/dmgt.2235",
+     "year": "2019",
+     "title": "Open locating-dominating sets in circulant graphs"
+    },
+    {
+     "doi": "10.1016/j.dam.2009.06.019",
+     "year": "2009",
+     "title": "Locating and paired-dominating sets in graphs"
+    },
+    {
+     "doi": "10.37236/5147",
+     "year": "2016",
+     "title": "Locating-Total Dominating Sets in Twin-Free Graphs: a Conjecture"
+    },
+    {
+     "doi": "10.1016/j.dam.2015.06.038",
+     "year": "2016",
+     "title": "Locating–dominating sets in twin-free graphs"
+    },
+    {
+     "doi": "10.1109/access.2026.3743848",
+     "year": "2026",
+     "title": "Redundant Open Locating-Dominating Sets in Cubic Graphs: Forced Vertices and Open Packings"
+    }
+   ],
+   "run": "2026-11-10T15:38:28Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"locating-dominating\" AND (all:\"E8\" OR all:Gosset OR all:\"E_8\")",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22locating-dominating%22+AND+%28all%3A%22E8%22+OR+all%3AGosset+OR+all%3A%22E_8%22%29&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T16:41:04Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "\"locating-dominating\" OR \"induced matching\" OR \"burning number\" OR \"metric dimension\" graph of the 600-cell OR 120-cell OR 24-cell polytope",
+   "date": "2026-11-10",
+   "found": "surveys of metric dimension and Bailey's metric dimension of small distance-regular graphs; nothing on locating-dominating sets, induced matchings or burning of the 4-polytope graphs"
+  }
+ ]
+}

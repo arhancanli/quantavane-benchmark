@@ -1,14 +1,17 @@
-"""Novelty check for Quantavane Originals: arXiv API searches and OEIS searches, written down per problem.
+"""Novelty check for Quantavane Originals: arXiv API, OEIS and Crossref searches, written down per problem.
 
   python3 -I novelty.py SPEC.json OUTDIR RAWDIR
 
-SPEC.json is a list of {"id": PROBLEM, "arxiv": [search_query, ...], "oeis": [terms or words, ...]}. Each arXiv
-query is an arXiv API search_query (for example all:"Sidon set" AND all:"sum-free"); each OEIS query is either a
-comma-separated list of terms or words. Raw responses are saved in RAWDIR (a fresh, empty directory per run); the
-summary for each problem goes to OUTDIR/PROBLEM.json: every query with its address, the time it was run, the number
-of results and the first results (arXiv: identifier, year, first author, title; OEIS: A-number and name). Only titles,
-identifiers and names are kept; nothing else from the sources is copied. Searching is reading data: nothing is ever
-submitted anywhere. arXiv asks for at most one request every 3 seconds; this program waits 3.5 s between requests."""
+SPEC.json is a list of {"id": PROBLEM, "arxiv": [search_query, ...], "oeis": [terms or words, ...],
+"crossref": [words, ...]}. Each arXiv query is an arXiv API search_query (for example
+all:"Sidon set" AND all:"sum-free"); each OEIS query is either a comma-separated list of terms or words; a Crossref
+query is a bibliographic search of the journal literature (api.crossref.org, ranked by relevance). Web searches are
+run by hand (a general web search engine) and recorded in the problem's file under "web". Raw responses are saved in RAWDIR (a fresh, empty
+directory per run); the summary for each problem goes to OUTDIR/PROBLEM.json: every query with its address, the time
+it was run, the number of results and the first results (arXiv: identifier, year, first author, title; OEIS: A-number
+and name; Crossref: DOI, year, title). Only titles, identifiers and names are kept; nothing
+else from the sources is copied. Searching is reading data: nothing is ever submitted anywhere. arXiv asks for at
+most one request every 3 seconds; this program waits 3.5 s between requests."""
 import datetime
 import json
 import os
@@ -61,6 +64,22 @@ def oeis(query, raw_path):
             "note": "the JSON search returns at most 10 sequences per page", "top": hits}
 
 
+def crossref(query, raw_path, n=10):
+    url = "https://api.crossref.org/works?" + urllib.parse.urlencode(
+        {"query.bibliographic": query, "rows": n, "select": "DOI,title,published,container-title"})
+    msg = json.loads(fetch(url, raw_path))["message"]
+    hits = []
+    for it in msg.get("items", []):
+        year = ((it.get("published") or {}).get("date-parts") or [[None]])[0][0]
+        hits.append({"doi": it.get("DOI", ""), "year": str(year or ""),
+                     "title": re.sub(r"\s+", " ", " ".join(it.get("title") or [""])).strip()})
+    return {"engine": "Crossref API", "query": query, "url": url, "results": int(msg.get("total-results", 0)),
+            "note": "relevance-ranked; the total counts every work matching any of the words", "top": hits}
+
+
+ENGINES = (("arXiv API", "arxiv", "xml", 3.5), ("OEIS", "oeis", "json", 3.5), ("Crossref API", "crossref", "json", 1.5))
+
+
 def main():
     if len(sys.argv) != 4:
         print(__doc__)
@@ -73,17 +92,17 @@ def main():
         path = os.path.join(outdir, item["id"] + ".json")
         old = json.load(open(path)) if os.path.exists(path) else {"id": item["id"], "searches": []}
         done = {(s["engine"], s["query"]) for s in old["searches"]}
-        for engine, queries in (("arXiv API", item.get("arxiv", [])), ("OEIS", item.get("oeis", []))):
-            for q in queries:
+        for engine, key, ext, pause in ENGINES:
+            for q in item.get(key, []):
                 if (engine, q) in done:
                     continue
                 k += 1
-                raw = os.path.join(rawdir, f"{k:04d}.{'xml' if engine == 'arXiv API' else 'json'}")
-                r = arxiv(q, raw) if engine == "arXiv API" else oeis(q, raw)
+                raw = os.path.join(rawdir, f"{k:04d}.{ext}")
+                r = {"arxiv": arxiv, "oeis": oeis, "crossref": crossref}[key](q, raw)
                 r["run"] = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
                 old["searches"].append(r)
-                print(f"{item['id']:28s} {engine:9s} {r['results']:>6d}  {q[:90]}", flush=True)
-                time.sleep(3.5)
+                print(f"{item['id']:28s} {engine:12s} {r['results']:>8d}  {q[:90]}", flush=True)
+                time.sleep(pause)
         with open(path, "w") as f:
             json.dump(old, f, indent=1, ensure_ascii=False)
             f.write("\n")

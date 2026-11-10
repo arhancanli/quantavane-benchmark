@@ -1,0 +1,88 @@
+{
+ "id": "poly-power-domination",
+ "collection": "originals",
+ "field": "Combinatorics and graph theory",
+ "title": "Power domination in the regular 4-polytopes",
+ "status": "open",
+ "statement": "A set S of vertices power dominates the graph when, starting from S and all neighbours of S as observed vertices, the rule 'an observed vertex with exactly one unobserved neighbour observes it' eventually observes every vertex; the power domination number is the smallest size of such a set. Determine the power domination number for the graphs of the six regular convex 4-polytopes (the 5-cell K5; the tesseract, 16 vertices; the 16-cell, 8 vertices; the 24-cell, 24 vertices, 8-regular; the 600-cell, 120 vertices, 12-regular; the 120-cell, 600 vertices, 4-regular) and of the two E8 polytopes 3_21 (Gosset, 56 vertices, 27-regular) and 4_21 (the 240 roots of E8, 56-regular), each vertex adjacent to its nearest neighbours. First values (ours): the 5-cell 1 (exact); the tesseract (8-cell) 2 (exact); the 16-cell 1 (exact); the 24-cell 2 (exact); the 600-cell 5; the 120-cell 28; the Gosset polytope 3_21 2; the E8 root polytope 4_21 6. The headline cell is the 120-cell: find a certificate with value 27 or less (Z(G) <= Delta * gamma_P(G) with the spectral bound for Z(G): >= 12 for the 120-cell), or prove 28 optimal.",
+ "objective": "minimize",
+ "submission": "Text file: the vertex numbers of the set (spaces or newlines), in the checker's vertex order (the 120-cell).",
+ "checker": {
+  "program": "collections/originals/checkers/orig_graphs.py",
+  "args": [
+   "power-domination",
+   "120-cell"
+  ],
+  "value": "result"
+ },
+ "score": "the number of vertices in the set (smaller is better)",
+ "best_known": {
+  "value": "28",
+  "exact": "28",
+  "source": "Quantavane (Arhan Canli), 10 November 2026: 28 for the 120-cell, best found: CP-SAT (one worker, 5 to 60 seconds) on the model of tools/polytope_sets.py, or, for zero forcing and power domination, greedy completion and pruning between rounds of fort cuts",
+  "kind": "our construction (Quantavane Originals)",
+  "provenance": {
+   "keeper": "Quantavane Originals",
+   "url": "collections/originals/problems/poly-power-domination.md",
+   "read": "2026-11-10",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true,
+   "certificate": "collections/originals/refs/poly-power-domination.txt"
+  }
+ },
+ "verified_pending": [],
+ "added": "originals-2",
+ "quantavane_record": true,
+ "context": "Power domination models the placement of phase measurement units that monitor an electrical network (Haynes, Hedetniemi, Hedetniemi and Henning 2002); it is zero forcing started from a closed neighbourhood, so Z(G) <= Delta * gamma_P(G) and the spectral bound for zero forcing gives gamma_P >= (largest eigenvalue multiplicity) / Delta: at least 3 for the 600-cell, 12 for the 120-cell, 1 for 3_21 and 2 for 4_21. Values are known for grids, hypercubes and products; for these polytopes nothing was found.",
+ "references": [
+  "T. W. Haynes, S. M. Hedetniemi, S. T. Hedetniemi, M. A. Henning, Domination in graphs applied to electric power networks, SIAM J. Discrete Math. 15 (2002) 519-529",
+  "K. F. Benson, D. Ferrero, M. Flagg, V. Furst, L. Hogben, V. Vasilevska, B. Wissman, Zero forcing and power domination for graph products, Australas. J. Combin. 70 (2018) 221-235",
+  "H. S. M. Coxeter, Regular Polytopes (3rd ed., Dover 1973)",
+  "the vertex numbering of checkers/orig_phys.py (polytope_graph), shared by every polytope problem of the Originals"
+ ],
+ "novelty": {
+  "checked": "2026-11-10",
+  "file": "novelty/poly-power-domination.json",
+  "verdict": "new. No power domination result for the 600-cell, the 120-cell, the 24-cell or the E8 polytopes (searched with E8 and Gosset) was found on arXiv, in the journal literature (Crossref) or by web search; the known values for hypercubes and complete graphs cover only the small cells.",
+  "closest": [
+   "General results on power domination (the references) and its values for hypercubes, grids and products; none for these polytopes.",
+   "Our polytope problems (polytope-ising, potts3-600, cell600-idcode, cell600-forest, cell120-coil, e8-idcode, e8-resolving): other invariants of the same graphs."
+  ],
+  "benchmark": "no power domination family"
+ },
+ "first_values": null,
+ "baseline": {
+  "date": "2026-11-10",
+  "holder": "Quantavane (Arhan Canli)",
+  "text": "28 for the 120-cell, held by Quantavane (Arhan Canli), 10 November 2026: the certificate in `refs/poly-power-domination.txt` (best found: CP-SAT (one worker, 5 to 60 seconds) on the model of tools/polytope_sets.py, or, for zero forcing and power domination, greedy completion and pruning between rounds of fort cuts). All cells: the 5-cell 1 (exact); the tesseract (8-cell) 2 (exact); the 16-cell 1 (exact); the 24-cell 2 (exact); the 600-cell 5; the 120-cell 28; the Gosset polytope 3_21 2; the E8 root polytope 4_21 6. Bound: 12 (Z(G) <= Delta * gamma_P(G) with the spectral bound for Z(G), for the 120-cell)."
+ },
+ "bound": {
+  "value": "12",
+  "kind": "lower bound",
+  "source": "Z(G) <= Delta * gamma_P(G) with the spectral bound for Z(G), for the 120-cell"
+ },
+ "cells": {
+  "params": [
+   "KIND"
+  ],
+  "about": "KIND, the polytope",
+  "headline": {
+   "KIND": "120-cell"
+  },
+  "args": [
+   "power-domination",
+   "{KIND}"
+  ],
+  "title": "Power domination in the polytope graph {KIND}",
+  "statement": "Determine the power domination number for the graph of the polytope {KIND}.",
+  "submission": "Text file: the vertex numbers of the set (spaces or newlines), in the checker's vertex order (the polytope {KIND}).",
+  "exact": [
+   "5-cell",
+   "8-cell",
+   "16-cell",
+   "24-cell"
+  ],
+  "exact_how": "proved optimal: CP-SAT (OR-Tools 9.15, one worker) closed the gap on the model of tools/polytope_sets.py, or, for zero forcing and power domination, the fort cuts (integer program over the forts found) met the best set found",
+  "how": "best found: CP-SAT (one worker, 5 to 60 seconds) on the model of tools/polytope_sets.py, or, for zero forcing and power domination, greedy completion and pruning between rounds of fort cuts"
+ }
+}

@@ -1,0 +1,2 @@
+# locating-dom on polytope 24: 7 (optimal)
+2 3 5 6 7 9 22

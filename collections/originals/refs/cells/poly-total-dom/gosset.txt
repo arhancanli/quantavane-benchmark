@@ -1,0 +1,2 @@
+# total-dom on polytope gosset: 4 (optimal)
+2 8 13 42

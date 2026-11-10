@@ -1,0 +1,9 @@
+# kagome-distinct, side 13: 8 points (best found)
+0 9
+1 0
+1 5
+1 7
+3 2
+7 4
+10 1
+11 0

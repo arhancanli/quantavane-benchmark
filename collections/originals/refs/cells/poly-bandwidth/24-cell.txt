@@ -1,0 +1,2 @@
+# bandwidth on polytope 24: 13 (best found)
+18 8 13 22 12 4 14 23 9 16 21 7 6 17 0 3 20 2 19 5 15 1 10 11

@@ -107,8 +107,8 @@ New single problems in v2.1: Costas arrays of orders 32 and 33 (`costas-32`, `co
 `collections/originals/` holds new open problems of ours: questions that, as far as our searches show, had not been
 posed before, across combinatorics, number theory, coding theory, discrete geometry, physics, chemistry, computing and
 biology. Each problem file (`problems/ID.json`, with its page `problems/ID.md`) gives the statement, why the problem is
-interesting with references, the novelty check run before it was added (arXiv API and OEIS searches kept in
-`novelty/ID.json`, web searches named), first values (exact where an exhaustive search finished), our best known
+interesting with references, the novelty check run before it was added (arXiv API, OEIS and Crossref searches kept
+in `novelty/ID.json`, web searches named), first values (exact where an exhaustive search finished), our best known
 value with its certificate in `refs/` and the bound on the other side. Checkers are in
 `collections/originals/checkers/` (standard library only, last line `RESULT v`), the programs behind the values in
 `collections/originals/tools/`, and `dropped.json` lists the candidates we dropped because the question or an

@@ -1,0 +1,94 @@
+{
+ "id": "kagome-isosceles",
+ "collection": "originals",
+ "field": "Discrete geometry",
+ "title": "Isosceles-free sets in the kagome grid",
+ "status": "open",
+ "statement": "Let the kagome grid K_N be the points (a, b) of the triangular grid T_N (the points a + b w, w = e^(i pi/3), a, b >= 0, a + b <= N - 1) with a and b not both even. Removing the sublattice 2Z[w] from the triangular lattice leaves the kagome lattice (corner-sharing triangles, four unit bonds at every site); the squared distance is da^2 + da db + db^2. Determine the largest number of points of the kagome grid K_N such that no point is equidistant from two others (no isosceles triangle, flat ones included: no point is the midpoint of two others), as a function of N. The exact values are known (ours) for N <= 11; the headline cell is N = 13: find 15 or more such points of the region of side 13 (an upper bound is 40).",
+ "objective": "maximize",
+ "submission": "Text file: one point 'a b' per line, a point of the region of side 13 (lines starting with # are ignored).",
+ "checker": {
+  "program": "collections/originals/checkers/orig_lattice.py",
+  "args": [
+   "kagome-isosceles",
+   "13"
+  ],
+  "value": "result"
+ },
+ "score": "the number of points (larger is better)",
+ "best_known": {
+  "value": "14",
+  "exact": "14",
+  "source": "Quantavane (Arhan Canli), 10 November 2026: 14 points of the region of side 13 with no point equidistant from two others (no isosceles triangle, flat ones included), the best set CP-SAT found in 10 seconds, started from the set for side N - 1 (tools/lattice_sets.py)",
+  "kind": "our construction (Quantavane Originals)",
+  "provenance": {
+   "keeper": "Quantavane Originals",
+   "url": "collections/originals/problems/kagome-isosceles.md",
+   "read": "2026-11-10",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true,
+   "certificate": "collections/originals/refs/kagome-isosceles.txt"
+  }
+ },
+ "verified_pending": [],
+ "added": "originals-2",
+ "quantavane_record": true,
+ "context": "A set of points is isosceles-free when no point of it is equidistant from two others: no three of its points form an isosceles triangle, counting the flat case of a point midway between two others. For the n x n square grid the largest such sets have become a test bed for machine-assisted constructions: PatternBoost (Charton, Ellenberg, Wagner and Williamson, 2024) and AlphaEvolve (Georgiev, Gomez-Serrano, Tao and Wagner, 2025) found sets of 108 to 112 points in the 64 x 64 grid, the first values are OEIS A271907, and the best lower bound proved, of order n sqrt(log log n / log n) (arXiv:2610.04194, 2026), is far from the subquadratic upper bounds (the grid question is Erdos problem #1207). The kagome lattice (corner-sharing triangles; the lattice of the frustrated kagome antiferromagnets) keeps three quarters of the triangular lattice, with its unit equilateral triangles; the isosceles-free sets of the kagome grid are among those of the triangular grid. How fast they grow is open.",
+ "references": [
+  "F. Charton, J. S. Ellenberg, A. Z. Wagner, G. Williamson, PatternBoost: constructions in mathematics with a little help from AI, arXiv:2411.00566 (2024)",
+  "B. Georgiev, J. Gomez-Serrano, T. Tao, A. Z. Wagner, Mathematical exploration and discovery at scale, arXiv:2511.02864 (2025)",
+  "Sparse coloring for isosceles-free grids: an AI-assisted proof case study, arXiv:2610.04194 (2026)",
+  "OEIS A271907 (largest subsets of the n x n grid with no isosceles triangle)"
+ ],
+ "novelty": {
+  "checked": "2026-11-10",
+  "file": "novelty/kagome-isosceles.json",
+  "verdict": "new question for this lattice: isosceles-free subsets are studied for the n x n square grid (OEIS A271907, PatternBoost, AlphaEvolve, arXiv:2610.04194); no result was found for the kagome grid, and its first values are not in the OEIS.",
+  "closest": [
+   "The n x n square grid (OEIS A271907; PatternBoost arXiv:2411.00566; AlphaEvolve arXiv:2511.02864; arXiv:2610.04194): the same question in another lattice.",
+   "Erdos-type questions on isosceles sets in the plane and in space: point sets in which every three points form an isosceles triangle, the opposite extreme."
+  ],
+  "benchmark": "no isosceles-free family"
+ },
+ "first_values": null,
+ "baseline": {
+  "date": "2026-11-10",
+  "holder": "Quantavane (Arhan Canli)",
+  "text": "14 for N = 13, held by Quantavane (Arhan Canli), 10 November 2026: the points in `refs/kagome-isosceles.txt` (the best set CP-SAT found in 10 seconds, started from the set for side N - 1 (tools/lattice_sets.py)). Exact values for N = 2..11: 2, 2, 4, 4, 6, 6, 9, 9, 11, 13 (CP-SAT (OR-Tools 9.15, one worker) proved the optimum of the 0/1 model in tools/lattice_sets.py). Upper bound for N = 13: 40 (every chosen point sees the others at different distances, and no point of the region sees more than 39 different distances)."
+ },
+ "bound": {
+  "value": "40",
+  "kind": "upper bound",
+  "source": "every chosen point sees the others at different distances, and no point of the region sees more than 39 different distances"
+ },
+ "cells": {
+  "params": [
+   "N"
+  ],
+  "about": "N, the side of the kagome grid",
+  "headline": {
+   "N": 13
+  },
+  "args": [
+   "kagome-isosceles",
+   "{N}"
+  ],
+  "title": "Isosceles-free sets in the kagome grid of side {N}",
+  "statement": "Choose as many points as possible of the kagome grid K_{N} of side {N} so that no point is equidistant from two others.",
+  "submission": "Text file: one point 'a b' per line, a point of the region of side {N}.",
+  "exact": [
+   "2",
+   "3",
+   "4",
+   "5",
+   "6",
+   "7",
+   "8",
+   "9",
+   "10",
+   "11"
+  ],
+  "exact_how": "CP-SAT (OR-Tools 9.15, one worker) proved the optimum of the 0/1 model in tools/lattice_sets.py",
+  "how": "the best set CP-SAT found in 10 seconds, started from the set for side N - 1 (tools/lattice_sets.py)"
+ }
+}

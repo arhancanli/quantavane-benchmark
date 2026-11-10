@@ -1,0 +1,88 @@
+{
+ "id": "poly-locating",
+ "collection": "originals",
+ "field": "Combinatorics and graph theory",
+ "title": "Locating-dominating sets of the regular 4-polytopes",
+ "status": "open",
+ "statement": "A set D of vertices is locating-dominating when every vertex outside D has a neighbour in D and no two vertices outside D have the same set of neighbours in D; the locating-domination number is the smallest size of such a set. Determine the locating-domination number for the graphs of the six regular convex 4-polytopes (the 5-cell K5; the tesseract, 16 vertices; the 16-cell, 8 vertices; the 24-cell, 24 vertices, 8-regular; the 600-cell, 120 vertices, 12-regular; the 120-cell, 600 vertices, 4-regular) and of the two E8 polytopes 3_21 (Gosset, 56 vertices, 27-regular) and 4_21 (the 240 roots of E8, 56-regular), each vertex adjacent to its nearest neighbours. First values (ours): the 5-cell 4 (exact); the tesseract (8-cell) 6 (exact); the 16-cell 4 (exact); the 24-cell 7 (exact); the 600-cell 20; the 120-cell 205; the Gosset polytope 3_21 9; the E8 root polytope 4_21 15. The headline cell is the 120-cell: find a certificate with value 204 or less (the counting bound 2n/(Delta + 3): >= 172 for the 120-cell), or prove 205 optimal.",
+ "objective": "minimize",
+ "submission": "Text file: the vertex numbers of the set (spaces or newlines), in the checker's vertex order (the 120-cell).",
+ "checker": {
+  "program": "collections/originals/checkers/orig_graphs.py",
+  "args": [
+   "locating-dom",
+   "120-cell"
+  ],
+  "value": "result"
+ },
+ "score": "the number of vertices in the set (smaller is better)",
+ "best_known": {
+  "value": "205",
+  "exact": "205",
+  "source": "Quantavane (Arhan Canli), 10 November 2026: 205 for the 120-cell, best found: CP-SAT (one worker, 5 to 60 seconds) on the model of tools/polytope_sets.py, or, for zero forcing and power domination, greedy completion and pruning between rounds of fort cuts",
+  "kind": "our construction (Quantavane Originals)",
+  "provenance": {
+   "keeper": "Quantavane Originals",
+   "url": "collections/originals/problems/poly-locating.md",
+   "read": "2026-11-10",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true,
+   "certificate": "collections/originals/refs/poly-locating.txt"
+  }
+ },
+ "verified_pending": [],
+ "added": "originals-2",
+ "quantavane_record": true,
+ "context": "Locating-dominating sets were introduced by Slater (1987) to locate a faulty processor or an intruder from the detectors that see it; for a graph of maximum degree Delta the counting bound is |D| >= 2n/(Delta + 3) (Slater), here 16 for the 600-cell, 172 for the 120-cell, 4 for 3_21 and 9 for 4_21. Exact values are known for paths, cycles, some grids and hypercubes in small dimensions; these symmetric polytope graphs are natural test cases for how close the counting bound can be.",
+ "references": [
+  "P. J. Slater, Domination and location in acyclic graphs, Networks 17 (1987) 55-64",
+  "P. J. Slater, Dominating and reference sets in a graph, J. Math. Phys. Sci. 22 (1988) 445-455",
+  "H. S. M. Coxeter, Regular Polytopes (3rd ed., Dover 1973)",
+  "the vertex numbering of checkers/orig_phys.py (polytope_graph), shared by every polytope problem of the Originals"
+ ],
+ "novelty": {
+  "checked": "2026-11-10",
+  "file": "novelty/poly-locating.json",
+  "verdict": "new. No locating-dominating result for the 600-cell, the 120-cell, the 24-cell or the E8 polytopes (searched with E8 and Gosset) was found on arXiv, in the journal literature (Crossref) or by web search; the known values for hypercubes and complete graphs cover only the small cells.",
+  "closest": [
+   "General results on locating-dominating (the references) and its values for hypercubes, grids and products; none for these polytopes.",
+   "Our polytope problems (polytope-ising, potts3-600, cell600-idcode, cell600-forest, cell120-coil, e8-idcode, e8-resolving): other invariants of the same graphs."
+  ],
+  "benchmark": "no locating-dominating family"
+ },
+ "first_values": null,
+ "baseline": {
+  "date": "2026-11-10",
+  "holder": "Quantavane (Arhan Canli)",
+  "text": "205 for the 120-cell, held by Quantavane (Arhan Canli), 10 November 2026: the certificate in `refs/poly-locating.txt` (best found: CP-SAT (one worker, 5 to 60 seconds) on the model of tools/polytope_sets.py, or, for zero forcing and power domination, greedy completion and pruning between rounds of fort cuts). All cells: the 5-cell 4 (exact); the tesseract (8-cell) 6 (exact); the 16-cell 4 (exact); the 24-cell 7 (exact); the 600-cell 20; the 120-cell 205; the Gosset polytope 3_21 9; the E8 root polytope 4_21 15. Bound: 172 (the counting bound 2n/(Delta + 3), for the 120-cell)."
+ },
+ "bound": {
+  "value": "172",
+  "kind": "lower bound",
+  "source": "the counting bound 2n/(Delta + 3), for the 120-cell"
+ },
+ "cells": {
+  "params": [
+   "KIND"
+  ],
+  "about": "KIND, the polytope",
+  "headline": {
+   "KIND": "120-cell"
+  },
+  "args": [
+   "locating-dom",
+   "{KIND}"
+  ],
+  "title": "Locating-dominating sets of the polytope graph {KIND}",
+  "statement": "Determine the locating-domination number for the graph of the polytope {KIND}.",
+  "submission": "Text file: the vertex numbers of the set (spaces or newlines), in the checker's vertex order (the polytope {KIND}).",
+  "exact": [
+   "5-cell",
+   "8-cell",
+   "16-cell",
+   "24-cell"
+  ],
+  "exact_how": "proved optimal: CP-SAT (OR-Tools 9.15, one worker) closed the gap on the model of tools/polytope_sets.py, or, for zero forcing and power domination, the fort cuts (integer program over the forts found) met the best set found",
+  "how": "best found: CP-SAT (one worker, 5 to 60 seconds) on the model of tools/polytope_sets.py, or, for zero forcing and power domination, greedy completion and pruning between rounds of fort cuts"
+ }
+}

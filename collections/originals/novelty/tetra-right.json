@@ -1,0 +1,139 @@
+{
+ "id": "tetra-right",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"right angle\" AND all:\"face-centered cubic\" AND all:subset",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22right+angle%22+AND+all%3A%22face-centered+cubic%22+AND+all%3Asubset&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T16:15:45Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"right triangle\" AND all:\"tetrahedral\" AND all:grid",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22right+triangle%22+AND+all%3A%22tetrahedral%22+AND+all%3Agrid&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T16:15:49Z"
+  },
+  {
+   "engine": "Crossref API",
+   "query": "right angle free subsets face-centred cubic lattice tetrahedral grid",
+   "url": "https://api.crossref.org/works?query.bibliographic=right+angle+free+subsets+face-centred+cubic+lattice+tetrahedral+grid&rows=10&select=DOI%2Ctitle%2Cpublished%2Ccontainer-title",
+   "results": 17643,
+   "note": "relevance-ranked; the total counts every work matching any of the words",
+   "top": [
+    {
+     "doi": "10.1016/s0031-8914(63)80179-2",
+     "year": "1963",
+     "title": "The ordering of a face-centred cubic lattice"
+    },
+    {
+     "doi": "10.9734/acri/2017/37469",
+     "year": "2018",
+     "title": "Lattice Dynsamics of Face Centred Cubic Crystals"
+    },
+    {
+     "doi": "10.1201/9781482288124-16",
+     "year": "2002",
+     "title": "Equilibrium and non-equilibrium statistical mechanics of alloys in a face centred cubic lattice"
+    },
+    {
+     "doi": "10.1007/978-1-4684-1992-4_27",
+     "year": "1972",
+     "title": "Partial Dislocation Interactions in a Face-Centred Cubic Model Sodium Lattice"
+    },
+    {
+     "doi": "10.15672/hujms.546348",
+     "year": "2020",
+     "title": "Topological properties of face-centred cubic lattice"
+    },
+    {
+     "doi": "10.1080/14786437008220944",
+     "year": "1970",
+     "title": "The mechanical interaction of point defects in a face-centred cubic lattice"
+    },
+    {
+     "doi": "10.1016/s0167-8655(97)00014-7",
+     "year": "1997",
+     "title": "The Euler characteristic on the face-centred cubic lattice"
+    },
+    {
+     "doi": "10.1088/0022-3719/4/3/015",
+     "year": "1971",
+     "title": "Lattice Green function for the anisotropic face centred cubic lattice"
+    },
+    {
+     "doi": "10.1016/s0550-3213(97)00198-3",
+     "year": "1997",
+     "title": "Geometrical folding transitions of the triangular lattice in the face-centred cubic lattice"
+    },
+    {
+     "doi": "10.1016/0371-1951(61)80046-5",
+     "year": "1961",
+     "title": "The borohydride ion (BH4−) in a face-centred cubic alkali-halide lattice"
+    }
+   ],
+   "run": "2026-11-10T16:15:54Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"right angle\" AND all:\"fcc lattice\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22right+angle%22+AND+all%3A%22fcc+lattice%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T16:48:10Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"right angle\" AND all:\"tetrahedral grid\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22right+angle%22+AND+all%3A%22tetrahedral+grid%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T16:48:14Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "4,4,8,10,14",
+   "url": "https://oeis.org/search?q=4%2C4%2C8%2C10%2C14&fmt=json",
+   "results": 6,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A014687",
+     "name": "In sequence of odd primes add 1 to first prime, 3rd prime, 5th prime, ... then subtract 1 from 2nd prime, fourth prime, sixth prime and so on."
+    },
+    {
+     "oeis": "A125204",
+     "name": "a(0)=0, a(1)=1; and a(n) = a(n-1) + a(a(n-1) mod n) for n>=2."
+    },
+    {
+     "oeis": "A305594",
+     "name": "Number of cyclic binary sequences of length n containing no abelian 4th powers."
+    },
+    {
+     "oeis": "A172022",
+     "name": "a(n) = prime(n) + (-1)^n."
+    },
+    {
+     "oeis": "A039879",
+     "name": "Number of partitions satisfying cn(0,5) + cn(2,5) + cn(3,5) <= cn(1,5) + cn(4,5)."
+    },
+    {
+     "oeis": "A342695",
+     "name": "a(n) is the number of primes in an n X n square array that do not appear on its border, with the elements of the square array being the numbers from 1..n^2, listed in increasing order by rows."
+    }
+   ],
+   "run": "2026-11-10T17:08:30Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "\"face-centered cubic\" OR \"fcc lattice\" OR \"tetrahedral grid\" largest subset no isosceles triangle OR no right angle points",
+   "date": "2026-11-10",
+   "found": "square-grid results only (A271907, PatternBoost, AlphaEvolve, Erdos problem #1207, axis-parallel right triangles in a seminar abstract); nothing on the face-centred cubic lattice or the tetrahedral grid"
+  }
+ ]
+}

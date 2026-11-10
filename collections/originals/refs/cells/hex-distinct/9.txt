@@ -1,0 +1,7 @@
+# hex-distinct, side 9: 6 points (optimal: CP-SAT proved it)
+0 2
+0 4
+0 7
+2 1
+6 1
+7 0

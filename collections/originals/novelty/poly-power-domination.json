@@ -1,0 +1,97 @@
+{
+ "id": "poly-power-domination",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"power domination\" AND all:polytope",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22power+domination%22+AND+all%3Apolytope&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T15:38:49Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"power domination\" AND all:\"600-cell\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22power+domination%22+AND+all%3A%22600-cell%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T15:38:53Z"
+  },
+  {
+   "engine": "Crossref API",
+   "query": "power domination polytope graphs",
+   "url": "https://api.crossref.org/works?query.bibliographic=power+domination+polytope+graphs&rows=10&select=DOI%2Ctitle%2Cpublished%2Ccontainer-title",
+   "results": 2019951,
+   "note": "relevance-ranked; the total counts every work matching any of the words",
+   "top": [
+    {
+     "doi": "10.1007/978-3-030-51117-3_16",
+     "year": "2020",
+     "title": "Power Domination in Graphs"
+    },
+    {
+     "doi": "10.52783/pmj.v35.i4s.5655",
+     "year": "2025",
+     "title": "On the Equality of Accurate Power Domination and Power Domination Numbers of Some Graphs"
+    },
+    {
+     "doi": "10.70675/915790c9z1594z4e9czab64zab385caa09d0",
+     "year": "",
+     "title": "Planar graphs : non-aligned drawings, power domination and enumeration of Eulerian orientations"
+    },
+    {
+     "doi": "10.1007/978-3-030-58892-2_15",
+     "year": "2020",
+     "title": "Algorithms and Complexity of Power Domination in Graphs"
+    },
+    {
+     "doi": "10.1007/s00373-022-02476-0",
+     "year": "2022",
+     "title": "Generalized Power Domination in Claw-Free Regular Graphs"
+    },
+    {
+     "doi": "10.48047/nq.2022.20.9.nq44464",
+     "year": "2023",
+     "title": "Analytical Study Of Domination And Split Domination Number In Star Graphs, Bi Star Graphs, Petersen Graphs, And Middle Graphs"
+    },
+    {
+     "doi": "10.1201/9781482246582-18",
+     "year": "2013",
+     "title": "Frameworks for Domination"
+    },
+    {
+     "doi": "10.1007/s00373-021-02383-w",
+     "year": "2021",
+     "title": "Domination and Outer Connected Domination in Maximal Outerplanar Graphs"
+    },
+    {
+     "doi": "10.1007/s00373-021-02307-8",
+     "year": "2021",
+     "title": "On a Conjecture for Power Domination"
+    },
+    {
+     "doi": "10.37896/jxu14.5/377",
+     "year": "2020",
+     "title": "Total Inner n-Independent Power Domination Number Of Graphs"
+    }
+   ],
+   "run": "2026-11-10T15:39:00Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"power domination\" AND (all:\"E8\" OR all:Gosset OR all:\"E_8\")",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22power+domination%22+AND+%28all%3A%22E8%22+OR+all%3AGosset+OR+all%3A%22E_8%22%29&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T16:40:59Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "\"zero forcing\" OR \"power domination\" graph of the 600-cell OR 120-cell OR 24-cell OR \"regular 4-polytope\"",
+   "date": "2026-11-10",
+   "found": "general papers on zero forcing and power domination (arXiv:1510.02421, graph products, iterated line digraphs, a thesis on variations); nothing on the 4-polytope graphs"
+  }
+ ]
+}

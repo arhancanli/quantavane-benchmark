@@ -1,0 +1,2 @@
+# bisection on polytope gosset: 306 (best found)
+0 0 1 1 1 1 1 1 1 1 1 1 0 0 1 0 0 0 0 0 1 0 1 0 1 1 1 1 1 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 0 0 0 0 0 0 1 0 0 0 1 0

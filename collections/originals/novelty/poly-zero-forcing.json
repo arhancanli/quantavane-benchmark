@@ -1,0 +1,120 @@
+{
+ "id": "poly-zero-forcing",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"zero forcing\" AND all:\"600-cell\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22zero+forcing%22+AND+all%3A%22600-cell%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T15:37:19Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"zero forcing\" AND all:polytope",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22zero+forcing%22+AND+all%3Apolytope&start=0&max_results=10&sortBy=relevance",
+   "results": 1,
+   "top": [
+    {
+     "arxiv": "0902.0337v1",
+     "year": "2009",
+     "first_author": "Kaibin Huang",
+     "title": "Stability and Delay of Zero-Forcing SDMA with Limited Feedback"
+    }
+   ],
+   "run": "2026-11-10T15:37:23Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"zero forcing\" AND all:\"24-cell\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22zero+forcing%22+AND+all%3A%2224-cell%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T15:37:27Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"zero forcing\" AND all:\"root system\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22zero+forcing%22+AND+all%3A%22root+system%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T15:37:31Z"
+  },
+  {
+   "engine": "Crossref API",
+   "query": "zero forcing number regular polytope graph",
+   "url": "https://api.crossref.org/works?query.bibliographic=zero+forcing+number+regular+polytope+graph&rows=10&select=DOI%2Ctitle%2Cpublished%2Ccontainer-title",
+   "results": 823091,
+   "note": "relevance-ranked; the total counts every work matching any of the words",
+   "top": [
+    {
+     "doi": "10.31274/etd-180810-76",
+     "year": "",
+     "title": "Zero forcing number: Results for computation and comparison with other graph parameters"
+    },
+    {
+     "doi": "10.2139/ssrn.7380668",
+     "year": "2026",
+     "title": "The zero forcing number of graph powers"
+    },
+    {
+     "doi": "10.7151/dmgt.2482",
+     "year": "2024",
+     "title": "Spectral bounds for the zero forcing number of a graph"
+    },
+    {
+     "doi": "10.22199/issn.0717-6279-5305",
+     "year": "2023",
+     "title": "Open global shadow graph and it’s zero forcing number"
+    },
+    {
+     "doi": "10.7151/dmgt.2117",
+     "year": "2020",
+     "title": "A short proof for a lower bound on the zero forcing number"
+    },
+    {
+     "doi": "10.1016/j.dam.2017.11.015",
+     "year": "2018",
+     "title": "Some bounds on the zero forcing number of a graph"
+    },
+    {
+     "doi": "10.31274/etd-180810-1497",
+     "year": "",
+     "title": "Positive semidefinite maximum nullity and zero forcing number"
+    },
+    {
+     "doi": "10.2139/ssrn.4520714",
+     "year": "2023",
+     "title": "On the Diameter and Zero Forcing Number of Some Graph Classes in the Johnson, Grassmann and Hamming Association Scheme"
+    },
+    {
+     "doi": "10.2140/involve.2015.8.99",
+     "year": "2015",
+     "title": "The failed zero forcing number of a graph"
+    },
+    {
+     "doi": "10.2140/involve.2023.16.493",
+     "year": "2023",
+     "title": "A lower bound on the failed zero-forcing number of a graph"
+    }
+   ],
+   "run": "2026-11-10T15:37:38Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"zero forcing\" AND (all:\"E8\" OR all:Gosset OR all:\"E_8\")",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22zero+forcing%22+AND+%28all%3A%22E8%22+OR+all%3AGosset+OR+all%3A%22E_8%22%29&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T16:40:55Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "\"zero forcing\" OR \"power domination\" graph of the 600-cell OR 120-cell OR 24-cell OR \"regular 4-polytope\"",
+   "date": "2026-11-10",
+   "found": "general papers on zero forcing and power domination (arXiv:1510.02421, graph products, iterated line digraphs, a thesis on variations); nothing on the 4-polytope graphs"
+  }
+ ]
+}

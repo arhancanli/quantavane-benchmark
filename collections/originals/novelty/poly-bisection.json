@@ -1,0 +1,112 @@
+{
+ "id": "poly-bisection",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"bisection width\" AND all:polytope",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22bisection+width%22+AND+all%3Apolytope&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T15:39:44Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"bisection width\" AND all:\"600-cell\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22bisection+width%22+AND+all%3A%22600-cell%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T15:39:48Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"edge isoperimetric\" AND all:\"600-cell\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22edge+isoperimetric%22+AND+all%3A%22600-cell%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T15:39:52Z"
+  },
+  {
+   "engine": "Crossref API",
+   "query": "bisection width polytope graph",
+   "url": "https://api.crossref.org/works?query.bibliographic=bisection+width+polytope+graph&rows=10&select=DOI%2Ctitle%2Cpublished%2Ccontainer-title",
+   "results": 270042,
+   "note": "relevance-ranked; the total counts every work matching any of the words",
+   "top": [
+    {
+     "doi": "10.1137/060675253",
+     "year": "2008",
+     "title": "On the Graph Bisection Cut Polytope"
+    },
+    {
+     "doi": "10.7155/jgaa.00307",
+     "year": "2013",
+     "title": "On Alliance Partitions and Bisection Width for Planar Graphs"
+    },
+    {
+     "doi": "10.3724/sp.j.1001.2009.00415",
+     "year": "2009",
+     "title": "Calculation on the Bisection Width of H-Torus Topology"
+    },
+    {
+     "doi": "10.1007/3-540-40064-8_4",
+     "year": "2000",
+     "title": "New Spectral Lower Bounds on the Bisection Width of Graphs"
+    },
+    {
+     "doi": "10.1021/acs.jcim.6c01818.s001",
+     "year": "",
+     "title": "SpectralMol: Spectral Graph Bisection Achieves Universal Molecular Fragment Decomposition for Drug-Like Molecule Generation"
+    },
+    {
+     "doi": "10.1007/s002240000007",
+     "year": "1996",
+     "title": "The Bisection Width of Grid Graphs"
+    },
+    {
+     "doi": "10.1007/bf02241821",
+     "year": "1982",
+     "title": "Bisection forAx=λBx with matrices of variable band width"
+    },
+    {
+     "doi": "10.1002/(sici)1097-0037(199701)29:1<69::aid-net7>3.3.co;2-5",
+     "year": "1997",
+     "title": "On the bisection width of the transposition network"
+    },
+    {
+     "doi": "10.1002/(sici)1097-0037(199701)29:1<69::aid-net7>3.0.co;2-a",
+     "year": "1997",
+     "title": "On the bisection width of the transposition network"
+    },
+    {
+     "doi": "10.1016/s0167-5060(08)70497-7",
+     "year": "1978",
+     "title": "The Chromatic Index of the Graph of the Assignment Polytope"
+    }
+   ],
+   "run": "2026-11-10T15:39:59Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"bisection\" AND (all:\"E8\" OR all:Gosset OR all:\"E_8\")",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22bisection%22+AND+%28all%3A%22E8%22+OR+all%3AGosset+OR+all%3A%22E_8%22%29&start=0&max_results=10&sortBy=relevance",
+   "results": 1,
+   "top": [
+    {
+     "arxiv": "1202.4542v4",
+     "year": "2012",
+     "first_author": "Albert Chau",
+     "title": "Kähler C-spaces and quadratic bisectional curvature"
+    }
+   ],
+   "run": "2026-11-10T16:41:25Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "\"L(2,1)\" labeling OR \"bandwidth\" OR \"bisection width\" OR \"cutwidth\" of the 600-cell OR 120-cell OR 24-cell graph polytope 1-skeleton",
+   "date": "2026-11-10",
+   "found": "general L(2,1)-labelling papers, Deza-Grishukhin on the 120-cell skeleton (not an l1-graph) and the geometry of H4 polytopes; nothing on these invariants for the 4-polytope graphs"
+  }
+ ]
+}

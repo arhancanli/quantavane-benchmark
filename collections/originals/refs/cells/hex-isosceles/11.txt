@@ -1,0 +1,14 @@
+# hex-isosceles, side 11: 13 points (optimal: CP-SAT proved it)
+0 1
+0 7
+1 0
+1 2
+1 9
+2 1
+2 7
+3 7
+5 1
+7 0
+7 2
+7 3
+9 1

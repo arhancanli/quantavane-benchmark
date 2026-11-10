@@ -1,0 +1,119 @@
+{
+ "id": "poly-bandwidth",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:bandwidth AND all:\"600-cell\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3Abandwidth+AND+all%3A%22600-cell%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T15:39:27Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"bandwidth\" AND all:\"regular polytope\" AND all:graph",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22bandwidth%22+AND+all%3A%22regular+polytope%22+AND+all%3Agraph&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T15:39:31Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"cutwidth\" AND all:polytope AND all:graph",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22cutwidth%22+AND+all%3Apolytope+AND+all%3Agraph&start=0&max_results=10&sortBy=relevance",
+   "results": 1,
+   "top": [
+    {
+     "arxiv": "2301.03900v4",
+     "year": "2023",
+     "first_author": "Elisabeth Gaar",
+     "title": "Strong SDP based bounds on the cutwidth of a graph"
+    }
+   ],
+   "run": "2026-11-10T15:39:35Z"
+  },
+  {
+   "engine": "Crossref API",
+   "query": "bandwidth of polytope graphs vertex ordering",
+   "url": "https://api.crossref.org/works?query.bibliographic=bandwidth+of+polytope+graphs+vertex+ordering&rows=10&select=DOI%2Ctitle%2Cpublished%2Ccontainer-title",
+   "results": 230000,
+   "note": "relevance-ranked; the total counts every work matching any of the words",
+   "top": [
+    {
+     "doi": "10.1002/jgt.21795",
+     "year": "2014",
+     "title": "Vertex Ordering Characterizations of Graphs of Bounded Asteroidal Number"
+    },
+    {
+     "doi": "10.1016/j.disc.2018.08.009",
+     "year": "2018",
+     "title": "A vertex ordering characterization of simple-triangle graphs"
+    },
+    {
+     "doi": "10.1016/s0020-0190(99)00148-9",
+     "year": "1999",
+     "title": "Optimal vertex ordering of graphs"
+    },
+    {
+     "doi": "10.1016/j.disc.2017.10.028",
+     "year": "2018",
+     "title": "Distant total irregularity strength of graphs via random vertex ordering"
+    },
+    {
+     "doi": "10.1007/s11590-013-0625-6",
+     "year": "2013",
+     "title": "Fence facets from non-regular graphs for the linear ordering polytope"
+    },
+    {
+     "doi": "10.1214/aoap/1019487353",
+     "year": "2000",
+     "title": "Vertex ordering and partitioning problems for random spatial graphs"
+    },
+    {
+     "doi": "10.1016/j.jmp.2006.01.001",
+     "year": "2006",
+     "title": "Facets of the linear ordering polytope: A unification for the fence family through weighted graphs"
+    },
+    {
+     "doi": "10.1016/s0304-3975(99)00181-4",
+     "year": "2000",
+     "title": "Semi-definite relaxations for minimum bandwidth and other vertex-ordering problems"
+    },
+    {
+     "doi": "10.1016/j.jmp.2007.08.001",
+     "year": "2007",
+     "title": "Erratum to “Facets of the linear ordering polytope: A unification for the fence family through weighted graphs”"
+    },
+    {
+     "doi": "10.1145/276698.276717",
+     "year": "1998",
+     "title": "Semi-definite relaxations for minimum bandwidth and other vertex-ordering problems"
+    }
+   ],
+   "run": "2026-11-10T15:39:42Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"bandwidth\" AND (all:\"E8\" OR all:Gosset OR all:\"E_8\")",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22bandwidth%22+AND+%28all%3A%22E8%22+OR+all%3AGosset+OR+all%3A%22E_8%22%29&start=0&max_results=10&sortBy=relevance",
+   "results": 1,
+   "top": [
+    {
+     "arxiv": "2110.01740v1",
+     "year": "2021",
+     "first_author": "Charbel Saliba",
+     "title": "Error Correction for FrodoKEM Using the Gosset Lattice"
+    }
+   ],
+   "run": "2026-11-10T16:41:21Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "\"L(2,1)\" labeling OR \"bandwidth\" OR \"bisection width\" OR \"cutwidth\" of the 600-cell OR 120-cell OR 24-cell graph polytope 1-skeleton",
+   "date": "2026-11-10",
+   "found": "general L(2,1)-labelling papers, Deza-Grishukhin on the 120-cell skeleton (not an l1-graph) and the geometry of H4 polytopes; nothing on these invariants for the 4-polytope graphs"
+  }
+ ]
+}

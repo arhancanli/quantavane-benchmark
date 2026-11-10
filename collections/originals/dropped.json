@@ -308,5 +308,55 @@
   "idea": "The orientable genus of the Higman-Sims graph (a quadrangular embedding would give genus 226)",
   "reason": "the minimum genus of famous symmetric graphs is an active, studied question (the Hoffman-Singleton graph was settled with methods designed for such graphs), and our first annealing values were far from the bound",
   "evidence": "M. Conder, K. Stokes, New methods for finding minimum genus embeddings of graphs on orientable and non-orientable surfaces, Ars Math. Contemp. 17 (2019) 1-35; our computation, 9 November 2026"
+ },
+ {
+  "idea": "No three in line in the triangular grid (the largest subset of T_n with no three collinear points)",
+  "reason": "studied: the OEIS counts the arrangements of k points with no three collinear on the triangular grid of side n, so the maxima are known as the lengths of their rows; our exact values (3, 4, 6, 7, 8, 10, ... for n = 2..16) add nothing new",
+  "evidence": "OEIS A194136 and A234350 (OEIS word searches, 10 November 2026); our computation (tools/lattice_sets.py, 10 November 2026)"
+ },
+ {
+  "idea": "No three in line in the honeycomb grid",
+  "reason": "the triangular-grid question is in the OEIS (A194136, A234350); the honeycomb points of the triangular grid would be a new instance of a studied question, not a new question",
+  "evidence": "OEIS A194136, A234350 (10 November 2026)"
+ },
+ {
+  "idea": "Equilateral-triangle-free sets in the tetrahedral and cubic grids",
+  "reason": "too close to studied work: the triangular-grid version is in the OEIS (A240114, A240439) and the corners problem behind it is heavily studied",
+  "evidence": "OEIS A240114, A240439 (OEIS word searches, 10 November 2026)"
+ },
+ {
+  "idea": "Distinct distances in the cubic grid {0..n-1}^3",
+  "reason": "studied: Erdos and Guy posed the distinct-distance question for the d-dimensional grid",
+  "evidence": "P. Erdos, R. K. Guy, Distinct distances between lattice points, Elem. Math. 25 (1970) 121-123 (web search, 10 November 2026)"
+ },
+ {
+  "idea": "Distinct triangle areas in the n x n square grid",
+  "reason": "studied: the square-grid question is in the OEIS (A322740 and related sequences); our tri-areas asks it for the triangular grid",
+  "evidence": "OEIS searches (10 November 2026): A322742 and A322740"
+ },
+ {
+  "idea": "Two-colourings of 1..n with no monochromatic solution of 1/x + 1/y = 1/z",
+  "reason": "studied: reciprocal Rado numbers, including this equation, are computed and bounded",
+  "evidence": "A sharp lower bound for some reciprocal Rado numbers, arXiv:2607.04373 (arXiv API search, 10 November 2026)"
+ },
+ {
+  "idea": "Two-colourings of 1..n with no monochromatic 60-degree triangle x^2 - xy + y^2 = z^2",
+  "reason": "too close to our eisenstein-triples: (x, y, z) -> (x, x + y, z) maps the 120-degree triples x^2 + xy + y^2 = z^2 onto 60-degree ones, and the equation's partial partition regularity is known (Frantzikinakis and Host)",
+  "evidence": "N. Frantzikinakis, B. Host, Higher order Fourier analysis of multiplicative functions and applications, J. Amer. Math. Soc. 30 (2017) (web search, 10 November 2026)"
+ },
+ {
+  "idea": "The Ising antiferromagnet (maximum cut) of the Kneser graphs K(n, 2)",
+  "reason": "studied: the largest bipartite subgraphs of Kneser graphs are published",
+  "evidence": "Maximum bipartite subgraphs of Kneser graphs (Crossref search, 10 November 2026)"
+ },
+ {
+  "idea": "The metric dimension of the regular 4-polytopes",
+  "reason": "too close to studied work: the metric dimension of small distance-regular graphs is tabulated (R. F. Bailey), and our e8-resolving already asks it for the E8 root graph",
+  "evidence": "R. F. Bailey, The metric dimension of small distance-regular and strongly regular graphs, Australas. J. Combin. 62 (2015) (web search, 10 November 2026)"
+ },
+ {
+  "idea": "Isosceles-free and right-angle-free sets in the cubic grid {0..n-1}^3",
+  "reason": "the cubic grid is the three-dimensional case of the studied square-grid questions (isosceles-free sets: OEIS A271907, Erdos problem #1207; right-angle-free sets: Gamble, Pulleyblank, Reed and Shepherd 1995), so it is a new instance of a studied question, not a new question; the face-centred and body-centred cubic lattices are kept",
+  "evidence": "the novelty searches of tri-isosceles and tri-right (10 November 2026)"
  }
 ]

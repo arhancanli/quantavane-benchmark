@@ -1,0 +1,4 @@
+# induced-matching on polytope gosset: 3 (optimal)
+5 12
+6 19
+54 55

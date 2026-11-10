@@ -45,6 +45,22 @@ value can change within a version when its source table changes; the file then s
   with 24 cells, 0.28199 to 0.280310 (both had been floats without certificates). The values of align-ambiguity at
   n = 12 (4334, the pair printed in the table), nrm-segments at s = 8 (20) and tetra-distinct at n = 15 (13) were
   reproduced.
+- 10 Nov 2026 (evening), new families, first batch: 24 new questions, each with its novelty check (arXiv API, OEIS,
+  Crossref and web searches, kept in novelty/ID.json), an exact checker with red controls, and certified cells (exact
+  where CP-SAT or an exhaustive search proved the optimum, every small exact cell also checked by brute force in the
+  tests). Lattice point sets (checkers/orig_lattice.py, tools/lattice_sets.py): isosceles-free and right-angle-free
+  sets in the triangular, honeycomb, kagome, tetrahedral (face-centred cubic) and body-centred cubic grids, and
+  distinct distances in the honeycomb, kagome and body-centred cubic grids (13 questions). Invariants of the graphs of
+  the six regular 4-polytopes and of the E8 polytopes 3_21 and 4_21 (checkers/orig_graphs.py, tools/polytope_sets.py):
+  zero forcing, power domination, locating-dominating sets, induced matchings, L(2,1)-labellings, bandwidth, bisection
+  width, total domination and 2-domination (9 questions). Colourings with no monochromatic solution
+  (checkers/orig_colour.py, tools/colour_sat.py, tools/colour_exact.py): Pythagorean quadruples (two colours: exactly
+  104, three SAT solvers agree; three colours: at least 473) and three squares in arithmetic progression (two colours:
+  at least 22,948). Ten candidates dropped with the evidence (no three in line in the triangular and honeycomb grids,
+  equilateral-free sets, distinct distances in the cubic grid, distinct areas in the square grid, the cubic-grid
+  isosceles and right-angle questions, 1/x + 1/y = 1/z, 60-degree triangles, the maximum cut of Kneser graphs, the
+  metric dimension of the 4-polytopes). tools/novelty.py also searches Crossref; the pages list those searches. 70
+  questions, 1,251 cells (360 exact).
 
 ## 2.1 (9 Nov 2026): 149,372 problems and the Prestige 100 collection
 

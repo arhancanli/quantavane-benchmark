@@ -1,0 +1,170 @@
+{
+ "id": "poly-total-dom",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"total domination\" AND all:polytope",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22total+domination%22+AND+all%3Apolytope&start=0&max_results=10&sortBy=relevance",
+   "results": 2,
+   "top": [
+    {
+     "arxiv": "1811.12360v1",
+     "year": "2018",
+     "first_author": "Manoel Campêlo",
+     "title": "The polytope of legal sequences"
+    },
+    {
+     "arxiv": "2605.00705v2",
+     "year": "2026",
+     "first_author": "Martin Bendersky",
+     "title": "Cohomological properties of the Vietoris--Rips Complex of a Hypercube Graph"
+    }
+   ],
+   "run": "2026-11-10T15:40:01Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"total domination\" AND all:\"600-cell\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22total+domination%22+AND+all%3A%22600-cell%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T15:40:05Z"
+  },
+  {
+   "engine": "Crossref API",
+   "query": "total domination number regular polytopes",
+   "url": "https://api.crossref.org/works?query.bibliographic=total+domination+number+regular+polytopes&rows=10&select=DOI%2Ctitle%2Cpublished%2Ccontainer-title",
+   "results": 952401,
+   "note": "relevance-ranked; the total counts every work matching any of the words",
+   "top": [
+    {
+     "doi": "10.52783/anvi.v28.3125",
+     "year": "2024",
+     "title": "Fractal Graph of Total Regular Fractional Domination Number"
+    },
+    {
+     "doi": "10.18690/978-961-286-113-1.9",
+     "year": "2017",
+     "title": "Grundy total domination number of bipartite k-regular graphs"
+    },
+    {
+     "doi": "10.1017/cbo9780511546686.003",
+     "year": "2002",
+     "title": "Regular Polytopes"
+    },
+    {
+     "doi": "10.1017/9781108778992.008",
+     "year": "2020",
+     "title": "Classical Regular Polytopes"
+    },
+    {
+     "doi": "10.1017/9781108778992.003",
+     "year": "2020",
+     "title": "Abstract Regular Polytopes"
+    },
+    {
+     "doi": "10.1017/cbo9780511546686.002",
+     "year": "2002",
+     "title": "Classical Regular Polytopes"
+    },
+    {
+     "doi": "10.1017/cbo9780511546686.015",
+     "year": "2002",
+     "title": "Miscellaneous Classes of Regular Polytopes"
+    },
+    {
+     "doi": "10.1017/cbo9780511546686.014",
+     "year": "2002",
+     "title": "Regular Polytopes Related to Linear Groups"
+    },
+    {
+     "doi": "10.1017/cbo9780511546686.007",
+     "year": "2002",
+     "title": "Regular Polytopes on Space-Forms"
+    },
+    {
+     "doi": "10.1007/978-1-4614-6525-6_10",
+     "year": "2013",
+     "title": "Total Domination Number Versus Matching Number"
+    }
+   ],
+   "run": "2026-11-10T15:40:13Z"
+  },
+  {
+   "engine": "Crossref API",
+   "query": "total domination number 600-cell 120-cell polytope graph",
+   "url": "https://api.crossref.org/works?query.bibliographic=total+domination+number+600-cell+120-cell+polytope+graph&rows=10&select=DOI%2Ctitle%2Cpublished%2Ccontainer-title",
+   "results": 4605964,
+   "note": "relevance-ranked; the total counts every work matching any of the words",
+   "top": [
+    {
+     "doi": "10.7151/dmgt.2012",
+     "year": "2018",
+     "title": "Bounds on the locating-domination number and differentiating-total domination number in trees"
+    },
+    {
+     "doi": "10.1016/j.disc.2007.07.088",
+     "year": "2008",
+     "title": "Total domination and total domination subdivision number of a graph and its complement"
+    },
+    {
+     "doi": "10.1002/1097-0118(200009)35:1<21::aid-jgt3>3.0.co;2-f",
+     "year": "2000",
+     "title": "Graphs with large total domination number"
+    },
+    {
+     "doi": "10.7151/dmgt.2478",
+     "year": "2024",
+     "title": "On the total domination number of total graphs"
+    },
+    {
+     "doi": "10.7151/dmgt.2242",
+     "year": "2019",
+     "title": "3-tuple total domination number of rook's graphs"
+    },
+    {
+     "doi": "10.3840/001057",
+     "year": "2007",
+     "title": "600-Cell 120-Cell Duality"
+    },
+    {
+     "doi": "10.7151/dmgt.1251",
+     "year": "2004",
+     "title": "A Gallai-type equality for the total domination number of a graph"
+    },
+    {
+     "doi": "10.3840/07001057",
+     "year": "2007",
+     "title": "600-Cell 120-Cell Duality"
+    },
+    {
+     "doi": "10.7151/dmgt.1616",
+     "year": "2012",
+     "title": "On the total k-domination number of graphs"
+    },
+    {
+     "doi": "10.5120/8180-1505",
+     "year": "2012",
+     "title": "Total Domination Number and Chromatic Number of a Fuzzy Graph"
+    }
+   ],
+   "run": "2026-11-10T16:04:53Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"total domination\" AND (all:\"E8\" OR all:Gosset OR all:\"E_8\")",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22total+domination%22+AND+%28all%3A%22E8%22+OR+all%3AGosset+OR+all%3A%22E_8%22%29&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T16:41:29Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "\"total domination\" OR \"independent domination\" OR \"odd cycle transversal\" OR \"distance-2 coloring\" OR \"connected domination\" 600-cell OR 120-cell OR 24-cell graph",
+   "date": "2026-11-10",
+   "found": "general results (Henning and Yeo's book, total dominator colourings of Moore graphs, Dejter on efficient domination in vertex-transitive graphs, TI-partitions); nothing on these invariants for the 4-polytope graphs"
+  }
+ ]
+}

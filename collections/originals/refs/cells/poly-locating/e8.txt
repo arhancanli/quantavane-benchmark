@@ -1,0 +1,2 @@
+# locating-dom on polytope e8: 15 (best found)
+36 38 41 46 53 59 85 90 99 118 140 180 201 203 219

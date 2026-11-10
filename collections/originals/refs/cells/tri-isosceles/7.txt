@@ -1,0 +1,9 @@
+# tri-isosceles, side 7: 8 points (optimal: CP-SAT proved it)
+0 0
+0 4
+0 6
+1 4
+3 0
+3 1
+5 0
+5 1

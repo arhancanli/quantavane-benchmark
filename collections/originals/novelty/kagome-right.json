@@ -1,0 +1,106 @@
+{
+ "id": "kagome-right",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"right angle\" AND all:kagome AND all:subset",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22right+angle%22+AND+all%3Akagome+AND+all%3Asubset&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T16:04:26Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"right triangle\" AND all:kagome",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22right+triangle%22+AND+all%3Akagome&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T16:04:32Z"
+  },
+  {
+   "engine": "Crossref API",
+   "query": "right angle free subsets kagome lattice",
+   "url": "https://api.crossref.org/works?query.bibliographic=right+angle+free+subsets+kagome+lattice&rows=10&select=DOI%2Ctitle%2Cpublished%2Ccontainer-title",
+   "results": 1513874,
+   "note": "relevance-ranked; the total counts every work matching any of the words",
+   "top": [
+    {
+     "doi": "10.1007/bf01929481",
+     "year": "1995",
+     "title": "Right angle free subsets in the plane"
+    },
+    {
+     "doi": "10.29172/7a75d75daf0747478c9574acc833ac2f",
+     "year": "",
+     "title": "Kagome lattice"
+    },
+    {
+     "doi": "10.29172/7a75d75d-af07-4747-8c95-74acc833ac2f",
+     "year": "",
+     "title": "Kagome lattice"
+    },
+    {
+     "doi": "10.1021/jacs.8b12165.s002",
+     "year": "",
+     "title": "Activity-Enhanced Self-Assembly of a Colloidal Kagome Lattice"
+    },
+    {
+     "doi": "10.1021/acsnano.6b05577.s002",
+     "year": "",
+     "title": "Vibrational Properties of a Two-Dimensional Silica Kagome Lattice"
+    },
+    {
+     "doi": "10.70675/eb9c2eb3z8013z4673zadf6zc5836e83738d",
+     "year": "",
+     "title": "Topological phases, light response and kagome lattice"
+    },
+    {
+     "doi": "10.1021/acs.nanolett.2c04362.s001",
+     "year": "",
+     "title": "Self-Intercalated 1T-FeSe2 as an Effective Kagome Lattice"
+    },
+    {
+     "doi": "10.1021/acsnano.6b05577.s001",
+     "year": "",
+     "title": "Vibrational Properties of a Two-Dimensional Silica Kagome Lattice"
+    },
+    {
+     "doi": "10.1021/jacs.8b12165.s001",
+     "year": "",
+     "title": "Activity-Enhanced Self-Assembly of a Colloidal Kagome Lattice"
+    },
+    {
+     "doi": "10.1021/acs.chemmater.1c00070.s002",
+     "year": "",
+     "title": "Stagome Lattice: The Missing Member of the Star-Kagome Family"
+    }
+   ],
+   "run": "2026-11-10T16:04:37Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"right angle\" AND all:\"triangular lattice\" AND all:\"no three\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22right+angle%22+AND+all%3A%22triangular+lattice%22+AND+all%3A%22no+three%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T16:47:35Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "2,3,4,6,9,9,11,12,14,15",
+   "url": "https://oeis.org/search?q=2%2C3%2C4%2C6%2C9%2C9%2C11%2C12%2C14%2C15&fmt=json",
+   "results": 0,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [],
+   "run": "2026-11-10T17:08:21Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "no isosceles triangle OR no right angle subset kagome lattice OR body-centered cubic lattice points largest set combinatorial geometry",
+   "date": "2026-11-10",
+   "found": "the square-grid isosceles-free problem (Erdos problem #1207, Solymosi's notes, PatternBoost, AlphaEvolve) and lattice-point counting in triangles; nothing on the kagome or body-centred cubic lattices"
+  }
+ ]
+}

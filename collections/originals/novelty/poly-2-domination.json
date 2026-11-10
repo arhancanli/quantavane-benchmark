@@ -1,0 +1,97 @@
+{
+ "id": "poly-2-domination",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"2-domination\" AND all:polytope",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%222-domination%22+AND+all%3Apolytope&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T16:21:49Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"double domination\" AND all:\"600-cell\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22double+domination%22+AND+all%3A%22600-cell%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T16:21:54Z"
+  },
+  {
+   "engine": "Crossref API",
+   "query": "2-domination number 600-cell 120-cell graph",
+   "url": "https://api.crossref.org/works?query.bibliographic=2-domination+number+600-cell+120-cell+graph&rows=10&select=DOI%2Ctitle%2Cpublished%2Ccontainer-title",
+   "results": 4120735,
+   "note": "relevance-ranked; the total counts every work matching any of the words",
+   "top": [
+    {
+     "doi": "10.3840/001057",
+     "year": "2007",
+     "title": "600-Cell 120-Cell Duality"
+    },
+    {
+     "doi": "10.3840/07001057",
+     "year": "2007",
+     "title": "600-Cell 120-Cell Duality"
+    },
+    {
+     "doi": "10.21136/cmj.1996.127310",
+     "year": "1996",
+     "title": "On $f$-domination number of a graph"
+    },
+    {
+     "doi": "10.7151/dmgt.2452",
+     "year": "2024",
+     "title": "On the equality of domination number and 2-domination number"
+    },
+    {
+     "doi": "10.22214/ijraset.2019.6209",
+     "year": "2019",
+     "title": "Comparison of Roman Domination Number with Domination Number, Independent Domination Number and Chromatic Number of a Graph"
+    },
+    {
+     "doi": "10.7151/dmgt.1573",
+     "year": "2011",
+     "title": "Characterization of trees with equal 2-domination number and domination number plus two"
+    },
+    {
+     "doi": "10.17485/ijst/v17i36.2458",
+     "year": "2024",
+     "title": "Equitable Color Class Domination Number of Honeycomb Networks Graph and Inverse Equitable Color Class Domination Number of a Graph"
+    },
+    {
+     "doi": "10.7151/dmgt.2012",
+     "year": "2018",
+     "title": "Bounds on the locating-domination number and differentiating-total domination number in trees"
+    },
+    {
+     "doi": "10.7151/dmgt.1347",
+     "year": "2007",
+     "title": "Characterization of block graphs with equal 2-domination number and domination number plus one"
+    },
+    {
+     "doi": "10.7151/dmgt.2165",
+     "year": "2021",
+     "title": "Domination, independent domination number and 2-independence number in trees"
+    }
+   ],
+   "run": "2026-11-10T16:21:59Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"2-domination\" AND (all:\"E8\" OR all:Gosset OR all:\"E_8\")",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%222-domination%22+AND+%28all%3A%22E8%22+OR+all%3AGosset+OR+all%3A%22E_8%22%29&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T16:41:33Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "\"Roman domination\" OR \"domatic number\" OR \"Grundy number\" OR \"achromatic number\" 600-cell OR 120-cell OR 24-cell polytope graph",
+   "date": "2026-11-10",
+   "found": "surveys of Roman domination and the Roman domatic number, Roman domination of comets and combs; nothing on these invariants for the 4-polytope graphs"
+  }
+ ]
+}

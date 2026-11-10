@@ -1,0 +1,2 @@
+# total-dom on polytope 8: 4 (optimal)
+6 7 8 9

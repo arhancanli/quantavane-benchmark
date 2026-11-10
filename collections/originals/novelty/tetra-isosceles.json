@@ -1,0 +1,220 @@
+{
+ "id": "tetra-isosceles",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:isosceles AND all:\"face-centered cubic\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3Aisosceles+AND+all%3A%22face-centered+cubic%22&start=0&max_results=10&sortBy=relevance",
+   "results": 2,
+   "top": [
+    {
+     "arxiv": "1907.01792v1",
+     "year": "2019",
+     "first_author": "Ulf R. Pedersen",
+     "title": "Glass-forming ability of Lennard-Jones trimers"
+    },
+    {
+     "arxiv": "1811.12176v2",
+     "year": "2018",
+     "first_author": "Nazife Ozdes Koca",
+     "title": "Prototiles and Tilings from Voronoi and Delone cells of the Root Lattice A_n"
+    }
+   ],
+   "run": "2026-11-10T15:27:43Z"
+  },
+  {
+   "engine": "Crossref API",
+   "query": "isosceles triangles face-centred cubic lattice subset",
+   "url": "https://api.crossref.org/works?query.bibliographic=isosceles+triangles+face-centred+cubic+lattice+subset&rows=10&select=DOI%2Ctitle%2Cpublished%2Ccontainer-title",
+   "results": 486050,
+   "note": "relevance-ranked; the total counts every work matching any of the words",
+   "top": [
+    {
+     "doi": "10.1016/s0031-8914(63)80179-2",
+     "year": "1963",
+     "title": "The ordering of a face-centred cubic lattice"
+    },
+    {
+     "doi": "10.1021/jacs.6b02086.s001",
+     "year": "",
+     "title": "Chiral Redox-Active Isosceles Triangles"
+    },
+    {
+     "doi": "10.1021/jacs.6b02086.s002",
+     "year": "",
+     "title": "Chiral Redox-Active Isosceles Triangles"
+    },
+    {
+     "doi": "10.9734/acri/2017/37469",
+     "year": "2018",
+     "title": "Lattice Dynsamics of Face Centred Cubic Crystals"
+    },
+    {
+     "doi": "10.1021/jacs.6b02086.s003",
+     "year": "",
+     "title": "Chiral Redox-Active Isosceles Triangles"
+    },
+    {
+     "doi": "10.1201/9781482288124-16",
+     "year": "2002",
+     "title": "Equilibrium and non-equilibrium statistical mechanics of alloys in a face centred cubic lattice"
+    },
+    {
+     "doi": "10.58837/chula.the.2024.933",
+     "year": "",
+     "title": "Boundaries of overlapping isosceles triangles"
+    },
+    {
+     "doi": "10.1007/978-1-4684-1992-4_27",
+     "year": "1972",
+     "title": "Partial Dislocation Interactions in a Face-Centred Cubic Model Sodium Lattice"
+    },
+    {
+     "doi": "10.15672/hujms.546348",
+     "year": "2020",
+     "title": "Topological properties of face-centred cubic lattice"
+    },
+    {
+     "doi": "10.1080/14786437008220944",
+     "year": "1970",
+     "title": "The mechanical interaction of point defects in a face-centred cubic lattice"
+    }
+   ],
+   "run": "2026-11-10T15:27:51Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"isosceles\" AND all:\"tetrahedral grid\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22isosceles%22+AND+all%3A%22tetrahedral+grid%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T16:15:57Z"
+  },
+  {
+   "engine": "Crossref API",
+   "query": "isosceles free subsets tetrahedral grid points",
+   "url": "https://api.crossref.org/works?query.bibliographic=isosceles+free+subsets+tetrahedral+grid+points&rows=10&select=DOI%2Ctitle%2Cpublished%2Ccontainer-title",
+   "results": 1239971,
+   "note": "relevance-ranked; the total counts every work matching any of the words",
+   "top": [
+    {
+     "doi": "10.1007/pl00009356",
+     "year": "1998",
+     "title": "Isosceles Planar Subsets"
+    },
+    {
+     "doi": "10.2139/ssrn.5493342",
+     "year": "2025",
+     "title": "S M Nazmuz Sakib Two-Circle Right–Isosceles Points Theorem: A Constant Sum of Squared Chords (the Sakib constant)"
+    },
+    {
+     "doi": "10.2139/ssrn.4958173",
+     "year": "2024",
+     "title": "Adaptive Optimization of Bess and Grid Set Points: A Model-Free Framework for Energy Management Under Dynamic Tariff Pricing"
+    },
+    {
+     "doi": "10.2514/6.1996-2000",
+     "year": "1996",
+     "title": "Hybrid prismatic/tetrahedral grid generation for viscous flow applications"
+    },
+    {
+     "doi": "10.1016/j.aml.2024.109246",
+     "year": "2024",
+     "title": "Critical points, stability, and basins of attraction of three Kuramoto oscillators with isosceles triangle network"
+    },
+    {
+     "doi": "10.1021/acs.jafc.5c06928.s001",
+     "year": "",
+     "title": "Inverted Tetrahedral DNA Reporters Enable Label-Free Ratiometric CRISPR Electrochemical Aptasensing of Kanamycin"
+    },
+    {
+     "doi": "10.1016/j.ins.2003.07.008",
+     "year": "2004",
+     "title": "Fuzzy points of equivalent fuzzy subsets"
+    },
+    {
+     "doi": "10.1201/9781003392149-27",
+     "year": "2024",
+     "title": "Deprescribing in Subsets of LGBTQ Population"
+    },
+    {
+     "doi": "10.4324/9781315796192-33",
+     "year": "2014",
+     "title": "Four Points to Remember: A Tetrahedral Model of Memory Experiments"
+    },
+    {
+     "doi": "10.2514/6.1993-669",
+     "year": "1993",
+     "title": "Hybrid prismatic/tetrahedral grid generation for complex 3-D geometries"
+    }
+   ],
+   "run": "2026-11-10T16:16:02Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"isosceles\" AND all:\"fcc lattice\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22isosceles%22+AND+all%3A%22fcc+lattice%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T16:48:05Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "2,4,5,8,8",
+   "url": "https://oeis.org/search?q=2%2C4%2C5%2C8%2C8&fmt=json",
+   "results": 10,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A029935",
+     "name": "a(n) = Sum_{d divides n} phi(d)*phi(n/d)."
+    },
+    {
+     "oeis": "A339560",
+     "name": "Number of integer partitions of n that can be partitioned into distinct pairs of distinct parts, i.e., into a set of edges."
+    },
+    {
+     "oeis": "A270566",
+     "name": "Number of ordered ways to write n as x^4 + y*(3y+1)/2 + z*(7z+1)/2, where x, y and z are integers with x nonnegative."
+    },
+    {
+     "oeis": "A308902",
+     "name": "Number of partitions of n into 6 squarefree parts."
+    },
+    {
+     "oeis": "A060244",
+     "name": "Triangle a(n,k) of bipartite partitions of n objects into parts >1, k of which are black."
+    },
+    {
+     "oeis": "A317625",
+     "name": "a(n) = Sum_{k=1..n} phi(floor(n/k)) where phi is the Euler totient function."
+    },
+    {
+     "oeis": "A061884",
+     "name": "a(n) = Sum_{ d | n } phi(lcm(d,n/d)), where phi(n) = Euler totient A000010."
+    },
+    {
+     "oeis": "A020817",
+     "name": "Decimal expansion of 1/sqrt(60)."
+    },
+    {
+     "oeis": "A265299",
+     "name": "Decimal expansion of sum{c(2n) - c(2n-1), n=1,2,...}, where c = convergents to (x = sqrt(5))."
+    },
+    {
+     "oeis": "A016645",
+     "name": "Decimal expansion of log(22)."
+    }
+   ],
+   "run": "2026-11-10T17:08:25Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "\"face-centered cubic\" OR \"fcc lattice\" OR \"tetrahedral grid\" largest subset no isosceles triangle OR no right angle points",
+   "date": "2026-11-10",
+   "found": "square-grid results only (A271907, PatternBoost, AlphaEvolve, Erdos problem #1207, axis-parallel right triangles in a seminar abstract); nothing on the face-centred cubic lattice or the tetrahedral grid"
+  }
+ ]
+}

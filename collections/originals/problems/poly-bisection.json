@@ -1,0 +1,82 @@
+{
+ "id": "poly-bisection",
+ "collection": "originals",
+ "field": "Combinatorics and graph theory",
+ "title": "Bisection width of the regular 4-polytopes",
+ "status": "open",
+ "statement": "The bisection width is the smallest number of edges between two halves of the vertex set of equal size. Determine the bisection width for the graphs of the six regular convex 4-polytopes (the 5-cell K5; the tesseract, 16 vertices; the 16-cell, 8 vertices; the 24-cell, 24 vertices, 8-regular; the 600-cell, 120 vertices, 12-regular; the 120-cell, 600 vertices, 4-regular) and of the two E8 polytopes 3_21 (Gosset, 56 vertices, 27-regular) and 4_21 (the 240 roots of E8, 56-regular), each vertex adjacent to its nearest neighbours. First values (ours): the 5-cell 6 (exact); the tesseract (8-cell) 8 (exact); the 16-cell 12 (exact); the 24-cell 32; the 600-cell 176; the 120-cell 120; the Gosset polytope 3_21 306; the E8 root polytope 4_21 2292. The headline cell is the 120-cell: find a certificate with value 119 or less, or prove 120 optimal.",
+ "objective": "minimize",
+ "submission": "Text file: one bit 0 or 1 per vertex in the checker's vertex order, as many 0s as 1s (the 120-cell).",
+ "checker": {
+  "program": "collections/originals/checkers/orig_graphs.py",
+  "args": [
+   "bisection",
+   "120-cell"
+  ],
+  "value": "result"
+ },
+ "score": "the number of edges between the halves (smaller is better)",
+ "best_known": {
+  "value": "120",
+  "exact": "120",
+  "source": "Quantavane (Arhan Canli), 10 November 2026: 120 for the 120-cell, best found: CP-SAT (one worker, 5 to 60 seconds) on the model of tools/polytope_sets.py, or, for zero forcing and power domination, greedy completion and pruning between rounds of fort cuts",
+  "kind": "our construction (Quantavane Originals)",
+  "provenance": {
+   "keeper": "Quantavane Originals",
+   "url": "collections/originals/problems/poly-bisection.md",
+   "read": "2026-11-10",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true,
+   "certificate": "collections/originals/refs/poly-bisection.txt"
+  }
+ },
+ "verified_pending": [],
+ "added": "originals-2",
+ "quantavane_record": true,
+ "context": "Bisection width measures the communication bottleneck of an interconnection network and is NP-hard (Garey, Johnson and Stockmeyer 1976); the spectral bound (Fiedler; Donath and Hoffman) gives width >= mu_2 n/4 with mu_2 the second smallest Laplacian eigenvalue, about 69 for the 600-cell and 22 for the 120-cell. For hypercubes the answer is classical (2^(n-1)); for the other polytopes nothing was found.",
+ "references": [
+  "M. R. Garey, D. S. Johnson, L. Stockmeyer, Some simplified NP-complete graph problems, Theoret. Comput. Sci. 1 (1976) 237-267",
+  "W. E. Donath, A. J. Hoffman, Lower bounds for the partitioning of graphs, IBM J. Res. Develop. 17 (1973) 420-425",
+  "H. S. M. Coxeter, Regular Polytopes (3rd ed., Dover 1973)",
+  "the vertex numbering of checkers/orig_phys.py (polytope_graph), shared by every polytope problem of the Originals"
+ ],
+ "novelty": {
+  "checked": "2026-11-10",
+  "file": "novelty/poly-bisection.json",
+  "verdict": "new. No bisection width result for the 600-cell, the 120-cell, the 24-cell or the E8 polytopes (searched with E8 and Gosset) was found on arXiv, in the journal literature (Crossref) or by web search; the known values for hypercubes and complete graphs cover only the small cells.",
+  "closest": [
+   "General results on bisection width (the references) and its values for hypercubes, grids and products; none for these polytopes.",
+   "Our polytope problems (polytope-ising, potts3-600, cell600-idcode, cell600-forest, cell120-coil, e8-idcode, e8-resolving): other invariants of the same graphs."
+  ],
+  "benchmark": "no bisection width family"
+ },
+ "first_values": null,
+ "baseline": {
+  "date": "2026-11-10",
+  "holder": "Quantavane (Arhan Canli)",
+  "text": "120 for the 120-cell, held by Quantavane (Arhan Canli), 10 November 2026: the certificate in `refs/poly-bisection.txt` (best found: CP-SAT (one worker, 5 to 60 seconds) on the model of tools/polytope_sets.py, or, for zero forcing and power domination, greedy completion and pruning between rounds of fort cuts). All cells: the 5-cell 6 (exact); the tesseract (8-cell) 8 (exact); the 16-cell 12 (exact); the 24-cell 32; the 600-cell 176; the 120-cell 120; the Gosset polytope 3_21 306; the E8 root polytope 4_21 2292."
+ },
+ "cells": {
+  "params": [
+   "KIND"
+  ],
+  "about": "KIND, the polytope",
+  "headline": {
+   "KIND": "120-cell"
+  },
+  "args": [
+   "bisection",
+   "{KIND}"
+  ],
+  "title": "Bisection width of the polytope graph {KIND}",
+  "statement": "Determine the bisection width for the graph of the polytope {KIND}.",
+  "submission": "Text file: one bit 0 or 1 per vertex in the checker's vertex order, as many 0s as 1s (the polytope {KIND}).",
+  "exact": [
+   "5-cell",
+   "8-cell",
+   "16-cell"
+  ],
+  "exact_how": "proved optimal: CP-SAT (OR-Tools 9.15, one worker) closed the gap on the model of tools/polytope_sets.py, or, for zero forcing and power domination, the fort cuts (integer program over the forts found) met the best set found",
+  "how": "best found: CP-SAT (one worker, 5 to 60 seconds) on the model of tools/polytope_sets.py, or, for zero forcing and power domination, greedy completion and pruning between rounds of fort cuts"
+ }
+}

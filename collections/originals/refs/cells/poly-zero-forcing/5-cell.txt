@@ -1,0 +1,2 @@
+# zero-forcing on polytope 5: 4 (optimal)
+0 1 2 3

@@ -1,0 +1,2 @@
+# 2-domination on polytope 16: 2 (optimal)
+2 3

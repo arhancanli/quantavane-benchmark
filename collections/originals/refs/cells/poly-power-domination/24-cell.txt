@@ -1,0 +1,2 @@
+# power-domination on polytope 24: 2 (optimal)
+6 15

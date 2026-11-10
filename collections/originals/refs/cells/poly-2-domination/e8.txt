@@ -1,0 +1,2 @@
+# 2-domination on polytope e8: 10 (best found)
+15 36 48 70 128 138 146 170 207 228

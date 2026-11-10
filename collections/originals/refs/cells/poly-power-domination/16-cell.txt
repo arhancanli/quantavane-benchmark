@@ -1,0 +1,2 @@
+# power-domination on polytope 16: 1 (optimal)
+0

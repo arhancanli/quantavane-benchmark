@@ -1,0 +1,87 @@
+{
+ "id": "poly-bandwidth",
+ "collection": "originals",
+ "field": "Combinatorics and graph theory",
+ "title": "Bandwidth of the regular 4-polytopes",
+ "status": "open",
+ "statement": "The bandwidth of a graph is the smallest, over all numberings of its vertices by 1..n, of the largest difference between the numbers of two adjacent vertices. Determine the bandwidth for the graphs of the six regular convex 4-polytopes (the 5-cell K5; the tesseract, 16 vertices; the 16-cell, 8 vertices; the 24-cell, 24 vertices, 8-regular; the 600-cell, 120 vertices, 12-regular; the 120-cell, 600 vertices, 4-regular) and of the two E8 polytopes 3_21 (Gosset, 56 vertices, 27-regular) and 4_21 (the 240 roots of E8, 56-regular), each vertex adjacent to its nearest neighbours. First values (ours): the 5-cell 4 (exact); the tesseract (8-cell) 7 (exact); the 16-cell 6 (exact); the 24-cell 13; the 600-cell 43; the 120-cell 80; the Gosset polytope 3_21 43; the E8 root polytope 4_21 182. The headline cell is the 120-cell: find a certificate with value 79 or less ((n - 1)/diameter: >= 40 for the 120-cell), or prove 80 optimal.",
+ "objective": "minimize",
+ "submission": "Text file: every vertex number once, in the order of the numbering (the 120-cell).",
+ "checker": {
+  "program": "collections/originals/checkers/orig_graphs.py",
+  "args": [
+   "bandwidth",
+   "120-cell"
+  ],
+  "value": "result"
+ },
+ "score": "the bandwidth of the numbering (smaller is better)",
+ "best_known": {
+  "value": "80",
+  "exact": "80",
+  "source": "Quantavane (Arhan Canli), 10 November 2026: 80 for the 120-cell, best found: CP-SAT (one worker, 5 to 60 seconds) on the model of tools/polytope_sets.py, or, for zero forcing and power domination, greedy completion and pruning between rounds of fort cuts",
+  "kind": "our construction (Quantavane Originals)",
+  "provenance": {
+   "keeper": "Quantavane Originals",
+   "url": "collections/originals/problems/poly-bandwidth.md",
+   "read": "2026-11-10",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true,
+   "certificate": "collections/originals/refs/poly-bandwidth.txt"
+  }
+ },
+ "verified_pending": [],
+ "added": "originals-2",
+ "quantavane_record": true,
+ "context": "Bandwidth governs banded storage and elimination of sparse matrices and is NP-hard (Papadimitriou 1976); Harper (1966) determined it for the hypercubes with his vertex-isoperimetric theorem, so the tesseract cell is classical. A numbering has bandwidth at least (n - 1)/diameter, and at least the vertex-boundary of the best sets of each size; the polytope graphs have large, symmetric neighbourhoods, and nothing was found for them.",
+ "references": [
+  "L. H. Harper, Optimal numberings and isoperimetric problems on graphs, J. Combin. Theory 1 (1966) 385-393",
+  "C. H. Papadimitriou, The NP-completeness of the bandwidth minimization problem, Computing 16 (1976) 263-270",
+  "H. S. M. Coxeter, Regular Polytopes (3rd ed., Dover 1973)",
+  "the vertex numbering of checkers/orig_phys.py (polytope_graph), shared by every polytope problem of the Originals"
+ ],
+ "novelty": {
+  "checked": "2026-11-10",
+  "file": "novelty/poly-bandwidth.json",
+  "verdict": "new. No bandwidth result for the 600-cell, the 120-cell, the 24-cell or the E8 polytopes (searched with E8 and Gosset) was found on arXiv, in the journal literature (Crossref) or by web search; the known values for hypercubes and complete graphs cover only the small cells.",
+  "closest": [
+   "General results on bandwidth (the references) and its values for hypercubes, grids and products; none for these polytopes.",
+   "Our polytope problems (polytope-ising, potts3-600, cell600-idcode, cell600-forest, cell120-coil, e8-idcode, e8-resolving): other invariants of the same graphs."
+  ],
+  "benchmark": "no bandwidth family"
+ },
+ "first_values": null,
+ "baseline": {
+  "date": "2026-11-10",
+  "holder": "Quantavane (Arhan Canli)",
+  "text": "80 for the 120-cell, held by Quantavane (Arhan Canli), 10 November 2026: the certificate in `refs/poly-bandwidth.txt` (best found: CP-SAT (one worker, 5 to 60 seconds) on the model of tools/polytope_sets.py, or, for zero forcing and power domination, greedy completion and pruning between rounds of fort cuts). All cells: the 5-cell 4 (exact); the tesseract (8-cell) 7 (exact); the 16-cell 6 (exact); the 24-cell 13; the 600-cell 43; the 120-cell 80; the Gosset polytope 3_21 43; the E8 root polytope 4_21 182. Bound: 40 ((n - 1)/diameter, for the 120-cell)."
+ },
+ "bound": {
+  "value": "40",
+  "kind": "lower bound",
+  "source": "(n - 1)/diameter, for the 120-cell"
+ },
+ "cells": {
+  "params": [
+   "KIND"
+  ],
+  "about": "KIND, the polytope",
+  "headline": {
+   "KIND": "120-cell"
+  },
+  "args": [
+   "bandwidth",
+   "{KIND}"
+  ],
+  "title": "Bandwidth of the polytope graph {KIND}",
+  "statement": "Determine the bandwidth for the graph of the polytope {KIND}.",
+  "submission": "Text file: every vertex number once, in the order of the numbering (the polytope {KIND}).",
+  "exact": [
+   "5-cell",
+   "8-cell",
+   "16-cell"
+  ],
+  "exact_how": "proved optimal: CP-SAT (OR-Tools 9.15, one worker) closed the gap on the model of tools/polytope_sets.py, or, for zero forcing and power domination, the fort cuts (integer program over the forts found) met the best set found",
+  "how": "best found: CP-SAT (one worker, 5 to 60 seconds) on the model of tools/polytope_sets.py, or, for zero forcing and power domination, greedy completion and pruning between rounds of fort cuts"
+ }
+}

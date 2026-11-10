@@ -1,0 +1,88 @@
+{
+ "id": "poly-zero-forcing",
+ "collection": "originals",
+ "field": "Combinatorics and graph theory",
+ "title": "Zero forcing in the regular 4-polytopes",
+ "status": "open",
+ "statement": "Colour a set Z of vertices black; whenever a black vertex has exactly one white neighbour, that neighbour turns black. Z is a zero forcing set when this turns every vertex black, and the zero forcing number Z(G) is the smallest size of a zero forcing set. Determine Z(G) for the graphs of the six regular convex 4-polytopes (the 5-cell K5; the tesseract, 16 vertices; the 16-cell, 8 vertices; the 24-cell, 24 vertices, 8-regular; the 600-cell, 120 vertices, 12-regular; the 120-cell, 600 vertices, 4-regular) and of the two E8 polytopes 3_21 (Gosset, 56 vertices, 27-regular) and 4_21 (the 240 roots of E8, 56-regular), each vertex adjacent to its nearest neighbours. First values (ours): the 5-cell 4 (exact); the tesseract (8-cell) 8 (exact); the 16-cell 6 (exact); the 24-cell 14; the 600-cell 44; the 120-cell 106; the Gosset polytope 3_21 44; the E8 root polytope 4_21 182. The headline cell is the 120-cell: find a certificate with value 105 or less (the largest multiplicity of an adjacency eigenvalue (Z >= M >= that multiplicity): >= 48 for the 120-cell), or prove 106 optimal.",
+ "objective": "minimize",
+ "submission": "Text file: the vertex numbers of the set (spaces or newlines), in the checker's vertex order (the 120-cell).",
+ "checker": {
+  "program": "collections/originals/checkers/orig_graphs.py",
+  "args": [
+   "zero-forcing",
+   "120-cell"
+  ],
+  "value": "result"
+ },
+ "score": "the number of vertices in the set (smaller is better)",
+ "best_known": {
+  "value": "106",
+  "exact": "106",
+  "source": "Quantavane (Arhan Canli), 10 November 2026: 106 for the 120-cell, best found: CP-SAT (one worker, 5 to 60 seconds) on the model of tools/polytope_sets.py, or, for zero forcing and power domination, greedy completion and pruning between rounds of fort cuts",
+  "kind": "our construction (Quantavane Originals)",
+  "provenance": {
+   "keeper": "Quantavane Originals",
+   "url": "collections/originals/problems/poly-zero-forcing.md",
+   "read": "2026-11-10",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true,
+   "certificate": "collections/originals/refs/poly-zero-forcing.txt"
+  }
+ },
+ "verified_pending": [],
+ "added": "originals-2",
+ "quantavane_record": true,
+ "context": "Zero forcing was introduced by the AIM Minimum Rank-Special Graphs Work Group (2008) as an upper bound for the maximum nullity M(G) of the real symmetric matrices whose off-diagonal pattern is the graph, and independently in the control of quantum systems (Burgarth and Giovannetti 2007); computing it is NP-hard. Since A - tI has the graph's pattern for every eigenvalue t of the adjacency matrix A, Z(G) >= M(G) >= the largest eigenvalue multiplicity, a strong bound for these vertex-transitive graphs with highly degenerate spectra: 36 for the 600-cell, 48 for the 120-cell, 27 for 3_21 and 112 for 4_21. For the hypercubes Z(Q_n) = M(Q_n) = 2^(n-1) (AIM 2008), so the tesseract cell is known; for the other polytopes the question is how close Z comes to the spectral bound, i.e. whether the minimum rank of these graphs is attained by their adjacency matrices.",
+ "references": [
+  "AIM Minimum Rank-Special Graphs Work Group, Zero forcing sets and the minimum rank of graphs, Linear Algebra Appl. 428 (2008) 1628-1648",
+  "D. Burgarth, V. Giovannetti, Full control by locally induced relaxation, Phys. Rev. Lett. 99 (2007) 100501",
+  "B. Brimkov, C. C. Fast, I. V. Hicks, Computational approaches for zero forcing and related problems, European J. Oper. Res. (2019)",
+  "H. S. M. Coxeter, Regular Polytopes (3rd ed., Dover 1973)",
+  "the vertex numbering of checkers/orig_phys.py (polytope_graph), shared by every polytope problem of the Originals"
+ ],
+ "novelty": {
+  "checked": "2026-11-10",
+  "file": "novelty/poly-zero-forcing.json",
+  "verdict": "new. No zero forcing result for the 600-cell, the 120-cell, the 24-cell or the E8 polytopes (searched with E8 and Gosset) was found on arXiv, in the journal literature (Crossref) or by web search; the known values for hypercubes and complete graphs cover only the small cells.",
+  "closest": [
+   "General results on zero forcing (the references) and its values for hypercubes, grids and products; none for these polytopes.",
+   "Our polytope problems (polytope-ising, potts3-600, cell600-idcode, cell600-forest, cell120-coil, e8-idcode, e8-resolving): other invariants of the same graphs."
+  ],
+  "benchmark": "no zero forcing family"
+ },
+ "first_values": null,
+ "baseline": {
+  "date": "2026-11-10",
+  "holder": "Quantavane (Arhan Canli)",
+  "text": "106 for the 120-cell, held by Quantavane (Arhan Canli), 10 November 2026: the certificate in `refs/poly-zero-forcing.txt` (best found: CP-SAT (one worker, 5 to 60 seconds) on the model of tools/polytope_sets.py, or, for zero forcing and power domination, greedy completion and pruning between rounds of fort cuts). All cells: the 5-cell 4 (exact); the tesseract (8-cell) 8 (exact); the 16-cell 6 (exact); the 24-cell 14; the 600-cell 44; the 120-cell 106; the Gosset polytope 3_21 44; the E8 root polytope 4_21 182. Bound: 48 (the largest multiplicity of an adjacency eigenvalue (Z >= M >= that multiplicity), for the 120-cell)."
+ },
+ "bound": {
+  "value": "48",
+  "kind": "lower bound",
+  "source": "the largest multiplicity of an adjacency eigenvalue (Z >= M >= that multiplicity), for the 120-cell"
+ },
+ "cells": {
+  "params": [
+   "KIND"
+  ],
+  "about": "KIND, the polytope",
+  "headline": {
+   "KIND": "120-cell"
+  },
+  "args": [
+   "zero-forcing",
+   "{KIND}"
+  ],
+  "title": "Zero forcing in the polytope graph {KIND}",
+  "statement": "Determine Z(G) for the graph of the polytope {KIND}.",
+  "submission": "Text file: the vertex numbers of the set (spaces or newlines), in the checker's vertex order (the polytope {KIND}).",
+  "exact": [
+   "5-cell",
+   "8-cell",
+   "16-cell"
+  ],
+  "exact_how": "proved optimal: CP-SAT (OR-Tools 9.15, one worker) closed the gap on the model of tools/polytope_sets.py, or, for zero forcing and power domination, the fort cuts (integer program over the forts found) met the best set found",
+  "how": "best found: CP-SAT (one worker, 5 to 60 seconds) on the model of tools/polytope_sets.py, or, for zero forcing and power domination, greedy completion and pruning between rounds of fort cuts"
+ }
+}

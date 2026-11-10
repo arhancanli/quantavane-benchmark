@@ -1,0 +1,3 @@
+# kagome-right, side 2: 2 points (optimal: CP-SAT proved it)
+0 1
+1 0

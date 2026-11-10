@@ -1,0 +1,16 @@
+# tri-right, side 9: 15 points (optimal: CP-SAT proved it)
+0 0
+0 8
+1 1
+1 2
+1 5
+1 6
+2 1
+2 2
+2 4
+2 5
+4 2
+5 1
+5 2
+6 1
+8 0

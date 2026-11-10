@@ -1,0 +1,2 @@
+# induced-matching on polytope 5: 1 (optimal)
+3 4

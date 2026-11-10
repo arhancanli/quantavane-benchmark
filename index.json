@@ -112,12 +112,12 @@
   {
    "kind": "problems",
    "path": "collections/originals/problems",
-   "count": 46,
+   "count": 70,
    "about": "Quantavane Originals: new problems of ours, one JSON file each (not counted in 'problems'); their cells are in collections/originals/cells/"
   }
  ],
  "collections": {
-  "originals": 46,
-  "originals_cells": 1049
+  "originals": 70,
+  "originals_cells": 1251
  }
 }

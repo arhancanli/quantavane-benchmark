@@ -1,0 +1,16 @@
+# kagome-right, side 11: 15 points (optimal: CP-SAT proved it)
+0 1
+0 3
+0 5
+0 7
+0 9
+1 0
+1 9
+3 0
+3 7
+5 0
+5 5
+7 0
+7 3
+9 0
+9 1

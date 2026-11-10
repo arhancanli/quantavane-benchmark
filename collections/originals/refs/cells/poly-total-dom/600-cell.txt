@@ -1,0 +1,2 @@
+# total-dom on polytope 600: 16 (best found)
+9 13 16 25 31 34 36 37 59 60 72 78 98 99 106 116

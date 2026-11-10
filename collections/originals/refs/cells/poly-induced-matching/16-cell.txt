@@ -1,0 +1,2 @@
+# induced-matching on polytope 16: 1 (optimal)
+5 7

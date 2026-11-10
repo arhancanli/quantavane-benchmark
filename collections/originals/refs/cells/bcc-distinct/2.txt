@@ -1,0 +1,4 @@
+# bcc-distinct, side 2: 3 points (optimal: CP-SAT proved it)
+0 0 0
+2 2 0
+2 2 2

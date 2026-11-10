@@ -1,0 +1,9 @@
+# tetra-right, side 4: 8 points (optimal: CP-SAT proved it)
+0 0 0
+0 0 3
+0 1 2
+0 2 1
+0 3 0
+1 0 0
+2 0 0
+3 0 0

@@ -1,0 +1,2 @@
+# 2-domination on polytope 8: 7 (optimal)
+1 2 4 5 8 10 15

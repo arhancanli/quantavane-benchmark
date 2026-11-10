@@ -1,0 +1,156 @@
+{
+ "id": "squares-ap",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"x^2+y^2=2z^2\" AND all:monochromatic",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22x%5E2%2By%5E2%3D2z%5E2%22+AND+all%3Amonochromatic&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T15:36:34Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"squares in arithmetic progression\" AND all:colouring",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22squares+in+arithmetic+progression%22+AND+all%3Acolouring&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T15:36:38Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"three squares\" AND all:\"arithmetic progression\" AND all:monochromatic",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22three+squares%22+AND+all%3A%22arithmetic+progression%22+AND+all%3Amonochromatic&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T15:36:42Z"
+  },
+  {
+   "engine": "Crossref API",
+   "query": "partition regularity x^2+y^2=2z^2",
+   "url": "https://api.crossref.org/works?query.bibliographic=partition+regularity+x%5E2%2By%5E2%3D2z%5E2&rows=10&select=DOI%2Ctitle%2Cpublished%2Ccontainer-title",
+   "results": 54764,
+   "note": "relevance-ranked; the total counts every work matching any of the words",
+   "top": [
+    {
+     "doi": "10.20944/preprints202404.1227.v1",
+     "year": "2024",
+     "title": "Partition Entropy as a Measure of Regularity of Music Scales"
+    },
+    {
+     "doi": "10.1515/9783110809220.296",
+     "year": "1998",
+     "title": "15 Partition Regularity of Matrices"
+    },
+    {
+     "doi": "10.1515/9783110258356.364",
+     "year": "2011",
+     "title": "Chapter 15. Partition Regularity of Matrices"
+    },
+    {
+     "doi": "10.1007/s00493-017-3654-4",
+     "year": "2018",
+     "title": "Partition Regularity of Generalised Fermat Equations"
+    },
+    {
+     "doi": "10.4064/aa190421-11-3",
+     "year": "2020",
+     "title": "Partition regularity and multiplicatively syndetic sets"
+    },
+    {
+     "doi": "10.3390/math12111658",
+     "year": "2024",
+     "title": "Partition Entropy as a Measure of Regularity of Music Scales"
+    },
+    {
+     "doi": "10.1016/j.disc.2008.09.023",
+     "year": "2009",
+     "title": "Image partition regularity near zero"
+    },
+    {
+     "doi": "10.1017/cbo9780511662034.035",
+     "year": "1997",
+     "title": "Image Partition Regularity of Matrices"
+    },
+    {
+     "doi": "10.1016/j.crma.2012.04.011",
+     "year": "2012",
+     "title": "Partition regularity and the primes"
+    },
+    {
+     "doi": "10.1142/9789812702142_0012",
+     "year": "2005",
+     "title": "A REGULARITY THEORY FOR OPTIMAL PARTITION PROBLEMS"
+    }
+   ],
+   "run": "2026-11-10T15:36:49Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "squares arithmetic progression coloring",
+   "url": "https://oeis.org/search?q=squares+arithmetic+progression+coloring&fmt=json",
+   "results": 10,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A124882",
+     "name": "Maximum number of distinct squares in arithmetic progression modulo prime(n)."
+    },
+    {
+     "oeis": "A306717",
+     "name": "Square array T(n, k) of positive integers, n > 0, k > 0, read by antidiagonals, filled the greedy way, such that for any i >= 0 and j >= 0 with i + j > 0, no three terms T(n, k), T(n+i, k+j), T(n+2*i, k+2*j) form an arithmetic progression."
+    },
+    {
+     "oeis": "A002620",
+     "name": "Quarter-squares: a(n) = floor(n/2)*ceiling(n/2). Equivalently, a(n) = floor(n^2/4)."
+    },
+    {
+     "oeis": "A308776",
+     "name": "Counterclockwise square spiral of distinct positive integers constructed by greedy algorithm, such that for k = 1..5, every term equal to k mod 5 (except k itself) is vertically or horizontally adjacent to a cell already holding a value equal to k mod 5."
+    },
+    {
+     "oeis": "A401735",
+     "name": "Lexicographically earliest square array of nonnegative integers, read by antidiagonals, with no axis-parallel square whose four corners are equal."
+    },
+    {
+     "oeis": "A000045",
+     "name": "Fibonacci numbers: F(n) = F(n-1) + F(n-2) with F(0) = 0 and F(1) = 1."
+    },
+    {
+     "oeis": "A000108",
+     "name": "Catalan numbers: C(n) = binomial(2n,n)/(n+1) = (2n)!/(n!(n+1)!)."
+    },
+    {
+     "oeis": "A000079",
+     "name": "Powers of 2: a(n) = 2^n."
+    },
+    {
+     "oeis": "A000142",
+     "name": "Factorial numbers: n! = 1*2*3*4*...*n (order of symmetric group S_n, number of permutations of n letters)."
+    },
+    {
+     "oeis": "A000984",
+     "name": "Central binomial coefficients: binomial(2*n,n) = (2*n)!/(n!)^2."
+    }
+   ],
+   "run": "2026-11-10T16:36:00Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "monochromatic x^2+y^2=2z^2",
+   "url": "https://oeis.org/search?q=monochromatic+x%5E2%2By%5E2%3D2z%5E2&fmt=json",
+   "results": 0,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [],
+   "run": "2026-11-10T16:36:04Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "partition regularity \"x^2 - xy + y^2 = z^2\" OR \"x^2+y^2=2z^2\" monochromatic solutions two colourings Frantzikinakis Host",
+   "date": "2026-11-10",
+   "found": "Frantzikinakis-Host: x^2 - xy + y^2 = z^2 is partition regular in x and y (z of any colour); Frantzikinakis-Klurman-Moreira on Pythagorean pairs; nothing on x^2 + y^2 = 2z^2 or on finite colouring thresholds"
+  }
+ ]
+}

@@ -1,0 +1,2 @@
+# zero-forcing on polytope 16: 6 (optimal)
+0 1 2 3 4 6

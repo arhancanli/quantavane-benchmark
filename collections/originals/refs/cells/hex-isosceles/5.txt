@@ -1,0 +1,6 @@
+# hex-isosceles, side 5: 5 points (optimal: CP-SAT proved it)
+0 2
+0 4
+1 0
+1 2
+4 0

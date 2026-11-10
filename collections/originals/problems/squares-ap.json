@@ -1,0 +1,58 @@
+{
+ "id": "squares-ap",
+ "collection": "originals",
+ "field": "Number theory",
+ "title": "Two-colourings with no monochromatic three squares in arithmetic progression",
+ "status": "open",
+ "statement": "The squares x^2 < z^2 < y^2 are in arithmetic progression when x^2 + y^2 = 2z^2 (the smallest is 1, 25, 49). Colour the integers 1, 2, ..., n with two colours. What is the largest n for which some colouring has no monochromatic progression, i.e. no solution with x, z and y all of the same colour? We have a colouring of 1..22948; the headline cell asks for a 2-colouring of 1..22949 or more, or a proof that none exists. We do not know whether the answer is finite.",
+ "objective": "maximize",
+ "submission": "Text file: the colours of 1, 2, ..., n as characters 0 and 1, in order (line breaks and lines starting with # are ignored).",
+ "checker": {
+  "program": "collections/originals/checkers/orig_colour.py",
+  "args": [
+   "squares-ap",
+   "2"
+  ],
+  "value": "result"
+ },
+ "score": "n, the length of the colouring (larger is better)",
+ "best_known": {
+  "value": "22948",
+  "exact": "22948",
+  "source": "Quantavane (Arhan Canli), 10 November 2026: a 2-colouring of 1..22948 with no monochromatic solution, found by an incremental SAT search (CaDiCaL through python-sat; tools/colour_sat.py)",
+  "kind": "our construction (Quantavane Originals)",
+  "provenance": {
+   "keeper": "Quantavane Originals",
+   "url": "collections/originals/problems/squares-ap.md",
+   "read": "2026-11-10",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true,
+   "certificate": "collections/originals/refs/squares-ap.txt"
+  }
+ },
+ "verified_pending": [],
+ "added": "originals-2",
+ "quantavane_record": true,
+ "context": "Three squares in arithmetic progression are classical (four are impossible, as Fermat claimed and Euler proved; the common differences are congruent numbers times squares), and x^2 + y^2 = 2z^2 is the Pythagorean equation in disguise: u = (y + x)/2, v = (y - x)/2 give u^2 + v^2 = z^2. So this is the Boolean Pythagorean triples question (Heule, Kullmann and Marek 2016: 7825 for two colours) asked for the triples (u - v, z, u + v) instead of (u, v, z); whether every 2-colouring of the integers has a monochromatic one is open, as is the partition regularity of x^2 + y^2 = 2z^2 (Rado-type criteria for squares need five or more variables). Our SAT search slowed sharply near 22948, which suggests, without proving, a finite threshold close by.",
+ "references": [
+  "M. J. H. Heule, O. Kullmann, V. W. Marek, Solving and verifying the Boolean Pythagorean triples problem via cube-and-conquer, SAT 2016, LNCS 9710 (2016) 228-245",
+  "S. Chow, S. Lindqvist, S. Prendiville, Rado's criterion over squares and higher powers, J. Eur. Math. Soc. (2021)",
+  "K. Conrad, Arithmetic progressions of three squares (expository notes)"
+ ],
+ "novelty": {
+  "checked": "2026-11-10",
+  "file": "novelty/squares-ap.json",
+  "verdict": "new. Partition regularity results cover Pythagorean pairs and five or more squares; no colouring threshold for x^2 + y^2 = 2z^2 was found (arXiv, Crossref and web searches).",
+  "closest": [
+   "The Boolean Pythagorean triples problem (Heule, Kullmann and Marek 2016): colour the triples (u, v, z) of the same Pythagorean triples; here the triples (u - v, z, u + v) are coloured.",
+   "Our eisenstein-triples: the same question for 120-degree triangles x^2 + xy + y^2 = z^2."
+  ],
+  "benchmark": "no colouring family for Diophantine equations other than our eisenstein-triples"
+ },
+ "first_values": null,
+ "baseline": {
+  "date": "2026-11-10",
+  "holder": "Quantavane (Arhan Canli)",
+  "text": "22948, held by Quantavane (Arhan Canli), 10 November 2026: the colouring in `refs/squares-ap.txt` (incremental SAT search, tools/colour_sat.py). No upper bound is known."
+ }
+}

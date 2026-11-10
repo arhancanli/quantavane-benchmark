@@ -1,0 +1,11 @@
+# hex-isosceles, side 9: 10 points (optimal: CP-SAT proved it)
+0 4
+0 8
+1 3
+1 5
+1 6
+2 0
+5 1
+5 3
+7 0
+8 0

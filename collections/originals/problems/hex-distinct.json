@@ -1,0 +1,94 @@
+{
+ "id": "hex-distinct",
+ "collection": "originals",
+ "field": "Discrete geometry",
+ "title": "Distinct distances in the honeycomb grid",
+ "status": "open",
+ "statement": "Let the honeycomb grid H_N be the points (a, b) of the triangular grid T_N (the points a + b w, w = e^(i pi/3), a, b >= 0, a + b <= N - 1) with a - b not divisible by 3. Removing the index-3 sublattice of hexagon centres from the triangular lattice leaves the honeycomb lattice of graphene, with unit bonds; the squared distance is da^2 + da db + db^2. Determine the largest number of points of the honeycomb grid H_N such that all pairwise distances are different, as a function of N. The exact values are known (ours) for N <= 13; the headline cell is N = 15: find 10 or more such points of the region of side 15 (an upper bound is 11).",
+ "objective": "maximize",
+ "submission": "Text file: one point 'a b' per line, a point of the region of side 15 (lines starting with # are ignored).",
+ "checker": {
+  "program": "collections/originals/checkers/orig_lattice.py",
+  "args": [
+   "hex-distinct",
+   "15"
+  ],
+  "value": "result"
+ },
+ "score": "the number of points (larger is better)",
+ "best_known": {
+  "value": "9",
+  "exact": "9",
+  "source": "Quantavane (Arhan Canli), 10 November 2026: 9 points of the region of side 15 with all pairwise distances different, the best set CP-SAT found in 10 seconds, started from the set for side N - 1 (tools/lattice_sets.py)",
+  "kind": "our construction (Quantavane Originals)",
+  "provenance": {
+   "keeper": "Quantavane Originals",
+   "url": "collections/originals/problems/hex-distinct.md",
+   "read": "2026-11-10",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true,
+   "certificate": "collections/originals/refs/hex-distinct.txt"
+  }
+ },
+ "verified_pending": [],
+ "added": "originals-2",
+ "quantavane_record": true,
+ "context": "Erdos and Guy asked for the largest subset of the n x n grid (and of the d-dimensional grid) with all pairwise distances different, a discrete relative of Golomb rulers and of Erdos's distinct distances problem; for the square grid the answer is of order n^(2/3) up to logarithmic factors (Erdos-Guy, Lefmann-Thiele). Our problems tri-distinct and tetra-distinct ask it for the triangular grid and the tetrahedral (face-centred cubic) grid. The honeycomb lattice of graphene has two sites per cell and is not closed under addition; its squared distances are Loschian numbers a^2 + ab + b^2, as in the triangular grid, but fewer pairs realise each one. How fast the largest distinct-distance sets grow, and how they compare with the triangular grid's, is open.",
+ "references": [
+  "P. Erdos, R. K. Guy, Distinct distances between lattice points, Elemente der Mathematik 25 (1970) 121-123",
+  "H. Lefmann, T. Thiele, Point sets with distinct distances, Combinatorica 15 (1995) 379-408"
+ ],
+ "novelty": {
+  "checked": "2026-11-10",
+  "file": "novelty/hex-distinct.json",
+  "verdict": "new question for this lattice: Erdos and Guy asked it for the d-dimensional grid and we for the triangular and tetrahedral grids (tri-distinct, tetra-distinct); no result was found for the honeycomb grid, and its first values are not in the OEIS as such (the sequences matching them, A123579, A296020, A266350, A385584, are unrelated and agree on these few terms by coincidence).",
+  "closest": [
+   "P. Erdos and R. K. Guy (1970): the square and d-dimensional grids.",
+   "Our problems tri-distinct (triangular grid) and tetra-distinct (tetrahedral grid): the same question in other lattices."
+  ],
+  "benchmark": "no distinct-distance family in the benchmark"
+ },
+ "first_values": null,
+ "baseline": {
+  "date": "2026-11-10",
+  "holder": "Quantavane (Arhan Canli)",
+  "text": "9 for N = 15, held by Quantavane (Arhan Canli), 10 November 2026: the points in `refs/hex-distinct.txt` (the best set CP-SAT found in 10 seconds, started from the set for side N - 1 (tools/lattice_sets.py)). Exact values for N = 2..13: 2, 3, 3, 4, 5, 5, 6, 6, 6, 7, 8, 8 (CP-SAT (OR-Tools 9.15, one worker) proved the optimum of the 0/1 model in tools/lattice_sets.py). Upper bound for N = 15: 11 (the C(k, 2) distances are different among the 59 squared distances that occur in the region, so C(k, 2) <= 59)."
+ },
+ "bound": {
+  "value": "11",
+  "kind": "upper bound",
+  "source": "the C(k, 2) distances are different among the 59 squared distances that occur in the region, so C(k, 2) <= 59"
+ },
+ "cells": {
+  "params": [
+   "N"
+  ],
+  "about": "N, the side of the honeycomb grid",
+  "headline": {
+   "N": 15
+  },
+  "args": [
+   "hex-distinct",
+   "{N}"
+  ],
+  "title": "Distinct distances in the honeycomb grid of side {N}",
+  "statement": "Choose as many points as possible of the honeycomb grid H_{N} of side {N} so that all pairwise distances are different.",
+  "submission": "Text file: one point 'a b' per line, a point of the region of side {N}.",
+  "exact": [
+   "2",
+   "3",
+   "4",
+   "5",
+   "6",
+   "7",
+   "8",
+   "9",
+   "10",
+   "11",
+   "12",
+   "13"
+  ],
+  "exact_how": "CP-SAT (OR-Tools 9.15, one worker) proved the optimum of the 0/1 model in tools/lattice_sets.py",
+  "how": "the best set CP-SAT found in 10 seconds, started from the set for side N - 1 (tools/lattice_sets.py)"
+ }
+}

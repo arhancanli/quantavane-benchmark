@@ -1,0 +1,435 @@
+{
+ "id": "tri-isosceles",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:isosceles AND all:\"triangular lattice\" AND all:subset",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3Aisosceles+AND+all%3A%22triangular+lattice%22+AND+all%3Asubset&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T15:26:16Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"isosceles\" AND all:\"triangular grid\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22isosceles%22+AND+all%3A%22triangular+grid%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T15:26:20Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"isosceles-free\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22isosceles-free%22&start=0&max_results=10&sortBy=relevance",
+   "results": 2,
+   "top": [
+    {
+     "arxiv": "2305.03163v3",
+     "year": "2023",
+     "first_author": "Christian Bargetz",
+     "title": "Homogeneous isosceles-free spaces"
+    },
+    {
+     "arxiv": "2610.04194v1",
+     "year": "2026",
+     "first_author": "Yukai Song",
+     "title": "Sparse coloring for isosceles-free grids: an AI-assisted proof case study"
+    }
+   ],
+   "run": "2026-11-10T15:26:24Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"no isosceles\" AND all:grid",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22no+isosceles%22+AND+all%3Agrid&start=0&max_results=10&sortBy=relevance",
+   "results": 12,
+   "top": [
+    {
+     "arxiv": "1605.00180v5",
+     "year": "2016",
+     "first_author": "Chai Wah Wu",
+     "title": "Counting the number of isosceles triangles in rectangular regular grids"
+    },
+    {
+     "arxiv": "2511.03184v1",
+     "year": "2025",
+     "first_author": "I. Araya",
+     "title": "ISOSCELES project: A grid-based quantitative spectroscopic analysis of massive stars"
+    },
+    {
+     "arxiv": "2610.04194v1",
+     "year": "2026",
+     "first_author": "Yukai Song",
+     "title": "Sparse coloring for isosceles-free grids: an AI-assisted proof case study"
+    },
+    {
+     "arxiv": "2607.22828v1",
+     "year": "2026",
+     "first_author": "Gyula Károlyi",
+     "title": "A Salem-Spencer-Type Construction for Large Subsets of Integer Grids with No Isosceles Right Triangles"
+    },
+    {
+     "arxiv": "2606.18490v1",
+     "year": "2026",
+     "first_author": "N. Machuca",
+     "title": "ISOSCELES Project: II. Modelling galactic B-type stars for fast and $δ-$slow wind regimes"
+    },
+    {
+     "arxiv": "2103.01645v1",
+     "year": "2021",
+     "first_author": "Ilya Shkredov",
+     "title": "Tilted Corners in Integer Grids"
+    },
+    {
+     "arxiv": "2607.05374v1",
+     "year": "2026",
+     "first_author": "Sungchul Lee",
+     "title": "The Minkowski grid has robustly many repeated distances"
+    },
+    {
+     "arxiv": "1807.09506v1",
+     "year": "2018",
+     "first_author": "Tomás Chacón Rebollo",
+     "title": "VMS spectral solution of two-dimensional advection-diffusion problems with anisotropic velocity"
+    },
+    {
+     "arxiv": "2407.04445v2",
+     "year": "2024",
+     "first_author": "Peter Krämer",
+     "title": "Critical Near-Field Impedance Matrices"
+    },
+    {
+     "arxiv": "2312.01159v1",
+     "year": "2023",
+     "first_author": "Burcu Canakci",
+     "title": "On SAT Solvers and Ramsey-type Numbers"
+    }
+   ],
+   "run": "2026-11-10T15:26:29Z"
+  },
+  {
+   "engine": "Crossref API",
+   "query": "isosceles triangle free subsets of grid points",
+   "url": "https://api.crossref.org/works?query.bibliographic=isosceles+triangle+free+subsets+of+grid+points&rows=10&select=DOI%2Ctitle%2Cpublished%2Ccontainer-title",
+   "results": 1251616,
+   "note": "relevance-ranked; the total counts every work matching any of the words",
+   "top": [
+    {
+     "doi": "10.3998/mpub.14590346.cmp.ng451m80j",
+     "year": "",
+     "title": "Isosceles right triangle tiling"
+    },
+    {
+     "doi": "10.3998/mpub.14590346.cmp.ht24wn965",
+     "year": "",
+     "title": "Isosceles Pythagorean right triangle tiling"
+    },
+    {
+     "doi": "10.3840/08002691",
+     "year": "2008",
+     "title": "Largest Isosceles Triangle Inscribed in a Circle"
+    },
+    {
+     "doi": "10.1021/acsomega.6c07826.s001",
+     "year": "",
+     "title": "Self-Assembly of Isomeric Isosceles Triangle Molecules at the LiquidSolid Interface"
+    },
+    {
+     "doi": "10.1016/j.aml.2024.109246",
+     "year": "2024",
+     "title": "Critical points, stability, and basins of attraction of three Kuramoto oscillators with isosceles triangle network"
+    },
+    {
+     "doi": "10.3840/08002953",
+     "year": "2008",
+     "title": "Dudeney's Cross-to-Isosceles-Right-Triangle Dissection"
+    },
+    {
+     "doi": "10.3840/002691",
+     "year": "2008",
+     "title": "Largest Isosceles Triangle Inscribed in a Circle"
+    },
+    {
+     "doi": "10.3840/002953",
+     "year": "2008",
+     "title": "Dudeney's Cross-to-Isosceles-Right-Triangle Dissection"
+    },
+    {
+     "doi": "10.2307/3602674",
+     "year": "1914",
+     "title": "416. <i>Formulae for the area and half-Angles of a triangle ABC obtained by means of the equivalent isosceles triangle ADE, viz. the isosceles triangle which has the same area and the same angle A as the given triangle</i>"
+    },
+    {
+     "doi": "10.1017/cbo9780511569739.005",
+     "year": "1959",
+     "title": "The ‘Isosceles Triangle’ Fallacy Analysed"
+    }
+   ],
+   "run": "2026-11-10T15:26:37Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "isosceles triangular",
+   "url": "https://oeis.org/search?q=isosceles+triangular&fmt=json",
+   "results": 10,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A180314",
+     "name": "Decimal expansion of the torsional rigidity constant for a right isosceles triangular shaft."
+    },
+    {
+     "oeis": "A194024",
+     "name": "T(n,k) = number of ways to arrange k points on an n X n X n triangular grid on an isosceles triangle so that it balances at the midpoint of its central altitude."
+    },
+    {
+     "oeis": "A389363",
+     "name": "a(n) is the number of isosceles trapezoids in a triangular grid of side length n."
+    },
+    {
+     "oeis": "A391193",
+     "name": "Triangle read by rows: T(n,k) is the number of free polyforms consisting of k unit square cells and n-k isosceles right triangular cells whose short sides have unit length. Cells are joined along sides of equal lengths."
+    },
+    {
+     "oeis": "A194021",
+     "name": "Number of ways to arrange 4 points on an n X n X n triangular grid on an isosceles triangle so that it balances at the midpoint of its central altitude."
+    },
+    {
+     "oeis": "A194022",
+     "name": "Number of ways to arrange 8 points on an n X n X n triangular grid on an isosceles triangle so that it balances at the midpoint of its central altitude."
+    },
+    {
+     "oeis": "A194023",
+     "name": "Number of ways to arrange 12 points on an n X n X n triangular grid on an isosceles triangle so that it balances at the midpoint of its central altitude."
+    },
+    {
+     "oeis": "A369237",
+     "name": "Number of tilings of a right isosceles triangle by n right isosceles triangular tiles of any size, such that the intersection of any two tiles is either empty, a vertex of both tiles, or an edge of both tiles."
+    },
+    {
+     "oeis": "A262626",
+     "name": "Visible parts of the perspective view of the stepped pyramid whose structure essentially arises after the 90-degree-zig-zag folding of the isosceles triangle A237593."
+    },
+    {
+     "oeis": "A045943",
+     "name": "Triangular matchstick numbers: a(n) = 3*n*(n+1)/2."
+    }
+   ],
+   "run": "2026-11-10T15:41:07Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "isosceles grid",
+   "url": "https://oeis.org/search?q=isosceles+grid&fmt=json",
+   "results": 10,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A186434",
+     "name": "Number of isosceles triangles that can be formed from the n^2 points of n X n grid of points (or geoboard)."
+    },
+    {
+     "oeis": "A187452",
+     "name": "Number of right isosceles triangles that can be formed from the n^2 points of n X n grid of points (or geoboard)."
+    },
+    {
+     "oeis": "A271910",
+     "name": "Array read by antidiagonals: T(n,k) = number of ways to choose 3 distinct points from an n X k rectangular grid so that they form an isosceles triangle."
+    },
+    {
+     "oeis": "A189978",
+     "name": "Number of isosceles triangles, distinct up to congruence, on an n X n grid (or geoboard)."
+    },
+    {
+     "oeis": "A271907",
+     "name": "Size of the largest subset S of the points of an n X n square grid such that no three of the points of S form an isosceles triangle."
+    },
+    {
+     "oeis": "A241228",
+     "name": "Number of isosceles triangles on a centered hexagonal grid of size n."
+    },
+    {
+     "oeis": "A271906",
+     "name": "Size of the largest subset S of the points of an n X n square grid such that no three of the points of S form a right isosceles triangle."
+    },
+    {
+     "oeis": "A190309",
+     "name": "Number of acute isosceles triangles, distinct up to congruence, on an n X n grid (or geoboard)."
+    },
+    {
+     "oeis": "A190317",
+     "name": "Number of acute isosceles triangles on an n X n grid."
+    },
+    {
+     "oeis": "A190318",
+     "name": "Number of obtuse isosceles triangles on an n X n grid."
+    }
+   ],
+   "run": "2026-11-10T15:41:11Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "isosceles hexagonal",
+   "url": "https://oeis.org/search?q=isosceles+hexagonal&fmt=json",
+   "results": 10,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A241228",
+     "name": "Number of isosceles triangles on a centered hexagonal grid of size n."
+    },
+    {
+     "oeis": "A241237",
+     "name": "Number of isosceles triangles, distinct up to congruence, on a centered hexagonal grid of size n."
+    },
+    {
+     "oeis": "A241229",
+     "name": "Number of acute isosceles triangles on a centered hexagonal grid of size n."
+    },
+    {
+     "oeis": "A241230",
+     "name": "Number of obtuse isosceles triangles on a centered hexagonal grid of size n."
+    },
+    {
+     "oeis": "A292148",
+     "name": "Number of distinct convex hexagons that can be formed from n congruent isosceles right triangles. Reflections are not counted as distinct."
+    },
+    {
+     "oeis": "A241238",
+     "name": "Number of acute isosceles triangles, distinct up to congruence, on a centered hexagonal grid of size n."
+    },
+    {
+     "oeis": "A241239",
+     "name": "Number of obtuse isosceles triangles, distinct up to congruence, on a centered hexagonal grid of size n."
+    },
+    {
+     "oeis": "A262626",
+     "name": "Visible parts of the perspective view of the stepped pyramid whose structure essentially arises after the 90-degree-zig-zag folding of the isosceles triangle A237593."
+    },
+    {
+     "oeis": "A001570",
+     "name": "Numbers k such that k^2 is centered hexagonal."
+    },
+    {
+     "oeis": "A346721",
+     "name": "Use the cells of a hexagonal grid to represent the algebraic integers in the integer ring of Q(sqrt(-7)), as explained in the comments. Number the cells along the counterclockwise hexagonal spiral that starts with cells 0 and 1 representing integers 0 and 1. List the cells that represent 0 or a prime in the ring."
+    }
+   ],
+   "run": "2026-11-10T15:41:16Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "1,2,3,4,5,6,8,9,10,11",
+   "url": "https://oeis.org/search?q=1%2C2%2C3%2C4%2C5%2C6%2C8%2C9%2C10%2C11&fmt=json",
+   "results": 10,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A000378",
+     "name": "Sums of three squares: numbers of the form x^2 + y^2 + z^2."
+    },
+    {
+     "oeis": "A302478",
+     "name": "Products of prime numbers of squarefree index."
+    },
+    {
+     "oeis": "A367906",
+     "name": "Numbers k such that it is possible to choose a different binary index of each binary index of k."
+    },
+    {
+     "oeis": "A390673",
+     "name": "Numbers k such that the k-th composition in standard order has all distinct first sums."
+    },
+    {
+     "oeis": "A020658",
+     "name": "Lexicographically earliest increasing sequence of positive numbers that contains no arithmetic progression of length 7."
+    },
+    {
+     "oeis": "A003726",
+     "name": "Numbers with no 3 adjacent 1's in binary expansion."
+    },
+    {
+     "oeis": "A020659",
+     "name": "Lexicographically earliest increasing sequence of nonnegative numbers that contains no arithmetic progression of length 8."
+    },
+    {
+     "oeis": "A389597",
+     "name": "Standard composition numbers of integer compositions with all distinct first differences."
+    },
+    {
+     "oeis": "A302540",
+     "name": "Numbers whose prime indices other than 1 are prime numbers."
+    },
+    {
+     "oeis": "A052419",
+     "name": "Numbers without 7 as a digit."
+    }
+   ],
+   "run": "2026-11-10T15:55:30Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "2,3,4,5,6,8,9,10,11",
+   "url": "https://oeis.org/search?q=2%2C3%2C4%2C5%2C6%2C8%2C9%2C10%2C11&fmt=json",
+   "results": 10,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A000378",
+     "name": "Sums of three squares: numbers of the form x^2 + y^2 + z^2."
+    },
+    {
+     "oeis": "A302478",
+     "name": "Products of prime numbers of squarefree index."
+    },
+    {
+     "oeis": "A367906",
+     "name": "Numbers k such that it is possible to choose a different binary index of each binary index of k."
+    },
+    {
+     "oeis": "A390673",
+     "name": "Numbers k such that the k-th composition in standard order has all distinct first sums."
+    },
+    {
+     "oeis": "A020658",
+     "name": "Lexicographically earliest increasing sequence of positive numbers that contains no arithmetic progression of length 7."
+    },
+    {
+     "oeis": "A003726",
+     "name": "Numbers with no 3 adjacent 1's in binary expansion."
+    },
+    {
+     "oeis": "A020659",
+     "name": "Lexicographically earliest increasing sequence of nonnegative numbers that contains no arithmetic progression of length 8."
+    },
+    {
+     "oeis": "A045546",
+     "name": "Numbers k such that k^2 + k - 1 is prime."
+    },
+    {
+     "oeis": "A389597",
+     "name": "Standard composition numbers of integer compositions with all distinct first differences."
+    },
+    {
+     "oeis": "A302540",
+     "name": "Numbers whose prime indices other than 1 are prime numbers."
+    }
+   ],
+   "run": "2026-11-10T15:55:35Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "largest subset of triangular grid with no isosceles triangle (no three points isosceles) triangular lattice hexagonal honeycomb",
+   "date": "2026-11-10",
+   "found": "only the square-grid problem (PatternBoost arXiv:2411.00566, arXiv:2503.11061, AlphaEvolve arXiv:2511.02864, OEIS A271907, Solymosi's talk); nothing on the triangular or honeycomb lattice"
+  },
+  {
+   "engine": "general web search",
+   "query": "\"isosceles\" \"triangular lattice\" OR \"triangular grid\" subset AlphaEvolve OR PatternBoost OR \"Geometry-Aware MCTS\" no isosceles triangle",
+   "date": "2026-11-10",
+   "found": "the same square-grid papers and an open-problem page for the n x n grid; no triangular-lattice variant"
+  }
+ ]
+}

@@ -1,0 +1,133 @@
+{
+ "id": "hex-isosceles",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:isosceles AND all:honeycomb",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3Aisosceles+AND+all%3Ahoneycomb&start=0&max_results=10&sortBy=relevance",
+   "results": 2,
+   "top": [
+    {
+     "arxiv": "0906.1249v4",
+     "year": "2009",
+     "first_author": "Fu-Gao Song",
+     "title": "On the honeycomb conjecture and the Kepler problem"
+    },
+    {
+     "arxiv": "1106.4396v1",
+     "year": "2011",
+     "first_author": "René Petersen",
+     "title": "Clar Sextet Analysis of Triangular, Rectangular and Honeycomb Graphene Antidot Lattices"
+    }
+   ],
+   "run": "2026-11-10T15:26:53Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:isosceles AND all:\"hexagonal lattice\" AND all:points",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3Aisosceles+AND+all%3A%22hexagonal+lattice%22+AND+all%3Apoints&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T15:26:57Z"
+  },
+  {
+   "engine": "Crossref API",
+   "query": "isosceles free honeycomb hexagonal lattice",
+   "url": "https://api.crossref.org/works?query.bibliographic=isosceles+free+honeycomb+hexagonal+lattice&rows=10&select=DOI%2Ctitle%2Cpublished%2Ccontainer-title",
+   "results": 1046387,
+   "note": "relevance-ranked; the total counts every work matching any of the words",
+   "top": [
+    {
+     "doi": "10.2139/ssrn.7669281",
+     "year": "2026",
+     "title": "An acoustic-black-hole-empowered hexagonal honeycomb lattice for vibration attenuation"
+    },
+    {
+     "doi": "10.1109/aemc.2011.6256781",
+     "year": "2011",
+     "title": "Microwave study of planar honeycomb EBG lattice with hexagonal basis points"
+    },
+    {
+     "doi": "10.1109/apcap.2018.8538087",
+     "year": "2018",
+     "title": "A Honeycomb Transmit-Array Lens with Hexagonal Lattice for Generation of OAM Waves"
+    },
+    {
+     "doi": "10.1021/acsphotonics.1c01618.s001",
+     "year": "",
+     "title": "MPoint Lasing in Hexagonal and Honeycomb Plasmonic Lattices"
+    },
+    {
+     "doi": "10.1103/physreve.107.054139",
+     "year": "2023",
+     "title": "Exact spatiotemporal dynamics of lattice random walks in hexagonal and honeycomb domains"
+    },
+    {
+     "doi": "10.29172/273474b6-f607-4b62-b5b6-8de8bca28814",
+     "year": "",
+     "title": "Honeycomb lattice"
+    },
+    {
+     "doi": "10.2139/ssrn.5438874",
+     "year": "2025",
+     "title": "Sequential Generation and Evaluation of Torsion-Free Hexagonal Lattice Shells with Symmetry-Controlled Edge Offset Mesh"
+    },
+    {
+     "doi": "10.1063/5.0015404",
+     "year": "2020",
+     "title": "Photonic integration of uniform GaAs nanowires in hexagonal and honeycomb lattice for broadband optical absorption"
+    },
+    {
+     "doi": "10.1016/j.mechmat.2025.105457",
+     "year": "2025",
+     "title": "Large deformation and collapse analysis of re-entrant auxetic and hexagonal honeycomb lattice structures subjected to tension and compression"
+    },
+    {
+     "doi": "10.1142/s0217979220500940",
+     "year": "2020",
+     "title": "Hexagonal PCF of honeycomb lattice with high birefringence and high nonlinearity"
+    }
+   ],
+   "run": "2026-11-10T15:27:05Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "2,3,4,5,6,7,8,10,10,13,14",
+   "url": "https://oeis.org/search?q=2%2C3%2C4%2C5%2C6%2C7%2C8%2C10%2C10%2C13%2C14&fmt=json",
+   "results": 0,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [],
+   "run": "2026-11-10T15:55:39Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"isosceles\" AND all:\"hexagonal grid\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22isosceles%22+AND+all%3A%22hexagonal+grid%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T16:47:18Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"isosceles\" AND all:graphene AND all:subset",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22isosceles%22+AND+all%3Agraphene+AND+all%3Asubset&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T16:47:22Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "largest subset of triangular grid with no isosceles triangle (no three points isosceles) triangular lattice hexagonal honeycomb",
+   "date": "2026-11-10",
+   "found": "only the square-grid problem (PatternBoost arXiv:2411.00566, arXiv:2503.11061, AlphaEvolve arXiv:2511.02864, OEIS A271907, Solymosi's talk); nothing on the triangular or honeycomb lattice"
+  },
+  {
+   "engine": "general web search",
+   "query": "\"isosceles\" \"triangular lattice\" OR \"triangular grid\" subset AlphaEvolve OR PatternBoost OR \"Geometry-Aware MCTS\" no isosceles triangle",
+   "date": "2026-11-10",
+   "found": "the same square-grid papers and an open-problem page for the n x n grid; no triangular-lattice variant"
+  }
+ ]
+}

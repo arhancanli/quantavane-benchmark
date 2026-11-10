@@ -1,0 +1,2 @@
+# power-domination on polytope 600: 5 (best found)
+5 70 84 92 108

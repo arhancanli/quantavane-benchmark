@@ -1,0 +1,279 @@
+{
+ "id": "tri-right",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"right triangle\" AND all:\"triangular lattice\" AND all:subset",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22right+triangle%22+AND+all%3A%22triangular+lattice%22+AND+all%3Asubset&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T15:28:00Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"right angle\" AND all:\"triangular grid\" AND all:points",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22right+angle%22+AND+all%3A%22triangular+grid%22+AND+all%3Apoints&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T15:28:04Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"right-triangle-free\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22right-triangle-free%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T15:28:08Z"
+  },
+  {
+   "engine": "Crossref API",
+   "query": "subsets without right triangles grid points",
+   "url": "https://api.crossref.org/works?query.bibliographic=subsets+without+right+triangles+grid+points&rows=10&select=DOI%2Ctitle%2Cpublished%2Ccontainer-title",
+   "results": 1145411,
+   "note": "relevance-ranked; the total counts every work matching any of the words",
+   "top": [
+    {
+     "doi": "10.1007/3-540-33700-8_7",
+     "year": "",
+     "title": "Monochromatic Equilateral Right Triangles on the Integer Grid"
+    },
+    {
+     "doi": "10.7554/elife.18541.020",
+     "year": "",
+     "title": "Figure 5—figure supplement 2. Bootstrap analysis of Pearson correlation r between expression and methylation datasets over eight time points for each gene."
+    },
+    {
+     "doi": "10.1080/0025570x.2006.11953377",
+     "year": "2006",
+     "title": "Proof Without Words: Right Triangles and Geometric Series"
+    },
+    {
+     "doi": "10.4159/harvard.9780674183704.c11",
+     "year": "1961",
+     "title": "PLATE X. RIGHT TRIHEDRON, TRACE, AND RARATTEMENT"
+    },
+    {
+     "doi": "10.14264/uql.2017.755",
+     "year": "",
+     "title": "Perfect Triangles : Rational points on Elliptic Curves"
+    },
+    {
+     "doi": "10.3998/mpub.14590346.cmp.z316q5118",
+     "year": "",
+     "title": "3:4:5 Pythagorean right triangles"
+    },
+    {
+     "doi": "10.24297/jam.v25i.9837",
+     "year": "2026",
+     "title": "Euler’s Number in Right Triangles"
+    },
+    {
+     "doi": "10.1556/012.2023.01537",
+     "year": "2023",
+     "title": "A Coloring of the Plane Without Monochromatic Right Triangles"
+    },
+    {
+     "doi": "10.3840/08002875",
+     "year": "2008",
+     "title": "Triangles: Acute, Right, and Obtuse"
+    },
+    {
+     "doi": "10.3840/002875",
+     "year": "2008",
+     "title": "Triangles: Acute, Right, and Obtuse"
+    }
+   ],
+   "run": "2026-11-10T15:28:14Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "ti:\"Problems on the Triangular Lattice\"",
+   "url": "http://export.arxiv.org/api/query?search_query=ti%3A%22Problems+on+the+Triangular+Lattice%22&start=0&max_results=10&sortBy=relevance",
+   "results": 3,
+   "top": [
+    {
+     "arxiv": "2405.12321v1",
+     "year": "2024",
+     "first_author": "Gaston A. Brouwer",
+     "title": "Problems on the Triangular Lattice"
+    },
+    {
+     "arxiv": "2301.07888v1",
+     "year": "2023",
+     "first_author": "David Kapanadze",
+     "title": "Exterior diffraction problems for a triangular lattice"
+    },
+    {
+     "arxiv": "2207.04386v1",
+     "year": "2022",
+     "first_author": "David Kapanadze",
+     "title": "Half-plane diffraction problems on a triangular lattice"
+    }
+   ],
+   "run": "2026-11-10T15:41:30Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "right triangle triangular grid",
+   "url": "https://oeis.org/search?q=right+triangle+triangular+grid&fmt=json",
+   "results": 10,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A292671",
+     "name": "Upper right triangle A(m,n) = least number of symbols required to fill a grid of size n X n row by row in the greedy way such that in no row or column or m X m square a symbol occurs more than once."
+    },
+    {
+     "oeis": "A290724",
+     "name": "Triangle read by rows: T(n,k) = number of arrangements of k non-attacking rooks on an n X n right triangular board with every square controlled by at least one rook."
+    },
+    {
+     "oeis": "A397706",
+     "name": "Number of ways to tile an equilateral triangle of side n in the triangular grid with n congruent polyiamonds, up to rotation and reflection of the triangle."
+    },
+    {
+     "oeis": "A121448",
+     "name": "Triangle read by rows: T(n,k) is the number of binary trees with n edges and having k vertices of outdegree 1 (n>=0, k>=0). A binary tree is a rooted tree in which each vertex has at most two children and each child of a vertex is designated as its left or right child."
+    },
+    {
+     "oeis": "A334228",
+     "name": "a(n) is the n-th completed odd-numbered level 2k-1 containing k ON-cells in a triangular wedge in the hexagonal grid of A151723 (i.e., after 2^j >= 2k-1 generations of the automaton in A151723 have been computed)."
+    },
+    {
+     "oeis": "A000217",
+     "name": "Triangular numbers: a(n) = binomial(n+1,2) = n*(n+1)/2 = 0 + 1 + 2 + ... + n."
+    },
+    {
+     "oeis": "A000292",
+     "name": "Tetrahedral (or triangular pyramidal) numbers: a(n) = C(n+2,3) = n*(n+1)*(n+2)/6."
+    },
+    {
+     "oeis": "A046092",
+     "name": "4 times triangular numbers: a(n) = 2*n*(n+1)."
+    },
+    {
+     "oeis": "A115994",
+     "name": "Triangle read by rows: T(n,k) is number of partitions of n with Durfee square of size k (n>=1; 1<=k<=floor(sqrt(n)))."
+    },
+    {
+     "oeis": "A130534",
+     "name": "Triangle T(n,k), 0 <= k <= n, read by rows, giving coefficients of the polynomial (x+1)(x+2)...(x+n), expanded in increasing powers of x. T(n,k) is also the unsigned Stirling number |s(n+1, k+1)|, denoting the number of permutations on n+1 elements that contain exactly k+1 cycles."
+    }
+   ],
+   "run": "2026-11-10T15:41:34Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "no right triangle",
+   "url": "https://oeis.org/search?q=no+right+triangle&fmt=json",
+   "results": 10,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A292671",
+     "name": "Upper right triangle A(m,n) = least number of symbols required to fill a grid of size n X n row by row in the greedy way such that in no row or column or m X m square a symbol occurs more than once."
+    },
+    {
+     "oeis": "A272958",
+     "name": "T(n,k)=Number of nXk 0..1 arrays with exactly n+k-2 having value 1 and no three 1s forming an isosceles right triangle."
+    },
+    {
+     "oeis": "A061199",
+     "name": "Upper right triangle read by columns where T(n,k), with k >= n, is the number of partitions of k where no part appears more than n times; also partitions of k where no parts are multiples of (n+1)."
+    },
+    {
+     "oeis": "A272965",
+     "name": "T(n,k) = Number of n X k 0..1 arrays with exactly n+k-1 having value 1 and no three 1's forming an isosceles right triangle."
+    },
+    {
+     "oeis": "A271906",
+     "name": "Size of the largest subset S of the points of an n X n square grid such that no three of the points of S form a right isosceles triangle."
+    },
+    {
+     "oeis": "A273964",
+     "name": "T(n,k)=Number of nXk 0..3 arrays with no three equal values forming an isosceles right triangle, and new values introduced in 0..3 order."
+    },
+    {
+     "oeis": "A079786",
+     "name": "Triangle read by rows in which the n-th row begins with n and contains at most tau(n) numbers. The r-th term from right is the largest number < n with r divisors, for 1 <= r <= tau(n) skipping any r for which no suitable number exists."
+    },
+    {
+     "oeis": "A174386",
+     "name": "Smallest possible area for a perfect isosceles right triangled square of order n; or 0 if no such square exists."
+    },
+    {
+     "oeis": "A274065",
+     "name": "T(n,k)=Number of nXk 0..2 arrays with no three equal values forming an isosceles right triangle, and new values introduced in 0..2 order."
+    },
+    {
+     "oeis": "A272952",
+     "name": "Number of n X 2 0..1 arrays with exactly n+2-2 having value 1 and no three 1s forming an isosceles right triangle."
+    }
+   ],
+   "run": "2026-11-10T15:41:39Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"right angle\" AND all:\"triangular lattice\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22right+angle%22+AND+all%3A%22triangular+lattice%22&start=0&max_results=10&sortBy=relevance",
+   "results": 2,
+   "top": [
+    {
+     "arxiv": "cond-mat/9807322v2",
+     "year": "1998",
+     "first_author": "Hisashi Kondo",
+     "title": "Spin Fluctuation-Induced Superconductivity in Organic Compounds"
+    },
+    {
+     "arxiv": "cond-mat/9903374v1",
+     "year": "1999",
+     "first_author": "Hisashi Kondo",
+     "title": "Spin Fluctuation-Induced Superconductivity in κ-BEDT-TTF Compounds"
+    }
+   ],
+   "run": "2026-11-10T15:55:44Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"right angles\" AND all:\"lattice points\" AND all:subset",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22right+angles%22+AND+all%3A%22lattice+points%22+AND+all%3Asubset&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T15:55:48Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "1,3,4,5,9,12,13,13,15,16",
+   "url": "https://oeis.org/search?q=1%2C3%2C4%2C5%2C9%2C12%2C13%2C13%2C15%2C16&fmt=json",
+   "results": 0,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [],
+   "run": "2026-11-10T15:55:52Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "3,4,5,9,12,13,13,15,16",
+   "url": "https://oeis.org/search?q=3%2C4%2C5%2C9%2C12%2C13%2C13%2C15%2C16&fmt=json",
+   "results": 0,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [],
+   "run": "2026-11-10T15:55:57Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"right-angle-free\" OR all:\"right angle free\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22right-angle-free%22+OR+all%3A%22right+angle+free%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T16:48:19Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "right angle free subset triangular grid OR hexagonal lattice OR \"three-dimensional grid\" largest set no right triangle Gamble Pulleyblank Reed Shepherd",
+   "date": "2026-11-10",
+   "found": "Gamble, Pulleyblank, Reed and Shepherd (Graphs Combin. 11 (1995)) and Juenger-Pulleyblank on right-angle-free subsets of the square lattice (NP-hard in general), a programming exercise for the m x n grid; nothing on triangular, honeycomb or three-dimensional grids"
+  }
+ ]
+}

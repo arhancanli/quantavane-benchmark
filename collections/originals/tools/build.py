@@ -50,6 +50,12 @@ def novelty_md(p):
             hits = ", ".join(h["oeis"] for h in s["top"][:5])
             lines.append(f"  - `{s['query']}`: {s['results']} result{'s' if s['results'] != 1 else ''}"
                          + (f" ({hits})" if hits else ""))
+    cr = [s for s in rec["searches"] if s["engine"] == "Crossref API"]
+    if cr:
+        lines.append(f"- Crossref (the journal literature, ranked by relevance), {len(cr)} search{'es' if len(cr) != 1 else ''}:")
+        for s in cr:
+            tops = "; ".join(f"\"{h['title']}\"" + (f" ({h['year']})" if h.get("year") else "") for h in s["top"][:3])
+            lines.append(f"  - `{s['query']}`: first results {tops}" if tops else f"  - `{s['query']}`: no results")
     for w in rec.get("web", []):
         lines.append(f"- Web search ({w['engine']}), `{w['query']}`: {w['found']}")
     lines.append(f"- Open Problems Benchmark v2.0 (its 26 families and the keeper tables they come from): "

@@ -1,0 +1,10 @@
+# hex-distinct, side 15: 9 points (best found)
+0 14
+1 0
+1 8
+3 4
+3 8
+5 3
+10 3
+11 3
+14 0

@@ -1,0 +1,2 @@
+# total-dom on polytope 24: 4 (optimal)
+2 9 14 21

@@ -1,0 +1,2 @@
+# total-dom on polytope 16: 2 (optimal)
+3 5

@@ -1,0 +1,11 @@
+# hex-right, side 8: 10 points (optimal: CP-SAT proved it)
+0 7
+1 0
+1 5
+1 6
+2 0
+2 3
+2 4
+3 1
+5 0
+7 0

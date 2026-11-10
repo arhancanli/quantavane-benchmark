@@ -1,0 +1,213 @@
+{
+ "id": "bcc-distinct",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"distinct distances\" AND all:\"body-centered cubic\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22distinct+distances%22+AND+all%3A%22body-centered+cubic%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T15:25:28Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"distinct distances\" AND all:\"cubic grid\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22distinct+distances%22+AND+all%3A%22cubic+grid%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T15:25:32Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"distinct distances\" AND all:\"three-dimensional grid\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22distinct+distances%22+AND+all%3A%22three-dimensional+grid%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T15:25:37Z"
+  },
+  {
+   "engine": "Crossref API",
+   "query": "distinct distances subsets three-dimensional integer grid",
+   "url": "https://api.crossref.org/works?query.bibliographic=distinct+distances+subsets+three-dimensional+integer+grid&rows=10&select=DOI%2Ctitle%2Cpublished%2Ccontainer-title",
+   "results": 1796061,
+   "note": "relevance-ranked; the total counts every work matching any of the words",
+   "top": [
+    {
+     "doi": "10.1007/s00493-017-3773-y",
+     "year": "2018",
+     "title": "Three-Variable Expanding Polynomials and Higher-Dimensional Distinct Distances"
+    },
+    {
+     "doi": "10.1016/0925-7721(91)90009-4",
+     "year": "1991",
+     "title": "Distinct distances determined by subsets of a point set in space"
+    },
+    {
+     "doi": "10.21236/ada513233",
+     "year": "2008",
+     "title": "Three-Dimensional Point Cloud Recognition via Distributions of Geometric Distances"
+    },
+    {
+     "doi": "10.1515/9783112472668-012",
+     "year": "1988",
+     "title": "5.3. Polyhedral Subsets"
+    },
+    {
+     "doi": "10.1007/bf00150030",
+     "year": "1996",
+     "title": "Three distinct distances in the plane"
+    },
+    {
+     "doi": "10.1016/j.powtec.2006.04.003",
+     "year": "2006",
+     "title": "Three-dimensional simulation using fixed coarse-grid thermal-fluid scheme and conduction heat transfer scheme in distinct element method"
+    },
+    {
+     "doi": "10.1002/eji.202250118/v1/review1",
+     "year": "2022",
+     "title": "Review for \"High dimensional analysis reveals distinct NK cell subsets but conserved response to stimulation in umbilical cord blood and adult peripheral blood\""
+    },
+    {
+     "doi": "10.1002/eji.202250118/v1/review2",
+     "year": "2022",
+     "title": "Review for \"High dimensional analysis reveals distinct NK cell subsets but conserved response to stimulation in umbilical cord blood and adult peripheral blood\""
+    },
+    {
+     "doi": "10.1002/eji.202250118/v2/review2",
+     "year": "2023",
+     "title": "Review for \"High dimensional analysis reveals distinct NK cell subsets but conserved response to stimulation in umbilical cord blood and adult peripheral blood\""
+    },
+    {
+     "doi": "10.1002/eji.202250118/v3/review1",
+     "year": "2023",
+     "title": "Review for \"High dimensional analysis reveals distinct NK cell subsets but conserved response to stimulation in umbilical cord blood and adult peripheral blood\""
+    }
+   ],
+   "run": "2026-11-10T15:25:44Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "distinct distances cube",
+   "url": "https://oeis.org/search?q=distinct+distances+cube&fmt=json",
+   "results": 10,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A290190",
+     "name": "Minimum sum of mutual Manhattan distances of n distinct grid points in a cubic lattice."
+    },
+    {
+     "oeis": "A393008",
+     "name": "a(n) is the sum of mutual Manhattan distances of the A117609(n) distinct grid points (x_i,y_i,z_i) in a cubic lattice such that x_i^2 + y_i^2 + z_i^2 <= n."
+    },
+    {
+     "oeis": "A000125",
+     "name": "Cake numbers: maximal number of pieces resulting from n planar cuts through a cube (or cake): C(n+1,3) + n + 1."
+    },
+    {
+     "oeis": "A005282",
+     "name": "Mian-Chowla sequence (a B_2 sequence): a(1) = 1; for n>1, a(n) = smallest number > a(n-1) such that the pairwise sums of elements are all distinct."
+    },
+    {
+     "oeis": "A079766",
+     "name": "Number of positions that are exactly n moves from the starting position in the Dino Cube puzzle."
+    },
+    {
+     "oeis": "A079767",
+     "name": "Number of positions that are exactly n moves from the starting position in the Dino Cube puzzle, mirror positions counted once."
+    },
+    {
+     "oeis": "A000217",
+     "name": "Triangular numbers: a(n) = binomial(n+1,2) = n*(n+1)/2 = 0 + 1 + 2 + ... + n."
+    },
+    {
+     "oeis": "A000108",
+     "name": "Catalan numbers: C(n) = binomial(2n,n)/(n+1) = (2n)!/(n!(n+1)!)."
+    },
+    {
+     "oeis": "A007318",
+     "name": "Pascal's triangle read by rows: C(n,k) = binomial(n,k) = n!/(k!*(n-k)!), 0 <= k <= n."
+    },
+    {
+     "oeis": "A000670",
+     "name": "Fubini numbers: number of preferential arrangements of n labeled elements; or number of weak orders on n labeled elements; or number of ordered partitions of [n]."
+    }
+   ],
+   "run": "2026-11-10T15:43:16Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "distinct distances three dimensions",
+   "url": "https://oeis.org/search?q=distinct+distances+three+dimensions&fmt=json",
+   "results": 10,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A000217",
+     "name": "Triangular numbers: a(n) = binomial(n+1,2) = n*(n+1)/2 = 0 + 1 + 2 + ... + n."
+    },
+    {
+     "oeis": "A007318",
+     "name": "Pascal's triangle read by rows: C(n,k) = binomial(n,k) = n!/(k!*(n-k)!), 0 <= k <= n."
+    },
+    {
+     "oeis": "A000670",
+     "name": "Fubini numbers: number of preferential arrangements of n labeled elements; or number of weak orders on n labeled elements; or number of ordered partitions of [n]."
+    },
+    {
+     "oeis": "A000166",
+     "name": "Subfactorial or rencontres numbers, or derangements: number of permutations of n elements with no fixed points."
+    },
+    {
+     "oeis": "A001906",
+     "name": "F(2n) = bisection of Fibonacci sequence: a(n) = 3*a(n-1) - a(n-2)."
+    },
+    {
+     "oeis": "A000124",
+     "name": "Central polygonal numbers (the Lazy Caterer's sequence): n(n+1)/2 + 1; or, maximal number of pieces formed when slicing a pancake with n cuts."
+    },
+    {
+     "oeis": "A008292",
+     "name": "Triangle of Eulerian numbers T(n,k) (n >= 1, 1 <= k <= n) read by rows."
+    },
+    {
+     "oeis": "A002061",
+     "name": "Central polygonal numbers: a(n) = n^2 - n + 1."
+    },
+    {
+     "oeis": "A000931",
+     "name": "Padovan sequence (or Padovan numbers): a(n) = a(n-2) + a(n-3) with a(0) = 1, a(1) = a(2) = 0."
+    },
+    {
+     "oeis": "A008911",
+     "name": "a(n) = n^2*(n^2 - 1)/6."
+    }
+   ],
+   "run": "2026-11-10T15:43:21Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"distinct distances\" AND all:\"body-centred cubic\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22distinct+distances%22+AND+all%3A%22body-centred+cubic%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T16:47:56Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"distinct distances\" AND all:\"three-dimensional lattice\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22distinct+distances%22+AND+all%3A%22three-dimensional+lattice%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T16:48:00Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "largest set of points with all pairwise distances distinct honeycomb lattice OR kagome lattice OR body-centered cubic lattice Erdos Guy distinct distances subset",
+   "date": "2026-11-10",
+   "found": "Erdos-Guy (1970) for the d-dimensional integer grid, Lefmann-Thiele, Charalambides, the survey arXiv:1406.1949; nothing on the honeycomb, kagome or body-centred cubic lattices"
+  }
+ ]
+}

@@ -1,0 +1,2 @@
+# bandwidth on polytope 8: 7 (optimal)
+0 8 1 2 4 9 10 12 3 5 6 11 13 14 7 15

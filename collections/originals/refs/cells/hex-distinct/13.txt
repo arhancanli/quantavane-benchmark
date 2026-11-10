@@ -1,0 +1,9 @@
+# hex-distinct, side 13: 8 points (optimal: CP-SAT proved it)
+0 1
+1 2
+1 6
+1 9
+1 11
+4 0
+5 0
+11 1

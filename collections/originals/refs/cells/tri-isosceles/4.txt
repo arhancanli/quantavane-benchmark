@@ -1,0 +1,5 @@
+# tri-isosceles, side 4: 4 points (optimal: CP-SAT proved it)
+0 1
+0 2
+2 0
+2 1

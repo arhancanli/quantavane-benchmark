@@ -1,0 +1,88 @@
+{
+ "id": "poly-2-domination",
+ "collection": "originals",
+ "field": "Combinatorics and graph theory",
+ "title": "2-domination in the regular 4-polytopes",
+ "status": "open",
+ "statement": "A set D of vertices is 2-dominating when every vertex outside D has at least two neighbours in D; the 2-domination number gamma_2 is the smallest size of such a set. Determine gamma_2 for the graphs of the six regular convex 4-polytopes (the 5-cell K5; the tesseract, 16 vertices; the 16-cell, 8 vertices; the 24-cell, 24 vertices, 8-regular; the 600-cell, 120 vertices, 12-regular; the 120-cell, 600 vertices, 4-regular) and of the two E8 polytopes 3_21 (Gosset, 56 vertices, 27-regular) and 4_21 (the 240 roots of E8, 56-regular), each vertex adjacent to its nearest neighbours. First values (ours): the 5-cell 2 (exact); the tesseract (8-cell) 7 (exact); the 16-cell 2 (exact); the 24-cell 6 (exact); the 600-cell 18; the 120-cell 243; the Gosset polytope 3_21 4 (exact); the E8 root polytope 4_21 10. The headline cell is the 120-cell: find a certificate with value 242 or less (gamma_2 >= 2n/(d + 2) for a d-regular graph: >= 200 for the 120-cell), or prove 243 optimal.",
+ "objective": "minimize",
+ "submission": "Text file: the vertex numbers of the set (spaces or newlines), in the checker's vertex order (the 120-cell).",
+ "checker": {
+  "program": "collections/originals/checkers/orig_graphs.py",
+  "args": [
+   "2-domination",
+   "120-cell"
+  ],
+  "value": "result"
+ },
+ "score": "the number of vertices in the set (smaller is better)",
+ "best_known": {
+  "value": "243",
+  "exact": "243",
+  "source": "Quantavane (Arhan Canli), 10 November 2026: 243 for the 120-cell, best found: CP-SAT (one worker, 5 to 60 seconds) on the model of tools/polytope_sets.py, or, for zero forcing and power domination, greedy completion and pruning between rounds of fort cuts",
+  "kind": "our construction (Quantavane Originals)",
+  "provenance": {
+   "keeper": "Quantavane Originals",
+   "url": "collections/originals/problems/poly-2-domination.md",
+   "read": "2026-11-10",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true,
+   "certificate": "collections/originals/refs/poly-2-domination.txt"
+  }
+ },
+ "verified_pending": [],
+ "added": "originals-2",
+ "quantavane_record": true,
+ "context": "Multiple domination (Fink and Jacobson 1985) asks for fault tolerance: every vertex left out sees two members of the set. Counting the edges between D and the rest gives 2(n - |D|) <= d |D|, so gamma_2 >= 2n/(d + 2): 18 for the 600-cell, 200 for the 120-cell, 4 for 3_21 and 9 for 4_21. For these polytope graphs nothing was found.",
+ "references": [
+  "J. F. Fink, M. S. Jacobson, n-domination in graphs, in Graph Theory with Applications to Algorithms and Computer Science (Wiley 1985) 283-300",
+  "H. S. M. Coxeter, Regular Polytopes (3rd ed., Dover 1973)",
+  "the vertex numbering of checkers/orig_phys.py (polytope_graph), shared by every polytope problem of the Originals"
+ ],
+ "novelty": {
+  "checked": "2026-11-10",
+  "file": "novelty/poly-2-domination.json",
+  "verdict": "new. No 2-domination result for the 600-cell, the 120-cell, the 24-cell or the E8 polytopes (searched with E8 and Gosset) was found on arXiv, in the journal literature (Crossref) or by web search; the known values for hypercubes and complete graphs cover only the small cells.",
+  "closest": [
+   "General results on 2-domination (the references) and its values for hypercubes, grids and products; none for these polytopes.",
+   "Our polytope problems (polytope-ising, potts3-600, cell600-idcode, cell600-forest, cell120-coil, e8-idcode, e8-resolving): other invariants of the same graphs."
+  ],
+  "benchmark": "no 2-domination family"
+ },
+ "first_values": null,
+ "baseline": {
+  "date": "2026-11-10",
+  "holder": "Quantavane (Arhan Canli)",
+  "text": "243 for the 120-cell, held by Quantavane (Arhan Canli), 10 November 2026: the certificate in `refs/poly-2-domination.txt` (best found: CP-SAT (one worker, 5 to 60 seconds) on the model of tools/polytope_sets.py, or, for zero forcing and power domination, greedy completion and pruning between rounds of fort cuts). All cells: the 5-cell 2 (exact); the tesseract (8-cell) 7 (exact); the 16-cell 2 (exact); the 24-cell 6 (exact); the 600-cell 18; the 120-cell 243; the Gosset polytope 3_21 4 (exact); the E8 root polytope 4_21 10. Bound: 200 (gamma_2 >= 2n/(d + 2) for a d-regular graph, for the 120-cell)."
+ },
+ "bound": {
+  "value": "200",
+  "kind": "lower bound",
+  "source": "gamma_2 >= 2n/(d + 2) for a d-regular graph, for the 120-cell"
+ },
+ "cells": {
+  "params": [
+   "KIND"
+  ],
+  "about": "KIND, the polytope",
+  "headline": {
+   "KIND": "120-cell"
+  },
+  "args": [
+   "2-domination",
+   "{KIND}"
+  ],
+  "title": "2-domination in the polytope graph {KIND}",
+  "statement": "Determine gamma_2 for the graph of the polytope {KIND}.",
+  "submission": "Text file: the vertex numbers of the set (spaces or newlines), in the checker's vertex order (the polytope {KIND}).",
+  "exact": [
+   "5-cell",
+   "8-cell",
+   "16-cell",
+   "24-cell",
+   "gosset"
+  ],
+  "exact_how": "proved optimal: CP-SAT (OR-Tools 9.15, one worker) closed the gap on the model of tools/polytope_sets.py, or, for zero forcing and power domination, the fort cuts (integer program over the forts found) met the best set found",
+  "how": "best found: CP-SAT (one worker, 5 to 60 seconds) on the model of tools/polytope_sets.py, or, for zero forcing and power domination, greedy completion and pruning between rounds of fort cuts"
+ }
+}

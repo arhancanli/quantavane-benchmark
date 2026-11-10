@@ -1,0 +1,97 @@
+{
+ "id": "poly-l21",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"L(2,1)-labeling\" AND all:polytope",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22L%282%2C1%29-labeling%22+AND+all%3Apolytope&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T15:39:15Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"L(2,1)\" AND all:\"600-cell\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22L%282%2C1%29%22+AND+all%3A%22600-cell%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T15:39:19Z"
+  },
+  {
+   "engine": "Crossref API",
+   "query": "L(2,1) labelling regular polytope graphs",
+   "url": "https://api.crossref.org/works?query.bibliographic=L%282%2C1%29+labelling+regular+polytope+graphs&rows=10&select=DOI%2Ctitle%2Cpublished%2Ccontainer-title",
+   "results": 225497,
+   "note": "relevance-ranked; the total counts every work matching any of the words",
+   "top": [
+    {
+     "doi": "10.1007/s11590-013-0625-6",
+     "year": "2013",
+     "title": "Fence facets from non-regular graphs for the linear ordering polytope"
+    },
+    {
+     "doi": "10.47880/inf2801-01",
+     "year": "2025",
+     "title": "Polytope Typology A: The separation of facial polytopes in the morphology of the regular and semi-regular polyhedra and tessellations"
+    },
+    {
+     "doi": "10.1017/cbo9780511610684.010",
+     "year": "2005",
+     "title": "Polytope Propagation on Graphs"
+    },
+    {
+     "doi": "10.1515/9783110351347-004",
+     "year": "2017",
+     "title": "4 Determinations of regular graphs"
+    },
+    {
+     "doi": "10.1515/9783110351347-006",
+     "year": "2017",
+     "title": "6 Distance matrix of regular graphs"
+    },
+    {
+     "doi": "10.1201/9781003393931-6",
+     "year": "2025",
+     "title": "Some Completely Regular Codes in Doob Graphs"
+    },
+    {
+     "doi": "10.1201/9781003393931-3",
+     "year": "2025",
+     "title": "Completely Regular Codes in the Johnson Graphs"
+    },
+    {
+     "doi": "10.1017/9781009057226.002",
+     "year": "2022",
+     "title": "Graphs"
+    },
+    {
+     "doi": "10.1007/s00373-023-02693-1",
+     "year": "2023",
+     "title": "2-Reconstructibility of Strongly Regular Graphs and 2-Partially Distance-Regular Graphs"
+    },
+    {
+     "doi": "10.21136/cmj.1974.101241",
+     "year": "1974",
+     "title": "Remarks on regular factors of regular graphs"
+    }
+   ],
+   "run": "2026-11-10T15:39:25Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"L(2,1)\" AND (all:\"E8\" OR all:Gosset OR all:\"E_8\")",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22L%282%2C1%29%22+AND+%28all%3A%22E8%22+OR+all%3AGosset+OR+all%3A%22E_8%22%29&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T16:41:16Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "\"L(2,1)\" labeling OR \"bandwidth\" OR \"bisection width\" OR \"cutwidth\" of the 600-cell OR 120-cell OR 24-cell graph polytope 1-skeleton",
+   "date": "2026-11-10",
+   "found": "general L(2,1)-labelling papers, Deza-Grishukhin on the 120-cell skeleton (not an l1-graph) and the geometry of H4 polytopes; nothing on these invariants for the 4-polytope graphs"
+  }
+ ]
+}

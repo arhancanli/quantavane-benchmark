@@ -1,0 +1,2 @@
+# zero-forcing on polytope 8: 8 (optimal)
+0 1 2 3 4 5 6 7

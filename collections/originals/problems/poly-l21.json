@@ -1,0 +1,87 @@
+{
+ "id": "poly-l21",
+ "collection": "originals",
+ "field": "Combinatorics and graph theory",
+ "title": "L(2,1)-labellings of the regular 4-polytopes",
+ "status": "open",
+ "statement": "An L(2,1)-labelling gives every vertex a non-negative integer label so that adjacent vertices get labels at least 2 apart and vertices at distance 2 get different labels; its span is the largest label, and lambda(G) is the smallest span. Determine lambda(G) for the graphs of the six regular convex 4-polytopes (the 5-cell K5; the tesseract, 16 vertices; the 16-cell, 8 vertices; the 24-cell, 24 vertices, 8-regular; the 600-cell, 120 vertices, 12-regular; the 120-cell, 600 vertices, 4-regular) and of the two E8 polytopes 3_21 (Gosset, 56 vertices, 27-regular) and 4_21 (the 240 roots of E8, 56-regular), each vertex adjacent to its nearest neighbours. First values (ours): the 5-cell 8 (exact); the tesseract (8-cell) 7 (exact); the 16-cell 10 (exact); the 24-cell 13; the 600-cell 24; the 120-cell 9; the Gosset polytope 3_21 55. The headline cell is the 120-cell: find a certificate with value 8 or less (lambda >= Delta + 1 (Griggs and Yeh): >= 5 for the 120-cell), or prove 9 optimal.",
+ "objective": "minimize",
+ "submission": "Text file: one label per vertex, in the checker's vertex order (the 120-cell).",
+ "checker": {
+  "program": "collections/originals/checkers/orig_graphs.py",
+  "args": [
+   "l21",
+   "120-cell"
+  ],
+  "value": "result"
+ },
+ "score": "the span, the largest label (smaller is better)",
+ "best_known": {
+  "value": "9",
+  "exact": "9",
+  "source": "Quantavane (Arhan Canli), 10 November 2026: 9 for the 120-cell, best found: CP-SAT (one worker, 5 to 60 seconds) on the model of tools/polytope_sets.py, or, for zero forcing and power domination, greedy completion and pruning between rounds of fort cuts",
+  "kind": "our construction (Quantavane Originals)",
+  "provenance": {
+   "keeper": "Quantavane Originals",
+   "url": "collections/originals/problems/poly-l21.md",
+   "read": "2026-11-10",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true,
+   "certificate": "collections/originals/refs/poly-l21.txt"
+  }
+ },
+ "verified_pending": [],
+ "added": "originals-2",
+ "quantavane_record": true,
+ "context": "L(2,1)-labellings model frequency assignment, where nearby transmitters need different and adjacent ones well-separated channels (Griggs and Yeh 1992, after Roberts); lambda >= Delta + 1, and the Griggs-Yeh conjecture lambda <= Delta^2 is proved for large Delta (Havet, Reed and Sereni). Values are known for paths, cycles, grids and many products, and bounds for hypercubes; for these polytope graphs nothing was found.",
+ "references": [
+  "J. R. Griggs, R. K. Yeh, Labelling graphs with a condition at distance 2, SIAM J. Discrete Math. 5 (1992) 586-595",
+  "F. Havet, B. Reed, J.-S. Sereni, L(2,1)-labelling of graphs, Proc. SODA 2008",
+  "H. S. M. Coxeter, Regular Polytopes (3rd ed., Dover 1973)",
+  "the vertex numbering of checkers/orig_phys.py (polytope_graph), shared by every polytope problem of the Originals"
+ ],
+ "novelty": {
+  "checked": "2026-11-10",
+  "file": "novelty/poly-l21.json",
+  "verdict": "new. No L(2,1) result for the 600-cell, the 120-cell, the 24-cell or the E8 polytopes (searched with E8 and Gosset) was found on arXiv, in the journal literature (Crossref) or by web search; the known values for hypercubes and complete graphs cover only the small cells.",
+  "closest": [
+   "General results on L(2,1) (the references) and its values for hypercubes, grids and products; none for these polytopes.",
+   "Our polytope problems (polytope-ising, potts3-600, cell600-idcode, cell600-forest, cell120-coil, e8-idcode, e8-resolving): other invariants of the same graphs."
+  ],
+  "benchmark": "no L(2,1) family"
+ },
+ "first_values": null,
+ "baseline": {
+  "date": "2026-11-10",
+  "holder": "Quantavane (Arhan Canli)",
+  "text": "9 for the 120-cell, held by Quantavane (Arhan Canli), 10 November 2026: the certificate in `refs/poly-l21.txt` (best found: CP-SAT (one worker, 5 to 60 seconds) on the model of tools/polytope_sets.py, or, for zero forcing and power domination, greedy completion and pruning between rounds of fort cuts). All cells: the 5-cell 8 (exact); the tesseract (8-cell) 7 (exact); the 16-cell 10 (exact); the 24-cell 13; the 600-cell 24; the 120-cell 9; the Gosset polytope 3_21 55. Bound: 5 (lambda >= Delta + 1 (Griggs and Yeh), for the 120-cell)."
+ },
+ "bound": {
+  "value": "5",
+  "kind": "lower bound",
+  "source": "lambda >= Delta + 1 (Griggs and Yeh), for the 120-cell"
+ },
+ "cells": {
+  "params": [
+   "KIND"
+  ],
+  "about": "KIND, the polytope",
+  "headline": {
+   "KIND": "120-cell"
+  },
+  "args": [
+   "l21",
+   "{KIND}"
+  ],
+  "title": "L(2,1)-labellings of the polytope graph {KIND}",
+  "statement": "Determine lambda(G) for the graph of the polytope {KIND}.",
+  "submission": "Text file: one label per vertex, in the checker's vertex order (the polytope {KIND}).",
+  "exact": [
+   "5-cell",
+   "8-cell",
+   "16-cell"
+  ],
+  "exact_how": "proved optimal: CP-SAT (OR-Tools 9.15, one worker) closed the gap on the model of tools/polytope_sets.py, or, for zero forcing and power domination, the fort cuts (integer program over the forts found) met the best set found",
+  "how": "best found: CP-SAT (one worker, 5 to 60 seconds) on the model of tools/polytope_sets.py, or, for zero forcing and power domination, greedy completion and pruning between rounds of fort cuts"
+ }
+}

@@ -1,0 +1,288 @@
+{
+ "id": "hex-distinct",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"distinct distances\" AND all:honeycomb",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22distinct+distances%22+AND+all%3Ahoneycomb&start=0&max_results=10&sortBy=relevance",
+   "results": 1,
+   "top": [
+    {
+     "arxiv": "2207.02908v2",
+     "year": "2022",
+     "first_author": "Samuel Buckley-Bonanno",
+     "title": "Optimized geometries for cooperative photon storage in an impurity coupled to a two-dimensional atomic array"
+    }
+   ],
+   "run": "2026-11-10T15:24:40Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"distinct distances\" AND all:\"hexagonal lattice\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22distinct+distances%22+AND+all%3A%22hexagonal+lattice%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T15:24:44Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"distinct distances\" AND all:\"hexagonal grid\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22distinct+distances%22+AND+all%3A%22hexagonal+grid%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T15:24:48Z"
+  },
+  {
+   "engine": "Crossref API",
+   "query": "distinct distances subset honeycomb hexagonal lattice",
+   "url": "https://api.crossref.org/works?query.bibliographic=distinct+distances+subset+honeycomb+hexagonal+lattice&rows=10&select=DOI%2Ctitle%2Cpublished%2Ccontainer-title",
+   "results": 367361,
+   "note": "relevance-ranked; the total counts every work matching any of the words",
+   "top": [
+    {
+     "doi": "10.1021/acs.inorgchem.5c02709.s001",
+     "year": "",
+     "title": "A Family of Quasi-Two-Dimensional Honeycomb Lattice Magnets RE2Te4O11 (RE = GdEr and Yb) with Large Interlayer Distances"
+    },
+    {
+     "doi": "10.2139/ssrn.7669281",
+     "year": "2026",
+     "title": "An acoustic-black-hole-empowered hexagonal honeycomb lattice for vibration attenuation"
+    },
+    {
+     "doi": "10.1109/aemc.2011.6256781",
+     "year": "2011",
+     "title": "Microwave study of planar honeycomb EBG lattice with hexagonal basis points"
+    },
+    {
+     "doi": "10.1109/apcap.2018.8538087",
+     "year": "2018",
+     "title": "A Honeycomb Transmit-Array Lens with Hexagonal Lattice for Generation of OAM Waves"
+    },
+    {
+     "doi": "10.1021/acsphotonics.1c01618.s001",
+     "year": "",
+     "title": "MPoint Lasing in Hexagonal and Honeycomb Plasmonic Lattices"
+    },
+    {
+     "doi": "10.1103/physreve.107.054139",
+     "year": "2023",
+     "title": "Exact spatiotemporal dynamics of lattice random walks in hexagonal and honeycomb domains"
+    },
+    {
+     "doi": "10.29172/273474b6-f607-4b62-b5b6-8de8bca28814",
+     "year": "",
+     "title": "Honeycomb lattice"
+    },
+    {
+     "doi": "10.3390/photonics10091008",
+     "year": "2023",
+     "title": "Hybrid Constellation Shaping 64QAM Based on Hexagonal Lattice of Constellation Subset"
+    },
+    {
+     "doi": "10.1016/j.aop.2018.07.026",
+     "year": "2018",
+     "title": "Construction of distinct discrete time scattering quantum walk formulations on the honeycomb lattice"
+    },
+    {
+     "doi": "10.1063/5.0015404",
+     "year": "2020",
+     "title": "Photonic integration of uniform GaAs nanowires in hexagonal and honeycomb lattice for broadband optical absorption"
+    }
+   ],
+   "run": "2026-11-10T15:24:55Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "distinct distances grid",
+   "url": "https://oeis.org/search?q=distinct+distances+grid&fmt=json",
+   "results": 10,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A290190",
+     "name": "Minimum sum of mutual Manhattan distances of n distinct grid points in a cubic lattice."
+    },
+    {
+     "oeis": "A393008",
+     "name": "a(n) is the sum of mutual Manhattan distances of the A117609(n) distinct grid points (x_i,y_i,z_i) in a cubic lattice such that x_i^2 + y_i^2 + z_i^2 <= n."
+    },
+    {
+     "oeis": "A393009",
+     "name": "a(n) is the sum of mutual Manhattan distances of the A000328(n) distinct grid points (x_i,y_i) in a square lattice such that x_i^2 + y_i^2 <= n^2."
+    },
+    {
+     "oeis": "A393010",
+     "name": "a(n) is the sum of mutual Manhattan distances of the A001845(n) distinct grid points (x_i,y_i,z_i) in a cubic lattice such that |x_i| + |y_i| + |z_i| <= n."
+    },
+    {
+     "oeis": "A306385",
+     "name": "a(n) is the maximum number of distinct distances possible between points in a hyperrectangular grid the sum of whose dimensions is n."
+    },
+    {
+     "oeis": "A353532",
+     "name": "T(n,m) is the number of non-congruent quadrilaterals with integer vertex coordinates (x1,1), (n,y2), (x3,m), (1,y4), 1 < x1, x3 < n, 1 < y2, y4 < m, m <= n, such that the 6 distances between the 4 vertices are distinct."
+    },
+    {
+     "oeis": "A193838",
+     "name": "Size k of smallest square of k X k lattice points from which n points with distinct mutual distances can be chosen."
+    },
+    {
+     "oeis": "A359931",
+     "name": "Number of distinct circles that can be constructed from an n x n square grid of points using only a compass."
+    },
+    {
+     "oeis": "A271490",
+     "name": "Size of largest subset of points of n X n grid such that no two points are at the same distance."
+    },
+    {
+     "oeis": "A359932",
+     "name": "Number of vertices among all distinct circles that can be constructed from an n x n square grid of points using only a compass."
+    }
+   ],
+   "run": "2026-11-10T15:43:01Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "distinct distances hexagonal",
+   "url": "https://oeis.org/search?q=distinct+distances+hexagonal&fmt=json",
+   "results": 10,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A000217",
+     "name": "Triangular numbers: a(n) = binomial(n+1,2) = n*(n+1)/2 = 0 + 1 + 2 + ... + n."
+    },
+    {
+     "oeis": "A000670",
+     "name": "Fubini numbers: number of preferential arrangements of n labeled elements; or number of weak orders on n labeled elements; or number of ordered partitions of [n]."
+    },
+    {
+     "oeis": "A006125",
+     "name": "a(n) = 2^(n*(n-1)/2)."
+    },
+    {
+     "oeis": "A002061",
+     "name": "Central polygonal numbers: a(n) = n^2 - n + 1."
+    },
+    {
+     "oeis": "A001519",
+     "name": "a(n) = 3*a(n-1) - a(n-2) for n >= 2, with a(0) = a(1) = 1."
+    },
+    {
+     "oeis": "A001399",
+     "name": "a(n) is the number of partitions of n into at most 3 parts; also partitions of n+3 in which the greatest part is 3; also number of unlabeled multigraphs with 3 nodes and n edges."
+    },
+    {
+     "oeis": "A003136",
+     "name": "Loeschian numbers: numbers of the form x^2 + xy + y^2; norms of vectors in A2 lattice."
+    },
+    {
+     "oeis": "A008302",
+     "name": "Triangle of Mahonian numbers T(n,k): coefficients in expansion of Product_{i=0..n-1} (1 + x + ... + x^i), where k ranges from 0 to A000217(n-1). Also enumerates permutations by their major index."
+    },
+    {
+     "oeis": "A077043",
+     "name": "\"Three-quarter squares\": a(n) = n^2 - A002620(n)."
+    },
+    {
+     "oeis": "A008911",
+     "name": "a(n) = n^2*(n^2 - 1)/6."
+    }
+   ],
+   "run": "2026-11-10T15:43:06Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "distinct distances triangular",
+   "url": "https://oeis.org/search?q=distinct+distances+triangular&fmt=json",
+   "results": 10,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A394698",
+     "name": "a(n) is the number of different ways to move from A to B along grid paths in an equilateral triangular grid ABC of side n units such that the distance between A and each successive point of the path increases while the direction of movement changes at each grid point."
+    },
+    {
+     "oeis": "A393796",
+     "name": "a(n) is the number of different ways to move from A to B along grid paths in an equilateral triangular grid ABC of side n units such that the distance between A and each successive point of the path increases."
+    },
+    {
+     "oeis": "A294745",
+     "name": "Lexicographically first sequence of distinct positive integers in which successive terms differ by distinct triangular numbers."
+    },
+    {
+     "oeis": "A000217",
+     "name": "Triangular numbers: a(n) = binomial(n+1,2) = n*(n+1)/2 = 0 + 1 + 2 + ... + n."
+    },
+    {
+     "oeis": "A000108",
+     "name": "Catalan numbers: C(n) = binomial(2n,n)/(n+1) = (2n)!/(n!(n+1)!)."
+    },
+    {
+     "oeis": "A000012",
+     "name": "The simplest sequence of positive numbers: the all 1's sequence."
+    },
+    {
+     "oeis": "A007318",
+     "name": "Pascal's triangle read by rows: C(n,k) = binomial(n,k) = n!/(k!*(n-k)!), 0 <= k <= n."
+    },
+    {
+     "oeis": "A000110",
+     "name": "Bell or exponential numbers: number of ways to partition a set of n labeled elements."
+    },
+    {
+     "oeis": "A002378",
+     "name": "Oblong (or promic, pronic, or heteromecic) numbers: a(n) = n*(n+1)."
+    },
+    {
+     "oeis": "A000670",
+     "name": "Fubini numbers: number of preferential arrangements of n labeled elements; or number of weak orders on n labeled elements; or number of ordered partitions of [n]."
+    }
+   ],
+   "run": "2026-11-10T15:43:11Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "2,3,3,4,5,5,6,6,6,7,8,8",
+   "url": "https://oeis.org/search?q=2%2C3%2C3%2C4%2C5%2C5%2C6%2C6%2C6%2C7%2C8%2C8&fmt=json",
+   "results": 4,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A123579",
+     "name": "The Kruskal-Macaulay function M_3(n)."
+    },
+    {
+     "oeis": "A296020",
+     "name": "Number of primes of the form 4*k+3 <= 4*n+3."
+    },
+    {
+     "oeis": "A266350",
+     "name": "Partial sums of f(n) = A192490(2n+1); least monotonic left inverse of A266409."
+    },
+    {
+     "oeis": "A385584",
+     "name": "a(n) is the number of pairs (p, t) such that p is a pyramidal number, t is a triangular number, p + t <= n and t <= p."
+    }
+   ],
+   "run": "2026-11-10T16:35:46Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"distinct distances\" AND all:graphene",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22distinct+distances%22+AND+all%3Agraphene&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T16:47:27Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "largest set of points with all pairwise distances distinct honeycomb lattice OR kagome lattice OR body-centered cubic lattice Erdos Guy distinct distances subset",
+   "date": "2026-11-10",
+   "found": "Erdos-Guy (1970) for the d-dimensional integer grid, Lefmann-Thiele, Charalambides, the survey arXiv:1406.1949; nothing on the honeycomb, kagome or body-centred cubic lattices"
+  }
+ ]
+}

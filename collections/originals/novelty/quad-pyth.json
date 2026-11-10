@@ -1,0 +1,144 @@
+{
+ "id": "quad-pyth",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:\"Pythagorean quadruples\" AND all:colouring",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22Pythagorean+quadruples%22+AND+all%3Acolouring&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T15:31:31Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"Pythagorean quadruples\" AND all:coloring",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22Pythagorean+quadruples%22+AND+all%3Acoloring&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T15:31:35Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"Pythagorean quadruples\" AND all:monochromatic",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22Pythagorean+quadruples%22+AND+all%3Amonochromatic&start=0&max_results=10&sortBy=relevance",
+   "results": 1,
+   "top": [
+    {
+     "arxiv": "2610.04078v1",
+     "year": "2026",
+     "first_author": "James Leng",
+     "title": "Monochromatic Almost-Pythagorean Quadruples"
+    }
+   ],
+   "run": "2026-11-10T15:31:39Z"
+  },
+  {
+   "engine": "Crossref API",
+   "query": "monochromatic Pythagorean quadruples colouring",
+   "url": "https://api.crossref.org/works?query.bibliographic=monochromatic+Pythagorean+quadruples+colouring&rows=10&select=DOI%2Ctitle%2Cpublished%2Ccontainer-title",
+   "results": 14094,
+   "note": "relevance-ranked; the total counts every work matching any of the words",
+   "top": [
+    {
+     "doi": "10.4169/college.math.j.45.3.179",
+     "year": "2014",
+     "title": "Proof Without Words: Pythagorean Quadruples"
+    },
+    {
+     "doi": "10.1080/00255572.2025.2565894",
+     "year": "2026",
+     "title": "Right tetrahedra, Pythagorean quadruples, and Fibonacci numbers"
+    },
+    {
+     "doi": "10.7546/nntdm.2026.32.2.313-320",
+     "year": "2026",
+     "title": "The homothetical-Hopf transformation of Pythagorean quadruples"
+    },
+    {
+     "doi": "10.1016/j.jpaa.2011.06.002",
+     "year": "2012",
+     "title": "Polynomial parametrization of Pythagorean quadruples, quintuples and sextuples"
+    },
+    {
+     "doi": "10.1080/00150517.1996.12429074",
+     "year": "1996",
+     "title": "Self-Generating Pythagorean Quadruples and <i>N</i> -Tuples"
+    },
+    {
+     "doi": "10.33048/semi.2020.17.032",
+     "year": "2020",
+     "title": "Colouring planar graphs with bounded monochromatic components"
+    },
+    {
+     "doi": "10.4169/amer.math.monthly.119.04.342",
+     "year": "2012",
+     "title": "Monochromatic Permutation Quadruples—A Schur Thing in &lt;em&gt;S&lt;sub&gt;n&lt;/sub&gt;&lt;/em&gt;"
+    },
+    {
+     "doi": "10.1007/978-3-032-23883-2_27",
+     "year": "2026",
+     "title": "On a Single-Variable Construction of Pythagorean Quadruples and a Symmetric Encryption Application"
+    },
+    {
+     "doi": "10.1017/s0963548314000170",
+     "year": "2014",
+     "title": "Colouring Planar Graphs With Three Colours and No Large Monochromatic Components"
+    },
+    {
+     "doi": "10.1017/s0963548308009140",
+     "year": "2008",
+     "title": "Graph Colouring with No Large Monochromatic Components"
+    }
+   ],
+   "run": "2026-11-10T15:31:45Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "Pythagorean quadruples coloring",
+   "url": "https://oeis.org/search?q=Pythagorean+quadruples+coloring&fmt=json",
+   "results": 1,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A169580",
+     "name": "Squares of the form x^2 + y^2 + z^2 with x, y, z as positive integers."
+    }
+   ],
+   "run": "2026-11-10T16:35:50Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "monochromatic Pythagorean",
+   "url": "https://oeis.org/search?q=monochromatic+Pythagorean&fmt=json",
+   "results": 4,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A383181",
+     "name": "Family of 2-colorings of {1..7824} with no monochromatic Pythagorean triples."
+    },
+    {
+     "oeis": "A272709",
+     "name": "Number of 2-colorings of [1..n] with no monochromatic Pythagorean triple."
+    },
+    {
+     "oeis": "A401469",
+     "name": "Number of subsets of {1..n}, including the empty set, that contain no Pythagorean triple x < y < z with x^2 + y^2 = z^2."
+    },
+    {
+     "oeis": "A250026",
+     "name": "The 2-color Rado numbers for x_1^2 + x_2^2 + ... + x_n^2 = z^2."
+    }
+   ],
+   "run": "2026-11-10T16:35:55Z"
+  }
+ ],
+ "web": [
+  {
+   "engine": "general web search",
+   "query": "\"partition regular\" \"x^2+y^2+z^2=w^2\" OR \"Pythagorean quadruples\" monochromatic coloring Ramsey",
+   "date": "2026-11-10",
+   "found": "Pythagorean triples (Heule-Kullmann-Marek 7825; Erdos-Graham's question open), Frantzikinakis-Klurman-Moreira on Pythagorean pairs, and partition regularity of x1^2 + x2^2 + x3^2 + x4^2 = x5^2 (five variables, arXiv:2501.17203); nothing on x^2 + y^2 + z^2 = w^2 or on colouring thresholds for it"
+  }
+ ]
+}

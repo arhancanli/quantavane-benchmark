@@ -1,0 +1,89 @@
+{
+ "id": "poly-induced-matching",
+ "collection": "originals",
+ "field": "Combinatorics and graph theory",
+ "title": "Induced matchings in the regular 4-polytopes",
+ "status": "open",
+ "statement": "An induced (strong) matching is a set of edges, no two sharing a vertex and no two joined by an edge of the graph. Determine the largest size of an induced matching for the graphs of the six regular convex 4-polytopes (the 5-cell K5; the tesseract, 16 vertices; the 16-cell, 8 vertices; the 24-cell, 24 vertices, 8-regular; the 600-cell, 120 vertices, 12-regular; the 120-cell, 600 vertices, 4-regular) and of the two E8 polytopes 3_21 (Gosset, 56 vertices, 27-regular) and 4_21 (the 240 roots of E8, 56-regular), each vertex adjacent to its nearest neighbours. First values (ours): the 5-cell 1 (exact); the tesseract (8-cell) 4 (exact); the 16-cell 1 (exact); the 24-cell 4 (exact); the 600-cell 13; the 120-cell 139; the Gosset polytope 3_21 3 (exact); the E8 root polytope 4_21 7. The headline cell is the 120-cell: find a certificate with value 140 or more (the packing bound |M| (2d - 1) <= nd/2: <= 171 for the 120-cell), or prove 139 optimal.",
+ "objective": "maximize",
+ "submission": "Text file: one edge 'u v' per line (vertex numbers in the checker's vertex order) (the 120-cell).",
+ "checker": {
+  "program": "collections/originals/checkers/orig_graphs.py",
+  "args": [
+   "induced-matching",
+   "120-cell"
+  ],
+  "value": "result"
+ },
+ "score": "the number of edges (larger is better)",
+ "best_known": {
+  "value": "139",
+  "exact": "139",
+  "source": "Quantavane (Arhan Canli), 10 November 2026: 139 for the 120-cell, best found: CP-SAT (one worker, 5 to 60 seconds) on the model of tools/polytope_sets.py, or, for zero forcing and power domination, greedy completion and pruning between rounds of fort cuts",
+  "kind": "our construction (Quantavane Originals)",
+  "provenance": {
+   "keeper": "Quantavane Originals",
+   "url": "collections/originals/problems/poly-induced-matching.md",
+   "read": "2026-11-10",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true,
+   "certificate": "collections/originals/refs/poly-induced-matching.txt"
+  }
+ },
+ "verified_pending": [],
+ "added": "originals-2",
+ "quantavane_record": true,
+ "context": "Induced matchings (Stockmeyer and Vazirani 1982, Cameron 1989) bound the strong chromatic index, model interference-free transmissions in radio networks, and are NP-hard to maximise. Their values are known for hypercubes and grids; for the other regular 4-polytopes and the E8 polytopes nothing was found. In a d-regular graph the 2d - 1 edges touching one edge of an induced matching touch no other edge of it (an edge between two of them is forbidden), so |M| (2d - 1) <= nd/2: at most 31 for the 600-cell, 171 for the 120-cell, 14 for 3_21 and 60 for 4_21. How close the matchings come to this packing bound is open.",
+ "references": [
+  "L. J. Stockmeyer, V. V. Vazirani, NP-completeness of some generalizations of the maximum matching problem, Inform. Process. Lett. 15 (1982) 14-19",
+  "K. Cameron, Induced matchings, Discrete Appl. Math. 24 (1989) 97-102",
+  "H. S. M. Coxeter, Regular Polytopes (3rd ed., Dover 1973)",
+  "the vertex numbering of checkers/orig_phys.py (polytope_graph), shared by every polytope problem of the Originals"
+ ],
+ "novelty": {
+  "checked": "2026-11-10",
+  "file": "novelty/poly-induced-matching.json",
+  "verdict": "new. No induced matching result for the 600-cell, the 120-cell, the 24-cell or the E8 polytopes (searched with E8 and Gosset) was found on arXiv, in the journal literature (Crossref) or by web search; the known values for hypercubes and complete graphs cover only the small cells.",
+  "closest": [
+   "General results on induced matching (the references) and its values for hypercubes, grids and products; none for these polytopes.",
+   "Our polytope problems (polytope-ising, potts3-600, cell600-idcode, cell600-forest, cell120-coil, e8-idcode, e8-resolving): other invariants of the same graphs."
+  ],
+  "benchmark": "no induced matching family"
+ },
+ "first_values": null,
+ "baseline": {
+  "date": "2026-11-10",
+  "holder": "Quantavane (Arhan Canli)",
+  "text": "139 for the 120-cell, held by Quantavane (Arhan Canli), 10 November 2026: the certificate in `refs/poly-induced-matching.txt` (best found: CP-SAT (one worker, 5 to 60 seconds) on the model of tools/polytope_sets.py, or, for zero forcing and power domination, greedy completion and pruning between rounds of fort cuts). All cells: the 5-cell 1 (exact); the tesseract (8-cell) 4 (exact); the 16-cell 1 (exact); the 24-cell 4 (exact); the 600-cell 13; the 120-cell 139; the Gosset polytope 3_21 3 (exact); the E8 root polytope 4_21 7. Bound: 171 (the packing bound |M| (2d - 1) <= nd/2, for the 120-cell)."
+ },
+ "bound": {
+  "value": "171",
+  "kind": "upper bound",
+  "source": "the packing bound |M| (2d - 1) <= nd/2, for the 120-cell"
+ },
+ "cells": {
+  "params": [
+   "KIND"
+  ],
+  "about": "KIND, the polytope",
+  "headline": {
+   "KIND": "120-cell"
+  },
+  "args": [
+   "induced-matching",
+   "{KIND}"
+  ],
+  "title": "Induced matchings in the polytope graph {KIND}",
+  "statement": "Determine the largest size of an induced matching for the graph of the polytope {KIND}.",
+  "submission": "Text file: one edge 'u v' per line (vertex numbers in the checker's vertex order) (the polytope {KIND}).",
+  "exact": [
+   "5-cell",
+   "8-cell",
+   "16-cell",
+   "24-cell",
+   "gosset"
+  ],
+  "exact_how": "proved optimal: CP-SAT (OR-Tools 9.15, one worker) closed the gap on the model of tools/polytope_sets.py, or, for zero forcing and power domination, the fort cuts (integer program over the forts found) met the best set found",
+  "how": "best found: CP-SAT (one worker, 5 to 60 seconds) on the model of tools/polytope_sets.py, or, for zero forcing and power domination, greedy completion and pruning between rounds of fort cuts"
+ }
+}

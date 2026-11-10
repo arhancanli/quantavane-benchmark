@@ -1,0 +1,8 @@
+# induced-matching on polytope e8: 7 (best found)
+6 26
+25 33
+76 225
+116 117
+150 152
+168 169
+178 188

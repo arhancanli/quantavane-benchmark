@@ -1,0 +1,89 @@
+{
+ "id": "bcc-isosceles",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:isosceles AND all:\"body-centered cubic\" AND all:subset",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3Aisosceles+AND+all%3A%22body-centered+cubic%22+AND+all%3Asubset&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T16:04:13Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"isosceles-free\" AND all:lattice",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22isosceles-free%22+AND+all%3Alattice&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T16:04:18Z"
+  },
+  {
+   "engine": "Crossref API",
+   "query": "isosceles triangle free subsets body-centred cubic lattice",
+   "url": "https://api.crossref.org/works?query.bibliographic=isosceles+triangle+free+subsets+body-centred+cubic+lattice&rows=10&select=DOI%2Ctitle%2Cpublished%2Ccontainer-title",
+   "results": 1698264,
+   "note": "relevance-ranked; the total counts every work matching any of the words",
+   "top": [
+    {
+     "doi": "10.1098/rspa.1938.0161",
+     "year": "1938",
+     "title": "II. The simple cubic lattice and the body-centred cubic lattice"
+    },
+    {
+     "doi": "10.3998/mpub.14590346.cmp.ng451m80j",
+     "year": "",
+     "title": "Isosceles right triangle tiling"
+    },
+    {
+     "doi": "10.3998/mpub.14590346.cmp.ht24wn965",
+     "year": "",
+     "title": "Isosceles Pythagorean right triangle tiling"
+    },
+    {
+     "doi": "10.1016/0042-207x(72)91683-1",
+     "year": "1972",
+     "title": "959. Behaviour of lithium atoms on the faces of single crystal refractory metals with body centred cubic lattice"
+    },
+    {
+     "doi": "10.7498/aps.12.528",
+     "year": "1956",
+     "title": "STATISTICAL THEORY OF SUPERLATTICES OF THE TYPE AB IN A BODY-CENTRED CUBIC LATTICE"
+    },
+    {
+     "doi": "10.1016/0097-8485(94)00049-k",
+     "year": "1995",
+     "title": "Quasiharmonic lattice dynamics of body centred cubic metals"
+    },
+    {
+     "doi": "10.1016/0014-3057(90)90024-x",
+     "year": "1990",
+     "title": "Dynamics of the improved body-centred cubic lattice model for polymer chains"
+    },
+    {
+     "doi": "10.1209/0295-5075/119/14001",
+     "year": "2017",
+     "title": "Ultra-light hierarchical meta-materials on a body-centred cubic lattice"
+    },
+    {
+     "doi": "10.1016/0378-4371(95)00421-1",
+     "year": "1996",
+     "title": "Critical activity of the hard-sphere lattice gas on the body-centred cubic lattice"
+    },
+    {
+     "doi": "10.1007/10031427_15",
+     "year": "",
+     "title": "2.1.2.1.1 Face-centred and body-centred cubic crystals"
+    }
+   ],
+   "run": "2026-11-10T16:04:23Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"isosceles\" AND all:\"body-centred cubic\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22isosceles%22+AND+all%3A%22body-centred+cubic%22&start=0&max_results=10&sortBy=relevance",
+   "results": 0,
+   "top": [],
+   "run": "2026-11-10T16:47:48Z"
+  }
+ ]
+}

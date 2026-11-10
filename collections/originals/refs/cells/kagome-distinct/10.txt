@@ -1,0 +1,8 @@
+# kagome-distinct, side 10: 7 points (optimal: CP-SAT proved it)
+0 1
+0 7
+1 1
+2 7
+3 4
+5 0
+9 0

@@ -1,0 +1,89 @@
+{
+ "id": "poly-total-dom",
+ "collection": "originals",
+ "field": "Combinatorics and graph theory",
+ "title": "Total domination in the regular 4-polytopes",
+ "status": "open",
+ "statement": "A set D of vertices is totally dominating when every vertex, in D or not, has a neighbour in D; the total domination number gamma_t is the smallest size of such a set. Determine gamma_t for the graphs of the six regular convex 4-polytopes (the 5-cell K5; the tesseract, 16 vertices; the 16-cell, 8 vertices; the 24-cell, 24 vertices, 8-regular; the 600-cell, 120 vertices, 12-regular; the 120-cell, 600 vertices, 4-regular) and of the two E8 polytopes 3_21 (Gosset, 56 vertices, 27-regular) and 4_21 (the 240 roots of E8, 56-regular), each vertex adjacent to its nearest neighbours. First values (ours): the 5-cell 2 (exact); the tesseract (8-cell) 4 (exact); the 16-cell 2 (exact); the 24-cell 4 (exact); the 600-cell 16; the 120-cell 194; the Gosset polytope 3_21 4 (exact); the E8 root polytope 4_21 9. The headline cell is the 120-cell: find a certificate with value 193 or less (gamma_t >= n/d for a d-regular graph: >= 150 for the 120-cell), or prove 194 optimal.",
+ "objective": "minimize",
+ "submission": "Text file: the vertex numbers of the set (spaces or newlines), in the checker's vertex order (the 120-cell).",
+ "checker": {
+  "program": "collections/originals/checkers/orig_graphs.py",
+  "args": [
+   "total-dom",
+   "120-cell"
+  ],
+  "value": "result"
+ },
+ "score": "the number of vertices in the set (smaller is better)",
+ "best_known": {
+  "value": "194",
+  "exact": "194",
+  "source": "Quantavane (Arhan Canli), 10 November 2026: 194 for the 120-cell, best found: CP-SAT (one worker, 5 to 60 seconds) on the model of tools/polytope_sets.py, or, for zero forcing and power domination, greedy completion and pruning between rounds of fort cuts",
+  "kind": "our construction (Quantavane Originals)",
+  "provenance": {
+   "keeper": "Quantavane Originals",
+   "url": "collections/originals/problems/poly-total-dom.md",
+   "read": "2026-11-10",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true,
+   "certificate": "collections/originals/refs/poly-total-dom.txt"
+  }
+ },
+ "verified_pending": [],
+ "added": "originals-2",
+ "quantavane_record": true,
+ "context": "Total domination (Cockayne, Dawes and Hedetniemi 1980) asks for monitors that are themselves monitored; for a d-regular graph gamma_t >= n/d, with equality exactly when the graph has a total perfect code (every vertex has exactly one neighbour in D): the bound is 10 for the 600-cell, 150 for the 120-cell, 3 for 3_21 and 5 for 4_21. Henning and Yeo's monograph collects the known values (paths, cycles, grids, some products and hypercubes); for these polytope graphs nothing was found.",
+ "references": [
+  "E. J. Cockayne, R. M. Dawes, S. T. Hedetniemi, Total domination in graphs, Networks 10 (1980) 211-219",
+  "M. A. Henning, A. Yeo, Total Domination in Graphs (Springer 2013)",
+  "H. S. M. Coxeter, Regular Polytopes (3rd ed., Dover 1973)",
+  "the vertex numbering of checkers/orig_phys.py (polytope_graph), shared by every polytope problem of the Originals"
+ ],
+ "novelty": {
+  "checked": "2026-11-10",
+  "file": "novelty/poly-total-dom.json",
+  "verdict": "new. No total domination result for the 600-cell, the 120-cell, the 24-cell or the E8 polytopes (searched with E8 and Gosset) was found on arXiv, in the journal literature (Crossref) or by web search; the known values for hypercubes and complete graphs cover only the small cells.",
+  "closest": [
+   "General results on total domination (the references) and its values for hypercubes, grids and products; none for these polytopes.",
+   "Our polytope problems (polytope-ising, potts3-600, cell600-idcode, cell600-forest, cell120-coil, e8-idcode, e8-resolving): other invariants of the same graphs."
+  ],
+  "benchmark": "no total domination family"
+ },
+ "first_values": null,
+ "baseline": {
+  "date": "2026-11-10",
+  "holder": "Quantavane (Arhan Canli)",
+  "text": "194 for the 120-cell, held by Quantavane (Arhan Canli), 10 November 2026: the certificate in `refs/poly-total-dom.txt` (best found: CP-SAT (one worker, 5 to 60 seconds) on the model of tools/polytope_sets.py, or, for zero forcing and power domination, greedy completion and pruning between rounds of fort cuts). All cells: the 5-cell 2 (exact); the tesseract (8-cell) 4 (exact); the 16-cell 2 (exact); the 24-cell 4 (exact); the 600-cell 16; the 120-cell 194; the Gosset polytope 3_21 4 (exact); the E8 root polytope 4_21 9. Bound: 150 (gamma_t >= n/d for a d-regular graph, for the 120-cell)."
+ },
+ "bound": {
+  "value": "150",
+  "kind": "lower bound",
+  "source": "gamma_t >= n/d for a d-regular graph, for the 120-cell"
+ },
+ "cells": {
+  "params": [
+   "KIND"
+  ],
+  "about": "KIND, the polytope",
+  "headline": {
+   "KIND": "120-cell"
+  },
+  "args": [
+   "total-dom",
+   "{KIND}"
+  ],
+  "title": "Total domination in the polytope graph {KIND}",
+  "statement": "Determine gamma_t for the graph of the polytope {KIND}.",
+  "submission": "Text file: the vertex numbers of the set (spaces or newlines), in the checker's vertex order (the polytope {KIND}).",
+  "exact": [
+   "5-cell",
+   "8-cell",
+   "16-cell",
+   "24-cell",
+   "gosset"
+  ],
+  "exact_how": "proved optimal: CP-SAT (OR-Tools 9.15, one worker) closed the gap on the model of tools/polytope_sets.py, or, for zero forcing and power domination, the fort cuts (integer program over the forts found) met the best set found",
+  "how": "best found: CP-SAT (one worker, 5 to 60 seconds) on the model of tools/polytope_sets.py, or, for zero forcing and power domination, greedy completion and pruning between rounds of fort cuts"
+ }
+}

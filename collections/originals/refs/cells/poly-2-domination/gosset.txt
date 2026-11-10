@@ -1,0 +1,2 @@
+# 2-domination on polytope gosset: 4 (optimal)
+18 25 30 37

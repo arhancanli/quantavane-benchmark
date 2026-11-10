@@ -1,0 +1,2 @@
+# power-domination on polytope e8: 6 (best found)
+3 19 124 146 151 236

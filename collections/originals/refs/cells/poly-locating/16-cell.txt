@@ -1,0 +1,2 @@
+# locating-dom on polytope 16: 4 (optimal)
+0 2 4 6

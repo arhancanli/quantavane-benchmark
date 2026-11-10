@@ -1,0 +1,2 @@
+# 2-domination on polytope 5: 2 (optimal)
+0 1

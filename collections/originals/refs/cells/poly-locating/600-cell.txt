@@ -1,0 +1,2 @@
+# locating-dom on polytope 600: 20 (best found)
+1 8 9 10 15 21 25 26 33 35 36 37 38 39 40 41 44 66 89 96
