@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use the Open Problems Benchmark, please cite it as below. For a problem's best known value, cite its keeper as well: the problem's best_known.provenance names the table, its keeper and the date it was read."
+type: software
+title: "Open Problems Benchmark (v2.1): open problems with exact checkers"
+abstract: "Open problems with an exact checker each: single problems and cells of tables kept by others (covering designs, spherical codes, linear codes, covering arrays, constant weight codes, project scheduling), the Quantavane Prestige 100 and the Quantavane Originals. A submission scores the exact value its checker proves."
+version: "v2.1"
+date-released: "2026-11-09"
+authors:
+  - family-names: Canli
+    given-names: Arhan
+    affiliation: Quantavane
+    email: arhan@quantavane.com
+license: MIT
+url: "https://quantavane.com"
+repository-code: "https://github.com/arhancanli/quantavane-benchmark"
+keywords:
+  - open problems
+  - benchmark
+  - exact verification
+  - combinatorics
+  - coding theory
+  - Ramsey numbers
+  - spherical codes
+  - covering designs

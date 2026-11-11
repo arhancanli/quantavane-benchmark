@@ -1,0 +1,49 @@
+name: Submit a result
+description: A certificate for one of the problems, with the record that says who found it and how.
+title: "Result: PROBLEM_ID"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Check it yourself first: `python3 -I obb.py check PROBLEM FILE` prints the exact value the checker proves.
+        Then write the record (SUBMITTING.md) and run `python3 -I obb.py verify record.json`.
+        We run the checker again and add your row to `leaderboard.json` with the name you choose.
+  - type: input
+    id: problem
+    attributes:
+      label: Problem id
+      placeholder: cw-27-4-6
+    validations:
+      required: true
+  - type: textarea
+    id: verify
+    attributes:
+      label: Output of python3 -I obb.py verify record.json
+      render: json
+    validations:
+      required: true
+  - type: textarea
+    id: certificate
+    attributes:
+      label: Certificate and record
+      description: Attach both files (drag them here; gzip or xz for large ones) or link to them with the certificate's SHA-256.
+    validations:
+      required: true
+  - type: input
+    id: submitter
+    attributes:
+      label: Name or handle for the leaderboard
+    validations:
+      required: true
+  - type: textarea
+    id: method
+    attributes:
+      label: How the object was found
+      description: Method, code, paper or earlier result it builds on.
+  - type: textarea
+    id: ai
+    attributes:
+      label: AI assistance
+      description: '"none", or which AI systems were used and for what. Results are judged only by the checker; saying that you used AI never lowers the credit.'
+    validations:
+      required: true

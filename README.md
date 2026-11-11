@@ -6,6 +6,44 @@ value on the source page (with its source) and the best verified value still in 
 whose certificate we replayed independently). Values are compared exactly; a printed value whose exact original is
 unknown counts only when beaten by more than its last printed digit.
 
+## Five-minute start
+
+Python 3.9 or later and nothing else: the checkers use the standard library (only the Ramsey checker is C and needs a
+compiler). Each step takes under a second.
+
+```sh
+git clone https://github.com/arhancanli/quantavane-benchmark
+cd quantavane-benchmark
+
+# 1. One problem in full: statement, certificate format, best known value, its keeper and the date it was read
+python3 -I obb.py show cw-27-4-6
+
+# 2. A first candidate in one line: the weight-6 words whose positions sum to 0 mod 27 (Graham and Sloane, 1980)
+python3 -c "from itertools import combinations as C; [print(*s) for s in C(range(1, 28), 6) if sum(s) % 27 == 0]" > mine.txt
+python3 -I obb.py check cw-27-4-6 mine.txt      # certified value 10966; best known 12285: does not improve
+
+# 3. A broken copy is refused, with the reason
+(cat mine.txt; head -n 1 mine.txt) > broken.txt
+python3 -I obb.py check cw-27-4-6 broken.txt || true   # NOT CERTIFIED: words 1 and 10967 share 5 positions
+
+# 4. The submission record (SUBMITTING.md) and the leaderboard row it would earn
+python3 - <<'EOF'
+import datetime, hashlib, json
+cert = open("mine.txt", "rb").read()
+json.dump({"problem": "cw-27-4-6", "certificate": "mine.txt", "sha256": hashlib.sha256(cert).hexdigest(),
+           "submitter": "your name or handle", "source": "Graham-Sloane: positions summing to 0 mod 27",
+           "ai_assistance": "none", "date": str(datetime.date.today())}, open("record.json", "w"), indent=1)
+EOF
+python3 -I obb.py verify record.json            # value 10966, improves_page_best false
+```
+
+Then pick a problem (`python3 -I obb.py list`, or `list FAMILY`), find an object that beats its best known value, and
+send the record with the certificate: open an issue here (there is a form for it) or write to arhan@quantavane.com.
+AI agents can use the same checkers through [quantavane-mcp](https://github.com/arhancanli/quantavane-mcp), an MCP
+server that runs them offline in a sandbox.
+
+## All commands
+
     python3 -I obb.py list [FAMILY]          # without FAMILY: the single problems and the size of every family
     python3 -I obb.py families                # the families: keeper, date read, checker, number of cells
     python3 -I obb.py show covering-40-6-4-10 # one problem in full
@@ -272,3 +310,30 @@ write to arhan@quantavane.com. Details: https://quantavane.com/open-research/
 ## Contributing
 
 Results, problems and fixes are welcome, credited by name: see [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## How to cite
+
+Cite the version you used (the `VERSION` file; each release is tagged, `v2.1` for this one). For a best known value,
+cite its keeper as well: every problem's `best_known.provenance` names the table, its keeper and the date it was read.
+
+```bibtex
+@misc{quantavane-open-problems-benchmark,
+  author       = {Canli, Arhan},
+  title        = {Open Problems Benchmark (v2.1): open problems with exact checkers},
+  year         = {2026},
+  howpublished = {\url{https://github.com/arhancanli/quantavane-benchmark}},
+  note         = {Quantavane; tag v2.1; MIT licence}
+}
+```
+
+[CITATION.cff](CITATION.cff) holds the same reference for GitHub's "Cite this repository" button. A result found with
+the benchmark is cited by its leaderboard row, which gives the submitter, the date it was checked and the certificate's
+SHA-256.
+
+## Licence
+
+`obb.py`, the checkers, the problem and family files, the Originals and our reference certificates: MIT (see
+[LICENSE](LICENSE)). The Prestige 100 collection's curated data: CC BY 4.0, its checkers MIT (see
+`collections/prestige100/index.json`). Best known values are read from their keepers' tables and credited to them; no
+keeper's file is copied into this repository. Certificates that `fetch.sh` downloads into `certs/` are not stored here
+and keep their own licences.

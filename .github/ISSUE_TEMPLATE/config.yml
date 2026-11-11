@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: The checkers from an AI agent (quantavane-mcp)
+    url: https://github.com/arhancanli/quantavane-mcp
+    about: An MCP server that runs these checkers offline in a sandbox, for Claude, Cursor or any MCP client.
+  - name: Quantavane Open Research
+    url: https://quantavane.com/open-research/
+    about: Work on these problems with us; accepted results carry your name.
