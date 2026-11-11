@@ -5,29 +5,36 @@
 {"id": "ca-2-20-3", "params": {"t": 2, "k": 20, "v": 3}, "best": "15", "bound": "9 (v^t)", "holder": "tabu search (Nurmela)"}
 {"id": "ca-2-21-3", "params": {"t": 2, "k": 21, "v": 3}, "best": "16", "bound": "9 (v^t)", "holder": "tabu search (Zekaoui)"}
 {"id": "ca-2-29-3", "params": {"t": 2, "k": 29, "v": 3}, "best": "17", "bound": "9 (v^t)", "holder": "CA Extender (TJ-AJ-AG)"}
-{"id": "ca-2-46-3", "params": {"t": 2, "k": 46, "v": 3}, "best": "18", "bound": "9 (v^t)", "holder": "CA Extender (TJ-AJ-AG)"}
-{"id": "ca-2-49-3", "params": {"t": 2, "k": 49, "v": 3}, "best": "19", "bound": "9 (v^t)", "holder": "CA Extender (TJ-AJ-AG)"}
+{"id": "ca-2-46-3", "params": {"t": 2, "k": 46, "v": 3}, "best": "18", "bound": "9 (v^t)", "holder": "Built in ca-tools 2026-11-10 by exhaustive search with no input array and no random numbers, run by programs/recipe_item123.sh, which wrote programs/RECIPE_b..."}
+{"id": "ca-2-52-3", "params": {"t": 2, "k": 52, "v": 3}, "best": "18", "bound": "9 (v^t)", "holder": "Built in ca-tools 2026-11-10 by exhaustive search with no input array and no random numbers, run by programs/recipe_item123.sh, which wrote programs/RECIPE_b..."}
 {"id": "ca-2-63-3", "params": {"t": 2, "k": 63, "v": 3}, "best": "20", "bound": "9 (v^t)", "holder": "CA Extender (TJ-AJ-AG)"}
 {"id": "ca-2-93-3", "params": {"t": 2, "k": 93, "v": 3}, "best": "21", "bound": "9 (v^t)", "holder": "CA Extender (TJ-AJ-AG)"}
 {"id": "ca-2-107-3", "params": {"t": 2, "k": 107, "v": 3}, "best": "22", "bound": "9 (v^t)", "holder": "CA Extender (TJ-AJ-AG)"}
 {"id": "ca-2-138-3", "params": {"t": 2, "k": 138, "v": 3}, "best": "23", "bound": "9 (v^t)", "holder": "CA Extender (TJ-AJ-AG)"}
-{"id": "ca-2-199-3", "params": {"t": 2, "k": 199, "v": 3}, "best": "24", "bound": "9 (v^t)", "holder": "CA Extender (TJ-AJ-AG)"}
+{"id": "ca-2-199-3", "params": {"t": 2, "k": 199, "v": 3}, "best": "24", "bound": "9 (v^t)", "holder": "Built in ca-tools 2026-11-10 in two steps, both run by programs/recipe_item123.sh, which wrote programs/RECIPE_build.log. Step 1, profile product (method of..."}
+{"id": "ca-2-209-3", "params": {"t": 2, "k": 209, "v": 3}, "best": "24", "bound": "9 (v^t)", "holder": "Built in ca-tools 2026-11-10 in two steps, both run by programs/recipe_item123.sh, which wrote programs/RECIPE_build.log. Step 1, profile product (method of..."}
 {"id": "ca-2-216-3", "params": {"t": 2, "k": 216, "v": 3}, "best": "25", "bound": "9 (v^t)", "holder": "Built in ca-tools 2026-11-05 (debate 9): generalized direct product (tools/own_arrays/prod2.py; Colbourn and Torres-Jimenez 2013, Cor. 4.3) of our own CA(12;..."}
 {"id": "ca-2-220-3", "params": {"t": 2, "k": 220, "v": 3}, "best": "25", "bound": "9 (v^t)", "holder": "Built in ca-tools 2026-11-05 (debate 9): generalized direct product (tools/own_arrays/prod2.py; Colbourn and Torres-Jimenez 2013, Cor. 4.3) of our own CA(12;..."}
 {"id": "ca-2-288-3", "params": {"t": 2, "k": 288, "v": 3}, "best": "26", "bound": "9 (v^t)", "holder": "CA Extender (TJ-AJ-AG)"}
-{"id": "ca-2-435-3", "params": {"t": 2, "k": 435, "v": 3}, "best": "27", "bound": "9 (v^t)", "holder": "CA Extender (TJ-AJ-AG)"}
+{"id": "ca-2-435-3", "params": {"t": 2, "k": 435, "v": 3}, "best": "27", "bound": "9 (v^t)", "holder": "Built in ca-tools 2026-11-10 (debate 16) in two steps. Step 1, profile product (method of Colbourn and Torres-Jimenez 2013, Thm 4.2 / Cor 4.5; programs/pprod..."}
+{"id": "ca-2-436-3", "params": {"t": 2, "k": 436, "v": 3}, "best": "27", "bound": "9 (v^t)", "holder": "Built in ca-tools 2026-11-10 (debate 16) in two steps. Step 1, profile product (method of Colbourn and Torres-Jimenez 2013, Thm 4.2 / Cor 4.5; programs/pprod..."}
 {"id": "ca-2-449-3", "params": {"t": 2, "k": 449, "v": 3}, "best": "28", "bound": "9 (v^t)", "holder": "CA Extender (TJ-AJ-AG)"}
 {"id": "ca-2-610-3", "params": {"t": 2, "k": 610, "v": 3}, "best": "29", "bound": "9 (v^t)", "holder": "CA Extender (TJ-AJ-AG)"}
-{"id": "ca-2-878-3", "params": {"t": 2, "k": 878, "v": 3}, "best": "30", "bound": "9 (v^t)", "holder": "CA Extender (TJ-AJ-AG)"}
-{"id": "ca-2-964-3", "params": {"t": 2, "k": 964, "v": 3}, "best": "31", "bound": "9 (v^t)", "holder": "Built in ca-tools 2026-11-04: generalized direct product (tools/own_arrays/prod2.py; Colbourn and Torres-Jimenez 2013, Cor. 4.3) of the table's own CA(15; 2,..."}
-{"id": "ca-2-974-3", "params": {"t": 2, "k": 974, "v": 3}, "best": "31", "bound": "9 (v^t)", "holder": "Built in ca-tools 2026-11-04: generalized direct product (tools/own_arrays/prod2.py; Colbourn and Torres-Jimenez 2013, Cor. 4.3) of the table's own CA(15; 2,..."}
-{"id": "ca-2-1308-3", "params": {"t": 2, "k": 1308, "v": 3}, "best": "32", "bound": "9 (v^t)", "holder": "CA Extender (TJ-AJ-AG)"}
-{"id": "ca-2-1964-3", "params": {"t": 2, "k": 1964, "v": 3}, "best": "33", "bound": "9 (v^t)", "holder": "CA Extender (TJ-AJ-AG)"}
-{"id": "ca-2-2116-3", "params": {"t": 2, "k": 2116, "v": 3}, "best": "34", "bound": "9 (v^t)", "holder": "CA Extender (TJ-AJ-AG)"}
-{"id": "ca-2-2700-3", "params": {"t": 2, "k": 2700, "v": 3}, "best": "35", "bound": "9 (v^t)", "holder": "Built in ca-tools 2026-11-04: generalized direct product (tools/own_arrays/prod2.py; Colbourn and Torres-Jimenez 2013, Cor. 4.3) of the table's own CA(22; 2,..."}
-{"id": "ca-2-2756-3", "params": {"t": 2, "k": 2756, "v": 3}, "best": "35", "bound": "9 (v^t)", "holder": "Built in ca-tools 2026-11-04: generalized direct product (tools/own_arrays/prod2.py; Colbourn and Torres-Jimenez 2013, Cor. 4.3) of the table's own CA(22; 2,..."}
-{"id": "ca-2-3918-3", "params": {"t": 2, "k": 3918, "v": 3}, "best": "36", "bound": "9 (v^t)", "holder": "CA Extender (TJ-AJ-AG)"}
-{"id": "ca-2-4457-3", "params": {"t": 2, "k": 4457, "v": 3}, "best": "37", "bound": "9 (v^t)", "holder": "CA Extender (TJ-AJ-AG)"}
+{"id": "ca-2-878-3", "params": {"t": 2, "k": 878, "v": 3}, "best": "30", "bound": "9 (v^t)", "holder": "Built in ca-tools 2026-11-10 by programs/recipe_item123.sh, which wrote programs/RECIPE_build.log. Profile product (method of Colbourn and Torres-Jimenez 201..."}
+{"id": "ca-2-975-3", "params": {"t": 2, "k": 975, "v": 3}, "best": "30", "bound": "9 (v^t)", "holder": "Built in ca-tools 2026-11-10 by programs/recipe_item123.sh, which wrote programs/RECIPE_build.log. Profile product (method of Colbourn and Torres-Jimenez 201..."}
+{"id": "ca-2-1252-3", "params": {"t": 2, "k": 1252, "v": 3}, "best": "31", "bound": "9 (v^t)", "holder": "Built in ca-tools 2026-11-11 in two steps, both run by programs/recipe_ext.sh. Step 1, profile product (method of Colbourn and Torres-Jimenez 2013, Thm 4.2 /..."}
+{"id": "ca-2-1308-3", "params": {"t": 2, "k": 1308, "v": 3}, "best": "32", "bound": "9 (v^t)", "holder": "Built in ca-tools 2026-11-10 in two steps, both run by programs/recipe32.sh, which wrote programs/RECIPE.log. Step 1, profile product (method of Colbourn and..."}
+{"id": "ca-2-1390-3", "params": {"t": 2, "k": 1390, "v": 3}, "best": "32", "bound": "9 (v^t)", "holder": "Built in ca-tools 2026-11-10 in two steps, both run by programs/recipe32.sh, which wrote programs/RECIPE.log. Step 1, profile product (method of Colbourn and..."}
+{"id": "ca-2-1427-3", "params": {"t": 2, "k": 1427, "v": 3}, "best": "32", "bound": "9 (v^t)", "holder": "Built in ca-tools 2026-11-10 in two steps, both run by programs/recipe32.sh, which wrote programs/RECIPE.log. Step 1, profile product (method of Colbourn and..."}
+{"id": "ca-2-1964-3", "params": {"t": 2, "k": 1964, "v": 3}, "best": "33", "bound": "9 (v^t)", "holder": "Built in ca-tools 2026-11-11 in two steps, both run by programs/recipe_ext.sh. Step 1, profile product (method of Colbourn and Torres-Jimenez 2013, Thm 4.2 /..."}
+{"id": "ca-2-1969-3", "params": {"t": 2, "k": 1969, "v": 3}, "best": "33", "bound": "9 (v^t)", "holder": "Built in ca-tools 2026-11-11 in two steps, both run by programs/recipe_ext.sh. Step 1, profile product (method of Colbourn and Torres-Jimenez 2013, Thm 4.2 /..."}
+{"id": "ca-2-2637-3", "params": {"t": 2, "k": 2637, "v": 3}, "best": "33", "bound": "9 (v^t)", "holder": "Built in ca-tools 2026-11-11 in two steps, both run by programs/recipe_ext.sh. Step 1, profile product (method of Colbourn and Torres-Jimenez 2013, Thm 4.2 /..."}
+{"id": "ca-2-2700-3", "params": {"t": 2, "k": 2700, "v": 3}, "best": "35", "bound": "9 (v^t)", "holder": "Built in ca-tools 2026-11-11 in two steps, both run by programs/recipe_ext.sh. Step 1, profile product (method of Colbourn and Torres-Jimenez 2013, Thm 4.2 /..."}
+{"id": "ca-2-2756-3", "params": {"t": 2, "k": 2756, "v": 3}, "best": "35", "bound": "9 (v^t)", "holder": "Built in ca-tools 2026-11-11 in two steps, both run by programs/recipe_ext.sh. Step 1, profile product (method of Colbourn and Torres-Jimenez 2013, Thm 4.2 /..."}
+{"id": "ca-2-3355-3", "params": {"t": 2, "k": 3355, "v": 3}, "best": "35", "bound": "9 (v^t)", "holder": "Built in ca-tools 2026-11-11 in two steps, both run by programs/recipe_ext.sh. Step 1, profile product (method of Colbourn and Torres-Jimenez 2013, Thm 4.2 /..."}
+{"id": "ca-2-3918-3", "params": {"t": 2, "k": 3918, "v": 3}, "best": "36", "bound": "9 (v^t)", "holder": "Built in ca-tools 2026-11-11 in two steps, both run by programs/recipe_ext.sh. Step 1, profile product (method of Colbourn and Torres-Jimenez 2013, Thm 4.2 /..."}
+{"id": "ca-2-4914-3", "params": {"t": 2, "k": 4914, "v": 3}, "best": "36", "bound": "9 (v^t)", "holder": "Built in ca-tools 2026-11-11 in two steps, both run by programs/recipe_ext.sh. Step 1, profile product (method of Colbourn and Torres-Jimenez 2013, Thm 4.2 /..."}
+{"id": "ca-2-5730-3", "params": {"t": 2, "k": 5730, "v": 3}, "best": "37", "bound": "9 (v^t)", "holder": "Built in ca-tools 2026-11-11 in two steps, both run by programs/recipe_ext.sh. Step 1, profile product (method of Colbourn and Torres-Jimenez 2013, Thm 4.2 /..."}
 {"id": "ca-2-5763-3", "params": {"t": 2, "k": 5763, "v": 3}, "best": "38", "bound": "9 (v^t)", "holder": "CA Extender (TJ-AJ-AG)"}
 {"id": "ca-2-6-4", "params": {"t": 2, "k": 6, "v": 4}, "best": "19", "bound": "16 (v^t)", "holder": "Fix 1 symbols (Meagher-Stevens)"}
 {"id": "ca-2-7-4", "params": {"t": 2, "k": 7, "v": 4}, "best": "21", "bound": "16 (v^t)", "holder": "simulated annealing (Cohen)"}
@@ -1694,11 +1701,11 @@
 {"id": "ca-3-16-2", "params": {"t": 3, "k": 16, "v": 2}, "best": "17", "bound": "8 (v^t)", "holder": "Derive from strength 4"}
 {"id": "ca-3-20-2", "params": {"t": 3, "k": 20, "v": 2}, "best": "18", "bound": "8 (v^t)", "holder": "Chateauneuf-Kreher doubling"}
 {"id": "ca-3-22-2", "params": {"t": 3, "k": 22, "v": 2}, "best": "19", "bound": "8 (v^t)", "holder": "Chateauneuf-Kreher doubling"}
-{"id": "ca-3-23-2", "params": {"t": 3, "k": 23, "v": 2}, "best": "20", "bound": "8 (v^t)", "holder": "simulated annealing (TJ-RT)"}
-{"id": "ca-3-25-2", "params": {"t": 3, "k": 25, "v": 2}, "best": "21", "bound": "8 (v^t)", "holder": "simulated annealing (TJ-RT)"}
-{"id": "ca-3-26-2", "params": {"t": 3, "k": 26, "v": 2}, "best": "22", "bound": "8 (v^t)", "holder": "simulated annealing (TJ-RT)"}
-{"id": "ca-3-30-2", "params": {"t": 3, "k": 30, "v": 2}, "best": "23", "bound": "8 (v^t)", "holder": "simulated annealing (TJ-RT)"}
-{"id": "ca-3-38-2", "params": {"t": 3, "k": 38, "v": 2}, "best": "24", "bound": "8 (v^t)", "holder": "simulated annealing (TJ-RT)"}
+{"id": "ca-3-23-2", "params": {"t": 3, "k": 23, "v": 2}, "best": "20", "bound": "8 (v^t)", "holder": "Built in ca-tools 2026-11-10 by exhaustive search with no input array and no random numbers. Rows are permuted by two cycles of length 6, two cycles of lengt..."}
+{"id": "ca-3-28-2", "params": {"t": 3, "k": 28, "v": 2}, "best": "20", "bound": "8 (v^t)", "holder": "Built in ca-tools 2026-11-10 by exhaustive search with no input array and no random numbers. Rows are permuted by two cycles of length 6, two cycles of lengt..."}
+{"id": "ca-3-32-2", "params": {"t": 3, "k": 32, "v": 2}, "best": "21", "bound": "8 (v^t)", "holder": "Built in ca-tools 2026-11-10 by exhaustive search with no input array and no random numbers. Rows are permuted by two cycles of length 9 and one cycle of len..."}
+{"id": "ca-3-38-2", "params": {"t": 3, "k": 38, "v": 2}, "best": "24", "bound": "8 (v^t)", "holder": "Built in ca-tools 2026-11-10 by exhaustive search with no input array and no random numbers. Rows are permuted by two cycles of length 8 and two cycles of le..."}
+{"id": "ca-3-42-2", "params": {"t": 3, "k": 42, "v": 2}, "best": "24", "bound": "8 (v^t)", "holder": "Built in ca-tools 2026-11-10 by exhaustive search with no input array and no random numbers. Rows are permuted by two cycles of length 8 and two cycles of le..."}
 {"id": "ca-3-44-2", "params": {"t": 3, "k": 44, "v": 2}, "best": "25", "bound": "8 (v^t)", "holder": "simulated annealing (TJ-RT)"}
 {"id": "ca-3-46-2", "params": {"t": 3, "k": 46, "v": 2}, "best": "26", "bound": "8 (v^t)", "holder": "simulated annealing (TJ-RT)"}
 {"id": "ca-3-49-2", "params": {"t": 3, "k": 49, "v": 2}, "best": "27", "bound": "8 (v^t)", "holder": "simulated annealing (TJ-RT)"}
@@ -1871,7 +1878,7 @@
 {"id": "ca-3-8-6", "params": {"t": 3, "k": 8, "v": 6}, "best": "301", "bound": "216 (v^t)", "holder": "Torres Jimenez"}
 {"id": "ca-3-9-6", "params": {"t": 3, "k": 9, "v": 6}, "best": "361", "bound": "216 (v^t)", "holder": "Torres Jimenez"}
 {"id": "ca-3-10-6", "params": {"t": 3, "k": 10, "v": 6}, "best": "366", "bound": "216 (v^t)", "holder": "Explicit array file found from a 396-row PSL(2,5) orbit cover via Python 3.12 + Numba 0.60 tabu row-deletion search (10-starter seed in verify_covering_array..."}
-{"id": "ca-3-11-6", "params": {"t": 3, "k": 11, "v": 6}, "best": "416", "bound": "216 (v^t)", "holder": "https://github.com/tns-research/covering-array-records release v1.8 (doi:10.5281/zenodo.24060956), arrays/CA_416_3_11_6.txt; search program generators/postop..."}
+{"id": "ca-3-11-6", "params": {"t": 3, "k": 11, "v": 6}, "best": "411", "bound": "216 (v^t)", "holder": "Explicit array file constructed from table/arrays/CA_418_3_11_6.txt (Grey, pr-21, https://doi.org/10.5281/zenodo.23877721) via archived unweighted-tabu check..."}
 {"id": "ca-3-12-6", "params": {"t": 3, "k": 12, "v": 6}, "best": "456", "bound": "216 (v^t)", "holder": "https://doi.org/10.5281/zenodo.23877721 (Table 2; first posted at https://github.com/chrispbsmolen/ca-tools/issues/19): take distinct orbit rows of starters..."}
 {"id": "ca-3-13-6", "params": {"t": 3, "k": 13, "v": 6}, "best": "490", "bound": "216 (v^t)", "holder": "Torres Jimenez"}
 {"id": "ca-3-14-6", "params": {"t": 3, "k": 14, "v": 6}, "best": "498", "bound": "216 (v^t)", "holder": "Chateauneuf-Kreher doubling postop NCK"}
@@ -2443,6 +2450,7 @@
 {"id": "ca-5-14-2", "params": {"t": 5, "k": 14, "v": 2}, "best": "64", "bound": "32 (v^t)", "holder": "cross-sum (CKRS)"}
 {"id": "ca-5-15-2", "params": {"t": 5, "k": 15, "v": 2}, "best": "79", "bound": "32 (v^t)", "holder": "simulated annealing (Torres-Jimenez)"}
 {"id": "ca-5-16-2", "params": {"t": 5, "k": 16, "v": 2}, "best": "96", "bound": "32 (v^t)", "holder": "Built in ca-tools 2026-11-08 (debate 14): the 16 columns are indexed by the vectors of GF(2)^4 and the group Z_2^4 acts on them by XOR on the index; the arra..."}
+{"id": "ca-5-17-2", "params": {"t": 5, "k": 17, "v": 2}, "best": "98", "bound": "32 (v^t)", "holder": "Built in ca-tools 2026-11-10 (debate 16): columns 0 to 15 are indexed by the vectors of GF(2)^4 and the group Z_2^4 acts on them by XOR on the index; column..."}
 {"id": "ca-5-20-2", "params": {"t": 5, "k": 20, "v": 2}, "best": "99", "bound": "32 (v^t)", "holder": "SBSTT (TJ-AG)"}
 {"id": "ca-5-21-2", "params": {"t": 5, "k": 21, "v": 2}, "best": "109", "bound": "32 (v^t)", "holder": "SBSTT (TJ-AG)"}
 {"id": "ca-5-22-2", "params": {"t": 5, "k": 22, "v": 2}, "best": "111", "bound": "32 (v^t)", "holder": "SBSTT (TJ-AG)"}
@@ -2537,8 +2545,8 @@
 {"id": "ca-5-9-7", "params": {"t": 5, "k": 9, "v": 7}, "best": "25039", "bound": "16807 (v^t)", "holder": "doi:10.5281/zenodo.23787055 (Bai XunDi 2026, covering arrays data and code), file arrays/CA_25039_5_9_7.txt inside arrays_t5.zip; exhaustive checker code/cac..."}
 {"id": "ca-5-12-7", "params": {"t": 5, "k": 12, "v": 7}, "best": "31213", "bound": "16807 (v^t)", "holder": "doi:10.5281/zenodo.23787055 (Bai XunDi 2026, covering arrays data and code), file arrays/CA_31213_5_13_7.txt inside arrays_t5.zip; exhaustive checker code/ca..."}
 {"id": "ca-5-13-7", "params": {"t": 5, "k": 13, "v": 7}, "best": "31213", "bound": "16807 (v^t)", "holder": "doi:10.5281/zenodo.23787055 (Bai XunDi 2026, covering arrays data and code), file arrays/CA_31213_5_13_7.txt inside arrays_t5.zip; exhaustive checker code/ca..."}
-{"id": "ca-5-14-7", "params": {"t": 5, "k": 14, "v": 7}, "best": "33271", "bound": "16807 (v^t)", "holder": "3-Restricted SCPHF RE (CL)"}
-{"id": "ca-5-16-7", "params": {"t": 5, "k": 16, "v": 7}, "best": "33607", "bound": "16807 (v^t)", "holder": "doi:10.5281/zenodo.23787055 (Bai XunDi 2026, covering arrays data and code), file arrays/CA_33607_5_16_7.txt inside arrays_t5.zip; exhaustive checker code/ca..."}
+{"id": "ca-5-14-7", "params": {"t": 5, "k": 14, "v": 7}, "best": "33271", "bound": "16807 (v^t)", "holder": "doi:10.5281/zenodo.24055371 (Bai XunDi 2026, Two-block covering arrays from elliptic curves and curves of genus two, preprint; supplement_C.zip, folder genus..."}
+{"id": "ca-5-16-7", "params": {"t": 5, "k": 16, "v": 7}, "best": "33271", "bound": "16807 (v^t)", "holder": "doi:10.5281/zenodo.24055371 (Bai XunDi 2026, Two-block covering arrays from elliptic curves and curves of genus two, preprint; supplement_C.zip, folder genus..."}
 {"id": "ca-5-17-7", "params": {"t": 5, "k": 17, "v": 7}, "best": "43659", "bound": "16807 (v^t)", "holder": "doi:10.5281/zenodo.23787055 (Bai XunDi 2026, covering arrays data and code), file arrays/CA_43659_5_17_7.txt inside arrays_t5.zip; exhaustive checker code/ca..."}
 {"id": "ca-5-18-7", "params": {"t": 5, "k": 18, "v": 7}, "best": "45619", "bound": "16807 (v^t)", "holder": "Torres-Jimenez and Izquierdo-Marquez 2024, Mathematics 12(12) 1908, Table 6, CPHF(3; 18, 7, 5)"}
 {"id": "ca-5-19-7", "params": {"t": 5, "k": 19, "v": 7}, "best": "47677", "bound": "16807 (v^t)", "holder": "Torres-Jimenez and Izquierdo-Marquez 2024, Mathematics 12(12) 1908, Table 6, CPHF(3; 19, 7, 5)"}

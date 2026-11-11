@@ -1,6 +1,6 @@
 {
  "benchmark_version": "2.1",
- "problems": 149372,
+ "problems": 149380,
  "by_family": {
   "cage": 40,
   "cap-set": 2,
@@ -9,7 +9,7 @@
   "constant": 7,
   "constant-weight-code": 1166,
   "costas-array": 2,
-  "covering-array": 2651,
+  "covering-array": 2659,
   "covering-design": 55995,
   "degree-diameter": 20,
   "erdos-problem": 2,
@@ -59,10 +59,10 @@
    "family": "covering-array",
    "path": "families/covering-array/cells.jsonl",
    "definition": "families/covering-array/family.json",
-   "count": 2651,
-   "sha256": "e1beb9a99bf0341a4abb4a47b90e14b9ba82d4068797d73674c52713f9f26577",
+   "count": 2659,
+   "sha256": "7a6f1c1ba18b37b324b371734d97edaa5fba80410a766714a1daed4a2c060947",
    "keeper": "C. Smolen's ca-tools table (github.com/chrispbsmolen/ca-tools), the live successor of C. J. Colbourn's covering array tables",
-   "read": "2026-11-09",
+   "read": "2026-11-12",
    "checker": "ca_check.py"
   },
   {
@@ -108,16 +108,6 @@
    "keeper": "H. Cohn, table of spherical codes (spherical-codes.org)",
    "read": "2026-11-09",
    "checker": "sph_check.py"
-  },
-  {
-   "kind": "problems",
-   "path": "collections/originals/problems",
-   "count": 70,
-   "about": "Quantavane Originals: new problems of ours, one JSON file each (not counted in 'problems'); their cells are in collections/originals/cells/"
   }
- ],
- "collections": {
-  "originals": 70,
-  "originals_cells": 1251
- }
+ ]
 }
