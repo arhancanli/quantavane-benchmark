@@ -3,6 +3,21 @@
 The version is in `VERSION`; each problem file says in `added` which version first had it. A problem's best known
 value can change within a version when its source table changes; the file then says when the value was read.
 
+## v2.1, 12 Nov 2026: five cage cells re-read
+
+- The House of Graphs cage table, re-read on 12 Nov 2026, now lists S. Taghiyev's graphs [T26] (Zenodo 10.5281/zenodo.24060986,
+  records 24114698 and 24121626) in five of our cage cells: n(6,9) <= 3422, n(7,9) <= 9324, n(6,10) <= 6250, n(5,11) <= 2656
+  and n(16,7) <= 7920. Those five problems now give these values as their best known (`kind: table entry`, read 12 Nov).
+- cage-6-9 and cage-7-9 no longer call our graphs (5600 and 17600 vertices, 8 Nov 2026) the smallest known, and no longer
+  list them as verified in review: they were the first graphs for those cells, and Taghiyev's smaller graphs (9 and 10 Nov)
+  are now the table's values. Their entries in `leaderboard.json` stay as dated records of the check of 8 Nov.
+  `test.sh` expects "does not improve" for both reference graphs.
+- Not changed: the five cage problems whose best known value is implied by a (k,11)-graph the table showed on 8 Nov
+  (cage-7-10, cage-8-9, cage-8-10, cage-9-9, cage-9-10). The table no longer shows those cells or their (k,11) bases (since
+  autumn 2026 it lists a first value for an empty cell only for a graph of at most 10,000 vertices); smaller graphs for
+  some of them are public on Zenodo. Their values stay as read on 8 Nov until a rule for cells the table does not list is
+  chosen.
+
 ## Next (in review): Quantavane Originals
 
 - `collections/originals/`: new open problems of ours, each with a novelty check written down before it was added, an

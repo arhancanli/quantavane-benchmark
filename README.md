@@ -111,8 +111,9 @@ Every best known value was read from its source on the date given in the problem
 names the keeper of the table, the revision or commit read, the date and who holds the value. Where the best known
 value is ours the file says so (`quantavane_record`): the spherical codes, covering designs, routing instances and
 constant weight codes (for A(34,6,6), our code with 10 words added by Brouwer), R(3,18), R(4,18), R(5,15) and
-R(8,12), the weak Schur numbers WS(7) to WS(9) (from v2.1), and the cages n(6,9) <= 5600 and n(7,9) <= 17600 (sent to
-House of Graphs, not listed yet). Our results are
+R(8,12) and the weak Schur numbers WS(7) to WS(9) (from v2.1). Our cage graphs n(6,9) <= 5600 and n(7,9) <= 17600 (8 Nov
+2026) were the first for their cells; S. Taghiyev's smaller graphs (9 and 10 Nov), now in the House of Graphs table, are
+the best known there (corrected 12 Nov 2026). Our results are
 the reference submissions, in `refs/`, with classical constructions built by our code; other authors' certificates,
 including 45 from Leaps in Bounds (MIT licence), are fetched into `certs/` by `fetch.sh` at pinned commits.
 Changes from version to version are in CHANGELOG.md.

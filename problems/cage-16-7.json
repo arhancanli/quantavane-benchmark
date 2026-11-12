@@ -3,7 +3,7 @@
  "family": "cage",
  "title": "Cage n(16,7): a 16-regular graph of girth 7 with few vertices",
  "page": "https://houseofgraphs.org/meta-directory/cages",
- "statement": "Find a 16-regular simple graph whose girth (shortest cycle) is at least 7, with as few vertices n as possible; it shows n(16,7) <= n (cages grow with the girth). The House of Graphs cage table lists no graph for this cell; strict monotonicity in the girth and its (16,8)-graph on 8092 vertices give n(16,7) <= 8091. A graph with fewer than 8091 vertices improves it.",
+ "statement": "Find a 16-regular simple graph whose girth (shortest cycle) is at least 7, with as few vertices n as possible; it shows n(16,7) <= n (cages grow with the girth). The best known (16,7)-graph in the House of Graphs cage table has 7920 vertices [T26]; a graph with fewer vertices improves it.",
  "objective": "minimize",
  "submission": "Text file: one graph in graph6 or sparse6 (as House of Graphs gives them; an optional >>graph6<< or >>sparse6<< header is allowed), or an edge list, one edge \"u v\" per line, vertices numbered from 0.",
  "checker": {
@@ -16,16 +16,16 @@
  },
  "score": "n, the number of vertices of a 16-regular graph of girth at least 7 (smaller is better)",
  "best_known": {
-  "value": "8091",
-  "exact": "8091",
-  "source": "n(16,7) <= 8091: implied by strict monotonicity in the girth (n(k,g) < n(k,g+1), Fu, Huang and Rodger 1997) from n(16,8) <= 8092 [GH08]; the House of Graphs cage table (houseofgraphs.org/meta-directory/cages; J. Goedgebeur, J. Jooken, T. Van den Eede) lists no graph for girth 7; read 8 Nov 2026",
-  "kind": "implied",
+  "value": "7920",
+  "exact": "7920",
+  "source": "n(16,7) <= 7920: [T26] in the House of Graphs cage table (houseofgraphs.org/meta-directory/cages; J. Goedgebeur, J. Jooken, T. Van den Eede); read 12 Nov 2026",
+  "kind": "table entry",
   "provenance": {
    "keeper": "House of Graphs cage table (houseofgraphs.org/meta-directory/cages; J. Goedgebeur, J. Jooken, T. Van den Eede)",
    "url": "https://houseofgraphs.org/meta-directory/cages",
-   "read": "2026-11-08",
-   "revision": "page read 8 Nov 2026",
-   "holder": "implied by monotonicity (no graph listed)"
+   "read": "2026-11-12",
+   "revision": "page read 12 Nov 2026 (the table's script bundle index-DXBVwqWN.js)",
+   "holder": "[T26] (reference key of the table: S. Taghiyev, New record graphs for the cage problem, Zenodo 10.5281/zenodo.24060986, records 24114698 and 24121626)"
   }
  },
  "verified_pending": [],

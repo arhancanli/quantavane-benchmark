@@ -101,8 +101,8 @@ t cw-34-6-5 certs/control_cw_weight.txt "NOT CERTIFIED,"
 t ramsey-3-18 refs/ours_ramsey_3_18_n100.txt "does not improve,"
 t ramsey-4-18 refs/ours_ramsey_4_18_n210.txt "does not improve,"
 t ramsey-5-15 refs/ours_ramsey_5_15_n282.txt "does not improve,"
-t cage-6-9 refs/ours_cage_6_9_n5600.s6 "IMPROVES,does not improve,"
-t cage-7-9 refs/ours_cage_7_9_n17600.s6 "IMPROVES,does not improve,"
+t cage-6-9 refs/ours_cage_6_9_n5600.s6 "does not improve,"           # 12 Nov: the table lists 3422 [T26]
+t cage-7-9 refs/ours_cage_7_9_n17600.s6 "does not improve,"          # 12 Nov: the table lists 9324 [T26]
 t multiramsey-3-3-3-3 refs/classic_multiramsey_3333_n32.txt "does not improve,"
 t multiramsey-4-4-4 refs/classic_multiramsey_444_n127.txt "does not improve,"
 t kissing-d5 refs/classic_kissing_d5_D5_n40.txt "does not improve,"
