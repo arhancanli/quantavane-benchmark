@@ -1,0 +1,78 @@
+# 11n_169: 4 crossing changes in a closed braid diagram of the knot, then braid moves to the empty braid (checkers/unknot_check.py)
+X 6
+X 8
+X 11
+X 12
+D 5
+I 7 -3
+B 5
+D 4
+R 9
+C 1
+C 0
+C 8
+F
+C 8
+C 0
+C 2
+I 6 2
+B 7
+D 9
+C 2
+C 1
+I 9 -1
+B 7
+D 6
+C 5
+C 4
+C 1
+C 2
+C 8
+R 3
+C 8
+R 8
+C 8
+C 2
+R 1
+F
+C 3
+C 3
+I 11 2
+B 9
+D 8
+R 8
+R 8
+C 8
+R 9
+I 6 3
+B 4
+D 3
+R 3
+C 7
+C 8
+R 6
+C 4
+D 3
+C 0
+C 5
+C 0
+C 5
+C 5
+B 3
+B 6
+D 5
+B 2
+B 2
+B 2
+B 1
+F
+R 3
+U
+I 3 1
+B 4
+D 6
+D 2
+D 1
+R 1
+U
+U

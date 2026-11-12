@@ -158,6 +158,21 @@ above; `obb.py` takes their ids like any other problem:
     python3 -I obb.py check paley-ising my_configuration.txt
     python3 -I collections/originals/tests/test_originals.py
 
+## Quantavane Open Tables
+
+`collections/open-tables/` holds benchmark tables for fields with no keeper of records, each with an exact checker
+of ours. A cell's best known value is either a published one (with its source and the date read) or, where nothing
+comparable is published, a first entry; the two are counted apart, and only beating a published value can be a record.
+The first version (12 Nov 2026) has two fields: topology (the unknotting numbers still open for the knots of at most 11
+crossings, from KnotInfo, checked as sequences of Markov moves and crossing changes on a closed braid; 67 cells) and
+aerodynamics in a pinned numerical model (airfoil sections scored by QV-Foil 1, a panel method with an integral
+boundary layer, written so that every machine gives the same number; 38 cells, all first entries). The airfoil scores
+are model values, not wind-tunnel data. Listed apart and not counted in the totals above:
+
+    python3 -I obb.py list open-tables
+    python3 -I obb.py check unknotting-10-6 my_sequence.txt
+    python3 -I collections/open-tables/tests/test_open_tables.py
+
 ## Families
 
 `families/NAME/family.json` holds the statement (a template filled in from each cell's parameters), the checker and

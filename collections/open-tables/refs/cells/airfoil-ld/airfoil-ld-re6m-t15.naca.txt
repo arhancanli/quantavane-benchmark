@@ -1,0 +1,4 @@
+# airfoil-ld-re6m-t15: baseline, the best NACA 4- or 5-digit section of the scan (tools/airfoil_scan.py) at its best angle
+# QV-Foil 1 (a numerical model, not a wind tunnel)
+alpha 4.75
+naca 45015

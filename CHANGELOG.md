@@ -18,6 +18,23 @@ value can change within a version when its source table changes; the file then s
   some of them are public on Zenodo. Their values stay as read on 8 Nov until a rule for cells the table does not list is
   chosen.
 
+## Next (in review): Quantavane Open Tables, first version (12 Nov 2026)
+
+- `collections/open-tables/`: benchmark tables for fields with no keeper of records, each cell with its best known
+  value marked as published (with its source and the date read) or as a first entry (nothing comparable published);
+  the two are counted apart and only beating a published value can be a record. Not counted in the totals.
+- Topology, `unknotting` (67 cells): every prime knot of at most 11 crossings whose unknotting number KnotInfo gives as
+  an interval (file of 2 Nov 2026, fetched by `fetch.sh` at a pinned commit with its SHA-256), less the 8 settled by
+  McCoy and Park (arXiv:2603.10732, March 2026). Checker `checkers/unknot_check.py`: an unknotting sequence as Markov
+  moves and crossing changes on KnotInfo's braid word, ending at the trivial braid; the value is the number of changes.
+  Our certificates replay KnotInfo's upper bound for 66 cells (11n_138 not yet).
+- Aerodynamics in a numerical model, `airfoil-ld` (20 cells: largest Cl/Cd by Reynolds number and thickness) and
+  `airfoil-cd` (18 cells: least Cd at a required lift): checker `checkers/airfoil_check.py`, QV-Foil 1 (Hess-Smith
+  panels, Thwaites, Michel, Head, Squire-Young; our own log, exp and arctangent, so the same result on every machine).
+  A numerical model, not a wind tunnel. Every cell is a first entry with a NACA baseline.
+- `obb.py`: a collection cell may carry a published value or a first entry (`open_table_cell`); `fetch.sh` fetches the
+  KnotInfo file; `test.sh` runs `collections/open-tables/tests/test_open_tables.py`.
+
 ## Next (in review): Quantavane Originals
 
 - `collections/originals/`: new open problems of ours, each with a novelty check written down before it was added, an

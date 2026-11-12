@@ -1,0 +1,76 @@
+{
+ "id": "unknotting",
+ "collection": "open-tables",
+ "field": "Topology",
+ "title": "Unknotting numbers of the knots with at most 11 crossings",
+ "status": "open",
+ "statement": "The unknotting number u(K) of a knot K is the least number of crossing changes that turn K into the unknot, where isotopies are allowed before, between and after the changes (equivalently: the least number of crossings to change in a single diagram of K, minimised over all diagrams). KnotInfo gives u(K) only as an interval for 75 of the 801 prime knots with at most 11 crossings; 8 of them were settled in March 2026 (McCoy and Park), leaving 67 open cells, one per knot. A submission for a knot is an unknotting sequence written as moves on a closed braid, starting from KnotInfo's braid word for the knot: braid relations, conjugations, stabilizations and destabilizations (the moves of Markov's theorem, which keep the knot), and crossing changes, ending at the trivial braid on one strand, whose closure is the unknot. The score is the number of crossing changes, an upper bound on u(K). A score below KnotInfo's upper bound improves the cell, and a score equal to its lower bound settles u(K). The headline cell: 10_6, u in {2, 3}.",
+ "objective": "minimize",
+ "submission": "Text file: one move per line, applied in order to the knot's braid word (positions from 0): X p (crossing change at p, counted), I p a (insert a, -a before p), D p (delete a cancelling pair at p, p+1), C p (swap commuting letters at p, p+1), B p (a b a -> b a b at p), R k (move the first k letters to the end), F (every letter +-i -> +-(n-i)), S e (append e*n, n -> n+1), U (drop the last letter, the only one of index n-1; n -> n-1). See checkers/unknot_check.py.",
+ "checker": {
+  "program": "collections/open-tables/checkers/unknot_check.py",
+  "args": [
+   "1,1,1,1,1,1,2,-1,-3,2,-3"
+  ],
+  "value": "result"
+ },
+ "score": "the number of crossing changes in a valid sequence (smaller is better): an upper bound on the unknotting number",
+ "verified_pending": [],
+ "added": "open-tables-1",
+ "page": "collections/open-tables/problems/unknotting.md",
+ "context": "The unknotting number is the oldest measure of how knotted a knot is and among the hardest to compute: lower bounds come from invariants (the signature, Rasmussen's s, Ozsvath-Szabo's tau and the obstructions of Heegaard Floer theory, the linking form), upper bounds only from explicit sequences of crossing changes, and some knots need a non-minimal diagram (10_8, Bleiler and Nakanishi). The ten 10-crossing knots in the table (10_6, 10_11, 10_47, 10_51, 10_54, 10_61, 10_76, 10_77, 10_79, 10_100) have resisted every method; 10_6 joined them in January 2026, when its database value 3 turned out to be unproven (arXiv:2601.18757). A reinforcement-learning search over millions of diagrams (Applebaum et al., arXiv:2409.09032) found no shorter sequence for any open knot with at most 12 crossings, and Brittenham and Hermiller showed in 2025 that the unknotting number is not additive under connected sum. A shorter sequence for any cell here would be new: it lowers KnotInfo's upper bound and, since every cell's interval has length 1, settles the unknotting number of that knot.",
+ "references": [
+  "C. Livingston, A. H. Moore, KnotInfo: Table of Knot Invariants, knotinfo.org, November 12, 2026 (the spreadsheet of 2 Nov 2026 as packaged by database_knotinfo 2026.11.2)",
+  "A. A. Markov, Uber die freie Aquivalenz der geschlossenen Zopfe, Rec. Math. Moscou 1 (1936) 73-78; J. S. Birman, Braids, Links, and Mapping Class Groups, Princeton (1974): Markov's theorem",
+  "T. Gittings, Minimum braids: a complete invariant of knots and links, arXiv:math/0401051 (2004): the minimal braid words behind KnotInfo's braid notation",
+  "S. A. Bleiler, A note on unknotting number, Math. Proc. Cambridge Philos. Soc. 96 (1984) 469-471; Y. Nakanishi, Unknotting numbers and knot diagrams with the minimum crossings, Math. Sem. Notes Kobe Univ. 11 (1983) 257-258",
+  "T. Applebaum, S. Blackwell, A. Davies, T. Edlich, A. Juhasz, M. Lackenby, N. Tomasev, D. Zheng, The unknotting number, hard unknot diagrams, and reinforcement learning, arXiv:2409.09032 (v2, 19 Jul 2025), to appear in Experimental Mathematics",
+  "M. Brittenham, S. Hermiller, Unknotting number is not additive under connected sum, arXiv:2506.24088 (2025)",
+  "Unknotting number and connected sums: the knots 4_1 and 5_1, arXiv:2601.18757 (January 2026): u(10_6) is 2 or 3",
+  "D. McCoy, J. Park, Special alternating links of minimal unlinking number, arXiv:2603.10732 (v2, 24 Mar 2026): u = 4 for 11a291, 11a298, 11a319, 11a336, 11a340, 11a353, 11a356, 11a357",
+  "A. Dranowski, Y. Kabkov, D. Tubbenhauer, RL unknotter, hard unknots and unknotting number, arXiv:2603.07955 (v4, Sep 2026): new upper bounds at 12 and 13 crossings only",
+  "M. Jablonowski, Integer knot invariants: inequalities, computations, and open problems, arXiv:2605.22652 (v5, Sep 2026): new values at 13 crossings only"
+ ],
+ "sources": [
+  {
+   "file": "instances/knotinfo/knotinfo_data_complete.csv",
+   "url": "https://raw.githubusercontent.com/soehms/database_knotinfo/219c2d982b89fb92b6ab0c556f28cdd766a18734/database_knotinfo/csv_data/knotinfo_data_complete.csv",
+   "sha256": "ed4447ff81dc50e2561764760d631356186c34e2dd35f89cc84e0a4d8fedd3d0",
+   "what": "KnotInfo (C. Livingston, A. H. Moore), the spreadsheet of 2 Nov 2026 as packaged by database_knotinfo 2026.11.2 (S. Oehms)",
+   "licence": "knotinfo.org states no licence and asks users to cite KnotInfo; the database_knotinfo package that redistributes the spreadsheet is GPL-3.0. Not copied here: fetch.sh downloads it at the pinned commit and checks its SHA-256; the cells store only values read from it (knot names, braid words, the two bounds, Alexander polynomials, signatures), with the source."
+  }
+ ],
+ "cells": {
+  "params": [
+   "knot",
+   "braid"
+  ],
+  "about": "a prime knot of at most 11 crossings whose unknotting number is open, given by KnotInfo's braid word",
+  "headline": {
+   "knot": "10_6"
+  },
+  "args": [
+   "{braid}"
+  ],
+  "title": "Unknotting number of the knot {knot}",
+  "statement": "Find a sequence of crossing changes and braid moves that turns the closed braid {braid} (KnotInfo's braid word for the knot {knot}) into the unknot with as few crossing changes as possible.",
+  "submission": "Text file of moves on the closed braid {braid}, one per line (X p, I p a, D p, C p, B p, R k, F, S e, U; see checkers/unknot_check.py).",
+  "bound_kind": "lower bound",
+  "bound_source": "KnotInfo's lower bound on the unknotting number (from the signature and other invariants)"
+ },
+ "left_out": "the 8 knots settled by McCoy and Park (cells/unknotting.closed.json); every knot whose unknotting number KnotInfo gives exactly",
+ "best_known": {
+  "value": "3",
+  "exact": "3",
+  "source": "KnotInfo, unknotting number [2,3] (upper bound 3, lower bound 2); database_knotinfo 2026.11.2 (commit 219c2d9, 2 Nov 2026), the KnotInfo spreadsheet of that date, read 2026-11-12",
+  "kind": "published value",
+  "provenance": {
+   "keeper": "Quantavane Open Tables (no keeper for this field)",
+   "url": "collections/open-tables/problems/unknotting.md",
+   "read": "2026-11-12",
+   "holder": "KnotInfo (C. Livingston, A. H. Moore)",
+   "quantavane": false,
+   "certificate": "collections/open-tables/refs/cells/unknotting/10_6.txt"
+  }
+ }
+}

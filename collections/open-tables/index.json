@@ -1,0 +1,49 @@
+{
+ "collection": "Quantavane Open Tables",
+ "version": "open-tables-1",
+ "date": "2026-11-12",
+ "counting": "tables: one per problem file; cells: one per instance (cells/ID.jsonl). A cell's best value is a published one (with its source) or, where nothing is published, a first entry, counted apart.",
+ "tables": 3,
+ "cells": 105,
+ "cells_published": 67,
+ "cells_first_entry": 38,
+ "cells_certified_here": 104,
+ "items": [
+  {
+   "id": "unknotting",
+   "field": "Topology",
+   "title": "Unknotting numbers of the knots with at most 11 crossings",
+   "objective": "minimize",
+   "cells": 67,
+   "cells_published": 67,
+   "cells_first_entry": 0,
+   "cells_certified_here": 66,
+   "checker": "collections/open-tables/checkers/unknot_check.py",
+   "page": "problems/unknotting.md"
+  },
+  {
+   "id": "airfoil-ld",
+   "field": "Aerodynamics (numerical model)",
+   "title": "Airfoil sections of greatest lift-to-drag ratio in the QV-Foil 1 model",
+   "objective": "maximize",
+   "cells": 20,
+   "cells_published": 0,
+   "cells_first_entry": 20,
+   "cells_certified_here": 20,
+   "checker": "collections/open-tables/checkers/airfoil_check.py",
+   "page": "problems/airfoil-ld.md"
+  },
+  {
+   "id": "airfoil-cd",
+   "field": "Aerodynamics (numerical model)",
+   "title": "Airfoil sections of least drag at a required lift in the QV-Foil 1 model",
+   "objective": "minimize",
+   "cells": 18,
+   "cells_published": 0,
+   "cells_first_entry": 18,
+   "cells_certified_here": 18,
+   "checker": "collections/open-tables/checkers/airfoil_check.py",
+   "page": "problems/airfoil-cd.md"
+  }
+ ]
+}

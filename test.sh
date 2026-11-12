@@ -289,6 +289,8 @@ if python3 -I tools/build_prestige100.py --check > /dev/null; then echo "ok    c
 # collections/originals: every certificate certified with its value, a red control per problem, brute-force
 # cross-checks on small cases, pages in sync with the problem files
 python3 -I collections/originals/tests/test_originals.py || status=1
+# collections/open-tables: certificates replayed, red controls, the panel method against exact potential flow
+python3 -I collections/open-tables/tests/test_open_tables.py || status=1
 # checker unit tests: the exit status of a checker run on its own
 u() {  # u EXPECTED_EXIT_STATUS CHECKER ARGS...
   want=$1; shift

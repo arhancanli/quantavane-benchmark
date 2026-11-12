@@ -1,0 +1,5 @@
+# airfoil-ld-re6m-t12: CST design, CMA-ES from the CST fit of NACA 45015 (2500 evaluations, order 7, tools/airfoil_search.py); found for airfoil-ld-re6m-t15
+# QV-Foil 1 (a numerical model, not a wind tunnel)
+alpha 6.522951669
+upper 0.3952257925 0.2481782345 0.5748968844 0.1500939662 0.9850917909 -0.2043095956 0.3686149835 0.205418823
+lower 0.06398905485 0.2869136884 -0.1196618291 -0.01146186149 0.116862911 -0.1430576651 0.06929718299 -0.04644247769

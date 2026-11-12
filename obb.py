@@ -11,6 +11,7 @@
   python3 -I obb.py leaderboard [PROBLEM]       the verified results in leaderboard.json, best first
   python3 -I obb.py index                       check index.json against the files it lists (counts and SHA-256)
   python3 -I obb.py list originals              the Quantavane Originals: new problems of ours (collections/originals)
+  python3 -I obb.py list open-tables            the Quantavane Open Tables: fields with no keeper (collections/open-tables)
 
 A problem is either a single problem, with its own file in problems/, or a cell of a family: one statement and one
 checker in families/NAME/family.json, and one line per cell in families/NAME/cells.jsonl (its parameters, the best
@@ -133,6 +134,8 @@ def collection_cell(name, cell):
     fam = json.load(open(os.path.join(COLLECTIONS, name, "problems", cell["family"] + ".json")))
     blk = fam["cells"]
     values = dict(cell["params"], best=cell["best"])
+    if "first_entry" in cell:
+        return open_table_cell(fam, blk, cell, values)
     status = (f"Exact: {cell['best']} ({cell['how']})." if cell["exact"] else
               f"Best known: {cell['best']} (ours, {cell['how']}).")
     p = {k: v for k, v in fam.items() if k not in ("cells", "first_values", "baseline", "bound")}
@@ -145,6 +148,35 @@ def collection_cell(name, cell):
                        "source": f"{holder}, {cell['date']}: {cell['how']}", "kind": "our construction (cell)",
                        "provenance": dict(fam["best_known"]["provenance"], read=cell["date"],
                                           certificate=cell["certificate"])}
+    return p
+
+
+def open_table_cell(fam, blk, cell, values):
+    """A cell of an open table (collections/open-tables): a field with no keeper, where each cell's best known value is
+    either a published one (with its source) or, where nothing is published, a first entry (ours or a submitter's)."""
+    pub = cell.get("published")
+    if pub:
+        status = f"Best known: {cell['best']} ({pub['source']})."
+        kind, holder, source = "published value", pub["holder"], pub["source"]
+    else:
+        status = (f"No published value: first entry {cell.get('best_decimal', cell['best'])} ({cell['holder']}, "
+                  f"{cell['date']}). "
+                  f"{cell.get('baseline_text', '')}").strip()
+        kind, holder = "first entry (no published value)", cell["holder"]
+        source = f"{cell['holder']}, {cell['date']}: {cell.get('how', 'first entry')}"
+    p = {k: v for k, v in fam.items() if k not in ("cells", "first_values", "baseline", "bound")}
+    p.update(id=cell["id"], family=fam["id"], title=fill(blk["title"], values),
+             statement=fill(blk["statement"], values) + " " + status,
+             submission=fill(blk["submission"], values), first_entry=cell["first_entry"])
+    p["checker"] = dict(fam["checker"], args=fill(blk["args"], values))
+    p["best_known"] = {"value": cell["best"], "exact": cell["best"], "source": source, "kind": kind,
+                       "provenance": {"keeper": "Quantavane Open Tables (no keeper for this field)",
+                                      "url": fam.get("page", ""), "read": cell["date"], "holder": holder,
+                                      "quantavane": bool(cell.get("quantavane")),
+                                      "certificate": cell.get("certificate")}}
+    if cell.get("bound") is not None:
+        p["bound"] = {"value": cell["bound"], "kind": blk.get("bound_kind", "bound"),
+                      "source": blk.get("bound_source", "")}
     return p
 
 

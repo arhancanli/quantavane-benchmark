@@ -90,6 +90,11 @@ for g in ramsey-6-6-lower-102 ramsey-7-7-lower-205 ramsey-8-8-lower-282; do
 done
 [ -s derived_mckenna_schur6_538.txt ] || $C shift mckenna_schur6-538.word derived_mckenna_schur6_538.txt 1
 
+# KnotInfo (C. Livingston, A. H. Moore; no licence stated, please cite), as redistributed by database_knotinfo (GPL-3.0,
+# github.com/soehms/database_knotinfo, release 2026.11.2, commit 219c2d9, 2 Nov 2026): the knots of the unknotting table
+# in collections/open-tables, read by its tools and tests; not copied into this repository
+mkdir -p ../instances/knotinfo
+get ../instances/knotinfo/knotinfo_data_complete.csv https://raw.githubusercontent.com/soehms/database_knotinfo/219c2d982b89fb92b6ab0c556f28cdd766a18734/database_knotinfo/csv_data/knotinfo_data_complete.csv ed4447ff81dc50e2561764760d631356186c34e2dd35f89cc84e0a4d8fedd3d0
 # CVRPLIB instances for the routing problems, one request every 2 seconds
 cd .. && mkdir -p instances && cd instances
 slow() { [ -s "$1" ] || sleep 2; get "$@"; }

@@ -1,0 +1,31 @@
+# 11a_202: 3 crossing changes in a closed braid diagram of the knot, then braid moves to the empty braid (checkers/unknot_check.py)
+X 0
+X 3
+X 12
+D 0
+D 0
+C 4
+R 1
+C 3
+I 8 -2
+B 6
+D 5
+C 8
+D 7
+C 0
+I 4 -2
+B 2
+D 1
+C 4
+D 3
+F
+R 3
+U
+U
+I 1 1
+B 2
+D 4
+D 0
+R 1
+U
+U
