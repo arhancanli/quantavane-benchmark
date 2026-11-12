@@ -1,0 +1,77 @@
+{
+ "id": "metacell-bulk",
+ "collection": "open-tables",
+ "field": "Metamaterials (numerical model)",
+ "title": "Periodic material cells of greatest bulk modulus (QV-Topo 1)",
+ "status": "open",
+ "statement": "A periodic cell of 40 x 40 square elements describes a two-dimensional material: every element is solid (Young's modulus 1, Poisson's ratio 0.3, plane stress) or void (Young's modulus 1e-9). The cell must have at most the cell's volume fraction of solid elements, a minimum feature size of 2 (every solid element in a 2 x 2 solid square and every void one in a 2 x 2 void square, wrapping around the cell), no point contacts, and its solid elements must form one connected piece that wraps around the cell in both directions (a connected material). QV-Topo 1 (checkers/topopt_check.py, standard library only) computes the homogenised stiffness tensor C (Voigt notation, engineering shear strain) by the energy method with periodic boundary conditions: for each unit average strain the periodic displacement that minimises the energy, solved by our own direct solver, the same digits on every machine. THIS IS A NUMERICAL MODEL of an idealised material. The score is the bulk modulus under a hydrostatic strain, (C11 + C22 + 2 C12) / 4, rounded down to 0.000001. The two-dimensional Hashin-Shtrikman upper bound bounds the exact bulk modulus of every cell, isotropic or not, and is shown with each cell; bilinear elements are slightly too stiff, so on the grid only discretisation error could pass it. The headline cell: volume fraction 0.5.",
+ "objective": "maximize",
+ "submission": "Text file: 40 lines of 40 characters 0 or 1 (the top row first). See checkers/topopt_check.py.",
+ "checker": {
+  "program": "collections/open-tables/checkers/topopt_check.py",
+  "args": [
+   "cell",
+   "bulk",
+   "40",
+   "0.5",
+   "2",
+   "0"
+  ],
+  "value": "result"
+ },
+ "score": "the bulk modulus under a hydrostatic strain, (C11 + C22 + 2 C12) / 4, rounded down to 0.000001 (larger is better)",
+ "verified_pending": [],
+ "added": "open-tables-2",
+ "page": "collections/open-tables/problems/metacell-bulk.md",
+ "context": "Designing the microstructure of a material for given elastic properties (inverse homogenisation, Sigmund 1994) is how architected materials and metamaterials are designed. For the bulk modulus there is a rigorous upper bound, the Hashin-Shtrikman bound, and microstructures that reach it are known in the limit of infinitely fine geometry; on a fixed grid with a minimum feature size the question is how close a single cell can come. Papers report designs on their own grids and filters, often with grey elements, so no published value applies under these settings: every cell is a first entry, shown with its distance to the bound. Each cell also keeps a baseline: a plain square grid of bars.",
+ "references": [
+  "O. Sigmund, Materials with prescribed constitutive parameters: an inverse homogenization problem, Int. J. Solids Struct. 31 (1994) 2313-2329",
+  "O. Sigmund, A new class of extremal composites, J. Mech. Phys. Solids 48 (2000) 397-428",
+  "E. Andreassen, C. S. Andreasen, How to determine composite material properties using numerical homogenization, Comput. Mater. Sci. 83 (2014) 488-495: the energy method used here",
+  "L. Xia, P. Breitkopf, Design of materials using topology optimization and energy-based homogenization approach in Matlab, Struct. Multidisc. Optim. 52 (2015) 1229-1241",
+  "Z. Hashin, S. Shtrikman, A variational approach to the theory of the elastic behaviour of multiphase materials, J. Mech. Phys. Solids 11 (1963) 127-140; Z. Hashin, On elastic behaviour of fibre reinforced materials of arbitrary transverse phase geometry, J. Mech. Phys. Solids 13 (1965) 119-134: the two-dimensional bounds",
+  "G. W. Milton, The Theory of Composites, Cambridge University Press (2002)"
+ ],
+ "sources": [],
+ "published_values": [],
+ "cells": {
+  "params": [
+   "target",
+   "n",
+   "volfrac",
+   "k",
+   "floor"
+  ],
+  "about": "the volume fraction (40 x 40 cell, minimum feature size 2)",
+  "headline": {
+   "volfrac": "0.5"
+  },
+  "args": [
+   "cell",
+   "bulk",
+   "{n}",
+   "{volfrac}",
+   "{k}",
+   "{floor}"
+  ],
+  "title": "Greatest bulk modulus: 40 x 40 periodic cell, volume fraction {volfrac}, minimum feature size {k}",
+  "statement": "Find a connected 0/1 periodic cell of {n} x {n} elements, at most {volfrac} solid, minimum feature size {k}, with the largest hydrostatic bulk modulus in the QV-Topo 1 model.",
+  "submission": "Text file: {n} lines of {n} characters 0 or 1 (checkers/topopt_check.py cell bulk {n} {volfrac} {k} {floor} FILE).",
+  "bound_kind": "upper bound (Hashin-Shtrikman)",
+  "bound_source": "the two-dimensional Hashin-Shtrikman upper bound f k1 m1 / ((1 - f) k1 + m1) for a porous material (k1 = 1/1.4, m1 = 1/2.6: the plane-stress bulk and shear moduli of the solid); it bounds the exact hydrostatic bulk modulus of every cell, isotropic or not (the model's value on the grid can pass it only by discretisation error)"
+ },
+ "best_known": {
+  "value": "182603/1000000",
+  "exact": "182603/1000000",
+  "source": "Quantavane (Arhan Canli), 2026-11-13: SIMP on the periodic cell (symmetric designs, density filter 2.0, projection), threshold, repair, local search of symmetric strip moves",
+  "kind": "first entry (no published value)",
+  "provenance": {
+   "keeper": "Quantavane Open Tables (no keeper for this field)",
+   "url": "collections/open-tables/problems/metacell-bulk.md",
+   "read": "2026-11-13",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true,
+   "certificate": "collections/open-tables/refs/cells/metacell-bulk/metacell-bulk-n40-v0.5-k2.txt"
+  }
+ }
+}

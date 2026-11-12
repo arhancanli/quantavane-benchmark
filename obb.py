@@ -155,7 +155,12 @@ def open_table_cell(fam, blk, cell, values):
     """A cell of an open table (collections/open-tables): a field with no keeper, where each cell's best known value is
     either a published one (with its source) or, where nothing is published, a first entry (ours or a submitter's)."""
     pub = cell.get("published")
-    if pub:
+    if pub and cell.get("record"):
+        status = (f"Best known: {cell.get('best_decimal', cell['best'])} ({cell['holder']}, {cell['date']}), below the "
+                  f"published value {pub['value']} ({pub['source']}).")
+        kind, holder = "beats the published value", cell["holder"]
+        source = f"{cell['holder']}, {cell['date']}: {cell.get('how', '')}; published value {pub['value']}"
+    elif pub:
         status = f"Best known: {cell['best']} ({pub['source']})."
         kind, holder, source = "published value", pub["holder"], pub["source"]
     else:
@@ -174,6 +179,8 @@ def open_table_cell(fam, blk, cell, values):
                                       "url": fam.get("page", ""), "read": cell["date"], "holder": holder,
                                       "quantavane": bool(cell.get("quantavane")),
                                       "certificate": cell.get("certificate")}}
+    if pub and pub.get("rounded") and not cell.get("record"):
+        del p["best_known"]["exact"]            # a printed, rounded value: beaten only by one unit of its last decimal
     if cell.get("bound") is not None:
         p["bound"] = {"value": cell["bound"], "kind": blk.get("bound_kind", "bound"),
                       "source": blk.get("bound_source", "")}

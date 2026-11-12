@@ -1,13 +1,13 @@
 {
  "collection": "Quantavane Open Tables",
- "version": "open-tables-1",
- "date": "2026-11-12",
+ "version": "open-tables-2",
+ "date": "2026-11-13",
  "counting": "tables: one per problem file; cells: one per instance (cells/ID.jsonl). A cell's best value is a published one (with its source) or, where nothing is published, a first entry, counted apart.",
- "tables": 3,
- "cells": 105,
- "cells_published": 67,
- "cells_first_entry": 38,
- "cells_certified_here": 104,
+ "tables": 8,
+ "cells": 138,
+ "cells_published": 69,
+ "cells_first_entry": 69,
+ "cells_certified_here": 137,
  "items": [
   {
    "id": "unknotting",
@@ -44,6 +44,66 @@
    "cells_certified_here": 18,
    "checker": "collections/open-tables/checkers/airfoil_check.py",
    "page": "problems/airfoil-cd.md"
+  },
+  {
+   "id": "topopt-simp",
+   "field": "Structural topology optimisation (numerical model)",
+   "title": "Least-compliance structures in the SIMP model with a density filter (QV-Topo 1)",
+   "objective": "minimize",
+   "cells": 10,
+   "cells_published": 2,
+   "cells_first_entry": 8,
+   "cells_certified_here": 10,
+   "checker": "collections/open-tables/checkers/topopt_check.py",
+   "page": "problems/topopt-simp.md"
+  },
+  {
+   "id": "topopt-binary",
+   "field": "Structural topology optimisation (numerical model)",
+   "title": "Least-compliance 0/1 structures with a minimum feature size (QV-Topo 1)",
+   "objective": "minimize",
+   "cells": 12,
+   "cells_published": 0,
+   "cells_first_entry": 12,
+   "cells_certified_here": 12,
+   "checker": "collections/open-tables/checkers/topopt_check.py",
+   "page": "problems/topopt-binary.md"
+  },
+  {
+   "id": "metacell-bulk",
+   "field": "Metamaterials (numerical model)",
+   "title": "Periodic material cells of greatest bulk modulus (QV-Topo 1)",
+   "objective": "maximize",
+   "cells": 4,
+   "cells_published": 0,
+   "cells_first_entry": 4,
+   "cells_certified_here": 4,
+   "checker": "collections/open-tables/checkers/topopt_check.py",
+   "page": "problems/metacell-bulk.md"
+  },
+  {
+   "id": "metacell-shear",
+   "field": "Metamaterials (numerical model)",
+   "title": "Periodic material cells of greatest shear modulus (QV-Topo 1)",
+   "objective": "maximize",
+   "cells": 4,
+   "cells_published": 0,
+   "cells_first_entry": 4,
+   "cells_certified_here": 4,
+   "checker": "collections/open-tables/checkers/topopt_check.py",
+   "page": "problems/metacell-shear.md"
+  },
+  {
+   "id": "metacell-poisson",
+   "field": "Metamaterials (numerical model)",
+   "title": "Periodic material cells of most negative Poisson's ratio with a stiffness floor (QV-Topo 1)",
+   "objective": "minimize",
+   "cells": 3,
+   "cells_published": 0,
+   "cells_first_entry": 3,
+   "cells_certified_here": 3,
+   "checker": "collections/open-tables/checkers/topopt_check.py",
+   "page": "problems/metacell-poisson.md"
   }
  ]
 }

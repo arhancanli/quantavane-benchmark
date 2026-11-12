@@ -10,7 +10,9 @@ import os
 import sys
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ORDER = ("unknotting", "airfoil-ld", "airfoil-cd")
+ORDER = ("unknotting", "airfoil-ld", "airfoil-cd", "topopt-simp", "topopt-binary", "metacell-bulk", "metacell-shear",
+         "metacell-poisson")
+ADDED = {"open-tables-1": "12 November 2026", "open-tables-2": "13 November 2026"}
 
 
 def load_cells(pid):
@@ -28,21 +30,35 @@ def headline(p, cells):
 
 def best_known(p, c):
     pub = c.get("published")
+
+    def prov(holder, ours):
+        return {"keeper": "Quantavane Open Tables (no keeper for this field)", "url": p["page"], "read": c["date"],
+                "holder": holder, "quantavane": ours, "certificate": c.get("certificate")}
+    if pub and c.get("record"):
+        return {"value": c["best"], "exact": c["best"],
+                "source": f"{c['holder']}, {c['date']}: {c.get('how', '')}; below the published value {pub['value']} "
+                          f"({pub['source']})",
+                "kind": "beats the published value", "provenance": prov(c["holder"], True)}
     if pub:
-        return {"value": c["best"], "exact": c["best"], "source": pub["source"], "kind": "published value",
-                "provenance": {"keeper": "Quantavane Open Tables (no keeper for this field)", "url": p["page"],
-                               "read": c["date"], "holder": pub["holder"], "quantavane": False,
-                               "certificate": c.get("certificate")}}
+        out = {"value": c["best"], "exact": c["best"], "source": pub["source"], "kind": "published value",
+               "provenance": prov(pub["holder"], False)}
+        if pub.get("rounded"):
+            del out["exact"]
+        return out
     return {"value": c["best"], "exact": c["best"], "source": f"{c['holder']}, {c['date']}: {c.get('how', '')}",
-            "kind": "first entry (no published value)",
-            "provenance": {"keeper": "Quantavane Open Tables (no keeper for this field)", "url": p["page"],
-                           "read": c["date"], "holder": c["holder"], "quantavane": bool(c.get("quantavane")),
-                           "certificate": c.get("certificate")}}
+            "kind": "first entry (no published value)", "provenance": prov(c["holder"], bool(c.get("quantavane")))}
 
 
 def fmt_params(p, c):
     if p["id"] == "unknotting":
         return f"{c['params']['knot']}"
+    if p["id"].startswith("topopt"):
+        q = c["params"]
+        tag = f"filter radius {q['param']}" if q["form"] == "simp" else f"feature size {q['param']}"
+        return f"{q['case']}, {q['nelx']} x {q['nely']}, volume {q['volfrac']}, {tag}"
+    if p["id"].startswith("metacell"):
+        q = c["params"]
+        return f"volume {q['volfrac']}" + (f", stiffness floor {q['floor']}" if q["target"] == "poisson" else "")
     keys = [k for k in p["cells"]["params"] if k not in ("mode",)]
     return ", ".join(f"{k} {c['params'][k]}" for k in keys if k in c["params"] and not (k == "clmin" and
                                                                                        p["id"] == "airfoil-ld"))
@@ -53,7 +69,8 @@ def page(p, cells):
     head = headline(p, cells) if cells else {}
     shown = head.get("best_decimal", bk["value"])
     L = [f"# {p['title']}", "",
-         f"`{p['id']}` · {p['field']} · status: **{p['status']}** · added 12 November 2026 (Quantavane Open Tables)", "",
+         f"`{p['id']}` · {p['field']} · status: **{p['status']}** · added {ADDED.get(p['added'], p['added'])} "
+         f"(Quantavane Open Tables)", "",
          f"Headline cell `{head.get('id', p['id'])}`: **{shown}** ({p['objective']}), {bk['kind']}: {bk['source']}", "",
          "## Statement", "", p["statement"], "", "## Why it is interesting", "", p["context"], ""]
     n_pub = sum(1 for c in cells if c.get("published"))
@@ -68,6 +85,16 @@ def page(p, cells):
             cert = (f"[{c['certificate_value']} changes](../refs/cells/unknotting/{c['params']['knot']}.txt)"
                     if c.get("certificate") else "none yet")
             L.append(f"| `{c['id']}` | {c['params']['knot']} | {c['best']} | {c['bound']} | {cert} | KnotInfo |")
+    elif p["id"].startswith(("topopt", "metacell")):
+        third = "Hashin-Shtrikman bound" if p["id"] == "metacell-bulk" else "Published value"
+        L += [f"| Cell | Parameters | Best | Status | Holder | Baseline (ours) | {third} |",
+              "| --- | --- | ---: | --- | --- | ---: | ---: |"]
+        for c in cells:
+            b = c.get("baseline") or {}
+            pub = c.get("published") or {}
+            other = c.get("bound", "-") if p["id"] == "metacell-bulk" else pub.get("value", "-")
+            L.append(f"| `{c['id']}` | {fmt_params(p, c)} | {c.get('best_decimal', c['best'])} | {c['status']} | "
+                     f"{c['holder']} | {b.get('decimal', '-')} | {other} |")
     else:
         L += ["| Cell | Parameters | Best | Holder | NACA baseline (published shape, our evaluation) |",
               "| --- | --- | ---: | --- | --- |"]
@@ -76,6 +103,11 @@ def page(p, cells):
             base = f"{b.get('decimal', '-')} (NACA {b.get('naca', '-')}, alpha {b.get('alpha', '-')})" if b else "none"
             L.append(f"| `{c['id']}` | {fmt_params(p, c)} | {c.get('best_decimal', c['best'])} | {c['holder']} | {base} |")
     L += [""]
+    if p.get("published_values"):
+        L += ["## Published values and licences", ""]
+        for s_ in p["published_values"]:
+            L += [f"- {s_['what']}. Source: {s_['source']}. {s_['licence']}"]
+        L += [""]
     if p.get("sources"):
         L += ["## Sources and licences", ""]
         for s in p["sources"]:
@@ -110,7 +142,7 @@ def build():
         items.append({"id": pid, "field": p["field"], "title": p["title"], "objective": p["objective"],
                       "cells": len(cells), "cells_published": n_pub, "cells_first_entry": len(cells) - n_pub,
                       "cells_certified_here": n_cert, "checker": p["checker"]["program"], "page": f"problems/{pid}.md"})
-    index = {"collection": "Quantavane Open Tables", "version": "open-tables-1", "date": "2026-11-12",
+    index = {"collection": "Quantavane Open Tables", "version": "open-tables-2", "date": "2026-11-13",
              "counting": "tables: one per problem file; cells: one per instance (cells/ID.jsonl). A cell's best value is a "
                          "published one (with its source) or, where nothing is published, a first entry, counted apart.",
              "tables": len(items), "cells": totals["cells"], "cells_published": totals["published"],

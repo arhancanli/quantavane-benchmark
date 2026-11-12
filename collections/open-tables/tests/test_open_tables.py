@@ -9,6 +9,11 @@ moves keep the Alexander and Jones polynomials; the cells agree with the pinned 
 Airfoil tables: our logarithm, exponential and arctangent against the C library; the panel method against the exact
 potential flow of Karman-Trefftz airfoils; Thwaites' method on a flat plate; the checker gives the same output twice;
 red controls; every baseline and entry certificate replayed with its value, and a perturbed entry not reproducing it.
+Topology optimisation (QV-Topo 1): the element matrix against Gauss integration; a plate in tension, a uniform cell
+and two laminates against their exact values; translation and rotation of a cell; the Hashin-Shtrikman bound; the same
+output twice; red controls (checkerboards, a broken load path, point contacts, too much material, a malformed or
+mis-sized design, passive elements, a cell that does not wrap, a mechanism below the stiffness floor, corrupted
+certificates); every certificate replayed with its value; our replay of the 88-line loop against the published values.
 Pages, index and README in sync with the problem files and cells (tools/build.py --check)."""
 import json
 import math
@@ -25,8 +30,10 @@ sys.path.insert(0, os.path.join(HERE, "tools"))
 sys.path.insert(0, os.path.join(HERE, "checkers"))
 import braids  # noqa: E402
 import airfoil_check as A  # noqa: E402
+import topopt_check as T  # noqa: E402
 
 UNKNOT = os.path.join(HERE, "checkers", "unknot_check.py")
+TOPO = os.path.join(HERE, "checkers", "topopt_check.py")
 FOIL = os.path.join(HERE, "checkers", "airfoil_check.py")
 TMP = tempfile.mkdtemp(prefix="open-tables-")
 failures = 0
@@ -278,9 +285,206 @@ def airfoils():
                    val != c["entry"]["value"], out[-200:])
 
 
+# ------------------------------------------------------------------------------------------- topology optimisation
+
+
+def grid_text(rows):
+    return "".join("".join("1" if v else "0" for v in row) + "\n" for row in rows)
+
+
+def topopt():
+    nu = T.NU
+    # the element matrix against 2 x 2 Gauss integration of B^T D B (exact for this element)
+    D = [[1 / (1 - nu * nu), nu / (1 - nu * nu), 0], [nu / (1 - nu * nu), 1 / (1 - nu * nu), 0], [0, 0, 1 / (2 * (1 + nu))]]
+    corners = [(0, 0), (1, 0), (1, 1), (0, 1)]
+    gp = [0.5 - 0.5 / math.sqrt(3), 0.5 + 0.5 / math.sqrt(3)]
+    K = [[0.0] * 8 for _ in range(8)]
+    for x in gp:
+        for y in gp:
+            B = [[0.0] * 8 for _ in range(3)]
+            for a, (xa, ya) in enumerate(corners):
+                nx_ = (1 if xa else -1) * (y if ya else 1 - y)
+                ny_ = (1 if ya else -1) * (x if xa else 1 - x)
+                B[0][2 * a], B[1][2 * a + 1], B[2][2 * a], B[2][2 * a + 1] = nx_, ny_, ny_, nx_
+            for i in range(8):
+                for j in range(8):
+                    K[i][j] += 0.25 * sum(B[p][i] * D[p][q] * B[q][j] for p in range(3) for q in range(3))
+    err = max(abs(K[i][j] - T.KE[i][j]) for i in range(8) for j in range(8))
+    expect("topopt: the element stiffness matrix equals the Gauss-integrated one (to 1e-15)", err < 1e-15, str(err))
+    # a plate in tension: left edge on rollers, unit load spread over the right edge; exact compliance L / (E H)
+    nx, ny = 12, 5
+    node = lambda ix, iy: (ny + 1) * ix + iy  # noqa: E731
+    els = [(1.0, (2 * node(ix, iy + 1), 2 * node(ix, iy + 1) + 1, 2 * node(ix + 1, iy + 1), 2 * node(ix + 1, iy + 1) + 1,
+                  2 * node(ix + 1, iy), 2 * node(ix + 1, iy) + 1, 2 * node(ix, iy), 2 * node(ix, iy) + 1))
+           for ix in range(nx) for iy in range(ny)]
+    fixed = {2 * node(0, iy) for iy in range(ny + 1)} | {2 * node(0, ny) + 1}
+    f = {2 * node(nx, iy): (0.5 if iy in (0, ny) else 1.0) / ny for iy in range(ny + 1)}
+    (u,) = T.solve(2 * (nx + 1) * (ny + 1), els, fixed, [f])
+    c = math.fsum(v * u[d] for d, v in f.items())
+    expect("topopt: a uniform plate in tension has the exact compliance 12/5 (to 1e-13)", abs(c - nx / ny) < 1e-13,
+           repr(c))
+    # periodic cells: a uniform cell, two laminates, translation and rotation
+    n = 8
+    C = T.homogenise([[1] * n for _ in range(n)], n)
+    want = [[1 / (1 - nu * nu), nu / (1 - nu * nu), 0], [nu / (1 - nu * nu), 1 / (1 - nu * nu), 0], [0, 0, 1 / (2 * (1 + nu))]]
+    expect("topopt: a uniform cell has the plane-stress tensor of the solid (to 1e-14)",
+           max(abs(C[i][j] - want[i][j]) for i in range(3) for j in range(3)) < 1e-14, str(C))
+
+    def q(E):
+        return [[E / (1 - nu * nu), nu * E / (1 - nu * nu), 0], [nu * E / (1 - nu * nu), E / (1 - nu * nu), 0],
+                [0, 0, E / (2 * (1 + nu))]]
+    E1, E2, h = 1.0, 0.2, 3
+    f1, f2 = h / n, 1 - h / n
+    Q1, Q2 = q(E1), q(E2)
+    C22 = 1 / (f1 / Q1[1][1] + f2 / Q2[1][1])
+    C12 = C22 * (f1 * Q1[0][1] / Q1[1][1] + f2 * Q2[0][1] / Q2[1][1])
+    C11 = f1 * (Q1[0][0] - Q1[0][1] ** 2 / Q1[1][1]) + f2 * (Q2[0][0] - Q2[0][1] ** 2 / Q2[1][1]) + C12 ** 2 / C22
+    C33 = 1 / (f1 / Q1[2][2] + f2 / Q2[2][2])
+    rows = T.homogenise(None, n, [[E1 if r < h else E2 for c in range(n)] for r in range(n)])
+    cols = T.homogenise(None, n, [[E1 if c < h else E2 for c in range(n)] for r in range(n)])
+    lam = [[C11, C12, 0], [C12, C22, 0], [0, 0, C33]]
+    lamT = [[C22, C12, 0], [C12, C11, 0], [0, 0, C33]]
+    e1 = max(abs(rows[i][j] - lam[i][j]) for i in range(3) for j in range(3))
+    e2 = max(abs(cols[i][j] - lamT[i][j]) for i in range(3) for j in range(3))
+    expect("topopt: laminates of two materials (E = 1 and 0.2, layers along x and along y) have their exact "
+           "homogenised tensors (to 1e-13)", e1 < 1e-13 and e2 < 1e-13, f"{e1} {e2}")
+    # every certificate replays with its value; baselines too
+    fams = ("topopt-simp", "topopt-binary", "metacell-bulk", "metacell-shear", "metacell-poisson")
+    allc = {fam: cells(fam) for fam in fams}
+    for fam, cs in allc.items():
+        expect(f"{fam}: cells present", len(cs) >= 3, str(len(cs)))
+        for c in cs:
+            for key in ("entry", "baseline"):
+                e = c.get(key)
+                if not e:
+                    continue
+                code, val, out = run(TOPO, c["checker_args"], path=os.path.join(ROOT, e["certificate"]))
+                expect(f"{c['id']}: {key} replays with {e['decimal']}", code == 0 and val == e["value"], out[-300:])
+            paper = {"topopt-simp-mbb-60x20-v0.5-r2.4": 233.71, "topopt-simp-mbb-150x50-v0.5-r6": 235.73}.get(c["id"])
+            if paper:
+                b = c["baseline"]
+                expect(f"{c['id']}: our replay of the 88-line loop (its stopping rule, then scaled to the volume limit) "
+                       f"scores {b['decimal']}, within 0.02 of the paper's printed {paper} (identical settings)",
+                       abs(float(Fraction_(b["value"])) - paper) <= 0.02, b["decimal"])
+    # the Hashin-Shtrikman bound holds for every bulk certificate
+    worst = max(float(Fraction_(c["best"])) / float(c["bound"]) for c in allc["metacell-bulk"])
+    expect("metacell-bulk: every value is below the Hashin-Shtrikman bound", worst < 1.0, str(worst))
+    # translation and a quarter turn of a cell: the same tensor, C11 and C22 swapped
+    c0 = allc["metacell-shear"][0]
+    g = [[ch == "1" for ch in l.strip()] for l in open(os.path.join(ROOT, c0["certificate"])) if l[0] in "01"]
+    N = len(g)
+    Ca = T.homogenise(g, N)
+    sh = [[g[(r + N // 2) % N][(c + N // 3) % N] for c in range(N)] for r in range(N)]
+    rot = [[g[N - 1 - c][r] for c in range(N)] for r in range(N)]
+    Cb, Cc = T.homogenise(sh, N), T.homogenise(rot, N)
+    d1 = max(abs(Ca[i][j] - Cb[i][j]) for i in range(3) for j in range(3))
+    d2 = max(abs(Ca[0][0] - Cc[1][1]), abs(Ca[1][1] - Cc[0][0]), abs(Ca[0][1] - Cc[0][1]), abs(Ca[2][2] - Cc[2][2]))
+    expect("topopt: a translated cell has the same tensor and a turned cell swaps C11 and C22 (to 1e-12)",
+           d1 < 1e-12 and d2 < 1e-12, f"{d1} {d2}")
+    # the same output twice (and under another hash seed)
+    for fam in ("topopt-simp", "topopt-binary", "metacell-poisson"):
+        c = allc[fam][0]
+        path = os.path.join(ROOT, c["certificate"])
+        r1 = subprocess.run([sys.executable, "-I", TOPO] + c["checker_args"] + [path], capture_output=True, text=True)
+        r2 = subprocess.run([sys.executable, "-I", TOPO] + c["checker_args"] + [path], capture_output=True, text=True,
+                            env=dict(os.environ, PYTHONHASHSEED="12345"))
+        expect(f"{c['id']}: the checker prints the same output twice", r1.stdout == r2.stdout and r1.returncode == 0,
+               r1.stdout[-200:])
+
+    # the same bytes under other Python versions, when they are installed (sum() of floats changed in 3.12; the
+    # checker uses math.fsum, correctly rounded, so its output must not change)
+    import shutil
+    c = next(c for c in allc["topopt-simp"] if c["id"] == "topopt-simp-mbb-60x20-v0.5-r2.4")
+    ref = subprocess.run([sys.executable, "-I", TOPO] + c["checker_args"] + [os.path.join(ROOT, c["certificate"])],
+                         capture_output=True, text=True).stdout
+    others = [shutil.which(f"python3.{v}") for v in range(9, 16)]
+    others = [o for o in others if o and os.path.realpath(o) != os.path.realpath(sys.executable)]
+    for exe in others:
+        r = subprocess.run([exe, "-I", TOPO] + c["checker_args"] + [os.path.join(ROOT, c["certificate"])],
+                           capture_output=True, text=True)
+        ver = subprocess.run([exe, "--version"], capture_output=True, text=True).stdout.strip()
+        expect(f"{c['id']}: the same output under {ver} as under this Python", r.stdout == ref, r.stdout[-200:])
+    if not others:
+        print("skip  topopt: no other Python version on the PATH for the cross-version check")
+
+    def refuse(label, args, text, why=None):
+        code, val, out = run(TOPO, args, text)
+        ok = code == 1 and val is None and (why is None or why in out)
+        expect("red control refused: " + label, ok, out[-200:])
+    mbb2 = ["compliance", "mbb", "60", "20", "0.5", "binary", "2"]
+    cb = [[(ix + iy) % 2 == 0 for ix in range(60)] for iy in range(20)]
+    refuse("a 0/1 checkerboard", mbb2, grid_text(cb), "minimum feature size")
+    refuse("a checkerboard density field (SIMP: its filtered field is a checkerboard about 1/2)",
+           ["compliance", "mbb", "60", "20", "0.5", "simp", "2.4"],
+           "".join(" ".join("1" if (ix + iy) % 2 == 0 else "0" for ix in range(60)) + "\n" for iy in range(20)),
+           "separate pieces")
+    two = [[(ix < 10 and iy < 10) or ix >= 40 for ix in range(60)] for iy in range(20)]
+    refuse("a design in two pieces (the load cannot reach the bottom support)", mbb2, grid_text(two), "separate pieces")
+    blocks = [[(r < 4) == (c < 4) for c in range(8)] for r in range(8)]
+    refuse("two square blocks touching at a corner only (point contact)", ["cell", "bulk", "8", "0.6", "2", "0"],
+           grid_text(blocks), "point contact")
+    sp = next(c for c in allc["topopt-binary"] if c["checker_args"][1] == "mbb" and c["checker_args"][4] == "0.5")
+    text = open(os.path.join(ROOT, sp["certificate"])).read()
+    refuse("a design with more material than allowed", sp["checker_args"][:4] + ["0.3"] + sp["checker_args"][5:], text,
+           "solid elements, more than")
+    rows_ = [l for l in text.splitlines() if l and l[0] in "01"]
+    refuse("a design with a row missing", sp["checker_args"], "\n".join(rows_[:-1]) + "\n", "expected")
+    refuse("a design with a character other than 0 and 1", sp["checker_args"],
+           "\n".join([rows_[0][:-1] + "2"] + rows_[1:]) + "\n", "characters 0 or 1")
+    simp = next(c for c in allc["topopt-simp"] if c["id"] == "topopt-simp-mbb-60x20-v0.5-r2.4")
+    stext = open(os.path.join(ROOT, simp["certificate"])).read()
+    srows = [l for l in stext.splitlines() if l and l[0] in "0123456789"]
+    refuse("a density above 1", simp["checker_args"], "\n".join(["1.5 " + srows[0].split(" ", 1)[1]] + srows[1:]) + "\n",
+           "outside [0, 1]")
+    refuse("a density that is not a number", simp["checker_args"],
+           "\n".join(["nan " + srows[0].split(" ", 1)[1]] + srows[1:]) + "\n")
+    more = "\n".join(" ".join(f"{min(1.0, float(v) * 1.02):.6f}" for v in r.split()) for r in srows) + "\n"
+    refuse("a density field 2% denser than the certificate (volume above the limit)", simp["checker_args"], more,
+           "exceeds")
+    cut = "\n".join(" ".join("0" if ix < 8 and iy < 8 else v for ix, v in enumerate(r.split()))
+                     for iy, r in enumerate(srows)) + "\n"
+    refuse("the certificate with no material near the load", simp["checker_args"], cut)
+    lb = next(c for c in allc["topopt-binary"] if c["checker_args"][1] == "lbracket")
+    ltext = [l for l in open(os.path.join(ROOT, lb["certificate"])).read().splitlines() if l and l[0] in "01"]
+    ltext[0] = ltext[0][:-1] + "1"
+    refuse("solid material in the passive corner of the L-bracket", lb["checker_args"], "\n".join(ltext) + "\n",
+           "passive")
+    island = [[12 <= r < 28 and 12 <= c < 28 for c in range(40)] for r in range(40)]
+    refuse("a cell whose solid does not wrap around (an island)", ["cell", "bulk", "40", "0.5", "2", "0"],
+           grid_text(island), "wrap")
+    xcell = [[abs(r - c) <= 1 or abs(r + c - 39) <= 1 for c in range(40)] for r in range(40)]
+    refuse("a cell below the stiffness floor (diagonal bars: a mechanism along the axes)",
+           ["cell", "poisson", "40", "0.2", "2", "0.01"], grid_text(xcell), "stiffness floor")
+    code, val, out = run(TOPO, ["compliance", "bridge", "60", "20", "0.5", "binary", "2"], grid_text(cb))
+    expect("usage error: an unknown load case exits with status 2", code == 2 and val is None, out[-100:])
+    # corrupted certificates: one element flipped is refused or scores differently
+    for fam in ("topopt-binary", "metacell-bulk", "metacell-poisson"):
+        c = allc[fam][-1]
+        lines = open(os.path.join(ROOT, c["certificate"])).read().splitlines()
+        rows_ = [l for l in lines if l and l[0] in "01"]
+        r = len(rows_) // 2
+        flipped = rows_[r][:3] + ("0" if rows_[r][3] == "1" else "1") + rows_[r][4:]
+        code, val, out = run(TOPO, c["checker_args"], "\n".join(rows_[:r] + [flipped] + rows_[r + 1:]) + "\n")
+        expect(f"red control: {c['id']} with one element flipped is refused or scores differently",
+               val != c["certificate_value"], out[-200:])
+    # obb.py reads the cells
+    for fam in fams:
+        c = allc[fam][0]
+        r = subprocess.run([sys.executable, "-I", os.path.join(ROOT, "obb.py"), "check", c["id"],
+                            os.path.join(ROOT, c["certificate"])], capture_output=True, text=True)
+        expect(f"obb.py check {c['id']} certifies its certificate", r.returncode == 0 and "certified value" in r.stdout,
+               r.stdout[-300:])
+
+
+def Fraction_(text):
+    from fractions import Fraction
+    return Fraction(text)
+
+
 def main():
     unknotting()
     airfoils()
+    topopt()
     r = subprocess.run([sys.executable, "-I", os.path.join(HERE, "tools", "build.py"), "--check"],
                        capture_output=True, text=True)
     expect("pages, index.json and README in sync (tools/build.py --check)", r.returncode == 0, r.stdout)

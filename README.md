@@ -167,10 +167,14 @@ The first version (12 Nov 2026) has two fields: topology (the unknotting numbers
 crossings, from KnotInfo, checked as sequences of Markov moves and crossing changes on a closed braid; 67 cells) and
 aerodynamics in a pinned numerical model (airfoil sections scored by QV-Foil 1, a panel method with an integral
 boundary layer, written so that every machine gives the same number; 38 cells, all first entries). The airfoil scores
-are model values, not wind-tunnel data. Listed apart and not counted in the totals above:
+are model values, not wind-tunnel data. The second version (13 Nov 2026) adds topology optimisation of structures and
+metamaterials in a pinned finite-element model, QV-Topo 1 (least compliance of SIMP density fields and of 0/1 designs
+with a minimum feature size, and periodic material cells of extreme homogenised stiffness; 33 cells, two of them with
+published values under identical settings). Listed apart and not counted in the totals above:
 
     python3 -I obb.py list open-tables
     python3 -I obb.py check unknotting-10-6 my_sequence.txt
+    python3 -I obb.py check topopt-simp-mbb-60x20-v0.5-r2.4 my_density_field.txt
     python3 -I collections/open-tables/tests/test_open_tables.py
 
 ## Families

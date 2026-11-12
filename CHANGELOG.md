@@ -18,6 +18,32 @@ value can change within a version when its source table changes; the file then s
   some of them are public on Zenodo. Their values stay as read on 8 Nov until a rule for cells the table does not list is
   chosen.
 
+## Next (in review): Quantavane Open Tables, second version (13 Nov 2026): topology optimisation
+
+- QV-Topo 1, `collections/open-tables/checkers/topopt_check.py` (standard library only): plane-stress linear elasticity
+  on a fixed grid of square bilinear elements (Young's modulus 1, Poisson's ratio 0.3, void 1e-9), the 88-line code's
+  element matrix, our own profile Cholesky solver with correctly rounded sums (the same digits on every machine), our
+  own periodic homogenisation (energy method). The checker re-solves from the submitted design alone.
+- `topopt-simp` (10 cells): least compliance of density fields in the SIMP model with the 88-line code's density
+  filter (MBB beam, cantilever, L-bracket); the elements with density at least 1/2 must form one connected load path.
+  Two cells, the 88-line paper's density-filter MBB beam on 60 x 20 and 150 x 50 elements, carry published values
+  (233.71 and 235.73 in the paper's preprint, reproduced by our replay of its loop; 233.4878 for 60 x 20 in the
+  PINNeAPPle project's results, GitHub, Oct 2026, the lowest found). Our first searches give 232.110 and
+  233.714 for these two cells, below every value we found published for those settings; the other cells are first
+  entries.
+- `topopt-binary` (12 cells): 0/1 designs with a minimum feature size of 2 elements (volume 0.3, 0.4, 0.5) or 3
+  (volume 0.5), no point contacts and one connected piece; all first entries.
+- `metacell-bulk`, `metacell-shear`, `metacell-poisson` (11 cells): periodic 40 x 40 material cells (0/1, minimum
+  feature size 2, connected in both directions): greatest bulk modulus (with the Hashin-Shtrikman bound), greatest shear
+  modulus, most negative Poisson's ratio (uniaxial stress along either axis) with Young's moduli at least 0.01; all first
+  entries.
+- Searches (numpy, our code): optimality criteria and the method of moving asymptotes with the density filter;
+  projection, threshold, morphological repair and a local search for 0/1 designs; rotating-square seeds for the Poisson
+  cells. Tests: the element matrix, a plate in tension, a uniform cell and two laminates against their exact values,
+  red controls, the same output twice, every certificate replayed.
+- `obb.py`: an open-table cell may beat a published value (`record`), and a printed, rounded published value is beaten
+  only by one unit of its last decimal.
+
 ## Next (in review): Quantavane Open Tables, first version (12 Nov 2026)
 
 - `collections/open-tables/`: benchmark tables for fields with no keeper of records, each cell with its best known
