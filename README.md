@@ -69,7 +69,7 @@ the 100 are new single problems of v2.1, with eight new checkers; see the collec
 | `covering-design` | 55,985 | Covering Repository (successor of D. Gordon's La Jolla Covering Repository): C(v,k,t) and C(v,k,t,m) | `covering_check.py` |
 | `linear-code` | 15,255 | M. Grassl, codetables.de: linear codes over GF(q), q = 2, 3, 4, 5, 7, 8, 9 | `lincode_check.py` |
 | `spherical-code` | 14,782 | H. Cohn, table of spherical codes (dimensions 3 to 32 and a few more) | `sph_check.py` |
-| `covering-array` | 2,651 | C. Smolen's ca-tools table, successor of C. J. Colbourn's covering array tables | `ca_check.py` |
+| `covering-array` | 2,659 | C. Smolen's ca-tools table, successor of C. J. Colbourn's covering array tables | `ca_check.py` |
 | `constant-weight-code` | 1,134 | A. E. Brouwer, bounds for binary constant weight codes | `cw_check.py` |
 | `ordered-orthogonal-array` (in review for v2.2) | 2,600 | W. Ch. Schmid and R. Schürer, MinT: linear ordered orthogonal arrays of depth 1 to 8 and digital nets over GF(2) to GF(128) | `ooa_check.py` |
 | `circle-packing` (in review for v2.2) | 10,180 | E. Specht, Packomania: equal circles in a square, circle, half disc, quarter disc and isosceles right triangle; equal balls in a cube, a ball in R^3 and balls in R^4 to R^6 | `pack_check.py` |
