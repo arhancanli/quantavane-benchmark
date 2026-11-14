@@ -3,7 +3,7 @@
 For each family a few cells are drawn at random (seeded, among cells small enough to build an object for quickly).
 For each drawn cell our own code builds a simple valid object (a greedy covering design or covering array, random
 points on the sphere, a random linear code in systematic form, a greedy constant weight code, an ordered orthogonal
-array made of unit vectors); obb.py must certify it
+array made of unit vectors, a grid of equal circles, circles of radii 1..N in a row); obb.py must certify it
 and must find that it does not improve the best known value. Then a red control (the same object broken: a block,
 row or word removed or repeated, a dependent row, a point too few) must be refused. The project-scheduling family
 needs the instance files of its sets (not copied here): its cells are tested when instances/rcpsp/ holds them, and its
@@ -322,6 +322,69 @@ def test_project_scheduling(n, rng):
         expect(f"sample {c['id']} serial schedule", obb(c["id"], good), "does not improve,")
 
 
+def test_circle_packing(n, rng):
+    """Equal circles (balls) on a grid inside a box that lies in the container, radius half the grid step: valid and
+    below the table; the same packing with one centre repeated must be refused."""
+    import math
+    from fractions import Fraction as Fr
+    boxes = {"csq": (0, 1), "scu": (0, 1), "cci": (Fr(-1, 4), Fr(1, 4)), "ssp": (Fr(-1, 4), Fr(1, 4)),
+             "hsp4": (Fr(-1, 4), Fr(1, 4)), "hsp5": (Fr(-1, 4), Fr(1, 4)), "hsp6": (Fr(-1, 4), Fr(1, 4)),
+             "ccq": (Fr(1, 4), Fr(1, 2)), "crt": (Fr(1, 8), Fr(3, 8))}
+    dims = {"csq": 2, "cci": 2, "csc": 2, "ccq": 2, "crt": 2, "scu": 3, "ssp": 3, "hsp4": 4, "hsp5": 5, "hsp6": 6}
+    cells = [c for c in family_cells("circle-packing") if c["params"]["n"] <= 300]
+    for c in rng.sample(cells, min(n + 2, len(cells))):
+        sec, N = c["params"]["section"], c["params"]["n"]
+        d = dims[sec]
+        k = 1
+        while k ** d < N:
+            k += 1
+        if sec == "csc":
+            lo = [Fr(-1, 4), Fr(1, 4)]; side = Fr(1, 4)
+        else:
+            a, b = boxes[sec]; lo = [Fr(a)] * d; side = Fr(b) - Fr(a)
+        r = side / (2 * k)
+        pts = []
+        for idx in itertools.product(range(k), repeat=d):
+            if len(pts) == N:
+                break
+            pts.append([lo[j] + (2 * idx[j] + 1) * r for j in range(d)])
+        def num(x):
+            return f"{x.numerator / x.denominator:.30f}" if x.denominator & (x.denominator - 1) else str(x.numerator / x.denominator)
+        def dec(x):
+            q, rem = divmod(abs(x.numerator) * 10 ** 40, x.denominator)
+            s = str(q).zfill(41)
+            return ("-" if x < 0 else "") + s[:-40] + "." + s[-40:]
+        rr = Fr(int(r * 10 ** 40), 10 ** 40)          # rounded down: still a valid radius
+        lines = [dec(rr)] + [" ".join(dec(x) for x in p) for p in pts]
+        good = write(f"{c['id']}.txt", lines)
+        expect(f"sample {c['id']} grid of {N}", obb(c["id"], good), "does not improve,")
+        bad = write(f"{c['id']}_red.txt", lines[:-1] + [lines[1]])
+        expect(f"red   {c['id']} (a centre repeated)", obb(c["id"], bad), "NOT CERTIFIED,")
+
+
+def test_growing_circle_packing(n, rng):
+    """Circles of radii 1..N in a row along a diameter (or along the middle of the square): valid and far above the
+    table; the container shrunk by one must be refused."""
+    for c in rng.sample(family_cells("growing-circle-packing"), n):
+        sec, N = c["params"]["section"], c["params"]["n"]
+        L = N * (N + 1)
+        xs, x = [], 0
+        for i in range(1, N + 1):
+            xs.append(x + i)
+            x += 2 * i
+        if sec == "ccin":
+            V = L // 2
+            pts = [(xi - V, 0) for xi in xs]
+        else:
+            V = max(L, 2 * N)
+            pts = [(xi, N) for xi in xs]
+        lines = [str(V)] + [f"{a} {b}" for a, b in pts]
+        good = write(f"{c['id']}.txt", lines)
+        expect(f"sample {c['id']} circles in a row", obb(c["id"], good), "does not improve,")
+        bad = write(f"{c['id']}_red.txt", [str(V - 1)] + lines[1:])
+        expect(f"red   {c['id']} (container shrunk by 1)", obb(c["id"], bad), "NOT CERTIFIED,")
+
+
 def main():
     n = int(sys.argv[1]) if len(sys.argv) > 1 else 3
     seed = int(sys.argv[2]) if len(sys.argv) > 2 else 2026
@@ -331,7 +394,9 @@ def main():
                        ("spherical-code", test_spherical_code), ("linear-code", test_linear_code),
                        ("constant-weight-code", test_constant_weight_code),
                        ("project-scheduling", test_project_scheduling),
-                       ("ordered-orthogonal-array", test_ordered_orthogonal_array)):
+                       ("ordered-orthogonal-array", test_ordered_orthogonal_array),
+                       ("circle-packing", test_circle_packing),
+                       ("growing-circle-packing", test_growing_circle_packing)):
         if os.path.exists(os.path.join(ROOT, "families", name, "cells.jsonl")):
             test(n, rng)
         else:

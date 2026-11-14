@@ -18,6 +18,14 @@ value can change within a version when its source table changes; the file then s
   some of them are public on Zenodo. Their values stay as read on 8 Nov until a rule for cells the table does not list is
   chosen.
 
+## Next (in review): the families `circle-packing` and `growing-circle-packing` from Packomania (14 Nov 2026)
+
+- New exact checker `checkers/pack_check.py` (standard library only): circles or balls in a container, every number read as an exact decimal and every test (containment, and |c_i - c_j|^2 >= (r_i + r_j)^2 for the pairs in neighbouring cells of a grid of side 2 max r, which is exact) in integer arithmetic. Prints the value as an exact fraction.
+- `families/circle-packing` (10,180 cells, maximize the radius) and `families/growing-circle-packing` (299 cells, minimize the container), read from the Packomania section pages on 14 Nov 2026 22:3x-22:5x +04 (SHA-256 of each page in the family files; `tools/packomania_cells.py`). A cell is an N whose value is not in bold (proven optimal).
+- Frames checked on Packomania's own coordinate files (csq30, cci30, csc30, ccq30, crt30, scu30, ssp30 with its 29 listed centres, ccin10, csqn10): each passes just below the listed value and fails 10^-9 above it (10^-6 for the container size).
+- `tests/test_pack.py` (run by `test.sh`): 22 checks, among them touching packings at the edge of validity with red controls one unit in the last decimal away, malformed inputs, and 10,000 touching circles. `tests/sample_cells.py` samples both families (a grid of equal circles in a box inside the container; radii 1..N in a row) with red controls.
+- index.json: 162,459 problems.
+
 ## Next (in review): the family `ordered-orthogonal-array` from MinT (14 Nov 2026)
 
 - New exact checker `checkers/ooa_check.py` (standard library only) for linear ordered orthogonal arrays over GF(b),

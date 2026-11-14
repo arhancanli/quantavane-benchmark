@@ -1,0 +1,60 @@
+{
+ "keeper": "E. Specht, Packomania (packomania.com)",
+ "page": "https://www.packomania.com/",
+ "read": "2026-11-14",
+ "revision": "the section pages read 14 Nov 2026 22:3x-22:5x +04 (SHA-256 of each page in section_info)",
+ "exact_values": false,
+ "holder_unknown": "not named in the section's table",
+ "holder_sources": "the reference in the last column of the section's table, from its list of references",
+ "single_problems_left_out": 0,
+ "quantavane_records": 0,
+ "cells": "cells.jsonl",
+ "family": "growing-circle-packing",
+ "title": "Circles of radii 1, 2, ..., N packed in the smallest circle or square",
+ "added": "2.2",
+ "objective": "minimize",
+ "id_prefixes": [
+  "pack-"
+ ],
+ "cell_url": "https://www.packomania.com/{section}/{section}.html",
+ "template": {
+  "title": "Circles of radii 1 to {n} in the container of Packomania section {section}",
+  "statement": "Place {n} non-overlapping circles of radii 1, 2, ..., {n} in the container of section {section} whose size V (the radius of the circle, or the side of the square) is as small as possible.",
+  "submission": "Text file: V on the first line, then {n} lines with the centres of the circles of radius 1, 2, ..., {n} in that order (decimal numbers), in the frame given by checkers/pack_check.py for section {section}.",
+  "args": [
+   "{section}",
+   "{n}"
+  ]
+ },
+ "checker": {
+  "program": "pack_check.py",
+  "value": "result"
+ },
+ "score": "the size V of the container (smaller is better)",
+ "best_text": "The best known container in Packomania's table has size {best} ({holder}); a valid packing in a smaller one improves it.",
+ "open_rule": "every N of the sections ccin and csqn whose value is not in bold (proven optimal), N >= 4",
+ "left_out": "ccin: 0 proven, 3 small N; csqn: 0 proven, 3 small N; the sections with radii i^(1/2), i^(-1/2), i^(-2/3) and i^(-1/5) (irrational radii)",
+ "variants": {
+  "ccin": {
+   "title": "Circles of radii 1 to {n} in a circle centred at 0 (Packomania {section})",
+   "statement": "Place {n} non-overlapping circles of radii 1, 2, ..., {n} in a circle centred at 0 whose size V (the radius of the circle, or the side of the square) is as small as possible.",
+   "submission": "Text file: V on the first line, then {n} lines with the centres of the circles of radius 1, 2, ..., {n} in that order (decimal numbers), in the frame given by checkers/pack_check.py for section {section}."
+  },
+  "csqn": {
+   "title": "Circles of radii 1 to {n} in a square [0,V]^2 (Packomania {section})",
+   "statement": "Place {n} non-overlapping circles of radii 1, 2, ..., {n} in a square [0,V]^2 whose size V (the radius of the circle, or the side of the square) is as small as possible.",
+   "submission": "Text file: V on the first line, then {n} lines with the centres of the circles of radius 1, 2, ..., {n} in that order (decimal numbers), in the frame given by checkers/pack_check.py for section {section}."
+  }
+ },
+ "section_info": {
+  "ccin": {
+   "container": "a circle centred at 0",
+   "page_sha256": "589ca48c6ea07d168bf527c40672a7fc88d5ce8b4eb1947581b431265a302cfb"
+  },
+  "csqn": {
+   "container": "a square [0,V]^2",
+   "page_sha256": "d5b01e01609431c6b5755575a5662f2cbb088d0aa49cee48fc59dccf981889b0"
+  }
+ },
+ "count": 299
+}

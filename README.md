@@ -72,6 +72,8 @@ the 100 are new single problems of v2.1, with eight new checkers; see the collec
 | `covering-array` | 2,651 | C. Smolen's ca-tools table, successor of C. J. Colbourn's covering array tables | `ca_check.py` |
 | `constant-weight-code` | 1,134 | A. E. Brouwer, bounds for binary constant weight codes | `cw_check.py` |
 | `ordered-orthogonal-array` (in review for v2.2) | 2,600 | W. Ch. Schmid and R. Schürer, MinT: linear ordered orthogonal arrays of depth 1 to 8 and digital nets over GF(2) to GF(128) | `ooa_check.py` |
+| `circle-packing` (in review for v2.2) | 10,180 | E. Specht, Packomania: equal circles in a square, circle, half disc, quarter disc and isosceles right triangle; equal balls in a cube, a ball in R^3 and balls in R^4 to R^6 | `pack_check.py` |
+| `growing-circle-packing` (in review for v2.2) | 299 | E. Specht, Packomania: circles of radii 1, 2, ..., N in the smallest circle or square | `pack_check.py` |
 
 Every cell is open in the sense written in its family file: its best known value is not marked optimal by the keeper
 and is strictly worse than the bound on the other side (the keeper's own bound, or a standard bound we compute and
@@ -223,6 +225,7 @@ What each family takes from its table, and what it leaves out:
   cells whose check would be longer, and the 270 cells of depth 1 over GF(2) to GF(9), which are linear codes that
   the family `linear-code` already asks for. With this family the benchmark has 151,980 problems (395 single problems
   and 151,585 cells; `covering-array` has had 2,659 cells since its table was re-read on 12 Nov).
+- `circle-packing` and `growing-circle-packing` (in review for v2.2; read 14 Nov 2026): every N of the Packomania sections with rational geometry (csq, cci, csc, ccq, crt, scu, ssp, hsp4, hsp5, hsp6; ccin and csqn for radii 1..N) whose value is not in bold (Packomania marks proven optimal packings in bold); sections that mark nothing leave out their small N. `pack_check.py` reads the radius (or the container size) and the centres as decimals and decides containment and every overlap in exact integer arithmetic; its frames were checked on Packomania's own coordinate files for csq, cci, csc, ccq, crt, scu, ssp, ccin and csqn (each passes just below the listed value and fails 10^-9 above it). Left out: the regular-polygon sections and the sections with irrational radii, whose exact check needs algebraic numbers. With these two families the benchmark has 162,459 problems.
 - `project-scheduling`: every instance of the sets with open instances whose best known makespan is above its lower
   bound and which the site does not mark optimal; the open counts match the site's own table of November 2026. The
   highRD, lowRU and 1k variants are not read: their dataset files date from April 2021, many of their upper bounds are

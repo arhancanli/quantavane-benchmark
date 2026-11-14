@@ -1,0 +1,152 @@
+{
+ "keeper": "E. Specht, Packomania (packomania.com)",
+ "page": "https://www.packomania.com/",
+ "read": "2026-11-14",
+ "revision": "the section pages read 14 Nov 2026 22:3x-22:5x +04 (SHA-256 of each page in section_info)",
+ "exact_values": false,
+ "holder_unknown": "not named in the section's table",
+ "holder_sources": "the reference in the last column of the section's table, from its list of references",
+ "single_problems_left_out": 0,
+ "quantavane_records": 0,
+ "cells": "cells.jsonl",
+ "family": "circle-packing",
+ "title": "Equal circles and balls packed in a container with the largest radius",
+ "added": "2.2",
+ "objective": "maximize",
+ "id_prefixes": [
+  "pack-"
+ ],
+ "cell_url": "https://www.packomania.com/{section}/{section}.html",
+ "template": {
+  "title": "{n} equal circles or balls in the container of Packomania section {section}",
+  "statement": "Place {n} non-overlapping circles (balls) of equal radius in the container of section {section} so that the radius is as large as possible.",
+  "submission": "Text file: the radius on the first line, then {n} lines with the coordinates of the centres (decimal numbers separated by spaces or commas), in the frame given by checkers/pack_check.py for section {section}.",
+  "args": [
+   "{section}",
+   "{n}"
+  ]
+ },
+ "checker": {
+  "program": "pack_check.py",
+  "value": "result"
+ },
+ "score": "the common radius (larger is better)",
+ "best_text": "The best known radius in Packomania's table is {best} ({holder}); a valid packing with a larger radius improves it.",
+ "open_rule": "every N of the sections csq, cci, csc, ccq, crt, scu, ssp, hsp4, hsp5 and hsp6 whose radius is not in bold (proven optimal)",
+ "left_out": "csq: 30 proven, 0 small N; cci: 13 proven, 0 small N; csc: 0 proven, 3 small N; ccq: 0 proven, 2 small N; crt: 0 proven, 2 small N; scu: 0 proven, 9 small N; ssp: 0 proven, 11 small N; hsp4: 0 proven, 5 small N; hsp5: 0 proven, 5 small N; hsp6: 0 proven, 6 small N; the regular-polygon sections and the sections with irrational radii (exact checks need algebraic numbers)",
+ "variants": {
+  "csq": {
+   "title": "{n} equal circles in the unit square [0,1]^2 (Packomania {section})",
+   "statement": "Place {n} non-overlapping circles of equal radius in the unit square [0,1]^2 so that the radius is as large as possible.",
+   "submission": "Text file: the radius on the first line, then {n} lines with the coordinates of the centres (decimal numbers separated by spaces or commas), in the frame given by checkers/pack_check.py for section {section}."
+  },
+  "cci": {
+   "title": "{n} equal circles in a circle of radius 1 (Packomania {section})",
+   "statement": "Place {n} non-overlapping circles of equal radius in a circle of radius 1 so that the radius is as large as possible.",
+   "submission": "Text file: the radius on the first line, then {n} lines with the coordinates of the centres (decimal numbers separated by spaces or commas), in the frame given by checkers/pack_check.py for section {section}."
+  },
+  "csc": {
+   "title": "{n} equal circles in a half disc of radius 1 (Packomania {section})",
+   "statement": "Place {n} non-overlapping circles of equal radius in a half disc of radius 1 so that the radius is as large as possible.",
+   "submission": "Text file: the radius on the first line, then {n} lines with the coordinates of the centres (decimal numbers separated by spaces or commas), in the frame given by checkers/pack_check.py for section {section}."
+  },
+  "ccq": {
+   "title": "{n} equal circles in a quarter disc of radius 1 (Packomania {section})",
+   "statement": "Place {n} non-overlapping circles of equal radius in a quarter disc of radius 1 so that the radius is as large as possible.",
+   "submission": "Text file: the radius on the first line, then {n} lines with the coordinates of the centres (decimal numbers separated by spaces or commas), in the frame given by checkers/pack_check.py for section {section}."
+  },
+  "crt": {
+   "title": "{n} equal circles in an isosceles right triangle with legs of length 1 (Packomania {section})",
+   "statement": "Place {n} non-overlapping circles of equal radius in an isosceles right triangle with legs of length 1 so that the radius is as large as possible.",
+   "submission": "Text file: the radius on the first line, then {n} lines with the coordinates of the centres (decimal numbers separated by spaces or commas), in the frame given by checkers/pack_check.py for section {section}."
+  },
+  "scu": {
+   "title": "{n} equal balls in the unit cube [0,1]^3 (Packomania {section})",
+   "statement": "Place {n} non-overlapping balls of equal radius in the unit cube [0,1]^3 so that the radius is as large as possible.",
+   "submission": "Text file: the radius on the first line, then {n} lines with the coordinates of the centres (decimal numbers separated by spaces or commas), in the frame given by checkers/pack_check.py for section {section}."
+  },
+  "ssp": {
+   "title": "{n} equal balls in a ball of radius 1 in R^3 (Packomania {section})",
+   "statement": "Place {n} non-overlapping balls of equal radius in a ball of radius 1 in R^3 so that the radius is as large as possible.",
+   "submission": "Text file: the radius on the first line, then {n} lines with the coordinates of the centres (decimal numbers separated by spaces or commas), in the frame given by checkers/pack_check.py for section {section}."
+  },
+  "hsp4": {
+   "title": "{n} equal balls in a ball of radius 1 in R^4 (Packomania {section})",
+   "statement": "Place {n} non-overlapping balls of equal radius in a ball of radius 1 in R^4 so that the radius is as large as possible.",
+   "submission": "Text file: the radius on the first line, then {n} lines with the coordinates of the centres (decimal numbers separated by spaces or commas), in the frame given by checkers/pack_check.py for section {section}."
+  },
+  "hsp5": {
+   "title": "{n} equal balls in a ball of radius 1 in R^5 (Packomania {section})",
+   "statement": "Place {n} non-overlapping balls of equal radius in a ball of radius 1 in R^5 so that the radius is as large as possible.",
+   "submission": "Text file: the radius on the first line, then {n} lines with the coordinates of the centres (decimal numbers separated by spaces or commas), in the frame given by checkers/pack_check.py for section {section}."
+  },
+  "hsp6": {
+   "title": "{n} equal balls in a ball of radius 1 in R^6 (Packomania {section})",
+   "statement": "Place {n} non-overlapping balls of equal radius in a ball of radius 1 in R^6 so that the radius is as large as possible.",
+   "submission": "Text file: the radius on the first line, then {n} lines with the coordinates of the centres (decimal numbers separated by spaces or commas), in the frame given by checkers/pack_check.py for section {section}."
+  }
+ },
+ "section_info": {
+  "csq": {
+   "shape": "circles",
+   "container": "the unit square [0,1]^2",
+   "dimension": 2,
+   "page_sha256": "0eb9231dad97587fa198988d22fc348f430724b2d4d0f5de393eaee8736799de"
+  },
+  "cci": {
+   "shape": "circles",
+   "container": "a circle of radius 1",
+   "dimension": 2,
+   "page_sha256": "de37305f030c7380a1f92f2039c0a5a8a937a9b81a1efa2b16c0a3652dcae5e0"
+  },
+  "csc": {
+   "shape": "circles",
+   "container": "a half disc of radius 1",
+   "dimension": 2,
+   "page_sha256": "5b433696ee1d3ad46c7ee92e67fb80be67cd587788488ae0bce3d1772312f3ec"
+  },
+  "ccq": {
+   "shape": "circles",
+   "container": "a quarter disc of radius 1",
+   "dimension": 2,
+   "page_sha256": "6cfec8cac4fc1e6b3c36cc7425070dd00d038d7e67d77b4ca7b4152f095582e1"
+  },
+  "crt": {
+   "shape": "circles",
+   "container": "an isosceles right triangle with legs of length 1",
+   "dimension": 2,
+   "page_sha256": "92adb2c9d997d209a6766978afae24f60bce859367f9dba251a95147b78ad763"
+  },
+  "scu": {
+   "shape": "balls",
+   "container": "the unit cube [0,1]^3",
+   "dimension": 3,
+   "page_sha256": "87b299965ac41d96335b1cf490be19342b560d846b0396102d943a8e53c80e99"
+  },
+  "ssp": {
+   "shape": "balls",
+   "container": "a ball of radius 1 in R^3",
+   "dimension": 3,
+   "page_sha256": "e2d84d0d6cfd66870b940bfc068ba3e0827a51ea407b365473b869db828e77fd"
+  },
+  "hsp4": {
+   "shape": "balls",
+   "container": "a ball of radius 1 in R^4",
+   "dimension": 4,
+   "page_sha256": "1ea13a7cb2917674e106c6737336dbb21729c1b50f2554969ca54b3a25012135"
+  },
+  "hsp5": {
+   "shape": "balls",
+   "container": "a ball of radius 1 in R^5",
+   "dimension": 5,
+   "page_sha256": "d14be1e904feaeb9d2aaab02529236fff83bc7a1252fd3b13828ca761cfc75de"
+  },
+  "hsp6": {
+   "shape": "balls",
+   "container": "a ball of radius 1 in R^6",
+   "dimension": 6,
+   "page_sha256": "a59a0018025a053b82e6f726e275598e988d33e0d737d3d0fe5b8c1b31af34be"
+  }
+ },
+ "count": 10180
+}

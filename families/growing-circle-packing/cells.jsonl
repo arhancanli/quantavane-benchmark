@@ -1,0 +1,299 @@
+{"id": "pack-ccin-n4", "params": {"section": "ccin", "n": 4}, "variant": "ccin", "best": "7.0000000000"}
+{"id": "pack-ccin-n5", "params": {"section": "ccin", "n": 5}, "variant": "ccin", "best": "9.0013977461", "holder": "Klaus Nagel, Hugo Pfoertner, Al Zimmermann's Programming Contests — Circle Packing ."}
+{"id": "pack-ccin-n6", "params": {"section": "ccin", "n": 6}, "variant": "ccin", "best": "11.0570403997", "holder": "Fred Mellender, Al Zimmermann's Programming Contests — Circle Packing ."}
+{"id": "pack-ccin-n7", "params": {"section": "ccin", "n": 7}, "variant": "ccin", "best": "13.4621106776", "holder": "Gerrit de Blaauw, Al Zimmermann's Programming Contests — Circle Packing ."}
+{"id": "pack-ccin-n8", "params": {"section": "ccin", "n": 8}, "variant": "ccin", "best": "16.2217466766", "holder": "Gerrit de Blaauw, Al Zimmermann's Programming Contests — Circle Packing ."}
+{"id": "pack-ccin-n9", "params": {"section": "ccin", "n": 9}, "variant": "ccin", "best": "19.2331939081", "holder": "Gerrit de Blaauw, Al Zimmermann's Programming Contests — Circle Packing ."}
+{"id": "pack-ccin-n10", "params": {"section": "ccin", "n": 10}, "variant": "ccin", "best": "22.0001930127", "holder": "Steve Trevorrow, Al Zimmermann's Programming Contests — Circle Packing ."}
+{"id": "pack-ccin-n11", "params": {"section": "ccin", "n": 11}, "variant": "ccin", "best": "24.9606342889", "holder": "Gerrit de Blaauw, Al Zimmermann's Programming Contests — Circle Packing ."}
+{"id": "pack-ccin-n12", "params": {"section": "ccin", "n": 12}, "variant": "ccin", "best": "28.3713894364", "holder": "Steve Trevorrow, Al Zimmermann's Programming Contests — Circle Packing ."}
+{"id": "pack-ccin-n13", "params": {"section": "ccin", "n": 13}, "variant": "ccin", "best": "31.5458670176", "holder": "Steve Trevorrow, Al Zimmermann's Programming Contests — Circle Packing ."}
+{"id": "pack-ccin-n14", "params": {"section": "ccin", "n": 14}, "variant": "ccin", "best": "35.0956471436", "holder": "Tomas Rokicki, Al Zimmermann's Programming Contests — Circle Packing ."}
+{"id": "pack-ccin-n15", "params": {"section": "ccin", "n": 15}, "variant": "ccin", "best": "38.8379955082", "holder": "Tomas Rokicki, Al Zimmermann's Programming Contests — Circle Packing ."}
+{"id": "pack-ccin-n16", "params": {"section": "ccin", "n": 16}, "variant": "ccin", "best": "42.4581164357", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n17", "params": {"section": "ccin", "n": 17}, "variant": "ccin", "best": "46.2913421172", "holder": "Tomas Rokicki, Al Zimmermann's Programming Contests — Circle Packing ."}
+{"id": "pack-ccin-n18", "params": {"section": "ccin", "n": 18}, "variant": "ccin", "best": "50.1197626235", "holder": "Boris von Loesch, Al Zimmermann's Programming Contests — Circle Packing ."}
+{"id": "pack-ccin-n19", "params": {"section": "ccin", "n": 19}, "variant": "ccin", "best": "54.2402935914", "holder": "Tomas Rokicki, Al Zimmermann's Programming Contests — Circle Packing ."}
+{"id": "pack-ccin-n20", "params": {"section": "ccin", "n": 20}, "variant": "ccin", "best": "58.4005674790", "holder": "Bernardetta Addis, Marco Locatelli, Fabio Schoen, Al Zimmermann's Programming Contests — Circle Packing ."}
+{"id": "pack-ccin-n21", "params": {"section": "ccin", "n": 21}, "variant": "ccin", "best": "62.5588770939", "holder": "Boris von Loesch, Al Zimmermann's Programming Contests — Circle Packing ."}
+{"id": "pack-ccin-n22", "params": {"section": "ccin", "n": 22}, "variant": "ccin", "best": "66.7602862414", "holder": "Tomas Rokicki, Al Zimmermann's Programming Contests — Circle Packing ."}
+{"id": "pack-ccin-n23", "params": {"section": "ccin", "n": 23}, "variant": "ccin", "best": "71.1994616079", "holder": "Boris von Loesch, Al Zimmermann's Programming Contests — Circle Packing ."}
+{"id": "pack-ccin-n24", "params": {"section": "ccin", "n": 24}, "variant": "ccin", "best": "75.7491425819", "holder": "André Müller, Johannes Josef Schneider, Elmar Schömer, Packing a multidisperse system of hard discs in a circular environment , Phys. Rev. E 79 , 021102 (2009)."}
+{"id": "pack-ccin-n25", "params": {"section": "ccin", "n": 25}, "variant": "ccin", "best": "80.2858644400", "holder": "Bernardetta Addis, Marco Locatelli, Fabio Schoen, Al Zimmermann's Programming Contests — Circle Packing ."}
+{"id": "pack-ccin-n26", "params": {"section": "ccin", "n": 26}, "variant": "ccin", "best": "84.9781910657", "holder": ", private communication, January 2012–February 2013."}
+{"id": "pack-ccin-n27", "params": {"section": "ccin", "n": 27}, "variant": "ccin", "best": "89.7509626820", "holder": "André Müller, Johannes Josef Schneider, Elmar Schömer, Packing a multidisperse system of hard discs in a circular environment , Phys. Rev. E 79 , 021102 (2009)."}
+{"id": "pack-ccin-n28", "params": {"section": "ccin", "n": 28}, "variant": "ccin", "best": "94.5258771015", "holder": "André Müller, Johannes Josef Schneider, Elmar Schömer, Packing a multidisperse system of hard discs in a circular environment , Phys. Rev. E 79 , 021102 (2009)."}
+{"id": "pack-ccin-n29", "params": {"section": "ccin", "n": 29}, "variant": "ccin", "best": "99.4831115636", "holder": "André Müller, Johannes Josef Schneider, Elmar Schömer, Packing a multidisperse system of hard discs in a circular environment , Phys. Rev. E 79 , 021102 (2009)."}
+{"id": "pack-ccin-n30", "params": {"section": "ccin", "n": 30}, "variant": "ccin", "best": "104.5403637652", "holder": ", private communication, March 2012."}
+{"id": "pack-ccin-n31", "params": {"section": "ccin", "n": 31}, "variant": "ccin", "best": "109.6292406611", "holder": ", private communication, January 2012–February 2013."}
+{"id": "pack-ccin-n32", "params": {"section": "ccin", "n": 32}, "variant": "ccin", "best": "114.7998146630", "holder": ", private communication, March 2012."}
+{"id": "pack-ccin-n33", "params": {"section": "ccin", "n": 33}, "variant": "ccin", "best": "120.0656596383", "holder": "André Müller, Johannes Josef Schneider, Elmar Schömer, Packing a multidisperse system of hard discs in a circular environment , Phys. Rev. E 79 , 021102 (2009)."}
+{"id": "pack-ccin-n34", "params": {"section": "ccin", "n": 34}, "variant": "ccin", "best": "125.3669392055", "holder": "André Müller, Johannes Josef Schneider, Elmar Schömer, Packing a multidisperse system of hard discs in a circular environment , Phys. Rev. E 79 , 021102 (2009)."}
+{"id": "pack-ccin-n35", "params": {"section": "ccin", "n": 35}, "variant": "ccin", "best": "130.8490787587", "holder": ", private communication, September 2012–March 2013."}
+{"id": "pack-ccin-n36", "params": {"section": "ccin", "n": 36}, "variant": "ccin", "best": "136.3079108204", "holder": ", private communication, January 2012–February 2013."}
+{"id": "pack-ccin-n37", "params": {"section": "ccin", "n": 37}, "variant": "ccin", "best": "141.7837334298", "holder": ", private communication, January 2012–February 2013."}
+{"id": "pack-ccin-n38", "params": {"section": "ccin", "n": 38}, "variant": "ccin", "best": "147.4521164651", "holder": "André Müller, Johannes Josef Schneider, Elmar Schömer, Packing a multidisperse system of hard discs in a circular environment , Phys. Rev. E 79 , 021102 (2009)."}
+{"id": "pack-ccin-n39", "params": {"section": "ccin", "n": 39}, "variant": "ccin", "best": "153.1997433521", "holder": "Zhizhong Zeng, Kun He, Xinguo Yu, Wenqi Huang, Zhanghua Fu, private communication, July 2014."}
+{"id": "pack-ccin-n40", "params": {"section": "ccin", "n": 40}, "variant": "ccin", "best": "158.9540858379", "holder": ", Solution-Hashing Search Based on Layout-Graph Transformation for Unequal Circle Packing , submitted to European Journal of Operational Research, under review, May 2024."}
+{"id": "pack-ccin-n41", "params": {"section": "ccin", "n": 41}, "variant": "ccin", "best": "164.8062304148", "holder": "Zhizhong Zeng, Kun He, Xinguo Yu, Wenqi Huang, Zhanghua Fu, private communication, July 2014."}
+{"id": "pack-ccin-n42", "params": {"section": "ccin", "n": 42}, "variant": "ccin", "best": "170.6978110333", "holder": "Zhizhong Zeng, Kun He, Xinguo Yu, Wenqi Huang, Zhanghua Fu, private communication, July 2014."}
+{"id": "pack-ccin-n43", "params": {"section": "ccin", "n": 43}, "variant": "ccin", "best": "176.7326562420", "holder": "Zhizhong Zeng, Kun He, Xinguo Yu, Wenqi Huang, Zhanghua Fu, private communication, July 2014."}
+{"id": "pack-ccin-n44", "params": {"section": "ccin", "n": 44}, "variant": "ccin", "best": "182.7726193526", "holder": "Zhizhong Zeng, Kun He, Xinguo Yu, Wenqi Huang, Zhanghua Fu, private communication, July 2014."}
+{"id": "pack-ccin-n45", "params": {"section": "ccin", "n": 45}, "variant": "ccin", "best": "188.9649690047", "holder": "Zhizhong Zeng, Kun He, Xinguo Yu, Wenqi Huang, Zhanghua Fu, private communication, July 2014."}
+{"id": "pack-ccin-n46", "params": {"section": "ccin", "n": 46}, "variant": "ccin", "best": "195.2039013515", "holder": "Zhizhong Zeng, Kun He, Xinguo Yu, Wenqi Huang, Zhanghua Fu, private communication, July 2014."}
+{"id": "pack-ccin-n47", "params": {"section": "ccin", "n": 47}, "variant": "ccin", "best": "201.4861933308", "holder": "Zhizhong Zeng, Kun He, Xinguo Yu, Wenqi Huang, Zhanghua Fu, private communication, July 2014."}
+{"id": "pack-ccin-n48", "params": {"section": "ccin", "n": 48}, "variant": "ccin", "best": "207.8008434073", "holder": "Zhizhong Zeng, Kun He, Xinguo Yu, Wenqi Huang, Zhanghua Fu, private communication, July 2014."}
+{"id": "pack-ccin-n49", "params": {"section": "ccin", "n": 49}, "variant": "ccin", "best": "214.1809301120", "holder": "Zhizhong Zeng, Kun He, Xinguo Yu, Wenqi Huang, Zhanghua Fu, private communication, July 2014."}
+{"id": "pack-ccin-n50", "params": {"section": "ccin", "n": 50}, "variant": "ccin", "best": "220.5654002624"}
+{"id": "pack-ccin-n51", "params": {"section": "ccin", "n": 51}, "variant": "ccin", "best": "227.6118889083", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n52", "params": {"section": "ccin", "n": 52}, "variant": "ccin", "best": "234.2303965905", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n53", "params": {"section": "ccin", "n": 53}, "variant": "ccin", "best": "240.9131422751", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n54", "params": {"section": "ccin", "n": 54}, "variant": "ccin", "best": "247.5334707287", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n55", "params": {"section": "ccin", "n": 55}, "variant": "ccin", "best": "254.4888902654", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n56", "params": {"section": "ccin", "n": 56}, "variant": "ccin", "best": "261.4140244768", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n57", "params": {"section": "ccin", "n": 57}, "variant": "ccin", "best": "268.2356791048", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n58", "params": {"section": "ccin", "n": 58}, "variant": "ccin", "best": "275.1554388395", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n59", "params": {"section": "ccin", "n": 59}, "variant": "ccin", "best": "282.2301697134", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n60", "params": {"section": "ccin", "n": 60}, "variant": "ccin", "best": "289.0403554611", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n61", "params": {"section": "ccin", "n": 61}, "variant": "ccin", "best": "296.2095348015", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n62", "params": {"section": "ccin", "n": 62}, "variant": "ccin", "best": "303.6496378037", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n63", "params": {"section": "ccin", "n": 63}, "variant": "ccin", "best": "310.9037289187", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n64", "params": {"section": "ccin", "n": 64}, "variant": "ccin", "best": "318.1909221020", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n65", "params": {"section": "ccin", "n": 65}, "variant": "ccin", "best": "325.5223796540", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n66", "params": {"section": "ccin", "n": 66}, "variant": "ccin", "best": "332.8269520771", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n67", "params": {"section": "ccin", "n": 67}, "variant": "ccin", "best": "340.4359880387", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n68", "params": {"section": "ccin", "n": 68}, "variant": "ccin", "best": "347.9867945882", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n69", "params": {"section": "ccin", "n": 69}, "variant": "ccin", "best": "355.5914158104", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n70", "params": {"section": "ccin", "n": 70}, "variant": "ccin", "best": "362.9158416284", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n71", "params": {"section": "ccin", "n": 71}, "variant": "ccin", "best": "371.0687508599", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n72", "params": {"section": "ccin", "n": 72}, "variant": "ccin", "best": "378.7478706300", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n73", "params": {"section": "ccin", "n": 73}, "variant": "ccin", "best": "386.6563656304"}
+{"id": "pack-ccin-n74", "params": {"section": "ccin", "n": 74}, "variant": "ccin", "best": "394.3465005357", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n75", "params": {"section": "ccin", "n": 75}, "variant": "ccin", "best": "402.0799880334", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n76", "params": {"section": "ccin", "n": 76}, "variant": "ccin", "best": "410.0177474292", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n77", "params": {"section": "ccin", "n": 77}, "variant": "ccin", "best": "418.0603994857", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n78", "params": {"section": "ccin", "n": 78}, "variant": "ccin", "best": "426.3231953523", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n79", "params": {"section": "ccin", "n": 79}, "variant": "ccin", "best": "434.1901924214", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n80", "params": {"section": "ccin", "n": 80}, "variant": "ccin", "best": "442.4831932676", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n81", "params": {"section": "ccin", "n": 81}, "variant": "ccin", "best": "450.8543463693", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n82", "params": {"section": "ccin", "n": 82}, "variant": "ccin", "best": "458.8197114672", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n83", "params": {"section": "ccin", "n": 83}, "variant": "ccin", "best": "467.2780993459", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n84", "params": {"section": "ccin", "n": 84}, "variant": "ccin", "best": "475.7028095683", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n85", "params": {"section": "ccin", "n": 85}, "variant": "ccin", "best": "484.1678859632", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n86", "params": {"section": "ccin", "n": 86}, "variant": "ccin", "best": "492.6642752977", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n87", "params": {"section": "ccin", "n": 87}, "variant": "ccin", "best": "501.2556050329", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n88", "params": {"section": "ccin", "n": 88}, "variant": "ccin", "best": "509.8232457804", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n89", "params": {"section": "ccin", "n": 89}, "variant": "ccin", "best": "518.2781192774", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n90", "params": {"section": "ccin", "n": 90}, "variant": "ccin", "best": "526.8016176568", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n91", "params": {"section": "ccin", "n": 91}, "variant": "ccin", "best": "535.5834760683", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n92", "params": {"section": "ccin", "n": 92}, "variant": "ccin", "best": "544.2222398393", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n93", "params": {"section": "ccin", "n": 93}, "variant": "ccin", "best": "553.0934479101", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n94", "params": {"section": "ccin", "n": 94}, "variant": "ccin", "best": "561.9662923395", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n95", "params": {"section": "ccin", "n": 95}, "variant": "ccin", "best": "570.7106424143", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n96", "params": {"section": "ccin", "n": 96}, "variant": "ccin", "best": "579.8352066764", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n97", "params": {"section": "ccin", "n": 97}, "variant": "ccin", "best": "588.5480128356", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n99", "params": {"section": "ccin", "n": 99}, "variant": "ccin", "best": "606.6079644498", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n100", "params": {"section": "ccin", "n": 100}, "variant": "ccin", "best": "615.8160668874", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n101", "params": {"section": "ccin", "n": 101}, "variant": "ccin", "best": "625.1092774207", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n102", "params": {"section": "ccin", "n": 102}, "variant": "ccin", "best": "634.4386140185", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n103", "params": {"section": "ccin", "n": 103}, "variant": "ccin", "best": "643.9964266607", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n104", "params": {"section": "ccin", "n": 104}, "variant": "ccin", "best": "652.8801844647", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n105", "params": {"section": "ccin", "n": 105}, "variant": "ccin", "best": "662.2216792295", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n106", "params": {"section": "ccin", "n": 106}, "variant": "ccin", "best": "671.9125549010", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n107", "params": {"section": "ccin", "n": 107}, "variant": "ccin", "best": "681.6405854696", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n108", "params": {"section": "ccin", "n": 108}, "variant": "ccin", "best": "690.6145564206", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n109", "params": {"section": "ccin", "n": 109}, "variant": "ccin", "best": "700.2042646679", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n110", "params": {"section": "ccin", "n": 110}, "variant": "ccin", "best": "709.7710860461", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n111", "params": {"section": "ccin", "n": 111}, "variant": "ccin", "best": "719.3942875519", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n112", "params": {"section": "ccin", "n": 112}, "variant": "ccin", "best": "728.9095866761", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n113", "params": {"section": "ccin", "n": 113}, "variant": "ccin", "best": "737.8993245986", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n114", "params": {"section": "ccin", "n": 114}, "variant": "ccin", "best": "748.7179839884", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n115", "params": {"section": "ccin", "n": 115}, "variant": "ccin", "best": "758.1693111953", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n116", "params": {"section": "ccin", "n": 116}, "variant": "ccin", "best": "767.9034021398", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n117", "params": {"section": "ccin", "n": 117}, "variant": "ccin", "best": "777.6491713981", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n118", "params": {"section": "ccin", "n": 118}, "variant": "ccin", "best": "787.8276048873", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n119", "params": {"section": "ccin", "n": 119}, "variant": "ccin", "best": "797.6718780299", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n120", "params": {"section": "ccin", "n": 120}, "variant": "ccin", "best": "807.6323835626", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n121", "params": {"section": "ccin", "n": 121}, "variant": "ccin", "best": "818.1237977294", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n122", "params": {"section": "ccin", "n": 122}, "variant": "ccin", "best": "827.7418480278", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n123", "params": {"section": "ccin", "n": 123}, "variant": "ccin", "best": "837.7538291538", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n124", "params": {"section": "ccin", "n": 124}, "variant": "ccin", "best": "847.6043125074", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n125", "params": {"section": "ccin", "n": 125}, "variant": "ccin", "best": "858.1368113436", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n126", "params": {"section": "ccin", "n": 126}, "variant": "ccin", "best": "868.3280635415", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n127", "params": {"section": "ccin", "n": 127}, "variant": "ccin", "best": "878.8037646021", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n128", "params": {"section": "ccin", "n": 128}, "variant": "ccin", "best": "888.4940885375", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n129", "params": {"section": "ccin", "n": 129}, "variant": "ccin", "best": "899.0756544042", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n130", "params": {"section": "ccin", "n": 130}, "variant": "ccin", "best": "909.8146694425", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n131", "params": {"section": "ccin", "n": 131}, "variant": "ccin", "best": "920.0878649058", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n132", "params": {"section": "ccin", "n": 132}, "variant": "ccin", "best": "930.6349229679", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n133", "params": {"section": "ccin", "n": 133}, "variant": "ccin", "best": "941.0801692134", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n134", "params": {"section": "ccin", "n": 134}, "variant": "ccin", "best": "951.2668983559", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n135", "params": {"section": "ccin", "n": 135}, "variant": "ccin", "best": "961.8389918270", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n136", "params": {"section": "ccin", "n": 136}, "variant": "ccin", "best": "972.5044150034", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n137", "params": {"section": "ccin", "n": 137}, "variant": "ccin", "best": "983.3038253563", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n138", "params": {"section": "ccin", "n": 138}, "variant": "ccin", "best": "993.5840464089", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n139", "params": {"section": "ccin", "n": 139}, "variant": "ccin", "best": "1004.8157262623", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n140", "params": {"section": "ccin", "n": 140}, "variant": "ccin", "best": "1015.3251445848", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n141", "params": {"section": "ccin", "n": 141}, "variant": "ccin", "best": "1026.5901198232", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n142", "params": {"section": "ccin", "n": 142}, "variant": "ccin", "best": "1037.9176333846", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n143", "params": {"section": "ccin", "n": 143}, "variant": "ccin", "best": "1047.9508559839", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n144", "params": {"section": "ccin", "n": 144}, "variant": "ccin", "best": "1058.7120221664", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n145", "params": {"section": "ccin", "n": 145}, "variant": "ccin", "best": "1070.1014783933", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n146", "params": {"section": "ccin", "n": 146}, "variant": "ccin", "best": "1081.4671896447", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n147", "params": {"section": "ccin", "n": 147}, "variant": "ccin", "best": "1092.0909176524", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n148", "params": {"section": "ccin", "n": 148}, "variant": "ccin", "best": "1102.8556054325", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n149", "params": {"section": "ccin", "n": 149}, "variant": "ccin", "best": "1114.2562823463", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n150", "params": {"section": "ccin", "n": 150}, "variant": "ccin", "best": "1124.9556182786", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n151", "params": {"section": "ccin", "n": 151}, "variant": "ccin", "best": "1136.4309401434", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n152", "params": {"section": "ccin", "n": 152}, "variant": "ccin", "best": "1147.6103730818", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n153", "params": {"section": "ccin", "n": 153}, "variant": "ccin", "best": "1159.0886664300", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n154", "params": {"section": "ccin", "n": 154}, "variant": "ccin", "best": "1169.9646712328", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n155", "params": {"section": "ccin", "n": 155}, "variant": "ccin", "best": "1180.8814339797", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n156", "params": {"section": "ccin", "n": 156}, "variant": "ccin", "best": "1193.1780517755", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n157", "params": {"section": "ccin", "n": 157}, "variant": "ccin", "best": "1204.0693418312", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n158", "params": {"section": "ccin", "n": 158}, "variant": "ccin", "best": "1216.3951893780", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n159", "params": {"section": "ccin", "n": 159}, "variant": "ccin", "best": "1227.0069257967", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n160", "params": {"section": "ccin", "n": 160}, "variant": "ccin", "best": "1238.0374391856", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n161", "params": {"section": "ccin", "n": 161}, "variant": "ccin", "best": "1250.1015301775", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n162", "params": {"section": "ccin", "n": 162}, "variant": "ccin", "best": "1262.3404488002", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n163", "params": {"section": "ccin", "n": 163}, "variant": "ccin", "best": "1273.4691310669", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n164", "params": {"section": "ccin", "n": 164}, "variant": "ccin", "best": "1285.0234317928", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n165", "params": {"section": "ccin", "n": 165}, "variant": "ccin", "best": "1297.2891873905", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n166", "params": {"section": "ccin", "n": 166}, "variant": "ccin", "best": "1308.6660966062", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n167", "params": {"section": "ccin", "n": 167}, "variant": "ccin", "best": "1320.9819614037", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n168", "params": {"section": "ccin", "n": 168}, "variant": "ccin", "best": "1332.5542464402", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n169", "params": {"section": "ccin", "n": 169}, "variant": "ccin", "best": "1343.9557542696", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n170", "params": {"section": "ccin", "n": 170}, "variant": "ccin", "best": "1356.0493544161", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n171", "params": {"section": "ccin", "n": 171}, "variant": "ccin", "best": "1367.2976558608", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n172", "params": {"section": "ccin", "n": 172}, "variant": "ccin", "best": "1379.4462443030", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n173", "params": {"section": "ccin", "n": 173}, "variant": "ccin", "best": "1391.7069541439", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n174", "params": {"section": "ccin", "n": 174}, "variant": "ccin", "best": "1403.3342545327", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n175", "params": {"section": "ccin", "n": 175}, "variant": "ccin", "best": "1415.0725812301", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n176", "params": {"section": "ccin", "n": 176}, "variant": "ccin", "best": "1427.1984836633", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n177", "params": {"section": "ccin", "n": 177}, "variant": "ccin", "best": "1440.0625499257", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n178", "params": {"section": "ccin", "n": 178}, "variant": "ccin", "best": "1451.7334609693", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n179", "params": {"section": "ccin", "n": 179}, "variant": "ccin", "best": "1463.7586574513", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n180", "params": {"section": "ccin", "n": 180}, "variant": "ccin", "best": "1476.4042397750", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n181", "params": {"section": "ccin", "n": 181}, "variant": "ccin", "best": "1488.0321014417", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n182", "params": {"section": "ccin", "n": 182}, "variant": "ccin", "best": "1500.6320264029", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n183", "params": {"section": "ccin", "n": 183}, "variant": "ccin", "best": "1513.0728829481", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n184", "params": {"section": "ccin", "n": 184}, "variant": "ccin", "best": "1525.5892233309", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n185", "params": {"section": "ccin", "n": 185}, "variant": "ccin", "best": "1537.2508832463", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n186", "params": {"section": "ccin", "n": 186}, "variant": "ccin", "best": "1549.3688031620", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n187", "params": {"section": "ccin", "n": 187}, "variant": "ccin", "best": "1562.8809094279", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n188", "params": {"section": "ccin", "n": 188}, "variant": "ccin", "best": "1574.7933894217", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n189", "params": {"section": "ccin", "n": 189}, "variant": "ccin", "best": "1587.7509448260", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n190", "params": {"section": "ccin", "n": 190}, "variant": "ccin", "best": "1600.3433143186", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n191", "params": {"section": "ccin", "n": 191}, "variant": "ccin", "best": "1613.1368750470", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n192", "params": {"section": "ccin", "n": 192}, "variant": "ccin", "best": "1625.3144009396", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n193", "params": {"section": "ccin", "n": 193}, "variant": "ccin", "best": "1638.2551869232", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n194", "params": {"section": "ccin", "n": 194}, "variant": "ccin", "best": "1650.8374468374", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n195", "params": {"section": "ccin", "n": 195}, "variant": "ccin", "best": "1662.9823331706", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n196", "params": {"section": "ccin", "n": 196}, "variant": "ccin", "best": "1675.5997815157", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n197", "params": {"section": "ccin", "n": 197}, "variant": "ccin", "best": "1688.7196085113", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n198", "params": {"section": "ccin", "n": 198}, "variant": "ccin", "best": "1701.2974696319", "holder": ", private communication, July, September 2026."}
+{"id": "pack-ccin-n199", "params": {"section": "ccin", "n": 199}, "variant": "ccin", "best": "1714.4083912211", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n200", "params": {"section": "ccin", "n": 200}, "variant": "ccin", "best": "1726.2218296583", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n300", "params": {"section": "ccin", "n": 300}, "variant": "ccin", "best": "3167.1028403428", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n400", "params": {"section": "ccin", "n": 400}, "variant": "ccin", "best": "4865.3501863383", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n600", "params": {"section": "ccin", "n": 600}, "variant": "ccin", "best": "8917.0562697245", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n800", "params": {"section": "ccin", "n": 800}, "variant": "ccin", "best": "13715.9082621131", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n1000", "params": {"section": "ccin", "n": 1000}, "variant": "ccin", "best": "19159.5928500688", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-ccin-n2000", "params": {"section": "ccin", "n": 2000}, "variant": "ccin", "best": "54121.3515647600", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n4", "params": {"section": "csqn", "n": 4}, "variant": "csqn", "best": "11.9497474683"}
+{"id": "pack-csqn-n5", "params": {"section": "csqn", "n": 5}, "variant": "csqn", "best": "15.6032802757", "holder": ", Packing unequal circles using formulation space search, Computers & Operations Research 40 (2013), 1276–1288."}
+{"id": "pack-csqn-n6", "params": {"section": "csqn", "n": 6}, "variant": "csqn", "best": "19.4229032754", "holder": ", Packing unequal circles using formulation space search, Computers & Operations Research 40 (2013), 1276–1288."}
+{"id": "pack-csqn-n7", "params": {"section": "csqn", "n": 7}, "variant": "csqn", "best": "23.8188799275", "holder": ", Packing unequal circles using formulation space search, Computers & Operations Research 40 (2013), 1276–1288."}
+{"id": "pack-csqn-n8", "params": {"section": "csqn", "n": 8}, "variant": "csqn", "best": "29.1052766848", "holder": ", Packing unequal circles using formulation space search, Computers & Operations Research 40 (2013), 1276–1288."}
+{"id": "pack-csqn-n9", "params": {"section": "csqn", "n": 9}, "variant": "csqn", "best": "33.7543058260", "holder": ", Packing unequal circles using formulation space search, Computers & Operations Research 40 (2013), 1276–1288."}
+{"id": "pack-csqn-n10", "params": {"section": "csqn", "n": 10}, "variant": "csqn", "best": "38.5804264146", "holder": ", Packing unequal circles using formulation space search, Computers & Operations Research 40 (2013), 1276–1288."}
+{"id": "pack-csqn-n11", "params": {"section": "csqn", "n": 11}, "variant": "csqn", "best": "44.5049843156", "holder": ", program csqn , 2005–2026."}
+{"id": "pack-csqn-n12", "params": {"section": "csqn", "n": 12}, "variant": "csqn", "best": "50.1811830036", "holder": ", program csqn , 2005–2026."}
+{"id": "pack-csqn-n13", "params": {"section": "csqn", "n": 13}, "variant": "csqn", "best": "55.9913615390", "holder": ", program csqn , 2005–2026."}
+{"id": "pack-csqn-n14", "params": {"section": "csqn", "n": 14}, "variant": "csqn", "best": "61.8499213131", "holder": ", program csqn , 2005–2026."}
+{"id": "pack-csqn-n15", "params": {"section": "csqn", "n": 15}, "variant": "csqn", "best": "68.5275639104", "holder": ", program csqn , 2005–2026."}
+{"id": "pack-csqn-n16", "params": {"section": "csqn", "n": 16}, "variant": "csqn", "best": "75.0093425601", "holder": ", Computers & Operations Research 58 (2015), 67–74."}
+{"id": "pack-csqn-n17", "params": {"section": "csqn", "n": 17}, "variant": "csqn", "best": "81.5020232924", "holder": "Zhizhong Zeng, Xinguo Yu, Kun He, Zhanghua Fu, private communication, September 2015."}
+{"id": "pack-csqn-n18", "params": {"section": "csqn", "n": 18}, "variant": "csqn", "best": "88.4040881240", "holder": ", Computers & Operations Research 58 (2015), 67–74."}
+{"id": "pack-csqn-n19", "params": {"section": "csqn", "n": 19}, "variant": "csqn", "best": "95.7511479474", "holder": "Zhizhong Zeng, Xinguo Yu, Kun He, Zhanghua Fu, private communication, September 2015."}
+{"id": "pack-csqn-n20", "params": {"section": "csqn", "n": 20}, "variant": "csqn", "best": "103.1176532553", "holder": ", program csqn , 2005–2026."}
+{"id": "pack-csqn-n21", "params": {"section": "csqn", "n": 21}, "variant": "csqn", "best": "110.5602971954", "holder": ", Computers & Operations Research 58 (2015), 67–74."}
+{"id": "pack-csqn-n22", "params": {"section": "csqn", "n": 22}, "variant": "csqn", "best": "118.3638651864", "holder": "Zhizhong Zeng, Xinguo Yu, Kun He, Zhanghua Fu, private communication, September 2015."}
+{"id": "pack-csqn-n23", "params": {"section": "csqn", "n": 23}, "variant": "csqn", "best": "126.0035531370", "holder": "Zhizhong Zeng, Xinguo Yu, Kun He, Zhanghua Fu, private communication, September 2015."}
+{"id": "pack-csqn-n24", "params": {"section": "csqn", "n": 24}, "variant": "csqn", "best": "134.0723868749", "holder": "Zhizhong Zeng, Xinguo Yu, Kun He, Zhanghua Fu, private communication, September 2015."}
+{"id": "pack-csqn-n25", "params": {"section": "csqn", "n": 25}, "variant": "csqn", "best": "142.2205442197", "holder": "Zhizhong Zeng, Xinguo Yu, Kun He, Zhanghua Fu, private communication, September 2015."}
+{"id": "pack-csqn-n26", "params": {"section": "csqn", "n": 26}, "variant": "csqn", "best": "150.7217519036", "holder": ", private communication, September 2026."}
+{"id": "pack-csqn-n27", "params": {"section": "csqn", "n": 27}, "variant": "csqn", "best": "159.0374704985", "holder": "Zhizhong Zeng, Xinguo Yu, Kun He, Zhanghua Fu, private communication, September 2015."}
+{"id": "pack-csqn-n28", "params": {"section": "csqn", "n": 28}, "variant": "csqn", "best": "167.8203378909", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n29", "params": {"section": "csqn", "n": 29}, "variant": "csqn", "best": "176.5057042147", "holder": "Zhizhong Zeng, Xinguo Yu, Kun He, Zhanghua Fu, private communication, September 2015."}
+{"id": "pack-csqn-n30", "params": {"section": "csqn", "n": 30}, "variant": "csqn", "best": "185.6625456478", "holder": "Zhizhong Zeng, Xinguo Yu, Kun He, Zhanghua Fu, private communication, September 2015."}
+{"id": "pack-csqn-n31", "params": {"section": "csqn", "n": 31}, "variant": "csqn", "best": "194.7370534113", "holder": "Zhizhong Zeng, Xinguo Yu, Kun He, Zhanghua Fu, private communication, September 2015."}
+{"id": "pack-csqn-n32", "params": {"section": "csqn", "n": 32}, "variant": "csqn", "best": "204.0890045400", "holder": "Zhizhong Zeng, Xinguo Yu, Kun He, Zhanghua Fu, private communication, September 2015."}
+{"id": "pack-csqn-n33", "params": {"section": "csqn", "n": 33}, "variant": "csqn", "best": "213.4067262400", "holder": "Zhizhong Zeng, Xinguo Yu, Kun He, Zhanghua Fu, private communication, September 2015."}
+{"id": "pack-csqn-n34", "params": {"section": "csqn", "n": 34}, "variant": "csqn", "best": "222.8285723649", "holder": "Zhizhong Zeng, Xinguo Yu, Kun He, Zhanghua Fu, private communication, September 2015."}
+{"id": "pack-csqn-n35", "params": {"section": "csqn", "n": 35}, "variant": "csqn", "best": "232.6920512484", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n36", "params": {"section": "csqn", "n": 36}, "variant": "csqn", "best": "242.2478289305", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n37", "params": {"section": "csqn", "n": 37}, "variant": "csqn", "best": "252.4045057670", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n38", "params": {"section": "csqn", "n": 38}, "variant": "csqn", "best": "262.3141465282", "holder": "Zhizhong Zeng, Xinguo Yu, Kun He, Zhanghua Fu, private communication, September 2015."}
+{"id": "pack-csqn-n39", "params": {"section": "csqn", "n": 39}, "variant": "csqn", "best": "272.5990311262", "holder": ", private communication, September 2026."}
+{"id": "pack-csqn-n40", "params": {"section": "csqn", "n": 40}, "variant": "csqn", "best": "282.7696964392", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n41", "params": {"section": "csqn", "n": 41}, "variant": "csqn", "best": "293.1389009257", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n42", "params": {"section": "csqn", "n": 42}, "variant": "csqn", "best": "303.9225449639", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n43", "params": {"section": "csqn", "n": 43}, "variant": "csqn", "best": "314.5820618381", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n44", "params": {"section": "csqn", "n": 44}, "variant": "csqn", "best": "324.8806989537", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n45", "params": {"section": "csqn", "n": 45}, "variant": "csqn", "best": "336.2109819180", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n46", "params": {"section": "csqn", "n": 46}, "variant": "csqn", "best": "347.3670144377", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n47", "params": {"section": "csqn", "n": 47}, "variant": "csqn", "best": "358.6936089508", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n48", "params": {"section": "csqn", "n": 48}, "variant": "csqn", "best": "369.5281819442", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n49", "params": {"section": "csqn", "n": 49}, "variant": "csqn", "best": "381.1143127012", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n50", "params": {"section": "csqn", "n": 50}, "variant": "csqn", "best": "392.6598734730", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n51", "params": {"section": "csqn", "n": 51}, "variant": "csqn", "best": "403.9783643594", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n52", "params": {"section": "csqn", "n": 52}, "variant": "csqn", "best": "415.5686932110", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n53", "params": {"section": "csqn", "n": 53}, "variant": "csqn", "best": "427.8870053451", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n54", "params": {"section": "csqn", "n": 54}, "variant": "csqn", "best": "439.8459089968", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n55", "params": {"section": "csqn", "n": 55}, "variant": "csqn", "best": "451.7842259692", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n56", "params": {"section": "csqn", "n": 56}, "variant": "csqn", "best": "463.9838010894", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n57", "params": {"section": "csqn", "n": 57}, "variant": "csqn", "best": "476.3577482881", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n58", "params": {"section": "csqn", "n": 58}, "variant": "csqn", "best": "488.5983124235", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n59", "params": {"section": "csqn", "n": 59}, "variant": "csqn", "best": "500.7813716592", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n60", "params": {"section": "csqn", "n": 60}, "variant": "csqn", "best": "513.7443994817", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n61", "params": {"section": "csqn", "n": 61}, "variant": "csqn", "best": "526.4800829256", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n62", "params": {"section": "csqn", "n": 62}, "variant": "csqn", "best": "538.6940954068", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n63", "params": {"section": "csqn", "n": 63}, "variant": "csqn", "best": "551.9617462780", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n64", "params": {"section": "csqn", "n": 64}, "variant": "csqn", "best": "565.2571803260", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n65", "params": {"section": "csqn", "n": 65}, "variant": "csqn", "best": "577.8891996910", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n66", "params": {"section": "csqn", "n": 66}, "variant": "csqn", "best": "590.9974122583", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n67", "params": {"section": "csqn", "n": 67}, "variant": "csqn", "best": "604.3934506404", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n68", "params": {"section": "csqn", "n": 68}, "variant": "csqn", "best": "617.4210115765", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n69", "params": {"section": "csqn", "n": 69}, "variant": "csqn", "best": "631.4360413349", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n70", "params": {"section": "csqn", "n": 70}, "variant": "csqn", "best": "644.7651987065", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n71", "params": {"section": "csqn", "n": 71}, "variant": "csqn", "best": "658.2914492485", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n72", "params": {"section": "csqn", "n": 72}, "variant": "csqn", "best": "672.5307596561", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n73", "params": {"section": "csqn", "n": 73}, "variant": "csqn", "best": "685.8294873318", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n74", "params": {"section": "csqn", "n": 74}, "variant": "csqn", "best": "700.0703793675", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n75", "params": {"section": "csqn", "n": 75}, "variant": "csqn", "best": "713.7749342916", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n76", "params": {"section": "csqn", "n": 76}, "variant": "csqn", "best": "727.9477086694", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n77", "params": {"section": "csqn", "n": 77}, "variant": "csqn", "best": "742.3231179056", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n78", "params": {"section": "csqn", "n": 78}, "variant": "csqn", "best": "756.7112802386", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n79", "params": {"section": "csqn", "n": 79}, "variant": "csqn", "best": "771.2040321418", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n80", "params": {"section": "csqn", "n": 80}, "variant": "csqn", "best": "786.0006443637", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n81", "params": {"section": "csqn", "n": 81}, "variant": "csqn", "best": "800.0645033927", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n82", "params": {"section": "csqn", "n": 82}, "variant": "csqn", "best": "815.2016943358", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n83", "params": {"section": "csqn", "n": 83}, "variant": "csqn", "best": "829.5813410037", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n84", "params": {"section": "csqn", "n": 84}, "variant": "csqn", "best": "844.3857523665", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n85", "params": {"section": "csqn", "n": 85}, "variant": "csqn", "best": "859.5898074536", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n86", "params": {"section": "csqn", "n": 86}, "variant": "csqn", "best": "874.3453584082", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n87", "params": {"section": "csqn", "n": 87}, "variant": "csqn", "best": "889.7627552860", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n88", "params": {"section": "csqn", "n": 88}, "variant": "csqn", "best": "904.5160201626", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n89", "params": {"section": "csqn", "n": 89}, "variant": "csqn", "best": "919.8523739908", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n90", "params": {"section": "csqn", "n": 90}, "variant": "csqn", "best": "935.4937653418", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n91", "params": {"section": "csqn", "n": 91}, "variant": "csqn", "best": "950.2122161628", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n92", "params": {"section": "csqn", "n": 92}, "variant": "csqn", "best": "966.5043260631", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n93", "params": {"section": "csqn", "n": 93}, "variant": "csqn", "best": "981.5084140278", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n94", "params": {"section": "csqn", "n": 94}, "variant": "csqn", "best": "997.3612538748", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n95", "params": {"section": "csqn", "n": 95}, "variant": "csqn", "best": "1013.1540671927", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n96", "params": {"section": "csqn", "n": 96}, "variant": "csqn", "best": "1029.4240683421", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n97", "params": {"section": "csqn", "n": 97}, "variant": "csqn", "best": "1045.4651536600", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n98", "params": {"section": "csqn", "n": 98}, "variant": "csqn", "best": "1060.8713906709", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n99", "params": {"section": "csqn", "n": 99}, "variant": "csqn", "best": "1076.7735234251", "holder": ", github.com/muellan/packing , December 2025."}
+{"id": "pack-csqn-n100", "params": {"section": "csqn", "n": 100}, "variant": "csqn", "best": "1093.2970679358", "holder": ", github.com/muellan/packing , December 2025."}

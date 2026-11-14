@@ -1,9 +1,10 @@
 {
  "benchmark_version": "2.1",
- "problems": 151980,
+ "problems": 162459,
  "by_family": {
   "cage": 40,
   "cap-set": 2,
+  "circle-packing": 10180,
   "circulant-weighing-matrix": 12,
   "coil-in-the-box": 5,
   "constant": 7,
@@ -14,6 +15,7 @@
   "degree-diameter": 20,
   "erdos-problem": 2,
   "golomb-ruler": 2,
+  "growing-circle-packing": 299,
   "hadamard": 4,
   "kissing-number": 25,
   "latin-squares": 1,
@@ -43,6 +45,17 @@
    "path": "problems",
    "count": 395,
    "about": "single problems, one JSON file each"
+  },
+  {
+   "kind": "family",
+   "family": "circle-packing",
+   "path": "families/circle-packing/cells.jsonl",
+   "definition": "families/circle-packing/family.json",
+   "count": 10180,
+   "sha256": "23f737def6cd7992fb723e639e228189fbe2e3ae2ce2e837c783116da97c1811",
+   "keeper": "E. Specht, Packomania (packomania.com)",
+   "read": "2026-11-14",
+   "checker": "pack_check.py"
   },
   {
    "kind": "family",
@@ -76,6 +89,17 @@
    "keeper": "Covering Repository (coveringrepository.com), successor of D. Gordon's La Jolla Covering Repository",
    "read": "2026-11-08",
    "checker": "covering_check.py"
+  },
+  {
+   "kind": "family",
+   "family": "growing-circle-packing",
+   "path": "families/growing-circle-packing/cells.jsonl",
+   "definition": "families/growing-circle-packing/family.json",
+   "count": 299,
+   "sha256": "f2b1a72f95a5cda5e891a8c1c66463fc119bf57ef0784b1e76c6486b850829a4",
+   "keeper": "E. Specht, Packomania (packomania.com)",
+   "read": "2026-11-14",
+   "checker": "pack_check.py"
   },
   {
    "kind": "family",
