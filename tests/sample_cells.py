@@ -2,7 +2,8 @@
 
 For each family a few cells are drawn at random (seeded, among cells small enough to build an object for quickly).
 For each drawn cell our own code builds a simple valid object (a greedy covering design or covering array, random
-points on the sphere, a random linear code in systematic form, a greedy constant weight code); obb.py must certify it
+points on the sphere, a random linear code in systematic form, a greedy constant weight code, an ordered orthogonal
+array made of unit vectors); obb.py must certify it
 and must find that it does not improve the best known value. Then a red control (the same object broken: a block,
 row or word removed or repeated, a dependent row, a point too few) must be refused. The project-scheduling family
 needs the instance files of its sets (not copied here): its cells are tested when instances/rcpsp/ holds them, and its
@@ -158,6 +159,31 @@ def test_linear_code(n, rng):
         expect(f"red   {c['id']} ({what})", obb(c["id"], bad), "NOT CERTIFIED,")
 
 
+def test_ordered_orthogonal_array(n, rng):
+    """An object made of distinct unit vectors has the strength asked for with the fewest factors that can carry it; a
+    column repeated at depth 1 of another factor (or at depth 2 of the same one) breaks it."""
+    def depth(c):
+        return c["params"]["k"] if c["params"]["T"] == "net" else c["params"]["T"]
+    small = []
+    for c in family_cells("ordered-orthogonal-array"):
+        m, k, d = c["params"]["m"], c["params"]["k"], depth(c)
+        s0 = -(-k // min(d, k))
+        if s0 * d <= m and s0 < int(c["best"]) and c["params"]["b"] ** m <= 4096:
+            small.append(c)
+    for c in rng.sample(small, min(n, len(small))):
+        m, k, d = c["params"]["m"], c["params"]["k"], depth(c)
+        s0 = -(-k // min(d, k))
+        rows = [[1 if col == r else 0 for col in range(s0 * d)] for r in range(m)]
+        good = write(f"{c['id']}.txt", [" ".join(map(str, r)) for r in rows])
+        expect(f"sample {c['id']} unit vectors, {s0} factor(s)", obb(c["id"], good), "does not improve,")
+        src, dst = (0, d) if s0 >= 2 else (0, 1)
+        bad_rows = [r[:] for r in rows]
+        for r in bad_rows:
+            r[dst] = r[src]
+        bad = write(f"{c['id']}_red.txt", [" ".join(map(str, r)) for r in bad_rows])
+        expect(f"red   {c['id']} (a column repeated)", obb(c["id"], bad), "NOT CERTIFIED,")
+
+
 def test_constant_weight_code(n, rng):
     import math
     small = [c for c in family_cells("constant-weight-code")
@@ -304,7 +330,8 @@ def main():
     for name, test in (("covering-design", test_covering_design), ("covering-array", test_covering_array),
                        ("spherical-code", test_spherical_code), ("linear-code", test_linear_code),
                        ("constant-weight-code", test_constant_weight_code),
-                       ("project-scheduling", test_project_scheduling)):
+                       ("project-scheduling", test_project_scheduling),
+                       ("ordered-orthogonal-array", test_ordered_orthogonal_array)):
         if os.path.exists(os.path.join(ROOT, "families", name, "cells.jsonl")):
             test(n, rng)
         else:

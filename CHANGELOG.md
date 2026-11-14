@@ -18,6 +18,26 @@ value can change within a version when its source table changes; the file then s
   some of them are public on Zenodo. Their values stay as read on 8 Nov until a rule for cells the table does not list is
   chosen.
 
+## Next (in review): the family `ordered-orthogonal-array` from MinT (14 Nov 2026)
+
+- New exact checker `checkers/ooa_check.py` (standard library only) for linear ordered orthogonal arrays over GF(b),
+  b = 2, 3, 4, 5, 7, 8, 9, 16, 25, 27, 32, 49, 64, 81, 128, 256 (each extension field by its Conway polynomial; the
+  program checks that x is primitive): orthogonal arrays (depth 1), ordered orthogonal arrays of depth 2 to 8 and
+  digital nets. It reads a generator matrix and decides strength k by two separate methods: D walks every choice of
+  depths of weight k with a running echelon basis and names the first dependent column; E lists the row space once per
+  line through the origin, records the leading zeros of every factor, and computes the number of dual words of each
+  weight 1..k in the Niederreiter-Rosenbloom-Tsfasman metric by a MacWilliams identity in exact integers.
+- `tests/test_ooa.py` (run by `test.sh`): 612 checks. Hamming and extended Hamming arrays, Reed-Solomon arrays over
+  GF(5), GF(9) and GF(16), a digital (0,4,2)-net, red controls (a repeated column, one entry changed, the same matrix
+  twice), malformed inputs, and 596 random objects over nine fields on which methods D and E and a third program that
+  counts every projection of the b^m runs (the definition) give the same verdict (422 with the strength, 174 without).
+- New family `families/ordered-orthogonal-array` (2,600 cells, `added` 2.2), built by `tools/mint_fetch.py` (one
+  request every six seconds; the pages are not stored here) and `tools/mint_cells.py` from MinT's tables for linear
+  objects, read on 14 Nov 2026 11:27-11:39 UTC (MinT's database: 2024-09-05). Open rule, work limit and what is left
+  out are in `family.json` and in the README. `tests/sample_cells.py` draws cells of the family, certifies an array of
+  unit vectors for each and refuses the same array with a column repeated.
+- `index.json` rebuilt: 151,980 problems (395 single problems and 151,585 family cells).
+
 ## Next (in review): Quantavane Open Tables, second version (13 Nov 2026): topology optimisation
 
 - QV-Topo 1, `collections/open-tables/checkers/topopt_check.py` (standard library only): plane-stress linear elasticity

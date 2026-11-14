@@ -311,6 +311,9 @@ u 0 checkers/degdiam_check.py 3 2 certs/control_cage_petersen.txt               
 # of every family (an object of ours for each, certified and not improving, and a red control refused); then
 # index.json against the files it lists
 python3 -I tests/units.py || status=1
+# v2.2: ooa_check.py (ordered orthogonal arrays and digital nets, the MinT family): known arrays, red controls, and
+# its two methods against a third program that works from the definition, on random objects over nine fields
+python3 -I tests/test_ooa.py || status=1
 python3 -I tests/sample_cells.py || status=1
 if python3 -I obb.py index > /dev/null; then echo "ok    index.json matches the files"; else echo "FAIL  index.json"; status=1; fi
 exit $status

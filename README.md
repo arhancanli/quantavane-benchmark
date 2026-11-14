@@ -71,6 +71,7 @@ the 100 are new single problems of v2.1, with eight new checkers; see the collec
 | `spherical-code` | 14,782 | H. Cohn, table of spherical codes (dimensions 3 to 32 and a few more) | `sph_check.py` |
 | `covering-array` | 2,651 | C. Smolen's ca-tools table, successor of C. J. Colbourn's covering array tables | `ca_check.py` |
 | `constant-weight-code` | 1,134 | A. E. Brouwer, bounds for binary constant weight codes | `cw_check.py` |
+| `ordered-orthogonal-array` (in review for v2.2) | 2,600 | W. Ch. Schmid and R. Schürer, MinT: linear ordered orthogonal arrays of depth 1 to 8 and digital nets over GF(2) to GF(128) | `ooa_check.py` |
 
 Every cell is open in the sense written in its family file: its best known value is not marked optimal by the keeper
 and is strictly worse than the bound on the other side (the keeper's own bound, or a standard bound we compute and
@@ -212,6 +213,16 @@ What each family takes from its table, and what it leaves out:
   are on each entry's own page at codetables.de, which the cell links.
 - `constant-weight-code`: every entry of Brouwer's table not marked optimal and below its upper bound; the holder is
   the entry's label, read with the table's own key.
+- `ordered-orthogonal-array` (in review for v2.2; read 14 Nov 2026): the cells (base b, depth T, b^m runs, strength k)
+  of MinT with 3 <= k <= m <= 51 in which the best known LINEAR object has fewer factors than MinT's bound for linear
+  objects, and in which one more factor than the best known can be checked exactly within 2^27 steps. Depth 1 is an
+  orthogonal array, depth net a digital (m - k, m, s)-net. The checker reads a generator matrix and decides the
+  strength by two separate exact methods (every choice of depths with a running echelon basis; the row space with a
+  MacWilliams identity for the Niederreiter-Rosenbloom-Tsfasman weights), so only linear objects can be submitted;
+  the cell says so when a non-linear object with more factors is known. Left out: 7,665 solved cells, 54,839 open
+  cells whose check would be longer, and the 270 cells of depth 1 over GF(2) to GF(9), which are linear codes that
+  the family `linear-code` already asks for. With this family the benchmark has 151,980 problems (395 single problems
+  and 151,585 cells; `covering-array` has had 2,659 cells since its table was re-read on 12 Nov).
 - `project-scheduling`: every instance of the sets with open instances whose best known makespan is above its lower
   bound and which the site does not mark optimal; the open counts match the site's own table of November 2026. The
   highRD, lowRU and 1k variants are not read: their dataset files date from April 2021, many of their upper bounds are

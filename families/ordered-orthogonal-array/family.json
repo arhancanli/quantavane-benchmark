@@ -1,0 +1,41 @@
+{
+ "family": "ordered-orthogonal-array",
+ "title": "Linear ordered orthogonal arrays and digital nets with the largest number of factors",
+ "added": "2.2",
+ "objective": "maximize",
+ "id_prefixes": [
+  "ooa-"
+ ],
+ "keeper": "W. Ch. Schmid and R. Schuerer, MinT, the database of optimal net, code, OA and OOA parameters (mint.sbg.ac.at)",
+ "page": "http://mint.sbg.ac.at/",
+ "cell_url": "http://mint.sbg.ac.at/query.php?i=x&b={b}&m={m}&k={k}&p=mks&de={T}",
+ "read": "2026-11-14",
+ "revision": "table.php (types Linear/Digital and Bound (linear/digital); every base 2 to 256 and every depth 1 to 8 and net; m from 3 to 51, k from 3 to 52), read 14 Nov 2026 11:27-11:39 UTC; MinT's database was last updated 2024-09-05; two pages (base 2, depths 6 and 7) were cut by the server above k = 27 and only their complete rows are used",
+ "template": {
+  "title": "Linear ordered orthogonal array over GF({b}), depth {T}: {b}^{m} runs, strength {k}",
+  "statement": "Find a linear ordered orthogonal array of depth {T} and strength {k} with {b}^{m} runs over GF({b}) that has as many factors as possible. Depth 1 is a linear orthogonal array. Depth net is a digital net in base {b} with {b}^{m} points and strength {k}, that is a digital (t, {m}, s)-net with t = {m} - {k}, where s is the number of factors.",
+  "submission": "Text file: a generator matrix with {m} rows. Each factor has as many columns as the depth, in order of depth ({k} columns for depth net), one factor after the other; the entries are integers below {b} (for a prime power the base-p digits of the integer are the coefficients of a polynomial in x modulo the polynomial listed in checkers/ooa_check.py).",
+  "args": [
+   "{b}",
+   "{T}",
+   "{m}",
+   "{k}"
+  ]
+ },
+ "checker": {
+  "program": "ooa_check.py",
+  "value": "result"
+ },
+ "score": "the number of factors (larger is better)",
+ "best_text": "The best known linear object in MinT has {best} factors; a linear object with more factors improves it.",
+ "bound_kind": "upper bound",
+ "bound_source": "MinT's bound for linear (digital) objects in the same cell",
+ "holder_unknown": "the construction and its source are on the cell's page at MinT",
+ "holder_sources": "the tables list values only; each cell's page names its construction",
+ "open_rule": "every cell with 3 <= k <= m <= 51 whose best known linear object has fewer factors than MinT's bound for linear objects",
+ "left_out": "7665 cells with equal bounds (solved); 54839 open cells where checking one more factor than the best known would take more than 2^27 steps by both methods of the checker (about b^m s T / (b - 1) for the row-space method, the number of depth vectors times k for the other); 270 cells of depth 1 over GF(2) to GF(9), which are linear codes already asked for by the family linear-code; cells with m above 51 (not read); arrays that are not linear (the checker reads generator matrices; 26 kept cells carry a note that a non-linear object with more factors is known)",
+ "cells": "cells.jsonl",
+ "count": 2600,
+ "quantavane_records": 0,
+ "single_problems_left_out": 0
+}
