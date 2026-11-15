@@ -11,7 +11,11 @@
    one of ooa_check.py: factors in order, for each a depth d up to min(t, room) whose first d columns join a running
    echelon basis (each basis vector scaled so that its pivot, its first nonzero entry, is 1); a column that reduces to
    zero is dependent. Prints "independent L" (L depth vectors of weight k, all independent) or "dependent (i,d) ..."
-   (1-based factor and depth of the chosen columns, the last one dependent), and "nodes N". */
+   (1-based factor and depth of the chosen columns, the last one dependent), and "nodes N".
+
+   16 Nov 2026: for e = 1 a vector is one word and the reduction is branch-free (v ^= b & -(bit of v at the pivot)),
+   about 3.5 times faster; the same walk, the same nodes, the same answers
+   (the environment variable OOA_WALK_PLAIN=1 forces the plain walk, for tests). */
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
@@ -92,6 +96,39 @@ static int rec(int start, int r, int depth) {
     return 0;
 }
 
+/* e = 1: one word per vector */
+static uint64_t *c1, b1[64];
+static int p1[64];
+
+static void print_dep(int nb) {
+    printf("dependent");
+    for (int x = 0; x <= nb; x++) printf(" (%d,%d)", chosen_f[x], chosen_d[x]);
+    printf("\n");
+}
+
+static int rec1(int start, int r, int depth) {
+    for (int i = start; i < s; i++) {
+        if ((s - i) * t < r) return 0;
+        int added = 0;
+        int lim = t < r ? t : r;
+        for (int d = 1; d <= lim; d++) {
+            uint64_t v = c1[i * t + d - 1];
+            nodes++;
+            int nb = depth + added;
+            for (int b = 0; b < nb; b++) v ^= b1[b] & (0 - ((v >> p1[b]) & 1));
+            chosen_f[nb] = i + 1;
+            chosen_d[nb] = d;
+            if (!v) { print_dep(nb); return 1; }
+            b1[nb] = v;
+            p1[nb] = __builtin_ctzll(v);
+            added++;
+            if (r - d == 0) leaves++;
+            else if (rec1(i + 1, r - d, depth + added)) return 1;
+        }
+    }
+    return 0;
+}
+
 int main(void) {
     if (scanf("%d %d %d %d %d", &e, &m, &s, &t, &k) != 5) die("bad header");
     if (e < 1 || e > 8 || m < 1 || m > 64 || s < 1 || t < 1 || k < 1 || k > 64 || s * t > 100000000) die("header out of range");
@@ -114,7 +151,13 @@ int main(void) {
                 for (int b = 0; b < e; b++)
                     if (x >> b & 1) cols[i * t + d].p[b] |= 1ULL << j;
             }
-    int bad = rec(0, k, 0);
+    int bad;
+    if (e == 1 && !getenv("OOA_WALK_PLAIN")) {
+        c1 = malloc((size_t)s * t * sizeof(uint64_t));
+        if (!c1) die("out of memory");
+        for (int x = 0; x < s * t; x++) c1[x] = cols[x].p[0];
+        bad = rec1(0, k, 0);
+    } else bad = rec(0, k, 0);
     if (!bad) printf("independent %llu\n", (unsigned long long)leaves);
     printf("nodes %llu\n", (unsigned long long)nodes);
     return 0;

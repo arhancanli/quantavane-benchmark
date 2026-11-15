@@ -28,7 +28,8 @@ C above 2^20 steps (checkers/ooa_walk.c for B = 2, 4, 8, ..., 256, vectors kept 
 for B = 3, 5, 7, 9, 25, 27, 49, 81, vectors kept as digit planes modulo p); --native or --python forces one way.
 
 Prints "RESULT S" as its last line and exits 0 when the strength is at least K; prints the reason and exits 1 when it
-is not or the input is malformed; exits 2 when both methods would need more than --max-work steps (default 2^33)."""
+is not or the input is malformed; exits 2 when both methods would need more than --max-work steps (default 2^36 since
+16 Nov 2026, the largest cap of the family ordered-orthogonal-array; 2^33 before, below that family's cap of 2^34)."""
 import sys
 
 # (characteristic p, degree e, modulus coefficients from x^0 up to x^e)
@@ -319,7 +320,7 @@ NATIVE_FROM = 2 ** 20                  # method D in C above this many steps (B 
 
 def main(argv=None):
     argv = list(sys.argv[1:] if argv is None else argv)
-    way, max_work, force = None, 2 ** 33, None
+    way, max_work, force = None, 2 ** 36, None
     for flag in ("--native", "--python"):
         if flag in argv:
             argv.remove(flag)

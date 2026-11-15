@@ -110,6 +110,25 @@ for trial in range(600):
     indep_c += a[0]
     same += a[0] == b[0] and (not a[0] or a[2] == b[2])
 expect(f'method D in C against Python on {total_c} random objects ({indep_c} independent)', same, total_c)
+# 9. the branch-free walk for GF(2) (16 Nov 2026) against the plain walk (OOA_WALK_PLAIN=1): the same output, word for
+#    word (verdict, the dependent columns found, the number of nodes), on random objects up to m = 64
+import subprocess
+oc.way_d_native(oc.Field(2), [[(1, 0)]], 2, 1, 1, 1)                 # builds checkers/bin/ooa_walk
+exe = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'checkers', 'bin', 'ooa_walk')
+same2 = total2 = indep2 = 0
+for trial in range(150):
+    m = rng.randint(3, 64)
+    k = rng.randint(1, min(m, 14))
+    t = rng.randint(1, k)
+    s = rng.randint(-(-k // t), -(-k // t) + 8)
+    lines = [f'1 {m} {s} {t} {k}', '0 0', '1 1']
+    lines += [' '.join(str(rng.randrange(2)) for _ in range(m)) for _ in range(s * t)]
+    text = '\n'.join(lines) + '\n'
+    fast = subprocess.run([exe], input=text, capture_output=True, text=True).stdout
+    plain = subprocess.run([exe], input=text, capture_output=True, text=True,
+                           env=dict(os.environ, OOA_WALK_PLAIN='1')).stdout
+    total2 += 1; indep2 += fast.startswith('independent'); same2 += fast == plain and 'nodes' in fast
+expect(f'GF(2) walk, branch-free against plain, on {total2} random objects ({indep2} independent)', same2, total2)
 for trial in range(90):
     q = rng.choice([2, 4, 8, 16, 3, 5, 7, 9])
     m = rng.randint(2, 5 if q <= 4 else 3)
