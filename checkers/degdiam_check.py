@@ -7,8 +7,9 @@ list, one edge "u v" per line with vertices numbered from 0. The checker rejects
 no vertex has more than DELTA neighbours, and that every two vertices are joined by a path of at most DIAMETER edges:
 the ball of radius r around each vertex is kept as a bit set, B_{r+1}(v) = B_r(v) or the union of B_r(u) over the
 neighbours u of v, and after DIAMETER rounds every ball must hold every vertex. A graph on n vertices with maximum
-degree DELTA and diameter at most DIAMETER shows N(DELTA, DIAMETER) >= n. Prints the order and "RESULT n"; exits 0 for
-a valid graph, 1 otherwise."""
+degree DELTA and diameter at most DIAMETER shows N(DELTA, DIAMETER) >= n. With --bipartite the graph must also be
+bipartite (a 2-colouring is found by breadth-first search, and every edge must join the two colours): it then shows
+N_b(DELTA, DIAMETER) >= n. Prints the order and "RESULT n"; exits 0 for a valid graph, 1 otherwise."""
 import sys
 
 
@@ -96,12 +97,14 @@ def decode(text):
 
 
 def main():
-    if len(sys.argv) != 4:
+    bipartite = "--bipartite" in sys.argv[1:]
+    argv = [sys.argv[0]] + [a for a in sys.argv[1:] if a != "--bipartite"]
+    if len(argv) != 4:
         print(__doc__)
         return 2
-    delta, diam = int(sys.argv[1]), int(sys.argv[2])
+    delta, diam = int(argv[1]), int(argv[2])
     try:
-        n, edges = decode(open(sys.argv[3], encoding="ascii", errors="strict").read())
+        n, edges = decode(open(argv[3], encoding="ascii", errors="strict").read())
     except (ValueError, UnicodeDecodeError) as e:
         print(f"cannot read the graph: {e}")
         return 1
@@ -126,6 +129,21 @@ def main():
         v = next(v for v in range(n) if len(adj[v]) == top)
         print(f"vertex {v} has degree {top} > {delta}")
         return 1
+    if bipartite:
+        colour = [-1] * n
+        for root in range(n):
+            if colour[root] >= 0:
+                continue
+            colour[root], queue = 0, [root]
+            for x in queue:
+                for y in adj[x]:
+                    if colour[y] < 0:
+                        colour[y] = 1 - colour[x]
+                        queue.append(y)
+        for u, v in seen:
+            if colour[u] == colour[v]:
+                print(f"not bipartite: the edge {u} {v} closes an odd cycle")
+                return 1
     full = (1 << n) - 1
     ball = [(1 << v) for v in range(n)]
     for _ in range(diam):
@@ -141,7 +159,7 @@ def main():
             miss = (full ^ ball[v]) & -(full ^ ball[v])
             print(f"vertices {v} and {miss.bit_length() - 1} are more than {diam} apart")
             return 1
-    print(f"n {n} edges {len(seen)} maximum degree {top} <= {delta} diameter <= {diam}")
+    print(f"n {n} edges {len(seen)} maximum degree {top} <= {delta} diameter <= {diam}" + (" bipartite" if bipartite else ""))
     print(f"RESULT {n}")
     return 0
 

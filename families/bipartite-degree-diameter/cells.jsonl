@@ -1,0 +1,32 @@
+{"id": "bipdd-3-7", "params": {"d": 3, "k": 7}, "best": "168", "holder": "Graph found independently by M. Conder and R. Nedela., by C. Delorme, J. Gómez, and J. J. Quisquater and by Eyal Loz"}
+{"id": "bipdd-3-8", "params": {"d": 3, "k": 8}, "best": "256", "holder": "Graphs found by C. Delorme, J. Gómez, and J. J. Quisquater"}
+{"id": "bipdd-3-9", "params": {"d": 3, "k": 9}, "best": "506", "holder": "Graphs found by Eyal Loz as part of the joint project The degree/diameter problem for several classes of graphs by E. Loz, H. Pérez-Rosés and G. Pineda-Villavicencio"}
+{"id": "bipdd-3-10", "params": {"d": 3, "k": 10}, "best": "800", "holder": "Graphs found by C. Delorme, J. Gómez, and J. J. Quisquater"}
+{"id": "bipdd-4-5", "params": {"d": 4, "k": 5}, "best": "160", "holder": "Graphs found independently by Paul Hafner and by Eyal Loz"}
+{"id": "bipdd-4-7", "params": {"d": 4, "k": 7}, "best": "840", "holder": "Graphs found independently by Paul Hafner and by Eyal Loz"}
+{"id": "bipdd-4-8", "params": {"d": 4, "k": 8}, "best": "2184", "holder": "Graphs found by Eyal Loz as part of the joint project The degree/diameter problem for several classes of graphs by E. Loz, H. Pérez-Rosés and G. Pineda-Villavicencio"}
+{"id": "bipdd-4-9", "params": {"d": 4, "k": 9}, "best": "4970", "holder": "Graphs found by Eyal Loz as part of the joint project The degree/diameter problem for several classes of graphs by E. Loz, H. Pérez-Rosés and G. Pineda-Villavicencio"}
+{"id": "bipdd-4-10", "params": {"d": 4, "k": 10}, "best": "11748", "holder": "Graphs found by Eyal Loz as part of the joint project The degree/diameter problem for several classes of graphs by E. Loz, H. Pérez-Rosés and G. Pineda-Villavicencio"}
+{"id": "bipdd-5-5", "params": {"d": 5, "k": 5}, "best": "336", "holder": "Graphs found by Eyal Loz as part of the joint project The degree/diameter problem for several classes of graphs by E. Loz, H. Pérez-Rosés and G. Pineda-Villavicencio"}
+{"id": "bipdd-5-7", "params": {"d": 5, "k": 7}, "best": "3110", "holder": "Graphs found by Eyal Loz as part of the joint project The degree/diameter problem for several classes of graphs by E. Loz, H. Pérez-Rosés and G. Pineda-Villavicencio"}
+{"id": "bipdd-5-8", "params": {"d": 5, "k": 8}, "best": "9234", "holder": "Graphs found by Eyal Loz as part of the joint project The degree/diameter problem for several classes of graphs by E. Loz, H. Pérez-Rosés and G. Pineda-Villavicencio"}
+{"id": "bipdd-6-5", "params": {"d": 6, "k": 5}, "best": "684", "holder": "Graphs found by Eyal Loz as part of the joint project The degree/diameter problem for several classes of graphs by E. Loz, H. Pérez-Rosés and G. Pineda-Villavicencio"}
+{"id": "bipdd-6-7", "params": {"d": 6, "k": 7}, "best": "8310", "holder": "Graphs found by C. Delorme, J. Gómez, and J. J. Quisquater"}
+{"id": "bipdd-7-4", "params": {"d": 7, "k": 4}, "best": "346", "holder": "Graph duplications found by C. Delorme and G. Farhi"}
+{"id": "bipdd-7-5", "params": {"d": 7, "k": 5}, "best": "1134", "holder": "Graphs found by Eyal Loz as part of the joint project The degree/diameter problem for several classes of graphs by E. Loz, H. Pérez-Rosés and G. Pineda-Villavicencio"}
+{"id": "bipdd-7-6", "params": {"d": 7, "k": 6}, "best": "8992", "holder": "Graph duplications found by C. Delorme and G. Farhi"}
+{"id": "bipdd-8-5", "params": {"d": 8, "k": 5}, "best": "1710", "holder": "Graphs found by Eyal Loz as part of the joint project The degree/diameter problem for several classes of graphs by E. Loz, H. Pérez-Rosés and G. Pineda-Villavicencio"}
+{"id": "bipdd-9-5", "params": {"d": 9, "k": 5}, "best": "2496", "holder": "Graphs found by Eyal Loz as part of the joint project The degree/diameter problem for several classes of graphs by E. Loz, H. Pérez-Rosés and G. Pineda-Villavicencio"}
+{"id": "bipdd-10-5", "params": {"d": 10, "k": 5}, "best": "4000", "holder": "Graphs found by C. Delorme, J. Gómez, and J. J. Quisquater"}
+{"id": "bipdd-11-3", "params": {"d": 11, "k": 3}, "best": "190", "holder": "Graphs found by R. Feria-Puron, M. Miller and G. Pineda-Villavicencio and independently by G. Araujo and N. López"}
+{"id": "bipdd-11-4", "params": {"d": 11, "k": 4}, "best": "1734", "holder": "Graph duplications found by C. Delorme and G. Farhi"}
+{"id": "bipdd-11-5", "params": {"d": 11, "k": 5}, "best": "5850", "holder": "Graphs found by C. Delorme, J. Gómez, and J. J. Quisquater"}
+{"id": "bipdd-12-5", "params": {"d": 12, "k": 5}, "best": "8200", "holder": "Graphs found by C. Delorme, J. Gómez, and J. J. Quisquater"}
+{"id": "bipdd-13-3", "params": {"d": 13, "k": 3}, "best": "274", "holder": "Graphs found by G. Araujo and N. López"}
+{"id": "bipdd-13-4", "params": {"d": 13, "k": 4}, "best": "3064", "holder": "Graph duplications found by C. Delorme and G. Farhi"}
+{"id": "bipdd-13-5", "params": {"d": 13, "k": 5}, "best": "11480", "holder": "Graphs found by C. Delorme, J. Gómez, and J. J. Quisquater"}
+{"id": "bipdd-14-5", "params": {"d": 14, "k": 5}, "best": "14760", "holder": "Graphs found by C. Delorme, J. Gómez, and J. J. Quisquater"}
+{"id": "bipdd-15-3", "params": {"d": 15, "k": 3}, "best": "374", "holder": "Graphs found by G. Araujo and N. López"}
+{"id": "bipdd-15-4", "params": {"d": 15, "k": 4}, "best": "4946", "holder": "Graph duplications found by C. Delorme and G. Farhi"}
+{"id": "bipdd-16-3", "params": {"d": 16, "k": 3}, "best": "394", "holder": "Graph duplications found by C. Delorme and G. Farhi"}
+{"id": "bipdd-16-4", "params": {"d": 16, "k": 4}, "best": "5134", "holder": "Graph duplications found by C. Delorme and G. Farhi"}

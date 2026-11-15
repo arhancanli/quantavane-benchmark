@@ -1,11 +1,13 @@
 {
  "benchmark_version": "2.1",
- "problems": 359646,
+ "problems": 359848,
  "by_family": {
+  "bipartite-degree-diameter": 32,
   "cage": 40,
   "cap-set": 2,
   "circle-packing": 12759,
   "circle-packing-sum": 3056,
+  "circulant-degree-diameter": 170,
   "circulant-weighing-matrix": 2622,
   "coil-in-the-box": 5,
   "constant": 7,
@@ -60,6 +62,17 @@
   },
   {
    "kind": "family",
+   "family": "bipartite-degree-diameter",
+   "path": "families/bipartite-degree-diameter/cells.jsonl",
+   "definition": "families/bipartite-degree-diameter/family.json",
+   "count": 32,
+   "sha256": "da0df5367c3f8b22c24932b03bcf99e01ffd131645fe152bdc0cbbddd863c124",
+   "keeper": "Combinatorics Wiki (E. Loz, H. Pérez-Rosés, G. Pineda-Villavicencio and contributors), The Degree Diameter Problem for Bipartite Graphs",
+   "read": "2026-11-15",
+   "checker": "degdiam_check.py"
+  },
+  {
+   "kind": "family",
    "family": "circle-packing",
    "path": "families/circle-packing/cells.jsonl",
    "definition": "families/circle-packing/family.json",
@@ -79,6 +92,17 @@
    "keeper": "E. Specht, Packomania (packomania.com)",
    "read": "2026-11-14",
    "checker": "pack_check.py"
+  },
+  {
+   "kind": "family",
+   "family": "circulant-degree-diameter",
+   "path": "families/circulant-degree-diameter/cells.jsonl",
+   "definition": "families/circulant-degree-diameter/family.json",
+   "count": 170,
+   "sha256": "6d363c09cc2bdf7801b32073acdbbcf6af2f5dd3ca319d1e9e45244d13394636",
+   "keeper": "Combinatorics Wiki (E. Loz, H. Pérez-Rosés, G. Pineda-Villavicencio and contributors), The Degree Diameter Problem for Circulant Graphs",
+   "read": "2026-11-15",
+   "checker": "circulant_check.py"
   },
   {
    "kind": "family",

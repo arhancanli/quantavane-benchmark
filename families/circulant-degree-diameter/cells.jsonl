@@ -1,0 +1,170 @@
+{"id": "circdd-7-11", "params": {"d": 7, "k": 11}, "best": "3180", "holder": "Graphs found by R. Dougherty and V. Faber and independently for d=6 by E. Monakhova"}
+{"id": "circdd-7-12", "params": {"d": 7, "k": 12}, "best": "4144", "holder": "Graphs found by R. Dougherty and V. Faber and independently for d=6 by E. Monakhova"}
+{"id": "circdd-7-13", "params": {"d": 7, "k": 13}, "best": "5236", "holder": "Graphs found by R. Dougherty and V. Faber and independently for d=6 by E. Monakhova"}
+{"id": "circdd-7-14", "params": {"d": 7, "k": 14}, "best": "6536", "holder": "Graphs found by R. Dougherty and V. Faber and independently for d=6 by E. Monakhova"}
+{"id": "circdd-7-15", "params": {"d": 7, "k": 15}, "best": "8060", "holder": "Graphs found by R. Dougherty and V. Faber and independently for d=6 by E. Monakhova"}
+{"id": "circdd-7-16", "params": {"d": 7, "k": 16}, "best": "9744", "holder": "Graphs found by R. Dougherty and V. Faber and independently for d=6 by E. Monakhova"}
+{"id": "circdd-8-8", "params": {"d": 8, "k": 8}, "best": "2768", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-8-9", "params": {"d": 8, "k": 9}, "best": "4280", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-8-10", "params": {"d": 8, "k": 10}, "best": "6320", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-8-11", "params": {"d": 8, "k": 11}, "best": "9048", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-8-12", "params": {"d": 8, "k": 12}, "best": "12552", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-8-13", "params": {"d": 8, "k": 13}, "best": "17024", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-8-14", "params": {"d": 8, "k": 14}, "best": "22568", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-8-15", "params": {"d": 8, "k": 15}, "best": "29408", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-8-16", "params": {"d": 8, "k": 16}, "best": "37664", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-9-7", "params": {"d": 9, "k": 7}, "best": "2548", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-9-8", "params": {"d": 9, "k": 8}, "best": "4304", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-9-9", "params": {"d": 9, "k": 9}, "best": "6804", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-9-10", "params": {"d": 9, "k": 10}, "best": "10320", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-9-11", "params": {"d": 9, "k": 11}, "best": "15004", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-9-12", "params": {"d": 9, "k": 12}, "best": "21192", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-9-13", "params": {"d": 9, "k": 13}, "best": "29068", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-9-14", "params": {"d": 9, "k": 14}, "best": "39032", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-9-15", "params": {"d": 9, "k": 15}, "best": "51300", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-9-16", "params": {"d": 9, "k": 16}, "best": "66336", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-10-6", "params": {"d": 10, "k": 6}, "best": "2380", "holder": "Graphs found by D. Bevan, G. Erskine and R. Lewis"}
+{"id": "circdd-10-7", "params": {"d": 10, "k": 7}, "best": "4551", "holder": "Graphs found by D. Bevan, G. Erskine and R. Lewis"}
+{"id": "circdd-10-8", "params": {"d": 10, "k": 8}, "best": "8288", "holder": "Graphs found by D. Bevan, G. Erskine and R. Lewis"}
+{"id": "circdd-10-9", "params": {"d": 10, "k": 9}, "best": "14099", "holder": "Graphs found by D. Bevan, G. Erskine and R. Lewis"}
+{"id": "circdd-10-10", "params": {"d": 10, "k": 10}, "best": "22805", "holder": "Graphs found by D. Bevan, G. Erskine and R. Lewis"}
+{"id": "circdd-10-11", "params": {"d": 10, "k": 11}, "best": "35568", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-10-12", "params": {"d": 10, "k": 12}, "best": "53025", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-10-13", "params": {"d": 10, "k": 13}, "best": "77572", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-10-14", "params": {"d": 10, "k": 14}, "best": "110045", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-10-15", "params": {"d": 10, "k": 15}, "best": "152671", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-10-16", "params": {"d": 10, "k": 16}, "best": "208052", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-11-5", "params": {"d": 11, "k": 5}, "best": "1428", "holder": "Graphs found by D. Bevan, G. Erskine and R. Lewis"}
+{"id": "circdd-11-6", "params": {"d": 11, "k": 6}, "best": "3200", "holder": "Graphs found by D. Bevan, G. Erskine and R. Lewis"}
+{"id": "circdd-11-7", "params": {"d": 11, "k": 7}, "best": "6652", "holder": "Graphs found by D. Bevan, G. Erskine and R. Lewis"}
+{"id": "circdd-11-8", "params": {"d": 11, "k": 8}, "best": "12416", "holder": "Graphs found by D. Bevan, G. Erskine and R. Lewis"}
+{"id": "circdd-11-9", "params": {"d": 11, "k": 9}, "best": "21572", "holder": "Graphs found by D. Bevan, G. Erskine and R. Lewis"}
+{"id": "circdd-11-10", "params": {"d": 11, "k": 10}, "best": "35880", "holder": "Graphs found by D. Bevan, G. Erskine and R. Lewis"}
+{"id": "circdd-11-11", "params": {"d": 11, "k": 11}, "best": "56700", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-11-12", "params": {"d": 11, "k": 12}, "best": "87248", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-11-13", "params": {"d": 11, "k": 13}, "best": "128852", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-11-14", "params": {"d": 11, "k": 14}, "best": "184424", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-11-15", "params": {"d": 11, "k": 15}, "best": "259260", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-11-16", "params": {"d": 11, "k": 16}, "best": "355576", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-12-4", "params": {"d": 12, "k": 4}, "best": "819", "holder": "Graphs found by D. Bevan, G. Erskine and R. Lewis"}
+{"id": "circdd-12-5", "params": {"d": 12, "k": 5}, "best": "2120", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-12-6", "params": {"d": 12, "k": 6}, "best": "5044", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-12-7", "params": {"d": 12, "k": 7}, "best": "10777", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-12-8", "params": {"d": 12, "k": 8}, "best": "21384", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-12-9", "params": {"d": 12, "k": 9}, "best": "39996", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-12-10", "params": {"d": 12, "k": 10}, "best": "69965", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-12-11", "params": {"d": 12, "k": 11}, "best": "117712", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-12-12", "params": {"d": 12, "k": 12}, "best": "190392", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-12-13", "params": {"d": 12, "k": 13}, "best": "295840", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-12-14", "params": {"d": 12, "k": 14}, "best": "448920", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-12-15", "params": {"d": 12, "k": 15}, "best": "662680", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-12-16", "params": {"d": 12, "k": 16}, "best": "952985", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-13-4", "params": {"d": 13, "k": 4}, "best": "970", "holder": "Graphs found by D. Bevan, G. Erskine and R. Lewis"}
+{"id": "circdd-13-5", "params": {"d": 13, "k": 5}, "best": "2676", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-13-6", "params": {"d": 13, "k": 6}, "best": "6256", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-13-7", "params": {"d": 13, "k": 7}, "best": "14740", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-13-8", "params": {"d": 13, "k": 8}, "best": "30760", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-13-9", "params": {"d": 13, "k": 9}, "best": "57396", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-13-10", "params": {"d": 13, "k": 10}, "best": "106120", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-13-11", "params": {"d": 13, "k": 11}, "best": "182980", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-13-12", "params": {"d": 13, "k": 12}, "best": "295840", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-13-13", "params": {"d": 13, "k": 13}, "best": "476100", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-13-14", "params": {"d": 13, "k": 14}, "best": "732744", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-13-15", "params": {"d": 13, "k": 15}, "best": "1081860", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-13-16", "params": {"d": 13, "k": 16}, "best": "1593064", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-14-4", "params": {"d": 14, "k": 4}, "best": "1229", "holder": "Graphs found by D. Bevan, G. Erskine and R. Lewis"}
+{"id": "circdd-14-5", "params": {"d": 14, "k": 5}, "best": "3695", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-14-6", "params": {"d": 14, "k": 6}, "best": "9800", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-14-7", "params": {"d": 14, "k": 7}, "best": "23304", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-14-8", "params": {"d": 14, "k": 8}, "best": "49757", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-14-9", "params": {"d": 14, "k": 9}, "best": "103380", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-14-10", "params": {"d": 14, "k": 10}, "best": "196689", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-14-11", "params": {"d": 14, "k": 11}, "best": "350700", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-14-12", "params": {"d": 14, "k": 12}, "best": "593989", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-14-13", "params": {"d": 14, "k": 13}, "best": "996240", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-14-14", "params": {"d": 14, "k": 14}, "best": "1603216", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-14-15", "params": {"d": 14, "k": 15}, "best": "2486227", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-14-16", "params": {"d": 14, "k": 16}, "best": "3843540", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-15-4", "params": {"d": 15, "k": 4}, "best": "1420", "holder": "Graphs found by D. Bevan, G. Erskine and R. Lewis"}
+{"id": "circdd-15-5", "params": {"d": 15, "k": 5}, "best": "4292", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-15-6", "params": {"d": 15, "k": 6}, "best": "12232", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-15-7", "params": {"d": 15, "k": 7}, "best": "32092", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-15-8", "params": {"d": 15, "k": 8}, "best": "68944", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-15-9", "params": {"d": 15, "k": 9}, "best": "142516", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-15-10", "params": {"d": 15, "k": 10}, "best": "276928", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-15-11", "params": {"d": 15, "k": 11}, "best": "514580", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-15-12", "params": {"d": 15, "k": 12}, "best": "908480", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-15-13", "params": {"d": 15, "k": 13}, "best": "1550228", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-15-14", "params": {"d": 15, "k": 14}, "best": "2566712", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-15-15", "params": {"d": 15, "k": 15}, "best": "4013468", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-15-16", "params": {"d": 15, "k": 16}, "best": "6155056", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-16-3", "params": {"d": 16, "k": 3}, "best": "518", "holder": "Graphs found by D. Bevan, G. Erskine and R. Lewis"}
+{"id": "circdd-16-4", "params": {"d": 16, "k": 4}, "best": "1788", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-16-5", "params": {"d": 16, "k": 5}, "best": "5847", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-16-6", "params": {"d": 16, "k": 6}, "best": "17733", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-16-7", "params": {"d": 16, "k": 7}, "best": "45900", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-16-8", "params": {"d": 16, "k": 8}, "best": "107748", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-16-9", "params": {"d": 16, "k": 9}, "best": "232245", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-16-10", "params": {"d": 16, "k": 10}, "best": "479255", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-16-11", "params": {"d": 16, "k": 11}, "best": "924420", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-16-12", "params": {"d": 16, "k": 12}, "best": "1702428", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-16-13", "params": {"d": 16, "k": 13}, "best": "2982623", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-16-14", "params": {"d": 16, "k": 14}, "best": "5209347", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-16-15", "params": {"d": 16, "k": 15}, "best": "8476048", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-16-16", "params": {"d": 16, "k": 16}, "best": "13588848", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-17-3", "params": {"d": 17, "k": 3}, "best": "570", "holder": "Graphs found by G. Erskine"}
+{"id": "circdd-17-4", "params": {"d": 17, "k": 4}, "best": "1954", "holder": "Graphs found by G. Erskine"}
+{"id": "circdd-17-5", "params": {"d": 17, "k": 5}, "best": "6468", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-17-6", "params": {"d": 17, "k": 6}, "best": "20360", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-17-7", "params": {"d": 17, "k": 7}, "best": "57684", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-17-8", "params": {"d": 17, "k": 8}, "best": "136512", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-17-9", "params": {"d": 17, "k": 9}, "best": "321780", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-17-10", "params": {"d": 17, "k": 10}, "best": "659464", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-17-11", "params": {"d": 17, "k": 11}, "best": "1350820", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-17-12", "params": {"d": 17, "k": 12}, "best": "2479104", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-17-13", "params": {"d": 17, "k": 13}, "best": "4557364", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-17-14", "params": {"d": 17, "k": 14}, "best": "7729000", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-17-15", "params": {"d": 17, "k": 15}, "best": "13275108", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-17-16", "params": {"d": 17, "k": 16}, "best": "21252864", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-18-3", "params": {"d": 18, "k": 3}, "best": "655", "holder": "Graphs found by G. Erskine"}
+{"id": "circdd-18-4", "params": {"d": 18, "k": 4}, "best": "2645", "holder": "Graphs found by G. Erskine"}
+{"id": "circdd-18-5", "params": {"d": 18, "k": 5}, "best": "8425", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-18-6", "params": {"d": 18, "k": 6}, "best": "27273", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-18-7", "params": {"d": 18, "k": 7}, "best": "80940", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-18-8", "params": {"d": 18, "k": 8}, "best": "208872", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-18-9", "params": {"d": 18, "k": 9}, "best": "492776", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-18-10", "params": {"d": 18, "k": 10}, "best": "1078280", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-18-11", "params": {"d": 18, "k": 11}, "best": "2202955", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-18-12", "params": {"d": 18, "k": 12}, "best": "4388640", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-18-13", "params": {"d": 18, "k": 13}, "best": "8068383", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-18-14", "params": {"d": 18, "k": 14}, "best": "14718984", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-18-15", "params": {"d": 18, "k": 15}, "best": "25609955", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-18-16", "params": {"d": 18, "k": 16}, "best": "43068508", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-19-3", "params": {"d": 19, "k": 3}, "best": "722", "holder": "Graphs found by G. Erskine"}
+{"id": "circdd-19-4", "params": {"d": 19, "k": 4}, "best": "2696", "holder": "Graphs found by G. Erskine"}
+{"id": "circdd-19-5", "params": {"d": 19, "k": 5}, "best": "9652", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-19-6", "params": {"d": 19, "k": 6}, "best": "31440", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-19-7", "params": {"d": 19, "k": 7}, "best": "99420", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-19-8", "params": {"d": 19, "k": 8}, "best": "258040", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-19-9", "params": {"d": 19, "k": 9}, "best": "652004", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-19-10", "params": {"d": 19, "k": 10}, "best": "1416256", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-19-11", "params": {"d": 19, "k": 11}, "best": "3101860", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-19-12", "params": {"d": 19, "k": 12}, "best": "6100520", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-19-13", "params": {"d": 19, "k": 13}, "best": "11797684", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-19-14", "params": {"d": 19, "k": 14}, "best": "21659528", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-19-15", "params": {"d": 19, "k": 15}, "best": "38328220", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-19-16", "params": {"d": 19, "k": 16}, "best": "66601304", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-20-3", "params": {"d": 20, "k": 3}, "best": "815", "holder": "Graphs found by G. Erskine"}
+{"id": "circdd-20-4", "params": {"d": 20, "k": 4}, "best": "3175", "holder": "Graphs found by G. Erskine"}
+{"id": "circdd-20-5", "params": {"d": 20, "k": 5}, "best": "12396", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-20-6", "params": {"d": 20, "k": 6}, "best": "42252", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-20-7", "params": {"d": 20, "k": 7}, "best": "132720", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-20-8", "params": {"d": 20, "k": 8}, "best": "371400", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-20-9", "params": {"d": 20, "k": 9}, "best": "930184", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-20-10", "params": {"d": 20, "k": 10}, "best": "2232648", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-20-11", "params": {"d": 20, "k": 11}, "best": "4947880", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-20-12", "params": {"d": 20, "k": 12}, "best": "10238745", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-20-13", "params": {"d": 20, "k": 13}, "best": "20452920", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-20-14", "params": {"d": 20, "k": 14}, "best": "38155632", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-20-15", "params": {"d": 20, "k": 15}, "best": "70612644", "holder": "Graphs found by R. Lewis"}
+{"id": "circdd-20-16", "params": {"d": 20, "k": 16}, "best": "126967008", "holder": "Graphs found by R. Lewis"}

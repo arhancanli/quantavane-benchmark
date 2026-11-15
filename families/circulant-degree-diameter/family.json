@@ -1,0 +1,37 @@
+{
+ "family": "circulant-degree-diameter",
+ "title": "The degree-diameter problem for circulant graphs",
+ "id_prefixes": [
+  "circdd-"
+ ],
+ "template": {
+  "title": "Circulant graph of degree {d} and diameter {k}",
+  "statement": "Find a circulant graph C_n(S) (vertices 0..n-1, x joined to x + s and x - s modulo n for every jump s in S) of degree at most {d} and diameter at most {k}, with as many vertices n as possible.",
+  "submission": "Text file: n on the first line, then the jumps (integers separated by spaces); see checkers/circulant_check.py.",
+  "args": [
+   "{d}",
+   "{k}"
+  ]
+ },
+ "checker": {
+  "program": "circulant_check.py",
+  "value": "result"
+ },
+ "best_text": "The largest known circulant graph in the Combinatorics Wiki's table has {best} vertices ({holder}); a graph with more vertices improves it.",
+ "open_rule": "every entry of the table (degree 3 to 20, diameter 2 to 16) not in bold (bold entries are known to be optimal)",
+ "added": "2.2",
+ "objective": "maximize",
+ "keeper": "Combinatorics Wiki (E. Loz, H. Pérez-Rosés, G. Pineda-Villavicencio and contributors), The Degree Diameter Problem for Circulant Graphs",
+ "page": "http://combinatoricswiki.org/wiki/The_Degree_Diameter_Problem_for_Circulant_Graphs",
+ "read": "2026-11-15",
+ "revision": "pages read 15 Nov 2026 12:13 UTC (SHA-256 in page_sha256)",
+ "page_sha256": "72cdcf35c0df8c16ad80a3d0b4dd856498877f451907343101b424a319a393dd",
+ "score": "the number of vertices (larger is better)",
+ "holder_unknown": "not named in the table's colour key",
+ "holder_sources": "the colour of the entry in the table and the page's colour key",
+ "left_out": "100 optimal (bold), 0 more than 20,000 vertices",
+ "cells": "cells.jsonl",
+ "count": 170,
+ "quantavane_records": 0,
+ "single_problems_left_out": 0
+}

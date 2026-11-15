@@ -90,6 +90,8 @@ the 100 are new single problems of v2.1, with eight new checkers; see the collec
 | `difference-set` (in review for v2.2) | 102,628 | D. Gordon, La Jolla Difference Set Repository: (v,k,lambda) difference sets in abelian groups whose existence is open, one cell per group | `ds_check.py` |
 | `circulant-weighing-matrix` (in review for v2.2) | 2,617 | D. Gordon, La Jolla Circulant Weighing Matrices Repository: proper CW(n,s^2), n < 1,000, s < 20, whose existence is open | `cwm_check.py` |
 | `signed-difference-set` (in review for v2.2) | 22,325 | D. Gordon, La Jolla Signed Difference Set Repository: signed (v,k,lambda) difference sets, v < 500, whose existence is open, one cell per group | `ds_check.py --signed` |
+| `circulant-degree-diameter` (in review for v2.2) | 170 | Combinatorics Wiki: largest known circulant graphs of degree 3 to 20 and diameter 2 to 16 | `circulant_check.py` |
+| `bipartite-degree-diameter` (in review for v2.2) | 32 | Combinatorics Wiki: largest known bipartite graphs of maximum degree 3 to 16 and diameter 3 to 10 (at most 20,000 vertices) | `degdiam_check.py --bipartite` |
 
 Every cell is open in the sense written in its family file: its best known value is not marked optimal by the keeper
 and is strictly worse than the bound on the other side (the keeper's own bound, or a standard bound we compute and
@@ -352,7 +354,8 @@ What each family takes from its table, and what it leaves out:
   clusters, 186,395; with the rest of Comellas's degree-diameter table, 186,432; with the job shops, 186,545; with
   the Golomb rulers, 226,515; with the covering designs of m > t searched in C, 230,727; with Brouwer's open
   strongly regular graphs, 232,083; with Gordon's open difference sets and circulant weighing matrices (and seven
-  settled circulant weighing matrix problems removed), 337,321; with Gordon's open signed difference sets, 359,646.
+  settled circulant weighing matrix problems removed), 337,321; with Gordon's open signed difference sets, 359,646; with the
+  circulant and bipartite degree-diameter tables, 359,848.
 - `strongly-regular-graph` (in review for v2.2; read 15 Nov 2026): every parameter set srg(v,k,lambda,mu), v <= 1,300,
   that A. E. Brouwer's table (aeb.win.tue.nl/graphs/srg, 26 pages) marks '?': no graph is known and none has been ruled
   out. A parameter set and its complement are one row pair of the table and one cell here (a graph settles both); 65
@@ -392,6 +395,16 @@ What each family takes from its table, and what it leaves out:
   signed differences of all ordered pairs in Python; the 176 signed sets of the repository pass (141 as written in
   the primary decomposition, 35 written in the group's own cyclic factors). `tests/test_ds.py` passes three of them and
   refuses each with a sign flipped or an element moved; sampled cells refuse random signed sets.
+- `circulant-degree-diameter` and `bipartite-degree-diameter` (in review for v2.2; read 15 Nov 2026): the entries not
+  in bold (bold entries are optimal) of the Combinatorics Wiki's tables of the largest known circulant graphs (degree 3
+  to 20, diameter 2 to 16; 170 of 270 entries) and bipartite graphs (maximum degree 3 to 16, diameter 3 to 10; 32 of
+  112 entries, leaving out 29 optimal and 51 with more than 20,000 vertices). The holder is the finder the entry's
+  colour names in the page's key. `circulant_check.py` reads n and the jumps and, since a circulant graph is
+  vertex-transitive, finds the diameter by one breadth-first search from vertex 0 (in C on bit sets above 10^6
+  vertices, `circulant_bfs.c`; the largest entry has 126,967,008 vertices); `degdiam_check.py --bipartite` also
+  2-colours the graph. `tests/test_circulant.py`: the optimal degree-4 circulants C_n(1, 2k+1), n = 2k^2 + 2k + 1,
+  pass with diameter k and fail with k - 1 (k = 1000 in C), Python and C agree on 150 random graphs, even cycles pass
+  and odd cycles fail the bipartite check.
 - `project-scheduling`: every instance of the sets with open instances whose best known makespan is above its lower
   bound and which the site does not mark optimal; the open counts match the site's own table of November 2026. The
   highRD, lowRU and 1k variants are not read: their dataset files date from April 2021, many of their upper bounds are
@@ -408,6 +421,8 @@ Each checker in `checkers/` is one file that can be used without the benchmark: 
 with `python3 -I`, except the Ramsey checker, which is C (`cc -O3 -o ramsey_check checkers/ramsey_check.c`). Each
 prints its exact result and exits 0 only for a valid certificate.
 
+- `circulant_check.py DELTA DIAMETER FILE`: a circulant graph C_n(S) given by n and its jumps, degree at most DELTA
+  and diameter at most DIAMETER (one breadth-first search from 0; in C above 10^6 vertices).
 - `ds_check.py GROUP K L FILE`: a (v,K,L) difference set in the abelian group Z_n1 x ... x Z_nr (GROUP = n1,...,nr),
   every ordered pair's difference counted exactly (in C above 10^6 pairs); with --signed, a signed difference set
   (each line a sign + or - before the coordinates).

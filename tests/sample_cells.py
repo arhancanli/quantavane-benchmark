@@ -447,6 +447,31 @@ def test_signed_difference_set(n, rng):
         expect(f"red   {c['id']} (a random signed {k}-subset of {p['group']})", obb(c["id"], bad), "NOT CERTIFIED,")
 
 
+def test_circulant_degree_diameter(n, rng):
+    """C_N(1, ..., m) with m = floor(d/2) and N = 2mk + 1 has degree 2m <= d and diameter k: valid and smaller than
+    the table; with N = 2mk + 2m + 1 its diameter is k + 1 and it must be refused."""
+    cells = family_cells("circulant-degree-diameter")
+    for c in rng.sample(cells, min(n, len(cells))):
+        d, k = c["params"]["d"], c["params"]["k"]
+        m = d // 2
+        good = write(f"{c['id']}.txt", [str(2 * m * k + 1), " ".join(map(str, range(1, m + 1)))])
+        expect(f"sample {c['id']} C_{2 * m * k + 1}(1..{m})", obb(c["id"], good), "does not improve,")
+        bad = write(f"{c['id']}_red.txt", [str(2 * m * k + 2 * m + 1), " ".join(map(str, range(1, m + 1)))])
+        expect(f"red   {c['id']} (diameter {k + 1})", obb(c["id"], bad), "NOT CERTIFIED,")
+
+
+def test_bipartite_degree_diameter(n, rng):
+    """The even cycle C_2k is bipartite with degree 2 and diameter k: valid and smaller than the table; the odd cycle
+    C_(2k+1) has diameter k but is not bipartite and must be refused."""
+    cells = family_cells("bipartite-degree-diameter")
+    for c in rng.sample(cells, min(n, len(cells))):
+        k = c["params"]["k"]
+        good = write(f"{c['id']}.txt", [f"{i} {(i + 1) % (2 * k)}" for i in range(2 * k)])
+        expect(f"sample {c['id']} the cycle C_{2 * k}", obb(c["id"], good), "does not improve,")
+        bad = write(f"{c['id']}_red.txt", [f"{i} {(i + 1) % (2 * k + 1)}" for i in range(2 * k + 1)])
+        expect(f"red   {c['id']} (the odd cycle C_{2 * k + 1})", obb(c["id"], bad), "NOT CERTIFIED,")
+
+
 def test_circulant_weighing_matrix(n, rng):
     """No proper matrix is known for any cell; test.sh passes the circulant Hadamard matrix of order 4 through the
     checker and refuses an improper CW(8,4). For each drawn cell a random first row with s(s+1)/2 entries +1 and
@@ -769,6 +794,8 @@ def main():
                        ("difference-set", test_difference_set),
                        ("circulant-weighing-matrix", test_circulant_weighing_matrix),
                        ("signed-difference-set", test_signed_difference_set),
+                       ("circulant-degree-diameter", test_circulant_degree_diameter),
+                       ("bipartite-degree-diameter", test_bipartite_degree_diameter),
                        ("flexible-job-shop", test_flexible_job_shop),
                        ("unequal-circle-packing", test_unequal_circle_packing)):
         if os.path.exists(os.path.join(ROOT, "families", name, "cells.jsonl")):

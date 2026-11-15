@@ -1,0 +1,38 @@
+{
+ "family": "bipartite-degree-diameter",
+ "title": "The degree-diameter problem for bipartite graphs",
+ "id_prefixes": [
+  "bipdd-"
+ ],
+ "template": {
+  "title": "Bipartite graph of maximum degree {d} and diameter {k}",
+  "statement": "Find a bipartite graph of maximum degree at most {d} and diameter at most {k}, with as many vertices as possible.",
+  "submission": "Text file: one graph in graph6 or sparse6, or an edge list (one edge \"u v\" per line, vertices numbered from 0).",
+  "args": [
+   "{d}",
+   "{k}",
+   "--bipartite"
+  ]
+ },
+ "checker": {
+  "program": "degdiam_check.py",
+  "value": "result"
+ },
+ "best_text": "The largest known bipartite graph in the Combinatorics Wiki's table has {best} vertices ({holder}); a graph with more vertices improves it.",
+ "open_rule": "every entry of the table (degree 3 to 16, diameter 3 to 10) not in bold (bold entries are optimal), with at most 20,000 vertices",
+ "added": "2.2",
+ "objective": "maximize",
+ "keeper": "Combinatorics Wiki (E. Loz, H. Pérez-Rosés, G. Pineda-Villavicencio and contributors), The Degree Diameter Problem for Bipartite Graphs",
+ "page": "http://combinatoricswiki.org/wiki/The_Degree_Diameter_Problem_for_Bipartite_Graphs",
+ "read": "2026-11-15",
+ "revision": "pages read 15 Nov 2026 12:13 UTC (SHA-256 in page_sha256)",
+ "page_sha256": "03c0179b48409959a112b72f0376f71faeac500e1aee1ed0d1ac9f1a75e7dc92",
+ "score": "the number of vertices (larger is better)",
+ "holder_unknown": "not named in the table's colour key",
+ "holder_sources": "the colour of the entry in the table and the page's colour key",
+ "left_out": "29 optimal (bold), 51 more than 20,000 vertices",
+ "cells": "cells.jsonl",
+ "count": 32,
+ "quantavane_records": 0,
+ "single_problems_left_out": 0
+}

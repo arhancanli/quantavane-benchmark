@@ -18,6 +18,18 @@ value can change within a version when its source table changes; the file then s
   some of them are public on Zenodo. Their values stay as read on 8 Nov until a rule for cells the table does not list is
   chosen.
 
+## Next (in review): the families `circulant-degree-diameter` and `bipartite-degree-diameter` (15 Nov 2026)
+
+- `checkers/circulant_check.py` (new, with the C helper `checkers/circulant_bfs.c`): circulant graphs given by n and
+  their jumps; degree and diameter (one breadth-first search from 0, bit-parallel in C above 10^6 vertices).
+  `checkers/degdiam_check.py --bipartite`: the graph must also be bipartite. `tests/test_circulant.py` (run by
+  `test.sh`): optimal degree-4 circulants pass and fail one diameter lower, in Python and C; the two agree on 150
+  random graphs; repeated jumps, too large degrees and disconnected graphs are refused; even and odd cycles.
+- `families/circulant-degree-diameter` (170 cells) and `families/bipartite-degree-diameter` (32 cells;
+  `tools/combwiki_dd_cells.py`): the Combinatorics Wiki's tables, read 15 Nov 2026, entries not in bold (bipartite: at
+  most 20,000 vertices). Sampled cells: C_(2mk+1)(1..m) and even cycles pass; one diameter too many and odd cycles fail.
+- index.json: 359,848 problems.
+
 ## Next (in review): the family `signed-difference-set` from Gordon's repository (15 Nov 2026)
 
 - `checkers/ds_check.py --signed`: signed difference sets (each element with a sign; for every nonzero g the signed
