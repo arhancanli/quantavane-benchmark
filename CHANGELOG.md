@@ -18,6 +18,18 @@ value can change within a version when its source table changes; the file then s
   some of them are public on Zenodo. Their values stay as read on 8 Nov until a rule for cells the table does not list is
   chosen.
 
+## Next (in review): the families `job-shop` and `flexible-job-shop` from ScheduleOpt's libraries (15 Nov 2026)
+
+- New exact checker `checkers/jsp_check.py`: job shop schedules (start times) and flexible job shop schedules (machine
+  and start time of each operation), precedences and machines checked in integers, the makespan as the value.
+  `tests/test_jsp.py` (run by `test.sh`): hand-made schedules with red controls, 30 random job shops with greedy
+  schedules and overlapping copies.
+- `families/job-shop` (60 cells) and `families/flexible-job-shop` (53 cells; `tools/scheduleopt_cells.py`): open
+  instances of ScheduleOpt's bks.json files at commit 8a6e36e, cross-checked with O. Shylo's tables for the job shop;
+  fetch.sh downloads the 113 instance files with their SHA-256 (before the CVRPLIB downloads). `tests/sample_cells.py`
+  samples both families when the instances are present. Shylo's ta43 schedule reproduces the best known 1846.
+- index.json: 186,545 problems.
+
 ## Next (in review): the family `degree-diameter` from Comellas's table (15 Nov 2026)
 
 - `families/degree-diameter` (37 cells; `tools/comellas_cells.py`): the entries of F. Comellas's table read on 15 Nov

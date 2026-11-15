@@ -1,6 +1,6 @@
 {
  "benchmark_version": "2.1",
- "problems": 186432,
+ "problems": 186545,
  "by_family": {
   "cage": 40,
   "cap-set": 2,
@@ -16,9 +16,11 @@
   "degree-diameter": 57,
   "ea-quantum-code": 3263,
   "erdos-problem": 2,
+  "flexible-job-shop": 53,
   "golomb-ruler": 2,
   "growing-circle-packing": 396,
   "hadamard": 4,
+  "job-shop": 60,
   "kissing-number": 25,
   "latin-squares": 1,
   "linear-code": 15255,
@@ -133,6 +135,17 @@
   },
   {
    "kind": "family",
+   "family": "flexible-job-shop",
+   "path": "families/flexible-job-shop/cells.jsonl",
+   "definition": "families/flexible-job-shop/family.json",
+   "count": 53,
+   "sha256": "a81448d82680ef1eb4a3932c7b5d7cd48b4add70b36515fb406d52135f622994",
+   "keeper": "ScheduleOpt, benchmark of scheduling problems (FJSPLib; github.com/ScheduleOpt/benchmarks, CC BY-SA 4.0)",
+   "read": "2026-11-15",
+   "checker": "jsp_check.py"
+  },
+  {
+   "kind": "family",
    "family": "growing-circle-packing",
    "path": "families/growing-circle-packing/cells.jsonl",
    "definition": "families/growing-circle-packing/family.json",
@@ -141,6 +154,17 @@
    "keeper": "E. Specht, Packomania (packomania.com)",
    "read": "2026-11-14",
    "checker": "pack_check.py"
+  },
+  {
+   "kind": "family",
+   "family": "job-shop",
+   "path": "families/job-shop/cells.jsonl",
+   "definition": "families/job-shop/family.json",
+   "count": 60,
+   "sha256": "ff992e39ecae38a54dfce2d9a7c9f8dcf12481ad3356205afc08871c8f0046ff",
+   "keeper": "ScheduleOpt, benchmark of scheduling problems (JSPLib; github.com/ScheduleOpt/benchmarks, CC BY-SA 4.0), with O. Shylo's table of bounds (optimizizer.com)",
+   "read": "2026-11-15",
+   "checker": "jsp_check.py"
   },
   {
    "kind": "family",

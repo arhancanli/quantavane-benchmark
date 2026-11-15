@@ -83,6 +83,8 @@ the 100 are new single problems of v2.1, with eight new checkers; see the collec
 | `orthogonal-array` (in review for v2.2) | 249 | W. Ch. Schmid and R. Schürer, MinT: ordered orthogonal arrays and nets of any kind (not only linear) with at most 2^16 runs | `oa_check.py` |
 | `lj-cluster` (in review for v2.2) | 137 | D. J. Wales and others, the Cambridge Cluster Database: Lennard-Jones clusters, N = 14 to 150 | `cluster_check.py` |
 | `degree-diameter` (in review for v2.2) | 37 | F. Comellas: largest known graphs of maximum degree 3 to 16 and diameter 2 to 10 (cells beside the 20 single problems) | `degdiam_check.py` |
+| `job-shop` (in review for v2.2) | 60 | ScheduleOpt's JSPLib archive of best bounds (with O. Shylo's table): open Taillard, Demirkol and SWV instances | `jsp_check.py` |
+| `flexible-job-shop` (in review for v2.2) | 53 | ScheduleOpt's FJSPLib archive of best bounds: open Brandimarte, Hurink, Dauzère-Pérès and Behnke instances | `jsp_check.py` |
 
 Every cell is open in the sense written in its family file: its best known value is not marked optimal by the keeper
 and is strictly worse than the bound on the other side (the keeper's own bound, or a standard bound we compute and
@@ -256,6 +258,16 @@ What each family takes from its table, and what it leaves out:
   now one cell, with the better of the two values (hsp4 300: 0.187824804694), so the first part has 10,177 cells, not
   10,180. Holders named on the pages only by an image are now given as "[name shown as an image: NAME]". Each family
   file notes Packomania's queue of unreviewed candidates (pending.html), which may already beat a cell's value.
+- `job-shop` and `flexible-job-shop` (in review for v2.2; read 15 Nov 2026): the instances of ScheduleOpt's libraries
+  (github.com/ScheduleOpt/benchmarks at commit 8a6e36e; its archive records the best upper and lower bounds from any
+  source) whose lower bound is below the upper bound; for the job shop also open in O. Shylo's table (optimizizer.com)
+  where he lists the instance, with the smaller of the two upper bounds as the best known (4 Demirkol instances take
+  his). 60 job shop cells (Taillard 12, Demirkol 45, SWV 3) and 53 flexible job shop cells (Behnke 27, Hurink 15,
+  Dauzère-Pérès 10, Brandimarte 1). `jsp_check.py` reads start times (and, for the flexible shop, the machine of
+  each operation) and checks precedences and machines in integers; fetch.sh downloads the 113 instance files at the
+  pinned commit with their SHA-256. Shylo's published schedule for ta43 gives 1846, the best known, through it.
+  Left out: instances kept only as zip archives (the 1000-job tai and dct instances) and the flexible assembly
+  instances (yfjs, dafjs).
 - `degree-diameter` (in review for v2.2; read 15 Nov 2026): the entries of Comellas's table (degree 3 to 16, diameter 2
   to 10; it lists the 2026 deposits of Rajiv, de Messieres, Taghiyev and others) that are not in boldface (optimal),
   have at most 20,000 vertices and are not already single problems: 37 cells, checked by `degdiam_check.py`.
@@ -314,7 +326,7 @@ What each family takes from its table, and what it leaves out:
   re-read and checked in C, 178,601; with the ordered orthogonal arrays walked in C, 180,158; with the third part of
   Packomania, 181,842; with the walk in C for odd bases, 182,394; with the entanglement-assisted codes, 185,657;
   with Brouwer's unrestricted codes, 186,009; with MinT's arrays of any kind, 186,258; with the Lennard-Jones
-  clusters, 186,395; with the rest of Comellas's degree-diameter table, 186,432.
+  clusters, 186,395; with the rest of Comellas's degree-diameter table, 186,432; with the job shops, 186,545.
 - `project-scheduling`: every instance of the sets with open instances whose best known makespan is above its lower
   bound and which the site does not mark optimal; the open counts match the site's own table of November 2026. The
   highRD, lowRU and 1k variants are not read: their dataset files date from April 2021, many of their upper bounds are
@@ -331,6 +343,7 @@ Each checker in `checkers/` is one file that can be used without the benchmark: 
 with `python3 -I`, except the Ramsey checker, which is C (`cc -O3 -o ramsey_check checkers/ramsey_check.c`). Each
 prints its exact result and exits 0 only for a valid certificate.
 
+- `jsp_check.py [--flexible] INSTANCE FILE`: job shop and flexible job shop schedules, the makespan in integers.
 - `cluster_check.py lj N FILE`: the Lennard-Jones energy of N atoms, a proven upper bound within 10^-12.
 - `oa_check.py B T M K FILE`: ordered orthogonal arrays and nets of any kind, given run by run (every choice of
   depths tested for uniformity; in C above 2^20 steps).

@@ -1,0 +1,38 @@
+{
+ "family": "job-shop",
+ "title": "Job shop scheduling: the shortest makespan",
+ "added": "2.2",
+ "objective": "minimize",
+ "id_prefixes": [
+  "jsp-"
+ ],
+ "keeper": "ScheduleOpt, benchmark of scheduling problems (JSPLib; github.com/ScheduleOpt/benchmarks, CC BY-SA 4.0), with O. Shylo's table of bounds (optimizizer.com)",
+ "page": "https://scheduleopt.github.io/benchmarks/jsplib/",
+ "read": "2026-11-15",
+ "revision": "ScheduleOpt/benchmarks at commit 8a6e36e (22 Oct 2026; read 15 Nov 2026 11:10 UTC): jobshop/solutions/bks.json and flexible-jobshop/solutions/bks.json; O. Shylo's TA.php, DMU.php and Extra.php read 15 Nov 2026 11:08 UTC",
+ "template": {
+  "title": "Job shop instance {name}",
+  "statement": "Schedule the operations of instance {name} so that each job's operations run in order, no machine runs two operations at once, and the makespan (the latest end) is as small as possible.",
+  "submission": "Text file: one line per job: the start time of each of its operations, in order (integers); the instance file is fetched by fetch.sh into {file}; see checkers/jsp_check.py.",
+  "args": [
+   "{file}"
+  ]
+ },
+ "checker": {
+  "program": "jsp_check.py",
+  "value": "result"
+ },
+ "score": "the makespan (smaller is better)",
+ "best_text": "The best known makespan is {best} ({holder}); a valid schedule with a shorter makespan improves it.",
+ "bound_kind": "lower bound",
+ "bound_source": "the best known lower bound in the keeper's archive (the larger of ScheduleOpt's and Shylo's)",
+ "holder_unknown": "not named in the archive",
+ "holder_sources": "the solver or publication of the archive's earliest entry with the best upper bound, or Shylo's reference where his upper bound is lower",
+ "open_rule": "every instance whose best known lower bound is below its best known upper bound in the keeper's archive and, where O. Shylo's table lists it, there as well",
+ "left_out": "285 closed, 0 closed in Shylo's table, 31 zip only (of 376 instances)",
+ "instances": "fetched by fetch.sh from raw.githubusercontent.com/ScheduleOpt/benchmarks at commit 8a6e36ef31263d36975e56fb481e0ba04e188d6f, each checked against its SHA-256",
+ "cells": "cells.jsonl",
+ "count": 60,
+ "quantavane_records": 0,
+ "single_problems_left_out": 0
+}

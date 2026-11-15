@@ -299,6 +299,50 @@ def test_degree_diameter(n, rng):
         expect(f"red   {c['id']} (cycle of {m2} vertices, diameter {d + 1})", obb(c["id"], bad), "NOT CERTIFIED,")
 
 
+def test_job_shop(n, rng, family="job-shop", flexible=False):
+    """A greedy schedule (operations placed job by job, each at the earliest time after its job's previous operation
+    and after everything already on its machine; for the flexible shop the first machine listed): valid and longer
+    than the best known; with one start time moved one unit earlier it must be refused. Cells whose instance file is
+    not under instances/ (fetch.sh) are skipped."""
+    cells = [c for c in family_cells(family) if os.path.exists(os.path.join(ROOT, c["params"]["file"]))]
+    if not cells:
+        print(f"skip  {family}: no instance files under instances/ (run fetch.sh)")
+        return
+    for c in rng.sample(cells, min(n, len(cells))):
+        lines = [l for l in open(os.path.join(ROOT, c["params"]["file"])) if l.strip()]
+        nj = int(lines[0].split()[0])
+        free, out = {}, []
+        for j in range(nj):
+            v = [int(x) for x in lines[1 + j].split()]
+            ops = []
+            if flexible:
+                pos = 1
+                for _ in range(v[0]):
+                    k = v[pos]
+                    ops.append((v[pos + 1], v[pos + 2]))
+                    pos += 1 + 2 * k
+            else:
+                ops = [(v[2 * o], v[2 * o + 1]) for o in range(len(v) // 2)]
+            t, row = 0, []
+            for mach, dur in ops:
+                st = max(t, free.get(mach, 0))
+                row += [mach, st] if flexible else [st]
+                t = st + dur
+                free[mach] = t
+            out.append(row)
+        good = write(f"{c['id']}.txt", [" ".join(map(str, r)) for r in out])
+        expect(f"sample {c['id']} greedy schedule", obb(c["id"], good), "does not improve,")
+        bad_rows = [r[:] for r in out]
+        last = len(bad_rows[-1]) - 1                     # the last operation of the last job, one unit earlier
+        bad_rows[-1][last] -= 1
+        bad = write(f"{c['id']}_red.txt", [" ".join(map(str, r)) for r in bad_rows])
+        expect(f"red   {c['id']} (one start time a unit earlier)", obb(c["id"], bad), "NOT CERTIFIED,")
+
+
+def test_flexible_job_shop(n, rng):
+    test_job_shop(n, rng, "flexible-job-shop", True)
+
+
 def test_constant_weight_code(n, rng):
     import math
     small = [c for c in family_cells("constant-weight-code")
@@ -597,6 +641,8 @@ def main():
                        ("orthogonal-array", test_orthogonal_array),
                        ("lj-cluster", test_lj_cluster),
                        ("degree-diameter", test_degree_diameter),
+                       ("job-shop", test_job_shop),
+                       ("flexible-job-shop", test_flexible_job_shop),
                        ("unequal-circle-packing", test_unequal_circle_packing)):
         if os.path.exists(os.path.join(ROOT, "families", name, "cells.jsonl")):
             test(n, rng)
