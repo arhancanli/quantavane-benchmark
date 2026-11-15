@@ -12,14 +12,21 @@ all its extensions); a T-set is covered when none of its V^T intersections is em
 any, is printed with its columns. Prints "rows N" and, as its last line, "RESULT N", and exits 0 when the array is a
 covering array of strength T with K columns over V symbols; exits 1 otherwise.
 
-Above 5 x 10^7 row visits (C(K,T) x N) the check is done by the C helper ca_scan.c (built with cc -O3 on first use):
-for each T-set of columns it numbers every row's tuple and marks it in a bit array of V^T bits, which must fill up.
---native or --python forces one way."""
+Above 5 x 10^7 row visits (C(K,T) x N) the check is done in C (built with cc -O3 on first use). For V <= 64 the helper
+is ca_trie.c (16 Nov 2026): the rows are split by their symbols in the first T-2 chosen columns; within each group,
+for every choice of the (T-1)-th column, each row's symbols in all later columns are OR-ed as one-hot bit masks into
+the accumulator of its symbol in that column, and every accumulator must come out full; a row is visited once per
+T-set, as one lane of a vector operation. For V > 64 the helper is ca_scan.c: for each T-set of columns it numbers
+every row's tuple and marks it in a bit array of V^T bits, which must fill up. --native (ca_trie.c), --mark
+(ca_scan.c) or --python forces one way."""
 import math
 import sys
 
 
-def read_rows(path, k, v):
+def read_lines(path, k, v):
+    """The rows, each as one string of K valid symbols (integers 0..V-1) separated by single spaces (one string per
+    row keeps the memory small for large arrays)."""
+    allowed = {str(i) for i in range(v)}
     rows = []
     for no, line in enumerate(open(path), 1):
         s = line.strip()
@@ -28,16 +35,22 @@ def read_rows(path, k, v):
         parts = s.replace(",", " ").split()
         if len(parts) == 1 and len(s) == k and v <= 10 and s.isdigit():
             parts = list(s)
-        try:
-            row = [int(x) for x in parts]
-        except ValueError:
-            raise SystemExit(f"line {no}: not a row of integers")
-        if len(row) != k:
-            raise SystemExit(f"line {no}: {len(row)} symbols, not {k}")
-        if not all(0 <= x < v for x in row):
-            raise SystemExit(f"line {no}: a symbol outside 0..{v - 1}")
-        rows.append(row)
+        if len(parts) != k:
+            raise SystemExit(f"line {no}: {len(parts)} symbols, not {k}")
+        if not allowed.issuperset(parts):
+            try:
+                vals = [int(x) for x in parts]
+            except ValueError:
+                raise SystemExit(f"line {no}: not a row of integers")
+            if not all(0 <= x < v for x in vals):
+                raise SystemExit(f"line {no}: a symbol outside 0..{v - 1}")
+            parts = [str(x) for x in vals]
+        rows.append(" ".join(parts))
     return rows
+
+
+def read_rows(path, k, v):
+    return [[int(x) for x in r.split()] for r in read_lines(path, k, v)]
 
 
 def first_gap(rows, t, k, v):
@@ -69,30 +82,32 @@ def first_gap(rows, t, k, v):
     return rec(0, 0, everything, [])
 
 
-NATIVE_FROM = 5 * 10 ** 7          # above C(K,T) x N rows to visit, the C helper ca_scan.c does the check
+NATIVE_FROM = 5 * 10 ** 7          # above C(K,T) x N rows to visit, the check is done in C
 
 
-def first_gap_native(rows, t, k, v):
-    """The same question answered by checkers/ca_scan.c (built with cc -O3 on first use)."""
+def first_gap_native(rows, t, k, v, helper="ca_trie", extra=""):
+    """The same question answered by checkers/ca_trie.c or checkers/ca_scan.c (built with cc -O3 on first use); the
+    rows may be lists of ints or of tokens."""
     import os
     import subprocess
     here = os.path.dirname(os.path.abspath(__file__))
-    exe, src = os.path.join(here, "bin", "ca_scan"), os.path.join(here, "ca_scan.c")
+    exe, src = os.path.join(here, "bin", helper), os.path.join(here, helper + ".c")
     if not os.path.exists(exe) or os.path.getmtime(exe) < os.path.getmtime(src):
         os.makedirs(os.path.dirname(exe), exist_ok=True)
         subprocess.run(["cc", "-O3", "-o", exe, src], check=True)
-    text = f"{t} {k} {v} {len(rows)}\n" + "".join(" ".join(map(str, r)) + "\n" for r in rows)
-    out = subprocess.run([exe], input=text, capture_output=True, text=True, check=True).stdout.split("\n")
+    head = f"{t} {k} {v} {len(rows)}{extra}\n".encode()
+    body = "\n".join(r if isinstance(r, str) else " ".join(map(str, r)) for r in rows).encode() + b"\n"
+    out = subprocess.run([exe], input=head + body, capture_output=True, check=True).stdout.decode().split("\n")
     if out[0].startswith("covered"):
         sets = int(out[0].split()[1])
-        assert sets == math.comb(k, t), "ca_scan: wrong number of t-sets"
+        assert sets == math.comb(k, t), f"{helper}: wrong number of t-sets"
         return None
     head, tail = out[0][4:].split(":")
     return [int(x) for x in head.split()], [int(x) for x in tail.split()]
 
 
 def main():
-    flags = [a for a in sys.argv[1:] if a in ("--native", "--python")]
+    flags = [a for a in sys.argv[1:] if a in ("--native", "--python", "--mark")]
     args = [a for a in sys.argv[1:] if a not in flags]
     if len(args) != 4:
         print(__doc__)
@@ -101,15 +116,23 @@ def main():
     if not (1 <= t <= k and v >= 2):
         print(f"need 1 <= T <= K and V >= 2, got T={t} K={k} V={v}")
         return 1
-    rows = read_rows(args[3], k, v)
+    rows = read_lines(args[3], k, v)
     if len(rows) < v ** t:
         print(f"{len(rows)} rows cannot show all {v}^{t} = {v ** t} tuples")
         return 1
-    native = "--native" in flags or ("--python" not in flags and math.comb(k, t) * len(rows) > NATIVE_FROM)
-    if native and v ** t >= 2 ** 32:
-        print(f"too large: v^t = {v ** t} does not fit the C helper")
-        return 2
-    gap = first_gap_native(rows, t, k, v) if native else first_gap(rows, t, k, v)
+    big = math.comb(k, t) * len(rows) > NATIVE_FROM
+    if "--python" in flags or (not flags and not big):
+        gap = first_gap([[int(x) for x in r.split()] for r in rows], t, k, v)
+    elif "--mark" in flags or (not flags and v > 64):
+        if v ** t >= 2 ** 32:
+            print(f"too large: v^t = {v ** t} does not fit the C helper ca_scan.c")
+            return 2
+        gap = first_gap_native(rows, t, k, v, "ca_scan")
+    else:
+        if v > 64:
+            print("ca_trie.c takes at most 64 symbols")
+            return 2
+        gap = first_gap_native(rows, t, k, v, "ca_trie")
     if gap:
         cols, tup = gap
         print(f"columns {[c + 1 for c in cols]} never show the symbols {tup} together: not a covering array of "

@@ -31,9 +31,10 @@
  "holder_unknown": "not named in the table",
  "holder_sources": "the table's source of the row that gives the best value (by its own rule: the fewest rows among CITED and VERIFIED rows with at least k columns)",
  "open_rule": "every row of the table (CITED or VERIFIED) that is a step of its staircase (no row with more columns has as few rows), above v^t, leaving out strength 2 over 2 symbols (solved exactly by Kleitman and Spencer and by Katona)",
- "left_out": "2236 rows beaten by a row with more columns; 138 cells solved (v^t rows, or t = v = 2); 7203 cells whose check would visit more than 10^11 rows (C(k,t) x (N - 1) for an array one row smaller than the best known; about three minutes in C) or whose v^t is above 2^26",
+ "work_rule": "kept when checking an array one row smaller than the best known takes about three minutes or less: until 15 Nov 2026, at most 10^11 row visits (C(k,t) x (N - 1)) with v^t at most 2^26 (ca_scan.c); from 16 Nov 2026 also, for v <= 64, an estimated time of ca_check.py with ca_trie.c of at most 180 s (tools/import_families.py, ca_check_seconds: a fit to 34 timed arrays with a safety factor; 834 cells)",
+ "left_out": "2236 rows beaten by a row with more columns; 138 cells solved (v^t rows, or t = v = 2); 6369 cells whose check would take longer than the work rule allows",
  "cells": "cells.jsonl",
- "count": 4731,
- "quantavane_records": 13,
+ "count": 5565,
+ "quantavane_records": 37,
  "single_problems_left_out": 0
 }

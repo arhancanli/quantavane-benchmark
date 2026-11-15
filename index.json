@@ -1,6 +1,6 @@
 {
  "benchmark_version": "2.1",
- "problems": 359848,
+ "problems": 360682,
  "by_family": {
   "bipartite-degree-diameter": 32,
   "cage": 40,
@@ -13,7 +13,7 @@
   "constant": 7,
   "constant-weight-code": 1166,
   "costas-array": 2,
-  "covering-array": 4731,
+  "covering-array": 5565,
   "covering-design": 61404,
   "degree-diameter": 57,
   "difference-set": 102628,
@@ -131,8 +131,8 @@
    "family": "covering-array",
    "path": "families/covering-array/cells.jsonl",
    "definition": "families/covering-array/family.json",
-   "count": 4731,
-   "sha256": "75c630232a6673a0d4b3acae301fcf38bae2bea110e5070edc0c76b848b30632",
+   "count": 5565,
+   "sha256": "a513aced18d081c966457cca1b66d2efd6c86c36725dff28ecc66c214c9391f4",
    "keeper": "C. Smolen's ca-tools table (github.com/chrispbsmolen/ca-tools), the live successor of C. J. Colbourn's covering array tables",
    "read": "2026-11-15",
    "checker": "ca_check.py"
