@@ -1,0 +1,14 @@
+# symmetrization-image, G = 15: 12 almost symmetric numerical semigroups (minimal generators, one per line) whose images Phi(S) are 12 different symmetric numerical sets with Frobenius number 15.
+# Every such set: the image is complete (exhaustive enumeration).
+2 17
+4 6 19 21
+3 11 19
+4 6 13
+4 11 14 21
+4 9 10
+5 7 13
+5 9 12 13
+6 7 10 11
+6 8 10 11 13
+7 9 10 11 12 13
+8 9 10 11 12 13 14

@@ -1,13 +1,13 @@
 {
  "collection": "Quantavane Originals",
- "problems": 70,
+ "problems": 71,
  "counting": "questions: one per problem file (a family); cells: the family's question at each value of its natural parameter, each with its certificate (a family without a cells file is one cell)",
- "questions": 70,
- "cells": 1251,
- "cells_exact": 360,
+ "questions": 71,
+ "cells": 1277,
+ "cells_exact": 381,
  "by_field": {
   "Combinatorics and graph theory": 16,
-  "Number theory": 9,
+  "Number theory": 10,
   "Coding theory": 5,
   "Discrete geometry": 18,
   "Physics": 6,
@@ -18,7 +18,7 @@
  },
  "cells_by_field": {
   "Combinatorics and graph theory": 88,
-  "Number theory": 334,
+  "Number theory": 360,
   "Coding theory": 14,
   "Discrete geometry": 319,
   "Physics": 42,
@@ -377,6 +377,20 @@
    "page": "problems/squares-ap.md",
    "cells": 1,
    "cells_exact": 0
+  },
+  {
+   "id": "symmetrization-image",
+   "field": "Number theory",
+   "title": "The image of the symmetrization of almost symmetric numerical semigroups",
+   "status": "open",
+   "objective": "maximize",
+   "best_known": "1016",
+   "holder": "Quantavane (Arhan Canli)",
+   "date": "2026-11-15",
+   "checker": "collections/originals/checkers/orig_numth.py",
+   "page": "problems/symmetrization-image.md",
+   "cells": 26,
+   "cells_exact": 21
   },
   {
    "id": "cell120-coil",

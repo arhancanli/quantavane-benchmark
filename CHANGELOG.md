@@ -441,6 +441,17 @@ value can change within a version when its source table changes; the file then s
   isosceles and right-angle questions, 1/x + 1/y = 1/z, 60-degree triangles, the maximum cut of Kneser graphs, the
   metric dimension of the 4-polytopes). tools/novelty.py also searches Crossref; the pages list those searches. 70
   questions, 1,251 cells (360 exact).
+- 15 Nov 2026, round originals-3: symmetrization-image, the image of the symmetrization Phi of almost symmetric
+  numerical semigroups (Delgado, Suer and Yesil, arXiv:2611.14268): I(G), the number of symmetric numerical sets with
+  Frobenius number G that are images, exact for odd G <= 41 (tools/src/symmetrization_enum.c, every almost symmetric
+  semigroup with Frobenius number at most 79) and best known for G = 43 to 51 (headline G = 43: 1016). Checker
+  `orig_numth.py symmetrization-image G FILE`: generators per line; the semigroup, its pseudo-Frobenius numbers and
+  almost symmetry (Nari's 2g = F + t and the gap pairing, both required) and Phi recomputed from scratch; red controls
+  for a semigroup that is not almost symmetric, a repeated image and a certificate of G = 51 checked as G = 1.
+  Five candidates of the day dropped with the evidence (dropped.json): the six-vertex set Ramsey numbers r_6(s, t)
+  and the complete multipartite extremal question (studied families), the plane over a number field (Madore's
+  question), cells of the vertex-symmetric digraph table (a keeper's table) and the odd-m q-positivity question (no
+  certificate to score yet). 71 questions, 1,277 cells (381 exact).
 
 ## 2.1 (9 Nov 2026): 149,372 problems and the Prestige 100 collection
 

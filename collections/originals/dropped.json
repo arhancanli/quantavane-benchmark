@@ -358,5 +358,30 @@
   "idea": "Isosceles-free and right-angle-free sets in the cubic grid {0..n-1}^3",
   "reason": "the cubic grid is the three-dimensional case of the studied square-grid questions (isosceles-free sets: OEIS A271907, Erdos problem #1207; right-angle-free sets: Gamble, Pulleyblank, Reed and Shepherd 1995), so it is a new instance of a studied question, not a new question; the face-centred and body-centred cubic lattices are kept",
   "evidence": "the novelty searches of tri-isosceles and tri-right (10 November 2026)"
+ },
+ {
+  "idea": "The set Ramsey numbers r_6(s, t): six vertices spanning at least s edges or at most 15 - t edges (the open entries of a six-vertex table)",
+  "reason": "studied: the numbers r_{m,n}(s, t) were defined for every order by Bolze and Harborth (1981), the five-vertex table is Harborth and Mengersen's, and r_6(15, t) for small t follows from the formula of Faudree, Harborth and Mengersen; three of the open entries are the classical R(6,6), R(K_6, K_6 - e) and R(K_6 - e, K_6 - e). Only the instance would be new (15 November 2026)",
+  "evidence": "R. Bolze, H. Harborth (1981); H. Harborth, NATO ASI C 411 (1993) 169-174; R. Faudree, H. Harborth, I. Mengersen, Utilitas Math. 50 (1996) 85-95; S. P. Radziszowski, Dynamic Survey DS1 (revision of 24 April 2026)"
+ },
+ {
+  "idea": "For which (k, a) the complete multipartite graph K_{(k-1) x a} is extremal: r_k(C(k,2), f_k(a) + 1) = (k-1)a + 1",
+  "reason": "studied: Ramsey numbers of graph sets versus complete graphs, whose formula gives the case a = 2; larger a is the same question on other instances (15 November 2026)",
+  "evidence": "R. Faudree, H. Harborth, I. Mengersen, Ramsey numbers for graph sets versus complete graphs, Utilitas Math. 50 (1996) 85-95; Z.-H. Sun, arXiv:1101.0334"
+ },
+ {
+  "idea": "Is the plane over Q(sqrt2, sqrt3, sqrt5, sqrt11, i) 5-colourable (unit-distance graph), and are explicit finite hosts there 5-colourable?",
+  "reason": "studied: the chromatic number of the plane over number fields is Madore's question, so this is that question on another field; whether a given finite graph is 5-colourable is a yes/no question with no certificate to score (15 November 2026)",
+  "evidence": "D. A. Madore, The Hadwiger-Nelson problem over certain fields, arXiv:1509.07023 (2015)"
+ },
+ {
+  "idea": "Largest vertex-transitive digraphs of out-degree 3 and diameter 4 (and nearby cells, close to line digraphs of arc-transitive graphs)",
+  "reason": "not new: open cells of a keeper table (the Combinatorics Wiki table of the largest known vertex-symmetric digraphs), not a question of ours (15 November 2026)",
+  "evidence": "Combinatorics Wiki, The Degree Diameter Problem for Vertex-Symmetric Digraphs (revision of 3 January 2019)"
+ },
+ {
+  "idea": "For odd m, which n make the Krattenthaler-Wachs index-2 coefficients of the q-Narayana polynomials N^{A,(m)} fail to be q-positive",
+  "reason": "not posed yet: the open part (is every n positive for m = 3? where does each odd m start to fail?) is a yes/no statement with no certificate to score, and every value we computed is already exact; the general non-positivity is known from an unpublished 2014 talk whose details we have not read (15 November 2026)",
+  "evidence": "C. Krattenthaler, M. Wachs, IMA talk On q-gamma-positivity (2014), cited in A. Rodelet-Causse, L. Tevlin, arXiv:2505.09821, which asks no such question"
  }
 ]

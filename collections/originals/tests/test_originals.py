@@ -83,6 +83,10 @@ def controls():
         path = write(f"control_{pid}.txt", text)
         code, res, out = run(p["checker"]["program"], args_of(p) + [path])
         expect(f"red   {pid}: {why} is refused", code == 1, f"exit {code}: {out[-200:]}")
+    if "symmetrization-image" in P:
+        L = lines_of(certificates(P["symmetrization-image"]))
+        refuse("symmetrization-image", "5 7 9\n" + "\n".join(L) + "\n",
+               "a semigroup that is not almost symmetric (<5,7,9>: F = 13, 8 gaps, type 2)")
     if "gauss-admissible" in P:
         L = lines_of(certificates(P["gauss-admissible"]))
         x, y = map(int, L[0].split())
@@ -754,7 +758,7 @@ CELL_CONTROLS = {"sync-quadratic": _drop_last_letter, "tri-distinct": _dup_first
                  "paley-ising": _flip_spin, "gauss-admissible": _dup_first_point, "e8-coulomb": _dup_first_point,
                  "diamond-bonds": _dup_first_point, "lj-fcc": _dup_first_point, "nrm-segments": _dup_first_point,
                  "hp-tri": _drop_last_line, "tsp-sunflower": _dup_first_point, "tsp-gaussian": _dup_first_point,
-                 "quad-admissible": _dup_first_point, "cubic-admissible": _dup_first_point,
+                 "quad-admissible": _dup_first_point, "cubic-admissible": _dup_first_point, "symmetrization-image": _dup_first_point,
                  "y-array": lambda t, p: ("\n".join([lines_of(t)[0] + " " + lines_of(t)[0].split()[0]] + lines_of(t)[1:])
                                           + "\n", "an arm with one distance used twice")}
 
@@ -767,7 +771,8 @@ TABLE_SPEC = {"y-array": ((0,), 1), "paley-ising": ((0,), 1), "sync-quadratic": 
               "hp-tri": ((0,), 2), "benzenoid-kemeny": ((0,), 2), "cata-kemeny": ((0,), 2),
               "gauss-jacobsthal": ((0,), 2), "tsp-sunflower": ((0,), 1), "potts3-600": ((0,), 1),
               "prime-code": ((0, 1), 3), "prime-cover": ((0,), 2), "ap-cover": ((0,), 1), "e8-coulomb": ((0,), 1),
-              "gauss-prime-ap": ((0,), 1), "gauss-admissible": ((0,), {"4": 1, "3": 2})}
+              "gauss-prime-ap": ((0,), 1), "gauss-admissible": ((0,), {"4": 1, "3": 2}),
+              "symmetrization-image": ((0,), 2)}
 
 
 def family_cell_control(p):

@@ -1,0 +1,269 @@
+{
+ "id": "symmetrization-image",
+ "collection": "originals",
+ "field": "Number theory",
+ "title": "The image of the symmetrization of almost symmetric numerical semigroups",
+ "status": "open",
+ "statement": "A numerical semigroup S is a set of non-negative integers that contains 0, is closed under addition and has finite complement; its Frobenius number F(S) is its largest gap, its pseudo-Frobenius numbers PF(S) are the gaps x with x + s in S for every positive s in S, t(S) = |PF(S)| is its type, and S is almost symmetric when every gap x has F(S) - x in S, or x and F(S) - x both in PF(S). A numerical set (a set of non-negative integers containing 0, with finite complement) is symmetric with Frobenius number G when exactly one of a and G - a belongs to it for every a in [0, G]. Write the positions 0, 1, ..., F(S) as a word, E at the elements of S and N at its gaps. The symmetrization Phi(S) of Delgado, Suer and Yesil is the numerical set whose word is obtained by deleting the letters at the pseudo-Frobenius numbers other than F(S) (every integer past the shortened word belongs to it); it is symmetric, with Frobenius number G = F(S) - t(S) + 1. For odd G let I(G) be the number of symmetric numerical sets with Frobenius number G that equal Phi(S) for some almost symmetric numerical semigroup S. Determine I(G). The headline cell is G = 43: find more than 1016 such sets (each with a preimage), or prove that there are no others.",
+ "objective": "maximize",
+ "submission": "Text file: one almost symmetric numerical semigroup per line, given by generators (positive integers with greatest common divisor 1, separated by spaces); lines starting with # are ignored. Every image Phi(S) must have Frobenius number 43, and no two lines may give the same image.",
+ "checker": {
+  "program": "collections/originals/checkers/orig_numth.py",
+  "args": [
+   "symmetrization-image",
+   "43"
+  ],
+  "value": "result"
+ },
+ "score": "the number of different images (larger is better)",
+ "best_known": {
+  "value": "1016",
+  "exact": "1016",
+  "source": "Quantavane (Arhan Canli), 15 November 2026: 1016 images with Frobenius number 43, one preimage each, from every almost symmetric numerical semigroup with Frobenius number at most 67 (tools/symmetrization_image.py)",
+  "kind": "our construction (Quantavane Originals)",
+  "provenance": {
+   "keeper": "Quantavane Originals",
+   "url": "collections/originals/problems/symmetrization-image.md",
+   "read": "2026-11-15",
+   "holder": "Quantavane (Arhan Canli)",
+   "quantavane": true,
+   "certificate": "collections/originals/refs/symmetrization-image.txt"
+  }
+ },
+ "verified_pending": [],
+ "added": "originals-3",
+ "quantavane_record": true,
+ "context": "Almost symmetric numerical semigroups were introduced by Barucci and Froberg as the semigroup case of almost Gorenstein rings; Nari showed that S is almost symmetric exactly when 2 g(S) = F(S) + t(S), g(S) the number of gaps, and that the pseudo-Frobenius numbers below F(S) are symmetric about F(S)/2. Numerical sets correspond to Young diagrams through their words, the setting of Yesil's decompositions (2025). Delgado, Suer and Yesil (2026) delete from the Young diagram of S the rows of its pseudo-Frobenius numbers below F(S) and obtain a symmetric numerical set, and they asked whether every symmetric numerical set arises this way. Every symmetric numerical semigroup with Frobenius number G is its own image (type 1), so I(G) is at least the number of symmetric numerical semigroups with Frobenius number G, and at most the 2^((G-1)/2) symmetric numerical sets. The counts below show that Phi is not onto for G >= 3 (1 of 2 sets at G = 3, 770 of 1,048,576 at G = 41) and that the image is a small, irregular part of the symmetric sets: how fast I(G) grows, and which sets of multiplicity 4 or more are images, is open.",
+ "references": [
+  "M. Delgado, M. Suer, M. Yesil, A symmetrization for almost symmetric numerical semigroups, arXiv:2611.14268 (2026)",
+  "V. Barucci, R. Froberg, One-dimensional almost Gorenstein rings, Journal of Algebra 188 (1997) 418-442",
+  "H. Nari, Symmetries on almost symmetric numerical semigroups, Semigroup Forum 86 (2013) 140-154",
+  "M. Yesil, Young diagram decompositions for almost symmetric numerical semigroups, arXiv:2504.20688 (2025)"
+ ],
+ "novelty": {
+  "checked": "2026-11-15",
+  "file": "novelty/symmetrization-image.json",
+  "verdict": "new. The map Phi was defined in November 2026 (arXiv:2611.14268), whose authors asked only whether it is onto; no count or description of its image was found (arXiv, Crossref, web), and the sequence I(1), I(3), ..., I(41) = 1, 1, 2, 3, 4, 7, 9, 12, 18, 25, 32, 50, ... is not in the OEIS.",
+  "closest": [
+   "Delgado, Suer and Yesil (2026): define Phi and ask whether it is onto (the question above refines theirs; the counts answer it in the negative for G >= 3).",
+   "Yesil (2025): Young diagram decompositions of almost symmetric numerical semigroups, with a symmetric numerical set attached to a semigroup; no image is counted."
+  ],
+  "benchmark": "no numerical-semigroup family",
+  "web": [
+   "web search 15 November 2026: 'symmetrization almost symmetric numerical semigroups symmetric numerical sets image onto' (results: Nari 2013, Yesil 2025, Herzog-Watanabe 2019 on almost symmetric numerical semigroups; nothing on the image of Phi)"
+  ]
+ },
+ "first_values": {
+  "columns": [
+   "G",
+   "symmetric numerical sets",
+   "I(G)",
+   "how"
+  ],
+  "rows": [
+   [
+    1,
+    1,
+    1,
+    "exact (exhaustive)"
+   ],
+   [
+    3,
+    2,
+    1,
+    "exact (exhaustive)"
+   ],
+   [
+    5,
+    4,
+    2,
+    "exact (exhaustive)"
+   ],
+   [
+    7,
+    8,
+    3,
+    "exact (exhaustive)"
+   ],
+   [
+    9,
+    16,
+    4,
+    "exact (exhaustive)"
+   ],
+   [
+    11,
+    32,
+    7,
+    "exact (exhaustive)"
+   ],
+   [
+    13,
+    64,
+    9,
+    "exact (exhaustive)"
+   ],
+   [
+    15,
+    128,
+    12,
+    "exact (exhaustive)"
+   ],
+   [
+    17,
+    256,
+    18,
+    "exact (exhaustive)"
+   ],
+   [
+    19,
+    512,
+    25,
+    "exact (exhaustive)"
+   ],
+   [
+    21,
+    1024,
+    32,
+    "exact (exhaustive)"
+   ],
+   [
+    23,
+    2048,
+    50,
+    "exact (exhaustive)"
+   ],
+   [
+    25,
+    4096,
+    67,
+    "exact (exhaustive)"
+   ],
+   [
+    27,
+    8192,
+    86,
+    "exact (exhaustive)"
+   ],
+   [
+    29,
+    16384,
+    124,
+    "exact (exhaustive)"
+   ],
+   [
+    31,
+    32768,
+    169,
+    "exact (exhaustive)"
+   ],
+   [
+    33,
+    65536,
+    218,
+    "exact (exhaustive)"
+   ],
+   [
+    35,
+    131072,
+    311,
+    "exact (exhaustive)"
+   ],
+   [
+    37,
+    262144,
+    419,
+    "exact (exhaustive)"
+   ],
+   [
+    39,
+    524288,
+    554,
+    "exact (exhaustive)"
+   ],
+   [
+    41,
+    1048576,
+    770,
+    "exact (exhaustive)"
+   ],
+   [
+    43,
+    2097152,
+    1016,
+    "best known (ours)"
+   ],
+   [
+    45,
+    4194304,
+    1359,
+    "best known (ours)"
+   ],
+   [
+    47,
+    8388608,
+    1873,
+    "best known (ours)"
+   ],
+   [
+    49,
+    16777216,
+    2466,
+    "best known (ours)"
+   ],
+   [
+    51,
+    33554432,
+    3233,
+    "best known (ours)"
+   ]
+  ],
+  "note": "Exact for G <= 41: every almost symmetric numerical semigroup with Frobenius number at most 79 was enumerated (tools/src/symmetrization_enum.c, which re-derives the pseudo-Frobenius numbers from the definition at every leaf), and a bound of ours gives every image a preimage with Frobenius number at most max(G, 2G - 5); a separately written Python enumeration agrees for G <= 29, and tools/symmetrization_image.py reproduces every count with preimages of Frobenius number at most 67. For G = 43 to 51 the values are lower bounds from preimages with Frobenius number at most 67 (unchanged from 59 to 67 for G <= 49)."
+ },
+ "baseline": {
+  "date": "2026-11-15",
+  "holder": "Quantavane (Arhan Canli)",
+  "text": "1016 for G = 43, held by Quantavane (Arhan Canli), 15 November 2026: the preimages in `refs/symmetrization-image.txt`. Upper bound: the 2^21 = 2,097,152 symmetric numerical sets with Frobenius number 43, of which those containing 1 are never images; no better bound is stated here."
+ },
+ "cells": {
+  "params": [
+   "G"
+  ],
+  "about": "G, an odd Frobenius number",
+  "headline": {
+   "G": 43
+  },
+  "args": [
+   "symmetrization-image",
+   "{G}"
+  ],
+  "title": "Images of the symmetrization with Frobenius number {G}",
+  "statement": "Count the symmetric numerical sets with Frobenius number {G} that are Phi(S) for an almost symmetric numerical semigroup S; I({G}) is their number.",
+  "submission": "Text file: one almost symmetric numerical semigroup per line (generators), each with an image of Frobenius number {G}, no two with the same image.",
+  "exact": [
+   "1",
+   "3",
+   "5",
+   "7",
+   "9",
+   "11",
+   "13",
+   "15",
+   "17",
+   "19",
+   "21",
+   "23",
+   "25",
+   "27",
+   "29",
+   "31",
+   "33",
+   "35",
+   "37",
+   "39",
+   "41"
+  ],
+  "exact_how": "every almost symmetric numerical semigroup with Frobenius number at most 79 enumerated (tools/src/symmetrization_enum.c); every image has a preimage with Frobenius number at most max(G, 2G - 5)",
+  "how": "every almost symmetric numerical semigroup with Frobenius number at most 67 (tools/symmetrization_image.py); a lower bound"
+ }
+}

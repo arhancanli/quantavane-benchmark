@@ -1,0 +1,5 @@
+# symmetrization-image, G = 7: 3 almost symmetric numerical semigroups (minimal generators, one per line) whose images Phi(S) are 3 different symmetric numerical sets with Frobenius number 7.
+# Every such set: the image is complete (exhaustive enumeration).
+2 9
+3 5
+4 5 6

@@ -1,0 +1,34 @@
+# symmetrization-image, G = 21: 32 almost symmetric numerical semigroups (minimal generators, one per line) whose images Phi(S) are 32 different symmetric numerical sets with Frobenius number 21.
+# Every such set: the image is complete (exhaustive enumeration).
+2 23
+4 6 25 27
+3 14 25
+4 6 19
+4 10 21 27
+4 10 15
+4 11 14
+6 8 10 21 25
+5 8 19
+6 9 13 16
+5 9 13 17
+5 12 14 21
+5 12 13 14
+6 7 17
+6 8 10 17 19
+6 8 11
+6 9 14 17 19
+6 10 13 14 17
+6 11 13 14 16
+8 9 12 13
+7 9 10
+7 9 12 17 20
+7 10 13 16 18 19
+7 12 13 16 17 18
+8 9 10 14 15
+8 9 11 14 15
+8 10 12 14 15 17 19
+8 11 12 14 15 17 18
+9 10 13 14 15 16 17
+9 11 13 14 15 16 17 19
+10 12 13 14 15 16 17 18 19
+11 12 13 14 15 16 17 18 19 20

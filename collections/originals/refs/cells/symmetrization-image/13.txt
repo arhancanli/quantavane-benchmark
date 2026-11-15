@@ -1,0 +1,11 @@
+# symmetrization-image, G = 13: 9 almost symmetric numerical semigroups (minimal generators, one per line) whose images Phi(S) are 9 different symmetric numerical sets with Frobenius number 13.
+# Every such set: the image is complete (exhaustive enumeration).
+2 15
+4 6 17 19
+3 8
+4 6 11
+4 7 10
+5 6 9
+5 7 9 11
+6 8 9 10 11
+7 8 9 10 11 12

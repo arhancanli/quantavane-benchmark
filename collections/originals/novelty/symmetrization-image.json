@@ -1,0 +1,411 @@
+{
+ "id": "symmetrization-image",
+ "searches": [
+  {
+   "engine": "arXiv API",
+   "query": "all:symmetrization AND all:\"numerical semigroups\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3Asymmetrization+AND+all%3A%22numerical+semigroups%22&start=0&max_results=10&sortBy=relevance",
+   "results": 83,
+   "top": [
+    {
+     "arxiv": "2008.01428v1",
+     "year": "2020",
+     "first_author": "Jürgen Herzog",
+     "title": "Canonical trace ideal and residue for numerical semigroup rings"
+    },
+    {
+     "arxiv": "2611.14268v1",
+     "year": "2026",
+     "first_author": "Manuel Delgado",
+     "title": "A Symmetrization for Almost Symmetric Numerical Semigroups"
+    },
+    {
+     "arxiv": "1807.00134v1",
+     "year": "2018",
+     "first_author": "Jürgen Herzog",
+     "title": "Almost symmetric numerical semigroups"
+    },
+    {
+     "arxiv": "1111.6211v1",
+     "year": "2011",
+     "first_author": "Hirokatsu Nari",
+     "title": "Symmetries on almost symmetric numerical semigroups"
+    },
+    {
+     "arxiv": "1904.02987v1",
+     "year": "2019",
+     "first_author": "Pedro A. Garcia-Sanchez",
+     "title": "Almost symmetric numerical semigroups with high type"
+    },
+    {
+     "arxiv": "1707.00782v2",
+     "year": "2017",
+     "first_author": "Mehtaab Sawhney",
+     "title": "On Symmetric But Not Cyclotomic Numerical Semigroups"
+    },
+    {
+     "arxiv": "2504.20688v2",
+     "year": "2025",
+     "first_author": "Mehmet Yeşil",
+     "title": "Young Diagram Decompositions for Almost Symmetric Numerical Semigroups"
+    },
+    {
+     "arxiv": "1806.11097v2",
+     "year": "2018",
+     "first_author": "M. B. Branco",
+     "title": "Almost symmetric numerical semigroups with given Frobenius number and type"
+    },
+    {
+     "arxiv": "2011.08540v1",
+     "year": "2020",
+     "first_author": "Meral Süer",
+     "title": "Symmetric and Pseudo-Symmetric Numerical Semigroups via Young Diagrams and Their Semigroup Rings"
+    },
+    {
+     "arxiv": "1701.00988v1",
+     "year": "2017",
+     "first_author": "P. A. García-Sánchez",
+     "title": "Delta sets for symmetric numerical semigroups with embedding dimension three"
+    }
+   ],
+   "run": "2026-11-15T15:40:40Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"almost symmetric\" AND all:\"numerical sets\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22almost+symmetric%22+AND+all%3A%22numerical+sets%22&start=0&max_results=10&sortBy=relevance",
+   "results": 2,
+   "top": [
+    {
+     "arxiv": "2611.14268v1",
+     "year": "2026",
+     "first_author": "Manuel Delgado",
+     "title": "A Symmetrization for Almost Symmetric Numerical Semigroups"
+    },
+    {
+     "arxiv": "2504.20688v2",
+     "year": "2025",
+     "first_author": "Mehmet Yeşil",
+     "title": "Young Diagram Decompositions for Almost Symmetric Numerical Semigroups"
+    }
+   ],
+   "run": "2026-11-15T15:40:44Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"symmetric numerical sets\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22symmetric+numerical+sets%22&start=0&max_results=10&sortBy=relevance",
+   "results": 2,
+   "top": [
+    {
+     "arxiv": "0805.3493v1",
+     "year": "2008",
+     "first_author": "Jeremy Marzuola",
+     "title": "Counting numerical sets with no small atoms"
+    },
+    {
+     "arxiv": "2611.14268v1",
+     "year": "2026",
+     "first_author": "Manuel Delgado",
+     "title": "A Symmetrization for Almost Symmetric Numerical Semigroups"
+    }
+   ],
+   "run": "2026-11-15T15:40:49Z"
+  },
+  {
+   "engine": "arXiv API",
+   "query": "all:\"almost symmetric numerical semigroups\" AND all:\"Young diagram\"",
+   "url": "http://export.arxiv.org/api/query?search_query=all%3A%22almost+symmetric+numerical+semigroups%22+AND+all%3A%22Young+diagram%22&start=0&max_results=10&sortBy=relevance",
+   "results": 2,
+   "top": [
+    {
+     "arxiv": "2504.20688v2",
+     "year": "2025",
+     "first_author": "Mehmet Yeşil",
+     "title": "Young Diagram Decompositions for Almost Symmetric Numerical Semigroups"
+    },
+    {
+     "arxiv": "2611.14268v1",
+     "year": "2026",
+     "first_author": "Manuel Delgado",
+     "title": "A Symmetrization for Almost Symmetric Numerical Semigroups"
+    }
+   ],
+   "run": "2026-11-15T15:40:53Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "1,1,2,3,4,7,9,12,18,25,32,50,67,86,124,169,218,311,419,554,770",
+   "url": "https://oeis.org/search?q=1%2C1%2C2%2C3%2C4%2C7%2C9%2C12%2C18%2C25%2C32%2C50%2C67%2C86%2C124%2C169%2C218%2C311%2C419%2C554%2C770&fmt=json",
+   "results": 0,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [],
+   "run": "2026-11-15T15:40:57Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "1,2,3,4,7,9,12,18,25,32,50,67,86",
+   "url": "https://oeis.org/search?q=1%2C2%2C3%2C4%2C7%2C9%2C12%2C18%2C25%2C32%2C50%2C67%2C86&fmt=json",
+   "results": 0,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [],
+   "run": "2026-11-15T15:41:02Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "almost symmetric numerical semigroup",
+   "url": "https://oeis.org/search?q=almost+symmetric+numerical+semigroup&fmt=json",
+   "results": 4,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A001333",
+     "name": "Pell-Lucas numbers: numerators of continued fraction convergents to sqrt(2)."
+    },
+    {
+     "oeis": "A000110",
+     "name": "Bell or exponential numbers: number of ways to partition a set of n labeled elements."
+    },
+    {
+     "oeis": "A000129",
+     "name": "Pell numbers: a(0) = 0, a(1) = 1; for n > 1, a(n) = 2*a(n-1) + a(n-2)."
+    },
+    {
+     "oeis": "A000262",
+     "name": "Number of \"sets of lists\": number of partitions of {1,...,n} into any number of lists, where a list means an ordered subset."
+    }
+   ],
+   "run": "2026-11-15T15:41:06Z"
+  },
+  {
+   "engine": "OEIS",
+   "query": "symmetric numerical set",
+   "url": "https://oeis.org/search?q=symmetric+numerical+set&fmt=json",
+   "results": 10,
+   "note": "the JSON search returns at most 10 sequences per page",
+   "top": [
+    {
+     "oeis": "A164047",
+     "name": "The number of symmetric numerical sets with odd Frobenius number and no small atoms."
+    },
+    {
+     "oeis": "A007323",
+     "name": "Number of numerical semigroups of genus n; conjecturally also the number of power sum bases for symmetric functions in n variables."
+    },
+    {
+     "oeis": "A372341",
+     "name": "Let F be the set of lattice points {(x, y) in N^2 | A005206(x) <= y <= A005206(x) + x}; order the points of F by ascending Y-coordinates and then by ascending X-coordinates; the n-th and a(n)-th points of F are arranged symmetrically with respect to the line x = y."
+    },
+    {
+     "oeis": "A164048",
+     "name": "The number of numerical sets with odd Frobenius number and no small atoms."
+    },
+    {
+     "oeis": "A372878",
+     "name": "a(n) is the sum of all symmetric valleys in the set of flattened Catalan words of length n."
+    },
+    {
+     "oeis": "A308033",
+     "name": "Numerator of the harmonic numbers for the symmetric group relative to the Coxeter length."
+    },
+    {
+     "oeis": "A000110",
+     "name": "Bell or exponential numbers: number of ways to partition a set of n labeled elements."
+    },
+    {
+     "oeis": "A001333",
+     "name": "Pell-Lucas numbers: numerators of continued fraction convergents to sqrt(2)."
+    },
+    {
+     "oeis": "A000262",
+     "name": "Number of \"sets of lists\": number of partitions of {1,...,n} into any number of lists, where a list means an ordered subset."
+    },
+    {
+     "oeis": "A002720",
+     "name": "Number of partial permutations of an n-set; number of n X n binary matrices with at most one 1 in each row and column."
+    }
+   ],
+   "run": "2026-11-15T15:41:12Z"
+  },
+  {
+   "engine": "Crossref API",
+   "query": "symmetrization almost symmetric numerical semigroups",
+   "url": "https://api.crossref.org/works?query.bibliographic=symmetrization+almost+symmetric+numerical+semigroups&rows=10&select=DOI%2Ctitle%2Cpublished%2Ccontainer-title",
+   "results": 766618,
+   "note": "relevance-ranked; the total counts every work matching any of the words",
+   "top": [
+    {
+     "doi": "10.1007/978-3-032-05424-1_6",
+     "year": "2026",
+     "title": "Almost Symmetric and Nearly Symmetric Numerical Semigroups"
+    },
+    {
+     "doi": "10.3906/mat-1906-10",
+     "year": "2019",
+     "title": "Almost symmetric numerical semigroups with high type"
+    },
+    {
+     "doi": "10.1007/978-3-030-40822-0_19",
+     "year": "2020",
+     "title": "Almost Symmetric Numerical Semigroups with Odd Generators"
+    },
+    {
+     "doi": "10.1080/00927872.2012.740117",
+     "year": "2013",
+     "title": "Constructing Almost Symmetric Numerical Semigroups from Irreducible Numerical Semigroups"
+    },
+    {
+     "doi": "10.1080/00927872.2026.2619468",
+     "year": "2026",
+     "title": "Frobenius number of Almost Symmetric numerical generalized almost arithmetic semigroups"
+    },
+    {
+     "doi": "10.1007/s00233-012-9397-z",
+     "year": "2012",
+     "title": "Symmetries on almost symmetric numerical semigroups"
+    },
+    {
+     "doi": "10.1007/s00233-014-9641-9",
+     "year": "2014",
+     "title": "One half of almost symmetric numerical semigroups"
+    },
+    {
+     "doi": "10.1007/s00025-025-02527-x",
+     "year": "2025",
+     "title": "Young Diagram Decompositions for Almost Symmetric Numerical Semigroups"
+    },
+    {
+     "doi": "10.1007/s00233-019-10007-2",
+     "year": "2019",
+     "title": "Almost symmetric numerical semigroups"
+    },
+    {
+     "doi": "10.1080/00927872.2026.2691977",
+     "year": "2026",
+     "title": "Classification of almost symmetric numerical semigroups with maximal reduced type"
+    }
+   ],
+   "run": "2026-11-15T15:41:17Z"
+  },
+  {
+   "engine": "Crossref API",
+   "query": "symmetric numerical sets image almost symmetric numerical semigroups",
+   "url": "https://api.crossref.org/works?query.bibliographic=symmetric+numerical+sets+image+almost+symmetric+numerical+semigroups&rows=10&select=DOI%2Ctitle%2Cpublished%2Ccontainer-title",
+   "results": 1881875,
+   "note": "relevance-ranked; the total counts every work matching any of the words",
+   "top": [
+    {
+     "doi": "10.1007/978-3-032-05424-1_6",
+     "year": "2026",
+     "title": "Almost Symmetric and Nearly Symmetric Numerical Semigroups"
+    },
+    {
+     "doi": "10.3906/mat-1906-10",
+     "year": "2019",
+     "title": "Almost symmetric numerical semigroups with high type"
+    },
+    {
+     "doi": "10.1007/978-3-030-40822-0_19",
+     "year": "2020",
+     "title": "Almost Symmetric Numerical Semigroups with Odd Generators"
+    },
+    {
+     "doi": "10.12988/imf.2006.06039",
+     "year": "2006",
+     "title": "On Apery sets of symmetric numerical semigroups"
+    },
+    {
+     "doi": "10.1080/00927872.2012.740117",
+     "year": "2013",
+     "title": "Constructing Almost Symmetric Numerical Semigroups from Irreducible Numerical Semigroups"
+    },
+    {
+     "doi": "10.1007/s00233-012-9397-z",
+     "year": "2012",
+     "title": "Symmetries on almost symmetric numerical semigroups"
+    },
+    {
+     "doi": "10.1007/s00233-014-9641-9",
+     "year": "2014",
+     "title": "One half of almost symmetric numerical semigroups"
+    },
+    {
+     "doi": "10.1007/s00025-025-02527-x",
+     "year": "2025",
+     "title": "Young Diagram Decompositions for Almost Symmetric Numerical Semigroups"
+    },
+    {
+     "doi": "10.1007/s00233-019-10007-2",
+     "year": "2019",
+     "title": "Almost symmetric numerical semigroups"
+    },
+    {
+     "doi": "10.1080/00927872.2026.2619468",
+     "year": "2026",
+     "title": "Frobenius number of Almost Symmetric numerical generalized almost arithmetic semigroups"
+    }
+   ],
+   "run": "2026-11-15T15:41:19Z"
+  },
+  {
+   "engine": "Crossref API",
+   "query": "numerical sets Young diagrams symmetric almost symmetric",
+   "url": "https://api.crossref.org/works?query.bibliographic=numerical+sets+Young+diagrams+symmetric+almost+symmetric&rows=10&select=DOI%2Ctitle%2Cpublished%2Ccontainer-title",
+   "results": 1711449,
+   "note": "relevance-ranked; the total counts every work matching any of the words",
+   "top": [
+    {
+     "doi": "10.1007/s00025-025-02527-x",
+     "year": "2025",
+     "title": "Young Diagram Decompositions for Almost Symmetric Numerical Semigroups"
+    },
+    {
+     "doi": "10.1016/j.fss.2019.01.017",
+     "year": "2020",
+     "title": "Applying Young diagrams to 2-symmetric fuzzy measures with an application to general fuzzy measures"
+    },
+    {
+     "doi": "10.1007/978-3-032-05424-1_6",
+     "year": "2026",
+     "title": "Almost Symmetric and Nearly Symmetric Numerical Semigroups"
+    },
+    {
+     "doi": "10.3906/mat-1906-10",
+     "year": "2019",
+     "title": "Almost symmetric numerical semigroups with high type"
+    },
+    {
+     "doi": "10.21136/cmj.1994.128468",
+     "year": "1994",
+     "title": "Symmetric porosity of symmetric Cantor sets"
+    },
+    {
+     "doi": "10.1016/b978-0-443-13697-9.00009-6",
+     "year": "2024",
+     "title": "Young diagrams and the symmetric group"
+    },
+    {
+     "doi": "10.2307/44152052",
+     "year": "1989",
+     "title": "A CONVERSE TO A THEOREM OF SIERPINSKI ON ALMOST SYMMETRIC SETS"
+    },
+    {
+     "doi": "10.1080/00927872.2026.2619468",
+     "year": "2026",
+     "title": "Frobenius number of Almost Symmetric numerical generalized almost arithmetic semigroups"
+    },
+    {
+     "doi": "10.12988/imf.2006.06039",
+     "year": "2006",
+     "title": "On Apery sets of symmetric numerical semigroups"
+    },
+    {
+     "doi": "10.1007/s00233-012-9397-z",
+     "year": "2012",
+     "title": "Symmetries on almost symmetric numerical semigroups"
+    }
+   ],
+   "run": "2026-11-15T15:41:22Z"
+  }
+ ]
+}

@@ -1,0 +1,6 @@
+# symmetrization-image, G = 9: 4 almost symmetric numerical semigroups (minimal generators, one per line) whose images Phi(S) are 4 different symmetric numerical sets with Frobenius number 9.
+# Every such set: the image is complete (exhaustive enumeration).
+2 11
+3 8 13
+4 6 7
+5 6 7 8

@@ -1,13 +1,13 @@
 # Quantavane Originals
 
-New open problems, written by Quantavane: <!--count-->70<!--/count--> problems across mathematics, physics,
+New open problems, written by Quantavane: <!--count-->71<!--/count--> problems across mathematics, physics,
 chemistry, astronomy, computing and biology. Each one is a question that, as far as our searches show, nobody had
 asked before, stated precisely, with an exact checker of ours and a first value of ours, so that it starts with a best
 known value, a holder and a date. All of them are open.
 
 Each question is a family of cells: the same question at each value of its natural parameter (the number of antennas,
 the side of a grid, the number of digits, ...), each cell with our first value, its certificate in `refs/cells/` and
-the family's exact checker, the way the benchmark's table families are counted. There are <!--cells-->1251<!--/cells-->
+the family's exact checker, the way the benchmark's table families are counted. There are <!--cells-->1277<!--/cells-->
 cells. The questions and the cells are counted apart (`index.json`: `questions`, `cells`, `cells_exact`); each cell says
 whether its value is exact (an exhaustive search finished) or the best known (ours), and a family without a cells file
 is one cell, its headline. A cell is checked like any problem: `python3 -I obb.py check CELL FILE`.
@@ -36,7 +36,7 @@ A result that beats a best known value here is checked like any other submission
 and is credited by name on the problem's page and in `leaderboard.json`.
 
 <!--table-->
-| Problem | Field | Objective | Best known (ours, 10 November 2026) | Cells (exact) |
+| Problem | Field | Objective | Best known (ours, 15 November 2026) | Cells (exact) |
 | --- | --- | --- | --- | --- |
 | [Covering all pairs of Z_p by three-term progressions](problems/ap-cover.md) | Combinatorics and graph theory | minimize | 165 | 11 (3) |
 | [The autoconvolution constant of the square](problems/autoconv-square.md) | Combinatorics and graph theory | minimize | 5687487427963392/2559015127450681 | 1 (0) |
@@ -63,6 +63,7 @@ and is credited by name on the problem's page and in `leaderboard.json`.
 | [Densest admissible patterns of primes n^2 + h](problems/quad-admissible.md) | Number theory | minimize | 247 | 58 (17) |
 | [Colourings with no monochromatic Pythagorean quadruple](problems/quad-pyth.md) | Number theory | maximize | 473 | 2 (1) |
 | [Two-colourings with no monochromatic three squares in arithmetic progression](problems/squares-ap.md) | Number theory | maximize | 22948 | 1 (0) |
+| [The image of the symmetrization of almost symmetric numerical semigroups](problems/symmetrization-image.md) | Number theory | maximize | 1016 | 26 (21) |
 | [Coils in the 120-cell](problems/cell120-coil.md) | Coding theory | maximize | 208 | 1 (0) |
 | [Identifying codes of the 600-cell](problems/cell600-idcode.md) | Coding theory | minimize | 20 | 1 (0) |
 | [Identifying codes of the E8 root polytope](problems/e8-idcode.md) | Coding theory | minimize | 15 | 1 (0) |

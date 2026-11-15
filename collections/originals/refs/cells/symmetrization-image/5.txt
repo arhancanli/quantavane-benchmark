@@ -1,0 +1,4 @@
+# symmetrization-image, G = 5: 2 almost symmetric numerical semigroups (minimal generators, one per line) whose images Phi(S) are 2 different symmetric numerical sets with Frobenius number 5.
+# Every such set: the image is complete (exhaustive enumeration).
+2 7
+3 4
