@@ -93,6 +93,7 @@ the 100 are new single problems of v2.1, with eight new checkers; see the collec
 | `circulant-degree-diameter` (in review for v2.2) | 170 | Combinatorics Wiki: largest known circulant graphs of degree 3 to 20 and diameter 2 to 16 | `circulant_check.py` |
 | `bipartite-degree-diameter` (in review for v2.2) | 32 | Combinatorics Wiki: largest known bipartite graphs of maximum degree 3 to 16 and diameter 3 to 10 (at most 20,000 vertices) | `degdiam_check.py --bipartite` |
 | `grassmannian-packing` (in review for v2.2) | 2,239 | N. J. A. Sloane, table of best Grassmannian packings (with R. H. Hardin, J. H. Conway and others): N lines, planes or 3-spaces in R^3 to R^16, and constructions in higher dimensions | `grass_check.py` |
+| `complete-arc` (in review for v2.2) | 9,862 | D. Bartoli, A. A. Davydov, G. Faina, A. A. Kreshchuk, S. Marcugini and F. Pambianco: smallest known complete arcs in the projective planes PG(2,q), every prime power q from 37 to about 102,000 whose check takes at most three minutes (arXiv:1312.2155v3, with the lexiarcs of arXiv:1404.0469v3) | `arc_check.py` |
 
 Every cell is open in the sense written in its family file: its best known value is not marked optimal by the keeper
 and is strictly worse than the bound on the other side (the keeper's own bound, or a standard bound we compute and
@@ -382,7 +383,8 @@ What each family takes from its table, and what it leaves out:
   strongly regular graphs, 232,083; with Gordon's open difference sets and circulant weighing matrices (and seven
   settled circulant weighing matrix problems removed), 337,321; with Gordon's open signed difference sets, 359,646; with the
   circulant and bipartite degree-diameter tables, 359,848; with Sloane's Grassmannian packings, 362,087; with the
-  faster checkers for covering arrays, quantum codes and MinT's arrays over GF(2), 364,179.
+  faster checkers for covering arrays, quantum codes and MinT's arrays over GF(2), 364,179; with the smallest known
+  complete arcs in PG(2,q), 374,041.
 - `strongly-regular-graph` (in review for v2.2; read 15 Nov 2026): every parameter set srg(v,k,lambda,mu), v <= 1,300,
   that A. E. Brouwer's table (aeb.win.tue.nl/graphs/srg, 26 pages) marks '?': no graph is known and none has been ruled
   out. A parameter set and its complement are one row pair of the table and one cell here (a graph settles both); 65
@@ -453,6 +455,30 @@ What each family takes from its table, and what it leaves out:
   `grass_check.py` reads each subspace as n spanning vectors, scales them to integers and computes every pair's
   distance exactly, n - tr(adj(G_A) X adj(G_B) X^T)/(det G_A det G_B) with the Gram matrices G and X = A B^T; Sloane's
   own packings for 9 lines in R^3 and 12 planes in R^5 (fetched by fetch.sh) reproduce the table's values.
+- `complete-arc` (in review for v2.2; read 15 Nov 2026): the smallest known complete arcs in the projective planes
+  PG(2,q) (a set of points, no three on a line, every other point on a line through two of them; the least size is
+  t_2(2,q)), from the two table papers of D. Bartoli, A. A. Davydov, G. Faina, A. A. Kreshchuk, S. Marcugini and F.
+  Pambianco: arXiv:1312.2155v3 (June 2015), the smallest known sizes for every prime power q <= 160,001 and sporadic q
+  to 430,007, and arXiv:1404.0469v3 (January 2018), the sizes of complete lexiarcs (the arcs of their algorithm with a
+  fixed lexicographical order of points) for every prime power q <= 321,007. The best known value is the smaller of
+  the two (no lexiarc is smaller than the smallest known size); the cell is open for q > 32 (exact values are known
+  only for q <= 32), and every value is above the lower bound sqrt(2q) + 1 (sqrt(3q) + 1/2 for q = p^h, h <= 3)
+  stated in the cell. A cell is kept when the check of a complete arc one point smaller is estimated at most three
+  minutes (`arc_check_seconds` in `tools/arcs_cells.py`: steps (q + 2 - n)(n - 1)(n - 2)/2 for n points, at 0.90 ns
+  a step for prime q, 1.18 for q = 2^h and 2.10 for odd q = p^h, h > 1, times 1.15; measured in full, wall clock under
+  the machine's other load, on the complete lexiarcs of PG(2,60013) (1,470 points, 55 s) and PG(2,90001) (1,839
+  points, 1.49 x 10^11 steps, 127 s) and on random sets): 9,862 cells: every prime from 37 to 101,879 and some primes
+  up to 102,539 (the estimate grows with the size), every power of 2 from 64 to 65,536 and every odd prime power p^h,
+  h > 1, up to 66,049 (87 cells have h > 1); 17,981 listed q (68,921 to 430,007) stay out, and 18 with q <= 32. The holder is the source the paper names for the
+  size where it names one (N. Pace for Table 1's q <= 151; P. Lisonek, S. Marcugini and F. Pambianco for q = 37, 61
+  and 71), otherwise the collection it comes from. The literature check (`families/complete-arc/literature.json`)
+  found no later improvement. `arc_check.py` reads the points (and for q = p^h, h > 1, an irreducible polynomial that
+  defines the field, checked by Rabin's test), checks that no line holds three of them through the lines of all
+  pairs, and checks completeness only on the tangents at the first point (a point on no secant lies on one), marking
+  where every secant meets each tangent: about q n^2 / 2 steps, in C (`arc_scan.c`) above 2 x 10^6. The complete
+  20-arc of PG(2,61) of Lisonek, Marcugini and Pambianco (2008), rebuilt from their description, certifies the best
+  known value of `arc-61`; `tools/lexiarc.c` rebuilds the complete lexiarcs of prime q and reproduces the published
+  sizes (35, 146, 147, 372, 1002, 1470, 1839 points for q = 101, 997, 1009, 4999, 30011, 60013, 90001).
 - `project-scheduling`: every instance of the sets with open instances whose best known makespan is above its lower
   bound and which the site does not mark optimal; the open counts match the site's own table of November 2026. The
   highRD, lowRU and 1k variants are not read: their dataset files date from April 2021, many of their upper bounds are
@@ -469,6 +495,8 @@ Each checker in `checkers/` is one file that can be used without the benchmark: 
 with `python3 -I`, except the Ramsey checker, which is C (`cc -O3 -o ramsey_check checkers/ramsey_check.c`). Each
 prints its exact result and exits 0 only for a valid certificate.
 
+- `arc_check.py Q FILE [--saturating]`: a complete arc of PG(2,Q) (no three points on a line, every other point on a
+  line through two of them), or a 1-saturating set; the number of points, exact (in C above 2 x 10^6 steps).
 - `grass_check.py M N COUNT FILE`: a packing of COUNT subspaces of dimension N in R^M given by spanning vectors; the
   least squared chordal distance, exact.
 - `circulant_check.py DELTA DIAMETER FILE`: a circulant graph C_n(S) given by n and its jumps, degree at most DELTA

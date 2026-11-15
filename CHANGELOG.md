@@ -18,6 +18,43 @@ value can change within a version when its source table changes; the file then s
   some of them are public on Zenodo. Their values stay as read on 8 Nov until a rule for cells the table does not list is
   chosen.
 
+## Next (in review): the family `complete-arc`, smallest complete arcs in PG(2,q) (15 Nov 2026)
+
+- New exact checker `checkers/arc_check.py` with the C helper `checkers/arc_scan.c`: a complete arc of PG(2,q) (no
+  three points on a line; every other point on a line through two of them), or with --saturating a 1-saturating set;
+  q prime, or q = p^h with an irreducible polynomial in the file (Rabin's test). Arc test through the lines of all
+  pairs (a hash table); completeness only on the tangents at the first point, where every secant's meeting point is
+  marked: (q + 2 - n)(n - 1)(n - 2)/2 steps for n points; for prime q one addition, one comparison and one byte
+  store per step, eight directions per pass over the secants (about 1.5 times faster than one direction and a bit
+  array); an XOR and a table lookup for q = 2^h; Zech's logarithms for odd q = p^h. Measured in full, wall clock
+  under the machine's other load: complete lexiarcs of PG(2,30011) (1002 points, 1.45 x 10^10 steps) 9.3 s,
+  PG(2,60013) (1470 points, 6.31 x 10^10 steps) 55.3 s and PG(2,90001) (1839 points, 1.49 x 10^11 steps) 126.6 s;
+  random sets with ARC_SCAN_ALL (every uncovered point counted): q = 2^16 1.18 ns a step, q = 223^2 and 3^10 2.06
+  to 2.10 ns (5 ns before marking by logarithms).
+- `tools/lexiarc.c` (new): the complete lexiarc of PG(2,q), q prime, by the algorithm FOP with the lexicographical
+  order of Bartoli, Davydov, Faina, Kreshchuk, Marcugini and Pambianco (arXiv:1404.0469, Section 2). It reproduces
+  their sizes t^L_2(2,q) for every q tried: 3, 5, 7, 11, 13, 101, 997, 1009, 4999, 9973, 10007, 30011, 60013 and
+  90001 (4, 6, 8, 8, 12, 35, 146, 147, 372, 538, 544, 1002, 1470, 1839 points).
+- `tests/test_arc.py` (run by `test.sh`): conics are complete arcs for odd q and miss their nucleus for even q;
+  hyperovals; fields from irreducible polynomials (one whose root is not primitive); the points of the plane left
+  uncovered by 188 random sets (44 of them complete arcs from a randomized greedy search) counted three ways (every
+  point and pair directly, the Python route, the C helper) agree; red controls (three points on a line, a point
+  repeated or scaled, coordinates outside the field, reducible and non-monic polynomials); lexiarcs reproduce the
+  published sizes and fail without their last point; the complete 20-arc of PG(2,61) of P. Lisonek, S. Marcugini and
+  F. Pambianco (Contrib. Discrete Math. 3, 2008, Proposition 3.1), rebuilt from their description, passes by all three
+  routes. Through obb.py it certifies 20, the best known value of `arc-61` ("does not improve"), and with a point
+  removed it is refused; the lexiarc of PG(2,4999) certifies 372 (best known 337). `tests/sample_cells.py` samples the
+  family with conics and hyperovals (and a point removed).
+- `families/complete-arc` (9,862 cells; `tools/arcs_cells.py`, `literature.json`): arXiv:1312.2155v3 and
+  arXiv:1404.0469v3 read 15 Nov 2026 (PDF SHA-256 in the family file); every prime power q > 32 whose check of a
+  complete arc one point smaller than the best known is estimated at most three minutes; best known = the smaller of
+  the smallest known size and the lexiarc size (never the lexiarc); estimate (q + 2 - n)(n - 1)(n - 2)/2 steps at
+  0.90 ns (prime q), 1.18 ns (q = 2^h) or 2.10 ns (odd q = p^h) times 1.15 (`arc_check_seconds`); 18 q <= 32
+  (solved) and 17,981 q with longer checks left out. Literature check: the 2018 version of arXiv:1404.0469 still
+  cites the June 2015 collection, the 2016 caps paper (arXiv:1610.09656) adds arcs only above q = 301,813, Lisonek,
+  Marcugini and Pambianco's 2008 arcs are the table's values for q = 37, 61, 71; web searches found nothing later.
+- index.json: 374,041 problems.
+
 ## Next (in review): faster checkers for covering arrays, quantum codes and MinT's arrays over GF(2) (15 Nov 2026)
 
 - `checkers/ca_trie.c` (new; `ca_check.py` uses it above 5 x 10^7 visits for v <= 64, `--mark` keeps `ca_scan.c`): rows

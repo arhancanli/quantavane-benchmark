@@ -1,6 +1,6 @@
 {
  "benchmark_version": "2.1",
- "problems": 364179,
+ "problems": 374041,
  "by_family": {
   "bipartite-degree-diameter": 32,
   "cage": 40,
@@ -10,6 +10,7 @@
   "circulant-degree-diameter": 170,
   "circulant-weighing-matrix": 2622,
   "coil-in-the-box": 5,
+  "complete-arc": 9862,
   "constant": 7,
   "constant-weight-code": 1166,
   "costas-array": 2,
@@ -115,6 +116,17 @@
    "keeper": "D. Gordon, La Jolla Circulant Weighing Matrices Repository (dmgordon.org/circulant-weighing-matrices; data on Zenodo, CC BY 4.0)",
    "read": "2026-11-15",
    "checker": "cwm_check.py"
+  },
+  {
+   "kind": "family",
+   "family": "complete-arc",
+   "path": "families/complete-arc/cells.jsonl",
+   "definition": "families/complete-arc/family.json",
+   "count": 9862,
+   "sha256": "72e295c7ddb6c66c660110d6834d5466aa6493769e47df6a0772c9b30ef669e9",
+   "keeper": "D. Bartoli, A. A. Davydov, G. Faina, A. A. Kreshchuk, S. Marcugini and F. Pambianco, tables of the smallest known sizes of complete arcs in PG(2,q) (arXiv:1312.2155v3) and of complete lexiarcs (arXiv:1404.0469v3)",
+   "read": "2026-11-15",
+   "checker": "arc_check.py"
   },
   {
    "kind": "family",

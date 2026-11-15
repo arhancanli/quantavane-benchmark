@@ -1,0 +1,9 @@
+{
+ "note": "Literature check of 15 Nov 2026 for sizes of complete arcs in PG(2,q) published after the collection of arXiv:1312.2155v3 (smallest known sizes up to June 2015), and for exact values of t_2(2,q) beyond q <= 32. Nothing found changes a cell; the checks are listed so that they can be repeated.",
+ "checked": [
+  {"source": "D. Bartoli, A. A. Davydov, G. Faina, A. A. Kreshchuk, S. Marcugini and F. Pambianco, arXiv:1404.0469v3 (3 Jan 2018), complete lexiarcs for all q <= 321007", "finding": "its Sections 1 and 6 still take the smallest known sizes from arXiv:1312.2155v3 (up to June 2015); no lexiarc of its tables is smaller than the smallest known size for any of the 14,844 q of arXiv:1312.2155v3 (checked by tools/arcs_cells.py)"},
+  {"source": "D. Bartoli, A. A. Davydov, A. A. Kreshchuk, S. Marcugini and F. Pambianco, arXiv:1610.09656 (2016), smallest known complete caps in PG(3,q) and PG(4,q)", "finding": "for planes it adds complete arcs only for 301813 < q <= 321007, beyond the cells"},
+  {"source": "P. Lisonek, S. Marcugini and F. Pambianco, Constructions of small complete arcs with prescribed symmetry, Contrib. Discrete Math. 3 (2008) 14-19", "finding": "complete 15-, 20- and 22-arcs in PG(2,37), PG(2,61) and PG(2,71): the values of arXiv:1312.2155v3 for these q, credited to them; the 20-arc of PG(2,61) is rebuilt in tests/test_arc.py and certifies 20"},
+  {"source": "web searches (15 Nov 2026) for new upper bounds on t_2(2,q) or new small complete arcs after 2015, and for exact values of t_2(2,37)", "finding": "no later table or improvement found; the exact values are known only for q <= 32 (arXiv:1312.2155v3, Section 1, citing the proof of t_2(2,31) = t_2(2,32) = 14)"}
+ ]
+}

@@ -332,6 +332,14 @@ python3 -I tests/test_circulant.py || status=1
 python3 -I tests/test_grass.py || status=1
 t grass-3-1-9 certs/grass/grassc.3.1.9.txt "does not improve,"
 t grass-5-2-12 certs/grass/grassc.5.2.12.txt "does not improve,"
+# v2.2: arc_check.py (the family complete-arc): conics and hyperovals, 188 random sets counted three ways, lexiarcs that
+# reproduce the published sizes, the published complete 20-arc of PG(2,61) (written to certs/arc/ by the test); through
+# obb.py the 20-arc reproduces the best known value of arc-61, and without its last point it is refused
+python3 -I tests/test_arc.py || status=1
+t arc-61 certs/arc/lmp2008_pg2_61_20arc.txt "does not improve,"
+t arc-4999 certs/arc/lexiarc_4999.txt "does not improve,"
+sed '$d' certs/arc/lmp2008_pg2_61_20arc.txt > certs/arc/control_19_points.txt
+t arc-61 certs/arc/control_19_points.txt "NOT CERTIFIED,"
 python3 -I tests/sample_cells.py || status=1
 if python3 -I obb.py index > /dev/null; then echo "ok    index.json matches the files"; else echo "FAIL  index.json"; status=1; fi
 exit $status

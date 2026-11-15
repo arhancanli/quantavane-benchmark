@@ -787,6 +787,31 @@ def test_grassmannian_packing(n, rng):
                "does not improve,")
 
 
+def test_complete_arc(n, rng):
+    """A conic (q odd) or a conic with its nucleus (q even) is a complete arc of q + 1 or q + 2 points: certified, far
+    above the table; with a point removed it is not complete and must be refused. Fields GF(p^h) are given by the
+    first irreducible polynomial found."""
+    sys.path.insert(0, CHECKERS)
+    import arc_check
+    cells = family_cells("complete-arc")
+    picks = rng.sample([c for c in cells if c["params"]["h"] == 1 and c["params"]["q"] <= 700], n)
+    picks += rng.sample([c for c in cells if c["params"]["h"] > 1 and c["params"]["q"] <= 1000], 1)
+    for c in picks:
+        q, p, h = c["params"]["q"], c["params"]["p"], c["params"]["h"]
+        head, poly = [], None
+        if h > 1:
+            poly = next(f for f in ([k % p ** (i + 1) // p ** i for i in range(h)] + [1] for k in range(1, p ** h))
+                        if f[0] and arc_check.irreducible(f, p))
+            head = ["poly " + " ".join(map(str, poly))]
+        F = arc_check.Field(q, p, h, poly)
+        pts = [(1, t, F.mul(t, t)) for t in range(q)] + [(0, 0, 1)] + ([(0, 1, 0)] if p == 2 else [])
+        lines = head + [f"{x} {y} {z}" for x, y, z in pts]
+        expect(f"sample {c['id']} {'conic' if p > 2 else 'hyperoval'} of {len(pts)} points",
+               obb(c["id"], write(f"{c['id']}.txt", lines)), "does not improve,")
+        expect(f"red   {c['id']} (a point removed)", obb(c["id"], write(f"{c['id']}_red.txt", head + lines[len(head) + 1:])),
+               "NOT CERTIFIED,")
+
+
 def main():
     n = int(sys.argv[1]) if len(sys.argv) > 1 else 3
     seed = int(sys.argv[2]) if len(sys.argv) > 2 else 2026
@@ -817,7 +842,8 @@ def main():
                        ("bipartite-degree-diameter", test_bipartite_degree_diameter),
                        ("flexible-job-shop", test_flexible_job_shop),
                        ("unequal-circle-packing", test_unequal_circle_packing),
-                       ("grassmannian-packing", test_grassmannian_packing)):
+                       ("grassmannian-packing", test_grassmannian_packing),
+                       ("complete-arc", test_complete_arc)):
         if os.path.exists(os.path.join(ROOT, "families", name, "cells.jsonl")):
             test(n, rng)
         else:

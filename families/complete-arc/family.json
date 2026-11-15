@@ -1,0 +1,52 @@
+{
+ "family": "complete-arc",
+ "title": "Smallest complete arcs in the projective planes PG(2,q)",
+ "added": "2.2",
+ "objective": "minimize",
+ "id_prefixes": [
+  "arc-"
+ ],
+ "keeper": "D. Bartoli, A. A. Davydov, G. Faina, A. A. Kreshchuk, S. Marcugini and F. Pambianco, tables of the smallest known sizes of complete arcs in PG(2,q) (arXiv:1312.2155v3) and of complete lexiarcs (arXiv:1404.0469v3)",
+ "page": "https://arxiv.org/abs/1312.2155v3",
+ "cell_url": "https://arxiv.org/abs/1312.2155v3",
+ "read": "2026-11-15",
+ "revision": "arXiv:1312.2155v3 (28 Jun 2015; smallest known sizes collected up to June 2015; Tables 1-6) and arXiv:1404.0469v3 (3 Jan 2018; complete lexiarcs for all q <= 321007; Tables 1-6), both PDFs downloaded 2026-11-15 (SHA-256 in pdf_sha256)",
+ "template": {
+  "title": "Complete arc in PG(2,{q})",
+  "statement": "Find a complete arc in the projective plane PG(2,{q}) with as few points as possible: a set of points of PG(2,{q}), no three on a line, such that every other point of the plane lies on a line through two of them. The smallest size t_2(2,{q}) is not known (exact values are known only for q <= 32).",
+  "submission": "Text file: one point per line, three integers x y z (homogeneous coordinates in GF({q}), 0 <= x, y, z < {q}, not all 0). For q = p^h with h > 1 the first line is \"poly c_0 c_1 ... c_h\", a monic irreducible polynomial over GF(p) (lowest coefficient first), and an element is the integer whose base-p digits are its coefficients. See checkers/arc_check.py.",
+  "args": [
+   "{q}"
+  ]
+ },
+ "checker": {
+  "program": "arc_check.py",
+  "value": "result"
+ },
+ "score": "the number of points of a complete arc (smaller is better)",
+ "best_text": "The smallest known complete arc in PG(2,{q}) has {best} points ({holder}); a complete arc with fewer points improves it.",
+ "bound_kind": "lower bound",
+ "bound_source": "t_2(2,q) > sqrt(2q) + 1 for every q, and t_2(2,q) > sqrt(3q) + 1/2 for q = p^h with h <= 3 (arXiv:1312.2155v3, (1.2), with its references)",
+ "holder_unknown": "the authors' collection (the sources of each size are in arXiv:1312.2155v3, Section 2)",
+ "holder_sources": "arXiv:1312.2155v3 collects the smallest known sizes from many papers (its Section 2 and references); most are the authors' own randomized greedy searches, Table 1's sizes for q <= 151 are N. Pace's (J. Combin. Des. 22, 2014)",
+ "open_rule": "every prime power 32 < q whose best known size (the smallest in either paper) is above the lower bound (all are), kept when the check of a complete arc one point smaller is estimated at most 180 s (arc_check_seconds in tools/arcs_cells.py)",
+ "left_out": "18 prime powers q <= 32 (t_2(2,q) known exactly); 17981 prime powers q from 68921 to 430007 whose check is estimated above 180 s (the papers list every prime power to 321007 and sporadic q to 430007)",
+ "literature": "families/complete-arc/literature.json",
+ "pdf_sha256": {
+  "1312.2155v3.pdf": "03292bd4737e584ac4a23e263be832fa522ceebe338b2b8fb51d4db04836bce1",
+  "1404.0469v3.pdf": "844499a1a24534a7ea781be3561a421881cde55c7e556b1201bcb428fa2d707e"
+ },
+ "counts": {
+  "smallest known sizes": 14844,
+  "lexiarc sizes": 27860,
+  "prime powers listed": 27861,
+  "solved (q <= 32)": 18,
+  "check too long": 17981,
+  "cells": 9862,
+  "cells with q = p^h, h > 1": 87
+ },
+ "cells": "cells.jsonl",
+ "count": 9862,
+ "quantavane_records": 0,
+ "single_problems_left_out": 0
+}
