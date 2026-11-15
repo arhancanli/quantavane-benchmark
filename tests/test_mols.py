@@ -8,6 +8,9 @@ only and a C compiler; run by test.sh).
   the C helper give the same verdict and the same count.
 - Red controls: a square repeated (not orthogonal), two cells of a row swapped (not Latin), the header "N K" with a
   wrong K or N.
+- Difference matrices: the multiplication tables of GF(p) (Bose's (p, p; 1) matrices) give p - 2 squares; product
+  matrices over Z_n1 x ... x Z_nr, intact or broken, get the same verdict from the matrix check and from the squares
+  built from them (60 cases); red controls: wrong group order, an entry outside the group, two rows only.
 - The published sets of C. D. Rosin (arXiv:2611.16299, github.com/Constructive-Codes/MOLS, fetched by fetch.sh into
   certs/mols/) pass by both routes with the published sizes.
 
@@ -101,6 +104,89 @@ for trial in range(150):
     path = write(sq, header)
     same += run(n, path, "--python") == run(n, path, "--native")
 expect("150 random sets: the Python route and the C helper agree", same, 150)
+
+# difference matrices: (N, K'; 1) over G gives K' - 2 MOLS; the squares built from each one (the translates of its columns
+# form an OA(K', N); L_t(x, y) is the entry of column t + 2 in the row starting x, y) must give the same verdict
+
+
+def add(a, b, orders):
+    r, w = 0, 1
+    for o in orders:
+        r += ((a // w % o + b // w % o) % o) * w
+        w *= o
+    return r
+
+
+def expand(D, orders):
+    n = len(D[0])
+    L = [[[None] * n for _ in range(n)] for _ in range(len(D) - 2)]
+    for c in range(n):
+        for g in range(n):
+            row = [add(D[r][c], g, orders) for r in range(len(D))]
+            x, y = row[0], row[1]
+            for t in range(len(D) - 2):
+                if L[t][x][y] is not None:
+                    return None
+                L[t][x][y] = row[t + 2]
+    return L
+
+
+def write_dm(D, orders):
+    path = os.path.join(TMP, "dm.txt")
+    with open(path, "w") as f:
+        f.write("group " + " ".join(map(str, orders)) + "\n" + "".join(" ".join(map(str, r)) + "\n" for r in D))
+    return path
+
+
+def product_dm(orders, primes):
+    """rows i < min(prime of each factor): D[i][c] = (i c_l mod n_l) coordinate by coordinate"""
+    n = 1
+    for o in orders:
+        n *= o
+    D = []
+    for i in range(min(primes)):
+        row = []
+        for c in range(n):
+            x, w, cc = 0, 1, c
+            for o in orders:
+                x += (i * (cc % o) % o) * w
+                cc //= o
+                w *= o
+            row.append(x)
+        D.append(row)
+    return D
+
+
+for p in (5, 7, 11, 13, 101):
+    D = [[i * c % p for c in range(p)] for i in range(p)]
+    expect(f"the multiplication table of GF({p}) (Bose): a ({p}, {p}; 1) difference matrix", run(p, write_dm(D, [p])),
+           f"RESULT {p - 2}")
+    if p <= 13:
+        expect(f"  its {p - 2} squares", run(p, write(expand(D, [p])), "--native"), f"RESULT {p - 2}")
+agree = 0
+cases = [([3, 5], [3, 5]), ([5, 7], [5, 7]), ([9, 5], [3, 5]), ([7, 11], [7, 11]), ([25, 3], [5, 3]), ([5, 9, 7], [5, 3, 7])]
+for trial in range(60):
+    orders, primes = cases[trial % len(cases)]
+    n = 1
+    for o in orders:
+        n *= o
+    D = product_dm(orders, primes)
+    kind = trial % 4
+    if kind == 1:
+        D[-1][rng.randrange(n)] = rng.randrange(n)
+    elif kind == 2:
+        D.append(D[1][:])
+    got = run(n, write_dm(D, orders))
+    L = expand(D, orders)
+    got2 = "refused" if L is None else run(n, write(L), "--native")
+    agree += got == got2
+    if got != got2:
+        print(f"FAIL  {orders} kind {kind}: {got} vs {got2}")
+expect("60 difference matrices (some broken): the matrix check and the squares built from it agree", agree, 60)
+D = product_dm([3, 5], [3, 5])
+expect("red a group of the wrong order", run(15, write_dm(D, [3, 7])), "refused")
+expect("red an entry outside the group", run(15, write_dm([r[:-1] + [15] for r in D], [3, 5])), "refused")
+expect("red two rows only", run(15, write_dm(D[:2], [3, 5])), "refused")
 
 certs = os.path.join(ROOT, "certs", "mols")
 for name in sorted(os.listdir(certs)) if os.path.isdir(certs) else []:

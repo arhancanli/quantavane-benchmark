@@ -11,7 +11,58 @@ squares are mutually orthogonal Latin squares, 1 otherwise. K is the score (thre
 The first line may be a header "N K" (the format of github.com/Constructive-Codes/MOLS): N must be the order and K
 the number of squares in the file. Files above 2 MB are checked by the C helper mols_scan.c (built with cc -O3 on
 first use; the same rules, with every ordered pair of symbols marked in an array of N^2 stamps); --python or
---native forces one way."""
+--native forces one way.
+
+A difference matrix may be given instead of the squares: a first line "group n_1 n_2 ... n_r" naming the abelian group
+G = Z_n1 x ... x Z_nr of order N, then K' rows of N elements of G, each written as the integer a_1 + n_1 (a_2 + n_2
+(a_3 + ...)) of its coordinates 0 <= a_i < n_i. It is an (N, K'; 1) difference matrix when for every two rows the N
+differences, column by column, are N distinct elements of G. Every two rows then give each element of G once, the
+N^2 translates of its columns form an orthogonal array OA(K', N) of strength 2 and index 1, that is a transversal
+design TD(K', N), and its columns 3 to K' are K' - 2 mutually orthogonal Latin squares of order N (L_t(x, y) is the
+entry in column t of the row whose first two entries are x and y). The result is K' - 2."""
+
+
+def difference_matrix(n, lines):
+    """(K' - 2, None) for a valid difference matrix, or (None, reason)."""
+    head = lines[0]
+    try:
+        orders = [int(x) for x in head[1:]]
+    except ValueError:
+        return None, "the group line must list integers"
+    if not orders or any(o < 2 for o in orders):
+        return None, "the group needs cyclic factors of order 2 or more"
+    prod = 1
+    for o in orders:
+        prod *= o
+    if prod != n:
+        return None, f"the group has order {prod}, not {n}"
+    rows = []
+    for t in lines[1:]:
+        try:
+            r = [int(x) for x in t]
+        except ValueError:
+            return None, "the rows must be integers"
+        if len(r) != n or any(x < 0 or x >= n for x in r):
+            return None, f"row {len(rows) + 1}: expected {n} elements of G written as integers 0..{n - 1}"
+        rows.append(r)
+    if len(rows) < 3:
+        return None, "a difference matrix with fewer than 3 rows gives no Latin square"
+    # coordinates of every entry (a_1 is the least significant digit)
+    weights, w = [], 1
+    for o in orders:
+        weights.append(w)
+        w *= o
+    digits = [[[(x // weights[c]) % orders[c] for x in r] for c in range(len(orders))] for r in rows]
+    for i in range(len(rows)):
+        for j in range(i + 1, len(rows)):
+            code = [0] * n
+            for c, o in enumerate(orders):
+                a, b, wc = digits[i][c], digits[j][c], weights[c]
+                for col in range(n):
+                    code[col] += ((a[col] - b[col]) % o) * wc
+            if len(set(code)) != n:
+                return None, f"rows {i + 1} and {j + 1}: the differences repeat an element of G"
+    return len(rows) - 2, None
 import os
 import subprocess
 import sys
@@ -35,6 +86,18 @@ def main():
         print(__doc__)
         return 2
     n = int(args[0])
+    with open(args[1], encoding="ascii", errors="replace") as fh:
+        first = next((t.split("#")[0].replace(",", " ").split() for t in fh if t.split("#")[0].strip()), [])
+    if first and first[0] == "group":
+        with open(args[1], encoding="ascii", errors="replace") as fh:
+            lines = [t.split("#")[0].replace(",", " ").split() for t in fh]
+        k, why = difference_matrix(n, [t for t in lines if t])
+        if k is None:
+            print(f"not an ({n}, K'; 1) difference matrix: {why}")
+            return 1
+        print(f"order {n}: an ({n}, {k + 2}; 1) difference matrix, so {k} mutually orthogonal Latin squares")
+        print(f"RESULT {k}")
+        return 0
     if "--native" in flags or ("--python" not in flags and os.path.getsize(args[1]) > NATIVE_FROM):
         r = subprocess.run([helper(), str(n), args[1]], capture_output=True, text=True)
         last = (r.stdout.strip().splitlines() or ["FAIL no output from mols_scan"])[-1]

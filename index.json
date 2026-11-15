@@ -1,6 +1,6 @@
 {
  "benchmark_version": "2.1",
- "problems": 375768,
+ "problems": 382409,
  "by_family": {
   "bipartite-degree-diameter": 32,
   "cage": 40,
@@ -31,7 +31,7 @@
   "linear-code": 15255,
   "lj-cluster": 137,
   "matrix-multiplication": 2,
-  "mols": 1727,
+  "mols": 8368,
   "multicolour-ramsey": 14,
   "no-three-in-line": 2,
   "ordered-orthogonal-array": 5075,
@@ -277,8 +277,8 @@
    "family": "mols",
    "path": "families/mols/cells.jsonl",
    "definition": "families/mols/family.json",
-   "count": 1727,
-   "sha256": "58a5309f4c4fcdd625f945353c97cd5d6588b42e7ddac693d722f11b47690680",
+   "count": 8368,
+   "sha256": "5896569abaca474422f91dc250de12168cd616fa634ce8684d3d097988d3209f",
    "keeper": "Handbook of Combinatorial Designs, Table 3.87 (R. J. R. Abel, C. J. Colbourn and J. H. Dinitz), as in SageMath's MOLS_handbook_data, with the later results of families/mols/literature.json",
    "read": "2026-11-15",
    "checker": "mols_check.py"

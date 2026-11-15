@@ -10,8 +10,9 @@ published since (Dukes and Ling 2014; Abel, Janiszczak and Staszewski 2024; Rosi
 
 N(n) = n - 1 for prime powers and N(6) = 1, and no other value is known: every other n is open (N(n) <= n - 1, and
 <= n - 2 when the Bruck-Ryser theorem rules out a projective plane of order n). A cell is kept when n >= 500, or n <
-500 and its current value is known from literature.json (the 2024 compilation for n < 500 could not be read), and when
-a submission of one square more than the best known, (best + 1) n^2 symbols, has at most 10^8 symbols."""
+500 and its current value is known from literature.json (the 2024 compilation for n < 500 could not be read). A
+submission is either the squares or a difference matrix (checkers/mols_check.py), so every order below 10,000 can be
+checked: a difference matrix for K squares of order n has (K + 2) n entries."""
 import hashlib
 import json
 import os
@@ -72,8 +73,7 @@ def main():
                 ", arXiv:2412.00480 (2024)" if "Janiszczak" in upd[n]["source"] else
                 ", arXiv:1401.1466 (2014)")
         if (best + 1) * n * n > MAX_SYMBOLS:
-            big += 1
-            continue
+            big += 1          # counted only: these need a difference matrix in practice
         plane_ruled_out = n % 4 in (1, 2) and not sum_of_two_squares(n)
         bound = f"{n - 2} (no projective plane of order {n}: Bruck-Ryser)" if plane_ruled_out else f"{n - 1} (n - 1)"
         rows.append({"id": f"mols-{n}", "params": {"n": n}, "best": str(best), "bound": bound, "holder": holder})
@@ -96,7 +96,9 @@ def main():
                           "symbols exactly once. N({n}) is not known."),
             "submission": ("Text file: K Latin squares of order {n} one after another, each {n} rows of {n} symbols "
                            "0..{n_minus_1} (or 1..{n}) separated by spaces; '#' starts a comment; an optional first "
-                           "line \"{n} K\". See checkers/mols_check.py."),
+                           "line \"{n} K\". Or an ({n}, K + 2; 1) difference matrix: a first line \"group n_1 ... "
+                           "n_r\" (an abelian group Z_n1 x ... x Z_nr of order {n}), then K + 2 rows of {n} elements "
+                           "written as integers 0..{n_minus_1} in mixed radix. See checkers/mols_check.py."),
             "args": ["{n}"],
         },
         "checker": {"program": "mols_check.py", "value": "result"},
@@ -108,15 +110,16 @@ def main():
         "holder_unknown": "Handbook of Combinatorial Designs (2007), Table 3.87",
         "holder_sources": "the Handbook table (constructions in its Section III.3) and literature.json",
         "open_rule": ("every order n that is not a prime power, n > 6 (N(n) is known only for prime powers and n = 6), "
-                      "with n >= 500 or a value for n < 500 known from literature.json, and at most 10^8 symbols in a "
-                      "submission of one square more than the best known"),
+                      "with n >= 500 or a value for n < 500 known from literature.json; a submission is the squares or a "
+                      "difference matrix"),
         "left_out": (f"{prime_powers} prime powers (N(n) = n - 1); n = 10 (the single problem mols-10); {small - 1} "
                      f"other orders below 500 whose current value is in the 2024 compilation, which could not be "
-                     f"read; {big} orders whose improving submission would have more than 10^8 symbols"),
+                     f"read (an owner step: the paper is open access)"),
         "literature": "families/mols/literature.json",
         "source_sha256": {"MOLS_handbook_data.py": hashlib.sha256(open(path, "rb").read()).hexdigest()},
         "counts": {"orders 10..9999 not prime powers": 9990 - prime_powers, "below 500 not known": small,
-                   "too large": big, "cells": len(rows)},
+                   "cells needing a difference matrix in practice (an improving set of squares above 10^8 symbols)": big,
+                   "cells": len(rows)},
     }
     for r in rows:
         r["params"]["n_minus_1"] = r["params"]["n"] - 1

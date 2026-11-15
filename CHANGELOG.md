@@ -18,6 +18,20 @@ value can change within a version when its source table changes; the file then s
   some of them are public on Zenodo. Their values stay as read on 8 Nov until a rule for cells the table does not list is
   chosen.
 
+## Next (in review): difference matrices as certificates for `mols` (15 Nov 2026)
+
+- `checkers/mols_check.py` also takes an (N, K'; 1) difference matrix over an abelian group Z_n1 x ... x Z_nr of
+  order N (a first line "group n_1 ... n_r", then K' rows of N elements in mixed radix): every two rows must have N
+  distinct differences; the result is K' - 2, the squares of the transversal design TD(K', N) that the translates of
+  its columns form. `tests/test_mols.py`: Bose's multiplication tables of GF(p) (p = 5, 7, 11, 13, 101) give p - 2;
+  60 product matrices, intact or broken, get the same verdict from the matrix check and from the squares built from
+  them; red controls (wrong group order, an entry outside the group, two rows). `tests/sample_cells.py` samples large
+  orders with product matrices and a repeated row.
+- `families/mols`: every order from 500 to 9,999 that is not a prime power is now a cell (the 6,641 orders whose
+  improving set of squares would exceed 10^8 symbols can be certified by a difference matrix of at most 33 x 9,999
+  numbers): 8,368 cells (1,727 before). Still left out: 348 orders below 500 (the 2024 compilation).
+- index.json: 382,409 problems.
+
 ## Next (in review): the family `mols`, mutually orthogonal Latin squares (15 Nov 2026)
 
 - `checkers/mols_check.py`: an optional first line "N K" (the format of github.com/Constructive-Codes/MOLS), and files

@@ -14,7 +14,7 @@
  "template": {
   "title": "Mutually orthogonal Latin squares of order {n}",
   "statement": "Find as many mutually orthogonal Latin squares of order {n} as possible: Latin squares that, taken two at a time and superimposed, show each of the {n}^2 ordered pairs of symbols exactly once. N({n}) is not known.",
-  "submission": "Text file: K Latin squares of order {n} one after another, each {n} rows of {n} symbols 0..{n_minus_1} (or 1..{n}) separated by spaces; '#' starts a comment; an optional first line \"{n} K\". See checkers/mols_check.py.",
+  "submission": "Text file: K Latin squares of order {n} one after another, each {n} rows of {n} symbols 0..{n_minus_1} (or 1..{n}) separated by spaces; '#' starts a comment; an optional first line \"{n} K\". Or an ({n}, K + 2; 1) difference matrix: a first line \"group n_1 ... n_r\" (an abelian group Z_n1 x ... x Z_nr of order {n}), then K + 2 rows of {n} elements written as integers 0..{n_minus_1} in mixed radix. See checkers/mols_check.py.",
   "args": [
    "{n}"
   ]
@@ -29,8 +29,8 @@
  "bound_source": "N(n) <= n - 1, with equality exactly when a projective plane of order n exists; N(n) <= n - 2 when the Bruck-Ryser theorem excludes a plane of order n",
  "holder_unknown": "Handbook of Combinatorial Designs (2007), Table 3.87",
  "holder_sources": "the Handbook table (constructions in its Section III.3) and literature.json",
- "open_rule": "every order n that is not a prime power, n > 6 (N(n) is known only for prime powers and n = 6), with n >= 500 or a value for n < 500 known from literature.json, and at most 10^8 symbols in a submission of one square more than the best known",
- "left_out": "1273 prime powers (N(n) = n - 1); n = 10 (the single problem mols-10); 348 other orders below 500 whose current value is in the 2024 compilation, which could not be read; 6641 orders whose improving submission would have more than 10^8 symbols",
+ "open_rule": "every order n that is not a prime power, n > 6 (N(n) is known only for prime powers and n = 6), with n >= 500 or a value for n < 500 known from literature.json; a submission is the squares or a difference matrix",
+ "left_out": "1273 prime powers (N(n) = n - 1); n = 10 (the single problem mols-10); 348 other orders below 500 whose current value is in the 2024 compilation, which could not be read (an owner step: the paper is open access)",
  "literature": "families/mols/literature.json",
  "source_sha256": {
   "MOLS_handbook_data.py": "a14f647482520296cc50be70d787bc0397c4ef125783521940b0ff1a86969dc3"
@@ -38,11 +38,11 @@
  "counts": {
   "orders 10..9999 not prime powers": 8717,
   "below 500 not known": 349,
-  "too large": 6641,
-  "cells": 1727
+  "cells needing a difference matrix in practice (an improving set of squares above 10^8 symbols)": 6641,
+  "cells": 8368
  },
  "cells": "cells.jsonl",
- "count": 1727,
+ "count": 8368,
  "quantavane_records": 0,
  "single_problems_left_out": 0
 }

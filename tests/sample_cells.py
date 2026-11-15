@@ -822,6 +822,36 @@ def test_mols(n, rng):
                "does not improve,")
         expect(f"red   {c['id']} (a square repeated)", obb(c["id"], write(f"{c['id']}_red.txt", sq[0] + sq[0])),
                "NOT CERTIFIED,")
+    # large orders: a product difference matrix over the prime-power factors (rows i < the smallest prime, entries
+    # i c mod n_l in each factor), certified with (smallest prime - 2) squares; a row repeated is refused
+    for c in rng.sample([c for c in family_cells("mols") if c["params"]["n"] % 2 and c["params"]["n"] > 3200], n):
+        m, orders, primes, r = c["params"]["n"], [], [], c["params"]["n"]
+        d = 2
+        while r > 1:
+            if r % d == 0:
+                o = 1
+                while r % d == 0:
+                    r //= d
+                    o *= d
+                orders.append(o)
+                primes.append(d)
+            d += 1
+        rows = []
+        for i in range(min(primes)):
+            row = []
+            for col in range(m):
+                x, w, cc = 0, 1, col
+                for o in orders:
+                    x += (i * (cc % o) % o) * w
+                    cc //= o
+                    w *= o
+                row.append(str(x))
+            rows.append(" ".join(row))
+        head = "group " + " ".join(map(str, orders))
+        expect(f"sample {c['id']} a product difference matrix over {orders}",
+               obb(c["id"], write(f"{c['id']}_dm.txt", [head] + rows)), "does not improve,")
+        expect(f"red   {c['id']} (a row of the matrix repeated)",
+               obb(c["id"], write(f"{c['id']}_dm_red.txt", [head] + rows + [rows[1]])), "NOT CERTIFIED,")
 
 
 def main():
