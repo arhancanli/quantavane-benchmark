@@ -235,6 +235,41 @@ def test_ordered_orthogonal_array(n, rng):
         expect(f"red   {c['id']} (a column repeated)", obb(c["id"], bad), "NOT CERTIFIED,")
 
 
+def test_orthogonal_array(n, rng):
+    """The unit-vector object of test_ordered_orthogonal_array written out run by run (all x G over the field): valid
+    with few factors, below the table; with one run changed it must be refused."""
+    sys.path.insert(0, CHECKERS)
+    import ooa_check as oc
+
+    def depth(c):
+        return c["params"]["k"] if c["params"]["T"] == "net" else c["params"]["T"]
+    small = []
+    for c in family_cells("orthogonal-array"):
+        m, k, d = c["params"]["m"], c["params"]["k"], depth(c)
+        s0 = -(-k // min(d, k))
+        if s0 * d <= m and s0 < int(c["best"]) and c["params"]["b"] ** m <= 4096 and c["params"]["b"] in oc.FIELDS:
+            small.append(c)
+    for c in rng.sample(small, min(n, len(small))):
+        b, m, k, d = c["params"]["b"], c["params"]["m"], c["params"]["k"], depth(c)
+        F = oc.Field(b)
+        s0 = -(-k // min(d, k))
+        G = [[1 if col == r else 0 for col in range(s0 * d)] for r in range(m)]
+        runs = []
+        for x in itertools.product(range(b), repeat=m):
+            w = [0] * (s0 * d)
+            for coef, row in zip(x, G):
+                if coef:
+                    w = [F.add[a][F.mul[coef][g]] for a, g in zip(w, row)]
+            runs.append(w)
+        lines = [" ".join(map(str, r)) for r in runs]
+        good = write(f"{c['id']}.txt", lines)
+        expect(f"sample {c['id']} unit vectors written out, {s0} factor(s)", obb(c["id"], good), "does not improve,")
+        bad_runs = [r[:] for r in runs]
+        bad_runs[1][0] = (bad_runs[1][0] + 1) % b
+        bad = write(f"{c['id']}_red.txt", [" ".join(map(str, r)) for r in bad_runs])
+        expect(f"red   {c['id']} (one run changed)", obb(c["id"], bad), "NOT CERTIFIED,")
+
+
 def test_constant_weight_code(n, rng):
     import math
     small = [c for c in family_cells("constant-weight-code")
@@ -530,6 +565,7 @@ def main():
                        ("polygon-circle-packing", test_polygon_circle_packing),
                        ("ea-quantum-code", test_ea_quantum_code),
                        ("unrestricted-code", test_unrestricted_code),
+                       ("orthogonal-array", test_orthogonal_array),
                        ("unequal-circle-packing", test_unequal_circle_packing)):
         if os.path.exists(os.path.join(ROOT, "families", name, "cells.jsonl")):
             test(n, rng)

@@ -1,6 +1,6 @@
 {
  "benchmark_version": "2.1",
- "problems": 186009,
+ "problems": 186258,
  "by_family": {
   "cage": 40,
   "cap-set": 2,
@@ -26,6 +26,7 @@
   "multicolour-ramsey": 14,
   "no-three-in-line": 2,
   "ordered-orthogonal-array": 4709,
+  "orthogonal-array": 249,
   "polygon-circle-packing": 1106,
   "project-scheduling": 59170,
   "projective-plane": 1,
@@ -150,6 +151,17 @@
    "keeper": "W. Ch. Schmid and R. Schuerer, MinT, the database of optimal net, code, OA and OOA parameters (mint.sbg.ac.at)",
    "read": "2026-11-14",
    "checker": "ooa_check.py"
+  },
+  {
+   "kind": "family",
+   "family": "orthogonal-array",
+   "path": "families/orthogonal-array/cells.jsonl",
+   "definition": "families/orthogonal-array/family.json",
+   "count": 249,
+   "sha256": "58310d384b7dc4aa2a1a1dd2db7272214f937821be7fd5c25df7cc6fffd59ce7",
+   "keeper": "W. Ch. Schmid and R. Schuerer, MinT, the database of optimal net, code, OA and OOA parameters (mint.sbg.ac.at)",
+   "read": "2026-11-14",
+   "checker": "oa_check.py"
   },
   {
    "kind": "family",

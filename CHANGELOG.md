@@ -18,6 +18,17 @@ value can change within a version when its source table changes; the file then s
   some of them are public on Zenodo. Their values stay as read on 8 Nov until a rule for cells the table does not list is
   chosen.
 
+## Next (in review): the family `orthogonal-array` (MinT, arrays of any kind) (15 Nov 2026)
+
+- New exact checker `checkers/oa_check.py` with the C helper `checkers/oa_scan.c`: an ordered orthogonal array or net
+  given run by run, every choice of depths of weight K tested for uniformity. `tests/test_oa.py` (run by `test.sh`):
+  linear objects written out run by run give the verdict of `ooa_check.py` (both ways), a Latin square of order 6 as
+  OA(36; 2, 3, 6) with red controls, malformed inputs.
+- `families/orthogonal-array` (249 cells; `tools/mint_arb_cells.py`): MinT's cells for arbitrary objects (pages of
+  14 Nov 2026) that are open, have at most 2^16 runs, check within 2^33 steps and differ in best known value or bound
+  from the linear cell; `tests/sample_cells.py` samples the family.
+- index.json: 186,258 problems.
+
 ## Next (in review): the family `unrestricted-code` from A. E. Brouwer's tables (15 Nov 2026)
 
 - New exact checker `checkers/ucode_check.py` with the C helper `checkers/ucode_scan.c`: a code over one alphabet or

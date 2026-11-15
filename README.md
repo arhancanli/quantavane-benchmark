@@ -80,6 +80,7 @@ the 100 are new single problems of v2.1, with eight new checkers; see the collec
 | `quantum-code` (in review for v2.2) | 7,141 | M. Grassl, codetables.de: additive (stabilizer) quantum codes [[n,k]] with local dimension 2, 3, 4, 5, 7, 8 | `qcode_check.py` |
 | `ea-quantum-code` (in review for v2.2) | 3,263 | M. Grassl, eaqecc.codetables.de: entanglement-assisted quantum codes [[n,k;c]], qubits and qutrits | `qcode_check.py` |
 | `unrestricted-code` (in review for v2.2) | 352 | A. E. Brouwer: unrestricted codes A_q(n,d) for q = 2, 3, 4, 5 and mixed binary/ternary codes N(m,n,d) | `ucode_check.py` |
+| `orthogonal-array` (in review for v2.2) | 249 | W. Ch. Schmid and R. Schürer, MinT: ordered orthogonal arrays and nets of any kind (not only linear) with at most 2^16 runs | `oa_check.py` |
 
 Every cell is open in the sense written in its family file: its best known value is not marked optimal by the keeper
 and is strictly worse than the bound on the other side (the keeper's own bound, or a standard bound we compute and
@@ -253,6 +254,12 @@ What each family takes from its table, and what it leaves out:
   now one cell, with the better of the two values (hsp4 300: 0.187824804694), so the first part has 10,177 cells, not
   10,180. Holders named on the pages only by an image are now given as "[name shown as an image: NAME]". Each family
   file notes Packomania's queue of unreviewed candidates (pending.html), which may already beat a cell's value.
+- `orthogonal-array` (in review for v2.2; MinT pages of 14 Nov 2026): the cells of MinT's tables for arbitrary
+  objects (orthogonal arrays, ordered orthogonal arrays and nets that need not be linear) with at most 2^16 runs whose
+  check takes at most 2^33 steps and whose best known value or bound differs from the linear cell's, so that the
+  question differs from the one `ordered-orthogonal-array` asks; 249 cells (249 more, with the same numbers as their
+  linear cells, are left out). `oa_check.py` reads every run and tests every choice of depths for uniformity (in C,
+  `oa_scan.c`, above 2^20 steps); on linear objects written out run by run it agrees with `ooa_check.py`.
 - `unrestricted-code` (in review for v2.2; read 15 Nov 2026): every open entry of Brouwer's tables of A_q(n,d)
   (q = 2, 3, 4, 5; 123 cells) and of mixed binary/ternary codes N(m,n,d) (m, n >= 1, d = 3 to 10; 229 cells) with a
   lower bound below 2^17. `ucode_check.py` reads the words (any code, not only linear ones) and compares every pair
@@ -296,7 +303,7 @@ What each family takes from its table, and what it leaves out:
   Packomania, 175,332; with the covering designs re-read and checked in C, 176,529; with the covering arrays
   re-read and checked in C, 178,601; with the ordered orthogonal arrays walked in C, 180,158; with the third part of
   Packomania, 181,842; with the walk in C for odd bases, 182,394; with the entanglement-assisted codes, 185,657;
-  with Brouwer's unrestricted codes, 186,009.
+  with Brouwer's unrestricted codes, 186,009; with MinT's arrays of any kind, 186,258.
 - `project-scheduling`: every instance of the sets with open instances whose best known makespan is above its lower
   bound and which the site does not mark optimal; the open counts match the site's own table of November 2026. The
   highRD, lowRU and 1k variants are not read: their dataset files date from April 2021, many of their upper bounds are
@@ -313,6 +320,8 @@ Each checker in `checkers/` is one file that can be used without the benchmark: 
 with `python3 -I`, except the Ramsey checker, which is C (`cc -O3 -o ramsey_check checkers/ramsey_check.c`). Each
 prints its exact result and exits 0 only for a valid certificate.
 
+- `oa_check.py B T M K FILE`: ordered orthogonal arrays and nets of any kind, given run by run (every choice of
+  depths tested for uniformity; in C above 2^20 steps).
 - `ucode_check.py ALPHABETS D FILE`: unrestricted codes (q-ary or mixed alphabets) with minimum distance D, every
   pair compared (in C above 3,000 words).
 - `qcode_check.py Q N K FILE [--ebits C]`: the minimum distance of an additive quantum code [[N,K]] over GF(Q) from its

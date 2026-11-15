@@ -1,0 +1,41 @@
+{
+ "family": "orthogonal-array",
+ "title": "Ordered orthogonal arrays and nets of any kind (not necessarily linear) with the largest number of factors",
+ "added": "2.2",
+ "objective": "maximize",
+ "id_prefixes": [
+  "oa-"
+ ],
+ "keeper": "W. Ch. Schmid and R. Schuerer, MinT, the database of optimal net, code, OA and OOA parameters (mint.sbg.ac.at)",
+ "page": "http://mint.sbg.ac.at/",
+ "cell_url": "http://mint.sbg.ac.at/query.php?i=x&b={b}&m={m}&k={k}&p=mks&de={T}",
+ "read": "2026-11-14",
+ "revision": "table.php (types Linear/Digital and Bound (linear/digital); every base 2 to 256 and every depth 1 to 8 and net; m from 3 to 51, k from 3 to 52), read 14 Nov 2026 11:27-11:39 UTC; MinT's database was last updated 2024-09-05; two pages (base 2, depths 6 and 7) were cut by the server above k = 27 and only their complete rows are used",
+ "template": {
+  "title": "Ordered orthogonal array of any kind with {b}^{m} runs, depth {T}, strength {k}",
+  "statement": "Find an ordered orthogonal array (any array, linear or not) with {b}^{m} runs over {b} symbols, depth {T} and strength {k} that has as many factors as possible. Depth 1 is an orthogonal array; depth net is a ({m}-{k}, {m}, s)-net in base {b}, written by the first {k} base-{b} digits of each coordinate.",
+  "submission": "Text file: the {b}^{m} runs, one per line, each the symbols (below {b}) of every factor in turn, {T} coordinates per factor in order of depth ({k} for depth net); see checkers/oa_check.py.",
+  "args": [
+   "{b}",
+   "{T}",
+   "{m}",
+   "{k}"
+  ]
+ },
+ "checker": {
+  "program": "oa_check.py",
+  "value": "result"
+ },
+ "score": "the number of factors (larger is better)",
+ "best_text": "The best known object of any kind in MinT has {best} factors; an array with more factors improves it.",
+ "bound_kind": "upper bound",
+ "bound_source": "MinT's bound for arbitrary objects in the same cell",
+ "holder_unknown": "the construction and its source are on the cell's page at MinT",
+ "holder_sources": "the tables list values only; each cell's page names its construction",
+ "open_rule": "every cell with 3 <= k <= m of the MinT tables for arbitrary objects whose best known object has fewer factors than MinT's bound for arbitrary objects, with at most 2^16 runs, whose check takes at most 2^33 steps, and whose best known value or bound differs from the linear cell's (field linear: the linear cell's values)",
+ "left_out": "6871 solved cells; 57752 open cells with more than 2^16 runs; 239 open cells whose check would take more than 2^33 steps; 249 open cells whose best known value and bound equal those of the linear cell (asked in ordered-orthogonal-array); cells with k < 3 or m < k",
+ "cells": "cells.jsonl",
+ "count": 249,
+ "quantavane_records": 0,
+ "single_problems_left_out": 0
+}
