@@ -1,0 +1,75 @@
+{
+ "family": "strongly-regular-graph",
+ "title": "Strongly regular graphs whose existence is unknown",
+ "added": "2.2",
+ "objective": "maximize",
+ "id_prefixes": [
+  "srg-"
+ ],
+ "keeper": "A. E. Brouwer, Parameters of strongly regular graphs (aeb.win.tue.nl/graphs/srg)",
+ "page": "https://aeb.win.tue.nl/graphs/srg/srgtab.html",
+ "cell_url": "https://aeb.win.tue.nl/graphs/srg/srgtab.html",
+ "read": "2026-11-15",
+ "revision": "srgtab1-50.html to srgtab1251-1300.html read 15 Nov 2026 12:05-12:08 UTC (SHA-256 of each in page_sha256)",
+ "template": {
+  "title": "Strongly regular graph srg({v}, {k}, {l}, {m})",
+  "statement": "Find a graph on {v} vertices, {k}-regular, in which every two adjacent vertices have exactly {l} common neighbours and every two non-adjacent vertices exactly {m}: a strongly regular graph srg({v}, {k}, {l}, {m}). Its complement would be an srg({v}, {kc}, {lc}, {mc}), so either graph settles the question; submit the one with the parameters above.",
+  "submission": "Text file: the graph in graph6 or sparse6 (as on House of Graphs), as an edge list (one edge \"u v\" per line, vertices numbered from 0) or as a 0/1 adjacency matrix.",
+  "args": [
+   "{v}",
+   "{k}",
+   "{l}",
+   "{m}"
+  ]
+ },
+ "checker": {
+  "program": "srg_check.py",
+  "value": "result"
+ },
+ "score": "1 for a valid graph; none is known, so the best known value is 0",
+ "best_text": "Brouwer's table marks these parameters '?': no graph is known and none has been ruled out, so the best known value is {best}; a valid graph scores 1.",
+ "holder_unknown": "none known (existence open)",
+ "holder_sources": "the table's comments and references (srgtabrefs.html) give what is known about each case",
+ "open_rule": "every parameter set the table marks '?' (existence unknown), counted once with its complement",
+ "left_out": "689 parameter sets marked '!' or '+' (a graph exists) and 384 marked '-' (ruled out), each with its complement",
+ "counts": {
+  "rows": 4538,
+  "parameter sets": 2431,
+  "exist": 689,
+  "do not exist": 384,
+  "open": 1358,
+  "self-complementary open": 65
+ },
+ "page_sha256": {
+  "srgtab1-50.html": "e215469408c10181bc2b6afd44e320ad1a4638de2f0e4f862a4bd1aac359559e",
+  "srgtab51-100.html": "c7d29dfe4f5725e5020274b8a83612994a66404a6f07043f5110d77a24c35e31",
+  "srgtab101-150.html": "863886c17262e00d738ad3239a2372938dee2a74bd1cb8cdb4043b4ec7d19bd1",
+  "srgtab151-200.html": "8242a4823ede430bb786ac5e32e745f574619266e923d4ab8a9cc38b0dc90472",
+  "srgtab201-250.html": "0ab95b97a0310406406757033207af8f87fd18b6c9a1c528628367d74488345e",
+  "srgtab251-300.html": "3ac16f926e3b2389a9d40731bcf5096d9ae94ae69c54f37111000ad940a6c4bd",
+  "srgtab301-350.html": "41b93b4af8ceca084bfd7ac6575f07e1b17a45d98b8d319e69301d9aa9045532",
+  "srgtab351-400.html": "312a4a945d4f159287d5692ed1024669ecb3314f44b4525bd4e8797be4029e87",
+  "srgtab401-450.html": "e4fa20dd7499a88c80e48144273505c6f17883f9af771d7117af7a70f8db82cb",
+  "srgtab451-500.html": "36c4066031dca7431bce5369145f51af4db255e3cbd6b2a7cd97f611ed877ec6",
+  "srgtab501-550.html": "12c45b32d75e3d31549aef33a3d5353d95d0f77ae5d2fbac1d4e925a0da17da3",
+  "srgtab551-600.html": "6bf348d5f0d727ef07d89c3b42e65346d0ea5e6b92ceb014434510bfb1c8bc23",
+  "srgtab601-650.html": "718513bdd7d5cc3e074f3077bf6ba60686149252ee985c017d25c9595e8ad10c",
+  "srgtab651-700.html": "514ec8687dccc8bd0b19639859b2afa6e256c19e6e56acd881a06ca61ab445e4",
+  "srgtab701-750.html": "6d8d6692c9662901cf75cd6818c657a70577b21e8850e7e9e7e7df97b8ff1e06",
+  "srgtab751-800.html": "7dcd9206d4e4e2573febffc20099b7a54c40014c74ec04f8c0abf7ecf8f7fa59",
+  "srgtab801-850.html": "71003442cd19f2d3f4323174472ca5e0ffc083117918622a7c0b000fd759f827",
+  "srgtab851-900.html": "d8aec432164de0ddb1c1767152b039949287c5fe11259f3344c3747fbc8d20f8",
+  "srgtab901-950.html": "b838ff6cba11eacb9e539e0756fc7dcf1d273c9e9338c3df4ad47d5048b26346",
+  "srgtab951-1000.html": "f6d36b02d259f1c5b5ea15897815ff756c577f7c7cd4b76499a87ccaf0f56237",
+  "srgtab1001-1050.html": "d0c6f981e5d0e6454dd0b350c6b8d0b18725a1773f5acc542738d3f16f852628",
+  "srgtab1051-1100.html": "85b1297f8313413e6925e40660e8ccea23f097d22dd63c330ccb13477f79286d",
+  "srgtab1101-1150.html": "7e6bc6b0c981ea245af02e43c0de3cbeb485771661396a1b0ef9c4505674516c",
+  "srgtab1151-1200.html": "b7ac306887fa24c7cc7082c24c969974a12cc8994d1fb9560edfd48cae19c95c",
+  "srgtab1201-1250.html": "b95bc1182ea08f2db7bf93ded3df4e208ef783177aa1c58b0f47b6b4dc1c345f",
+  "srgtab1251-1300.html": "0f718c0f8561f2d93567b793fad1887dd4d4befd1337f5663c2b7cd0484352e4"
+ },
+ "cells": "cells.jsonl",
+ "count": 1356,
+ "quantavane_records": 0,
+ "single_problems_left_out": 2
+}

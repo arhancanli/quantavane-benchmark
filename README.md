@@ -86,6 +86,7 @@ the 100 are new single problems of v2.1, with eight new checkers; see the collec
 | `job-shop` (in review for v2.2) | 60 | ScheduleOpt's JSPLib archive of best bounds (with O. Shylo's table): open Taillard, Demirkol and SWV instances | `jsp_check.py` |
 | `flexible-job-shop` (in review for v2.2) | 53 | ScheduleOpt's FJSPLib archive of best bounds: open Brandimarte, Hurink, Dauzère-Pérès and Behnke instances | `jsp_check.py` |
 | `golomb-ruler` (in review for v2.2) | 39,970 | T. Rokicki and G. Dogon: possibly optimal Golomb rulers, 31 to 40,000 marks (a USD 250 reward for beating any length from 36 to 40,000 marks) | `golomb_check.py` |
+| `strongly-regular-graph` (in review for v2.2) | 1,356 | A. E. Brouwer: parameters of strongly regular graphs on up to 1,300 vertices whose existence is unknown | `srg_check.py` |
 
 Every cell is open in the sense written in its family file: its best known value is not marked optimal by the keeper
 and is strictly worse than the bound on the other side (the keeper's own bound, or a standard bound we compute and
@@ -345,7 +346,16 @@ What each family takes from its table, and what it leaves out:
   Packomania, 181,842; with the walk in C for odd bases, 182,394; with the entanglement-assisted codes, 185,657;
   with Brouwer's unrestricted codes, 186,009; with MinT's arrays of any kind, 186,258; with the Lennard-Jones
   clusters, 186,395; with the rest of Comellas's degree-diameter table, 186,432; with the job shops, 186,545; with
-  the Golomb rulers, 226,515; with the covering designs of m > t searched in C, 230,727.
+  the Golomb rulers, 226,515; with the covering designs of m > t searched in C, 230,727; with Brouwer's open
+  strongly regular graphs, 232,083.
+- `strongly-regular-graph` (in review for v2.2; read 15 Nov 2026): every parameter set srg(v,k,lambda,mu), v <= 1,300,
+  that A. E. Brouwer's table (aeb.win.tue.nl/graphs/srg, 26 pages) marks '?': no graph is known and none has been ruled
+  out. A parameter set and its complement are one row pair of the table and one cell here (a graph settles both); 65
+  open sets are their own complement. 1,358 open sets, 1,356 cells beside the single problems srg-88-27-6-9 and
+  srg-99-14-1-2. Each row's parameters are checked against k(k - lambda - 1) = (v - k - 1) mu and its complement row.
+  A valid graph scores 1 (the best known value is 0), checked by `srg_check.py`; left out: 689 sets that exist ('!' or
+  '+') and 384 ruled out ('-'). `tests/sample_cells.py`: Paley and triangular graphs pass the checker, and k-regular
+  circulants are refused for sampled cells.
 - `project-scheduling`: every instance of the sets with open instances whose best known makespan is above its lower
   bound and which the site does not mark optimal; the open counts match the site's own table of November 2026. The
   highRD, lowRU and 1k variants are not read: their dataset files date from April 2021, many of their upper bounds are

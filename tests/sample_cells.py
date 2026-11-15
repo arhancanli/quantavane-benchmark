@@ -374,6 +374,43 @@ def test_golomb_ruler(n, rng):
         expect(f"red   {c['id']} (a difference repeated)", obb(c["id"], bad), "NOT CERTIFIED,")
 
 
+def test_strongly_regular_graph(n, rng):
+    """No graph is known for any cell, so the green control is the checker on known graphs: the Paley graph P(q) and
+    the triangular graph T(s) with their parameters, and the same graphs with one edge moved refused. For each drawn
+    cell, a k-regular circulant graph on v vertices (k-regular, but not strongly regular) must be refused."""
+    chk = os.path.join(CHECKERS, "srg_check.py")
+
+    def run(v, k, l, m, edges, name):
+        path = write(name, [f"{a} {b}" for a, b in edges])
+        r = subprocess.run([sys.executable, "-I", chk, str(v), str(k), str(l), str(m), path], capture_output=True,
+                           text=True)
+        return r.returncode
+
+    for q in (13, 29, 37):
+        sq = {x * x % q for x in range(1, q)}
+        edges = [(a, b) for a in range(q) for b in range(a + 1, q) if (b - a) % q in sq]
+        expect(f"checker: Paley graph P({q})", run(q, (q - 1) // 2, (q - 5) // 4, (q - 1) // 4, edges, f"paley{q}.txt"), 0)
+        a, b = edges[0]
+        c = next(x for x in range(q) if x not in (a, b) and (a, x) not in edges and (x, a) not in edges)
+        moved = edges[1:] + [tuple(sorted((a, c)))]
+        expect(f"checker: P({q}) with one edge moved (red)", run(q, (q - 1) // 2, (q - 5) // 4, (q - 1) // 4, moved,
+                                                                f"paley{q}_red.txt"), 1)
+    for s in (6, 9):
+        pairs = list(itertools.combinations(range(s), 2))
+        edges = [(i, j) for i, j in itertools.combinations(range(len(pairs)), 2) if set(pairs[i]) & set(pairs[j])]
+        v = len(pairs)
+        expect(f"checker: triangular graph T({s})", run(v, 2 * (s - 2), s - 2, 4, edges, f"tri{s}.txt"), 0)
+    small = [c for c in family_cells("strongly-regular-graph") if c["params"]["v"] <= 400]
+    for c in rng.sample(small, min(n, len(small))):
+        v, k = c["params"]["v"], c["params"]["k"]
+        offs = list(range(1, k // 2 + 1))
+        edges = sorted({tuple(sorted((x, (x + o) % v))) for x in range(v) for o in offs})
+        if k % 2:                                  # v is even when k is odd: add the antipodal matching
+            edges += [(x, x + v // 2) for x in range(v // 2)]
+        bad = write(f"{c['id']}_red.txt", [f"{a} {b}" for a, b in edges])
+        expect(f"red   {c['id']} (a {k}-regular circulant on {v} vertices)", obb(c["id"], bad), "NOT CERTIFIED,")
+
+
 def test_constant_weight_code(n, rng):
     import math
     small = [c for c in family_cells("constant-weight-code")
@@ -674,6 +711,7 @@ def main():
                        ("degree-diameter", test_degree_diameter),
                        ("job-shop", test_job_shop),
                        ("golomb-ruler", test_golomb_ruler),
+                       ("strongly-regular-graph", test_strongly_regular_graph),
                        ("flexible-job-shop", test_flexible_job_shop),
                        ("unequal-circle-packing", test_unequal_circle_packing)):
         if os.path.exists(os.path.join(ROOT, "families", name, "cells.jsonl")):

@@ -1,6 +1,6 @@
 {
  "benchmark_version": "2.1",
- "problems": 230727,
+ "problems": 232083,
  "by_family": {
   "cage": 40,
   "cap-set": 2,
@@ -40,7 +40,7 @@
   "snake-in-the-box": 5,
   "sorting-network": 21,
   "spherical-code": 14793,
-  "strongly-regular-graph": 3,
+  "strongly-regular-graph": 1359,
   "superpermutation": 4,
   "travelling-salesman": 1,
   "unequal-circle-packing": 578,
@@ -264,6 +264,17 @@
    "keeper": "H. Cohn, table of spherical codes (spherical-codes.org)",
    "read": "2026-11-09",
    "checker": "sph_check.py"
+  },
+  {
+   "kind": "family",
+   "family": "strongly-regular-graph",
+   "path": "families/strongly-regular-graph/cells.jsonl",
+   "definition": "families/strongly-regular-graph/family.json",
+   "count": 1356,
+   "sha256": "6ff3476606669bc4d5e7bc46d3f8ddd7435a19d21a790ed954501ae69cae694b",
+   "keeper": "A. E. Brouwer, Parameters of strongly regular graphs (aeb.win.tue.nl/graphs/srg)",
+   "read": "2026-11-15",
+   "checker": "srg_check.py"
   },
   {
    "kind": "family",

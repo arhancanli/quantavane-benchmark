@@ -18,6 +18,16 @@ value can change within a version when its source table changes; the file then s
   some of them are public on Zenodo. Their values stay as read on 8 Nov until a rule for cells the table does not list is
   chosen.
 
+## Next (in review): the family `strongly-regular-graph` from Brouwer's table (15 Nov 2026)
+
+- `families/strongly-regular-graph` (1,356 cells; `tools/brouwer_srg_cells.py`): every parameter set with v <= 1,300
+  that A. E. Brouwer's table of strongly regular graphs marks '?' (existence unknown), read 15 Nov 2026 (26 pages,
+  SHA-256 of each in the family file), one cell per set and its complement; srg-88-27-6-9 and srg-99-14-1-2 stay
+  single problems. Checked by `srg_check.py` (a valid graph scores 1). `tests/sample_cells.py`: Paley graphs P(13),
+  P(29), P(37) and triangular graphs T(6), T(9) pass, the Paley graphs with an edge moved fail, and k-regular circulants
+  are refused for sampled cells.
+- index.json: 232,083 problems.
+
 ## Next (in review): covering designs with m > t searched in C (15 Nov 2026)
 
 - `checkers/covering_check.py`: for m > t with more than 40 blocks (v <= 128) the search for a bad m-subset runs in C
