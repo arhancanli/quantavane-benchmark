@@ -1,0 +1,39 @@
+{
+ "family": "degree-diameter",
+ "title": "The degree-diameter problem: large graphs of given maximum degree and diameter",
+ "added": "2.2",
+ "objective": "maximize",
+ "id_prefixes": [
+  "degdiam-"
+ ],
+ "keeper": "F. Comellas, The (Degree, Diameter) Problem for Graphs (web.mat.upc.edu/francesc.comellas/delta-d)",
+ "page": "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html",
+ "read": "2026-11-15",
+ "revision": "table_degree_diameter.html read 15 Nov 2026 11:03 UTC (SHA-256 in page_sha256)",
+ "template": {
+  "title": "Degree-diameter problem ({delta},{d}): a large graph of maximum degree {delta} and diameter {d}",
+  "statement": "Find a graph with maximum degree at most {delta} and diameter at most {d}, with as many vertices as possible.",
+  "submission": "Text file: one graph in graph6 or sparse6, or an edge list, one edge \"u v\" per line, vertices numbered from 0; see checkers/degdiam_check.py.",
+  "args": [
+   "{delta}",
+   "{d}"
+  ]
+ },
+ "checker": {
+  "program": "degdiam_check.py",
+  "value": "result"
+ },
+ "score": "the number of vertices (larger is better)",
+ "best_text": "The largest known graph in Comellas's table has {best} vertices ({holder}); a graph with more vertices improves it.",
+ "bound_kind": "upper bound",
+ "bound_source": "the Moore bound 1 + delta (sum of (delta-1)^i, i < d), not reached (not a cell field)",
+ "holder_unknown": "named on the entry's page in the table",
+ "holder_sources": "each entry's page (desc_g/...) names the graph and its authors",
+ "open_rule": "every entry of the table (degree 3 to 16, diameter 2 to 10) not in boldface, with at most 20,000 vertices",
+ "left_out": "7 optimal (bold), 62 more than 20,000 vertices, 20 single problems",
+ "page_sha256": "6b9bec651dbeb1ed8ffb93d6b422a460c2eb2d26dd538cb8d60c9651b895d96c",
+ "cells": "cells.jsonl",
+ "count": 37,
+ "quantavane_records": 0,
+ "single_problems_left_out": 20
+}

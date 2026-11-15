@@ -82,6 +82,7 @@ the 100 are new single problems of v2.1, with eight new checkers; see the collec
 | `unrestricted-code` (in review for v2.2) | 352 | A. E. Brouwer: unrestricted codes A_q(n,d) for q = 2, 3, 4, 5 and mixed binary/ternary codes N(m,n,d) | `ucode_check.py` |
 | `orthogonal-array` (in review for v2.2) | 249 | W. Ch. Schmid and R. Schürer, MinT: ordered orthogonal arrays and nets of any kind (not only linear) with at most 2^16 runs | `oa_check.py` |
 | `lj-cluster` (in review for v2.2) | 137 | D. J. Wales and others, the Cambridge Cluster Database: Lennard-Jones clusters, N = 14 to 150 | `cluster_check.py` |
+| `degree-diameter` (in review for v2.2) | 37 | F. Comellas: largest known graphs of maximum degree 3 to 16 and diameter 2 to 10 (cells beside the 20 single problems) | `degdiam_check.py` |
 
 Every cell is open in the sense written in its family file: its best known value is not marked optimal by the keeper
 and is strictly worse than the bound on the other side (the keeper's own bound, or a standard bound we compute and
@@ -255,6 +256,9 @@ What each family takes from its table, and what it leaves out:
   now one cell, with the better of the two values (hsp4 300: 0.187824804694), so the first part has 10,177 cells, not
   10,180. Holders named on the pages only by an image are now given as "[name shown as an image: NAME]". Each family
   file notes Packomania's queue of unreviewed candidates (pending.html), which may already beat a cell's value.
+- `degree-diameter` (in review for v2.2; read 15 Nov 2026): the entries of Comellas's table (degree 3 to 16, diameter 2
+  to 10; it lists the 2026 deposits of Rajiv, de Messieres, Taghiyev and others) that are not in boldface (optimal),
+  have at most 20,000 vertices and are not already single problems: 37 cells, checked by `degdiam_check.py`.
 - `lj-cluster` (in review for v2.2; read 15 Nov 2026): the putative global minima of Lennard-Jones clusters with 14 to
   150 atoms in the Cambridge Cluster Database (Wales and Doye's table). `cluster_check.py` computes the energy from the
   coordinates read exactly, each pair's term an exact fraction rounded up, and prints a proven upper bound within
@@ -310,7 +314,7 @@ What each family takes from its table, and what it leaves out:
   re-read and checked in C, 178,601; with the ordered orthogonal arrays walked in C, 180,158; with the third part of
   Packomania, 181,842; with the walk in C for odd bases, 182,394; with the entanglement-assisted codes, 185,657;
   with Brouwer's unrestricted codes, 186,009; with MinT's arrays of any kind, 186,258; with the Lennard-Jones
-  clusters, 186,395.
+  clusters, 186,395; with the rest of Comellas's degree-diameter table, 186,432.
 - `project-scheduling`: every instance of the sets with open instances whose best known makespan is above its lower
   bound and which the site does not mark optimal; the open counts match the site's own table of November 2026. The
   highRD, lowRU and 1k variants are not read: their dataset files date from April 2021, many of their upper bounds are

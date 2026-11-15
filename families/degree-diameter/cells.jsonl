@@ -1,0 +1,37 @@
+{"id": "degdiam-4-6", "params": {"delta": 4, "d": 6}, "best": "760"}
+{"id": "degdiam-4-7", "params": {"delta": 4, "d": 7}, "best": "1344"}
+{"id": "degdiam-4-9", "params": {"delta": 4, "d": 9}, "best": "7884"}
+{"id": "degdiam-4-10", "params": {"delta": 4, "d": 10}, "best": "19306"}
+{"id": "degdiam-5-5", "params": {"delta": 5, "d": 5}, "best": "660", "holder": "a Cayley graph (the table's mark); see the entry's page"}
+{"id": "degdiam-5-6", "params": {"delta": 5, "d": 6}, "best": "2836"}
+{"id": "degdiam-5-7", "params": {"delta": 5, "d": 7}, "best": "6000"}
+{"id": "degdiam-5-8", "params": {"delta": 5, "d": 8}, "best": "18810"}
+{"id": "degdiam-6-3", "params": {"delta": 6, "d": 3}, "best": "126"}
+{"id": "degdiam-6-4", "params": {"delta": 6, "d": 4}, "best": "441"}
+{"id": "degdiam-6-5", "params": {"delta": 6, "d": 5}, "best": "1518", "holder": "a Cayley graph (the table's mark); see the entry's page"}
+{"id": "degdiam-6-6", "params": {"delta": 6, "d": 6}, "best": "8802"}
+{"id": "degdiam-7-3", "params": {"delta": 7, "d": 3}, "best": "176", "holder": "a Cayley graph (the table's mark); see the entry's page"}
+{"id": "degdiam-7-4", "params": {"delta": 7, "d": 4}, "best": "684", "holder": "a Cayley graph (the table's mark); see the entry's page"}
+{"id": "degdiam-7-5", "params": {"delta": 7, "d": 5}, "best": "2810", "holder": "a Cayley graph (the table's mark); see the entry's page"}
+{"id": "degdiam-7-6", "params": {"delta": 7, "d": 6}, "best": "12654", "holder": "a Cayley graph (the table's mark); see the entry's page"}
+{"id": "degdiam-8-5", "params": {"delta": 8, "d": 5}, "best": "5334", "holder": "a Cayley graph (the table's mark); see the entry's page"}
+{"id": "degdiam-9-4", "params": {"delta": 9, "d": 4}, "best": "1773", "holder": "a Cayley graph (the table's mark); see the entry's page"}
+{"id": "degdiam-9-5", "params": {"delta": 9, "d": 5}, "best": "9020", "holder": "a Cayley graph (the table's mark); see the entry's page"}
+{"id": "degdiam-10-4", "params": {"delta": 10, "d": 4}, "best": "2612", "holder": "a Cayley graph (the table's mark); see the entry's page"}
+{"id": "degdiam-11-2", "params": {"delta": 11, "d": 2}, "best": "106"}
+{"id": "degdiam-11-4", "params": {"delta": 11, "d": 4}, "best": "3671"}
+{"id": "degdiam-12-2", "params": {"delta": 12, "d": 2}, "best": "133"}
+{"id": "degdiam-12-3", "params": {"delta": 12, "d": 3}, "best": "810"}
+{"id": "degdiam-12-4", "params": {"delta": 12, "d": 4}, "best": "6156"}
+{"id": "degdiam-13-2", "params": {"delta": 13, "d": 2}, "best": "162"}
+{"id": "degdiam-13-3", "params": {"delta": 13, "d": 3}, "best": "975"}
+{"id": "degdiam-13-4", "params": {"delta": 13, "d": 4}, "best": "7290"}
+{"id": "degdiam-14-2", "params": {"delta": 14, "d": 2}, "best": "183"}
+{"id": "degdiam-14-3", "params": {"delta": 14, "d": 3}, "best": "1214", "holder": "a Cayley graph (the table's mark); see the entry's page"}
+{"id": "degdiam-14-4", "params": {"delta": 14, "d": 4}, "best": "9720"}
+{"id": "degdiam-15-2", "params": {"delta": 15, "d": 2}, "best": "190"}
+{"id": "degdiam-15-3", "params": {"delta": 15, "d": 3}, "best": "1620"}
+{"id": "degdiam-15-4", "params": {"delta": 15, "d": 4}, "best": "15552"}
+{"id": "degdiam-16-2", "params": {"delta": 16, "d": 2}, "best": "216", "holder": "a Cayley graph (the table's mark); see the entry's page"}
+{"id": "degdiam-16-3", "params": {"delta": 16, "d": 3}, "best": "1920"}
+{"id": "degdiam-16-4", "params": {"delta": 16, "d": 4}, "best": "16848"}

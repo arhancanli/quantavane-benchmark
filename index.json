@@ -1,6 +1,6 @@
 {
  "benchmark_version": "2.1",
- "problems": 186395,
+ "problems": 186432,
  "by_family": {
   "cage": 40,
   "cap-set": 2,
@@ -13,7 +13,7 @@
   "costas-array": 2,
   "covering-array": 4731,
   "covering-design": 57192,
-  "degree-diameter": 20,
+  "degree-diameter": 57,
   "ea-quantum-code": 3263,
   "erdos-problem": 2,
   "golomb-ruler": 2,
@@ -108,6 +108,17 @@
    "keeper": "Covering Repository (coveringrepository.com), successor of D. Gordon's La Jolla Covering Repository",
    "read": "2026-11-14",
    "checker": "covering_check.py"
+  },
+  {
+   "kind": "family",
+   "family": "degree-diameter",
+   "path": "families/degree-diameter/cells.jsonl",
+   "definition": "families/degree-diameter/family.json",
+   "count": 37,
+   "sha256": "04a467fb1376b33b26da5e397e8fc4b0e432b5e57e63039858126ab5f08ac235",
+   "keeper": "F. Comellas, The (Degree, Diameter) Problem for Graphs (web.mat.upc.edu/francesc.comellas/delta-d)",
+   "read": "2026-11-15",
+   "checker": "degdiam_check.py"
   },
   {
    "kind": "family",

@@ -286,6 +286,19 @@ def test_lj_cluster(n, rng):
         expect(f"red   {c['id']} (two atoms at the same place)", obb(c["id"], bad), "NOT CERTIFIED,")
 
 
+def test_degree_diameter(n, rng):
+    """The cycle on 2D + 1 vertices has degree 2 and diameter D: valid and below the table; the cycle on 2D + 3 vertices
+    has diameter D + 1 and must be refused."""
+    for c in rng.sample(family_cells("degree-diameter"), n):
+        d = c["params"]["d"]
+        m = 2 * d + 1
+        good = write(f"{c['id']}.txt", [f"{i} {(i + 1) % m}" for i in range(m)])
+        expect(f"sample {c['id']} cycle of {m} vertices", obb(c["id"], good), "does not improve,")
+        m2 = 2 * d + 3
+        bad = write(f"{c['id']}_red.txt", [f"{i} {(i + 1) % m2}" for i in range(m2)])
+        expect(f"red   {c['id']} (cycle of {m2} vertices, diameter {d + 1})", obb(c["id"], bad), "NOT CERTIFIED,")
+
+
 def test_constant_weight_code(n, rng):
     import math
     small = [c for c in family_cells("constant-weight-code")
@@ -583,6 +596,7 @@ def main():
                        ("unrestricted-code", test_unrestricted_code),
                        ("orthogonal-array", test_orthogonal_array),
                        ("lj-cluster", test_lj_cluster),
+                       ("degree-diameter", test_degree_diameter),
                        ("unequal-circle-packing", test_unequal_circle_packing)):
         if os.path.exists(os.path.join(ROOT, "families", name, "cells.jsonl")):
             test(n, rng)

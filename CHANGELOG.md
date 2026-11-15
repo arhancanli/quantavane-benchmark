@@ -18,6 +18,14 @@ value can change within a version when its source table changes; the file then s
   some of them are public on Zenodo. Their values stay as read on 8 Nov until a rule for cells the table does not list is
   chosen.
 
+## Next (in review): the family `degree-diameter` from Comellas's table (15 Nov 2026)
+
+- `families/degree-diameter` (37 cells; `tools/comellas_cells.py`): the entries of F. Comellas's table read on 15 Nov
+  2026 that are not optimal, have at most 20,000 vertices and are not among the 20 single problems; checked by the
+  existing `degdiam_check.py`. `tests/sample_cells.py` samples the family (a cycle of 2D + 1 vertices; a cycle of
+  2D + 3 vertices as the red control).
+- index.json: 186,432 problems.
+
 ## Next (in review): the family `lj-cluster` from the Cambridge Cluster Database (15 Nov 2026)
 
 - New checker `checkers/cluster_check.py`: the Lennard-Jones energy of a cluster, every coordinate read exactly and
