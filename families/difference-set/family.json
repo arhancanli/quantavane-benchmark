@@ -1,0 +1,46 @@
+{
+ "family": "difference-set",
+ "title": "Difference sets in abelian groups whose existence is unknown",
+ "added": "2.2",
+ "objective": "maximize",
+ "id_prefixes": [
+  "ds-"
+ ],
+ "keeper": "D. Gordon, La Jolla Difference Set Repository (dmgordon.org/difference-sets; data on Zenodo, CC BY 4.0)",
+ "page": "https://dmgordon.org/difference-sets/",
+ "read": "2026-11-15",
+ "revision": "ds.json of the La Jolla Difference Set Repository, release 1.3 (Zenodo record 19740740; dmgordo/difference-sets at c089b4d), downloaded 15 Nov 2026 12:17 UTC",
+ "source_sha256": "5bdd2ad9543b821309b9c08e2523e0b92d3aee28ed3a2768bcf432dcc2d9a9dc",
+ "template": {
+  "title": "({v},{k},{l}) difference set in {group}",
+  "statement": "Find {k} distinct elements of the abelian group G = {group} (written {primary}) such that every nonzero element of G is a difference of two of them in exactly {l} ways: a ({v},{k},{l}) difference set in G.",
+  "submission": "Text file: {k} lines, one element per line as its coordinates in {primary} (integers 0 <= a_c < n_c separated by spaces, in that order).",
+  "args": [
+   "{orders}",
+   "{k}",
+   "{l}"
+  ]
+ },
+ "checker": {
+  "program": "ds_check.py",
+  "value": "result"
+ },
+ "score": "1 for a difference set with these parameters in this group; none is known, so the best known value is 0",
+ "best_text": "Its existence is Open in Gordon's repository: no such set is known and none has been ruled out, so the best known value is {best}; a valid set scores 1.",
+ "holder_unknown": "none known (existence open)",
+ "holder_sources": "the repository's entry for these parameters and group",
+ "open_rule": "every entry with status Open: one abelian group of one parameter set (v,k,lambda) (release 1.3 lists v up to 749,997)",
+ "left_out": "31551 entries known to exist (All or Yes), 951513 known not to exist (No), and 91 open entries whose check would take more than ten minutes in ds_check.py's C helper (check_seconds in tools/gordon_cells.py: k(k - 1) ordered pairs at the measured rate of the method the group allows)",
+ "counts": {
+  "All": 163,
+  "No": 951513,
+  "Yes": 31388,
+  "Open": 102719,
+  "Open, check above ten minutes": 91,
+  "distinct open parameter sets (v,k,lambda)": 41796
+ },
+ "cells": "cells.jsonl",
+ "count": 102628,
+ "quantavane_records": 0,
+ "single_problems_left_out": 0
+}

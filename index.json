@@ -1,12 +1,12 @@
 {
  "benchmark_version": "2.1",
- "problems": 232083,
+ "problems": 337321,
  "by_family": {
   "cage": 40,
   "cap-set": 2,
   "circle-packing": 12759,
   "circle-packing-sum": 3056,
-  "circulant-weighing-matrix": 12,
+  "circulant-weighing-matrix": 2622,
   "coil-in-the-box": 5,
   "constant": 7,
   "constant-weight-code": 1166,
@@ -14,6 +14,7 @@
   "covering-array": 4731,
   "covering-design": 61404,
   "degree-diameter": 57,
+  "difference-set": 102628,
   "ea-quantum-code": 3263,
   "erdos-problem": 2,
   "flexible-job-shop": 53,
@@ -53,7 +54,7 @@
   {
    "kind": "problems",
    "path": "problems",
-   "count": 395,
+   "count": 388,
    "about": "single problems, one JSON file each"
   },
   {
@@ -77,6 +78,17 @@
    "keeper": "E. Specht, Packomania (packomania.com)",
    "read": "2026-11-14",
    "checker": "pack_check.py"
+  },
+  {
+   "kind": "family",
+   "family": "circulant-weighing-matrix",
+   "path": "families/circulant-weighing-matrix/cells.jsonl",
+   "definition": "families/circulant-weighing-matrix/family.json",
+   "count": 2617,
+   "sha256": "2a7e6161e7c2611672ca4fea4cfd69f1393a99b8e9943d91c4ac0b09e5b3c55e",
+   "keeper": "D. Gordon, La Jolla Circulant Weighing Matrices Repository (dmgordon.org/circulant-weighing-matrices; data on Zenodo, CC BY 4.0)",
+   "read": "2026-11-15",
+   "checker": "cwm_check.py"
   },
   {
    "kind": "family",
@@ -121,6 +133,17 @@
    "keeper": "F. Comellas, The (Degree, Diameter) Problem for Graphs (web.mat.upc.edu/francesc.comellas/delta-d)",
    "read": "2026-11-15",
    "checker": "degdiam_check.py"
+  },
+  {
+   "kind": "family",
+   "family": "difference-set",
+   "path": "families/difference-set/cells.jsonl",
+   "definition": "families/difference-set/family.json",
+   "count": 102628,
+   "sha256": "bbd40a79889e0ed7d512a50f25a12a0fa6fef9bc5f0debe2fa0fdc97470c333c",
+   "keeper": "D. Gordon, La Jolla Difference Set Repository (dmgordon.org/difference-sets; data on Zenodo, CC BY 4.0)",
+   "read": "2026-11-15",
+   "checker": "ds_check.py"
   },
   {
    "kind": "family",

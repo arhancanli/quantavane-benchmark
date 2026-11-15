@@ -1,0 +1,43 @@
+{
+ "family": "circulant-weighing-matrix",
+ "title": "Proper circulant weighing matrices whose existence is unknown",
+ "added": "2.2",
+ "objective": "maximize",
+ "id_prefixes": [
+  "cwm-"
+ ],
+ "keeper": "D. Gordon, La Jolla Circulant Weighing Matrices Repository (dmgordon.org/circulant-weighing-matrices; data on Zenodo, CC BY 4.0)",
+ "page": "https://dmgordon.org/circulant-weighing-matrices/",
+ "read": "2026-11-15",
+ "revision": "cwm.json of the La Jolla Circulant Weighing Matrices Repository, release v2.0 (Zenodo record 24170503; dmgordo/circulant-weighing-matrices at a0b0e52), downloaded 15 Nov 2026 12:16 UTC",
+ "source_sha256": "d86aab619852a6e77a1aa3304dcb7e18f6f192b25caa80cdb470dc081815602d",
+ "template": {
+  "title": "Proper circulant weighing matrix CW({n}, {s}^2)",
+  "statement": "Find a proper circulant weighing matrix CW({n},{k}): a circulant {n} x {n} matrix W with entries -1, 0, 1 and W W^T = {k} I whose first row's support is not inside a coset of a proper subgroup of Z_{n} (an improper one comes from a smaller order).",
+  "submission": "Text file: the first row, {n} entries -1, 0, 1 separated by spaces (or the characters -, 0, +).",
+  "args": [
+   "{n}",
+   "{k}"
+  ]
+ },
+ "checker": {
+  "program": "cwm_check.py",
+  "value": "result"
+ },
+ "score": "1 for a proper CW of these parameters; none is known, so the best known value is 0",
+ "best_text": "Its existence is Open in Gordon's repository: no proper matrix is known and none has been ruled out, so the best known value is {best}; a valid first row scores 1.",
+ "holder_unknown": "none known (existence open)",
+ "holder_sources": "the repository's entry CW(n,s)",
+ "open_rule": "every entry CW(n,s) with status Open (n < 1,000, s < 20; the repository's statuses are about proper matrices)",
+ "left_out": "792 entries known to exist (All or Yes) and 12124 known not to exist (No)",
+ "counts": {
+  "All": 521,
+  "No": 12124,
+  "Yes": 271,
+  "Open": 2622
+ },
+ "cells": "cells.jsonl",
+ "count": 2617,
+ "quantavane_records": 0,
+ "single_problems_left_out": 5
+}

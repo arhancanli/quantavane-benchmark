@@ -18,6 +18,25 @@ value can change within a version when its source table changes; the file then s
   some of them are public on Zenodo. Their values stay as read on 8 Nov until a rule for cells the table does not list is
   chosen.
 
+## Next (in review): the families `difference-set` and `circulant-weighing-matrix` from Gordon's repositories (15 Nov 2026)
+
+- `checkers/ds_check.py` (new): difference sets in abelian groups, every ordered pair's difference counted exactly; in C
+  above 10^6 pairs (`checkers/ds_scan.c`: the group rewritten as a product of the fewest cyclic groups; XOR for Z_2^r,
+  one subtraction modulo v for cyclic groups, a padded rank with no borrows otherwise, and digit by digit on request).
+  `tests/test_ds.py` (run by `test.sh`): ten known sets pass by all three routes and fail with an element moved or
+  repeated; the routes agree on 40 random subsets; a Paley set in Z_4999 is counted in C by default.
+- `families/difference-set` (102,628 cells; `tools/gordon_cells.py`): every Open entry of the La Jolla Difference Set
+  Repository, release 1.3 (Zenodo record 19740740, downloaded 15 Nov 2026), one cell per parameter set and abelian
+  group; 91 open entries whose check would take more than ten minutes are left out.
+- `families/circulant-weighing-matrix` (2,617 cells; same tool): every Open entry CW(n,s) of the La Jolla Circulant
+  Weighing Matrices Repository, release v2.0 (Zenodo record 24170503, downloaded 15 Nov 2026), checked by `cwm_check.py`.
+- Removed: seven single problems of v1.1 that release v2.0 settles. cwm-105-36, cwm-120-49 and cwm-140-64 (no such
+  matrix: Tan, arXiv:2608.18468, 2026), cwm-155-25, cwm-165-25 and cwm-186-25 (none: Leung and Ma), cwm-96-36 (exists:
+  Schmidt and Smith, 2013). They were Open in cwm.json at commit 5b3d729 (24 Apr 2026), read on 8 Nov. `test.sh` now
+  refuses the zero row for cwm-112-36 in place of cwm-155-25.
+- `tests/sample_cells.py` samples both families (random k-subsets, random rows of weight s^2 and the zero row refused).
+- index.json: 337,321 problems (388 single problems).
+
 ## Next (in review): the family `strongly-regular-graph` from Brouwer's table (15 Nov 2026)
 
 - `families/strongly-regular-graph` (1,356 cells; `tools/brouwer_srg_cells.py`): every parameter set with v <= 1,300

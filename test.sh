@@ -225,8 +225,8 @@ for _ in range(4):
     H = [r + r for r in H] + [r + [-x for x in r] for r in H]
 print("\n".join("".join("+" if x > 0 else "-" for x in r) for r in H))' > certs/unit_sylvester16.txt
 t hadamard-668 certs/unit_sylvester16.txt "NOT CERTIFIED,"                      # a Hadamard matrix of the wrong order
-python3 -I -c 'print(" ".join(["0"] * 155))' > certs/control_cwm_zero.txt
-t cwm-155-25 certs/control_cwm_zero.txt "NOT CERTIFIED,"                        # weight 0, not 25
+python3 -I -c 'print(" ".join(["0"] * 112))' > certs/control_cwm_zero.txt
+t cwm-112-36 certs/control_cwm_zero.txt "NOT CERTIFIED,"                        # weight 0, not 36
 printf '00000\n00001\n' > certs/control_strongpow_adjacent.txt
 t shannon-c7-power5 certs/control_strongpow_adjacent.txt "NOT CERTIFIED,"
 # v2.1, Prestige 100: record certificates fetched by fetch.sh, replayed by our checkers (each equals its record)
@@ -325,6 +325,7 @@ python3 -I tests/test_oa.py || status=1
 python3 -I tests/test_cluster.py || status=1
 python3 -I tests/test_jsp.py || status=1
 python3 -I tests/test_golomb.py || status=1
+python3 -I tests/test_ds.py || status=1
 python3 -I tests/sample_cells.py || status=1
 if python3 -I obb.py index > /dev/null; then echo "ok    index.json matches the files"; else echo "FAIL  index.json"; status=1; fi
 exit $status

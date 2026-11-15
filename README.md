@@ -87,6 +87,8 @@ the 100 are new single problems of v2.1, with eight new checkers; see the collec
 | `flexible-job-shop` (in review for v2.2) | 53 | ScheduleOpt's FJSPLib archive of best bounds: open Brandimarte, Hurink, Dauzère-Pérès and Behnke instances | `jsp_check.py` |
 | `golomb-ruler` (in review for v2.2) | 39,970 | T. Rokicki and G. Dogon: possibly optimal Golomb rulers, 31 to 40,000 marks (a USD 250 reward for beating any length from 36 to 40,000 marks) | `golomb_check.py` |
 | `strongly-regular-graph` (in review for v2.2) | 1,356 | A. E. Brouwer: parameters of strongly regular graphs on up to 1,300 vertices whose existence is unknown | `srg_check.py` |
+| `difference-set` (in review for v2.2) | 102,628 | D. Gordon, La Jolla Difference Set Repository: (v,k,lambda) difference sets in abelian groups whose existence is open, one cell per group | `ds_check.py` |
+| `circulant-weighing-matrix` (in review for v2.2) | 2,617 | D. Gordon, La Jolla Circulant Weighing Matrices Repository: proper CW(n,s^2), n < 1,000, s < 20, whose existence is open | `cwm_check.py` |
 
 Every cell is open in the sense written in its family file: its best known value is not marked optimal by the keeper
 and is strictly worse than the bound on the other side (the keeper's own bound, or a standard bound we compute and
@@ -115,7 +117,8 @@ The 374 single problems (v1.1, 8 Nov 2026), each with its own file in `problems/
   superpermutations, 2 Golomb rulers and 2 no-three-in-line grids, with the values kept by Leaps in Bounds
   (leapsinbounds.org, D. Munro).
 - 4 Hadamard orders with no known matrix (668, the smallest, then 716, 892, 1132), 12 circulant weighing matrices
-  open in D. Gordon's La Jolla repository, and independent sets in the fifth strong power of C_7 (Shannon capacity).
+  open in D. Gordon's La Jolla repository (on 8 Nov; by its release v2.0, read 15 Nov, seven are settled and were
+  removed: see CHANGELOG.md), and independent sets in the fifth strong power of C_7 (Shannon capacity).
 - 11 spherical codes, one in each of the dimensions 3, 4, 5, 6, 8, 10, 12, 16, 20, 24 and 32 (Henry Cohn's table),
   scored by the largest cosine in 50-digit decimal arithmetic.
 - 10 covering designs from the Covering Repository: five C(v,k,t) and five C(v,k,t,m).
@@ -347,7 +350,8 @@ What each family takes from its table, and what it leaves out:
   with Brouwer's unrestricted codes, 186,009; with MinT's arrays of any kind, 186,258; with the Lennard-Jones
   clusters, 186,395; with the rest of Comellas's degree-diameter table, 186,432; with the job shops, 186,545; with
   the Golomb rulers, 226,515; with the covering designs of m > t searched in C, 230,727; with Brouwer's open
-  strongly regular graphs, 232,083.
+  strongly regular graphs, 232,083; with Gordon's open difference sets and circulant weighing matrices (and seven
+  settled circulant weighing matrix problems removed), 337,321.
 - `strongly-regular-graph` (in review for v2.2; read 15 Nov 2026): every parameter set srg(v,k,lambda,mu), v <= 1,300,
   that A. E. Brouwer's table (aeb.win.tue.nl/graphs/srg, 26 pages) marks '?': no graph is known and none has been ruled
   out. A parameter set and its complement are one row pair of the table and one cell here (a graph settles both); 65
@@ -356,6 +360,29 @@ What each family takes from its table, and what it leaves out:
   A valid graph scores 1 (the best known value is 0), checked by `srg_check.py`; left out: 689 sets that exist ('!' or
   '+') and 384 ruled out ('-'). `tests/sample_cells.py`: Paley and triangular graphs pass the checker, and k-regular
   circulants are refused for sampled cells.
+- `difference-set` (in review for v2.2; read 15 Nov 2026): every entry with status Open in D. Gordon's La Jolla
+  Difference Set Repository (release 1.3 on Zenodo, record 19740740, CC BY 4.0): a parameter set (v,k,lambda) and one
+  abelian group of order v in which no difference set is known and none has been ruled out. The repository lists every
+  abelian group for parameter sets passing the counting, Schutzenberger and Bruck-Ryser-Chowla tests (release 1.3 has
+  v up to 749,997). 102,719 open entries over 41,796 parameter sets; 91 are left out because their check would take
+  more than ten minutes, so 102,628 cells. `ds_check.py` reads the k elements in the group's primary decomposition
+  (cyclic groups of prime-power order sorted by prime, the form of most of Gordon's own sets) and counts the
+  differences of all k(k-1) ordered pairs exactly: in Python up to 10^6 pairs, above that in the C helper `ds_scan.c`,
+  which rewrites the group by the Chinese remainder theorem as a product of the fewest cyclic groups and counts each
+  pair with one XOR or one subtraction (a padded rank with no borrows between coordinates), measured at 1.2 ns per pair
+  for cyclic groups (1.4 x 10^11 pairs in 163 s) and 1 to 4 ns per pair otherwise (`check_seconds` in
+  `tools/gordon_cells.py`). `tests/test_ds.py`: ten known difference sets (Paley, Singer, and sets from Gordon's
+  repository in Z_4 x Z_4, Z_2 x Z_8, Z_40, Z_3 x Z_15, Z_6 x Z_6, Z_8 x Z_8, Z_2^4) pass in Python, in C and in C digit
+  by digit, and are refused with an element moved or repeated; the three routes agree on 40 random subsets; a Paley set
+  in Z_4999 goes to C by itself. 280 of the 289 sets in the repository pass as written (the other nine use other
+  coordinates). Sampled cells refuse random k-subsets.
+- `circulant-weighing-matrix` (in review for v2.2; read 15 Nov 2026): every entry CW(n,s) with status Open in D.
+  Gordon's La Jolla Circulant Weighing Matrices Repository (release v2.0 on Zenodo, record 24170503, CC BY 4.0;
+  n < 1,000, s < 20; the statuses are about proper matrices): 2,622 open entries, 2,617 cells beside the five single
+  problems still open (cwm-112-36, cwm-112-100, cwm-132-81, cwm-140-121, cwm-154-144). Checked by `cwm_check.py`. The
+  release settles seven of the twelve single problems of v1.1, which are removed: CW(105,6^2), CW(120,7^2) and
+  CW(140,8^2) do not exist (Tan, arXiv:2608.18468, 2026), CW(155,5^2), CW(165,5^2) and CW(186,5^2) do not exist (Leung
+  and Ma), and CW(96,6^2) exists (Schmidt and Smith, 2013).
 - `project-scheduling`: every instance of the sets with open instances whose best known makespan is above its lower
   bound and which the site does not mark optimal; the open counts match the site's own table of November 2026. The
   highRD, lowRU and 1k variants are not read: their dataset files date from April 2021, many of their upper bounds are
@@ -372,6 +399,8 @@ Each checker in `checkers/` is one file that can be used without the benchmark: 
 with `python3 -I`, except the Ramsey checker, which is C (`cc -O3 -o ramsey_check checkers/ramsey_check.c`). Each
 prints its exact result and exits 0 only for a valid certificate.
 
+- `ds_check.py GROUP K L FILE`: a (v,K,L) difference set in the abelian group Z_n1 x ... x Z_nr (GROUP = n1,...,nr),
+  every ordered pair's difference counted exactly (in C above 10^6 pairs).
 - `jsp_check.py [--flexible] INSTANCE FILE`: job shop and flexible job shop schedules, the makespan in integers.
 - `cluster_check.py lj N FILE`: the Lennard-Jones energy of N atoms, a proven upper bound within 10^-12.
 - `oa_check.py B T M K FILE`: ordered orthogonal arrays and nets of any kind, given run by run (every choice of

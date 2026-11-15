@@ -411,6 +411,42 @@ def test_strongly_regular_graph(n, rng):
         expect(f"red   {c['id']} (a {k}-regular circulant on {v} vertices)", obb(c["id"], bad), "NOT CERTIFIED,")
 
 
+def test_difference_set(n, rng):
+    """No set is known for any cell (tests/test_ds.py passes known sets through the checker); for each drawn cell a
+    random set of k elements of the group, written in the cell's coordinates, must be refused, and so must the same
+    set with one element repeated."""
+    small = [c for c in family_cells("difference-set") if c["params"]["v"] <= 5000]
+    for c in rng.sample(small, min(n, len(small))):
+        p = c["params"]
+        orders = [int(x) for x in p["orders"].split(",")]
+        elems = set()
+        while len(elems) < p["k"]:
+            elems.add(tuple(rng.randrange(m) for m in orders))
+        lines = [" ".join(map(str, e)) for e in sorted(elems)]
+        bad = write(f"{c['id']}_red.txt", lines)
+        expect(f"red   {c['id']} (a random {p['k']}-subset of {p['group']})", obb(c["id"], bad), "NOT CERTIFIED,")
+        bad = write(f"{c['id']}_red2.txt", lines[:-1] + lines[:1])
+        expect(f"red   {c['id']} (an element repeated)", obb(c["id"], bad), "NOT CERTIFIED,")
+
+
+def test_circulant_weighing_matrix(n, rng):
+    """No proper matrix is known for any cell; test.sh passes the circulant Hadamard matrix of order 4 through the
+    checker and refuses an improper CW(8,4). For each drawn cell a random first row with s(s+1)/2 entries +1 and
+    s(s-1)/2 entries -1 must be refused, and so must the all-zero row."""
+    cells = family_cells("circulant-weighing-matrix")
+    for c in rng.sample(cells, min(n, len(cells))):
+        p = c["params"]
+        s, size = p["s"], p["n"]
+        pos = rng.sample(range(size), s * s)
+        row = [0] * size
+        for i, x in enumerate(pos):
+            row[x] = 1 if i < s * (s + 1) // 2 else -1
+        bad = write(f"{c['id']}_red.txt", [" ".join(map(str, row))])
+        expect(f"red   {c['id']} (a random row of weight {s * s})", obb(c["id"], bad), "NOT CERTIFIED,")
+        bad = write(f"{c['id']}_red0.txt", [" ".join(["0"] * size)])
+        expect(f"red   {c['id']} (the zero row)", obb(c["id"], bad), "NOT CERTIFIED,")
+
+
 def test_constant_weight_code(n, rng):
     import math
     small = [c for c in family_cells("constant-weight-code")
@@ -712,6 +748,8 @@ def main():
                        ("job-shop", test_job_shop),
                        ("golomb-ruler", test_golomb_ruler),
                        ("strongly-regular-graph", test_strongly_regular_graph),
+                       ("difference-set", test_difference_set),
+                       ("circulant-weighing-matrix", test_circulant_weighing_matrix),
                        ("flexible-job-shop", test_flexible_job_shop),
                        ("unequal-circle-packing", test_unequal_circle_packing)):
         if os.path.exists(os.path.join(ROOT, "families", name, "cells.jsonl")):
