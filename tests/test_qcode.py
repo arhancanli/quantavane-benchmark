@@ -257,11 +257,78 @@ def red_controls(five):
     expect("too large: exit status 2", run(2, 5, 1, five, ["--max-work", "4"])[0], 2)
 
 
+def random_ea(rng):
+    """Random sets of generators (commuting or not) over GF(2), GF(3), GF(4), GF(5): the checker in its
+    entanglement-assisted mode against the definition (Luo, Ezerman, Grassl, Ling, Proposition 1) worked out by brute
+    force over all of GF(p)^(2nm): S' by testing the form, I = S n S' by rank."""
+    done = 0
+    cases = [(2, 3), (2, 4), (2, 5), (3, 3), (3, 4), (4, 2), (4, 3), (5, 2)]
+    for trial in range(120):
+        q, n = cases[trial % len(cases)]
+        F = qc.Field(q)
+        p, m = F.p, F.e
+        L = 2 * n * m
+        r = rng.randint(1, L)
+        vecs = []
+        while len(vecs) < r:
+            v = [rng.randrange(p) for _ in range(L)]
+            if any(v) and _rank(vecs + [v], p) == len(vecs) + 1:
+                vecs.append(v)
+        G, to_field = gram(F, n)
+        rows = []
+        for v in vecs:
+            x, z = to_field(v)
+            rows.append(x + z)
+        basis = qc.prime_basis(F, rows, n)
+        iso, rank = qc.radical(F, basis, n)
+        if r % m or rank % (2 * m):
+            continue
+        c = rank // (2 * m)
+        k = n - r // m + c
+        if c == 0 or not 0 <= k <= n:
+            continue
+        # brute force
+        best = None
+        for idx in range(1, p ** L):
+            v, t = [], idx
+            for _ in range(L):
+                v.append(t % p)
+                t //= p
+            if any(sum(v[i] * G[i][j] * b[j] for i in range(L) for j in range(L) if G[i][j] and b[j]) % p for b in vecs):
+                continue                                         # not in S'
+            in_S = _rank(vecs + [v], p) == r
+            if k > 0 and in_S:
+                continue                                         # in I = S n S'
+            w = sum(1 for i in range(n) if any(v[i * 2 * m:(i + 1) * 2 * m]))
+            best = w if best is None else min(best, w)
+        want = best if best is not None else n + 1
+        got = run(q, n, k, rows, ["--ebits", str(c), "--python"])
+        expect(f"EA random [[{n},{k};{c}]] over GF({q}) against brute force", got, (0, f"RESULT {want}"))
+        done += 1
+    expect("EA random cases tried", done >= 30, True)
+    # the trivial code: all of GF(2)^(2n) as S, c = n, k = 0, distance n + 1
+    for n in (1, 3, 5):
+        rows = [[1 if j == i else 0 for j in range(2 * n)] for i in range(2 * n)]
+        expect(f"EA trivial [[{n},0,{n + 1};{n}]]", run(2, n, 0, rows, ["--ebits", str(n)]), (0, f"RESULT {n + 1}"))
+        expect(f"red: EA trivial claimed with c = {n - 1}", run(2, n, 1, rows, ["--ebits", str(max(n - 1, 1))])[0], 1)
+    # a stabilizer code is not accepted as an EA code with c >= 1, and a non-commuting set not as a stabilizer code
+    five = cyclic([1, 0, 0, 1, 0], [0, 1, 1, 0, 0], 5, 4)
+    expect("red: the five-qubit code claimed with one ebit", run(2, 5, 2, five, ["--ebits", "1"])[0], 1)
+    # teleportation (Grassl's tables, "length reduction using teleportation"): the five-qubit code with its last qubit
+    # held by the receiver gives [[4,1,3;1]], the table's value
+    tele = [r[:4] + r[5:9] for r in five]
+    expect("EA [[4,1,3;1]] from the five-qubit code by teleportation", run(2, 4, 1, tele, ["--ebits", "1"]), (0, "RESULT 3"))
+    nc = [[1, 0, 0, 0], [0, 0, 1, 0]]                           # X_1 and Z_1 on two qubits: one pair
+    expect("EA [[2,1;1]] from X_1, Z_1 (distance 1)", run(2, 2, 1, nc, ["--ebits", "1"]), (0, "RESULT 1"))
+    expect("red: X_1, Z_1 as a stabilizer code", run(2, 2, 0, nc)[0], 1)
+
+
 if __name__ == "__main__":
     rng = random.Random(20261115)
     five = known()
     random_small(rng)
     native_vs_python(rng)
     red_controls(five)
+    random_ea(rng)
     print(f"{'ALL OK' if not failures else str(len(failures)) + ' FAILED'}")
     sys.exit(1 if failures else 0)

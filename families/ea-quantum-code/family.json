@@ -1,0 +1,46 @@
+{
+ "family": "ea-quantum-code",
+ "title": "Entanglement-assisted quantum codes [[n,k;c]] with the largest minimum distance",
+ "added": "2.2",
+ "objective": "maximize",
+ "id_prefixes": [
+  "eaqcode-"
+ ],
+ "keeper": "M. Grassl, bounds on the minimum distance of entanglement-assisted quantum codes (eaqecc.codetables.de)",
+ "page": "https://eaqecc.codetables.de/",
+ "read": "2026-11-15",
+ "revision": "qubit.php and qutrit.php read 15 Nov 2026 10:37 and 10:39 UTC (both pages say last change 10.07.2025; SHA-256 in page_sha256)",
+ "template": {
+  "title": "Entanglement-assisted quantum code [[{n},{k};{c}]] over GF({q})",
+  "statement": "Find an entanglement-assisted quantum code of length {n} with local dimension {q} that encodes {k} qudits with the help of {c} maximally entangled pairs and whose minimum distance is as large as possible. It is given by an additive group S of {q}^({n}-{k}+{c}) elements of GF({q})^(2 x {n}) on which the trace-symplectic form has rank 2 x {c}; the distance is the least symplectic weight of an element of the trace-symplectic dual S' of S that is not in S (for k = 0: of a nonzero element of S', or n + 1 when S' = 0), as in Luo, Ezerman, Grassl and Ling, arXiv:2207.05647.",
+  "submission": "Text file: the generators of S, one per line, 2 x {n} elements of GF({q}) (the X part, then the Z part; a '|' between them is allowed) written as integers below {q}; see checkers/qcode_check.py.",
+  "args": [
+   "{q}",
+   "{n}",
+   "{k}",
+   "--ebits",
+   "{c}"
+  ]
+ },
+ "checker": {
+  "program": "qcode_check.py",
+  "value": "result"
+ },
+ "score": "the minimum distance (larger is better)",
+ "best_text": "The best known lower bound in the table is {best} ({holder}); a code with a larger minimum distance improves it.",
+ "bound_kind": "upper bound",
+ "bound_source": "the upper bound in the same table",
+ "holder_unknown": "the table names the construction of each entry",
+ "holder_sources": "the construction named in the entry's cell of the table (a propagation rule from another entry, a known family, or a source)",
+ "open_rule": "every entry with c >= 1 whose lower bound is below its upper bound",
+ "work_rule": "kept when the check lists at most 2^34 elements of S (qubits, n - k + c <= 34) or 2^31 lines through the origin (qutrits, n - k + c <= 20)",
+ "left_out": "q = 2: 2144 c = 0 (stabilizer codes, in quantum-code), 254 solved, 2966 too costly to check; q = 3: 702 c = 0 (stabilizer codes, in quantum-code), 294 solved, 2017 too costly to check",
+ "page_sha256": {
+  "2": "c84dea1ab3b3657e268462019569f0bf6b3cb15872ae0675d47ae9ae62536e6a",
+  "3": "37bbf731030c113e2e2e75fe7b5ed0b1d11829cfc4a5f1ad948a38b1ac7c936c"
+ },
+ "cells": "cells.jsonl",
+ "count": 3263,
+ "quantavane_records": 0,
+ "single_problems_left_out": 0
+}

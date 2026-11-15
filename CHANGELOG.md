@@ -18,6 +18,17 @@ value can change within a version when its source table changes; the file then s
   some of them are public on Zenodo. Their values stay as read on 8 Nov until a rule for cells the table does not list is
   chosen.
 
+## Next (in review): the family `ea-quantum-code` from eaqecc.codetables.de (15 Nov 2026)
+
+- `checkers/qcode_check.py --ebits C`: entanglement-assisted codes [[N,K;C]] over GF(Q) (generators need not commute;
+  span Q^(N-K+C), form of rank 2C; distance as in Luo, Ezerman, Grassl and Ling, arXiv:2207.05647, Proposition 1).
+  `tests/test_qcode.py`: 75 random generator sets against brute force, trivial codes, [[4,1,3;1]] by teleportation,
+  red controls (a stabilizer code claimed with an ebit, a non-commuting set claimed as a stabilizer code).
+- `families/ea-quantum-code` (3,263 cells: 2,388 qubit, 875 qutrit; `tools/eaqcode_cells.py`): Grassl's tables read on
+  15 Nov 2026 (last changed 10 Jul 2025), entries with c >= 1, open, within 2^34 (qubits) or 2^31 (qutrits) steps.
+  `tests/sample_cells.py` samples the family.
+- index.json: 185,657 problems.
+
 ## Next (in review): the depth-vector walk in C for odd bases (15 Nov 2026)
 
 - `checkers/ooa_walk_p.c`: method D of `ooa_check.py` for GF(3), GF(5), GF(7), GF(9), GF(25), GF(27), GF(49), GF(81),

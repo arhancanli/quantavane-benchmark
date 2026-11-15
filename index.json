@@ -1,6 +1,6 @@
 {
  "benchmark_version": "2.1",
- "problems": 182394,
+ "problems": 185657,
  "by_family": {
   "cage": 40,
   "cap-set": 2,
@@ -14,6 +14,7 @@
   "covering-array": 4731,
   "covering-design": 57192,
   "degree-diameter": 20,
+  "ea-quantum-code": 3263,
   "erdos-problem": 2,
   "golomb-ruler": 2,
   "growing-circle-packing": 396,
@@ -104,6 +105,17 @@
    "keeper": "Covering Repository (coveringrepository.com), successor of D. Gordon's La Jolla Covering Repository",
    "read": "2026-11-14",
    "checker": "covering_check.py"
+  },
+  {
+   "kind": "family",
+   "family": "ea-quantum-code",
+   "path": "families/ea-quantum-code/cells.jsonl",
+   "definition": "families/ea-quantum-code/family.json",
+   "count": 3263,
+   "sha256": "5c7ad40120f7f708c6a1c21133afb78a09bfe9b258183217d06fc23482b97567",
+   "keeper": "M. Grassl, bounds on the minimum distance of entanglement-assisted quantum codes (eaqecc.codetables.de)",
+   "read": "2026-11-15",
+   "checker": "qcode_check.py"
   },
   {
    "kind": "family",

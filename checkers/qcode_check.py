@@ -1,7 +1,7 @@
 """Exact minimum distance of an additive (stabilizer) quantum code [[N,K]] over GF(Q), Q in {2, 3, 4, 5, 7, 8}
 (standard library only; a C compiler makes large codes faster).
 
-  python3 -I qcode_check.py Q N K FILE [--max-work W] [--python]
+  python3 -I qcode_check.py Q N K FILE [--ebits C] [--max-work W] [--python]
 
 FILE is a stabilizer matrix: one generator per line, 2N elements of GF(Q), the N "X" entries then the N "Z" entries
 (a '|' between the halves is allowed), as integers 0..Q-1 separated by spaces or commas, or as digits with no
@@ -25,6 +25,13 @@ checker
   the least w >= 1 with A_w > 0 (then S' = S).
 The work is about Q^(N-K) steps for Q = 2, 4, 8 and Q^(N-K) / (Q - 1) for Q = 3, 5, 7; above --max-work (default
 2^34) the program stops with exit status 2.
+
+With --ebits C (C >= 1) the code is entanglement-assisted, [[N,K,D;C]] over GF(Q) (M. Grassl's tables at
+eaqecc.codetables.de; the definitions of Luo, Ezerman, Grassl and Ling, arXiv:2207.05647, Proposition 1, for additive
+codes): the lines need not commute; they must span Q^(N-K+C) elements, and the trace-symplectic form on them must have
+rank 2 m C over GF(p) (C pairs; its radical I = S n S' is the isotropic part). The distance is the least weight of an
+element of S' outside I when K >= 1, and the least weight of a nonzero element of S' when K = 0 (then S' = I; N + 1 when
+S' = {0}). Both S and I are listed; the work is that of listing S.
 
 Prints "distance D" and, as its last line, "RESULT D", and exits 0 for a valid code; exits 1 otherwise."""
 import math
@@ -197,11 +204,74 @@ def krawtchouk(j, i, n, a):
     return sum((-1) ** s * (a - 1) ** (j - s) * math.comb(i, s) * math.comb(n - i, j - s) for s in range(0, j + 1))
 
 
+def symplectic_form(F, n):
+    """f(u, v) over GF(p) for vectors in the prime-field expansion of prime_basis (coordinate i: the m digits of X_i,
+    then the m digits of Z_i): the trace of sum_i (u_X,i v_Z,i - v_X,i u_Z,i)."""
+    p, m = F.p, F.e
+
+    def to_field(v):
+        x = [sum(v[i * 2 * m + j] * p ** j for j in range(m)) for i in range(n)]
+        z = [sum(v[i * 2 * m + m + j] * p ** j for j in range(m)) for i in range(n)]
+        return x, z
+
+    def form(u, v):
+        (a, b), (a2, b2) = to_field(u), to_field(v)
+        t = 0
+        for i in range(n):
+            t = F.add[t][F.mul[a[i]][b2[i]]]
+            t = F.add[t][F.neg[F.mul[a2[i]][b[i]]]]
+        return F.trace[t]
+    return form
+
+
+def radical(F, basis, n):
+    """A basis of I = S intersected with its trace-symplectic dual (the vectors of S orthogonal to all of S), and the
+    rank over GF(p) of the form on S."""
+    p = F.p
+    form = symplectic_form(F, n)
+    r = len(basis)
+    G = [[form(basis[a], basis[b]) for b in range(r)] for a in range(r)]
+    # kernel of G (as a map on coefficient vectors), by Gaussian elimination over GF(p)
+    rows = [row[:] for row in G]
+    piv_cols, R = [], []
+    for row in rows:
+        for pr, pc in zip(R, piv_cols):
+            c = row[pc]
+            if c:
+                row = [(x - c * y) % p for x, y in zip(row, pr)]
+        pc = next((i for i, x in enumerate(row) if x), None)
+        if pc is None:
+            continue
+        inv = pow(row[pc], p - 2, p)
+        row = [x * inv % p for x in row]
+        for i, pr in enumerate(R):
+            if pr[pc]:
+                c = pr[pc]
+                R[i] = [(x - c * y) % p for x, y in zip(pr, row)]
+        R.append(row)
+        piv_cols.append(pc)
+    rank = len(R)
+    kernel = []
+    for f in (c for c in range(r) if c not in piv_cols):
+        coef = [0] * r
+        coef[f] = 1
+        for pr, pc in zip(R, piv_cols):
+            coef[pc] = (-pr[f]) % p
+        vec = [0] * len(basis[0])
+        for a, c in enumerate(coef):
+            if c:
+                vec = [(x + c * y) % p for x, y in zip(vec, basis[a])]
+        kernel.append(vec)
+    return kernel, rank
+
+
 def main(argv=None):
     argv = list(sys.argv[1:] if argv is None else argv)
-    max_work, force_python = 2 ** 34, False
+    max_work, force_python, ebits = 2 ** 34, False, 0
     if "--max-work" in argv:
         i = argv.index("--max-work"); max_work = int(float(argv[i + 1])); del argv[i:i + 2]
+    if "--ebits" in argv:
+        i = argv.index("--ebits"); ebits = int(argv[i + 1]); del argv[i:i + 2]
     if "--python" in argv:
         argv.remove("--python"); force_python = True
     if len(argv) != 4:
@@ -209,77 +279,91 @@ def main(argv=None):
         return 1
     try:
         q, n, k = int(argv[0]), int(argv[1]), int(argv[2])
-        if q not in FIELDS or n < 1 or not 0 <= k <= n:
-            raise ValueError("need Q in 2, 3, 4, 5, 7, 8, N >= 1 and 0 <= K <= N")
+        if q not in FIELDS or n < 1 or not 0 <= k <= n or not 0 <= ebits <= n or n - k + ebits > 2 * n:
+            raise ValueError("need Q in 2, 3, 4, 5, 7, 8, N >= 1, 0 <= K <= N and 0 <= C <= N")
         rows = read_rows(argv[3], q, n)
     except (ValueError, OSError) as err:
         print(f"malformed: {err}")
         return 1
     F = Field(q)
     p, m = F.p, F.e
-    # commutativity: every two generators orthogonal in the trace-symplectic form
-    for a in range(len(rows)):
-        for b in range(a + 1, len(rows)):
-            s = 0
-            ra, rb = rows[a], rows[b]
-            for i in range(n):
-                s = F.add[s][F.mul[ra[i]][rb[n + i]]]
-                s = F.add[s][F.neg[F.mul[rb[i]][ra[n + i]]]]
-            if F.trace[s]:
-                print(f"not a stabilizer: generators {a + 1} and {b + 1} do not commute (trace-symplectic product {F.trace[s]})")
-                return 1
+    c = ebits
+    if c == 0:
+        # commutativity: every two generators orthogonal in the trace-symplectic form
+        for a in range(len(rows)):
+            for b in range(a + 1, len(rows)):
+                t = 0
+                ra, rb = rows[a], rows[b]
+                for i in range(n):
+                    t = F.add[t][F.mul[ra[i]][rb[n + i]]]
+                    t = F.add[t][F.neg[F.mul[rb[i]][ra[n + i]]]]
+                if F.trace[t]:
+                    print(f"not a stabilizer: generators {a + 1} and {b + 1} do not commute (trace-symplectic product {F.trace[t]})")
+                    return 1
     basis = prime_basis(F, rows, n)
     r = len(basis)
-    if r != m * (n - k):
-        print(f"wrong size: the generators span a group of {p}^{r} elements; [[{n},{k}]] over GF({q}) needs "
-              f"{p}^{m * (n - k)} (rank {m * (n - k)} over GF({p}))")
+    if r != m * (n - k + c):
+        print(f"wrong size: the generators span a group of {p}^{r} elements; [[{n},{k}" + (f";{c}" if c else "") +
+              f"]] over GF({q}) needs {p}^{m * (n - k + c)} (rank {m * (n - k + c)} over GF({p}))")
         return 1
-    work = (p ** r) if p == 2 else (p ** r - 1) // (p - 1)
-    print(f"stabilizer code [[{n},{k}]] over GF({q}): {r} independent generators over GF({p}), all commuting; "
-          f"{work} elements of S to list")
+    D = 2 * m
+    if c:
+        iso, rank = radical(F, basis, n)
+        if rank != 2 * m * c:
+            print(f"wrong number of ebits: the trace-symplectic form has rank {rank} on S over GF({p}); {c} ebits need "
+                  f"{2 * m * c}")
+            return 1
+        work = (p ** r) if p == 2 else (p ** r - 1) // (p - 1)
+        print(f"entanglement-assisted code [[{n},{k};{c}]] over GF({q}): {r} independent generators over GF({p}), the "
+              f"form of rank {rank} on them (isotropic part of rank {len(iso)}); {work} elements of S to list")
+    else:
+        iso = basis
+        work = (p ** r) if p == 2 else (p ** r - 1) // (p - 1)
+        print(f"stabilizer code [[{n},{k}]] over GF({q}): {r} independent generators over GF({p}), all commuting; "
+              f"{work} elements of S to list")
     if work > max_work:
         print(f"too large to check here (more than {max_work:.3g} steps)")
         return 2
-    D = 2 * m
-    if force_python or work <= 2 ** 16:
-        A = weights_python(p, n, D, basis)
-    else:
-        A = weights_native(p, n, D, basis)
+
+    def weights(vecs):
+        w = (p ** len(vecs)) if p == 2 else (p ** len(vecs) - 1) // (p - 1)
+        if force_python or w <= 2 ** 16:
+            return weights_python(p, n, D, vecs)
+        return weights_native(p, n, D, vecs)
+    A = weights(basis)                                   # all of S
     size = p ** r
     if sum(A) != size:
         print("internal error: the weight counts do not add up to |S|")
         return 1
+    I = A if not c else weights(iso)                     # the isotropic part S n S'
+    if sum(I) != p ** len(iso):
+        print("internal error: the weight counts do not add up to |I|")
+        return 1
     alph = q * q
-    if k == 0:
-        d = next((w for w in range(1, n + 1) if A[w]), None)
-        if d is None:
-            print("internal error: no nonzero element")
+    B = []
+    for j in range(0, n + 1):
+        tot = sum(A[i] * krawtchouk(j, i, n, alph) for i in range(n + 1) if A[i])
+        if tot % size or tot < 0:
+            print(f"internal error: B_{j} = {tot}/{size} is not a non-negative integer")
             return 1
-        print("weights of S (nonzero, up to D): " + ", ".join(f"{w}:{A[w]}" for w in range(1, d + 1) if A[w]))
+        B.append(tot // size)
+    if B[0] != 1 or any(B[j] < I[j] for j in range(n + 1)) or sum(B) * size != q ** (2 * n):
+        print("internal error: the dual weight counts are inconsistent")
+        return 1
+    if k == 0:
+        # S' lies in S: the distance is the least weight of a nonzero element of S' (n + 1 when S' = {0})
+        if any(B[j] != I[j] for j in range(n + 1)):
+            print("internal error: k = 0 but S' is not inside S")
+            return 1
+        d = next((w for w in range(1, n + 1) if B[w]), n + 1)
+        print("weights of the nonzero elements of S' up to D: " + ", ".join(f"{w}:{B[w]}" for w in range(1, min(d, n) + 1) if B[w]))
     else:
-        d = None
-        B_seen = []
-        for j in range(0, n + 1):
-            tot = sum(A[i] * krawtchouk(j, i, n, alph) for i in range(n + 1) if A[i])
-            if tot % size or tot < 0:
-                print(f"internal error: B_{j} = {tot}/{size} is not a non-negative integer")
-                return 1
-            B = tot // size
-            if j == 0 and B != 1:
-                print("internal error: B_0 is not 1")
-                return 1
-            if j >= 1 and B < A[j]:
-                print(f"internal error: B_{j} = {B} < A_{j} = {A[j]}")
-                return 1
-            B_seen.append(B)
-            if j >= 1 and B > A[j]:
-                d = j
-                break
+        d = next((w for w in range(1, n + 1) if B[w] > I[w]), None)
         if d is None:
             print("internal error: S' has no element outside S")
             return 1
-        print("weights up to D, (A_w in S, B_w in S'): " +
-              ", ".join(f"{w}:({A[w]},{B_seen[w]})" for w in range(1, d + 1) if A[w] or B_seen[w]))
+        print("weights up to D, (elements of the isotropic part, of S'): " +
+              ", ".join(f"{w}:({I[w]},{B[w]})" for w in range(1, d + 1) if I[w] or B[w]))
     print(f"distance {d}")
     print(f"RESULT {d}")
     return 0

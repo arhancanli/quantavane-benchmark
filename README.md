@@ -78,6 +78,7 @@ the 100 are new single problems of v2.1, with eight new checkers; see the collec
 | `polygon-circle-packing` (in review for v2.2) | 1,106 | E. Specht, Packomania: equal circles in the regular polygons with 5 to 17 sides | `pack_alg_check.py` |
 | `unequal-circle-packing` (in review for v2.2) | 578 | E. Specht, Packomania: circles of radii i^(1/2), i^(-1/2), i^(-2/3), i^(-1/5) in the smallest circle; of radii i^(1/2), i^(-1/2) in the smallest square | `pack_alg_check.py` |
 | `quantum-code` (in review for v2.2) | 7,141 | M. Grassl, codetables.de: additive (stabilizer) quantum codes [[n,k]] with local dimension 2, 3, 4, 5, 7, 8 | `qcode_check.py` |
+| `ea-quantum-code` (in review for v2.2) | 3,263 | M. Grassl, eaqecc.codetables.de: entanglement-assisted quantum codes [[n,k;c]], qubits and qutrits | `qcode_check.py` |
 
 Every cell is open in the sense written in its family file: its best known value is not marked optimal by the keeper
 and is strictly worse than the bound on the other side (the keeper's own bound, or a standard bound we compute and
@@ -251,6 +252,16 @@ What each family takes from its table, and what it leaves out:
   now one cell, with the better of the two values (hsp4 300: 0.187824804694), so the first part has 10,177 cells, not
   10,180. Holders named on the pages only by an image are now given as "[name shown as an image: NAME]". Each family
   file notes Packomania's queue of unreviewed candidates (pending.html), which may already beat a cell's value.
+- `ea-quantum-code` (in review for v2.2; read 15 Nov 2026): every entry [[n,k;c]] with c >= 1 of Grassl's tables of
+  entanglement-assisted codes (qubits up to length 64, qutrits up to 36) whose lower bound is below its upper bound
+  and whose check lists at most 2^34 elements (qubits, n - k + c <= 34) or 2^31 lines (qutrits, n - k + c <= 20);
+  2,388 qubit and 875 qutrit cells. `qcode_check.py --ebits C` takes generators that need not commute: they must span
+  q^(n-k+c) elements with a trace-symplectic form of rank 2c, and the distance follows Luo, Ezerman, Grassl and Ling
+  (arXiv:2207.05647, Proposition 1): the least weight of an element of S' outside S (for k = 0, of a nonzero element
+  of S', n + 1 if there is none), with S and its isotropic part listed and S' by MacWilliams. Checked against brute
+  force on 75 random sets of generators over GF(2), GF(3), GF(4), GF(5), on the trivial codes [[n,0,n+1;n]] and on
+  [[4,1,3;1]], the five-qubit code with one qubit teleported, which the table lists with distance 3. The entries with
+  c = 0 are the codes of `quantum-code` and are left out here.
 - Packomania, third part (in review for v2.2; pages read 14 Nov 2026): the sections whose exact check needs algebraic
   numbers, with the new checker `pack_alg_check.py`. `polygon-circle-packing` (1,106 cells): equal circles in the
   regular n-gons, n = 5 to 17, circumradius 1 (N >= 3). `unequal-circle-packing` (578 cells): circles of radii
@@ -278,7 +289,7 @@ What each family takes from its table, and what it leaves out:
   whose distances it reproduces. With this family the benchmark has 169,600 problems; with the second part of
   Packomania, 175,332; with the covering designs re-read and checked in C, 176,529; with the covering arrays
   re-read and checked in C, 178,601; with the ordered orthogonal arrays walked in C, 180,158; with the third part of
-  Packomania, 181,842; with the walk in C for odd bases, 182,394.
+  Packomania, 181,842; with the walk in C for odd bases, 182,394; with the entanglement-assisted codes, 185,657.
 - `project-scheduling`: every instance of the sets with open instances whose best known makespan is above its lower
   bound and which the site does not mark optimal; the open counts match the site's own table of November 2026. The
   highRD, lowRU and 1k variants are not read: their dataset files date from April 2021, many of their upper bounds are
@@ -295,8 +306,9 @@ Each checker in `checkers/` is one file that can be used without the benchmark: 
 with `python3 -I`, except the Ramsey checker, which is C (`cc -O3 -o ramsey_check checkers/ramsey_check.c`). Each
 prints its exact result and exits 0 only for a valid certificate.
 
-- `qcode_check.py Q N K FILE`: the minimum distance of an additive quantum code [[N,K]] over GF(Q) from its
-  stabilizer matrix (commutation, size, MacWilliams in exact integers; a C helper lists large stabilizers).
+- `qcode_check.py Q N K FILE [--ebits C]`: the minimum distance of an additive quantum code [[N,K]] over GF(Q) from its
+  stabilizer matrix (commutation, size, MacWilliams in exact integers; a C helper lists large stabilizers), or of an
+  entanglement-assisted code [[N,K;C]] from generators that need not commute.
 - `ramsey_check S T FILE`: a two-colouring of K_n as an n x n 0/1 matrix (1 red, 0 blue) has no red K_S and no blue
   K_T (Bron-Kerbosch with Tomita's pivot and a colouring bound; n <= 2048).
 - `sph_check.py FILE D N`: the largest cosine between N points on the sphere in R^D, in 50-digit decimal arithmetic.

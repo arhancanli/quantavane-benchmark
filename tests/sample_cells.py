@@ -177,6 +177,25 @@ def test_quantum_code(n, rng):
         expect(f"red   {c['id']} (a generator dropped)", obb(c["id"], bad), "NOT CERTIFIED,")
 
 
+def test_ea_quantum_code(n, rng):
+    """Z_1, ..., Z_(n-k) and X_1, ..., X_c: c pairs that do not commute and n-k-c isotropic generators, a valid
+    entanglement-assisted code [[n,k;c]] of distance 1 (or n + 1 when it has no nonzero logical element); with one
+    generator dropped the size is wrong."""
+    small = [c for c in family_cells("ea-quantum-code") if c["params"]["n"] - c["params"]["k"] + c["params"]["c"] <= 14]
+    for c in rng.sample(small, min(n, len(small))):
+        q, length, k, e = (c["params"][x] for x in ("q", "n", "k", "c"))
+        zero = ["0"] * length
+        lines = []
+        for i in range(length - k):
+            lines.append(" ".join(zero) + " | " + " ".join("1" if t == i else "0" for t in range(length)))
+        for i in range(e):
+            lines.append(" ".join("1" if t == i else "0" for t in range(length)) + " | " + " ".join(zero))
+        good = write(f"{c['id']}.txt", lines)
+        expect(f"sample {c['id']} single-qudit Z and X generators", obb(c["id"], good), "does not improve,")
+        bad = write(f"{c['id']}_red.txt", lines[:-1])
+        expect(f"red   {c['id']} (a generator dropped)", obb(c["id"], bad), "NOT CERTIFIED,")
+
+
 def test_ordered_orthogonal_array(n, rng):
     """An object made of distinct unit vectors has the strength asked for with the fewest factors that can carry it; a
     column repeated at depth 1 of another factor (or at depth 2 of the same one) breaks it."""
@@ -495,6 +514,7 @@ def main():
                        ("quantum-code", test_quantum_code),
                        ("circle-packing-sum", test_circle_packing_sum),
                        ("polygon-circle-packing", test_polygon_circle_packing),
+                       ("ea-quantum-code", test_ea_quantum_code),
                        ("unequal-circle-packing", test_unequal_circle_packing)):
         if os.path.exists(os.path.join(ROOT, "families", name, "cells.jsonl")):
             test(n, rng)
