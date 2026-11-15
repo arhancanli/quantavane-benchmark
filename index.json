@@ -1,6 +1,6 @@
 {
  "benchmark_version": "2.1",
- "problems": 186545,
+ "problems": 226515,
  "by_family": {
   "cage": 40,
   "cap-set": 2,
@@ -17,7 +17,7 @@
   "ea-quantum-code": 3263,
   "erdos-problem": 2,
   "flexible-job-shop": 53,
-  "golomb-ruler": 2,
+  "golomb-ruler": 39972,
   "growing-circle-packing": 396,
   "hadamard": 4,
   "job-shop": 60,
@@ -143,6 +143,17 @@
    "keeper": "ScheduleOpt, benchmark of scheduling problems (FJSPLib; github.com/ScheduleOpt/benchmarks, CC BY-SA 4.0)",
    "read": "2026-11-15",
    "checker": "jsp_check.py"
+  },
+  {
+   "kind": "family",
+   "family": "golomb-ruler",
+   "path": "families/golomb-ruler/cells.jsonl",
+   "definition": "families/golomb-ruler/family.json",
+   "count": 39970,
+   "sha256": "50beb21f0a5c2561f454745d6452b9bc15e6698395a5b6f90b2e54b5f44d4b0d",
+   "keeper": "T. Rokicki and G. Dogon, possibly optimal Golomb rulers calculated for 160 to 40,000 marks (cube20.org/golomb; data from 5 marks)",
+   "read": "2026-11-15",
+   "checker": "golomb_check.py"
   },
   {
    "kind": "family",

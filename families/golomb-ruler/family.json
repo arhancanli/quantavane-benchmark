@@ -1,0 +1,39 @@
+{
+ "family": "golomb-ruler",
+ "title": "Golomb rulers with the shortest length",
+ "added": "2.2",
+ "objective": "minimize",
+ "id_prefixes": [
+  "golomb-"
+ ],
+ "keeper": "T. Rokicki and G. Dogon, possibly optimal Golomb rulers calculated for 160 to 40,000 marks (cube20.org/golomb; data from 5 marks)",
+ "page": "https://cube20.org/golomb/",
+ "read": "2026-11-15",
+ "revision": "the 41 metadata files golomb-all-00 .. golomb-all-40 (served as last modified 14-21 Dec 2015) read 15 Nov 2026 11:21 UTC",
+ "template": {
+  "title": "Golomb ruler with {n} marks",
+  "statement": "Find {n} integer marks whose pairwise differences are all distinct, with the largest mark minus the smallest (the length) as small as possible.",
+  "submission": "Text file: the {n} marks, integers separated by spaces, commas or new lines; see checkers/golomb_check.py.",
+  "args": [
+   "{n}"
+  ]
+ },
+ "checker": {
+  "program": "golomb_check.py",
+  "value": "result"
+ },
+ "score": "the length (smaller is better)",
+ "best_text": "The shortest known ruler in Rokicki and Dogon's table has length {best} ({holder}); a Golomb ruler with {n} marks that is shorter improves it.",
+ "holder_unknown": "the construction is named in the table's metadata",
+ "holder_sources": "the metadata files: construction type (projective or affine plane), prime power and multiplier",
+ "open_rule": "every number of marks from 31 to 40,000 (optimality is proven only up to 28 marks; 29 and 30 are single problems)",
+ "left_out": "29 and 30 marks (single problems golomb-29 and golomb-30); 40,001 to 40,178 marks (beyond the range the table's authors name); up to 28 marks (proven optimal)",
+ "reward": "the table's authors offer USD 250 for beating any length from 36 to 40,000 marks",
+ "check_cost": "checkers/golomb_check.py marks the M(M-1)/2 differences in C above 3,000 marks, in a bit array of length + 1 bits: about 200 MB and a few seconds for 40,000 marks",
+ "replayed": "the table's own explicit rulers (rulers-all-00.zip, 5 to 999 marks) agree with its metadata for all 995 sizes, and those for 31, 50, 100, 159, 160, 500 and 999 marks certify the listed lengths through obb.py",
+ "data_sha256": "b6c5cdee5c4e60caaaf34f013b3b1c78a7fac37d404d500df21bfb4b1d966113",
+ "cells": "cells.jsonl",
+ "count": 39970,
+ "quantavane_records": 0,
+ "single_problems_left_out": 2
+}

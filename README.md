@@ -85,6 +85,7 @@ the 100 are new single problems of v2.1, with eight new checkers; see the collec
 | `degree-diameter` (in review for v2.2) | 37 | F. Comellas: largest known graphs of maximum degree 3 to 16 and diameter 2 to 10 (cells beside the 20 single problems) | `degdiam_check.py` |
 | `job-shop` (in review for v2.2) | 60 | ScheduleOpt's JSPLib archive of best bounds (with O. Shylo's table): open Taillard, Demirkol and SWV instances | `jsp_check.py` |
 | `flexible-job-shop` (in review for v2.2) | 53 | ScheduleOpt's FJSPLib archive of best bounds: open Brandimarte, Hurink, Dauzère-Pérès and Behnke instances | `jsp_check.py` |
+| `golomb-ruler` (in review for v2.2) | 39,970 | T. Rokicki and G. Dogon: possibly optimal Golomb rulers, 31 to 40,000 marks (a USD 250 reward for beating any length from 36 to 40,000 marks) | `golomb_check.py` |
 
 Every cell is open in the sense written in its family file: its best known value is not marked optimal by the keeper
 and is strictly worse than the bound on the other side (the keeper's own bound, or a standard bound we compute and
@@ -258,6 +259,13 @@ What each family takes from its table, and what it leaves out:
   now one cell, with the better of the two values (hsp4 300: 0.187824804694), so the first part has 10,177 cells, not
   10,180. Holders named on the pages only by an image are now given as "[name shown as an image: NAME]". Each family
   file notes Packomania's queue of unreviewed candidates (pending.html), which may already beat a cell's value.
+- `golomb-ruler` (in review for v2.2; read 15 Nov 2026): every number of marks from 31 to 40,000 in Rokicki and Dogon's
+  table of possibly optimal Golomb rulers (cube20.org/golomb; the shortest rulers the projective and affine plane
+  constructions give, believed optimal; the authors offer a reward for beating any of them from 36 marks on).
+  Optimality is proven only up to 28 marks; 29 and 30 are single problems. `golomb_check.py` checks every difference
+  (in C above 3,000 marks, a bit array of length + 1 bits: about 200 MB for 40,000 marks). The table's explicit rulers
+  for 5 to 999 marks agree with its metadata, and those for 31, 50, 100, 159, 160, 500 and 999 marks certify the listed
+  lengths through obb.py. One table gives these 39,970 cells, each a separate open question.
 - `job-shop` and `flexible-job-shop` (in review for v2.2; read 15 Nov 2026): the instances of ScheduleOpt's libraries
   (github.com/ScheduleOpt/benchmarks at commit 8a6e36e; its archive records the best upper and lower bounds from any
   source) whose lower bound is below the upper bound; for the job shop also open in O. Shylo's table (optimizizer.com)
@@ -326,7 +334,8 @@ What each family takes from its table, and what it leaves out:
   re-read and checked in C, 178,601; with the ordered orthogonal arrays walked in C, 180,158; with the third part of
   Packomania, 181,842; with the walk in C for odd bases, 182,394; with the entanglement-assisted codes, 185,657;
   with Brouwer's unrestricted codes, 186,009; with MinT's arrays of any kind, 186,258; with the Lennard-Jones
-  clusters, 186,395; with the rest of Comellas's degree-diameter table, 186,432; with the job shops, 186,545.
+  clusters, 186,395; with the rest of Comellas's degree-diameter table, 186,432; with the job shops, 186,545; with
+  the Golomb rulers, 226,515.
 - `project-scheduling`: every instance of the sets with open instances whose best known makespan is above its lower
   bound and which the site does not mark optimal; the open counts match the site's own table of November 2026. The
   highRD, lowRU and 1k variants are not read: their dataset files date from April 2021, many of their upper bounds are

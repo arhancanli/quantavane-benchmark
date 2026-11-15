@@ -18,6 +18,16 @@ value can change within a version when its source table changes; the file then s
   some of them are public on Zenodo. Their values stay as read on 8 Nov until a rule for cells the table does not list is
   chosen.
 
+## Next (in review): the family `golomb-ruler` from Rokicki and Dogon's table (15 Nov 2026)
+
+- `checkers/golomb_check.py`: above 3,000 marks the differences are marked in C (`checkers/golomb_scan.c`, a bit array).
+  `tests/test_golomb.py` (run by `test.sh`): Erdos-Turan rulers on both sides of the threshold with red controls.
+- `families/golomb-ruler` (39,970 cells, 31 to 40,000 marks without the single problems 29 and 30;
+  `tools/golomb_cells.py`): Rokicki and Dogon's 41 metadata files read on 15 Nov 2026. Their explicit rulers for 5 to
+  999 marks agree with the metadata; seven of them certify the listed lengths through obb.py. `tests/sample_cells.py`
+  samples the family (an Erdos-Turan ruler; a repeated difference as the red control).
+- index.json: 226,515 problems.
+
 ## Next (in review): the families `job-shop` and `flexible-job-shop` from ScheduleOpt's libraries (15 Nov 2026)
 
 - New exact checker `checkers/jsp_check.py`: job shop schedules (start times) and flexible job shop schedules (machine

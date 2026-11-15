@@ -343,6 +343,22 @@ def test_flexible_job_shop(n, rng):
     test_job_shop(n, rng, "flexible-job-shop", True)
 
 
+def test_golomb_ruler(n, rng):
+    """The first n marks of the Erdos-Turan ruler 2pk + (k^2 mod p) for the least prime p >= n: valid and longer than
+    the table; with its last mark moved to repeat a difference it must be refused."""
+    small = [c for c in family_cells("golomb-ruler") if c["params"]["n"] <= 5000]     # keeps the bit array small
+    for c in rng.sample(small, n):
+        m = c["params"]["n"]
+        p = m
+        while any(p % d == 0 for d in range(2, int(p ** 0.5) + 1)):
+            p += 1
+        marks = [2 * p * k + (k * k) % p for k in range(m)]
+        good = write(f"{c['id']}.txt", [" ".join(map(str, marks))])
+        expect(f"sample {c['id']} Erdos-Turan ruler", obb(c["id"], good), "does not improve,")
+        bad = write(f"{c['id']}_red.txt", [" ".join(map(str, marks[:-1] + [marks[-2] + marks[1] - marks[0]]))])
+        expect(f"red   {c['id']} (a difference repeated)", obb(c["id"], bad), "NOT CERTIFIED,")
+
+
 def test_constant_weight_code(n, rng):
     import math
     small = [c for c in family_cells("constant-weight-code")
@@ -642,6 +658,7 @@ def main():
                        ("lj-cluster", test_lj_cluster),
                        ("degree-diameter", test_degree_diameter),
                        ("job-shop", test_job_shop),
+                       ("golomb-ruler", test_golomb_ruler),
                        ("flexible-job-shop", test_flexible_job_shop),
                        ("unequal-circle-packing", test_unequal_circle_packing)):
         if os.path.exists(os.path.join(ROOT, "families", name, "cells.jsonl")):
