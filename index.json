@@ -1,6 +1,6 @@
 {
  "benchmark_version": "2.1",
- "problems": 185657,
+ "problems": 186009,
  "by_family": {
   "cage": 40,
   "cap-set": 2,
@@ -40,6 +40,7 @@
   "superpermutation": 4,
   "travelling-salesman": 1,
   "unequal-circle-packing": 578,
+  "unrestricted-code": 352,
   "van-der-waerden": 10,
   "vehicle-routing": 14,
   "weak-schur": 5
@@ -204,6 +205,17 @@
    "keeper": "E. Specht, Packomania (packomania.com)",
    "read": "2026-11-14",
    "checker": "pack_alg_check.py"
+  },
+  {
+   "kind": "family",
+   "family": "unrestricted-code",
+   "path": "families/unrestricted-code/cells.jsonl",
+   "definition": "families/unrestricted-code/family.json",
+   "count": 352,
+   "sha256": "12699de28888be6a00e44d7586fe2ae19d9364a990cee344b5e50457d2a0c24d",
+   "keeper": "A. E. Brouwer, tables of bounds on codes (aeb.win.tue.nl/codes)",
+   "read": "2026-11-15",
+   "checker": "ucode_check.py"
   }
  ]
 }

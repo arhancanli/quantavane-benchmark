@@ -196,6 +196,20 @@ def test_ea_quantum_code(n, rng):
         expect(f"red   {c['id']} (a generator dropped)", obb(c["id"], bad), "NOT CERTIFIED,")
 
 
+def test_unrestricted_code(n, rng):
+    """The constant words (s, s, ..., s), one per symbol of the smallest alphabet: every two differ everywhere, a valid
+    code below the table; a word repeated must be refused."""
+    for c in rng.sample(family_cells("unrestricted-code"), n):
+        P = c["params"]
+        length = P["n"] + P.get("m", 0)
+        smallest = 2 if "m" in P else P["q"]
+        lines = [" ".join([str(s)] * length) for s in range(smallest)]
+        good = write(f"{c['id']}.txt", lines)
+        expect(f"sample {c['id']} constant words", obb(c["id"], good), "does not improve,")
+        bad = write(f"{c['id']}_red.txt", lines + [lines[0]])
+        expect(f"red   {c['id']} (a word repeated)", obb(c["id"], bad), "NOT CERTIFIED,")
+
+
 def test_ordered_orthogonal_array(n, rng):
     """An object made of distinct unit vectors has the strength asked for with the fewest factors that can carry it; a
     column repeated at depth 1 of another factor (or at depth 2 of the same one) breaks it."""
@@ -515,6 +529,7 @@ def main():
                        ("circle-packing-sum", test_circle_packing_sum),
                        ("polygon-circle-packing", test_polygon_circle_packing),
                        ("ea-quantum-code", test_ea_quantum_code),
+                       ("unrestricted-code", test_unrestricted_code),
                        ("unequal-circle-packing", test_unequal_circle_packing)):
         if os.path.exists(os.path.join(ROOT, "families", name, "cells.jsonl")):
             test(n, rng)

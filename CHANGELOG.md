@@ -18,6 +18,17 @@ value can change within a version when its source table changes; the file then s
   some of them are public on Zenodo. Their values stay as read on 8 Nov until a rule for cells the table does not list is
   chosen.
 
+## Next (in review): the family `unrestricted-code` from A. E. Brouwer's tables (15 Nov 2026)
+
+- New exact checker `checkers/ucode_check.py` with the C helper `checkers/ucode_scan.c`: a code over one alphabet or
+  mixed alphabets (sizes 2 to 8, up to 64 coordinates) with minimum distance D; every pair of words is compared.
+  `tests/test_ucode.py` (run by `test.sh`): the Hamming code and the tetracode both ways with red controls, malformed
+  words, 60 random mixed codes with the same verdict both ways, 4,096 words through C.
+- `families/unrestricted-code` (352 cells; `tools/brouwer_codes_cells.py`): open entries of A_2(n,d), A_3(n,d),
+  A_4(n,d), A_5(n,d) (123) and N(m,n,d) with m, n >= 1 (229), pages read 15 Nov 2026, lower bounds below 2^17.
+  `tests/sample_cells.py` samples the family.
+- index.json: 186,009 problems.
+
 ## Next (in review): the family `ea-quantum-code` from eaqecc.codetables.de (15 Nov 2026)
 
 - `checkers/qcode_check.py --ebits C`: entanglement-assisted codes [[N,K;C]] over GF(Q) (generators need not commute;

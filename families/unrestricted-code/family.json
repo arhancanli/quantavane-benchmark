@@ -1,0 +1,56 @@
+{
+ "family": "unrestricted-code",
+ "title": "Unrestricted codes (q-ary and mixed binary/ternary) with the most words",
+ "added": "2.2",
+ "objective": "maximize",
+ "id_prefixes": [
+  "ucode-",
+  "mixcode-"
+ ],
+ "keeper": "A. E. Brouwer, tables of bounds on codes (aeb.win.tue.nl/codes)",
+ "page": "https://aeb.win.tue.nl/codes/",
+ "read": "2026-11-15",
+ "revision": "binary-1.html, ternary-1.html, quaternary-1.html, 5ary-1.html and 23codes.html read 15 Nov 2026 10:43-10:44 UTC (SHA-256 of each in page_sha256)",
+ "template": {
+  "title": "Code over an alphabet of {q} symbols, length {n}, minimum distance {d}",
+  "statement": "Find a code of length {n} over an alphabet of {q} symbols in which every two words differ in at least {d} coordinates, with as many words as possible (A_{q}({n},{d})).",
+  "submission": "Text file: one word per line, {n} symbols below {q} (separated by spaces or written as one string of digits); see checkers/ucode_check.py.",
+  "args": [
+   "{alph}",
+   "{d}"
+  ]
+ },
+ "variants": {
+  "aq": {
+   "title": "Code over an alphabet of {q} symbols, length {n}, minimum distance {d}"
+  },
+  "mixed": {
+   "title": "Mixed code with {m} binary and {n} ternary coordinates, minimum distance {d}",
+   "statement": "Find a code whose words have {m} binary coordinates followed by {n} ternary ones, in which every two words differ in at least {d} coordinates, with as many words as possible (N({m},{n},{d}) of Brouwer, Hamalainen, Ostergard and Sloane).",
+   "submission": "Text file: one word per line, {m} binary symbols then {n} ternary symbols (separated by spaces or written as one string of digits); see checkers/ucode_check.py."
+  }
+ },
+ "checker": {
+  "program": "ucode_check.py",
+  "value": "result"
+ },
+ "score": "the number of words (larger is better)",
+ "best_text": "The best known lower bound in Brouwer's table is {best}; a code with more words improves it.",
+ "bound_kind": "upper bound",
+ "bound_source": "the upper bound in the same table",
+ "holder_unknown": "the tables give values; the references and notes on each page name the constructions",
+ "holder_sources": "the notes and references on the page of the table",
+ "open_rule": "every entry of the tables of A_2(n,d), A_3(n,d), A_4(n,d), A_5(n,d) and N(m,n,d) (m, n >= 1) whose lower bound is below its upper bound, with a lower bound below 2^17",
+ "left_out": "binary-1.html: 121 solved, 3 too large; ternary-1.html: 51 solved, 3 too large; quaternary-1.html: 17 solved, 1 too large; 5ary-1.html: 13 solved, 1 too large; 23codes.html: 231 m = 0 or n = 0 (in the A_q tables), 499 solved, 0 too large",
+ "page_sha256": {
+  "binary-1.html": "79dffcfc41674db4cd56708bd5f03e0ba77c5e2627ecf139443b9a34b0c24ee3",
+  "ternary-1.html": "72a5f8906bbfdd9046dec9413901c0c44deb3124ac40530b0eb41214d5c91642",
+  "quaternary-1.html": "85cdd35bfe053946d1ebea9eb051e026e9462a2a63c24647992151008cf60aa4",
+  "5ary-1.html": "c4f5cf6ed33c2ad2fdfa3453f24991fb40eacf8b3a0652c0b2cac13a4470f03f",
+  "23codes.html": "def0599afb5ff113b2d4abc8b4aa5d7e772295d28ad4ccce82267f0a0179714d"
+ },
+ "cells": "cells.jsonl",
+ "count": 352,
+ "quantavane_records": 0,
+ "single_problems_left_out": 0
+}
