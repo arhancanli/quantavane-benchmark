@@ -7,3 +7,8 @@ ruvector.db
 .swarm/
 *.pyc
 checkers/bin/
+agentdb.rvf
+agentdb.rvf.idmap.json
+ruvector.db
+.swarm/
+.claude-flow/
