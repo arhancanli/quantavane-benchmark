@@ -316,6 +316,7 @@ python3 -I tests/units.py || status=1
 python3 -I tests/test_ooa.py || status=1
 # v2.2: pack_check.py (the Packomania families): exact packings at the edge of validity, red controls, malformed input
 python3 -I tests/test_pack.py || status=1
+python3 -I tests/test_qcode.py || status=1
 python3 -I tests/sample_cells.py || status=1
 if python3 -I obb.py index > /dev/null; then echo "ok    index.json matches the files"; else echo "FAIL  index.json"; status=1; fi
 exit $status

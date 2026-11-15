@@ -1,0 +1,1605 @@
+[
+{
+"q": 2,
+"n": 17,
+"k": 5,
+"d": 5,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 19,
+"k": 3,
+"d": 6,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 19,
+"k": 10,
+"d": 4,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 20,
+"k": 11,
+"d": 4,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 21,
+"k": 8,
+"d": 5,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 21,
+"k": 12,
+"d": 4,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 22,
+"k": 13,
+"d": 4,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 23,
+"k": 3,
+"d": 7,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 23,
+"k": 9,
+"d": 5,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 23,
+"k": 10,
+"d": 5,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 24,
+"k": 4,
+"d": 7,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 24,
+"k": 7,
+"d": 6,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 24,
+"k": 8,
+"d": 6,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 25,
+"k": 7,
+"d": 6,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 25,
+"k": 8,
+"d": 6,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 28,
+"k": 19,
+"d": 4,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 33,
+"k": 11,
+"d": 7,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 34,
+"k": 11,
+"d": 7,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 35,
+"k": 5,
+"d": 9,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 36,
+"k": 5,
+"d": 9,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 36,
+"k": 6,
+"d": 9,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 37,
+"k": 6,
+"d": 9,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 37,
+"k": 7,
+"d": 9,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 38,
+"k": 6,
+"d": 9,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 38,
+"k": 7,
+"d": 9,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 38,
+"k": 14,
+"d": 7,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 40,
+"k": 8,
+"d": 9,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 41,
+"k": 9,
+"d": 9,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 43,
+"k": 32,
+"d": 4,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 45,
+"k": 34,
+"d": 4,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 47,
+"k": 13,
+"d": 9,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 47,
+"k": 36,
+"d": 4,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 48,
+"k": 13,
+"d": 9,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 49,
+"k": 38,
+"d": 4,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 51,
+"k": 40,
+"d": 4,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 52,
+"k": 41,
+"d": 4,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 54,
+"k": 43,
+"d": 4,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 55,
+"k": 44,
+"d": 4,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)"
+},
+{
+"q": 2,
+"n": 18,
+"k": 3,
+"d": 6,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 20,
+"k": 7,
+"d": 5,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 24,
+"k": 15,
+"d": 4,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 34,
+"k": 4,
+"d": 9,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 34,
+"k": 12,
+"d": 7,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 40,
+"k": 16,
+"d": 7,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 41,
+"k": 16,
+"d": 7,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 43,
+"k": 23,
+"d": 6,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 44,
+"k": 4,
+"d": 11,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 44,
+"k": 11,
+"d": 9,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 44,
+"k": 12,
+"d": 9,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 45,
+"k": 12,
+"d": 9,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 45,
+"k": 13,
+"d": 9,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 46,
+"k": 6,
+"d": 11,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 46,
+"k": 9,
+"d": 10,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 46,
+"k": 10,
+"d": 10,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 46,
+"k": 13,
+"d": 9,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 47,
+"k": 6,
+"d": 11,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 47,
+"k": 9,
+"d": 10,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 47,
+"k": 10,
+"d": 10,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 47,
+"k": 17,
+"d": 8,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 48,
+"k": 9,
+"d": 10,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 48,
+"k": 10,
+"d": 10,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 48,
+"k": 14,
+"d": 9,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 49,
+"k": 7,
+"d": 11,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 49,
+"k": 10,
+"d": 10,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 49,
+"k": 14,
+"d": 9,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 49,
+"k": 15,
+"d": 9,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 49,
+"k": 19,
+"d": 8,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 50,
+"k": 7,
+"d": 11,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 50,
+"k": 8,
+"d": 11,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 50,
+"k": 11,
+"d": 10,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 50,
+"k": 12,
+"d": 10,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 50,
+"k": 15,
+"d": 9,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 50,
+"k": 24,
+"d": 7,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 51,
+"k": 5,
+"d": 12,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 51,
+"k": 12,
+"d": 10,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 51,
+"k": 13,
+"d": 10,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 51,
+"k": 21,
+"d": 8,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 52,
+"k": 5,
+"d": 12,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 52,
+"k": 6,
+"d": 12,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 52,
+"k": 7,
+"d": 12,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 52,
+"k": 8,
+"d": 12,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 52,
+"k": 30,
+"d": 6,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 53,
+"k": 5,
+"d": 12,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 53,
+"k": 6,
+"d": 12,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 53,
+"k": 7,
+"d": 12,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 53,
+"k": 8,
+"d": 12,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 53,
+"k": 30,
+"d": 6,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 53,
+"k": 31,
+"d": 6,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 53,
+"k": 37,
+"d": 5,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 54,
+"k": 4,
+"d": 13,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 54,
+"k": 11,
+"d": 11,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 54,
+"k": 12,
+"d": 11,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 55,
+"k": 4,
+"d": 13,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 55,
+"k": 5,
+"d": 13,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 55,
+"k": 11,
+"d": 11,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 55,
+"k": 12,
+"d": 11,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 55,
+"k": 13,
+"d": 11,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 55,
+"k": 33,
+"d": 6,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 56,
+"k": 5,
+"d": 13,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 56,
+"k": 6,
+"d": 13,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 56,
+"k": 9,
+"d": 12,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 56,
+"k": 10,
+"d": 12,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 56,
+"k": 12,
+"d": 11,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 56,
+"k": 13,
+"d": 11,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 56,
+"k": 29,
+"d": 7,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 56,
+"k": 30,
+"d": 7,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 57,
+"k": 6,
+"d": 13,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 57,
+"k": 9,
+"d": 12,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 57,
+"k": 10,
+"d": 12,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 57,
+"k": 12,
+"d": 11,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 57,
+"k": 13,
+"d": 11,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 57,
+"k": 18,
+"d": 10,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 57,
+"k": 19,
+"d": 10,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 57,
+"k": 21,
+"d": 9,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 57,
+"k": 30,
+"d": 7,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 57,
+"k": 35,
+"d": 6,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 58,
+"k": 6,
+"d": 13,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 58,
+"k": 9,
+"d": 12,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 58,
+"k": 10,
+"d": 12,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 58,
+"k": 12,
+"d": 11,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 58,
+"k": 13,
+"d": 11,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 58,
+"k": 14,
+"d": 11,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 58,
+"k": 18,
+"d": 10,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 58,
+"k": 19,
+"d": 10,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 58,
+"k": 21,
+"d": 9,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 58,
+"k": 22,
+"d": 9,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 58,
+"k": 36,
+"d": 6,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 59,
+"k": 6,
+"d": 13,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 59,
+"k": 7,
+"d": 13,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 59,
+"k": 9,
+"d": 12,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 59,
+"k": 10,
+"d": 12,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 59,
+"k": 11,
+"d": 12,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 59,
+"k": 13,
+"d": 11,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 59,
+"k": 14,
+"d": 11,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 59,
+"k": 18,
+"d": 10,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 59,
+"k": 19,
+"d": 10,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 59,
+"k": 22,
+"d": 9,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 59,
+"k": 31,
+"d": 7,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 59,
+"k": 36,
+"d": 6,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 59,
+"k": 37,
+"d": 6,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 60,
+"k": 7,
+"d": 13,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 60,
+"k": 8,
+"d": 13,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 60,
+"k": 13,
+"d": 11,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 60,
+"k": 14,
+"d": 11,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 60,
+"k": 19,
+"d": 10,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 60,
+"k": 49,
+"d": 4,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 61,
+"k": 5,
+"d": 14,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 61,
+"k": 8,
+"d": 13,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 61,
+"k": 33,
+"d": 7,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 62,
+"k": 8,
+"d": 13,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 62,
+"k": 33,
+"d": 7,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 62,
+"k": 34,
+"d": 7,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 63,
+"k": 52,
+"d": 4,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 65,
+"k": 54,
+"d": 4,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 66,
+"k": 4,
+"d": 15,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 67,
+"k": 3,
+"d": 16,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 67,
+"k": 4,
+"d": 15,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 67,
+"k": 5,
+"d": 15,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 68,
+"k": 3,
+"d": 16,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 68,
+"k": 4,
+"d": 16,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 68,
+"k": 5,
+"d": 15,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 69,
+"k": 4,
+"d": 16,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 69,
+"k": 41,
+"d": 7,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 70,
+"k": 2,
+"d": 17,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 71,
+"k": 2,
+"d": 17,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 71,
+"k": 33,
+"d": 9,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 72,
+"k": 2,
+"d": 17,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 72,
+"k": 33,
+"d": 9,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 72,
+"k": 34,
+"d": 9,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 73,
+"k": 2,
+"d": 17,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 73,
+"k": 3,
+"d": 17,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 73,
+"k": 39,
+"d": 8,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 74,
+"k": 3,
+"d": 17,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 74,
+"k": 39,
+"d": 8,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 75,
+"k": 39,
+"d": 8,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 76,
+"k": 2,
+"d": 18,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 76,
+"k": 38,
+"d": 9,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 77,
+"k": 1,
+"d": 19,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 77,
+"k": 2,
+"d": 18,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 77,
+"k": 38,
+"d": 9,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 77,
+"k": 39,
+"d": 9,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 77,
+"k": 42,
+"d": 8,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 77,
+"k": 43,
+"d": 8,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 77,
+"k": 47,
+"d": 7,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 78,
+"k": 1,
+"d": 19,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 78,
+"k": 43,
+"d": 8,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 78,
+"k": 44,
+"d": 8,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 79,
+"k": 44,
+"d": 8,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 79,
+"k": 49,
+"d": 7,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 81,
+"k": 45,
+"d": 8,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 83,
+"k": 43,
+"d": 9,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 84,
+"k": 43,
+"d": 9,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 88,
+"k": 58,
+"d": 7,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 89,
+"k": 58,
+"d": 7,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 95,
+"k": 59,
+"d": 8,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 99,
+"k": 67,
+"d": 7,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 2,
+"n": 100,
+"k": 67,
+"d": 7,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026) (by propagation)"
+},
+{
+"q": 2,
+"n": 100,
+"k": 68,
+"d": 7,
+"source": "M. de Messières, Zenodo 10.5281/zenodo.23481970 (v2, 19 Oct 2026)"
+},
+{
+"q": 3,
+"n": 31,
+"k": 9,
+"d": 8,
+"source": "S. Cochinescu, Zenodo 10.5281/zenodo.24158214 (v2, 12 Nov 2026)"
+},
+{
+"q": 3,
+"n": 35,
+"k": 9,
+"d": 9,
+"source": "S. Cochinescu, Zenodo 10.5281/zenodo.24158214 (v2, 12 Nov 2026)"
+},
+{
+"q": 4,
+"n": 16,
+"k": 2,
+"d": 7,
+"source": "S. Cochinescu, Zenodo 10.5281/zenodo.24158214 (v2, 12 Nov 2026)"
+},
+{
+"q": 4,
+"n": 16,
+"k": 4,
+"d": 6,
+"source": "S. Cochinescu, Zenodo 10.5281/zenodo.24158214 (v2, 12 Nov 2026)"
+},
+{
+"q": 4,
+"n": 20,
+"k": 10,
+"d": 5,
+"source": "S. Cochinescu, Zenodo 10.5281/zenodo.24158214 (v2, 12 Nov 2026)"
+},
+{
+"q": 4,
+"n": 21,
+"k": 3,
+"d": 8,
+"source": "S. Cochinescu, Zenodo 10.5281/zenodo.24158214 (v2, 12 Nov 2026)"
+},
+{
+"q": 4,
+"n": 21,
+"k": 5,
+"d": 7,
+"source": "S. Cochinescu, Zenodo 10.5281/zenodo.24158214 (v2, 12 Nov 2026)"
+},
+{
+"q": 4,
+"n": 22,
+"k": 6,
+"d": 7,
+"source": "S. Cochinescu, Zenodo 10.5281/zenodo.24158214 (v2, 12 Nov 2026)"
+},
+{
+"q": 4,
+"n": 25,
+"k": 11,
+"d": 6,
+"source": "S. Cochinescu, Zenodo 10.5281/zenodo.24158214 (v2, 12 Nov 2026)"
+},
+{
+"q": 4,
+"n": 26,
+"k": 4,
+"d": 9,
+"source": "S. Cochinescu, Zenodo 10.5281/zenodo.24158214 (v2, 12 Nov 2026)"
+},
+{
+"q": 4,
+"n": 26,
+"k": 8,
+"d": 8,
+"source": "S. Cochinescu, Zenodo 10.5281/zenodo.24158214 (v2, 12 Nov 2026)"
+},
+{
+"q": 4,
+"n": 28,
+"k": 6,
+"d": 9,
+"source": "S. Cochinescu, Zenodo 10.5281/zenodo.24158214 (v2, 12 Nov 2026)"
+},
+{
+"q": 4,
+"n": 30,
+"k": 2,
+"d": 11,
+"source": "S. Cochinescu, Zenodo 10.5281/zenodo.24158214 (v2, 12 Nov 2026)"
+},
+{
+"q": 4,
+"n": 32,
+"k": 2,
+"d": 12,
+"source": "S. Cochinescu, Zenodo 10.5281/zenodo.24158214 (v2, 12 Nov 2026)"
+},
+{
+"q": 4,
+"n": 53,
+"k": 41,
+"d": 5,
+"source": "S. Cochinescu, Zenodo 10.5281/zenodo.24158214 (v2, 12 Nov 2026)"
+},
+{
+"q": 4,
+"n": 54,
+"k": 38,
+"d": 6,
+"source": "S. Cochinescu, Zenodo 10.5281/zenodo.24158214 (v2, 12 Nov 2026)"
+},
+{
+"q": 4,
+"n": 59,
+"k": 43,
+"d": 6,
+"source": "S. Cochinescu, Zenodo 10.5281/zenodo.24158214 (v2, 12 Nov 2026)"
+},
+{
+"q": 4,
+"n": 68,
+"k": 52,
+"d": 6,
+"source": "S. Cochinescu, Zenodo 10.5281/zenodo.24158214 (v2, 12 Nov 2026)"
+},
+{
+"q": 5,
+"n": 18,
+"k": 4,
+"d": 7,
+"source": "S. Cochinescu, Zenodo 10.5281/zenodo.24158214 (v2, 12 Nov 2026)"
+},
+{
+"q": 5,
+"n": 19,
+"k": 7,
+"d": 6,
+"source": "S. Cochinescu, Zenodo 10.5281/zenodo.24158214 (v2, 12 Nov 2026)"
+},
+{
+"q": 5,
+"n": 21,
+"k": 9,
+"d": 6,
+"source": "S. Cochinescu, Zenodo 10.5281/zenodo.24158214 (v2, 12 Nov 2026)"
+},
+{
+"q": 5,
+"n": 23,
+"k": 11,
+"d": 6,
+"source": "S. Cochinescu, Zenodo 10.5281/zenodo.24158214 (v2, 12 Nov 2026)"
+},
+{
+"q": 5,
+"n": 27,
+"k": 11,
+"d": 7,
+"source": "S. Cochinescu, Zenodo 10.5281/zenodo.24158214 (v2, 12 Nov 2026)"
+},
+{
+"q": 5,
+"n": 29,
+"k": 13,
+"d": 7,
+"source": "S. Cochinescu, Zenodo 10.5281/zenodo.24158214 (v2, 12 Nov 2026)"
+},
+{
+"q": 5,
+"n": 30,
+"k": 14,
+"d": 7,
+"source": "S. Cochinescu, Zenodo 10.5281/zenodo.24158214 (v2, 12 Nov 2026)"
+},
+{
+"q": 5,
+"n": 34,
+"k": 14,
+"d": 8,
+"source": "S. Cochinescu, Zenodo 10.5281/zenodo.24158214 (v2, 12 Nov 2026)"
+},
+{
+"q": 7,
+"n": 19,
+"k": 3,
+"d": 8,
+"source": "S. Cochinescu, Zenodo 10.5281/zenodo.24158214 (v2, 12 Nov 2026)"
+},
+{
+"q": 8,
+"n": 19,
+"k": 3,
+"d": 8,
+"source": "S. Cochinescu, Zenodo 10.5281/zenodo.24158214 (v2, 12 Nov 2026)"
+},
+{
+"q": 8,
+"n": 20,
+"k": 4,
+"d": 8,
+"source": "S. Cochinescu, Zenodo 10.5281/zenodo.24158214 (v2, 12 Nov 2026)"
+},
+{
+"q": 2,
+"n": 36,
+"k": 26,
+"d": 4,
+"source": "D. Bartoli, S. Marcugini, F. Pambianco, New quantum caps in PG(4,4), arXiv:0905.1059 (2009)"
+},
+{
+"q": 2,
+"n": 38,
+"k": 28,
+"d": 4,
+"source": "D. Bartoli, S. Marcugini, F. Pambianco, New quantum caps in PG(4,4), arXiv:0905.1059 (2009)"
+}
+]

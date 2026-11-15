@@ -159,6 +159,23 @@ def test_linear_code(n, rng):
         expect(f"red   {c['id']} ({what})", obb(c["id"], bad), "NOT CERTIFIED,")
 
 
+def test_quantum_code(n, rng):
+    """Single-qudit Z stabilizers Z_1, ..., Z_(n-k) (with x Z_i, x^2 Z_i over GF(4) and GF(8), so that they generate
+    the group over GF(2)) make a valid code of distance 1; with one generator dropped the size is wrong."""
+    small = [c for c in family_cells("quantum-code") if c["params"]["n"] - c["params"]["k"] <= 12]
+    for c in rng.sample(small, min(n, len(small))):
+        q, length, k = c["params"]["q"], c["params"]["n"], c["params"]["k"]
+        m = {2: 1, 3: 1, 5: 1, 7: 1, 4: 2, 8: 3}[q]
+        lines = []
+        for i in range(length - k):
+            for j in range(m):
+                lines.append(" ".join(["0"] * length) + " | " + " ".join(str(2 ** j if t == i else 0) for t in range(length)))
+        good = write(f"{c['id']}.txt", lines)
+        expect(f"sample {c['id']} single-qudit Z stabilizers", obb(c["id"], good), "does not improve,")
+        bad = write(f"{c['id']}_red.txt", lines[:-1])
+        expect(f"red   {c['id']} (a generator dropped)", obb(c["id"], bad), "NOT CERTIFIED,")
+
+
 def test_ordered_orthogonal_array(n, rng):
     """An object made of distinct unit vectors has the strength asked for with the fewest factors that can carry it; a
     column repeated at depth 1 of another factor (or at depth 2 of the same one) breaks it."""
@@ -396,7 +413,8 @@ def main():
                        ("project-scheduling", test_project_scheduling),
                        ("ordered-orthogonal-array", test_ordered_orthogonal_array),
                        ("circle-packing", test_circle_packing),
-                       ("growing-circle-packing", test_growing_circle_packing)):
+                       ("growing-circle-packing", test_growing_circle_packing),
+                       ("quantum-code", test_quantum_code)):
         if os.path.exists(os.path.join(ROOT, "families", name, "cells.jsonl")):
             test(n, rng)
         else:

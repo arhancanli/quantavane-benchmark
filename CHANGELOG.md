@@ -18,6 +18,22 @@ value can change within a version when its source table changes; the file then s
   some of them are public on Zenodo. Their values stay as read on 8 Nov until a rule for cells the table does not list is
   chosen.
 
+## Next (in review): the family `quantum-code` from codetables.de (15 Nov 2026)
+
+- New exact checker `checkers/qcode_check.py` (standard library only) with the C helper `checkers/qcode_enum.c`
+  (built with `cc -O3` on first use): an additive quantum code [[N,K]] over GF(Q), Q in 2, 3, 4, 5, 7, 8, given by its
+  stabilizer matrix. It checks that the rows commute in the trace-symplectic form and span exactly Q^(N-K) elements
+  over the prime field, lists the stabilizer, and gets the weight counts of its trace-symplectic dual from the
+  MacWilliams identity in exact integers; the distance is the least weight held by the dual and not by the stabilizer.
+- `families/quantum-code` (7,141 cells, maximize the distance): Grassl's range tables read on 15 Nov 2026 (51 pages,
+  SHA-256 of each in the family file; `tools/qcode_cells.py`). Kept: open entries whose check takes at most 2^34 steps
+  (Q = 2, 4, 8) or 2^31 (Q = 3, 5, 7). Codes published after the tables' last change (`families/quantum-code/outside.json`)
+  close 26 qubit cells, which are left out, and raise the best known value of 76 cells, credited to their authors.
+- `tests/test_qcode.py` (run by `test.sh`): known codes, 36 random codes against brute force, the C helper against the
+  Python lister, red controls (a changed entry, a dropped or repeated generator, an entry out of range, a short line).
+  `tests/sample_cells.py` samples the family (single-qudit Z stabilizers; a generator dropped as the red control).
+- index.json: 169,600 problems.
+
 ## Next (in review): the families `circle-packing` and `growing-circle-packing` from Packomania (14 Nov 2026)
 
 - New exact checker `checkers/pack_check.py` (standard library only): circles or balls in a container, every number read as an exact decimal and every test (containment, and |c_i - c_j|^2 >= (r_i + r_j)^2 for the pairs in neighbouring cells of a grid of side 2 max r, which is exact) in integer arithmetic. Prints the value as an exact fraction.

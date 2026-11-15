@@ -1,6 +1,6 @@
 {
  "benchmark_version": "2.1",
- "problems": 162459,
+ "problems": 169600,
  "by_family": {
   "cage": 40,
   "cap-set": 2,
@@ -26,6 +26,7 @@
   "ordered-orthogonal-array": 2600,
   "project-scheduling": 59170,
   "projective-plane": 1,
+  "quantum-code": 7141,
   "ramsey": 133,
   "schur": 4,
   "shannon-capacity": 1,
@@ -133,6 +134,17 @@
    "keeper": "Solutions Update (solutionsupdate.ugent.be), M. Vanhoucke and J. Coelho, OR&S group, Ghent University",
    "read": "2026-11-09",
    "checker": "rcpsp_check.py"
+  },
+  {
+   "kind": "family",
+   "family": "quantum-code",
+   "path": "families/quantum-code/cells.jsonl",
+   "definition": "families/quantum-code/family.json",
+   "count": 7141,
+   "sha256": "3e0fd7f71fe9cb6295303eb1d9ad05992d332353879e98d420b40fa17505d6f9",
+   "keeper": "M. Grassl, bounds on the minimum distance of quantum codes (codetables.de)",
+   "read": "2026-11-15",
+   "checker": "qcode_check.py"
   },
   {
    "kind": "family",
