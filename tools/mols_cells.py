@@ -114,7 +114,7 @@ def main():
                       "difference matrix"),
         "left_out": (f"{prime_powers} prime powers (N(n) = n - 1); n = 10 (the single problem mols-10); {small - 1} "
                      f"other orders below 500 whose current value is in the 2024 compilation, which could not be "
-                     f"read (an owner step: the paper is open access)"),
+                     f"read (the paper is open access; to be read by hand)"),
         "literature": "families/mols/literature.json",
         "source_sha256": {"MOLS_handbook_data.py": hashlib.sha256(open(path, "rb").read()).hexdigest()},
         "counts": {"orders 10..9999 not prime powers": 9990 - prime_powers, "below 500 not known": small,

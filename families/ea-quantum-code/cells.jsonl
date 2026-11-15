@@ -2128,6 +2128,7 @@
 {"id": "eaqcode-q2-n53-k28-c3", "params": {"q": 2, "n": 53, "k": 28, "c": 3}, "best": "7", "bound": "15", "holder": "construction in the table: reducing length of [[56,28,7;0]] from codetables.de"}
 {"id": "eaqcode-q2-n53-k28-c5", "params": {"q": 2, "n": 53, "k": 28, "c": 5}, "best": "8", "bound": "16", "holder": "construction in the table: reducing length of [[58,28,8;0]] from codetables.de"}
 {"id": "eaqcode-q2-n53-k29-c4", "params": {"q": 2, "n": 53, "k": 29, "c": 4}, "best": "7", "bound": "15", "holder": "construction in the table: reducing length of [[57,29,7;0]] from codetables.de"}
+{"id": "eaqcode-q2-n53-k29-c13", "params": {"q": 2, "n": 53, "k": 29, "c": 13}, "best": "8", "bound": "19", "holder": "construction in the table: lengthening of [[44,29,8;13]] arXiv:2207.05647"}
 {"id": "eaqcode-q2-n53-k30-c1", "params": {"q": 2, "n": 53, "k": 30, "c": 1}, "best": "6", "bound": "13", "holder": "construction in the table: reducing length of [[54,30,6;0]] from codetables.de"}
 {"id": "eaqcode-q2-n53-k30-c5", "params": {"q": 2, "n": 53, "k": 30, "c": 5}, "best": "7", "bound": "15", "holder": "construction in the table: reducing length of [[58,30,7;0]] from codetables.de"}
 {"id": "eaqcode-q2-n53-k30-c13", "params": {"q": 2, "n": 53, "k": 30, "c": 13}, "best": "8", "bound": "19", "holder": "construction in the table: lengthening of [[48,30,8;13]] subcode of [[48,33,8;13]] arXiv:2207.05647"}
@@ -2477,6 +2478,7 @@
 {"id": "eaqcode-q2-n60-k36-c3", "params": {"q": 2, "n": 60, "k": 36, "c": 3}, "best": "7", "bound": "14", "holder": "construction in the table: reducing length of [[63,36,7;0]] from codetables.de"}
 {"id": "eaqcode-q2-n60-k36-c4", "params": {"q": 2, "n": 60, "k": 36, "c": 4}, "best": "8", "bound": "15", "holder": "construction in the table: reducing length of [[64,36,8;0]] from codetables.de"}
 {"id": "eaqcode-q2-n60-k37-c3", "params": {"q": 2, "n": 60, "k": 37, "c": 3}, "best": "7", "bound": "14", "holder": "construction in the table: reducing length of [[63,37,7;0]] from codetables.de"}
+{"id": "eaqcode-q2-n60-k37-c14", "params": {"q": 2, "n": 60, "k": 37, "c": 14}, "best": "8", "bound": "19", "holder": "construction in the table: lengthening of [[51,37,8;14]] arXiv:2207.05647"}
 {"id": "eaqcode-q2-n60-k38-c4", "params": {"q": 2, "n": 60, "k": 38, "c": 4}, "best": "7", "bound": "14", "holder": "construction in the table: reducing length of [[64,38,7;0]] from codetables.de"}
 {"id": "eaqcode-q2-n60-k39-c2", "params": {"q": 2, "n": 60, "k": 39, "c": 2}, "best": "6", "bound": "12", "holder": "construction in the table: reducing length of [[62,39,6;0]] from codetables.de"}
 {"id": "eaqcode-q2-n60-k40-c2", "params": {"q": 2, "n": 60, "k": 40, "c": 2}, "best": "6", "bound": "12", "holder": "construction in the table: reducing length of [[62,40,6;0]] from codetables.de"}
@@ -2511,6 +2513,7 @@
 {"id": "eaqcode-q2-n61-k36-c2", "params": {"q": 2, "n": 61, "k": 36, "c": 2}, "best": "7", "bound": "14", "holder": "construction in the table: reducing length of [[63,36,7;0]] from codetables.de"}
 {"id": "eaqcode-q2-n61-k36-c3", "params": {"q": 2, "n": 61, "k": 36, "c": 3}, "best": "8", "bound": "15", "holder": "construction in the table: reducing length of [[64,36,8;0]] from codetables.de"}
 {"id": "eaqcode-q2-n61-k37-c2", "params": {"q": 2, "n": 61, "k": 37, "c": 2}, "best": "7", "bound": "14", "holder": "construction in the table: reducing length of [[63,37,7;0]] from codetables.de"}
+{"id": "eaqcode-q2-n61-k37-c14", "params": {"q": 2, "n": 61, "k": 37, "c": 14}, "best": "8", "bound": "20", "holder": "construction in the table: lengthening of [[51,37,8;14]] arXiv:2207.05647"}
 {"id": "eaqcode-q2-n61-k38-c3", "params": {"q": 2, "n": 61, "k": 38, "c": 3}, "best": "7", "bound": "14", "holder": "construction in the table: reducing length of [[64,38,7;0]] from codetables.de"}
 {"id": "eaqcode-q2-n61-k39-c1", "params": {"q": 2, "n": 61, "k": 39, "c": 1}, "best": "6", "bound": "12", "holder": "construction in the table: reducing length of [[62,39,6;0]] from codetables.de"}
 {"id": "eaqcode-q2-n61-k39-c14", "params": {"q": 2, "n": 61, "k": 39, "c": 14}, "best": "7", "bound": "19", "holder": "construction in the table: subcode of [[61,43,7;14]] quantum shortening of [[64,40,10;14]] arXiv:2207.05647"}
@@ -2548,7 +2551,10 @@
 {"id": "eaqcode-q2-n62-k36-c1", "params": {"q": 2, "n": 62, "k": 36, "c": 1}, "best": "7", "bound": "14", "holder": "construction in the table: reducing length of [[63,36,7;0]] from codetables.de"}
 {"id": "eaqcode-q2-n62-k36-c2", "params": {"q": 2, "n": 62, "k": 36, "c": 2}, "best": "8", "bound": "15", "holder": "construction in the table: reducing length of [[64,36,8;0]] from codetables.de"}
 {"id": "eaqcode-q2-n62-k37-c1", "params": {"q": 2, "n": 62, "k": 37, "c": 1}, "best": "7", "bound": "14", "holder": "construction in the table: reducing length of [[63,37,7;0]] from codetables.de"}
+{"id": "eaqcode-q2-n62-k37-c14", "params": {"q": 2, "n": 62, "k": 37, "c": 14}, "best": "8", "bound": "20", "holder": "construction in the table: subcode of [[62,42,8;14]] quantum shortening of [[64,40,10;14]] arXiv:2207.05647"}
 {"id": "eaqcode-q2-n62-k38-c2", "params": {"q": 2, "n": 62, "k": 38, "c": 2}, "best": "7", "bound": "14", "holder": "construction in the table: reducing length of [[64,38,7;0]] from codetables.de"}
+{"id": "eaqcode-q2-n62-k38-c14", "params": {"q": 2, "n": 62, "k": 38, "c": 14}, "best": "8", "bound": "20", "holder": "construction in the table: subcode of [[62,42,8;14]] quantum shortening of [[64,40,10;14]] arXiv:2207.05647"}
+{"id": "eaqcode-q2-n62-k39-c14", "params": {"q": 2, "n": 62, "k": 39, "c": 14}, "best": "8", "bound": "19", "holder": "construction in the table: subcode of [[62,42,8;14]] quantum shortening of [[64,40,10;14]] arXiv:2207.05647"}
 {"id": "eaqcode-q2-n62-k40-c14", "params": {"q": 2, "n": 62, "k": 40, "c": 14}, "best": "8", "bound": "19", "holder": "construction in the table: subcode of [[62,42,8;14]] quantum shortening of [[64,40,10;14]] arXiv:2207.05647"}
 {"id": "eaqcode-q2-n62-k41-c1", "params": {"q": 2, "n": 62, "k": 41, "c": 1}, "best": "6", "bound": "12", "holder": "construction in the table: reducing length of [[63,41,6;0]] from codetables.de"}
 {"id": "eaqcode-q2-n62-k41-c14", "params": {"q": 2, "n": 62, "k": 41, "c": 14}, "best": "8", "bound": "18", "holder": "construction in the table: subcode of [[62,42,8;14]] quantum shortening of [[64,40,10;14]] arXiv:2207.05647"}

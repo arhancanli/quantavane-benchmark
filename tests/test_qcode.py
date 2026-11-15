@@ -270,7 +270,8 @@ def red_controls(five):
     r = subprocess.run([sys.executable, "-I", os.path.join(ROOT, "checkers", "qcode_check.py"), "2", "5", "1", path],
                        capture_output=True, text=True)
     expect("red: a line of the wrong length", r.returncode, 1)
-    expect("too large: exit status 2", run(2, 5, 1, five, ["--max-work", "4"])[0], 2)
+    expect("too large, the search switched off: exit status 2", run(2, 5, 1, five, ["--max-work", "4", "--search-limit", "0"])[0], 2)
+    expect("too large to list: the low-weight search gives the distance", run(2, 5, 1, five, ["--max-work", "4"]), (0, "RESULT 3"))
 
 
 def random_ea(rng):
@@ -339,6 +340,80 @@ def random_ea(rng):
     expect("red: X_1, Z_1 as a stabilizer code", run(2, 2, 0, nc)[0], 1)
 
 
+def low_weight_search(rng):
+    """The low-weight search (qcode_low.c; forced with --max-work 0) against the listing route (MacWilliams) on random
+    qubit stabilizer codes, random entanglement-assisted codes and known codes (among them Shor's degenerate
+    [[9,1,3]], whose weight-2 stabilizers must be skipped); with a tiny --search-limit the result is a lower bound
+    that never exceeds the distance."""
+    F = qc.Field(2)
+    agree = total = 0
+    for trial in range(80):
+        n = rng.randint(4, 13)
+        k = rng.randint(0, n - 2)
+        chosen, rows, G = random_stabilizer(F, n, n - k, rng)
+        a = run(2, n, k, rows)
+        b = run(2, n, k, rows, ["--max-work", "0"])
+        total += 1
+        agree += a == b and a[0] == 0
+        if not (a == b and a[0] == 0):
+            print(f"FAIL  low-weight search [[{n},{k}]]: listing {a}, search {b}")
+        if trial < 20 and a[0] == 0:
+            d = int(a[1].split()[1])
+            got = run(2, n, k, rows, ["--max-work", "0", "--search-limit", "40"])
+            lb = int(got[1].split()[1]) if got[0] == 0 else None
+            if lb is None or lb > d:
+                failures.append(f"lower bound [[{n},{k}]]")
+                print(f"FAIL  search limit 40 on [[{n},{k},{d}]]: {got}")
+    expect(f"{total} random qubit stabilizer codes: the low-weight search gives the listed distance", agree, total)
+    agree = total = 0
+    for trial in range(200):
+        n = rng.randint(3, 9)
+        L = 2 * n
+        r = rng.randint(1, L)
+        vecs = []
+        while len(vecs) < r:
+            v = [rng.randrange(2) for _ in range(L)]
+            if any(v) and _rank(vecs + [v], 2) == len(vecs) + 1:
+                vecs.append(v)
+        Gm, to_field = gram(F, n)
+        rows = []
+        for v in vecs:
+            x, z = to_field(v)
+            rows.append(x + z)
+        basis = qc.prime_basis(F, rows, n)
+        iso, rank = qc.radical(F, basis, n)
+        c = rank // 2
+        k = n - r + c
+        if c == 0 or not 0 <= k <= n:
+            continue
+        a = run(2, n, k, rows, ["--ebits", str(c)])
+        b = run(2, n, k, rows, ["--ebits", str(c), "--max-work", "0"])
+        total += 1
+        agree += a == b and a[0] == 0
+        if not (a == b and a[0] == 0):
+            print(f"FAIL  EA low-weight search [[{n},{k};{c}]]: listing {a}, search {b}")
+    expect(f"{total} random entanglement-assisted qubit codes: the search gives the listed distance", agree, total)
+    expect("enough EA cases", total >= 40, True)
+    five = cyclic([1, 0, 0, 1, 0], [0, 1, 1, 0, 0], 5, 4)
+    expect("[[5,1,3]] by the low-weight search", run(2, 5, 1, five, ["--max-work", "0"]), (0, "RESULT 3"))
+    shor = []
+    for blk in range(3):
+        for j in range(2):
+            z = [0] * 9
+            z[3 * blk + j] = z[3 * blk + j + 1] = 1
+            shor.append([0] * 9 + z)
+    shor.append([1] * 6 + [0] * 3 + [0] * 9)
+    shor.append([0] * 3 + [1] * 6 + [0] * 9)
+    expect("Shor's degenerate [[9,1,3]] (weight-2 stabilizers) by the low-weight search",
+           run(2, 9, 1, shor, ["--max-work", "0"]), (0, "RESULT 3"))
+    expect("Shor's [[9,1,3]] by listing", run(2, 9, 1, shor), (0, "RESULT 3"))
+    expect("red: Shor's code with a generator dropped claimed as [[9,1]]",
+           run(2, 9, 1, shor[:-1], ["--max-work", "0"])[0], 1)
+    bad = [r[:] for r in shor]
+    bad[1][1] = 1                                   # Z_2 Z_3 becomes Y_2 Z_3, which anticommutes with Z_1 Z_2
+    expect("red: a set that does not commute, through the search route", run(2, 9, 1, bad, ["--max-work", "0"])[0], 1)
+
+
 if __name__ == "__main__":
     rng = random.Random(20261115)
     five = known()
@@ -346,5 +421,6 @@ if __name__ == "__main__":
     native_vs_python(rng)
     red_controls(five)
     random_ea(rng)
+    low_weight_search(rng)
     print(f"{'ALL OK' if not failures else str(len(failures)) + ' FAILED'}")
     sys.exit(1 if failures else 0)

@@ -33,14 +33,14 @@
  "holder_unknown": "the table names the construction of each entry",
  "holder_sources": "the construction named in the entry's cell of the table (a propagation rule from another entry, a known family, or a source)",
  "open_rule": "every entry with c >= 1 whose lower bound is below its upper bound",
- "work_rule": "kept when the check lists at most 2^34 elements of S (qubits, n - k + c <= 34) or 2^31 lines through the origin (qutrits, n - k + c <= 20); from 15 Nov 2026 also when the estimated check with the faster lister (S and its isotropic part; the measured time model of tools/qcode_cells.py) takes at most 60 s",
- "left_out": "q = 2: 2144 c = 0 (stabilizer codes, in quantum-code), 254 solved, 2755 too costly to check; q = 3: 702 c = 0 (stabilizer codes, in quantum-code), 294 solved, 1771 too costly to check",
+ "work_rule": "kept when the check lists at most 2^34 elements of S (qubits, n - k + c <= 34) or 2^31 lines through the origin (qutrits, n - k + c <= 20); from 15 Nov 2026 also when the estimated check with the faster lister (S and its isotropic part; the measured time model of tools/qcode_cells.py) takes at most 60 s; for qubits also when the low-weight search of qcode_check.py (qcode_low.c; search_seconds in tools/qcode_cells.py) to the best known value is estimated at most 60 s",
+ "left_out": "q = 2: 2144 c = 0 (stabilizer codes, in quantum-code), 254 solved, 2749 too costly to check; q = 3: 702 c = 0 (stabilizer codes, in quantum-code), 294 solved, 1771 too costly to check",
  "page_sha256": {
   "2": "c84dea1ab3b3657e268462019569f0bf6b3cb15872ae0675d47ae9ae62536e6a",
   "3": "37bbf731030c113e2e2e75fe7b5ed0b1d11829cfc4a5f1ad948a38b1ac7c936c"
  },
  "cells": "cells.jsonl",
- "count": 3720,
+ "count": 3726,
  "quantavane_records": 0,
  "single_problems_left_out": 0
 }

@@ -77,8 +77,8 @@ the 100 are new single problems of v2.1, with eight new checkers; see the collec
 | `circle-packing-sum` (in review for v2.2) | 3,056 | E. Specht, Packomania: circles of any radii in the unit square with the largest sum of radii | `pack_check.py` |
 | `polygon-circle-packing` (in review for v2.2) | 1,106 | E. Specht, Packomania: equal circles in the regular polygons with 5 to 17 sides | `pack_alg_check.py` |
 | `unequal-circle-packing` (in review for v2.2) | 578 | E. Specht, Packomania: circles of radii i^(1/2), i^(-1/2), i^(-2/3), i^(-1/5) in the smallest circle; of radii i^(1/2), i^(-1/2) in the smallest square | `pack_alg_check.py` |
-| `quantum-code` (in review for v2.2) | 7,576 | M. Grassl, codetables.de: additive (stabilizer) quantum codes [[n,k]] with local dimension 2, 3, 4, 5, 7, 8 | `qcode_check.py` |
-| `ea-quantum-code` (in review for v2.2) | 3,720 | M. Grassl, eaqecc.codetables.de: entanglement-assisted quantum codes [[n,k;c]], qubits and qutrits | `qcode_check.py` |
+| `quantum-code` (in review for v2.2) | 7,801 | M. Grassl, codetables.de: additive (stabilizer) quantum codes [[n,k]] with local dimension 2, 3, 4, 5, 7, 8 | `qcode_check.py` |
+| `ea-quantum-code` (in review for v2.2) | 3,726 | M. Grassl, eaqecc.codetables.de: entanglement-assisted quantum codes [[n,k;c]], qubits and qutrits | `qcode_check.py` |
 | `unrestricted-code` (in review for v2.2) | 352 | A. E. Brouwer: unrestricted codes A_q(n,d) for q = 2, 3, 4, 5 and mixed binary/ternary codes N(m,n,d) | `ucode_check.py` |
 | `orthogonal-array` (in review for v2.2) | 249 | W. Ch. Schmid and R. Schürer, MinT: ordered orthogonal arrays and nets of any kind (not only linear) with at most 2^16 runs | `oa_check.py` |
 | `lj-cluster` (in review for v2.2) | 137 | D. J. Wales and others, the Cambridge Cluster Database: Lennard-Jones clusters, N = 14 to 150 | `cluster_check.py` |
@@ -95,6 +95,7 @@ the 100 are new single problems of v2.1, with eight new checkers; see the collec
 | `grassmannian-packing` (in review for v2.2) | 2,239 | N. J. A. Sloane, table of best Grassmannian packings (with R. H. Hardin, J. H. Conway and others): N lines, planes or 3-spaces in R^3 to R^16, and constructions in higher dimensions | `grass_check.py` |
 | `complete-arc` (in review for v2.2) | 9,862 | D. Bartoli, A. A. Davydov, G. Faina, A. A. Kreshchuk, S. Marcugini and F. Pambianco: smallest known complete arcs in the projective planes PG(2,q), every prime power q from 37 to about 102,000 whose check takes at most three minutes (arXiv:1312.2155v3, with the lexiarcs of arXiv:1404.0469v3) | `arc_check.py` |
 | `mols` (in review for v2.2) | 8,368 | Handbook of Combinatorial Designs, Table 3.87 (R. J. R. Abel, C. J. Colbourn and J. H. Dinitz; as in SageMath), with Dukes and Ling (2014), Abel, Janiszczak and Staszewski (2024) and C. D. Rosin (12 Nov 2026): the most mutually orthogonal Latin squares of order n, n not a prime power | `mols_check.py` |
+| `multi-mode-scheduling` (in review for v2.2) | 2,135 | Solutions Update (M. Vanhoucke and J. Coelho, Ghent University) with the MMLIB library (V. Van Peteghem and M. Vanhoucke): open instances of MMLIB50, MMLIB100 and MMLIB+ | `rcpsp_check.py mm` |
 
 Every cell is open in the sense written in its family file: its best known value is not marked optimal by the keeper
 and is strictly worse than the bound on the other side (the keeper's own bound, or a standard bound we compute and
@@ -371,7 +372,16 @@ What each family takes from its table, and what it leaves out:
   n - k = 21 to 23 over GF(3) (`check_seconds` in `tools/qcode_cells.py`; the full runs are in CHANGELOG.md). This
   adds 435 cells (187 qubit, 201 over GF(3), 47 over GF(4)), 7,576 in all; Q = 5 and 7 keep the old rule.
   `--max-work` now defaults to 2^37. Left out: 8,740 solved entries and 42,560 open entries whose check would be
-  longer (42,995 with the first lister). Checks: the
+  longer (42,995 with the first lister). 15 Nov 2026: for qubits whose stabilizer is too large to list,
+  `qcode_check.py` searches the distance weight by weight (C helper `qcode_low.c`): every operator of S' of weight w
+  is found by meeting in the middle (the first ceil(w/2) qubits of its support against the rest, matched through a
+  hash of the syndrome and compared exactly) and tested against an echelon basis of S; a weight is searched while
+  ceil(w/2) <= 4 and at most 4 x 10^8 operators are listed, and where the search stops the proven lower bound is the
+  result. A cell is also kept when this search to its best known value is estimated at most 60 s (`search_seconds`
+  in `tools/qcode_cells.py`: 18 ns an operator, measured 15.2-18.2 ns on random CSS codes of length 200 and 256
+  searched to weight 6 in 9.7 s and 30.7 s): +225 qubit cells (211 of best known distance 6 at lengths 192 to 255, 9 of distance 8, 5 of distance 5)
+  (7,801 in all), and +6 entanglement-assisted qubit cells (3,726). Larger distances would need a far larger search;
+  42,335 open entries stay out. Checks: the
   five-qubit, Steane and hexacode codes and the five-qudit code over GF(3), GF(4), GF(5), GF(7), GF(8); 36 random
   codes against brute force; the C helper against the Python lister; and 65 of de Messières' codes (n - k <= 30),
   whose distances it reproduces. With this family the benchmark has 169,600 problems; with the second part of
@@ -386,7 +396,8 @@ What each family takes from its table, and what it leaves out:
   circulant and bipartite degree-diameter tables, 359,848; with Sloane's Grassmannian packings, 362,087; with the
   faster checkers for covering arrays, quantum codes and MinT's arrays over GF(2), 364,179; with the smallest known
   complete arcs in PG(2,q), 374,041; with the mutually orthogonal Latin squares, 375,768; with difference matrices
-  as certificates for them, 382,409.
+  as certificates for them, 382,409; with the low-weight search for qubit codes, 382,640; with the multi-mode
+  scheduling sets, 384,775.
 - `strongly-regular-graph` (in review for v2.2; read 15 Nov 2026): every parameter set srg(v,k,lambda,mu), v <= 1,300,
   that A. E. Brouwer's table (aeb.win.tue.nl/graphs/srg, 26 pages) marks '?': no graph is known and none has been ruled
   out. A parameter set and its complement are one row pair of the table and one cell here (a graph settles both); 65
@@ -498,6 +509,18 @@ What each family takes from its table, and what it leaves out:
   pair of symbols marked in an array of N^2 stamps) and checks difference matrices given after a line "group n_1 ...
   n_r"; `fetch.sh` pins eight of Rosin's published sets, which certify the best known values of `mols-22`, `mols-144`
   and `mols-486`.
+- `multi-mode-scheduling` (in review for v2.2; read 15 Nov 2026): the multi-mode resource-constrained project
+  scheduling problem (each activity runs in one of its modes, with its duration and its demands for renewable and
+  nonrenewable resources). The open instances of MMLIB50, MMLIB100 and MMLIB+ (V. Van Peteghem and M. Vanhoucke,
+  2014): the best known makespan is the smallest upper bound of Solutions Update's dataset files (MM50_7, MM100_6,
+  MMplus_2), its best known solutions files and the spreadsheet of the MMLIB release v2.1 (July 2026), the lower bound
+  the largest; 55, 115 and 1,965 open instances, 2,135 cells (the site's table of September 2026 counts 54, 114 and
+  1,965; the two differences could not be identified, so all are kept). `rcpsp_check.py mm` reads the PSPLIB
+  multi-mode format and a schedule of modes and start times (also in the layout of Solutions Update's solutions
+  files), checks the nonrenewable totals of the chosen modes and then precedences and renewable capacities exactly.
+  `tests/test_mmrcpsp.py`: 300 random instances against an independent check, red controls, and, with the instances
+  unpacked under `instances/mmrcpsp/`, 40 published best known solutions of open cells that certify their values. The
+  Boctor sets are left out (their instance files are not in the release).
 - `project-scheduling`: every instance of the sets with open instances whose best known makespan is above its lower
   bound and which the site does not mark optimal; the open counts match the site's own table of November 2026. The
   highRD, lowRU and 1k variants are not read: their dataset files date from April 2021, many of their upper bounds are
@@ -531,7 +554,9 @@ prints its exact result and exits 0 only for a valid certificate.
   pair compared (in C above 3,000 words).
 - `qcode_check.py Q N K FILE [--ebits C]`: the minimum distance of an additive quantum code [[N,K]] over GF(Q) from its
   stabilizer matrix (commutation, size, MacWilliams in exact integers; a C helper lists large stabilizers), or of an
-  entanglement-assisted code [[N,K;C]] from generators that need not commute.
+  entanglement-assisted code [[N,K;C]] from generators that need not commute; for qubit codes too large to list, a
+  low-weight search by meeting in the middle (`qcode_low.c`; --search-limit), whose stopping weight is a proven lower
+  bound.
 - `ramsey_check S T FILE`: a two-colouring of K_n as an n x n 0/1 matrix (1 red, 0 blue) has no red K_S and no blue
   K_T (Bron-Kerbosch with Tomita's pivot and a colouring bound; n <= 2048).
 - `sph_check.py FILE D N`: the largest cosine between N points on the sphere in R^D, in 50-digit decimal arithmetic.
@@ -585,7 +610,8 @@ The checkers added in v2.0, one per new family, also end with `RESULT v`:
   GF(4), GF(8) and GF(9) are written as integers whose base-p digits are polynomial coefficients modulo the Conway
   polynomials x^2 + x + 1, x^3 + x + 1 and x^2 + 2x + 2.
 - `rcpsp_check.py FORMAT INSTANCE [RESOURCES PROFILE] SCHEDULE`: a schedule (start times) for a resource-constrained
-  project in Patterson (rcp), PSPLIB (sm) or NetRes (rcp+res) format: precedences, and every resource at every moment.
+  project in Patterson (rcp), PSPLIB (sm) or NetRes (rcp+res) format: precedences, and every resource at every moment;
+  in the multi-mode format mm, modes and start times (nonrenewable totals, then the same checks).
 
 `covering_check.py` changed in v2.0, with the same command and output (and a last line `RESULT B`). For t = m it now
 marks every t-subset of every block in a bit array by its rank, so its memory no longer grows with a set of tuples. For

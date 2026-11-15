@@ -18,7 +18,7 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from qcode_cells import LIMIT_SECONDS, check_seconds  # noqa: E402
+from qcode_cells import LIMIT_SECONDS, check_seconds, search_seconds  # noqa: E402
 
 CELL = re.compile(r'<TD[^>]*title="([^"]*)"[^>]*>\[\[(\d+),(\d+),(\d+)(?:-(\d+))?;(\d+)\]\]')
 
@@ -51,9 +51,13 @@ def main():
             if work > (2 ** 34 if Q == 2 else 2 ** 31):
                 sec = check_seconds(Q, n, r)
                 if sec is None or sec * (1 + Q ** (-2 * c)) > LIMIT_SECONDS:
-                    st["too costly to check"] += 1
-                    continue
-                st["kept with the faster lister (15 Nov 2026)"] += 1
+                    srch = search_seconds(n, lo) if Q == 2 else None
+                    if srch is None or srch > LIMIT_SECONDS:
+                        st["too costly to check"] += 1
+                        continue
+                    st["kept with the low-weight search (15 Nov 2026)"] += 1
+                else:
+                    st["kept with the faster lister (15 Nov 2026)"] += 1
             rows.append({"id": f"eaqcode-q{Q}-n{n}-k{k}-c{c}", "params": {"q": Q, "n": n, "k": k, "c": c},
                          "best": str(lo), "bound": str(hi), "holder": f"construction in the table: {title}"})
             st["kept"] += 1
@@ -88,8 +92,11 @@ def main():
         "open_rule": "every entry with c >= 1 whose lower bound is below its upper bound",
         "work_rule": "kept when the check lists at most 2^34 elements of S (qubits, n - k + c <= 34) or 2^31 lines through the "
                      "origin (qutrits, n - k + c <= 20); from 15 Nov 2026 also when the estimated check with the faster "
-                     "lister (S and its isotropic part; the measured time model of tools/qcode_cells.py) takes at most 60 s",
-        "left_out": "; ".join(f"q = {Q}: " + ", ".join(f"{v} {k}" for k, v in st.items() if k not in ("entries", "kept", "kept with the faster lister (15 Nov 2026)"))
+                     "lister (S and its isotropic part; the measured time model of tools/qcode_cells.py) takes at most 60 s; "
+                     "for qubits also when the low-weight search of qcode_check.py (qcode_low.c; search_seconds in "
+                     "tools/qcode_cells.py) to the best known value is estimated at most 60 s",
+        "left_out": "; ".join(f"q = {Q}: " + ", ".join(f"{v} {k}" for k, v in st.items() if k not in ("entries", "kept", "kept with the faster lister (15 Nov 2026)",
+                                                                                      "kept with the low-weight search (15 Nov 2026)"))
                               for Q, st in stats.items()),
         "page_sha256": shas,
         "cells": "cells.jsonl", "count": len(rows), "quantavane_records": 0, "single_problems_left_out": 0,

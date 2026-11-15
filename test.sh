@@ -348,6 +348,10 @@ t mols-144 certs/mols/mols_144_14.txt "does not improve,"
 t mols-486 certs/mols/mols_486_09.txt "does not improve,"
 sed '$d' certs/mols/mols_022_04.txt > certs/mols/control_row_missing.txt
 t mols-22 certs/mols/control_row_missing.txt "NOT CERTIFIED,"
+# v2.2: rcpsp_check.py mm (the family multi-mode-scheduling): 300 random multi-mode instances against an independent
+# check, red controls; with the MMLIB instances and Solutions Update's best known solutions under instances/mmrcpsp/,
+# 40 published solutions of open cells certify their best known makespans
+python3 -I tests/test_mmrcpsp.py || status=1
 python3 -I tests/sample_cells.py || status=1
 if python3 -I obb.py index > /dev/null; then echo "ok    index.json matches the files"; else echo "FAIL  index.json"; status=1; fi
 exit $status

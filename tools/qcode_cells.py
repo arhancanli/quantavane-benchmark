@@ -18,6 +18,7 @@ OUTSIDE.json lists codes published outside the table after its last change, as {
 cell whose outside code reaches the table's upper bound is closed and left out; otherwise the cell's best known value
 is the outside code's distance when larger, credited to its source, with the table's value named."""
 import collections
+import math
 import glob
 import hashlib
 import json
@@ -54,6 +55,28 @@ def check_seconds(Q, n, r):
     elements = Q ** r if PRIME[Q] == 2 else (Q ** r - 1) // 2
     # x 1.05 on top of rates taken from full runs
     return 1.05 * (elements * ns * 1e-9 + macwilliams_seconds(n))
+
+
+# the low-weight search of qcode_check.py for qubits (qcode_low.c), 15 Nov 2026: weight by weight, C(n,a) 3^a + C(n,b) 3^b
+# operators (a = ceil(w/2) <= 4, at most SEARCH_LIMIT), the first half in passes of at most SEARCH_MEM; 15.2 to 18.2
+# ns per operator visited, measured on random CSS codes of length 200 and 256 searched to weight 6 (9.7 s and 30.7 s
+# wall clock under load); the estimate takes 18 ns, 1 s of start-up and a factor 1.15
+SEARCH_LIMIT, SEARCH_MEM, SEARCH_NS = 4e8, 2 ** 23, 18.0
+
+
+def search_seconds(n, d):
+    """Estimated time of the low-weight search on a qubit code of length n and distance d + 1: every weight up to d
+    must be searched (else None), and weight d + 1 when the limit allows it."""
+    visits = 0.0
+    for w in range(1, d + 2):
+        a, b = (w + 1) // 2, w // 2
+        na, nb = math.comb(n, a) * 3 ** a, math.comb(n, b) * 3 ** b
+        if a > 4 or na + nb > SEARCH_LIMIT:
+            if w <= d:
+                return None
+            break
+        visits += (int(na / SEARCH_MEM) + 1) * (na + nb)
+    return 1.15 * (1.0 + visits * SEARCH_NS * 1e-9)
 
 
 def kept(Q, n, k):
@@ -100,10 +123,16 @@ def main():
         if o and o["d"] >= hi:
             st["closed outside the table"] += 1
             continue
+        best = max(lo, o["d"]) if o else lo
+        by_search = False
         if not kept(Q, n, k):
-            st["too costly to check"] += 1
-            continue
-        if work(Q, n - k) > (WORK2 if PRIME[Q] == 2 else WORKODD):
+            sec = search_seconds(n, best) if Q == 2 else None
+            if sec is None or sec > LIMIT_SECONDS:
+                st["too costly to check"] += 1
+                continue
+            st["kept with the low-weight search (15 Nov 2026)"] += 1
+            by_search = True
+        if work(Q, n - k) > (WORK2 if PRIME[Q] == 2 else WORKODD) and not by_search:
             st["kept with the faster lister (15 Nov 2026)"] += 1
         cell = {"id": f"qcode-q{Q}-n{n}-k{k}", "params": {"q": Q, "n": n, "k": k, "tq": Q * Q}}
         if o and o["d"] > lo:
@@ -168,7 +197,7 @@ def main():
                      "generators; GF(3) in bit planes) takes at most 60 s: the elements listed times the time per "
                      "element measured for Q and the length (tools/qcode_cells.py, NS_PER), plus the MacWilliams "
                      "step. That admits n - k = 35 for all qubit lengths and 36 for lengths up to 64, n - k = 18 "
-                     "over GF(4) for lengths up to 64, and n - k = 21 to 23 over GF(3) (23 for lengths up to 64)",
+                     "over GF(4) for lengths up to 64, and n - k = 21 to 23 over GF(3) (23 for lengths up to 64); from 15 Nov 2026, for qubits whose stabilizer is too large to list, also when the low-weight search of qcode_check.py (qcode_low.c: every weight up to the best known value, met in the middle, with a = ceil(w/2) <= 4 and at most 4 x 10^8 operators a weight) is estimated at most 60 s (search_seconds: operators visited x 18 ns, + 1 s, x 1.15)",
         "left_out": left,
         "outside_sources": sorted({o["source"] for o in outside.values()}),
         "page_sha256": shas,

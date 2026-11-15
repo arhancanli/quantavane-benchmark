@@ -1,6 +1,6 @@
 {
  "benchmark_version": "2.1",
- "problems": 382409,
+ "problems": 384775,
  "by_family": {
   "bipartite-degree-diameter": 32,
   "cage": 40,
@@ -18,7 +18,7 @@
   "covering-design": 61404,
   "degree-diameter": 57,
   "difference-set": 102628,
-  "ea-quantum-code": 3720,
+  "ea-quantum-code": 3726,
   "erdos-problem": 2,
   "flexible-job-shop": 53,
   "golomb-ruler": 39972,
@@ -32,6 +32,7 @@
   "lj-cluster": 137,
   "matrix-multiplication": 2,
   "mols": 8368,
+  "multi-mode-scheduling": 2135,
   "multicolour-ramsey": 14,
   "no-three-in-line": 2,
   "ordered-orthogonal-array": 5075,
@@ -39,7 +40,7 @@
   "polygon-circle-packing": 1106,
   "project-scheduling": 59170,
   "projective-plane": 1,
-  "quantum-code": 7576,
+  "quantum-code": 7801,
   "ramsey": 133,
   "schur": 4,
   "shannon-capacity": 1,
@@ -189,8 +190,8 @@
    "family": "ea-quantum-code",
    "path": "families/ea-quantum-code/cells.jsonl",
    "definition": "families/ea-quantum-code/family.json",
-   "count": 3720,
-   "sha256": "70d64f583428f0401cb72c0ec81e1a5c184e617e437af2ad8f10ddba545411bc",
+   "count": 3726,
+   "sha256": "3997cd92281a49a269cf7edf47f138eef92f49f43b145805b8ccde92ce11fc1c",
    "keeper": "M. Grassl, bounds on the minimum distance of entanglement-assisted quantum codes (eaqecc.codetables.de)",
    "read": "2026-11-15",
    "checker": "qcode_check.py"
@@ -285,6 +286,17 @@
   },
   {
    "kind": "family",
+   "family": "multi-mode-scheduling",
+   "path": "families/multi-mode-scheduling/cells.jsonl",
+   "definition": "families/multi-mode-scheduling/family.json",
+   "count": 2135,
+   "sha256": "5fa9608be93309c34be2428ce7754fb577f7f4e3fbf2120136984396674f8148",
+   "keeper": "Solutions Update (solutionsupdate.ugent.be), M. Vanhoucke and J. Coelho, OR&S group, Ghent University, with the MMLIB library (V. Van Peteghem and M. Vanhoucke)",
+   "read": "2026-11-15",
+   "checker": "rcpsp_check.py"
+  },
+  {
+   "kind": "family",
    "family": "ordered-orthogonal-array",
    "path": "families/ordered-orthogonal-array/cells.jsonl",
    "definition": "families/ordered-orthogonal-array/family.json",
@@ -332,8 +344,8 @@
    "family": "quantum-code",
    "path": "families/quantum-code/cells.jsonl",
    "definition": "families/quantum-code/family.json",
-   "count": 7576,
-   "sha256": "f29340cef1010410342acc26af41e5f20589c8281c786c2d735573483cf68637",
+   "count": 7801,
+   "sha256": "995c8dd46eb9891c18bc53127da83559f049a2c9fceeafccfb403ea92529df47",
    "keeper": "M. Grassl, bounds on the minimum distance of quantum codes (codetables.de)",
    "read": "2026-11-15",
    "checker": "qcode_check.py"

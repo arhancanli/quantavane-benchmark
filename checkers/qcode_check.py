@@ -1,7 +1,7 @@
 """Exact minimum distance of an additive (stabilizer) quantum code [[N,K]] over GF(Q), Q in {2, 3, 4, 5, 7, 8}
 (standard library only; a C compiler makes large codes faster).
 
-  python3 -I qcode_check.py Q N K FILE [--ebits C] [--max-work W] [--python]
+  python3 -I qcode_check.py Q N K FILE [--ebits C] [--max-work W] [--search-limit L] [--python]
 
 FILE is a stabilizer matrix: one generator per line, 2N elements of GF(Q), the N "X" entries then the N "Z" entries
 (a '|' between the halves is allowed), as integers 0..Q-1 separated by spaces or commas, or as digits with no
@@ -33,6 +33,14 @@ codes): the lines need not commute; they must span Q^(N-K+C) elements, and the t
 rank 2 m C over GF(p) (C pairs; its radical I = S n S' is the isotropic part). The distance is the least weight of an
 element of S' outside I when K >= 1, and the least weight of a nonzero element of S' when K = 0 (then S' = I; N + 1 when
 S' = {0}). Both S and I are listed; the work is that of listing S.
+
+For qubits (Q = 2), when S is too large to list, the distance is searched instead (C helper qcode_low.c): weight by
+weight, every operator of S' of that weight is found by meeting in the middle (its first half of qubits against its
+second half, matched by syndrome through a hash table and compared exactly) and tested for membership in I by
+reduction against an echelon basis. The first weight with an element outside I is the distance. A weight is searched
+only while the operators to list, C(N,a) 3^a + C(N,b) 3^b with a = ceil(w/2) <= 4 and b = w - a, are at most
+--search-limit (default 4 x 10^8); when the search stops at weight w, the distance is at least w, and w (a proven
+lower bound) is the result.
 
 Prints "distance D" and, as its last line, "RESULT D", and exits 0 for a valid code; exits 1 otherwise."""
 import math
@@ -266,9 +274,53 @@ def radical(F, basis, n):
     return kernel, rank
 
 
+SEARCH_LIMIT = 4 * 10 ** 8     # operators per weight in the low-weight search (qcode_low.c)
+SEARCH_MEM = 2 ** 23           # operators held in one pass of its hash table
+
+
+def low_weight(n, k, c, basis, iso, limit, mem=SEARCH_MEM):
+    """Qubit codes whose stabilizer is too large to list: the least weight of an element of S' outside I (any
+    nonzero element of S' when K = 0), searched weight by weight by meeting in the middle (qcode_low.c). Returns the
+    exit status; prints the exact distance, or the proven lower bound where the search had to stop."""
+    exe = os.path.join(HERE, "bin", "qcode_low")
+    src = os.path.join(HERE, "qcode_low.c")
+    if not os.path.exists(exe) or os.path.getmtime(exe) < os.path.getmtime(src):
+        os.makedirs(os.path.dirname(exe), exist_ok=True)
+        subprocess.run(["cc", "-O3", "-o", exe, src], check=True)
+    def bits(v):                    # v interleaves X_i, Z_i; the helper takes the n X bits, then the n Z bits
+        return "".join(map(str, v[0::2])) + "".join(map(str, v[1::2]))
+    text = f"{n} {len(basis)} {len(iso)} {1 if k == 0 else 0} {limit} {mem}\n"
+    text += "".join(bits(v) + "\n" for v in basis) + "".join(bits(v) + "\n" for v in iso)
+    r = subprocess.run([exe], input=text, capture_output=True, text=True)
+    out = r.stdout.strip().splitlines()
+    for line in out[:-1]:
+        print("  " + line)
+    last = out[-1] if out else "FAIL no output from qcode_low"
+    if r.returncode or not last.startswith(("FOUND ", "NONE ")):
+        print(f"low-weight search failed: {last}")
+        return 1
+    w = int(last.split()[1])
+    if last.startswith("FOUND"):
+        print(f"low-weight search: the least weight of an element of S' outside I is {w}")
+        print(f"distance {w}")
+    elif w == n + 1:
+        if k:
+            print("internal error: S' has no element outside I")
+            return 1
+        print(f"distance {w}")
+    else:
+        print(f"low-weight search: no element of S' outside I has weight below {w}; weight {w} is beyond the search "
+              f"limit, so {w} is a proven lower bound on the distance and is the score")
+        print(f"distance at least {w}")
+    print(f"RESULT {w}")
+    return 0
+
+
 def main(argv=None):
     argv = list(sys.argv[1:] if argv is None else argv)
-    max_work, force_python, ebits = 2 ** 37, False, 0
+    max_work, force_python, ebits, search_limit = 2 ** 37, False, 0, SEARCH_LIMIT
+    if "--search-limit" in argv:
+        i = argv.index("--search-limit"); search_limit = int(float(argv[i + 1])); del argv[i:i + 2]
     if "--max-work" in argv:
         i = argv.index("--max-work"); max_work = int(float(argv[i + 1])); del argv[i:i + 2]
     if "--ebits" in argv:
@@ -322,7 +374,14 @@ def main(argv=None):
         work = (p ** r) if p == 2 else (p ** r - 1) // (p - 1)
         print(f"stabilizer code [[{n},{k}]] over GF({q}): {r} independent generators over GF({p}), all commuting; "
               f"{work} elements of S to list")
+    if work > max_work and r == 2 * n * m:
+        # S is all of GF(p)^(2nm): S' = {0}, so only K = 0 is possible and the distance is N + 1 by convention
+        print(f"S' = {{0}}: distance {n + 1}")
+        print(f"RESULT {n + 1}")
+        return 0
     if work > max_work:
+        if q == 2 and search_limit:
+            return low_weight(n, k, c, basis, iso, search_limit)
         print(f"too large to check here (more than {max_work:.3g} steps)")
         return 2
 

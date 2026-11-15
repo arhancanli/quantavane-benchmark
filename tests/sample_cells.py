@@ -192,6 +192,21 @@ def test_quantum_code(n, rng):
         expect(f"red   {c['id']} (a generator dropped)", obb(c["id"], bad), "NOT CERTIFIED,")
 
 
+def test_quantum_code_search(n, rng):
+    """Qubit cells checked by the low-weight search (their stabilizer is too large to list): single-qubit Z
+    stabilizers Z_1, ..., Z_(n-k) leave X on a free qubit as a logical operator of weight 1, which the search finds
+    at weight 1; with a generator dropped the size is wrong."""
+    big = [c for c in family_cells("quantum-code") if c["params"]["q"] == 2 and c["params"]["n"] - c["params"]["k"] > 37]
+    for c in rng.sample(big, min(n, len(big))):
+        length, k = c["params"]["n"], c["params"]["k"]
+        lines = [" ".join(["0"] * length) + " | " + " ".join("1" if t == i else "0" for t in range(length))
+                 for i in range(length - k)]
+        expect(f"sample {c['id']} single-qubit Z stabilizers (low-weight search)",
+               obb(c["id"], write(f"{c['id']}.txt", lines)), "does not improve,")
+        expect(f"red   {c['id']} (a generator dropped)", obb(c["id"], write(f"{c['id']}_red.txt", lines[:-1])),
+               "NOT CERTIFIED,")
+
+
 def test_ea_quantum_code(n, rng):
     """Z_1, ..., Z_(n-k) and X_1, ..., X_c: c pairs that do not commute and n-k-c isotropic generators, a valid
     entanglement-assisted code [[n,k;c]] of distance 1 (or n + 1 when it has no nonzero logical element); with one
@@ -854,6 +869,37 @@ def test_mols(n, rng):
                obb(c["id"], write(f"{c['id']}_dm_red.txt", [head] + rows + [rows[1]])), "NOT CERTIFIED,")
 
 
+def test_multi_mode_scheduling(n, rng):
+    """With the MMLIB instances under instances/mmrcpsp/ (not in the repository): every activity in its mode of least
+    nonrenewable demand, the activities one after the other: feasible when those modes fit the nonrenewable
+    capacities (an independent sum here predicts the verdict), far above the best known makespan; every start at 0 is
+    refused."""
+    base = os.path.join(ROOT, "instances", "mmrcpsp")
+    if not os.path.isdir(base):
+        print("skip  multi-mode-scheduling: no instances under instances/mmrcpsp/")
+        return
+    sys.path.insert(0, CHECKERS)
+    import rcpsp_check
+    for c in rng.sample(family_cells("multi-mode-scheduling"), n):
+        inst = os.path.join(base, c["params"]["set"], c["params"]["file"])
+        if not os.path.exists(inst):
+            print(f"skip  {c['id']}: {inst} missing")
+            continue
+        nn, rcap, ncap, succ, modes = rcpsp_check.read_mm(inst)
+        pick = [min(range(len(modes[j])), key=lambda m: sum(modes[j][m][2])) + 1 for j in range(nn)]
+        starts, t = [], 0
+        for j in range(nn):
+            starts.append(t)
+            t += modes[j][pick[j] - 1][0]
+        fits = all(sum(modes[j][pick[j] - 1][2][k] for j in range(nn)) <= ncap[k] for k in range(len(ncap))) and all(
+            all(x <= cap for x, cap in zip(modes[j][pick[j] - 1][1], rcap)) for j in range(nn))
+        want = "does not improve," if fits else "NOT CERTIFIED,"
+        expect(f"sample {c['id']} a chain in least-nonrenewable modes", obb(c["id"], write(f"{c['id']}.txt", [" ".join(
+            map(str, pick + starts))])), want)
+        expect(f"red   {c['id']} (every start at 0)", obb(c["id"], write(f"{c['id']}_red.txt", [" ".join(
+            map(str, pick + [0] * nn))])), "NOT CERTIFIED,")
+
+
 def main():
     n = int(sys.argv[1]) if len(sys.argv) > 1 else 3
     seed = int(sys.argv[2]) if len(sys.argv) > 2 else 2026
@@ -867,6 +913,7 @@ def main():
                        ("circle-packing", test_circle_packing),
                        ("growing-circle-packing", test_growing_circle_packing),
                        ("quantum-code", test_quantum_code),
+                       ("quantum-code", test_quantum_code_search),
                        ("circle-packing-sum", test_circle_packing_sum),
                        ("polygon-circle-packing", test_polygon_circle_packing),
                        ("ea-quantum-code", test_ea_quantum_code),
@@ -886,7 +933,8 @@ def main():
                        ("unequal-circle-packing", test_unequal_circle_packing),
                        ("grassmannian-packing", test_grassmannian_packing),
                        ("complete-arc", test_complete_arc),
-                       ("mols", test_mols)):
+                       ("mols", test_mols),
+                       ("multi-mode-scheduling", test_multi_mode_scheduling)):
         if os.path.exists(os.path.join(ROOT, "families", name, "cells.jsonl")):
             test(n, rng)
         else:

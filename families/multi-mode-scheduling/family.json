@@ -1,0 +1,75 @@
+{
+ "family": "multi-mode-scheduling",
+ "title": "Multi-mode resource-constrained project scheduling (MMRCPSP), shortest makespan",
+ "added": "2.2",
+ "objective": "minimize",
+ "id_prefixes": [
+  "mmrcpsp-"
+ ],
+ "keeper": "Solutions Update (solutionsupdate.ugent.be), M. Vanhoucke and J. Coelho, OR&S group, Ghent University, with the MMLIB library (V. Van Peteghem and M. Vanhoucke)",
+ "page": "http://solutionsupdate.ugent.be/mrcpsp",
+ "cell_url": "http://solutionsupdate.ugent.be/",
+ "read": "2026-11-15",
+ "revision": "Solutions Update dataset files MM50_7.csv, MM100_6.csv and MMplus_2.csv with their best known solutions files, read 15 Nov 2026 18:09 UTC, and the MMLIB release v2.1 (GitHub, July 2026; SHA-256 of each in source_sha256)",
+ "template": {
+  "title": "MMRCPSP instance {file} ({set})",
+  "statement": "Choose a mode for every activity of instance {file} of the {set} set and schedule the activities so that every activity starts after its predecessors finish, no renewable resource is used beyond its capacity at any time and the chosen modes use no nonrenewable resource beyond its capacity, finishing as early as possible (the instance file is in the MMLIB release, MMLIB_v2_1.zip).",
+  "submission": "Text file: the mode of every activity (from 1) and then the start time of every activity, in the instance's order, integers separated by spaces, commas or semicolons; the dummy first and last activities' modes may be left out, as in Solutions Update's best known solutions files.",
+  "args": [
+   "mm",
+   "instances/mmrcpsp/{set}/{file}"
+  ]
+ },
+ "checker": {
+  "program": "rcpsp_check.py",
+  "value": "result"
+ },
+ "score": "the makespan (smaller is better)",
+ "best_text": "The best known makespan is {best} ({holder}); a feasible schedule that finishes earlier improves it.",
+ "bound_kind": "lower bound",
+ "bound_source": "the largest of the lower bounds in the set's dataset file and in the MMLIB spreadsheet",
+ "holder_unknown": "not named in the dataset file",
+ "holder_sources": "the reference of the upper bound in the set's dataset file (its list of references); a smaller makespan in the best known solutions file or the spreadsheet, with that source",
+ "open_rule": "every instance whose best known makespan (the smallest upper bound of the dataset file, the best known solutions file and the MMLIB spreadsheet) is above its lower bound (the largest of the dataset file's lower bound and optimal value and the spreadsheet's lower bound), and which the best known solutions file does not mark optimal",
+ "left_out": "the closed instances; the Boctor sets (their instance files are not in the MMLIB release); the site's table of September 2026 counts 54 and 114 open instances in MMLIB50 and MMLIB100 where the dataset files give 55 and 115 (the difference could not be identified, so all are kept)",
+ "instances": "Instance files are not copied here: unpack MMLIB50.zip, MMLIB100.zip and MMLIB+.zip from MMLIB_v2_1.zip (the library's GitHub release) under instances/mmrcpsp/, so that instances/mmrcpsp/MMLIB50/J501_1.mm exists.",
+ "source_sha256": {
+  "MMLIB_v2_1.zip": "4f6f5318fcbc01943ec74dfbf8b16afc25b65759963666f631d6cdd2f242fecd",
+  "MM50_7.csv": "ed7d3b127ae890da8fc1e247ff875a37687180ce513675c196faa2406090ead0",
+  "MM50_7_BKS.csv": "9bfd871d7f469a62f1fc7196a4960e0b057035ab3cf2263cdb9250c4517f112a",
+  "MM100_6.csv": "1dcda2b47ae3a201e5534a0fb48fe8d2710ac44cf3000e83a7afe1f6cfa7002d",
+  "MM100_6_BKS.csv": "58eaa14a3db6c26a0e5fdc94e70f6483fe1ad7c5b8a9567f107491e6bd3b7ed8",
+  "MMplus_2.csv": "f76dbba5f90f1cef0072ed1c488235aa426233b96d80cb84c1d3ad2d60494e86",
+  "MMplus_2_BKS.csv": "21378ab18d8cd136d9dda24c7a186ecc09d0cacfbbd99a05533b14233c86f70d"
+ },
+ "counts": {
+  "MMLIB50": {
+   "instances": 540,
+   "closed": 485,
+   "open": 55,
+   "best from the spreadsheet": 0,
+   "lower bound from the spreadsheet": 0,
+   "open in the site's table (September 2026)": 54
+  },
+  "MMLIB100": {
+   "instances": 540,
+   "closed": 425,
+   "open": 115,
+   "best from the spreadsheet": 0,
+   "lower bound from the spreadsheet": 0,
+   "open in the site's table (September 2026)": 114
+  },
+  "MMLIB+": {
+   "instances": 3240,
+   "closed": 1275,
+   "open": 1965,
+   "best from the spreadsheet": 0,
+   "lower bound from the spreadsheet": 0,
+   "open in the site's table (September 2026)": 1965
+  }
+ },
+ "cells": "cells.jsonl",
+ "count": 2135,
+ "quantavane_records": 0,
+ "single_problems_left_out": 0
+}

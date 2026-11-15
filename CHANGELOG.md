@@ -18,6 +18,48 @@ value can change within a version when its source table changes; the file then s
   some of them are public on Zenodo. Their values stay as read on 8 Nov until a rule for cells the table does not list is
   chosen.
 
+## Next (in review): the family `multi-mode-scheduling` (15 Nov 2026)
+
+- `checkers/rcpsp_check.py`: the format mm (PSPLIB multi-mode, as in MMLIB): modes with durations and renewable and
+  nonrenewable demands; a schedule gives the mode of every activity (or of the real activities only, as in Solutions
+  Update's solutions files) and the start times; nonrenewable totals, precedences and renewable capacities are checked
+  exactly. Section titles are now matched with spaces ignored ("RESOURCE AVAILABILITIES").
+- `tests/test_mmrcpsp.py` (run by `test.sh`): 300 random multi-mode instances, schedules built serially or broken,
+  against an independent check at every integer time; red controls (a missing mode, a nonrenewable or renewable
+  resource exceeded, a start before a predecessor finishes, a wrong count); with the instances and solutions files
+  under `instances/mmrcpsp/`, 40 published best known solutions of open cells certify their values through obb.py and
+  fail with every start at 0. `tests/sample_cells.py`: a chain of least-nonrenewable modes for sampled cells.
+- `families/multi-mode-scheduling` (2,135 cells; `tools/mmrcpsp_cells.py`): Solutions Update's dataset and solutions
+  files for MMLIB50, MMLIB100 and MMLIB+ (read 15 Nov 2026) and the MMLIB release v2.1 spreadsheet: 55 + 115 + 1,965
+  open instances (the site's table of September 2026: 54, 114, 1,965).
+- index.json: 384,775 problems.
+
+## Next (in review): a low-weight search for qubit codes too large to list (15 Nov 2026)
+
+- `checkers/qcode_low.c` (new) and `checkers/qcode_check.py`: for qubits (Q = 2) whose stabilizer is above
+  --max-work, the distance is searched weight by weight: every operator of weight w in S' (the symplectic complement
+  of the generators) is found by meeting in the middle, its first ceil(w/2) qubits against the rest, matched through
+  a linear 64-bit hash of the syndrome (random keys, fixed seed; in passes of at most 2^23 entries) and compared
+  exactly; each is tested for membership in I (S, or S n S' for entanglement-assisted codes) by reduction against an
+  echelon basis. The first weight with an operator outside I is the distance (K = 0: any nonzero operator); a weight is
+  searched while ceil(w/2) <= 4 and at most --search-limit operators (default 4 x 10^8) are listed, and where the
+  search stops its weight is a proven lower bound and the result. When S is all of GF(p)^(2nm), S' = {0} and the
+  distance is N + 1 at once. Measured: random CSS codes [[200,100]] and [[256,136]] searched to weight 6 in 9.7 s and
+  30.7 s (15.2-18.2 ns an operator).
+- `tests/test_qcode.py`: the search (forced with --max-work 0) gives the listed distance on 80 random qubit stabilizer
+  codes (n = 4 to 13) and 176 random entanglement-assisted qubit codes; with --search-limit 40 the result never
+  exceeds the distance; [[5,1,3]] and Shor's degenerate [[9,1,3]] (weight-2 stabilizers skipped) give 3; red
+  controls (a generator dropped, generators that do not commute). `tests/sample_cells.py`: sampled search-route cells
+  with single-qubit Z stabilizers (distance 1 found at weight 1) and a generator dropped.
+- `families/quantum-code` and `families/ea-quantum-code`: a qubit cell whose stabilizer is too large to list is also
+  kept when the search to its best known value is estimated at most 60 s (`search_seconds` in
+  `tools/qcode_cells.py`: operators visited x 18 ns, + 1 s, x 1.15): +225 quantum-code cells (211 of best known
+  distance 6 at lengths 192 to 255, 9 of distance 8, 5 of distance 5; 7,801 in all) and +6 ea-quantum-code cells
+  (3,726). The search reaches weight 8 only up to about length 70 and weight 6 up to 256, so the other 42,335 open
+  quantum-code entries and 2,749 EA qubit entries stay out.
+- `families/mols`: the left-out note no longer uses internal wording.
+- index.json: 382,640 problems.
+
 ## Next (in review): difference matrices as certificates for `mols` (15 Nov 2026)
 
 - `checkers/mols_check.py` also takes an (N, K'; 1) difference matrix over an abelian group Z_n1 x ... x Z_nr of

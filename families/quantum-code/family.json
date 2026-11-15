@@ -40,8 +40,8 @@
   "8": "Bounds on the minimum distance of quoct quantum codes"
  },
  "open_rule": "every entry whose lower bound is below its upper bound, unless a code published outside the table reaches the upper bound",
- "work_rule": "kept when listing the stabilizer takes at most 2^34 steps (Q^(n-k), for Q = 2, 4, 8) or 2^31 steps ((Q^(n-k) - 1)/(Q - 1), for Q = 3, 5, 7): n - k at most 34 for qubits, 20 for Q = 3, 17 for Q = 4, 14 for Q = 5, 11 for Q = 7 and 11 for Q = 8; from 15 Nov 2026 also when the estimated check with the faster lister (qcode_enum.c tabulates the combinations of the last generators; GF(3) in bit planes) takes at most 60 s: the elements listed times the time per element measured for Q and the length (tools/qcode_cells.py, NS_PER), plus the MacWilliams step. That admits n - k = 35 for all qubit lengths and 36 for lengths up to 64, n - k = 18 over GF(4) for lengths up to 64, and n - k = 21 to 23 over GF(3) (23 for lengths up to 64)",
- "left_out": "Q = 2: 3693 solved, 26 closed by a code published outside the table, 24566 too costly to check; Q = 3: 1087 solved, 0 closed by a code published outside the table, 3039 too costly to check; Q = 4: 889 solved, 0 closed by a code published outside the table, 3439 too costly to check; Q = 5: 896 solved, 0 closed by a code published outside the table, 3735 too costly to check; Q = 7: 1012 solved, 0 closed by a code published outside the table, 3935 too costly to check; Q = 8: 1163 solved, 0 closed by a code published outside the table, 3846 too costly to check",
+ "work_rule": "kept when listing the stabilizer takes at most 2^34 steps (Q^(n-k), for Q = 2, 4, 8) or 2^31 steps ((Q^(n-k) - 1)/(Q - 1), for Q = 3, 5, 7): n - k at most 34 for qubits, 20 for Q = 3, 17 for Q = 4, 14 for Q = 5, 11 for Q = 7 and 11 for Q = 8; from 15 Nov 2026 also when the estimated check with the faster lister (qcode_enum.c tabulates the combinations of the last generators; GF(3) in bit planes) takes at most 60 s: the elements listed times the time per element measured for Q and the length (tools/qcode_cells.py, NS_PER), plus the MacWilliams step. That admits n - k = 35 for all qubit lengths and 36 for lengths up to 64, n - k = 18 over GF(4) for lengths up to 64, and n - k = 21 to 23 over GF(3) (23 for lengths up to 64); from 15 Nov 2026, for qubits whose stabilizer is too large to list, also when the low-weight search of qcode_check.py (qcode_low.c: every weight up to the best known value, met in the middle, with a = ceil(w/2) <= 4 and at most 4 x 10^8 operators a weight) is estimated at most 60 s (search_seconds: operators visited x 18 ns, + 1 s, x 1.15)",
+ "left_out": "Q = 2: 3693 solved, 26 closed by a code published outside the table, 24341 too costly to check; Q = 3: 1087 solved, 0 closed by a code published outside the table, 3039 too costly to check; Q = 4: 889 solved, 0 closed by a code published outside the table, 3439 too costly to check; Q = 5: 896 solved, 0 closed by a code published outside the table, 3735 too costly to check; Q = 7: 1012 solved, 0 closed by a code published outside the table, 3935 too costly to check; Q = 8: 1163 solved, 0 closed by a code published outside the table, 3846 too costly to check",
  "outside_sources": [
   "D. Bartoli, S. Marcugini, F. Pambianco, New quantum caps in PG(4,4), arXiv:0905.1059 (2009)",
   "M. de Messières, Zenodo 10.5281/zenodo.23303035 (v1, 11 Oct 2026)",
@@ -103,7 +103,7 @@
   "tables_q9_n97-100_k0-100_20261115.html": "02a1ea509915edd9a59e34681df582c39888abd4e37231b76ad7a513a94c8807"
  },
  "cells": "cells.jsonl",
- "count": 7576,
+ "count": 7801,
  "quantavane_records": 0,
  "single_problems_left_out": 0
 }

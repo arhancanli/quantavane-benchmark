@@ -30,7 +30,7 @@
  "holder_unknown": "Handbook of Combinatorial Designs (2007), Table 3.87",
  "holder_sources": "the Handbook table (constructions in its Section III.3) and literature.json",
  "open_rule": "every order n that is not a prime power, n > 6 (N(n) is known only for prime powers and n = 6), with n >= 500 or a value for n < 500 known from literature.json; a submission is the squares or a difference matrix",
- "left_out": "1273 prime powers (N(n) = n - 1); n = 10 (the single problem mols-10); 348 other orders below 500 whose current value is in the 2024 compilation, which could not be read (an owner step: the paper is open access)",
+ "left_out": "1273 prime powers (N(n) = n - 1); n = 10 (the single problem mols-10); 348 other orders below 500 whose current value is in the 2024 compilation, which could not be read (the paper is open access; to be read by hand)",
  "literature": "families/mols/literature.json",
  "source_sha256": {
   "MOLS_handbook_data.py": "a14f647482520296cc50be70d787bc0397c4ef125783521940b0ff1a86969dc3"
