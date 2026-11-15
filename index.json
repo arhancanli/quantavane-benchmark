@@ -1,6 +1,6 @@
 {
  "benchmark_version": "2.1",
- "problems": 180158,
+ "problems": 181842,
  "by_family": {
   "cage": 40,
   "cap-set": 2,
@@ -25,6 +25,7 @@
   "multicolour-ramsey": 14,
   "no-three-in-line": 2,
   "ordered-orthogonal-array": 4157,
+  "polygon-circle-packing": 1106,
   "project-scheduling": 59170,
   "projective-plane": 1,
   "quantum-code": 7141,
@@ -37,6 +38,7 @@
   "strongly-regular-graph": 3,
   "superpermutation": 4,
   "travelling-salesman": 1,
+  "unequal-circle-packing": 578,
   "van-der-waerden": 10,
   "vehicle-routing": 14,
   "weak-schur": 5
@@ -138,6 +140,17 @@
   },
   {
    "kind": "family",
+   "family": "polygon-circle-packing",
+   "path": "families/polygon-circle-packing/cells.jsonl",
+   "definition": "families/polygon-circle-packing/family.json",
+   "count": 1106,
+   "sha256": "0b1a3ae0dae53b04b097b74cc634e40c447ba6f39b245a1f59a506a77d4a2f28",
+   "keeper": "E. Specht, Packomania (packomania.com)",
+   "read": "2026-11-14",
+   "checker": "pack_alg_check.py"
+  },
+  {
+   "kind": "family",
    "family": "project-scheduling",
    "path": "families/project-scheduling/cells.jsonl",
    "definition": "families/project-scheduling/family.json",
@@ -168,6 +181,17 @@
    "keeper": "H. Cohn, table of spherical codes (spherical-codes.org)",
    "read": "2026-11-09",
    "checker": "sph_check.py"
+  },
+  {
+   "kind": "family",
+   "family": "unequal-circle-packing",
+   "path": "families/unequal-circle-packing/cells.jsonl",
+   "definition": "families/unequal-circle-packing/family.json",
+   "count": 578,
+   "sha256": "f4c2eb073a36773de203bc3ec873a4e6d8503e15764720194dac822c930bfe5a",
+   "keeper": "E. Specht, Packomania (packomania.com)",
+   "read": "2026-11-14",
+   "checker": "pack_alg_check.py"
   }
  ]
 }

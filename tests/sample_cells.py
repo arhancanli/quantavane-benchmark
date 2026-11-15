@@ -11,6 +11,7 @@ checker is tested on instances generated here in all three formats.
 
   python3 -I tests/sample_cells.py [CELLS_PER_FAMILY] [SEED]"""
 import itertools
+import math
 import json
 import os
 import random
@@ -424,6 +425,61 @@ def test_circle_packing_sum(n, rng):
         expect(f"red   {c['id']} (one radius too large)", obb(c["id"], bad), "NOT CERTIFIED,")
 
 
+def test_polygon_circle_packing(n, rng):
+    """Equal circles on a k x k grid in the square [-a/2, a/2]^2 (a = the apothem, so the square lies in the incircle):
+    valid and below the table; a centre repeated must be refused."""
+    from fractions import Fraction as Fr
+    for c in rng.sample(family_cells("polygon-circle-packing"), n):
+        sec, N = c["params"]["section"], c["params"]["n"]
+        sides = {"cpt": 5, "chx": 6, "chp": 7, "coc": 8, "cno": 9, "cdc": 10, "chd": 11, "cdd": 12, "ctd": 13,
+                 "crd": 14, "cpd": 15, "cxd": 16, "ced": 17}[sec]
+        a = Fr(int(math.cos(math.pi / sides) * 10 ** 9) - 10, 10 ** 9)          # below the apothem
+        k = 1
+        while k * k < N:
+            k += 1
+        h = a / 2
+        r = h / k
+        pts = [(-h + (2 * i + 1) * r, -h + (2 * j + 1) * r) for i in range(k) for j in range(k)][:N]
+
+        def dec(x):
+            q = x.numerator * 10 ** 30 // x.denominator if x >= 0 else -((-x.numerator) * 10 ** 30 // x.denominator)
+            sgn = "-" if q < 0 else ""
+            st = str(abs(q)).rjust(31, "0")
+            return sgn + st[:-30] + "." + st[-30:]
+        rr = Fr(int(r * 10 ** 30), 10 ** 30)
+        lines = [dec(rr)] + [f"{dec(x)} {dec(y)}" for x, y in pts]
+        good = write(f"{c['id']}.txt", lines)
+        expect(f"sample {c['id']} grid of {N} in the regular {sides}-gon", obb(c["id"], good), "does not improve,")
+        bad = write(f"{c['id']}_red.txt", lines[:-1] + [lines[1]])
+        expect(f"red   {c['id']} (a centre repeated)", obb(c["id"], bad), "NOT CERTIFIED,")
+
+
+def test_unequal_circle_packing(n, rng):
+    """Circles i = 1..N in a row, spaced by upper bounds of their radii, in a container with room to spare: valid and
+    far above the table; the container shrunk to a third must be refused."""
+    for c in rng.sample(family_cells("unequal-circle-packing"), n):
+        sec, N = c["params"]["section"], c["params"]["n"]
+        expo = {"ccir": 0.5, "ccis": -0.5, "ccic": -2 / 3, "ccib": -0.2, "csqr": 0.5, "csqs": 0.5}[sec]
+        rad = [((N / i) if sec == "csqs" else i) ** expo for i in range(1, N + 1)]
+        ub = [math.ceil(x * 10 ** 6 + 1) / 10 ** 6 for x in rad]
+        L = sum(2 * u for u in ub)
+        xs, x = [], 0.0
+        for u in ub:
+            xs.append(x + u)
+            x += 2 * u
+        if sec.startswith("cci"):
+            V = math.ceil(L / 2) + 1
+            pts = [(xi - L / 2, 0.0) for xi in xs]
+        else:
+            V = math.ceil(max(L, 2 * max(ub))) + 1
+            pts = [(xi, max(ub)) for xi in xs]
+        lines = [str(V)] + [f"{px:.7f} {py:.7f}" for px, py in pts]
+        good = write(f"{c['id']}.txt", lines)
+        expect(f"sample {c['id']} circles in a row", obb(c["id"], good), "does not improve,")
+        bad = write(f"{c['id']}_red.txt", [f"{V / 3:.6f}"] + lines[1:])
+        expect(f"red   {c['id']} (container shrunk to a third)", obb(c["id"], bad), "NOT CERTIFIED,")
+
+
 def main():
     n = int(sys.argv[1]) if len(sys.argv) > 1 else 3
     seed = int(sys.argv[2]) if len(sys.argv) > 2 else 2026
@@ -437,7 +493,9 @@ def main():
                        ("circle-packing", test_circle_packing),
                        ("growing-circle-packing", test_growing_circle_packing),
                        ("quantum-code", test_quantum_code),
-                       ("circle-packing-sum", test_circle_packing_sum)):
+                       ("circle-packing-sum", test_circle_packing_sum),
+                       ("polygon-circle-packing", test_polygon_circle_packing),
+                       ("unequal-circle-packing", test_unequal_circle_packing)):
         if os.path.exists(os.path.join(ROOT, "families", name, "cells.jsonl")):
             test(n, rng)
         else:

@@ -1,0 +1,98 @@
+{
+ "keeper": "E. Specht, Packomania (packomania.com)",
+ "page": "https://www.packomania.com/",
+ "read": "2026-11-14",
+ "revision": "the section pages read 14 Nov 2026 22:3x-22:5x +04 (SHA-256 of each page in section_info)",
+ "exact_values": false,
+ "added": "2.2",
+ "id_prefixes": [
+  "pack-"
+ ],
+ "cell_url": "https://www.packomania.com/{section}/{section}.html",
+ "holder_unknown": "not named in the section's table",
+ "holder_sources": "the reference in the last column of the section's table, from its list of references",
+ "single_problems_left_out": 0,
+ "quantavane_records": 0,
+ "cells": "cells.jsonl",
+ "checker": {
+  "program": "pack_alg_check.py",
+  "value": "result"
+ },
+ "pending_queue": "Packomania's list of pending requests (pending.html, dated 9 Nov 2026, read 14 Nov) holds unreviewed candidates for several of these sections (among them the pentagon, hexagon, heptagon, decagon, tetradecagon, pentadecagon, hexadecagon, heptadecagon and ccis); their values are not published, so a cell's best known value is the table's, and a candidate in the queue may already beat it",
+ "family": "unequal-circle-packing",
+ "title": "Circles of radii i^(1/2), i^(-1/2), i^(-2/3), i^(-1/5) in the smallest circle or square",
+ "objective": "minimize",
+ "template": {
+  "title": "Circles i = 1..{n} with the radii of Packomania section {section} in the smallest container",
+  "statement": "Place {n} non-overlapping circles, circle i of the radius given by section {section}, in the container of that section whose size V is as small as possible.",
+  "submission": "Text file: V on the first line, then {n} lines with the centres of circles 1, 2, ..., {n} in that order (decimal numbers), in the frame of checkers/pack_alg_check.py for section {section}.",
+  "args": [
+   "{section}",
+   "{n}"
+  ]
+ },
+ "variants": {
+  "ccir": {
+   "title": "Circles of radii i^(1/2), i = 1..{n}, in a circle of radius V centred at 0 (Packomania ccir)",
+   "statement": "Place {n} non-overlapping circles, circle i of radius i^(1/2), in a circle of radius V centred at 0 with V as small as possible."
+  },
+  "ccis": {
+   "title": "Circles of radii i^(-1/2), i = 1..{n}, in a circle of radius V centred at 0 (Packomania ccis)",
+   "statement": "Place {n} non-overlapping circles, circle i of radius i^(-1/2), in a circle of radius V centred at 0 with V as small as possible."
+  },
+  "ccic": {
+   "title": "Circles of radii i^(-2/3), i = 1..{n}, in a circle of radius V centred at 0 (Packomania ccic)",
+   "statement": "Place {n} non-overlapping circles, circle i of radius i^(-2/3), in a circle of radius V centred at 0 with V as small as possible."
+  },
+  "ccib": {
+   "title": "Circles of radii i^(-1/5), i = 1..{n}, in a circle of radius V centred at 0 (Packomania ccib)",
+   "statement": "Place {n} non-overlapping circles, circle i of radius i^(-1/5), in a circle of radius V centred at 0 with V as small as possible."
+  },
+  "csqr": {
+   "title": "Circles of radii i^(1/2), i = 1..{n}, in the square [0,V]^2 (Packomania csqr)",
+   "statement": "Place {n} non-overlapping circles, circle i of radius i^(1/2), in the square [0,V]^2 with V as small as possible."
+  },
+  "csqs": {
+   "title": "Circles of radii (N/i)^(1/2), i = 1..{n}, in the square [0,V]^2 (Packomania csqs)",
+   "statement": "Place {n} non-overlapping circles, circle i of radius (N/i)^(1/2), in the square [0,V]^2 with V as small as possible."
+  }
+ },
+ "score": "the size V of the container (smaller is better)",
+ "best_text": "The best known container in Packomania's table has size {best} ({holder}); a valid packing in a smaller one improves it.",
+ "open_rule": "every listed N of the sections ccir, ccis, ccic and ccib (N = 5..100) and every N >= 4 of csqr and csqs whose value is not in bold (none is)",
+ "left_out": "ccir: 0 proven, 0 small N; ccis: 0 proven, 0 small N; ccic: 0 proven, 0 small N; ccib: 0 proven, 0 small N; csqr: 0 proven, 3 small N; csqs: 0 proven, 3 small N; the section csqc, whose radius and ratio columns disagree for some N",
+ "section_info": {
+  "ccir": {
+   "radii": "i^(1/2)",
+   "container": "a circle of radius V centred at 0",
+   "page_sha256": "b70974d01daf987d4d14e3322668f66ee3576c353f5a942c9f5ce10c6fd243c4"
+  },
+  "ccis": {
+   "radii": "i^(-1/2)",
+   "container": "a circle of radius V centred at 0",
+   "page_sha256": "215bc416f9eb83fee93f30639d92808d1ee09211de39942ef8e48d51873510fa"
+  },
+  "ccic": {
+   "radii": "i^(-2/3)",
+   "container": "a circle of radius V centred at 0",
+   "page_sha256": "745309c891d531c43af2109a720e2d5d0abe9b6e13b3d4b6736fb7ccec21e70f"
+  },
+  "ccib": {
+   "radii": "i^(-1/5)",
+   "container": "a circle of radius V centred at 0",
+   "page_sha256": "af9c7e9bf465ba31fae83f23bd3b8f8b73c542e06611c863e6a732ac17531c77"
+  },
+  "csqr": {
+   "radii": "i^(1/2)",
+   "container": "the square [0,V]^2",
+   "page_sha256": "5c34d80661f42c449629d8cfdefdf3996b7e0d02368a0cf9c8094ef6fb2a1b37"
+  },
+  "csqs": {
+   "radii": "(N/i)^(1/2)",
+   "container": "the square [0,V]^2",
+   "page_sha256": "2f4998dce33c9152328db43adea4fb3e5325c6b6c4b42edacdbccdaf967baa38"
+  }
+ },
+ "frames": "checked on Packomania's coordinate files ccir20, ccis20, ccic20, ccib20, csqr20 and csqs20 (Packomania's ratio is V; for csqs it is the side over the smallest radius, hence the radii (N/i)^(1/2)): each passes with the coordinates spread by 10^-9 and V 10^-8 above the listed value, and fails 10^-8 below",
+ "count": 578
+}

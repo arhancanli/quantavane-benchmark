@@ -1,0 +1,148 @@
+{
+ "keeper": "E. Specht, Packomania (packomania.com)",
+ "page": "https://www.packomania.com/",
+ "read": "2026-11-14",
+ "revision": "the section pages read 14 Nov 2026 22:3x-22:5x +04 (SHA-256 of each page in section_info)",
+ "exact_values": false,
+ "added": "2.2",
+ "id_prefixes": [
+  "pack-"
+ ],
+ "cell_url": "https://www.packomania.com/{section}/{section}.html",
+ "holder_unknown": "not named in the section's table",
+ "holder_sources": "the reference in the last column of the section's table, from its list of references",
+ "single_problems_left_out": 0,
+ "quantavane_records": 0,
+ "cells": "cells.jsonl",
+ "checker": {
+  "program": "pack_alg_check.py",
+  "value": "result"
+ },
+ "pending_queue": "Packomania's list of pending requests (pending.html, dated 9 Nov 2026, read 14 Nov) holds unreviewed candidates for several of these sections (among them the pentagon, hexagon, heptagon, decagon, tetradecagon, pentadecagon, hexadecagon, heptadecagon and ccis); their values are not published, so a cell's best known value is the table's, and a candidate in the queue may already beat it",
+ "family": "polygon-circle-packing",
+ "title": "Equal circles in a regular polygon with the largest radius",
+ "objective": "maximize",
+ "template": {
+  "title": "{n} equal circles in the regular polygon of Packomania section {section}",
+  "statement": "Place {n} non-overlapping circles of equal radius in the regular polygon of section {section} (circumradius 1) so that the radius is as large as possible.",
+  "submission": "Text file: the radius on the first line, then {n} lines with the centres (decimal numbers), in the frame of checkers/pack_alg_check.py: the polygon centred at 0 with a vertex at (1, 0).",
+  "args": [
+   "{section}",
+   "{n}"
+  ]
+ },
+ "variants": {
+  "cpt": {
+   "title": "{n} equal circles in the regular pentagon with circumradius 1 (Packomania cpt)",
+   "statement": "Place {n} non-overlapping circles of equal radius in the regular pentagon (5 sides) with circumradius 1 so that the radius is as large as possible."
+  },
+  "chx": {
+   "title": "{n} equal circles in the regular hexagon with circumradius 1 (Packomania chx)",
+   "statement": "Place {n} non-overlapping circles of equal radius in the regular hexagon (6 sides) with circumradius 1 so that the radius is as large as possible."
+  },
+  "chp": {
+   "title": "{n} equal circles in the regular heptagon with circumradius 1 (Packomania chp)",
+   "statement": "Place {n} non-overlapping circles of equal radius in the regular heptagon (7 sides) with circumradius 1 so that the radius is as large as possible."
+  },
+  "coc": {
+   "title": "{n} equal circles in the regular octagon with circumradius 1 (Packomania coc)",
+   "statement": "Place {n} non-overlapping circles of equal radius in the regular octagon (8 sides) with circumradius 1 so that the radius is as large as possible."
+  },
+  "cno": {
+   "title": "{n} equal circles in the regular nonagon with circumradius 1 (Packomania cno)",
+   "statement": "Place {n} non-overlapping circles of equal radius in the regular nonagon (9 sides) with circumradius 1 so that the radius is as large as possible."
+  },
+  "cdc": {
+   "title": "{n} equal circles in the regular decagon with circumradius 1 (Packomania cdc)",
+   "statement": "Place {n} non-overlapping circles of equal radius in the regular decagon (10 sides) with circumradius 1 so that the radius is as large as possible."
+  },
+  "chd": {
+   "title": "{n} equal circles in the regular hendecagon with circumradius 1 (Packomania chd)",
+   "statement": "Place {n} non-overlapping circles of equal radius in the regular hendecagon (11 sides) with circumradius 1 so that the radius is as large as possible."
+  },
+  "cdd": {
+   "title": "{n} equal circles in the regular dodecagon with circumradius 1 (Packomania cdd)",
+   "statement": "Place {n} non-overlapping circles of equal radius in the regular dodecagon (12 sides) with circumradius 1 so that the radius is as large as possible."
+  },
+  "ctd": {
+   "title": "{n} equal circles in the regular tridecagon with circumradius 1 (Packomania ctd)",
+   "statement": "Place {n} non-overlapping circles of equal radius in the regular tridecagon (13 sides) with circumradius 1 so that the radius is as large as possible."
+  },
+  "crd": {
+   "title": "{n} equal circles in the regular tetradecagon with circumradius 1 (Packomania crd)",
+   "statement": "Place {n} non-overlapping circles of equal radius in the regular tetradecagon (14 sides) with circumradius 1 so that the radius is as large as possible."
+  },
+  "cpd": {
+   "title": "{n} equal circles in the regular pentadecagon with circumradius 1 (Packomania cpd)",
+   "statement": "Place {n} non-overlapping circles of equal radius in the regular pentadecagon (15 sides) with circumradius 1 so that the radius is as large as possible."
+  },
+  "cxd": {
+   "title": "{n} equal circles in the regular hexadecagon with circumradius 1 (Packomania cxd)",
+   "statement": "Place {n} non-overlapping circles of equal radius in the regular hexadecagon (16 sides) with circumradius 1 so that the radius is as large as possible."
+  },
+  "ced": {
+   "title": "{n} equal circles in the regular heptadecagon with circumradius 1 (Packomania ced)",
+   "statement": "Place {n} non-overlapping circles of equal radius in the regular heptadecagon (17 sides) with circumradius 1 so that the radius is as large as possible."
+  }
+ },
+ "score": "the common radius (larger is better)",
+ "best_text": "The best known radius in Packomania's table is {best} ({holder}); a valid packing with a larger radius improves it.",
+ "open_rule": "every N >= 3 of the regular-polygon sections cpt, chx, chp, coc, cno, cdc, chd, cdd, ctd, crd, cpd, cxd and ced whose radius is not in bold (proven optimal; none is)",
+ "left_out": "cpt: 0 proven, 2 small N; chx: 0 proven, 2 small N; chp: 0 proven, 2 small N; coc: 0 proven, 2 small N; cno: 0 proven, 2 small N; cdc: 0 proven, 2 small N; chd: 0 proven, 2 small N; cdd: 0 proven, 2 small N; ctd: 0 proven, 2 small N; crd: 0 proven, 2 small N; cpd: 0 proven, 2 small N; cxd: 0 proven, 2 small N; ced: 0 proven, 2 small N",
+ "section_info": {
+  "cpt": {
+   "sides": 5,
+   "page_sha256": "5770cdd7aa0be1a87691216c96c9ae88e7f94cea70abc520229d582352879de6"
+  },
+  "chx": {
+   "sides": 6,
+   "page_sha256": "2fca28b15ed55c3abf18431b893b368766f03a80afc5d3c57a63954d81e0dbf1"
+  },
+  "chp": {
+   "sides": 7,
+   "page_sha256": "52fdf806183e7b60f5d2d68cb6d825aced2ad412ac3ffc1cde08fa83a2411d5c"
+  },
+  "coc": {
+   "sides": 8,
+   "page_sha256": "18a0779a95fc0c4f67a02f83dde12ab73be570da484b75d06dff6a56108b2f4a"
+  },
+  "cno": {
+   "sides": 9,
+   "page_sha256": "7f5acb5a430da928ec588c377d3d1d4950e43cc001f07286c630d5b070106aac"
+  },
+  "cdc": {
+   "sides": 10,
+   "page_sha256": "bcd3b722f06a21dcb67e8aebb453fd00f5146fe2942c1418fb3f34c840813c0b"
+  },
+  "chd": {
+   "sides": 11,
+   "page_sha256": "5638bf97a49989419e418da289b3417a47b34fee93424aaa495a2bf514c1b515"
+  },
+  "cdd": {
+   "sides": 12,
+   "page_sha256": "c3c3ccc2f954a6f665575a30e2de920f346e411fc37756597f2700c877693d92"
+  },
+  "ctd": {
+   "sides": 13,
+   "page_sha256": "1509744d264b9e697d994ab2e6c03519050e2135cbba501e9dbaae6eb086e511"
+  },
+  "crd": {
+   "sides": 14,
+   "page_sha256": "b0d46665af2889e39b76b2aff7d51358a4b8384608167c43439fd070fb794a26"
+  },
+  "cpd": {
+   "sides": 15,
+   "page_sha256": "83571536cdacae9adb7cca4004fd1cb9f8447722c29c6b00738865099e8a4bbc"
+  },
+  "cxd": {
+   "sides": 16,
+   "page_sha256": "47b8c103b02d5cc685839e6a07771f36a416770f5d18e2413637b9d86284fbad"
+  },
+  "ced": {
+   "sides": 17,
+   "page_sha256": "4f8678a2cfefaba92c5e8158c98fe42608495c7e90974125c20e7b74db542cb1"
+  }
+ },
+ "frames": "checked on Packomania's coordinate files cpt30, chx30, coc30, ced30 and cxd30 (rotated by a multiple of pi/2n into our frame): each passes 10^-9 below the listed radius and fails 10^-9 above",
+ "count": 1106
+}

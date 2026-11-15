@@ -18,6 +18,20 @@ value can change within a version when its source table changes; the file then s
   some of them are public on Zenodo. Their values stay as read on 8 Nov until a rule for cells the table does not list is
   chosen.
 
+## Next (in review): Packomania, third part: polygons and radical radii (15 Nov 2026)
+
+- New exact checker `checkers/pack_alg_check.py` (standard library only) for packings whose container or radii are
+  irrational: equal circles in the regular n-gons (n = 5..17) and circles of radii i^(1/2), i^(-1/2), i^(-2/3),
+  i^(-1/5) (circle) and i^(1/2), (N/i)^(1/2) (square). Every condition is decided exactly: rational enclosures narrowed
+  until they decide, and equality by algebra (cyclotomic reduction for polygons; for radicals, equality forces the
+  radicals to be rational, and is then computed exactly).
+- New families `polygon-circle-packing` (1,106 cells) and `unequal-circle-packing` (578 cells) from the pages read on
+  14 Nov 2026 (`tools/packomania_alg_cells.py`), with frames checked on Packomania's coordinate files for 11 sections.
+- `tests/test_pack_alg.py` (run by `test.sh`, 48 checks): each polygon's apothem from both sides, exact touching
+  (an edge of the hexagon; sqrt 2 + sqrt 8 = sqrt 18; radii 1 and 8^(-2/3) = 1/4), containers from both sides,
+  malformed inputs; `tests/sample_cells.py` samples both families.
+- index.json: 181,842 problems.
+
 ## Next (in review): ordered orthogonal arrays walked in C (15 Nov 2026)
 
 - `checkers/ooa_check.py`: for B = 2, 4, 8, ..., 256 and M <= 64, method D (every choice of depths with a running

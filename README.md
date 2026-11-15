@@ -75,6 +75,8 @@ the 100 are new single problems of v2.1, with eight new checkers; see the collec
 | `circle-packing` (in review for v2.2) | 12,759 | E. Specht, Packomania: equal circles in a square, circle, half disc, quarter disc, isosceles right triangle and the rectangles 1 x 0.1 to 1 x 0.8; equal balls in a cube, a ball in R^3 and balls in R^4 to R^6 | `pack_check.py` |
 | `growing-circle-packing` (in review for v2.2) | 396 | E. Specht, Packomania: circles of radii 1, 2, ..., N in the smallest circle or square, balls of radii 1, ..., N in the smallest ball | `pack_check.py` |
 | `circle-packing-sum` (in review for v2.2) | 3,056 | E. Specht, Packomania: circles of any radii in the unit square with the largest sum of radii | `pack_check.py` |
+| `polygon-circle-packing` (in review for v2.2) | 1,106 | E. Specht, Packomania: equal circles in the regular polygons with 5 to 17 sides | `pack_alg_check.py` |
+| `unequal-circle-packing` (in review for v2.2) | 578 | E. Specht, Packomania: circles of radii i^(1/2), i^(-1/2), i^(-2/3), i^(-1/5) in the smallest circle; of radii i^(1/2), i^(-1/2) in the smallest square | `pack_alg_check.py` |
 | `quantum-code` (in review for v2.2) | 7,141 | M. Grassl, codetables.de: additive (stabilizer) quantum codes [[n,k]] with local dimension 2, 3, 4, 5, 7, 8 | `qcode_check.py` |
 
 Every cell is open in the sense written in its family file: its best known value is not marked optimal by the keeper
@@ -248,6 +250,18 @@ What each family takes from its table, and what it leaves out:
   now one cell, with the better of the two values (hsp4 300: 0.187824804694), so the first part has 10,177 cells, not
   10,180. Holders named on the pages only by an image are now given as "[name shown as an image: NAME]". Each family
   file notes Packomania's queue of unreviewed candidates (pending.html), which may already beat a cell's value.
+- Packomania, third part (in review for v2.2; pages read 14 Nov 2026): the sections whose exact check needs algebraic
+  numbers, with the new checker `pack_alg_check.py`. `polygon-circle-packing` (1,106 cells): equal circles in the
+  regular n-gons, n = 5 to 17, circumradius 1 (N >= 3). `unequal-circle-packing` (578 cells): circles of radii
+  i^(1/2), i^(-1/2), i^(-2/3), i^(-1/5) in the smallest circle (N = 5 to 100) and of radii i^(1/2) and (N/i)^(1/2) in
+  the smallest square (N = 4 to 100; for the second, Packomania's ratio is the side over the smallest radius). Each
+  condition compares a rational number with an algebraic one: an enclosure with rational ends (cos(j pi/2n) as an
+  isolated root of a Chebyshev polynomial, found by exact bisection; radicals from integer roots) is narrowed until
+  it decides, and equality is settled by algebra (for a polygon, reduction modulo the 4n-th cyclotomic polynomial; for
+  the radii, a difference can vanish only when its radicals are rational, and then it is computed exactly). Frames
+  were checked on Packomania's coordinate files (cpt30, chx30, coc30, ced30, cxd30; ccir20, ccis20, ccic20, ccib20,
+  csqr20, csqs20). Left out: the section csqc (radii i^(-2/3) in a square), whose radius and ratio columns disagree
+  for some N, and the CODP and benchmark-instance sections.
 - `quantum-code` (in review for v2.2; read 15 Nov 2026): every entry of Grassl's tables of quantum codes (qubits up to
   length 256; local dimension 3, 4, 5, 7 and 8 up to length 100) whose lower bound is below its upper bound and whose
   exact check takes at most 2^34 steps (Q^(n-k) for Q = 2, 4, 8) or 2^31 steps ((Q^(n-k) - 1)/(Q - 1) for Q = 3, 5,
@@ -262,7 +276,8 @@ What each family takes from its table, and what it leaves out:
   codes against brute force; the C helper against the Python lister; and 65 of de Messières' codes (n - k <= 30),
   whose distances it reproduces. With this family the benchmark has 169,600 problems; with the second part of
   Packomania, 175,332; with the covering designs re-read and checked in C, 176,529; with the covering arrays
-  re-read and checked in C, 178,601; with the ordered orthogonal arrays walked in C, 180,158.
+  re-read and checked in C, 178,601; with the ordered orthogonal arrays walked in C, 180,158; with the third part of
+  Packomania, 181,842.
 - `project-scheduling`: every instance of the sets with open instances whose best known makespan is above its lower
   bound and which the site does not mark optimal; the open counts match the site's own table of November 2026. The
   highRD, lowRU and 1k variants are not read: their dataset files date from April 2021, many of their upper bounds are
@@ -319,6 +334,9 @@ Leaps in Bounds):
 
 The checkers added in v2.0, one per new family, also end with `RESULT v`:
 
+- `pack_check.py SECTION N FILE` and `pack_alg_check.py SECTION N FILE`: packings of circles and balls in
+  Packomania's containers, decided exactly (rational geometry in integers; polygons and radicals with exact
+  enclosures and algebraic equality tests).
 - `ooa_check.py B T M K FILE`: linear ordered orthogonal arrays and digital nets over GF(B) (two exact methods; for
   B = 2^e the depth-vector walk runs in C, `ooa_walk.c`, above 2^20 steps).
 - `ca_check.py T K V FILE`: a covering array of strength T with K columns over V symbols (for each column and symbol
