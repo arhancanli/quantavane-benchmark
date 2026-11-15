@@ -25,7 +25,9 @@ OUT = None if FAMILY else (sys.argv[2] if len(sys.argv) > 2 else None)
 WORK = int(float(sys.argv[3])) if len(sys.argv) > 3 and not FAMILY else 2**27
 # method D in C (checkers/ooa_walk.c, bases 2^e): about 3 x 10^8 steps a second for b = 2, 7 x 10^7 for b = 4, 10^7
 # for b = 256; each base gets the cap that keeps a check near two minutes or less
-WORK_D_NATIVE = {2: 2**34, 4: 2**32, 8: 2**32, 16: 2**30, 32: 2**30, 64: 2**30, 128: 2**30, 256: 2**30}
+WORK_D_NATIVE = {2: 2**34, 4: 2**32, 8: 2**32, 16: 2**30, 32: 2**30, 64: 2**30, 128: 2**30, 256: 2**30,
+                 3: 2**31, 5: 2**31, 7: 2**31, 9: 2**29, 25: 2**29, 49: 2**29, 27: 2**28, 81: 2**28}
+# (checkers/ooa_walk_p.c for odd p: about 2 x 10^7 steps a second for b = 3, 5, 7, fewer for the extension fields)
 
 def num(x):
     x = x.replace(' ', '').replace(' ', '')
@@ -97,7 +99,8 @@ for (b, T, m, k), (lo, hi) in sorted(openc.items(), key=lambda x: (x[0][0], str(
         kept.append(cell); ways[cell['id']] = 'E' if wE <= WORK else ('D' if wD <= WORK else 'D in C')
 print(f'{len(cells)} cells read for linear objects ({len(anyc)} for arbitrary ones), {len(openc)} open with 3 <= k <= m '
       f'({beaten} of them with a better non-linear object known), {len(kept)} checkable within {WORK:.3g} steps '
-      f'(method D in C: up to 2^34 steps for b = 2, 2^32 for b = 4 and 8, 2^30 for b = 16 to 256)')
+      f'(method D in C: up to 2^34 steps for b = 2, 2^32 for b = 4 and 8, 2^31 for b = 3, 5, 7, 2^30 for b = 16 to 256, '
+      f'2^29 for b = 9, 25, 49, 2^28 for b = 27, 81)')
 bases = sorted({b for b, _ in by})
 for b in bases:
     print(f'  b={b}: ' + ', '.join(f'T={T}: {v[1]}/{v[0]}' for (bb, T), v in sorted(by.items()) if bb == b))
@@ -133,9 +136,9 @@ if FAMILY:
      "holder_unknown": "the construction and its source are on the cell's page at MinT",
      "holder_sources": "the tables list values only; each cell's page names its construction",
      "open_rule": "every cell with 3 <= k <= m <= 51 whose best known linear object has fewer factors than MinT's bound for linear objects",
-     "work_rule": "kept when checking one more factor than the best known takes at most 2^27 steps by the row-space method (about b^m s T / (b - 1), in Python) or by the depth-vector walk (the number of depth vectors times k), which runs in C (checkers/ooa_walk.c) for b = 2^e with caps of 2^34 steps (b = 2), 2^32 (b = 4, 8) and 2^30 (b = 16 to 256)",
+     "work_rule": "kept when checking one more factor than the best known takes at most 2^27 steps by the row-space method (about b^m s T / (b - 1), in Python) or by the depth-vector walk (the number of depth vectors times k), which runs in C (checkers/ooa_walk.c for b = 2^e, checkers/ooa_walk_p.c for odd b) with caps of 2^34 steps (b = 2), 2^32 (b = 4, 8), 2^31 (b = 3, 5, 7), 2^30 (b = 16 to 256), 2^29 (b = 9, 25, 49) and 2^28 (b = 27, 81)",
      "left_out": (f"{closed} cells with equal bounds (solved); {len(openc) - len(kept)} open cells where checking one more factor than the best known "
-                  f"would take more work than the work rule allows (2^27 steps in Python; for b = 2^e the walk in C up to 2^30 to 2^34 steps); {len(dup)} cells of depth 1 over GF(2) to GF(9), which are linear codes already asked "
+                  f"would take more work than the work rule allows (2^27 steps in Python; the walk in C up to 2^28 to 2^34 steps by base); {len(dup)} cells of depth 1 over GF(2) to GF(9), which are linear codes already asked "
                   f"for by the family linear-code; cells with m above 51 (not read); arrays that are not linear (the checker reads generator "
                   f"matrices; {sum(1 for c in cells_out if 'note' in c)} kept cells carry a note that a non-linear object with more factors is known)"),
      "cells": "cells.jsonl", "count": len(cells_out), "quantavane_records": 0, "single_problems_left_out": 0}

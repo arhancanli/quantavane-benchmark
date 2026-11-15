@@ -90,11 +90,12 @@ for trial in range(600):
     agree += 1; passed += df
     expect(f'random {trial} q={q} T={T} m={m} k={k} s={s}', (cd, ce), (0 if df else 1,) * 2)
 print(f'random objects compared: {agree} ({passed} with the strength asked for, {agree - passed} without)')
-# 8. method D in C (ooa_walk.c, bases 2^e) against method D in Python: the same verdict and the same number of depth
+# 8. method D in C (ooa_walk.c for bases 2^e, ooa_walk_p.c for odd bases) against method D in Python: the same verdict
+#    and the same number of depth
 #    vectors, on random objects (many of them pass over the larger fields) and through main() with --native
 same = total_c = indep_c = 0
-for trial in range(400):
-    q = rng.choice([2, 2, 2, 4, 8, 16, 32, 64, 128, 256])
+for trial in range(600):
+    q = rng.choice([2, 2, 2, 4, 8, 16, 32, 64, 128, 256, 3, 3, 5, 7, 9, 25, 27, 49, 81])
     F = oc.Field(q)
     T = rng.choice([1, 2, 3, 4, 'net'])
     m = rng.randint(3, 12 if q > 4 else 20)
@@ -109,8 +110,8 @@ for trial in range(400):
     indep_c += a[0]
     same += a[0] == b[0] and (not a[0] or a[2] == b[2])
 expect(f'method D in C against Python on {total_c} random objects ({indep_c} independent)', same, total_c)
-for trial in range(60):
-    q = rng.choice([2, 4, 8, 16])
+for trial in range(90):
+    q = rng.choice([2, 4, 8, 16, 3, 5, 7, 9])
     m = rng.randint(2, 5 if q <= 4 else 3)
     k = rng.randint(1, m)
     T = rng.choice([1, 2, 'net'])

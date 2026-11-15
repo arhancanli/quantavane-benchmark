@@ -18,6 +18,16 @@ value can change within a version when its source table changes; the file then s
   some of them are public on Zenodo. Their values stay as read on 8 Nov until a rule for cells the table does not list is
   chosen.
 
+## Next (in review): the depth-vector walk in C for odd bases (15 Nov 2026)
+
+- `checkers/ooa_walk_p.c`: method D of `ooa_check.py` for GF(3), GF(5), GF(7), GF(9), GF(25), GF(27), GF(49), GF(81),
+  with each vector kept as e digit planes and every operation done digit-wise modulo p (about 2 x 10^7 steps a second
+  for p = 3, 5, 7). `tests/test_ooa.py`: the walk in C against Python on random objects over every base, and
+  `--native` against the definition over GF(3), GF(5), GF(7), GF(9) (703 checks).
+- `families/ordered-orthogonal-array`: caps of 2^31 steps (b = 3, 5, 7), 2^29 (b = 9, 25, 49) and 2^28 (b = 27, 81)
+  for the walk in C: 4,709 cells (552 new: 306 for b = 3, 125 for b = 5, 80 for b = 7, 41 for the extension fields).
+- index.json: 182,394 problems.
+
 ## Next (in review): Packomania, third part: polygons and radical radii (15 Nov 2026)
 
 - New exact checker `checkers/pack_alg_check.py` (standard library only) for packings whose container or radii are

@@ -23,9 +23,9 @@ Two separate exact methods:
      has, and computes from that the number of dual words of each weight 1..K in the Niederreiter-Rosenbloom-Tsfasman
      metric (a MacWilliams identity in exact integers): strength K means all those numbers are zero
      (about B^M * S * D / (B - 1) steps).
-By default the cheaper one runs; --way both runs the two and requires the same verdict. For B = 2, 4, 8, ..., 256 and
-M <= 64, method D runs in C (checkers/ooa_walk.c, the same walk on vectors kept as bit planes) above 2^20 steps;
---native or --python forces one way.
+By default the cheaper one runs; --way both runs the two and requires the same verdict. For M <= 64, method D runs in
+C above 2^20 steps (checkers/ooa_walk.c for B = 2, 4, 8, ..., 256, vectors kept as bit planes; checkers/ooa_walk_p.c
+for B = 3, 5, 7, 9, 25, 27, 49, 81, vectors kept as digit planes modulo p); --native or --python forces one way.
 
 Prints "RESULT S" as its last line and exits 0 when the strength is at least K; prints the reason and exits 1 when it
 is not or the input is malformed; exits 2 when both methods would need more than --max-work steps (default 2^33)."""
@@ -152,19 +152,21 @@ def way_d(F, cols, s, t, k):
 
 
 def way_d_native(F, cols, m, s, t, k):
-    """Method D in C (checkers/ooa_walk.c, built with cc -O3 on first use), for B = 2^e and M <= 64: the same walk,
-    with each vector kept as e bit planes. Returns (ok, message, leaves)."""
+    """Method D in C (checkers/ooa_walk.c for B = 2^e, checkers/ooa_walk_p.c for B = 3, 5, 7, 9, 25, 27, 49, 81; built
+    with cc -O3 on first use), M <= 64: the same walk, with each vector kept as e digit planes. Returns (ok, message,
+    leaves)."""
     import os
     import subprocess
     here = os.path.dirname(os.path.abspath(__file__))
-    exe, src = os.path.join(here, "bin", "ooa_walk"), os.path.join(here, "ooa_walk.c")
+    name = "ooa_walk" if F.p == 2 else "ooa_walk_p"
+    exe, src = os.path.join(here, "bin", name), os.path.join(here, name + ".c")
     if not os.path.exists(exe) or os.path.getmtime(exe) < os.path.getmtime(src):
         os.makedirs(os.path.dirname(exe), exist_ok=True)
         subprocess.run(["cc", "-O3", "-o", exe, src], check=True)
     e = F.e
-    parts = [f"{e} {m} {s} {t} {k}"]
+    parts = [f"{e} {m} {s} {t} {k}" if F.p == 2 else f"{F.p} {e} {m} {s} {t} {k}"]
     for c in range(F.q):
-        parts.append(" ".join([str(F.inv[c] if c else 0)] + [str(F.mul[c][2 ** i]) for i in range(e)]))
+        parts.append(" ".join([str(F.inv[c] if c else 0)] + [str(F.mul[c][F.p ** i]) for i in range(e)]))
     for i in range(s):
         for j in range(t):
             parts.append(" ".join(map(str, cols[i][j])))
@@ -365,7 +367,7 @@ def main(argv=None):
             return 2
     verdicts = []
     if way in ("D", "both"):
-        can_native = F.p == 2 and m <= 64
+        can_native = m <= 64 and (F.p == 2 or (F.p in (3, 5, 7) and F.e <= 4))
         native = can_native and (force == "--native" or (force is None and work_d > NATIVE_FROM))
         ok, msg, _ = way_d_native(F, cols, m, s, t, k) if native else way_d(F, cols, s, t, k)
         print(f"method D: {'strength at least ' + str(k) if ok else 'NOT strength ' + str(k)}: {msg}")
