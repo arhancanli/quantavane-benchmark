@@ -8,8 +8,8 @@
  ],
  "keeper": "Covering Repository (coveringrepository.com), successor of D. Gordon's La Jolla Covering Repository",
  "page": "https://www.coveringrepository.com/",
- "read": "2026-11-08",
- "revision": "the site's own CSV export of every entry (v,k,t,m,b), made 8 Nov 2026 17:58 +04: 92,155 entries, SHA-256 fede393f052210e44f68514fa067fe9fc6d4e86b75a490854586c93ddc3c4c15",
+ "read": "2026-11-14",
+ "revision": "the site's own CSV export of every entry (v,k,t,m,b), made 14 Nov 2026 22:22 +04: 92,155 entries, SHA-256 04bcbf7427bcf6c796f5333382a509c83092b958e6ab521b1c52893690aceaa8",
  "template": {
   "title": "Covering design C({v},{k},{t})",
   "statement": "Find {k}-subsets (blocks) of {{1, ..., {v}}} such that every {t}-subset lies in some block, with as few blocks as possible.",
@@ -38,13 +38,13 @@
  "holder_unknown": "not named in the site's export; see the entry on coveringrepository.com",
  "holder_sources": "our own records (quantavane-covering-records); the site's list of recent uploads and derived coverings, read with each daily export since 1 Nov 2026; for entries unchanged since then, the credit in the La Jolla Covering Repository's final data (frozen 1 March 2026)",
  "open_rule": "every entry whose best known size is above the lower bound named in the cell; entries that equal it are solved and left out. A cell may still be optimal by a sharper bound than these.",
- "left_out": "16566 entries equal to their lower bound (solved); 5155 entries with m > t and at most 3 blocks (a short case analysis settles them); 14439 entries whose check would be very long: t = m with more than 10^8 t-subsets to mark (blocks x C(k,t)), or m > t with more than 1,000 blocks",
+ "left_out": "16566 entries equal to their lower bound (solved); 5155 entries with m > t and at most 3 blocks (a short case analysis settles them); 13242 entries whose check would be very long: t = m with more than 10^10 t-subsets to mark (blocks x C(k,t); about a minute in C), or m > t with more than 1,000 blocks",
  "counts": {
-  "t = m": 6087,
-  "m > t": 49908
+  "t = m": 7280,
+  "m > t": 49912
  },
  "cells": "cells.jsonl",
- "count": 55985,
+ "count": 57182,
  "quantavane_records": 128,
  "single_problems_left_out": 10
 }

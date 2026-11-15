@@ -66,7 +66,7 @@ the 100 are new single problems of v2.1, with eight new checkers; see the collec
 | Family | Cells | Table (keeper) | Checker |
 | --- | ---: | --- | --- |
 | `project-scheduling` | 59,170 | Solutions Update, Ghent University (M. Vanhoucke, J. Coelho): RCPSP sets NetRes (7), RG300, RG30, J60, J90, J120, DC2, CV | `rcpsp_check.py` |
-| `covering-design` | 55,985 | Covering Repository (successor of D. Gordon's La Jolla Covering Repository): C(v,k,t) and C(v,k,t,m) | `covering_check.py` |
+| `covering-design` | 57,182 | Covering Repository (successor of D. Gordon's La Jolla Covering Repository): C(v,k,t) and C(v,k,t,m) | `covering_check.py` |
 | `linear-code` | 15,255 | M. Grassl, codetables.de: linear codes over GF(q), q = 2, 3, 4, 5, 7, 8, 9 | `lincode_check.py` |
 | `spherical-code` | 14,782 | H. Cohn, table of spherical codes (dimensions 3 to 32 and a few more) | `sph_check.py` |
 | `covering-array` | 2,659 | C. Smolen's ca-tools table, successor of C. J. Colbourn's covering array tables | `ca_check.py` |
@@ -199,12 +199,15 @@ revision and the holder in `best_known.provenance`. A cell that is also a single
 11 spherical codes and 32 constant weight codes of v1) is kept only as the single problem.
 
 What each family takes from its table, and what it leaves out:
-- `covering-design`: the site's own export of all 92,155 entries (8 Nov 2026). Left out: 16,566 entries equal to a
-  lower bound (Schönheim's bound or the La Jolla lower bound for t = m; the counting bound, and Turán's theorem for
-  t = 2, for m > t), 5,155 entries of m > t with at most 3 blocks, and 14,439 entries whose check would be very long
-  (t = m with more than 10^8 t-subsets to mark, m > t with more than 1,000 blocks). The holder comes from our own
+- `covering-design`: the site's own export of all 92,155 entries (re-read from the export of 14 Nov 2026; 529 values
+  improved on the site since the export of 8 Nov). Left out: 16,566 entries equal to a lower bound (Schönheim's bound
+  or the La Jolla lower bound for t = m; the counting bound, and Turán's theorem for t = 2, for m > t), 5,155 entries
+  of m > t with at most 3 blocks, and 13,242 entries whose check would be very long (t = m with more than 10^10
+  t-subsets to mark, m > t with more than 1,000 blocks). For t = m `covering_check.py` marks the t-subsets in C
+  (`covering_mark.c`, one largest point at a time so that the bit array stays small) above 2 x 10^7 of them: 10^10
+  marks take about a minute, which adds 1,193 cells to those of 8 Nov (the cap was 10^8). The holder comes from our own
   records, from the site's list of recent uploads (read with each export since 1 Nov 2026) and, for entries unchanged
-  since, from the La Jolla Covering Repository's final data; 50,355 cells (48,627 of them C(v,k,t,m)) have no holder
+  since, from the La Jolla Covering Repository's final data; 50,350 cells (48,205 of them C(v,k,t,m)) have no holder
   in any of these and say so.
 - `spherical-code`: every entry of the table not marked optimal (32 are). Values are printed rounded up to 12
   decimals, so a code improves an entry only when its largest cosine is smaller by at least one unit in the 12th
@@ -253,7 +256,7 @@ What each family takes from its table, and what it leaves out:
   five-qubit, Steane and hexacode codes and the five-qudit code over GF(3), GF(4), GF(5), GF(7), GF(8); 36 random
   codes against brute force; the C helper against the Python lister; and 65 of de Messières' codes (n - k <= 30),
   whose distances it reproduces. With this family the benchmark has 169,600 problems; with the second part of
-  Packomania, 175,332.
+  Packomania, 175,332; with the covering designs re-read and checked in C, 176,529.
 - `project-scheduling`: every instance of the sets with open instances whose best known makespan is above its lower
   bound and which the site does not mark optimal; the open counts match the site's own table of November 2026. The
   highRD, lowRU and 1k variants are not read: their dataset files date from April 2021, many of their upper bounds are
@@ -276,7 +279,7 @@ prints its exact result and exits 0 only for a valid certificate.
   K_T (Bron-Kerbosch with Tomita's pivot and a colouring bound; n <= 2048).
 - `sph_check.py FILE D N`: the largest cosine between N points on the sphere in R^D, in 50-digit decimal arithmetic.
 - `covering_check.py V K T M FILE`: covering designs C(V,K,T) (M = T) and C(V,K,T,M), by an exact search for an
-  uncovered M-subset.
+  uncovered M-subset (for M = T every T-subset is marked; above 2 x 10^7 of them by the C helper `covering_mark.c`).
 - `cw_check.py N D W FILE`: binary constant weight codes, length N, weight W, distance at least D.
 - `cvrp_check.py INSTANCE.vrp SOLUTION.sol`: capacitated vehicle routing in CVRPLIB's formats, distances rounded
   exactly in integers.

@@ -143,7 +143,7 @@ def covering_design(export, lajolla, ours_path, read, revision, diffs):
         if m > t and b <= 3:
             tiny += 1
             continue
-        if m == t and b * math.comb(k, t) > 10 ** 8:
+        if m == t and b * math.comb(k, t) > 10 ** 10:      # covering_check.py marks above 2 x 10^7 subsets in C
             heavy += 1
             continue
         if m > t and b > 1000:
@@ -215,8 +215,8 @@ def covering_design(export, lajolla, ours_path, read, revision, diffs):
                      "equal it are solved and left out. A cell may still be optimal by a sharper bound than these.",
         "left_out": f"{closed} entries equal to their lower bound (solved); {tiny} entries with m > t and at most 3 "
                     f"blocks (a short case analysis settles them); {heavy} entries whose check would be very long: "
-                    "t = m with more than 10^8 t-subsets to mark (blocks x C(k,t)), or m > t with more than 1,000 "
-                    "blocks",
+                    "t = m with more than 10^10 t-subsets to mark (blocks x C(k,t); about a minute in C), or m > t "
+                    "with more than 1,000 blocks",
         "counts": {"t = m": n_plain, "m > t": n_lotto},
     }
     write_family(defn, rows)

@@ -18,6 +18,18 @@ value can change within a version when its source table changes; the file then s
   some of them are public on Zenodo. Their values stay as read on 8 Nov until a rule for cells the table does not list is
   chosen.
 
+## Next (in review): covering designs re-read and checked in C (15 Nov 2026)
+
+- `checkers/covering_check.py`: for C(v,k,t), above 2 x 10^7 t-subsets to mark, the new C helper
+  `checkers/covering_mark.c` (built with `cc -O3` on first use) marks them, one largest point at a time in a bit array
+  of C(v-1,t-1) bits. `--python` and `--native` force one way. `tests/test_covering.py` (run by `test.sh`): 60 random
+  block sets with the same verdict and count both ways, greedy coverings and red controls both ways, and a covering of
+  46.6 million marks with its red control.
+- `families/covering-design` re-read from the Covering Repository's export of 14 Nov 2026 (529 values improved since
+  8 Nov, none got worse, no cell closed) with the work cap for t = m raised from 10^8 to 10^10 marks: 57,182 cells
+  (1,193 new C(v,k,t) cells, 4 new C(v,k,t,m) cells); 128 hold a value of ours, as before.
+- index.json: 176,529 problems.
+
 ## Next (in review): Packomania, second part (15 Nov 2026)
 
 - `checkers/pack_check.py`: sections crc100 to crc800 (equal circles in the rectangle [0,1] x [0,h], h = 0.1 to 0.8),

@@ -14,6 +14,9 @@ one at a time (the others stay candidates until some block holding them already 
 is cut when even the candidates cannot complete it: split along blocks, the candidates inside a block can add at most
 that block's remaining room T-1-(chosen points in it). The search is complete, so "no bad M-subset" is a proof.
 
+Above 2 x 10^7 subsets to mark (M = T) the marking is done by the C helper covering_mark.c (built with cc -O3 on first
+use; the bit array then holds up to 2^36 bits); --native or --python forces one way.
+
 Prints "blocks B" and, as its last line, "RESULT B", and exits 0 when the design is valid; exits 1 otherwise."""
 import itertools
 import math
@@ -26,11 +29,36 @@ except AttributeError:              # Python 3.9
         return bin(x).count("1")
 
 
-def covers_everything(blocks, v, k, t):
+NATIVE_FROM = 2 * 10 ** 7                 # above this many t-subsets to mark, the C helper covering_mark.c marks them
+
+
+def covers_native(blocks, v, k, t):
+    """The same marking in C (checkers/covering_mark.c, built with cc -O3 on first use); returns (covered, total)."""
+    import os
+    import subprocess
+    here = os.path.dirname(os.path.abspath(__file__))
+    exe, src = os.path.join(here, "bin", "covering_mark"), os.path.join(here, "covering_mark.c")
+    if not os.path.exists(exe) or os.path.getmtime(exe) < os.path.getmtime(src):
+        os.makedirs(os.path.dirname(exe), exist_ok=True)
+        subprocess.run(["cc", "-O3", "-o", exe, src], check=True)
+    text = f"{len(blocks)}\n" + "".join(" ".join(str(p - 1) for p in sorted(b)) + "\n" for b in blocks)
+    out = subprocess.run([exe, str(v), str(k), str(t)], input=text, capture_output=True, text=True, check=True).stdout
+    covered, total = (int(x) for x in out.split()[1:4:2])
+    marks = int(out.split()[-1])
+    assert total == math.comb(v, t) and marks == len(blocks) * math.comb(k, t), "covering_mark: unexpected counts"
+    return covered, total
+
+
+def covers_everything(blocks, v, k, t, native=None):
     total = math.comb(v, t)
     if len(blocks) * math.comb(k, t) < total:
         return False, (f"{len(blocks)} blocks hold at most {len(blocks) * math.comb(k, t)} {t}-subsets, "
                        f"fewer than the {total} to cover")
+    if native if native is not None else len(blocks) * math.comb(k, t) > NATIVE_FROM:
+        covered, total = covers_native(blocks, v, k, t)
+        if covered == total:
+            return True, f"every one of the {total} {t}-subsets lies in a block (marked in C)"
+        return False, f"{total - covered} of {total} {t}-subsets uncovered (marked in C)"
     bits = bytearray((total + 7) // 8)
     for b in blocks:
         pts = sorted(p - 1 for p in b)
@@ -129,12 +157,17 @@ def find_bad_set(blocks, v, t, m):
 
 
 def main():
-    v, k, t, m = (int(x) for x in sys.argv[1:5])
+    flags = [a for a in sys.argv[1:] if a in ("--native", "--python")]
+    args = [a for a in sys.argv[1:] if a not in flags]
+    if len(args) != 5:
+        print(__doc__)
+        return 1
+    v, k, t, m = (int(x) for x in args[:4])
     if not (1 <= t <= k <= v and t <= m <= v):
         print(f"need 1 <= T <= K <= V and T <= M <= V, got V={v} K={k} T={t} M={m}")
         return 1
     blocks = []
-    for line in open(sys.argv[5]):
+    for line in open(args[4]):
         line = line.split("#")[0].strip()
         if line:
             try:
@@ -150,7 +183,8 @@ def main():
             print(f"invalid block {b}: need {k} distinct points from 1..{v}")
             return 1
     if m == t:
-        ok, why = covers_everything(blocks, v, k, t)
+        native = True if "--native" in flags else False if "--python" in flags else None
+        ok, why = covers_everything(blocks, v, k, t, native)
     else:
         bad = find_bad_set(blocks, v, t, m)
         ok = bad is None
