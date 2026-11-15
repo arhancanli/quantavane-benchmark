@@ -18,6 +18,21 @@ value can change within a version when its source table changes; the file then s
   some of them are public on Zenodo. Their values stay as read on 8 Nov until a rule for cells the table does not list is
   chosen.
 
+## Next (in review): covering arrays re-read and checked in C (15 Nov 2026)
+
+- `checkers/ca_check.py`: above 5 x 10^7 row visits (C(K,T) x N) the new C helper `checkers/ca_scan.c` (built with
+  `cc -O3` on first use) does the check: for each T-set of columns it numbers every row's tuple (sharing the first T-1
+  columns' part) and marks it in a bit array of V^T bits. `--python` and `--native` force one way.
+  `tests/test_ca.py` (run by `test.sh`): random arrays with the same verdict both ways, the orthogonal arrays
+  OA(p^2; 2, p+1, p) for p = 3, 5, 7 with red controls (a row dropped, a symbol changed) both ways, a random
+  CA(3000; 4, 60, 3) through C and its red control (a column repeated).
+- `families/covering-array` re-read from ca-tools main at commit a2dd39e (15 Nov 2026 00:38 UTC; 15,583 rows) with the
+  cap raised from 2 x 10^8 set intersections to 10^11 row visits: 4,731 cells (2,659 before; one cell left the
+  staircase because a wider array now has fewer rows; 28 values improved, none got worse). 13 cells hold our own
+  arrays (Canli 2026, partly cyclic covering perfect hash families, doi:10.5281/zenodo.23839216), which were above the
+  old cap.
+- index.json: 178,601 problems.
+
 ## Next (in review): covering designs re-read and checked in C (15 Nov 2026)
 
 - `checkers/covering_check.py`: for C(v,k,t), above 2 x 10^7 t-subsets to mark, the new C helper

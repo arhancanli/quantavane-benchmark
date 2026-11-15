@@ -318,6 +318,7 @@ python3 -I tests/test_ooa.py || status=1
 python3 -I tests/test_pack.py || status=1
 python3 -I tests/test_qcode.py || status=1
 python3 -I tests/test_covering.py || status=1
+python3 -I tests/test_ca.py || status=1
 python3 -I tests/sample_cells.py || status=1
 if python3 -I obb.py index > /dev/null; then echo "ok    index.json matches the files"; else echo "FAIL  index.json"; status=1; fi
 exit $status

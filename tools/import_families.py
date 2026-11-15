@@ -301,7 +301,7 @@ def covering_array(table, read, revision):
         if best_n <= v ** t or (t == 2 and v == 2):
             solved += 1
             continue
-        if math.comb(k, t) * v ** t > 2 * 10 ** 8:
+        if math.comb(k, t) * (best_n - 1) > 10 ** 11 or v ** t > 2 ** 26:   # ca_check.py: C above 5 x 10^7 visits
             heavy += 1
             continue
         src = best_row["source_detail"].strip()
@@ -341,7 +341,7 @@ def covering_array(table, read, revision):
                      "columns has as few rows), above v^t, leaving out strength 2 over 2 symbols (solved exactly by "
                      "Kleitman and Spencer and by Katona)",
         "left_out": f"{dominated} rows beaten by a row with more columns; {solved} cells solved (v^t rows, or t = v = "
-                    f"2); {heavy} cells whose check would take more than 2 x 10^8 set intersections (C(k,t) v^t)",
+                    f"2); {heavy} cells whose check would visit more than 10^11 rows (C(k,t) x (N - 1) for an array one row smaller than the best known; about three minutes in C) or whose v^t is above 2^26",
     }
     write_family(defn, rows)
 

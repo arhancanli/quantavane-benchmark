@@ -10,7 +10,12 @@ For each column and symbol, the rows holding that symbol form a bit set. The che
 in order, intersecting the bit sets one column at a time (the intersections of a set's first columns are shared by
 all its extensions); a T-set is covered when none of its V^T intersections is empty. The first uncovered tuple, if
 any, is printed with its columns. Prints "rows N" and, as its last line, "RESULT N", and exits 0 when the array is a
-covering array of strength T with K columns over V symbols; exits 1 otherwise."""
+covering array of strength T with K columns over V symbols; exits 1 otherwise.
+
+Above 5 x 10^7 row visits (C(K,T) x N) the check is done by the C helper ca_scan.c (built with cc -O3 on first use):
+for each T-set of columns it numbers every row's tuple and marks it in a bit array of V^T bits, which must fill up.
+--native or --python forces one way."""
+import math
 import sys
 
 
@@ -64,16 +69,47 @@ def first_gap(rows, t, k, v):
     return rec(0, 0, everything, [])
 
 
+NATIVE_FROM = 5 * 10 ** 7          # above C(K,T) x N rows to visit, the C helper ca_scan.c does the check
+
+
+def first_gap_native(rows, t, k, v):
+    """The same question answered by checkers/ca_scan.c (built with cc -O3 on first use)."""
+    import os
+    import subprocess
+    here = os.path.dirname(os.path.abspath(__file__))
+    exe, src = os.path.join(here, "bin", "ca_scan"), os.path.join(here, "ca_scan.c")
+    if not os.path.exists(exe) or os.path.getmtime(exe) < os.path.getmtime(src):
+        os.makedirs(os.path.dirname(exe), exist_ok=True)
+        subprocess.run(["cc", "-O3", "-o", exe, src], check=True)
+    text = f"{t} {k} {v} {len(rows)}\n" + "".join(" ".join(map(str, r)) + "\n" for r in rows)
+    out = subprocess.run([exe], input=text, capture_output=True, text=True, check=True).stdout.split("\n")
+    if out[0].startswith("covered"):
+        sets = int(out[0].split()[1])
+        assert sets == math.comb(k, t), "ca_scan: wrong number of t-sets"
+        return None
+    head, tail = out[0][4:].split(":")
+    return [int(x) for x in head.split()], [int(x) for x in tail.split()]
+
+
 def main():
-    t, k, v = (int(x) for x in sys.argv[1:4])
+    flags = [a for a in sys.argv[1:] if a in ("--native", "--python")]
+    args = [a for a in sys.argv[1:] if a not in flags]
+    if len(args) != 4:
+        print(__doc__)
+        return 1
+    t, k, v = (int(x) for x in args[:3])
     if not (1 <= t <= k and v >= 2):
         print(f"need 1 <= T <= K and V >= 2, got T={t} K={k} V={v}")
         return 1
-    rows = read_rows(sys.argv[4], k, v)
+    rows = read_rows(args[3], k, v)
     if len(rows) < v ** t:
         print(f"{len(rows)} rows cannot show all {v}^{t} = {v ** t} tuples")
         return 1
-    gap = first_gap(rows, t, k, v)
+    native = "--native" in flags or ("--python" not in flags and math.comb(k, t) * len(rows) > NATIVE_FROM)
+    if native and v ** t >= 2 ** 32:
+        print(f"too large: v^t = {v ** t} does not fit the C helper")
+        return 2
+    gap = first_gap_native(rows, t, k, v) if native else first_gap(rows, t, k, v)
     if gap:
         cols, tup = gap
         print(f"columns {[c + 1 for c in cols]} never show the symbols {tup} together: not a covering array of "

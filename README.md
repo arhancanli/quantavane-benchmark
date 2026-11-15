@@ -69,7 +69,7 @@ the 100 are new single problems of v2.1, with eight new checkers; see the collec
 | `covering-design` | 57,182 | Covering Repository (successor of D. Gordon's La Jolla Covering Repository): C(v,k,t) and C(v,k,t,m) | `covering_check.py` |
 | `linear-code` | 15,255 | M. Grassl, codetables.de: linear codes over GF(q), q = 2, 3, 4, 5, 7, 8, 9 | `lincode_check.py` |
 | `spherical-code` | 14,782 | H. Cohn, table of spherical codes (dimensions 3 to 32 and a few more) | `sph_check.py` |
-| `covering-array` | 2,659 | C. Smolen's ca-tools table, successor of C. J. Colbourn's covering array tables | `ca_check.py` |
+| `covering-array` | 4,731 | C. Smolen's ca-tools table, successor of C. J. Colbourn's covering array tables | `ca_check.py` |
 | `constant-weight-code` | 1,134 | A. E. Brouwer, bounds for binary constant weight codes | `cw_check.py` |
 | `ordered-orthogonal-array` (in review for v2.2) | 2,600 | W. Ch. Schmid and R. Schürer, MinT: linear ordered orthogonal arrays of depth 1 to 8 and digital nets over GF(2) to GF(128) | `ooa_check.py` |
 | `circle-packing` (in review for v2.2) | 12,759 | E. Specht, Packomania: equal circles in a square, circle, half disc, quarter disc, isosceles right triangle and the rectangles 1 x 0.1 to 1 x 0.8; equal balls in a cube, a ball in R^3 and balls in R^4 to R^6 | `pack_check.py` |
@@ -79,9 +79,9 @@ the 100 are new single problems of v2.1, with eight new checkers; see the collec
 
 Every cell is open in the sense written in its family file: its best known value is not marked optimal by the keeper
 and is strictly worse than the bound on the other side (the keeper's own bound, or a standard bound we compute and
-name in the cell). A cell can still turn out to be optimal through an argument nobody has applied to it yet. 2,655
-cells hold a value of ours (`quantavane_record`): 2,088 schedules, 432 spherical codes, 128 covering designs and 7
-constant weight codes.
+name in the cell). A cell can still turn out to be optimal through an argument nobody has applied to it yet. 2,668
+cells hold a value of ours (`quantavane_record`): 2,088 schedules, 432 spherical codes, 128 covering designs, 13
+covering arrays and 7 constant weight codes.
 
 The 374 single problems (v1.1, 8 Nov 2026), each with its own file in `problems/`:
 - 7 constants from the optimization constants repository (teorth/optimizationproblems): 1a-upper, 1c-lower,
@@ -213,8 +213,11 @@ What each family takes from its table, and what it leaves out:
   decimals, so a code improves an entry only when its largest cosine is smaller by at least one unit in the 12th
   decimal. The holder is the first reference or credit in the entry's notes.
 - `covering-array`: the rows of the ca-tools table (CITED and VERIFIED, as the table counts) that are steps of its
-  staircase, above the trivial bound v^t, without strength 2 over 2 symbols (solved exactly). Left out: 9,230 cells
-  whose direct check would take more than 2 x 10^8 set intersections, which covers most cells with many columns.
+  staircase, above the trivial bound v^t, without strength 2 over 2 symbols (solved exactly). Re-read on 15 Nov 2026
+  (commit a2dd39e). Left out: 7,203 cells whose check would visit more than 10^11 rows (C(k,t) x (N - 1) for an array
+  one row smaller than the best known; `ca_check.py` hands arrays above 5 x 10^7 visits to its C helper `ca_scan.c`,
+  about three minutes for 10^11) or have v^t above 2^26. With the C helper the family has 4,731 cells (2,659 before);
+  13 of them hold our own covering perfect hash family arrays (Canli 2026, doi:10.5281/zenodo.23839216).
 - `linear-code`: every entry of Grassl's tables whose lower bound is below its upper bound and whose check lists at
   most 2^25 codewords of the code or of its dual (91,256 open entries are larger). The construction and its source
   are on each entry's own page at codetables.de, which the cell links.
@@ -256,7 +259,8 @@ What each family takes from its table, and what it leaves out:
   five-qubit, Steane and hexacode codes and the five-qudit code over GF(3), GF(4), GF(5), GF(7), GF(8); 36 random
   codes against brute force; the C helper against the Python lister; and 65 of de Messières' codes (n - k <= 30),
   whose distances it reproduces. With this family the benchmark has 169,600 problems; with the second part of
-  Packomania, 175,332; with the covering designs re-read and checked in C, 176,529.
+  Packomania, 175,332; with the covering designs re-read and checked in C, 176,529; with the covering arrays
+  re-read and checked in C, 178,601.
 - `project-scheduling`: every instance of the sets with open instances whose best known makespan is above its lower
   bound and which the site does not mark optimal; the open counts match the site's own table of November 2026. The
   highRD, lowRU and 1k variants are not read: their dataset files date from April 2021, many of their upper bounds are
