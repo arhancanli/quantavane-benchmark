@@ -340,6 +340,14 @@ t arc-61 certs/arc/lmp2008_pg2_61_20arc.txt "does not improve,"
 t arc-4999 certs/arc/lexiarc_4999.txt "does not improve,"
 sed '$d' certs/arc/lmp2008_pg2_61_20arc.txt > certs/arc/control_19_points.txt
 t arc-61 certs/arc/control_19_points.txt "NOT CERTIFIED,"
+# v2.2: mols_check.py with its C helper mols_scan.c (the family mols): complete sets and MacNeish products, 150 random sets
+# on which Python and C agree, red controls; Rosin's published sets (fetch.sh) reproduce the best known values
+python3 -I tests/test_mols.py || status=1
+t mols-22 certs/mols/mols_022_04.txt "does not improve,"
+t mols-144 certs/mols/mols_144_14.txt "does not improve,"
+t mols-486 certs/mols/mols_486_09.txt "does not improve,"
+sed '$d' certs/mols/mols_022_04.txt > certs/mols/control_row_missing.txt
+t mols-22 certs/mols/control_row_missing.txt "NOT CERTIFIED,"
 python3 -I tests/sample_cells.py || status=1
 if python3 -I obb.py index > /dev/null; then echo "ok    index.json matches the files"; else echo "FAIL  index.json"; status=1; fi
 exit $status

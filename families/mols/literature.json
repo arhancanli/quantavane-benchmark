@@ -1,0 +1,258 @@
+{
+ "note": "Lower bounds on N(n), the number of mutually orthogonal Latin squares of order n, published after Table 3.87 of the Handbook of Combinatorial Designs (2nd edition, 2007; R. J. R. Abel, C. J. Colbourn and J. H. Dinitz), as found in the literature check of 15 Nov 2026. The Handbook table itself is read from SageMath's module sage/combinat/designs/MOLS_handbook_data.py (10,000 entries, with the two updates of J. H. Dinitz's website: N(60) >= 5, N(7968) >= 31). For n < 500 the current baseline is the 2024 compilation of A. Miller, R. J. R. Abel, I. Valkov and D. Fraser, Implementing the MOLS table for n up to 500, Symmetry 16 (2024) 1678, which notes improvements at 9 orders n < 120 since 2007 and corrects a few errors; its full table could not be read here (mdpi.com answers robots.txt with HTTP 403, and the University of Glasgow repository disallows our client in robots.txt), so cells with n < 500 are kept only where the current value is known from the papers below.",
+ "updates": [
+  {
+   "n": 936,
+   "value": 8,
+   "source": "P. J. Dukes and A. C. H. Ling, A three-factor product construction for mutually orthogonal latin squares, arXiv:1401.1466 (2014), Table 1"
+  },
+  {
+   "n": 1224,
+   "value": 8,
+   "source": "Dukes and Ling (2014), Table 1"
+  },
+  {
+   "n": 1144,
+   "value": 8,
+   "source": "Dukes and Ling (2014), Table 1"
+  },
+  {
+   "n": 5168,
+   "value": 16,
+   "source": "Dukes and Ling (2014), Table 1"
+  },
+  {
+   "n": 6800,
+   "value": 16,
+   "source": "Dukes and Ling (2014), Table 1"
+  },
+  {
+   "n": 9424,
+   "value": 16,
+   "source": "Dukes and Ling (2014), Table 1"
+  },
+  {
+   "n": 7429,
+   "value": 17,
+   "source": "Dukes and Ling (2014), Table 1"
+  },
+  {
+   "n": 9367,
+   "value": 17,
+   "source": "Dukes and Ling (2014), Table 1"
+  },
+  {
+   "n": 108,
+   "value": 9,
+   "source": "R. J. R. Abel, I. Janiszczak and R. Staszewski, Improvements for lower bounds of mutually orthogonal Latin squares of sizes 54, 96 and 108, arXiv:2412.00480 (2024), Theorem 3 (a (108,10,1) difference matrix); not improved by Rosin (2026)"
+  },
+  {
+   "n": 22,
+   "value": 4,
+   "source": "C. D. Rosin, Improved lower bounds for mutually orthogonal Latin squares (MOLS) at 33 orders, arXiv:2611.16299 (12 Nov 2026), Table 1 (quasi-difference matrix; previously 3 in the 2024 compilation); the squares are in github.com/Constructive-Codes/MOLS (MIT)"
+  },
+  {
+   "n": 45,
+   "value": 7,
+   "source": "C. D. Rosin, Improved lower bounds for mutually orthogonal Latin squares (MOLS) at 33 orders, arXiv:2611.16299 (12 Nov 2026), Table 1 (difference matrix; previously 6 in the 2024 compilation); the squares are in github.com/Constructive-Codes/MOLS (MIT)"
+  },
+  {
+   "n": 50,
+   "value": 7,
+   "source": "C. D. Rosin, Improved lower bounds for mutually orthogonal Latin squares (MOLS) at 33 orders, arXiv:2611.16299 (12 Nov 2026), Table 1 (lift coarse orthogonal array; previously 6 in the 2024 compilation); the squares are in github.com/Constructive-Codes/MOLS (MIT)"
+  },
+  {
+   "n": 54,
+   "value": 9,
+   "source": "C. D. Rosin, Improved lower bounds for mutually orthogonal Latin squares (MOLS) at 33 orders, arXiv:2611.16299 (12 Nov 2026), Table 1 (lift coarse orthogonal array; previously 8 in the 2024 compilation); the squares are in github.com/Constructive-Codes/MOLS (MIT)"
+  },
+  {
+   "n": 60,
+   "value": 6,
+   "source": "C. D. Rosin, Improved lower bounds for mutually orthogonal Latin squares (MOLS) at 33 orders, arXiv:2611.16299 (12 Nov 2026), Table 1 (quasi-difference matrix; previously 5 in the 2024 compilation); the squares are in github.com/Constructive-Codes/MOLS (MIT)"
+  },
+  {
+   "n": 72,
+   "value": 8,
+   "source": "C. D. Rosin, Improved lower bounds for mutually orthogonal Latin squares (MOLS) at 33 orders, arXiv:2611.16299 (12 Nov 2026), Table 1 (difference matrix; previously 7 in the 2024 compilation); the squares are in github.com/Constructive-Codes/MOLS (MIT)"
+  },
+  {
+   "n": 74,
+   "value": 6,
+   "source": "C. D. Rosin, Improved lower bounds for mutually orthogonal Latin squares (MOLS) at 33 orders, arXiv:2611.16299 (12 Nov 2026), Table 1 (quasi-difference matrix; previously 5 in the 2024 compilation); the squares are in github.com/Constructive-Codes/MOLS (MIT)"
+  },
+  {
+   "n": 78,
+   "value": 7,
+   "source": "C. D. Rosin, Improved lower bounds for mutually orthogonal Latin squares (MOLS) at 33 orders, arXiv:2611.16299 (12 Nov 2026), Table 1 (relative difference matrix; previously 6 in the 2024 compilation); the squares are in github.com/Constructive-Codes/MOLS (MIT)"
+  },
+  {
+   "n": 80,
+   "value": 10,
+   "source": "C. D. Rosin, Improved lower bounds for mutually orthogonal Latin squares (MOLS) at 33 orders, arXiv:2611.16299 (12 Nov 2026), Table 1 (difference matrix; previously 9 in the 2024 compilation); the squares are in github.com/Constructive-Codes/MOLS (MIT)"
+  },
+  {
+   "n": 85,
+   "value": 7,
+   "source": "C. D. Rosin, Improved lower bounds for mutually orthogonal Latin squares (MOLS) at 33 orders, arXiv:2611.16299 (12 Nov 2026), Table 1 (difference matrix; previously 6 in the 2024 compilation); the squares are in github.com/Constructive-Codes/MOLS (MIT)"
+  },
+  {
+   "n": 90,
+   "value": 8,
+   "source": "C. D. Rosin, Improved lower bounds for mutually orthogonal Latin squares (MOLS) at 33 orders, arXiv:2611.16299 (12 Nov 2026), Table 1 (quasi-difference matrix; previously 6 in the 2024 compilation); the squares are in github.com/Constructive-Codes/MOLS (MIT)"
+  },
+  {
+   "n": 92,
+   "value": 7,
+   "source": "C. D. Rosin, Improved lower bounds for mutually orthogonal Latin squares (MOLS) at 33 orders, arXiv:2611.16299 (12 Nov 2026), Table 1 (relative difference matrix; previously 6 in the 2024 compilation); the squares are in github.com/Constructive-Codes/MOLS (MIT)"
+  },
+  {
+   "n": 96,
+   "value": 11,
+   "source": "C. D. Rosin, Improved lower bounds for mutually orthogonal Latin squares (MOLS) at 33 orders, arXiv:2611.16299 (12 Nov 2026), Table 1 (difference matrix; previously 10 in the 2024 compilation); the squares are in github.com/Constructive-Codes/MOLS (MIT)"
+  },
+  {
+   "n": 98,
+   "value": 7,
+   "source": "C. D. Rosin, Improved lower bounds for mutually orthogonal Latin squares (MOLS) at 33 orders, arXiv:2611.16299 (12 Nov 2026), Table 1 (lift coarse orthogonal array; previously 6 in the 2024 compilation); the squares are in github.com/Constructive-Codes/MOLS (MIT)"
+  },
+  {
+   "n": 144,
+   "value": 14,
+   "source": "C. D. Rosin, Improved lower bounds for mutually orthogonal Latin squares (MOLS) at 33 orders, arXiv:2611.16299 (12 Nov 2026), Table 1 (difference matrix; previously 10 in the 2024 compilation); the squares are in github.com/Constructive-Codes/MOLS (MIT)"
+  },
+  {
+   "n": 162,
+   "value": 9,
+   "source": "C. D. Rosin, Improved lower bounds for mutually orthogonal Latin squares (MOLS) at 33 orders, arXiv:2611.16299 (12 Nov 2026), Table 1 (lift coarse orthogonal array; previously 6 in the 2024 compilation); the squares are in github.com/Constructive-Codes/MOLS (MIT)"
+  },
+  {
+   "n": 175,
+   "value": 7,
+   "source": "C. D. Rosin, Improved lower bounds for mutually orthogonal Latin squares (MOLS) at 33 orders, arXiv:2611.16299 (12 Nov 2026), Table 1 (projective plane; previously 6 in the 2024 compilation); the squares are in github.com/Constructive-Codes/MOLS (MIT)"
+  },
+  {
+   "n": 183,
+   "value": 7,
+   "source": "C. D. Rosin, Improved lower bounds for mutually orthogonal Latin squares (MOLS) at 33 orders, arXiv:2611.16299 (12 Nov 2026), Table 1 (projective plane; previously 6 in the 2024 compilation); the squares are in github.com/Constructive-Codes/MOLS (MIT)"
+  },
+  {
+   "n": 192,
+   "value": 9,
+   "source": "C. D. Rosin, Improved lower bounds for mutually orthogonal Latin squares (MOLS) at 33 orders, arXiv:2611.16299 (12 Nov 2026), Table 1 (difference matrix; previously 7 in the 2024 compilation); the squares are in github.com/Constructive-Codes/MOLS (MIT)"
+  },
+  {
+   "n": 207,
+   "value": 9,
+   "source": "C. D. Rosin, Improved lower bounds for mutually orthogonal Latin squares (MOLS) at 33 orders, arXiv:2611.16299 (12 Nov 2026), Table 1 (projective plane; previously 8 in the 2024 compilation); the squares are in github.com/Constructive-Codes/MOLS (MIT)"
+  },
+  {
+   "n": 225,
+   "value": 9,
+   "source": "C. D. Rosin, Improved lower bounds for mutually orthogonal Latin squares (MOLS) at 33 orders, arXiv:2611.16299 (12 Nov 2026), Table 1 (difference matrix; previously 8 in the 2024 compilation); the squares are in github.com/Constructive-Codes/MOLS (MIT)"
+  },
+  {
+   "n": 288,
+   "value": 17,
+   "source": "C. D. Rosin, Improved lower bounds for mutually orthogonal Latin squares (MOLS) at 33 orders, arXiv:2611.16299 (12 Nov 2026), Table 1 (difference matrix; previously 15 in the 2024 compilation); the squares are in github.com/Constructive-Codes/MOLS (MIT)"
+  },
+  {
+   "n": 324,
+   "value": 11,
+   "source": "C. D. Rosin, Improved lower bounds for mutually orthogonal Latin squares (MOLS) at 33 orders, arXiv:2611.16299 (12 Nov 2026), Table 1 (difference matrix; previously 8 in the 2024 compilation); the squares are in github.com/Constructive-Codes/MOLS (MIT)"
+  },
+  {
+   "n": 328,
+   "value": 9,
+   "source": "C. D. Rosin, Improved lower bounds for mutually orthogonal Latin squares (MOLS) at 33 orders, arXiv:2611.16299 (12 Nov 2026), Table 1 (projective plane; previously 7 in the 2024 compilation); the squares are in github.com/Constructive-Codes/MOLS (MIT)"
+  },
+  {
+   "n": 335,
+   "value": 9,
+   "source": "C. D. Rosin, Improved lower bounds for mutually orthogonal Latin squares (MOLS) at 33 orders, arXiv:2611.16299 (12 Nov 2026), Table 1 (projective plane; previously 6 in the 2024 compilation); the squares are in github.com/Constructive-Codes/MOLS (MIT)"
+  },
+  {
+   "n": 427,
+   "value": 12,
+   "source": "C. D. Rosin, Improved lower bounds for mutually orthogonal Latin squares (MOLS) at 33 orders, arXiv:2611.16299 (12 Nov 2026), Table 1 (projective plane; previously 7 in the 2024 compilation); the squares are in github.com/Constructive-Codes/MOLS (MIT)"
+  },
+  {
+   "n": 430,
+   "value": 11,
+   "source": "C. D. Rosin, Improved lower bounds for mutually orthogonal Latin squares (MOLS) at 33 orders, arXiv:2611.16299 (12 Nov 2026), Table 1 (projective plane; previously 6 in the 2024 compilation); the squares are in github.com/Constructive-Codes/MOLS (MIT)"
+  },
+  {
+   "n": 442,
+   "value": 11,
+   "source": "C. D. Rosin, Improved lower bounds for mutually orthogonal Latin squares (MOLS) at 33 orders, arXiv:2611.16299 (12 Nov 2026), Table 1 (projective plane; previously 7 in the 2024 compilation); the squares are in github.com/Constructive-Codes/MOLS (MIT)"
+  },
+  {
+   "n": 456,
+   "value": 11,
+   "source": "C. D. Rosin, Improved lower bounds for mutually orthogonal Latin squares (MOLS) at 33 orders, arXiv:2611.16299 (12 Nov 2026), Table 1 (projective plane; previously 7 in the 2024 compilation); the squares are in github.com/Constructive-Codes/MOLS (MIT)"
+  },
+  {
+   "n": 469,
+   "value": 11,
+   "source": "C. D. Rosin, Improved lower bounds for mutually orthogonal Latin squares (MOLS) at 33 orders, arXiv:2611.16299 (12 Nov 2026), Table 1 (projective plane; previously 8 in the 2024 compilation); the squares are in github.com/Constructive-Codes/MOLS (MIT)"
+  },
+  {
+   "n": 482,
+   "value": 7,
+   "source": "C. D. Rosin, Improved lower bounds for mutually orthogonal Latin squares (MOLS) at 33 orders, arXiv:2611.16299 (12 Nov 2026), Table 1 (projective plane; previously 6 in the 2024 compilation); the squares are in github.com/Constructive-Codes/MOLS (MIT)"
+  },
+  {
+   "n": 486,
+   "value": 9,
+   "source": "C. D. Rosin, Improved lower bounds for mutually orthogonal Latin squares (MOLS) at 33 orders, arXiv:2611.16299 (12 Nov 2026), Table 1 (lift coarse orthogonal array; previously 8 in the 2024 compilation); the squares are in github.com/Constructive-Codes/MOLS (MIT)"
+  },
+  {
+   "n": 494,
+   "value": 11,
+   "source": "C. D. Rosin, Improved lower bounds for mutually orthogonal Latin squares (MOLS) at 33 orders, arXiv:2611.16299 (12 Nov 2026), Table 1 (projective plane; previously 6 in the 2024 compilation); the squares are in github.com/Constructive-Codes/MOLS (MIT)"
+  }
+ ],
+ "known_below_500": [
+  22,
+  45,
+  50,
+  54,
+  60,
+  72,
+  74,
+  78,
+  80,
+  85,
+  90,
+  92,
+  96,
+  98,
+  144,
+  162,
+  175,
+  183,
+  192,
+  207,
+  225,
+  288,
+  324,
+  328,
+  335,
+  427,
+  430,
+  442,
+  456,
+  469,
+  482,
+  486,
+  494,
+  108
+ ],
+ "checked": [
+  "J. H. Dinitz's Handbook updates (site.uvm.edu/jdinitz, New Results in Part III): N(60) >= 5 (Abel 2015) and N(7968) >= 31, both in SageMath's table",
+  "Abel, Janiszczak and Staszewski (arXiv:2412.00480): N(54) >= 8, N(96) >= 10 (both since raised by Rosin), N(108) >= 9, and a corrected (45,7,1) difference matrix",
+  "Rosin (arXiv:2611.16299, 12 Nov 2026): 33 orders 22 to 494; states that no improvement for n < 500 appeared between the 2024 compilation and his paper",
+  "Dukes and Ling (arXiv:1401.1466): eight orders between 936 and 9424",
+  "web searches of 15 Nov 2026 for later improvements of N(n) for n >= 500: none found"
+ ]
+}

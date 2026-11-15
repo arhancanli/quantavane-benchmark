@@ -812,6 +812,18 @@ def test_complete_arc(n, rng):
                "NOT CERTIFIED,")
 
 
+def test_mols(n, rng):
+    """For odd n the squares i + j and 2i + j mod n are orthogonal: certified (2 squares, below every cell's value);
+    with the second square a copy of the first they are refused."""
+    for c in rng.sample([c for c in family_cells("mols") if c["params"]["n"] % 2 and c["params"]["n"] <= 801], n):
+        m = c["params"]["n"]
+        sq = [[" ".join(str((a * i + j) % m) for j in range(m)) for i in range(m)] for a in (1, 2)]
+        expect(f"sample {c['id']} the squares i + j and 2i + j", obb(c["id"], write(f"{c['id']}.txt", sq[0] + sq[1])),
+               "does not improve,")
+        expect(f"red   {c['id']} (a square repeated)", obb(c["id"], write(f"{c['id']}_red.txt", sq[0] + sq[0])),
+               "NOT CERTIFIED,")
+
+
 def main():
     n = int(sys.argv[1]) if len(sys.argv) > 1 else 3
     seed = int(sys.argv[2]) if len(sys.argv) > 2 else 2026
@@ -843,7 +855,8 @@ def main():
                        ("flexible-job-shop", test_flexible_job_shop),
                        ("unequal-circle-packing", test_unequal_circle_packing),
                        ("grassmannian-packing", test_grassmannian_packing),
-                       ("complete-arc", test_complete_arc)):
+                       ("complete-arc", test_complete_arc),
+                       ("mols", test_mols)):
         if os.path.exists(os.path.join(ROOT, "families", name, "cells.jsonl")):
             test(n, rng)
         else:

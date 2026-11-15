@@ -101,6 +101,26 @@ mkdir -p grass
 get grass/grassc.3.1.9.txt http://neilsloane.com/grass/dim3/grassc.3.1.9.txt daad1d294d1505bf700bb55a0b169c360edb378fda0087ed476e5ad48e26a4ec
 sleep 2
 get grass/grassc.5.2.12.txt http://neilsloane.com/grass/dim5/grassc.5.2.12.txt 72459240bb64e91eda35d8e562c58a6712d2a5cbc316ee8ccb3cca10acac3e6b
+# C. D. Rosin's sets of mutually orthogonal Latin squares (arXiv:2611.16299, MIT licence; github.com/Constructive-Codes/MOLS
+# at commit 8fd0ea0): eight of the 33 published sets, the best known values of their cells in the family mols, replayed by
+# mols_check.py in test.sh and tests/test_mols.py
+mkdir -p mols
+get mols/mols_022_04.txt.gz https://raw.githubusercontent.com/Constructive-Codes/MOLS/8fd0ea0f22c29b60b9c7c7a694bc9ae594e0af05/mols/mols_022_04.txt.gz 5e11c60236e69a9222823ad35607c8c6f9b0ae41a3f12f1458239316854465bf
+[ -s mols/mols_022_04.txt ] || gunzip -c mols/mols_022_04.txt.gz > mols/mols_022_04.txt
+get mols/mols_045_07.txt.gz https://raw.githubusercontent.com/Constructive-Codes/MOLS/8fd0ea0f22c29b60b9c7c7a694bc9ae594e0af05/mols/mols_045_07.txt.gz d65dfda95f12b7f9b4c216304c94cefea2d9749aeb51a6e38eec0b7148f00de1
+[ -s mols/mols_045_07.txt ] || gunzip -c mols/mols_045_07.txt.gz > mols/mols_045_07.txt
+get mols/mols_072_08.txt.gz https://raw.githubusercontent.com/Constructive-Codes/MOLS/8fd0ea0f22c29b60b9c7c7a694bc9ae594e0af05/mols/mols_072_08.txt.gz 3dc985305c217a4d525502d3e2fcf35620ebf5cc3b01bffe62aa0cf48b42e46a
+[ -s mols/mols_072_08.txt ] || gunzip -c mols/mols_072_08.txt.gz > mols/mols_072_08.txt
+get mols/mols_080_10.txt.gz https://raw.githubusercontent.com/Constructive-Codes/MOLS/8fd0ea0f22c29b60b9c7c7a694bc9ae594e0af05/mols/mols_080_10.txt.gz d35ec8507e2826cadf7c833c60e87e22b574fc1d4eefa4b3942c62cc68a1435f
+[ -s mols/mols_080_10.txt ] || gunzip -c mols/mols_080_10.txt.gz > mols/mols_080_10.txt
+get mols/mols_096_11.txt.gz https://raw.githubusercontent.com/Constructive-Codes/MOLS/8fd0ea0f22c29b60b9c7c7a694bc9ae594e0af05/mols/mols_096_11.txt.gz a7b49ba64163550770bfc7958cf3f9bab849072867f592f95d8cd250e306c7e1
+[ -s mols/mols_096_11.txt ] || gunzip -c mols/mols_096_11.txt.gz > mols/mols_096_11.txt
+get mols/mols_144_14.txt.gz https://raw.githubusercontent.com/Constructive-Codes/MOLS/8fd0ea0f22c29b60b9c7c7a694bc9ae594e0af05/mols/mols_144_14.txt.gz 61ef6b1881fd35481d18969add68c9d902bf025c70c1a7d4fa6ac028ae6cd7e5
+[ -s mols/mols_144_14.txt ] || gunzip -c mols/mols_144_14.txt.gz > mols/mols_144_14.txt
+get mols/mols_225_09.txt.gz https://raw.githubusercontent.com/Constructive-Codes/MOLS/8fd0ea0f22c29b60b9c7c7a694bc9ae594e0af05/mols/mols_225_09.txt.gz 632398fff3e752822671aa83dd29e9139ae3fae072649680978d104c451e563f
+[ -s mols/mols_225_09.txt ] || gunzip -c mols/mols_225_09.txt.gz > mols/mols_225_09.txt
+get mols/mols_486_09.txt.gz https://raw.githubusercontent.com/Constructive-Codes/MOLS/8fd0ea0f22c29b60b9c7c7a694bc9ae594e0af05/mols/mols_486_09.txt.gz 845a8605656ddf9e077e49868f84b45d7ebacf76b65df980953741b710f6e165
+[ -s mols/mols_486_09.txt ] || gunzip -c mols/mols_486_09.txt.gz > mols/mols_486_09.txt
 # CVRPLIB instances for the routing problems, one request every 2 seconds
 cd .. && mkdir -p instances && cd instances
 slow() { [ -s "$1" ] || sleep 2; get "$@"; }

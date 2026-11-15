@@ -94,6 +94,7 @@ the 100 are new single problems of v2.1, with eight new checkers; see the collec
 | `bipartite-degree-diameter` (in review for v2.2) | 32 | Combinatorics Wiki: largest known bipartite graphs of maximum degree 3 to 16 and diameter 3 to 10 (at most 20,000 vertices) | `degdiam_check.py --bipartite` |
 | `grassmannian-packing` (in review for v2.2) | 2,239 | N. J. A. Sloane, table of best Grassmannian packings (with R. H. Hardin, J. H. Conway and others): N lines, planes or 3-spaces in R^3 to R^16, and constructions in higher dimensions | `grass_check.py` |
 | `complete-arc` (in review for v2.2) | 9,862 | D. Bartoli, A. A. Davydov, G. Faina, A. A. Kreshchuk, S. Marcugini and F. Pambianco: smallest known complete arcs in the projective planes PG(2,q), every prime power q from 37 to about 102,000 whose check takes at most three minutes (arXiv:1312.2155v3, with the lexiarcs of arXiv:1404.0469v3) | `arc_check.py` |
+| `mols` (in review for v2.2) | 1,727 | Handbook of Combinatorial Designs, Table 3.87 (R. J. R. Abel, C. J. Colbourn and J. H. Dinitz; as in SageMath), with Dukes and Ling (2014), Abel, Janiszczak and Staszewski (2024) and C. D. Rosin (12 Nov 2026): the most mutually orthogonal Latin squares of order n, n not a prime power | `mols_check.py` |
 
 Every cell is open in the sense written in its family file: its best known value is not marked optimal by the keeper
 and is strictly worse than the bound on the other side (the keeper's own bound, or a standard bound we compute and
@@ -384,7 +385,7 @@ What each family takes from its table, and what it leaves out:
   settled circulant weighing matrix problems removed), 337,321; with Gordon's open signed difference sets, 359,646; with the
   circulant and bipartite degree-diameter tables, 359,848; with Sloane's Grassmannian packings, 362,087; with the
   faster checkers for covering arrays, quantum codes and MinT's arrays over GF(2), 364,179; with the smallest known
-  complete arcs in PG(2,q), 374,041.
+  complete arcs in PG(2,q), 374,041; with the mutually orthogonal Latin squares, 375,768.
 - `strongly-regular-graph` (in review for v2.2; read 15 Nov 2026): every parameter set srg(v,k,lambda,mu), v <= 1,300,
   that A. E. Brouwer's table (aeb.win.tue.nl/graphs/srg, 26 pages) marks '?': no graph is known and none has been ruled
   out. A parameter set and its complement are one row pair of the table and one cell here (a graph settles both); 65
@@ -479,6 +480,20 @@ What each family takes from its table, and what it leaves out:
   20-arc of PG(2,61) of Lisonek, Marcugini and Pambianco (2008), rebuilt from their description, certifies the best
   known value of `arc-61`; `tools/lexiarc.c` rebuilds the complete lexiarcs of prime q and reproduces the published
   sizes (35, 146, 147, 372, 1002, 1470, 1839 points for q = 101, 997, 1009, 4999, 30011, 60013, 90001).
+- `mols` (in review for v2.2; read 15 Nov 2026): N(n), the most mutually orthogonal Latin squares of order n, is known
+  only for prime powers (n - 1) and n = 6; every other order is open. The best known lower bounds are Table 3.87 of the
+  Handbook of Combinatorial Designs (2nd edition, 2007), read from SageMath's `MOLS_handbook_data` (10,000 orders, with
+  the two updates of J. H. Dinitz's website), raised by the results in `families/mols/literature.json`: P. J. Dukes
+  and A. C. H. Ling (2014, eight orders from 936 to 9424), R. J. R. Abel, I. Janiszczak and R. Staszewski (2024, N(108)
+  >= 9) and C. D. Rosin (arXiv:2611.16299, 12 Nov 2026: 33 orders from 22 to 494, among them N(22) >= 4 and N(144) >=
+  14). Below 500 the current baseline is the 2024 compilation of A. Miller, R. J. R. Abel, I. Valkov and D. Fraser
+  (Symmetry 16, 1678), whose table could not be read (its publisher answers robots.txt with HTTP 403 and the
+  university repository excludes our client), so only the 34 orders below 500 whose value is known from the papers
+  above are cells; 348 others stay out until it is read. A cell is kept when a submission of one square more than the
+  best known has at most 10^8 symbols (11 squares of order 3001, 459 MB, are checked in 9.5 s): 1,727 cells; 6,641
+  larger orders stay out. `mols_check.py` now reads Rosin's file format (a first line "N K") and hands files above 2
+  MB to the C helper `mols_scan.c` (each ordered pair of symbols marked in an array of N^2 stamps); `fetch.sh` pins
+  eight of Rosin's published sets, which certify the best known values of `mols-22`, `mols-144` and `mols-486`.
 - `project-scheduling`: every instance of the sets with open instances whose best known makespan is above its lower
   bound and which the site does not mark optimal; the open counts match the site's own table of November 2026. The
   highRD, lowRU and 1k variants are not read: their dataset files date from April 2021, many of their upper bounds are
@@ -583,7 +598,7 @@ controls and brute force in `tests/units_prestige.py`:
 - `srg_check.py V K L M FILE`: a strongly regular graph srg(V,K,L,M), common neighbours of every pair counted on bit
   sets (graph6, sparse6, edge list or 0/1 matrix).
 - `projplane_check.py N FILE`: a projective plane of order N given by its lines (every pair of points on exactly one).
-- `mols_check.py N FILE`: K mutually orthogonal Latin squares of order N; the result is K.
+- `mols_check.py N FILE`: K mutually orthogonal Latin squares of order N; the result is K (files above 2 MB in C, `mols_scan.c`).
 - `matmul_check.py N M P FIELDS FILE`: a bilinear algorithm for <N,M,P> over Q, Q(i) or GF(p), checked exactly as a
   decomposition of the matrix multiplication tensor; the result is the number of multiplications. FIELDS = char0
   accepts only Q and Q(i).

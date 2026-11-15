@@ -18,6 +18,28 @@ value can change within a version when its source table changes; the file then s
   some of them are public on Zenodo. Their values stay as read on 8 Nov until a rule for cells the table does not list is
   chosen.
 
+## Next (in review): the family `mols`, mutually orthogonal Latin squares (15 Nov 2026)
+
+- `checkers/mols_check.py`: an optional first line "N K" (the format of github.com/Constructive-Codes/MOLS), and files
+  above 2 MB checked by the new C helper `checkers/mols_scan.c` (Latin rows and columns by stamps, every pair of
+  squares by an array of N^2 stamps); 11 squares of order 3001 (459 MB) in 9.5 s. `tests/test_mols.py` (run by
+  `test.sh`): complete sets a i + j mod p and MacNeish products pass by both routes; 150 random sets with defects
+  (a square copied, two cells swapped, a symbol out of range, a row missing, a header that disagrees) get the same
+  verdict and count from Python and C; red controls; C. D. Rosin's published sets pass with their published sizes.
+- `families/mols` (1,727 cells; `tools/mols_cells.py`, `literature.json`): every order n that is not a prime power
+  (N(n) is known only for prime powers and n = 6) with n >= 500, or below 500 where the current value is known from
+  the literature (34 orders), and at most 10^8 symbols in a submission of one square more. Best known values: the
+  Handbook's Table 3.87 as in SageMath (commit 7a10747, with Dinitz's updates N(60) >= 5 and N(7968) >= 31), raised by
+  Dukes and Ling (2014; 936, 1144, 1224, 5168, 6800, 7429, 9367, 9424), Abel, Janiszczak and Staszewski (2024; 108)
+  and Rosin (arXiv:2611.16299, 12 Nov 2026; 33 orders 22 to 494). Left out: 1,273 prime powers, n = 10 (the single
+  problem mols-10), 348 orders below 500 whose value is in the 2024 compilation of Miller, Abel, Valkov and Fraser
+  (Symmetry 16, 1678; not readable here: HTTP 403 for robots.txt at the publisher, our client excluded by the
+  university repository's robots.txt), and 6,641 orders whose improving submission would exceed 10^8 symbols.
+- `fetch.sh` pins eight of Rosin's sets (orders 22, 45, 72, 80, 96, 144, 225, 486); through obb.py the sets of orders
+  22, 144 and 486 certify 4, 14 and 9, the best known values ("does not improve"), and a row removed is refused.
+  `tests/sample_cells.py` samples the family (i + j and 2i + j mod n for odd n; a square repeated is refused).
+- index.json: 375,768 problems.
+
 ## Next (in review): the family `complete-arc`, smallest complete arcs in PG(2,q) (15 Nov 2026)
 
 - New exact checker `checkers/arc_check.py` with the C helper `checkers/arc_scan.c`: a complete arc of PG(2,q) (no
