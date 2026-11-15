@@ -72,8 +72,9 @@ the 100 are new single problems of v2.1, with eight new checkers; see the collec
 | `covering-array` | 2,659 | C. Smolen's ca-tools table, successor of C. J. Colbourn's covering array tables | `ca_check.py` |
 | `constant-weight-code` | 1,134 | A. E. Brouwer, bounds for binary constant weight codes | `cw_check.py` |
 | `ordered-orthogonal-array` (in review for v2.2) | 2,600 | W. Ch. Schmid and R. Schürer, MinT: linear ordered orthogonal arrays of depth 1 to 8 and digital nets over GF(2) to GF(128) | `ooa_check.py` |
-| `circle-packing` (in review for v2.2) | 10,180 | E. Specht, Packomania: equal circles in a square, circle, half disc, quarter disc and isosceles right triangle; equal balls in a cube, a ball in R^3 and balls in R^4 to R^6 | `pack_check.py` |
-| `growing-circle-packing` (in review for v2.2) | 299 | E. Specht, Packomania: circles of radii 1, 2, ..., N in the smallest circle or square | `pack_check.py` |
+| `circle-packing` (in review for v2.2) | 12,759 | E. Specht, Packomania: equal circles in a square, circle, half disc, quarter disc, isosceles right triangle and the rectangles 1 x 0.1 to 1 x 0.8; equal balls in a cube, a ball in R^3 and balls in R^4 to R^6 | `pack_check.py` |
+| `growing-circle-packing` (in review for v2.2) | 396 | E. Specht, Packomania: circles of radii 1, 2, ..., N in the smallest circle or square, balls of radii 1, ..., N in the smallest ball | `pack_check.py` |
+| `circle-packing-sum` (in review for v2.2) | 3,056 | E. Specht, Packomania: circles of any radii in the unit square with the largest sum of radii | `pack_check.py` |
 | `quantum-code` (in review for v2.2) | 7,141 | M. Grassl, codetables.de: additive (stabilizer) quantum codes [[n,k]] with local dimension 2, 3, 4, 5, 7, 8 | `qcode_check.py` |
 
 Every cell is open in the sense written in its family file: its best known value is not marked optimal by the keeper
@@ -227,6 +228,18 @@ What each family takes from its table, and what it leaves out:
   the family `linear-code` already asks for. With this family the benchmark has 151,980 problems (395 single problems
   and 151,585 cells; `covering-array` has had 2,659 cells since its table was re-read on 12 Nov).
 - `circle-packing` and `growing-circle-packing` (in review for v2.2; read 14 Nov 2026): every N of the Packomania sections with rational geometry (csq, cci, csc, ccq, crt, scu, ssp, hsp4, hsp5, hsp6; ccin and csqn for radii 1..N) whose value is not in bold (Packomania marks proven optimal packings in bold); sections that mark nothing leave out their small N. `pack_check.py` reads the radius (or the container size) and the centres as decimals and decides containment and every overlap in exact integer arithmetic; its frames were checked on Packomania's own coordinate files for csq, cci, csc, ccq, crt, scu, ssp, ccin and csqn (each passes just below the listed value and fails 10^-9 above it). Left out: the regular-polygon sections and the sections with irrational radii, whose exact check needs algebraic numbers. With these two families the benchmark has 162,459 problems.
+- Packomania, second part (in review for v2.2): the eight rectangles 1 x 0.1 to 1 x 0.8 (sections crc100 to crc800, read
+  15 Nov 2026; 2,582 cells in `circle-packing`: every N not in bold, leaving out N <= 2 and N whose radius is h/2, which
+  no circle can exceed), balls of radii 1..N in the smallest ball (sspn, 97 cells in `growing-circle-packing`) and the
+  new family `circle-packing-sum` (csqv: N circles of any radii in the unit square with the largest sum of radii, N = 3
+  to 1,999 and listed N up to 10,000; 3,056 cells). `pack_check.py` checks the new sections exactly as the others (for
+  csqv by a sweep along x, since the radii differ); frames were checked on Packomania's coordinate files for crc100 and
+  crc800 (N = 7, 30, 150: each passes 10^-12 below the listed radius and fails 10^-9 above), csqv30 (passes with every
+  radius 10^-11 smaller, fails 10^-9 larger) and sspn20 (passes 10^-6 above the listed size, fails 10^-6 below).
+  Corrected: three N were listed twice on their pages (crt 166 and 294, hsp4 300) and had been counted twice; each is
+  now one cell, with the better of the two values (hsp4 300: 0.187824804694), so the first part has 10,177 cells, not
+  10,180. Holders named on the pages only by an image are now given as "[name shown as an image: NAME]". Each family
+  file notes Packomania's queue of unreviewed candidates (pending.html), which may already beat a cell's value.
 - `quantum-code` (in review for v2.2; read 15 Nov 2026): every entry of Grassl's tables of quantum codes (qubits up to
   length 256; local dimension 3, 4, 5, 7 and 8 up to length 100) whose lower bound is below its upper bound and whose
   exact check takes at most 2^34 steps (Q^(n-k) for Q = 2, 4, 8) or 2^31 steps ((Q^(n-k) - 1)/(Q - 1) for Q = 3, 5,
@@ -239,7 +252,8 @@ What each family takes from its table, and what it leaves out:
   credited to them. Left out: 8,740 solved entries and 42,995 open entries whose check would be longer. Checks: the
   five-qubit, Steane and hexacode codes and the five-qudit code over GF(3), GF(4), GF(5), GF(7), GF(8); 36 random
   codes against brute force; the C helper against the Python lister; and 65 of de Messières' codes (n - k <= 30),
-  whose distances it reproduces. With this family the benchmark has 169,600 problems.
+  whose distances it reproduces. With this family the benchmark has 169,600 problems; with the second part of
+  Packomania, 175,332.
 - `project-scheduling`: every instance of the sets with open instances whose best known makespan is above its lower
   bound and which the site does not mark optimal; the open counts match the site's own table of November 2026. The
   highRD, lowRU and 1k variants are not read: their dataset files date from April 2021, many of their upper bounds are

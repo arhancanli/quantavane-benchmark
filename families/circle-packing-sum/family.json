@@ -1,0 +1,45 @@
+{
+ "keeper": "E. Specht, Packomania (packomania.com)",
+ "page": "https://www.packomania.com/",
+ "read": "2026-11-14",
+ "revision": "the section pages read 14 Nov 2026 22:3x-22:5x +04 (SHA-256 of each page in section_info)",
+ "exact_values": false,
+ "holder_unknown": "not named in the section's table",
+ "holder_sources": "the reference in the last column of the section's table, from its list of references",
+ "single_problems_left_out": 0,
+ "quantavane_records": 0,
+ "cells": "cells.jsonl",
+ "pending_queue": "Packomania's list of pending requests (pending.html, dated 9 Nov 2026, read 14 Nov) holds thousands of unreviewed candidates, by section and range of N (for example 1,456 for the eight rectangles, 2,213 and 1,813 for csq, 587 and 17 for ssp); their values are not published, so a cell's best known value is the table's, and a candidate in the queue may already beat it",
+ "family": "circle-packing-sum",
+ "title": "Circles of any radii in the unit square with the largest sum of radii",
+ "added": "2.2",
+ "objective": "maximize",
+ "id_prefixes": [
+  "pack-"
+ ],
+ "cell_url": "https://www.packomania.com/{section}/{section}.html",
+ "template": {
+  "title": "{n} circles of any radii in the unit square with the largest sum of radii (Packomania {section})",
+  "statement": "Place {n} non-overlapping circles, each of any positive radius, in the unit square [0,1]^2 so that the sum of their radii is as large as possible.",
+  "submission": "Text file: {n} lines, each the centre and the radius of one circle, x y r (decimal numbers separated by spaces or commas), in the square [0,1]^2; see checkers/pack_check.py, section {section}.",
+  "args": [
+   "{section}",
+   "{n}"
+  ]
+ },
+ "checker": {
+  "program": "pack_check.py",
+  "value": "result"
+ },
+ "score": "the sum of the radii (larger is better)",
+ "best_text": "The best known sum of radii in Packomania's table is {best} ({holder}); a valid packing with a larger sum improves it.",
+ "open_rule": "every N of the section csqv (complete up to N = 1999, and further N up to 10,000) whose value is not in bold (proven optimal), N >= 3",
+ "left_out": "csqv: 0 proven, 2 small N (N = 1: 1/2; N = 2: 2 - sqrt 2, by the diagonal)",
+ "section_info": {
+  "csqv": {
+   "container": "the unit square [0,1]^2",
+   "page_sha256": "5b359074141d612a3b6125ff886d7acc846b3b2014dc08db4003a15ccbb391b9"
+  }
+ },
+ "count": 3056
+}

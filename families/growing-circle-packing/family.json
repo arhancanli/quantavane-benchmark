@@ -9,6 +9,7 @@
  "single_problems_left_out": 0,
  "quantavane_records": 0,
  "cells": "cells.jsonl",
+ "pending_queue": "Packomania's list of pending requests (pending.html, dated 9 Nov 2026, read 14 Nov) holds thousands of unreviewed candidates, by section and range of N (for example 1,456 for the eight rectangles, 2,213 and 1,813 for csq, 587 and 17 for ssp); their values are not published, so a cell's best known value is the table's, and a candidate in the queue may already beat it",
  "family": "growing-circle-packing",
  "title": "Circles of radii 1, 2, ..., N packed in the smallest circle or square",
  "added": "2.2",
@@ -32,8 +33,8 @@
  },
  "score": "the size V of the container (smaller is better)",
  "best_text": "The best known container in Packomania's table has size {best} ({holder}); a valid packing in a smaller one improves it.",
- "open_rule": "every N of the sections ccin and csqn whose value is not in bold (proven optimal), N >= 4",
- "left_out": "ccin: 0 proven, 3 small N; csqn: 0 proven, 3 small N; the sections with radii i^(1/2), i^(-1/2), i^(-2/3) and i^(-1/5) (irrational radii)",
+ "open_rule": "every N of the sections ccin, csqn and sspn (balls of radii 1..N in a ball) whose value is not in bold (proven optimal), N >= 4",
+ "left_out": "ccin: 0 proven, 3 small N; csqn: 0 proven, 3 small N; sspn: 0 proven, 2 small N; the sections with radii i^(1/2), i^(-1/2), i^(-2/3) and i^(-1/5) (irrational radii)",
  "variants": {
   "ccin": {
    "title": "Circles of radii 1 to {n} in a circle centred at 0 (Packomania {section})",
@@ -43,6 +44,11 @@
   "csqn": {
    "title": "Circles of radii 1 to {n} in a square [0,V]^2 (Packomania {section})",
    "statement": "Place {n} non-overlapping circles of radii 1, 2, ..., {n} in a square [0,V]^2 whose size V (the radius of the circle, or the side of the square) is as small as possible.",
+   "submission": "Text file: V on the first line, then {n} lines with the centres of the circles of radius 1, 2, ..., {n} in that order (decimal numbers), in the frame given by checkers/pack_check.py for section {section}."
+  },
+  "sspn": {
+   "title": "Circles of radii 1 to {n} in a ball centred at 0 in R^3 (Packomania {section})",
+   "statement": "Place {n} non-overlapping circles of radii 1, 2, ..., {n} in a ball centred at 0 in R^3 whose size V (the radius of the circle, or the side of the square) is as small as possible.",
    "submission": "Text file: V on the first line, then {n} lines with the centres of the circles of radius 1, 2, ..., {n} in that order (decimal numbers), in the frame given by checkers/pack_check.py for section {section}."
   }
  },
@@ -54,7 +60,11 @@
   "csqn": {
    "container": "a square [0,V]^2",
    "page_sha256": "d5b01e01609431c6b5755575a5662f2cbb088d0aa49cee48fc59dccf981889b0"
+  },
+  "sspn": {
+   "container": "a ball centred at 0 in R^3",
+   "page_sha256": "01ee4eb5b8052ca0a6e05859ca005b1c3c0d832c8dd559c77fd57fb0958606be"
   }
  },
- "count": 299
+ "count": 396
 }

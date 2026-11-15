@@ -347,9 +347,12 @@ def test_circle_packing(n, rng):
     boxes = {"csq": (0, 1), "scu": (0, 1), "cci": (Fr(-1, 4), Fr(1, 4)), "ssp": (Fr(-1, 4), Fr(1, 4)),
              "hsp4": (Fr(-1, 4), Fr(1, 4)), "hsp5": (Fr(-1, 4), Fr(1, 4)), "hsp6": (Fr(-1, 4), Fr(1, 4)),
              "ccq": (Fr(1, 4), Fr(1, 2)), "crt": (Fr(1, 8), Fr(3, 8))}
+    boxes.update({f"crc{h}00": (0, Fr(h, 10)) for h in range(1, 9)})     # a square of side h in the 1 x h rectangle
     dims = {"csq": 2, "cci": 2, "csc": 2, "ccq": 2, "crt": 2, "scu": 3, "ssp": 3, "hsp4": 4, "hsp5": 5, "hsp6": 6}
+    dims.update({f"crc{h}00": 2 for h in range(1, 9)})
     cells = [c for c in family_cells("circle-packing") if c["params"]["n"] <= 300]
-    for c in rng.sample(cells, min(n + 2, len(cells))):
+    rect = [c for c in cells if c["params"]["section"].startswith("crc")]
+    for c in rng.sample(cells, min(n + 2, len(cells))) + rng.sample(rect, min(2, len(rect))):
         sec, N = c["params"]["section"], c["params"]["n"]
         d = dims[sec]
         k = 1
@@ -382,24 +385,43 @@ def test_circle_packing(n, rng):
 def test_growing_circle_packing(n, rng):
     """Circles of radii 1..N in a row along a diameter (or along the middle of the square): valid and far above the
     table; the container shrunk by one must be refused."""
-    for c in rng.sample(family_cells("growing-circle-packing"), n):
+    grow = family_cells("growing-circle-packing")
+    for c in rng.sample(grow, n) + rng.sample([c for c in grow if c["params"]["section"] == "sspn"], 1):
         sec, N = c["params"]["section"], c["params"]["n"]
         L = N * (N + 1)
         xs, x = [], 0
         for i in range(1, N + 1):
             xs.append(x + i)
             x += 2 * i
-        if sec == "ccin":
+        if sec in ("ccin", "sspn"):
             V = L // 2
-            pts = [(xi - V, 0) for xi in xs]
+            pts = [(xi - V, 0) + ((0,) if sec == "sspn" else ()) for xi in xs]
         else:
             V = max(L, 2 * N)
             pts = [(xi, N) for xi in xs]
-        lines = [str(V)] + [f"{a} {b}" for a, b in pts]
+        lines = [str(V)] + [" ".join(map(str, p)) for p in pts]
         good = write(f"{c['id']}.txt", lines)
         expect(f"sample {c['id']} circles in a row", obb(c["id"], good), "does not improve,")
         bad = write(f"{c['id']}_red.txt", [str(V - 1)] + lines[1:])
         expect(f"red   {c['id']} (container shrunk by 1)", obb(c["id"], bad), "NOT CERTIFIED,")
+
+
+def test_circle_packing_sum(n, rng):
+    """N equal circles on a grid in the unit square (radius half the step): valid, and its sum of radii is below the
+    table; a radius enlarged so that two circles overlap must be refused."""
+    for c in rng.sample(family_cells("circle-packing-sum"), n):
+        N = c["params"]["n"]
+        k = 1
+        while k * k < N:
+            k += 1
+        r = 1 / (2 * k)
+        pts = [((2 * i + 1) * r, (2 * j + 1) * r) for i in range(k) for j in range(k)][:N]
+        lines = [f"{x:.12f} {y:.12f} {r * 0.999999:.12f}" for x, y in pts]
+        good = write(f"{c['id']}.txt", lines)
+        expect(f"sample {c['id']} grid of {N} equal circles", obb(c["id"], good), "does not improve,")
+        x, y = pts[0]
+        bad = write(f"{c['id']}_red.txt", [f"{x:.12f} {y:.12f} {r * 1.000001:.12f}"] + lines[1:])
+        expect(f"red   {c['id']} (one radius too large)", obb(c["id"], bad), "NOT CERTIFIED,")
 
 
 def main():
@@ -414,7 +436,8 @@ def main():
                        ("ordered-orthogonal-array", test_ordered_orthogonal_array),
                        ("circle-packing", test_circle_packing),
                        ("growing-circle-packing", test_growing_circle_packing),
-                       ("quantum-code", test_quantum_code)):
+                       ("quantum-code", test_quantum_code),
+                       ("circle-packing-sum", test_circle_packing_sum)):
         if os.path.exists(os.path.join(ROOT, "families", name, "cells.jsonl")):
             test(n, rng)
         else:

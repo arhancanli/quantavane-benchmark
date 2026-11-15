@@ -9,6 +9,7 @@
  "single_problems_left_out": 0,
  "quantavane_records": 0,
  "cells": "cells.jsonl",
+ "pending_queue": "Packomania's list of pending requests (pending.html, dated 9 Nov 2026, read 14 Nov) holds thousands of unreviewed candidates, by section and range of N (for example 1,456 for the eight rectangles, 2,213 and 1,813 for csq, 587 and 17 for ssp); their values are not published, so a cell's best known value is the table's, and a candidate in the queue may already beat it",
  "family": "circle-packing",
  "title": "Equal circles and balls packed in a container with the largest radius",
  "added": "2.2",
@@ -32,8 +33,10 @@
  },
  "score": "the common radius (larger is better)",
  "best_text": "The best known radius in Packomania's table is {best} ({holder}); a valid packing with a larger radius improves it.",
- "open_rule": "every N of the sections csq, cci, csc, ccq, crt, scu, ssp, hsp4, hsp5 and hsp6 whose radius is not in bold (proven optimal)",
- "left_out": "csq: 30 proven, 0 small N; cci: 13 proven, 0 small N; csc: 0 proven, 3 small N; ccq: 0 proven, 2 small N; crt: 0 proven, 2 small N; scu: 0 proven, 9 small N; ssp: 0 proven, 11 small N; hsp4: 0 proven, 5 small N; hsp5: 0 proven, 5 small N; hsp6: 0 proven, 6 small N; the regular-polygon sections and the sections with irrational radii (exact checks need algebraic numbers)",
+ "open_rule": "every N of the sections csq, cci, csc, ccq, crt, scu, ssp, hsp4, hsp5, hsp6 and of the eight 1 x h rectangles crc100 to crc800 whose radius is not in bold (proven optimal); for the rectangles also not N <= 2 and not a radius of h/2, which no circle can exceed",
+ "left_out": "csq: 30 proven, 0 small N; cci: 13 proven, 0 small N; csc: 0 proven, 3 small N; ccq: 0 proven, 2 small N; crt: 0 proven, 2 small N, 2 N listed twice (the better value kept); scu: 0 proven, 9 small N; ssp: 0 proven, 11 small N; hsp4: 0 proven, 5 small N, 1 N listed twice (the better value kept); hsp5: 0 proven, 5 small N; hsp6: 0 proven, 6 small N; crc100: 10 proven, 0 small N, 1 N listed twice (the better value kept); crc200: 5 proven, 0 small N; crc300: 3 proven, 0 small N; crc400: 2 proven, 0 small N; crc500: 2 proven, 0 small N; crc600: 0 proven, 2 small N; crc700: 1 proven, 1 small N; crc800: 1 proven, 1 small N; the regular-polygon sections and the sections with irrational radii (exact checks need algebraic numbers); the rectangle of variable aspect ratio (crc_var)",
+ "rectangles_read": "2026-11-15",
+ "rectangles_revision": "the eight rectangle pages crc_100/crc.html to crc_800/crc.html read 15 Nov 2026 09:47-09:48 UTC (SHA-256 of each in section_info)",
  "variants": {
   "csq": {
    "title": "{n} equal circles in the unit square [0,1]^2 (Packomania {section})",
@@ -83,6 +86,46 @@
   "hsp6": {
    "title": "{n} equal balls in a ball of radius 1 in R^6 (Packomania {section})",
    "statement": "Place {n} non-overlapping balls of equal radius in a ball of radius 1 in R^6 so that the radius is as large as possible.",
+   "submission": "Text file: the radius on the first line, then {n} lines with the coordinates of the centres (decimal numbers separated by spaces or commas), in the frame given by checkers/pack_check.py for section {section}."
+  },
+  "crc100": {
+   "title": "{n} equal circles in the rectangle [0,1] x [0,0.1] (Packomania {section})",
+   "statement": "Place {n} non-overlapping circles of equal radius in the rectangle [0,1] x [0,0.1] so that the radius is as large as possible.",
+   "submission": "Text file: the radius on the first line, then {n} lines with the coordinates of the centres (decimal numbers separated by spaces or commas), in the frame given by checkers/pack_check.py for section {section}."
+  },
+  "crc200": {
+   "title": "{n} equal circles in the rectangle [0,1] x [0,0.2] (Packomania {section})",
+   "statement": "Place {n} non-overlapping circles of equal radius in the rectangle [0,1] x [0,0.2] so that the radius is as large as possible.",
+   "submission": "Text file: the radius on the first line, then {n} lines with the coordinates of the centres (decimal numbers separated by spaces or commas), in the frame given by checkers/pack_check.py for section {section}."
+  },
+  "crc300": {
+   "title": "{n} equal circles in the rectangle [0,1] x [0,0.3] (Packomania {section})",
+   "statement": "Place {n} non-overlapping circles of equal radius in the rectangle [0,1] x [0,0.3] so that the radius is as large as possible.",
+   "submission": "Text file: the radius on the first line, then {n} lines with the coordinates of the centres (decimal numbers separated by spaces or commas), in the frame given by checkers/pack_check.py for section {section}."
+  },
+  "crc400": {
+   "title": "{n} equal circles in the rectangle [0,1] x [0,0.4] (Packomania {section})",
+   "statement": "Place {n} non-overlapping circles of equal radius in the rectangle [0,1] x [0,0.4] so that the radius is as large as possible.",
+   "submission": "Text file: the radius on the first line, then {n} lines with the coordinates of the centres (decimal numbers separated by spaces or commas), in the frame given by checkers/pack_check.py for section {section}."
+  },
+  "crc500": {
+   "title": "{n} equal circles in the rectangle [0,1] x [0,0.5] (Packomania {section})",
+   "statement": "Place {n} non-overlapping circles of equal radius in the rectangle [0,1] x [0,0.5] so that the radius is as large as possible.",
+   "submission": "Text file: the radius on the first line, then {n} lines with the coordinates of the centres (decimal numbers separated by spaces or commas), in the frame given by checkers/pack_check.py for section {section}."
+  },
+  "crc600": {
+   "title": "{n} equal circles in the rectangle [0,1] x [0,0.6] (Packomania {section})",
+   "statement": "Place {n} non-overlapping circles of equal radius in the rectangle [0,1] x [0,0.6] so that the radius is as large as possible.",
+   "submission": "Text file: the radius on the first line, then {n} lines with the coordinates of the centres (decimal numbers separated by spaces or commas), in the frame given by checkers/pack_check.py for section {section}."
+  },
+  "crc700": {
+   "title": "{n} equal circles in the rectangle [0,1] x [0,0.7] (Packomania {section})",
+   "statement": "Place {n} non-overlapping circles of equal radius in the rectangle [0,1] x [0,0.7] so that the radius is as large as possible.",
+   "submission": "Text file: the radius on the first line, then {n} lines with the coordinates of the centres (decimal numbers separated by spaces or commas), in the frame given by checkers/pack_check.py for section {section}."
+  },
+  "crc800": {
+   "title": "{n} equal circles in the rectangle [0,1] x [0,0.8] (Packomania {section})",
+   "statement": "Place {n} non-overlapping circles of equal radius in the rectangle [0,1] x [0,0.8] so that the radius is as large as possible.",
    "submission": "Text file: the radius on the first line, then {n} lines with the coordinates of the centres (decimal numbers separated by spaces or commas), in the frame given by checkers/pack_check.py for section {section}."
   }
  },
@@ -146,7 +189,55 @@
    "container": "a ball of radius 1 in R^6",
    "dimension": 6,
    "page_sha256": "a59a0018025a053b82e6f726e275598e988d33e0d737d3d0fe5b8c1b31af34be"
+  },
+  "crc100": {
+   "shape": "circles",
+   "container": "the rectangle [0,1] x [0,0.1]",
+   "dimension": 2,
+   "page_sha256": "42b9ace86e0b28dd5b60727e39901e39c9bf14567c3777561098ea37fe1c382b"
+  },
+  "crc200": {
+   "shape": "circles",
+   "container": "the rectangle [0,1] x [0,0.2]",
+   "dimension": 2,
+   "page_sha256": "fbe9e2a3cfd58bfb957826f0bdbc416e3048fd0522db782b095282f2208ef5bc"
+  },
+  "crc300": {
+   "shape": "circles",
+   "container": "the rectangle [0,1] x [0,0.3]",
+   "dimension": 2,
+   "page_sha256": "33ebbbd15b348a9b7918aa9ec624368b34c06ed02031a1c09b0355a84a79067e"
+  },
+  "crc400": {
+   "shape": "circles",
+   "container": "the rectangle [0,1] x [0,0.4]",
+   "dimension": 2,
+   "page_sha256": "c62dcf8dfe9efb6171ef9843dab8fe4aa8345a062f5552ceac06f6a193904793"
+  },
+  "crc500": {
+   "shape": "circles",
+   "container": "the rectangle [0,1] x [0,0.5]",
+   "dimension": 2,
+   "page_sha256": "24bc582a44b86faf6de9d9c708b219c5d7545cea8675566ef107c2c259e22cda"
+  },
+  "crc600": {
+   "shape": "circles",
+   "container": "the rectangle [0,1] x [0,0.6]",
+   "dimension": 2,
+   "page_sha256": "ea15bf47ec02220c6aef5ce89a0499b85f974bae6fafc386ad55dca5bce67ce1"
+  },
+  "crc700": {
+   "shape": "circles",
+   "container": "the rectangle [0,1] x [0,0.7]",
+   "dimension": 2,
+   "page_sha256": "a475a976672e60bcf868ac13e255a239f377f927818173641c19b745692da451"
+  },
+  "crc800": {
+   "shape": "circles",
+   "container": "the rectangle [0,1] x [0,0.8]",
+   "dimension": 2,
+   "page_sha256": "4326cfcec999d4dc18dd59af6a52ebf0192f5350299792aa0a6b44ad73e41437"
   }
  },
- "count": 10180
+ "count": 12759
 }

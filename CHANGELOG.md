@@ -18,6 +18,21 @@ value can change within a version when its source table changes; the file then s
   some of them are public on Zenodo. Their values stay as read on 8 Nov until a rule for cells the table does not list is
   chosen.
 
+## Next (in review): Packomania, second part (15 Nov 2026)
+
+- `checkers/pack_check.py`: sections crc100 to crc800 (equal circles in the rectangle [0,1] x [0,h], h = 0.1 to 0.8),
+  sspn (balls of radii 1..N in the smallest ball) and csqv (circles of any radii in the unit square; the value is the
+  sum of the radii, and pairs are tested by an exact sweep along x).
+- `families/circle-packing`: 2,582 rectangle cells (pages read 15 Nov 2026, SHA-256 in the family file); 12,759 cells.
+  `families/growing-circle-packing`: 97 sspn cells; 396 cells. New `families/circle-packing-sum`: 3,056 cells.
+- Corrected: crt 166, crt 294 and hsp4 300 were each listed twice on their pages and counted twice; each is now one
+  cell with the better value (hsp4 300: 0.187824804694, not 0.187648382196). Holders shown on the pages only as an image
+  are named by the image's file name. The family files note Packomania's queue of unreviewed candidates.
+- Frames checked on Packomania's coordinate files for crc100, crc800, csqv30 and sspn20; `tests/test_pack.py` has 15 new
+  checks (touching packings and red controls for the new sections, 10,000 circles through the sweep);
+  `tests/sample_cells.py` samples the rectangles, sspn and the new family.
+- index.json: 175,332 problems.
+
 ## Next (in review): the family `quantum-code` from codetables.de (15 Nov 2026)
 
 - New exact checker `checkers/qcode_check.py` (standard library only) with the C helper `checkers/qcode_enum.c`
