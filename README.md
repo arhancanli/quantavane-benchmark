@@ -71,7 +71,7 @@ the 100 are new single problems of v2.1, with eight new checkers; see the collec
 | `spherical-code` | 14,782 | H. Cohn, table of spherical codes (dimensions 3 to 32 and a few more) | `sph_check.py` |
 | `covering-array` | 4,731 | C. Smolen's ca-tools table, successor of C. J. Colbourn's covering array tables | `ca_check.py` |
 | `constant-weight-code` | 1,134 | A. E. Brouwer, bounds for binary constant weight codes | `cw_check.py` |
-| `ordered-orthogonal-array` (in review for v2.2) | 2,600 | W. Ch. Schmid and R. Schürer, MinT: linear ordered orthogonal arrays of depth 1 to 8 and digital nets over GF(2) to GF(128) | `ooa_check.py` |
+| `ordered-orthogonal-array` (in review for v2.2) | 4,157 | W. Ch. Schmid and R. Schürer, MinT: linear ordered orthogonal arrays of depth 1 to 8 and digital nets over GF(2) to GF(128) | `ooa_check.py` |
 | `circle-packing` (in review for v2.2) | 12,759 | E. Specht, Packomania: equal circles in a square, circle, half disc, quarter disc, isosceles right triangle and the rectangles 1 x 0.1 to 1 x 0.8; equal balls in a cube, a ball in R^3 and balls in R^4 to R^6 | `pack_check.py` |
 | `growing-circle-packing` (in review for v2.2) | 396 | E. Specht, Packomania: circles of radii 1, 2, ..., N in the smallest circle or square, balls of radii 1, ..., N in the smallest ball | `pack_check.py` |
 | `circle-packing-sum` (in review for v2.2) | 3,056 | E. Specht, Packomania: circles of any radii in the unit square with the largest sum of radii | `pack_check.py` |
@@ -225,13 +225,15 @@ What each family takes from its table, and what it leaves out:
   the entry's label, read with the table's own key.
 - `ordered-orthogonal-array` (in review for v2.2; read 14 Nov 2026): the cells (base b, depth T, b^m runs, strength k)
   of MinT with 3 <= k <= m <= 51 in which the best known LINEAR object has fewer factors than MinT's bound for linear
-  objects, and in which one more factor than the best known can be checked exactly within 2^27 steps. Depth 1 is an
+  objects, and in which one more factor than the best known can be checked exactly within 2^27 steps, or (for b = 2^e)
+  within 2^34 (b = 2), 2^32 (b = 4, 8) or 2^30 (b = 16 to 256) steps of the depth-vector walk, which runs in C
+  (`ooa_walk.c`, vectors kept as bit planes; 15 Nov 2026: 1,557 more cells, 4,157 in all). Depth 1 is an
   orthogonal array, depth net a digital (m - k, m, s)-net. The checker reads a generator matrix and decides the
   strength by two separate exact methods (every choice of depths with a running echelon basis; the row space with a
   MacWilliams identity for the Niederreiter-Rosenbloom-Tsfasman weights), so only linear objects can be submitted;
-  the cell says so when a non-linear object with more factors is known. Left out: 7,665 solved cells, 54,839 open
-  cells whose check would be longer, and the 270 cells of depth 1 over GF(2) to GF(9), which are linear codes that
-  the family `linear-code` already asks for. With this family the benchmark has 151,980 problems (395 single problems
+  the cell says so when a non-linear object with more factors is known. Left out: 7,665 solved cells, 53,214 open
+  cells whose check would be longer, and the 338 checkable cells of depth 1 over GF(2) to GF(9), which are linear
+  codes that the family `linear-code` already asks for. With this family the benchmark has 151,980 problems (395 single problems
   and 151,585 cells; `covering-array` has had 2,659 cells since its table was re-read on 12 Nov).
 - `circle-packing` and `growing-circle-packing` (in review for v2.2; read 14 Nov 2026): every N of the Packomania sections with rational geometry (csq, cci, csc, ccq, crt, scu, ssp, hsp4, hsp5, hsp6; ccin and csqn for radii 1..N) whose value is not in bold (Packomania marks proven optimal packings in bold); sections that mark nothing leave out their small N. `pack_check.py` reads the radius (or the container size) and the centres as decimals and decides containment and every overlap in exact integer arithmetic; its frames were checked on Packomania's own coordinate files for csq, cci, csc, ccq, crt, scu, ssp, ccin and csqn (each passes just below the listed value and fails 10^-9 above it). Left out: the regular-polygon sections and the sections with irrational radii, whose exact check needs algebraic numbers. With these two families the benchmark has 162,459 problems.
 - Packomania, second part (in review for v2.2): the eight rectangles 1 x 0.1 to 1 x 0.8 (sections crc100 to crc800, read
@@ -260,7 +262,7 @@ What each family takes from its table, and what it leaves out:
   codes against brute force; the C helper against the Python lister; and 65 of de Messières' codes (n - k <= 30),
   whose distances it reproduces. With this family the benchmark has 169,600 problems; with the second part of
   Packomania, 175,332; with the covering designs re-read and checked in C, 176,529; with the covering arrays
-  re-read and checked in C, 178,601.
+  re-read and checked in C, 178,601; with the ordered orthogonal arrays walked in C, 180,158.
 - `project-scheduling`: every instance of the sets with open instances whose best known makespan is above its lower
   bound and which the site does not mark optimal; the open counts match the site's own table of November 2026. The
   highRD, lowRU and 1k variants are not read: their dataset files date from April 2021, many of their upper bounds are
@@ -317,6 +319,8 @@ Leaps in Bounds):
 
 The checkers added in v2.0, one per new family, also end with `RESULT v`:
 
+- `ooa_check.py B T M K FILE`: linear ordered orthogonal arrays and digital nets over GF(B) (two exact methods; for
+  B = 2^e the depth-vector walk runs in C, `ooa_walk.c`, above 2^20 steps).
 - `ca_check.py T K V FILE`: a covering array of strength T with K columns over V symbols (for each column and symbol
   the rows holding it form a bit set; every T-set of columns is checked through its intersections, shared between
   T-sets with the same first columns).

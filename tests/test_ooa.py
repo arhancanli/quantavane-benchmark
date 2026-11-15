@@ -90,5 +90,44 @@ for trial in range(600):
     agree += 1; passed += df
     expect(f'random {trial} q={q} T={T} m={m} k={k} s={s}', (cd, ce), (0 if df else 1,) * 2)
 print(f'random objects compared: {agree} ({passed} with the strength asked for, {agree - passed} without)')
+# 8. method D in C (ooa_walk.c, bases 2^e) against method D in Python: the same verdict and the same number of depth
+#    vectors, on random objects (many of them pass over the larger fields) and through main() with --native
+same = total_c = indep_c = 0
+for trial in range(400):
+    q = rng.choice([2, 2, 2, 4, 8, 16, 32, 64, 128, 256])
+    F = oc.Field(q)
+    T = rng.choice([1, 2, 3, 4, 'net'])
+    m = rng.randint(3, 12 if q > 4 else 20)
+    k = rng.randint(1, m)
+    D = k if T == 'net' else T
+    t = min(D, k)
+    lo = -(-k // t)
+    s = rng.randint(lo, lo + 6)
+    cols = [[tuple(rng.randrange(q) for _ in range(m)) for j in range(t)] for i in range(s)]
+    a, b = oc.way_d(F, cols, s, t, k), oc.way_d_native(F, cols, m, s, t, k)
+    total_c += 1
+    indep_c += a[0]
+    same += a[0] == b[0] and (not a[0] or a[2] == b[2])
+expect(f'method D in C against Python on {total_c} random objects ({indep_c} independent)', same, total_c)
+for trial in range(60):
+    q = rng.choice([2, 4, 8, 16])
+    m = rng.randint(2, 5 if q <= 4 else 3)
+    k = rng.randint(1, m)
+    T = rng.choice([1, 2, 'net'])
+    D = k if T == 'net' else T
+    t = min(D, k)
+    s = rng.randint(-(-k // t), -(-k // t) + 3)
+    if q ** m * s * D > 40000 or (t + 1) ** s > 3000: continue
+    rows = [[rng.randrange(q) for _ in range(s * D)] for _ in range(m)]
+    if rng.random() < 0.5:
+        for r in range(m):
+            for c in range(min(m, s * D)): rows[r][c] = 1 if r == c else 0
+    with tempfile.NamedTemporaryFile('w', suffix='.txt', delete=False) as f:
+        for r in rows: f.write(' '.join(map(str, r)) + '\n')
+    buf = io.StringIO()
+    with contextlib.redirect_stdout(buf):
+        code = oc.main([str(q), str(T), str(m), str(k), f.name, '--way', 'D', '--native'])
+    os.unlink(f.name)
+    expect(f'--native {trial} q={q} T={T} m={m} k={k} s={s} against the definition', code, 0 if by_definition(q, D, m, k, rows) else 1)
 print(f'{checks} checks, {fails} failed')
 sys.exit(1 if fails else 0)

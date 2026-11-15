@@ -23,7 +23,9 @@ Two separate exact methods:
      has, and computes from that the number of dual words of each weight 1..K in the Niederreiter-Rosenbloom-Tsfasman
      metric (a MacWilliams identity in exact integers): strength K means all those numbers are zero
      (about B^M * S * D / (B - 1) steps).
-By default the cheaper one runs; --way both runs the two and requires the same verdict.
+By default the cheaper one runs; --way both runs the two and requires the same verdict. For B = 2, 4, 8, ..., 256 and
+M <= 64, method D runs in C (checkers/ooa_walk.c, the same walk on vectors kept as bit planes) above 2^20 steps;
+--native or --python forces one way.
 
 Prints "RESULT S" as its last line and exits 0 when the strength is at least K; prints the reason and exits 1 when it
 is not or the input is malformed; exits 2 when both methods would need more than --max-work steps (default 2^33)."""
@@ -147,6 +149,31 @@ def way_d(F, cols, s, t, k):
     if bad:
         return False, "dependent columns: (factor, depth) = " + ", ".join(f"({i},{d})" for i, d in bad), leaves
     return True, f"{leaves} depth vectors of weight {k}, all independent", leaves
+
+
+def way_d_native(F, cols, m, s, t, k):
+    """Method D in C (checkers/ooa_walk.c, built with cc -O3 on first use), for B = 2^e and M <= 64: the same walk,
+    with each vector kept as e bit planes. Returns (ok, message, leaves)."""
+    import os
+    import subprocess
+    here = os.path.dirname(os.path.abspath(__file__))
+    exe, src = os.path.join(here, "bin", "ooa_walk"), os.path.join(here, "ooa_walk.c")
+    if not os.path.exists(exe) or os.path.getmtime(exe) < os.path.getmtime(src):
+        os.makedirs(os.path.dirname(exe), exist_ok=True)
+        subprocess.run(["cc", "-O3", "-o", exe, src], check=True)
+    e = F.e
+    parts = [f"{e} {m} {s} {t} {k}"]
+    for c in range(F.q):
+        parts.append(" ".join([str(F.inv[c] if c else 0)] + [str(F.mul[c][2 ** i]) for i in range(e)]))
+    for i in range(s):
+        for j in range(t):
+            parts.append(" ".join(map(str, cols[i][j])))
+    out = subprocess.run([exe], input="\n".join(parts) + "\n", capture_output=True, text=True, check=True).stdout
+    first = out.split("\n")[0]
+    if first.startswith("independent"):
+        leaves = int(first.split()[1])
+        return True, f"{leaves} depth vectors of weight {k}, all independent (walked in C)", leaves
+    return False, "dependent columns (walked in C): (factor, depth) = " + first[len("dependent "):], None
 
 
 # ---------------------------------------------------------------- method E: row space and dual weights
@@ -285,9 +312,16 @@ def read_matrix(path, q, m):
     return rows
 
 
+NATIVE_FROM = 2 ** 20                  # method D in C above this many steps (B = 2^e, M <= 64)
+
+
 def main(argv=None):
     argv = list(sys.argv[1:] if argv is None else argv)
-    way, max_work = None, 2 ** 33
+    way, max_work, force = None, 2 ** 33, None
+    for flag in ("--native", "--python"):
+        if flag in argv:
+            argv.remove(flag)
+            force = flag
     if "--way" in argv:
         i = argv.index("--way"); way = argv[i + 1]; del argv[i:i + 2]
     if "--max-work" in argv:
@@ -331,7 +365,9 @@ def main(argv=None):
             return 2
     verdicts = []
     if way in ("D", "both"):
-        ok, msg, _ = way_d(F, cols, s, t, k)
+        can_native = F.p == 2 and m <= 64
+        native = can_native and (force == "--native" or (force is None and work_d > NATIVE_FROM))
+        ok, msg, _ = way_d_native(F, cols, m, s, t, k) if native else way_d(F, cols, s, t, k)
         print(f"method D: {'strength at least ' + str(k) if ok else 'NOT strength ' + str(k)}: {msg}")
         verdicts.append(ok)
     if way in ("E", "both"):

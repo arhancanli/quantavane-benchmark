@@ -18,6 +18,19 @@ value can change within a version when its source table changes; the file then s
   some of them are public on Zenodo. Their values stay as read on 8 Nov until a rule for cells the table does not list is
   chosen.
 
+## Next (in review): ordered orthogonal arrays walked in C (15 Nov 2026)
+
+- `checkers/ooa_check.py`: for B = 2, 4, 8, ..., 256 and M <= 64, method D (every choice of depths with a running
+  echelon basis) runs in the new C helper `checkers/ooa_walk.c` above 2^20 steps, with each vector kept as e bit planes
+  and multiplication by a field element done as a linear map on the planes; `--native` and `--python` force one way.
+  About 3 x 10^8 steps a second for B = 2, 7 x 10^7 for B = 4 and 10^7 for B = 256. `tests/test_ooa.py`: method D in C
+  against Python on 400 random objects (verdict and number of depth vectors), and `--native` against the definition on
+  60 objects (672 checks in all).
+- `families/ordered-orthogonal-array` (same MinT pages of 14 Nov 2026; `tools/mint_cells.py`): a cell is kept when one
+  more factor can be checked in 2^27 steps in Python or, for B = 2^e, in 2^34 (B = 2), 2^32 (B = 4, 8) or 2^30 (B = 16
+  to 256) steps of the walk in C: 4,157 cells (2,600 before; 1,259 new for B = 2).
+- index.json: 180,158 problems.
+
 ## Next (in review): covering arrays re-read and checked in C (15 Nov 2026)
 
 - `checkers/ca_check.py`: above 5 x 10^7 row visits (C(K,T) x N) the new C helper `checkers/ca_scan.c` (built with

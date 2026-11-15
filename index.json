@@ -1,6 +1,6 @@
 {
  "benchmark_version": "2.1",
- "problems": 178601,
+ "problems": 180158,
  "by_family": {
   "cage": 40,
   "cap-set": 2,
@@ -24,7 +24,7 @@
   "matrix-multiplication": 2,
   "multicolour-ramsey": 14,
   "no-three-in-line": 2,
-  "ordered-orthogonal-array": 2600,
+  "ordered-orthogonal-array": 4157,
   "project-scheduling": 59170,
   "projective-plane": 1,
   "quantum-code": 7141,
@@ -130,8 +130,8 @@
    "family": "ordered-orthogonal-array",
    "path": "families/ordered-orthogonal-array/cells.jsonl",
    "definition": "families/ordered-orthogonal-array/family.json",
-   "count": 2600,
-   "sha256": "dd77a98122aec72fadcc77ab11196e9a218cfac98ccda1e49eb62a10da05ff29",
+   "count": 4157,
+   "sha256": "749d61dc7741bf785d0be4a895b099ae1315adbfd9dfa8130fa12f62b0b8cad0",
    "keeper": "W. Ch. Schmid and R. Schuerer, MinT, the database of optimal net, code, OA and OOA parameters (mint.sbg.ac.at)",
    "read": "2026-11-14",
    "checker": "ooa_check.py"
