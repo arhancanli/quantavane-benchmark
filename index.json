@@ -1,6 +1,6 @@
 {
  "benchmark_version": "2.1",
- "problems": 337321,
+ "problems": 359646,
  "by_family": {
   "cage": 40,
   "cap-set": 2,
@@ -38,6 +38,7 @@
   "ramsey": 133,
   "schur": 4,
   "shannon-capacity": 1,
+  "signed-difference-set": 22325,
   "snake-in-the-box": 5,
   "sorting-network": 21,
   "spherical-code": 14793,
@@ -276,6 +277,17 @@
    "keeper": "M. Grassl, bounds on the minimum distance of quantum codes (codetables.de)",
    "read": "2026-11-15",
    "checker": "qcode_check.py"
+  },
+  {
+   "kind": "family",
+   "family": "signed-difference-set",
+   "path": "families/signed-difference-set/cells.jsonl",
+   "definition": "families/signed-difference-set/family.json",
+   "count": 22325,
+   "sha256": "b55d33ecd0374e0bc5472e4407e2c0f187f6d1710f6c939b6e4f2b0fabe4905e",
+   "keeper": "D. Gordon, La Jolla Signed Difference Set Repository (dmgordon.org/signed-difference-sets; data on Zenodo, CC BY 4.0)",
+   "read": "2026-11-15",
+   "checker": "ds_check.py"
   },
   {
    "kind": "family",

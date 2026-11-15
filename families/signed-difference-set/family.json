@@ -1,0 +1,46 @@
+{
+ "family": "signed-difference-set",
+ "title": "Signed difference sets in abelian groups whose existence is unknown",
+ "added": "2.2",
+ "objective": "maximize",
+ "id_prefixes": [
+  "sds-"
+ ],
+ "keeper": "D. Gordon, La Jolla Signed Difference Set Repository (dmgordon.org/signed-difference-sets; data on Zenodo, CC BY 4.0)",
+ "page": "https://dmgordon.org/signed-difference-sets/",
+ "read": "2026-11-15",
+ "revision": "sds.json of the La Jolla Signed Difference Set Repository, release v2.0 (Zenodo record 24170597; dmgordo/signed-difference-sets at 0363d5b), downloaded 15 Nov 2026 12:38 UTC",
+ "source_sha256": "2d1cbcc49a9db9758592cf2966239d98d9f544aeef3e865cabb0b2a2e1d597ed",
+ "template": {
+  "title": "Signed ({v},{k},{l}) difference set in {group}",
+  "statement": "Find {k} distinct elements d_i of the abelian group G = {group} (written {primary}) and signs s_i = +1 or -1 such that D = sum s_i d_i satisfies D D^(-1) = {n} + {l} G in the group ring: for every nonzero g in G, the sum of s_i s_j over the ordered pairs with d_i - d_j = g is {l}. A signed ({v},{k},{l}) difference set (Gordon, 2023).",
+  "submission": "Text file: {k} lines, one element per line: its sign + or -, then its coordinates in {primary} (integers 0 <= a_c < n_c separated by spaces, in that order).",
+  "args": [
+   "{orders}",
+   "{k}",
+   "{l}",
+   "--signed"
+  ]
+ },
+ "checker": {
+  "program": "ds_check.py",
+  "value": "result"
+ },
+ "score": "1 for a signed difference set with these parameters in this group; none is known, so the best known value is 0",
+ "best_text": "Its existence is Open in Gordon's repository: no such set is known and none has been ruled out, so the best known value is {best}; a valid set scores 1.",
+ "holder_unknown": "none known (existence open)",
+ "holder_sources": "the repository's entry for these parameters and group",
+ "open_rule": "every entry SDS(v,k,lambda,G) with status Open (v < 500 in release v2.0)",
+ "left_out": "176 entries known to exist (All or Yes) and 48042 known not to exist (No)",
+ "counts": {
+  "Yes": 124,
+  "No": 48042,
+  "All": 52,
+  "Open": 22325,
+  "distinct open parameter sets (v,k,lambda)": 11162
+ },
+ "cells": "cells.jsonl",
+ "count": 22325,
+ "quantavane_records": 0,
+ "single_problems_left_out": 0
+}

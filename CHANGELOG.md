@@ -18,6 +18,16 @@ value can change within a version when its source table changes; the file then s
   some of them are public on Zenodo. Their values stay as read on 8 Nov until a rule for cells the table does not list is
   chosen.
 
+## Next (in review): the family `signed-difference-set` from Gordon's repository (15 Nov 2026)
+
+- `checkers/ds_check.py --signed`: signed difference sets (each element with a sign; for every nonzero g the signed
+  count of ordered pairs with difference g must be lambda; the trivial character's condition is checked first).
+  `tests/test_ds.py`: three known signed sets pass, and fail with a sign flipped or an element moved.
+- `families/signed-difference-set` (22,325 cells; `tools/gordon_cells.py`, which now takes sds.json as well): every
+  Open entry of the La Jolla Signed Difference Set Repository, release v2.0 (Zenodo record 24170597, downloaded 15 Nov
+  2026), one cell per parameter set and abelian group. All 176 signed sets of the release pass the checker.
+- index.json: 359,646 problems.
+
 ## Next (in review): the families `difference-set` and `circulant-weighing-matrix` from Gordon's repositories (15 Nov 2026)
 
 - `checkers/ds_check.py` (new): difference sets in abelian groups, every ordered pair's difference counted exactly; in C

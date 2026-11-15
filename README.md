@@ -89,6 +89,7 @@ the 100 are new single problems of v2.1, with eight new checkers; see the collec
 | `strongly-regular-graph` (in review for v2.2) | 1,356 | A. E. Brouwer: parameters of strongly regular graphs on up to 1,300 vertices whose existence is unknown | `srg_check.py` |
 | `difference-set` (in review for v2.2) | 102,628 | D. Gordon, La Jolla Difference Set Repository: (v,k,lambda) difference sets in abelian groups whose existence is open, one cell per group | `ds_check.py` |
 | `circulant-weighing-matrix` (in review for v2.2) | 2,617 | D. Gordon, La Jolla Circulant Weighing Matrices Repository: proper CW(n,s^2), n < 1,000, s < 20, whose existence is open | `cwm_check.py` |
+| `signed-difference-set` (in review for v2.2) | 22,325 | D. Gordon, La Jolla Signed Difference Set Repository: signed (v,k,lambda) difference sets, v < 500, whose existence is open, one cell per group | `ds_check.py --signed` |
 
 Every cell is open in the sense written in its family file: its best known value is not marked optimal by the keeper
 and is strictly worse than the bound on the other side (the keeper's own bound, or a standard bound we compute and
@@ -351,7 +352,7 @@ What each family takes from its table, and what it leaves out:
   clusters, 186,395; with the rest of Comellas's degree-diameter table, 186,432; with the job shops, 186,545; with
   the Golomb rulers, 226,515; with the covering designs of m > t searched in C, 230,727; with Brouwer's open
   strongly regular graphs, 232,083; with Gordon's open difference sets and circulant weighing matrices (and seven
-  settled circulant weighing matrix problems removed), 337,321.
+  settled circulant weighing matrix problems removed), 337,321; with Gordon's open signed difference sets, 359,646.
 - `strongly-regular-graph` (in review for v2.2; read 15 Nov 2026): every parameter set srg(v,k,lambda,mu), v <= 1,300,
   that A. E. Brouwer's table (aeb.win.tue.nl/graphs/srg, 26 pages) marks '?': no graph is known and none has been ruled
   out. A parameter set and its complement are one row pair of the table and one cell here (a graph settles both); 65
@@ -383,6 +384,14 @@ What each family takes from its table, and what it leaves out:
   release settles seven of the twelve single problems of v1.1, which are removed: CW(105,6^2), CW(120,7^2) and
   CW(140,8^2) do not exist (Tan, arXiv:2608.18468, 2026), CW(155,5^2), CW(165,5^2) and CW(186,5^2) do not exist (Leung
   and Ma), and CW(96,6^2) exists (Schmidt and Smith, 2013).
+- `signed-difference-set` (in review for v2.2; read 15 Nov 2026): every entry with status Open in D. Gordon's La Jolla
+  Signed Difference Set Repository (release v2.0 on Zenodo, record 24170597, CC BY 4.0): k distinct elements of an
+  abelian group G with signs, D = sum s_i d_i, with D D^(-1) = (k - lambda) + lambda G in the group ring (Gordon, Des.
+  Codes Cryptogr. 2023). 22,325 open entries over 11,162 parameter sets, v < 500; none of them is a parameter set and
+  group where Gordon's difference set repository knows an ordinary difference set. `ds_check.py --signed` counts the
+  signed differences of all ordered pairs in Python; the 176 signed sets of the repository pass (141 as written in
+  the primary decomposition, 35 written in the group's own cyclic factors). `tests/test_ds.py` passes three of them and
+  refuses each with a sign flipped or an element moved; sampled cells refuse random signed sets.
 - `project-scheduling`: every instance of the sets with open instances whose best known makespan is above its lower
   bound and which the site does not mark optimal; the open counts match the site's own table of November 2026. The
   highRD, lowRU and 1k variants are not read: their dataset files date from April 2021, many of their upper bounds are
@@ -400,7 +409,8 @@ with `python3 -I`, except the Ramsey checker, which is C (`cc -O3 -o ramsey_chec
 prints its exact result and exits 0 only for a valid certificate.
 
 - `ds_check.py GROUP K L FILE`: a (v,K,L) difference set in the abelian group Z_n1 x ... x Z_nr (GROUP = n1,...,nr),
-  every ordered pair's difference counted exactly (in C above 10^6 pairs).
+  every ordered pair's difference counted exactly (in C above 10^6 pairs); with --signed, a signed difference set
+  (each line a sign + or - before the coordinates).
 - `jsp_check.py [--flexible] INSTANCE FILE`: job shop and flexible job shop schedules, the makespan in integers.
 - `cluster_check.py lj N FILE`: the Lennard-Jones energy of N atoms, a proven upper bound within 10^-12.
 - `oa_check.py B T M K FILE`: ordered orthogonal arrays and nets of any kind, given run by run (every choice of

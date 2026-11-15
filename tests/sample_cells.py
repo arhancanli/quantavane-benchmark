@@ -429,6 +429,24 @@ def test_difference_set(n, rng):
         expect(f"red   {c['id']} (an element repeated)", obb(c["id"], bad), "NOT CERTIFIED,")
 
 
+def test_signed_difference_set(n, rng):
+    """No set is known for any cell (tests/test_ds.py passes known signed sets); for each drawn cell k random elements
+    with as many signs + as the parameters require must be refused."""
+    cells = family_cells("signed-difference-set")
+    for c in rng.sample(cells, min(n, len(cells))):
+        p = c["params"]
+        orders = [int(x) for x in p["orders"].split(",")]
+        v, k, lam = p["v"], p["k"], p["l"]
+        d = round(((k - lam) + lam * v) ** 0.5)
+        plus = (k + d) // 2
+        elems = set()
+        while len(elems) < k:
+            elems.add(tuple(rng.randrange(m) for m in orders))
+        lines = [("+ " if i < plus else "- ") + " ".join(map(str, e)) for i, e in enumerate(sorted(elems))]
+        bad = write(f"{c['id']}_red.txt", lines)
+        expect(f"red   {c['id']} (a random signed {k}-subset of {p['group']})", obb(c["id"], bad), "NOT CERTIFIED,")
+
+
 def test_circulant_weighing_matrix(n, rng):
     """No proper matrix is known for any cell; test.sh passes the circulant Hadamard matrix of order 4 through the
     checker and refuses an improper CW(8,4). For each drawn cell a random first row with s(s+1)/2 entries +1 and
@@ -750,6 +768,7 @@ def main():
                        ("strongly-regular-graph", test_strongly_regular_graph),
                        ("difference-set", test_difference_set),
                        ("circulant-weighing-matrix", test_circulant_weighing_matrix),
+                       ("signed-difference-set", test_signed_difference_set),
                        ("flexible-job-shop", test_flexible_job_shop),
                        ("unequal-circle-packing", test_unequal_circle_packing)):
         if os.path.exists(os.path.join(ROOT, "families", name, "cells.jsonl")):

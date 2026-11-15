@@ -12,7 +12,12 @@ pairs exactly, in Python, or above 10^6 pairs in the C helper ds_scan.c (built w
 rewrites G by the Chinese remainder theorem as a product of the fewest cyclic groups and counts each difference with
 one XOR or subtraction (about a second per 10^9 pairs for cyclic groups); --native or --python forces one way, and
 --plain makes the C helper count digit by digit in the given coordinates (a separate route, for the tests). Prints the parameters and "RESULT 1" (a difference set
-with these parameters exists in G) and exits 0 for a valid set; exits 1 otherwise."""
+with these parameters exists in G) and exits 0 for a valid set; exits 1 otherwise.
+
+With --signed it checks a signed difference set (Gordon, 2023): each line starts with a sign + or - before the
+coordinates, and for every nonzero element g of G the sum of s s' over the ordered pairs of elements d (sign s) and d'
+(sign s') with d - d' = g must be L (which may be negative); then (number of + minus number of -)^2 = (K - L) + L v.
+Signed sets are counted in Python."""
 import os
 import subprocess
 import sys
@@ -29,8 +34,9 @@ def helper():
     return exe
 
 
-def count_python(orders, elems, lam):
-    """(pairs with difference 0, nonzero elements not hit lam times, the first such rank)"""
+def count_python(orders, elems, lam, signs=None):
+    """(pairs with difference 0, nonzero elements not hit lam times, the first such rank); with signs, each ordered
+    pair counts the product of its two signs"""
     v = 1
     for n in orders:
         v *= n
@@ -39,11 +45,12 @@ def count_python(orders, elems, lam):
         w[c] = acc
         acc *= orders[c]
     cnt = [0] * v
-    for a in elems:
-        for b in elems:
+    sg = signs or [1] * len(elems)
+    for a, sa in zip(elems, sg):
+        for b, sb in zip(elems, sg):
             if a is b:
                 continue
-            cnt[sum((x - y) % n * wc for x, y, n, wc in zip(a, b, orders, w))] += 1
+            cnt[sum((x - y) % n * wc for x, y, n, wc in zip(a, b, orders, w))] += sa * sb
     bad = [x for x in range(1, v) if cnt[x] != lam]
     return cnt[0], len(bad), (bad[0] if bad else -1)
 
@@ -68,7 +75,8 @@ def element(rank, orders):
 
 
 def main():
-    flags = [a for a in sys.argv[1:] if a in ("--native", "--python", "--plain")]
+    flags = [a for a in sys.argv[1:] if a in ("--native", "--python", "--plain", "--signed")]
+    signed = "--signed" in flags
     args = [a for a in sys.argv[1:] if a not in flags]
     if len(args) != 4:
         print(__doc__)
@@ -79,17 +87,24 @@ def main():
     except ValueError:
         print("GROUP must be orders separated by commas, K and L integers")
         return 2
-    if not orders or min(orders) < 1 or k < 1 or lam < 0:
+    if not orders or min(orders) < 1 or k < 1 or (lam < 0 and not signed):
         print("bad parameters")
         return 2
     v = 1
     for n in orders:
         v *= n
-    elems = []
+    elems, signs = [], []
     for line in open(args[3]):
         line = line.split("#")[0].replace(",", " ").strip()
         if not line:
             continue
+        if signed:
+            sign, _, line = line.partition(" ")
+            if sign not in ("+", "-", "+1", "-1", "1"):
+                print(f"a signed element starts with + or -: {sign[:20]!r}")
+                return 1
+            signs.append(-1 if sign.startswith("-") else 1)
+            line = line.strip()
         try:
             e = tuple(int(x) for x in line.split())
         except ValueError:
@@ -106,6 +121,20 @@ def main():
     if len(set(elems)) != k:
         print("an element is repeated")
         return 1
+    if signed:
+        plus = signs.count(1)
+        if (2 * plus - k) ** 2 != (k - lam) + lam * v:
+            print(f"no signed ({v},{k},{lam}) difference set with {plus} signs +: (#+ - #-)^2 = {(2 * plus - k) ** 2} "
+                  f"differs from (k - lambda) + lambda v = {(k - lam) + lam * v}")
+            return 1
+        zero, bad, first = count_python(orders, elems, lam, signs)
+        if zero or bad:
+            print(f"{bad} nonzero elements have signed difference count other than {lam}"
+                  + (f", the first {element(first, orders)}" if first >= 0 else ""))
+            return 1
+        print(f"every nonzero element has signed difference count {lam}")
+        print("RESULT 1")
+        return 0
     if lam * (v - 1) != k * (k - 1):
         print(f"no ({v},{k},{lam}) difference set: lambda (v - 1) = {lam * (v - 1)} differs from k (k - 1) = "
               f"{k * (k - 1)}")

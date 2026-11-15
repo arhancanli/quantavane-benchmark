@@ -2,10 +2,11 @@
 as the benchmark families difference-set (checked by checkers/ds_check.py) and circulant-weighing-matrix (checked by
 checkers/cwm_check.py).
 
-  python3 -I gordon_cells.py DS.json DS_REVISION CWM.json CWM_REVISION READ
+  python3 -I gordon_cells.py DS.json DS_REVISION CWM.json CWM_REVISION SDS.json SDS_REVISION READ
 
-DS.json and CWM.json are the files ds.json and cwm.json of the repositories' Zenodo releases (difference-sets 1.3 and
-circulant-weighing-matrices v2.0, CC BY 4.0). Every entry has a status: All or Yes (known to exist), No (known not
+DS.json, CWM.json and SDS.json are the files ds.json, cwm.json and sds.json of the repositories' Zenodo releases
+(difference-sets 1.3, circulant-weighing-matrices v2.0 and signed-difference-sets v2.0, CC BY 4.0); the third gives the
+family signed-difference-set, also checked by ds_check.py (--signed). Every entry has a status: All or Yes (known to exist), No (known not
 to exist) or Open. A cell is an Open entry: for difference sets, one abelian group of one parameter set (v,k,lambda)
 (the repository lists every abelian group of order v for parameter sets that pass the counting, Schutzenberger and
 Bruck-Ryser-Chowla tests; its README says v < 100,000, and release 1.3 lists v up to 749,997); for circulant weighing matrices, one proper CW(n, s^2), n < 1,000,
@@ -87,7 +88,7 @@ def write(root, fam, rows):
 
 
 def main():
-    ds_path, ds_rev, cw_path, cw_rev, read = sys.argv[1:6]
+    ds_path, ds_rev, cw_path, cw_rev, sds_path, sds_rev, read = sys.argv[1:8]
     root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     # ---------------------------------------------------------------------------------------- difference sets
     raw = open(ds_path, "rb").read()
@@ -192,6 +193,63 @@ def main():
         "left_out": f"{stats.get('All', 0) + stats.get('Yes', 0)} entries known to exist (All or Yes) and "
                     f"{stats.get('No', 0)} known not to exist (No)",
         "counts": stats,
+    }, rows)
+
+    # ---------------------------------------------------------------------------------------- signed difference sets
+    raw = open(sds_path, "rb").read()
+    sds = json.loads(raw)
+    stats, rows = {}, []
+    for key, e in sds.items():
+        st = e["status"]
+        stats[st] = stats.get(st, 0) + 1
+        if st != "Open":
+            continue
+        m = re.fullmatch(r"SDS\((\d+),(\d+),(-?\d+),\[([\d,]+)\]\)", key)
+        assert m, key
+        v, k, lam = int(m[1]), int(m[2]), int(m[3])
+        label = [int(x) for x in m[4].split(",")]
+        prod = 1
+        for n in label:
+            prod *= n
+        assert prod == v and k <= v, key
+        orders = primary(label)
+        rows.append({"id": f"sds-{v}-{k}-{lam}-{'x'.join(map(str, label))}".replace("--", "-m"),
+                     "params": {"v": v, "k": k, "l": lam, "n": k - lam,
+                                "group": " x ".join(f"Z_{n}" for n in label),
+                                "primary": " x ".join(f"Z_{n}" for n in orders),
+                                "orders": ",".join(map(str, orders))},
+                     "best": "0"})
+    print("signed difference sets:", stats)
+    write(root, {
+        "family": "signed-difference-set",
+        "title": "Signed difference sets in abelian groups whose existence is unknown",
+        "added": "2.2", "objective": "maximize", "id_prefixes": ["sds-"],
+        "keeper": "D. Gordon, La Jolla Signed Difference Set Repository (dmgordon.org/signed-difference-sets; data on "
+                  "Zenodo, CC BY 4.0)",
+        "page": "https://dmgordon.org/signed-difference-sets/",
+        "read": read, "revision": sds_rev,
+        "source_sha256": hashlib.sha256(raw).hexdigest(),
+        "template": {
+            "title": "Signed ({v},{k},{l}) difference set in {group}",
+            "statement": "Find {k} distinct elements d_i of the abelian group G = {group} (written {primary}) and "
+                         "signs s_i = +1 or -1 such that D = sum s_i d_i satisfies D D^(-1) = {n} + {l} G in the "
+                         "group ring: for every nonzero g in G, the sum of s_i s_j over the ordered pairs with "
+                         "d_i - d_j = g is {l}. A signed ({v},{k},{l}) difference set (Gordon, 2023).",
+            "submission": "Text file: {k} lines, one element per line: its sign + or -, then its coordinates in "
+                          "{primary} (integers 0 <= a_c < n_c separated by spaces, in that order).",
+            "args": ["{orders}", "{k}", "{l}", "--signed"]},
+        "checker": {"program": "ds_check.py", "value": "result"},
+        "score": "1 for a signed difference set with these parameters in this group; none is known, so the best "
+                 "known value is 0",
+        "best_text": "Its existence is Open in Gordon's repository: no such set is known and none has been ruled out, "
+                     "so the best known value is {best}; a valid set scores 1.",
+        "holder_unknown": "none known (existence open)",
+        "holder_sources": "the repository's entry for these parameters and group",
+        "open_rule": "every entry SDS(v,k,lambda,G) with status Open (v < 500 in release v2.0)",
+        "left_out": f"{stats.get('All', 0) + stats.get('Yes', 0)} entries known to exist (All or Yes) and "
+                    f"{stats.get('No', 0)} known not to exist (No)",
+        "counts": dict(stats, **{"distinct open parameter sets (v,k,lambda)": len({r["id"].rsplit("-", 1)[0]
+                                                                                 for r in rows})}),
     }, rows)
 
 

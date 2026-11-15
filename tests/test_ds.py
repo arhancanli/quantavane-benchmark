@@ -1,6 +1,7 @@
 """Tests of checkers/ds_check.py, difference sets in abelian groups, and its C helper ds_scan.c (standard library only;
 run by test.sh): known difference sets pass both ways and with one element changed or repeated are refused; the C
-count (with its fast methods, and digit by digit) and the Python count agree on random subsets; a Paley set with 6.2 million ordered pairs goes to C by itself.
+count (with its fast methods, and digit by digit) and the Python count agree on random subsets; known signed
+difference sets pass with --signed and fail with a sign flipped or an element moved; a Paley set with 6.2 million ordered pairs goes to C by itself.
 
 Known sets: Paley sets (the squares modulo a prime p = 3 mod 4), Singer's (13,4,1) set {0,1,3,9}, and from D. Gordon's
 La Jolla Difference Set Repository (CC BY 4.0) sets with parameters (16,6,2), (40,13,4), (45,12,3), (36,15,6) and
@@ -107,5 +108,35 @@ code, line = run([4999], len(q), 1249, q)
 expect("Paley (4999,2499,1249), C by default", (code, line.endswith("(counted in C)")), (0, True))
 code, line = run([4999], len(q), 1249, q[:-1] + [0])
 expect("red: the same with its last element replaced by 0", code, 1)
+# signed difference sets (--signed): each line a sign, then the coordinates. Known sets from Gordon's La Jolla Signed
+# Difference Set Repository (CC BY 4.0): SDS(5,4,-1) in Z_5 (Paley), SDS(11,6,1) in Z_11 (Paley and zero), SDS(9,8,-1)
+# in Z_3 x Z_3 (He, Chen and Ge); with one sign flipped or one element moved they must be refused
+SIGNED = [
+    ("SDS(5,4,-1) in Z_5", [5], 4, -1, [("+", (1,)), ("+", (4,)), ("-", (2,)), ("-", (3,))]),
+    ("SDS(11,6,1) in Z_11", [11], 6, 1, [("+", (x,)) for x in (1, 3, 4, 5, 9)] + [("-", (0,))]),
+    ("SDS(9,8,-1) in Z_3 x Z_3", [3, 3], 8, -1, [("+", e) for e in ((1, 1), (2, 0), (2, 2), (1, 0))]
+     + [("-", e) for e in ((0, 1), (0, 2), (1, 2), (2, 1))]),
+]
+
+
+def run_signed(orders, k, lam, items):
+    path = os.path.join(TMP, "s.txt")
+    with open(path, "w") as f:
+        f.write("\n".join(sg + " " + " ".join(map(str, e)) for sg, e in items) + "\n")
+    r = subprocess.run([sys.executable, "-I", CHECK, ",".join(map(str, orders)), str(k), str(lam), path, "--signed"],
+                       capture_output=True, text=True)
+    return r.returncode
+
+
+for name, orders, k, lam, items in SIGNED:
+    expect(f"signed {name}", run_signed(orders, k, lam, items), 0)
+    flipped = [("-" if items[0][0] == "+" else "+", items[0][1])] + items[1:]
+    expect(f"red: signed {name} with one sign flipped", run_signed(orders, k, lam, flipped), 1)
+    allel = [()]
+    for n in orders:
+        allel = [a + (x,) for a in allel for x in range(n)]
+    new = next(a for a in allel if a not in [e for _, e in items])
+    expect(f"red: signed {name} with an element moved", run_signed(orders, k, lam, items[:-1] + [(items[-1][0], new)]),
+           1)
 print(f"{'ALL OK' if not failures else str(len(failures)) + ' FAILED'}")
 sys.exit(1 if failures else 0)
