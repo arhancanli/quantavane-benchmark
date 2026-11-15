@@ -1,0 +1,33 @@
+{
+ "note": "Results published after N. J. A. Sloane's table (last modified 20 Jan 1997) that change a cell, found in the literature check of 16 Nov 2026. 'optimal': the table's value is proven optimal, so the cell is solved and left out. 'packings': line packings (n = 1) of M. Fickus, J. Jasper and D. G. Mixon, Packings in real projective spaces, SIAM J. Appl. Algebra Geom. 2 (2018) 377-409 (arXiv:1707.01858), Table 1: each gives a packing of N lines in R^m whose coherence mu is the root of the stated polynomial (coefficients from the highest degree) next to the stated rounding up of mu; its squared chordal distance is 1 - mu^2. Where it is larger than the table's value for N or fewer lines, it is the best known value (any subset of a packing is a packing). Also read: I. S. Dhillon, R. W. Heath, T. Strohmer and J. A. Tropp, Constructing packings in Grassmannian manifolds via alternating projection, Experimental Math. 17 (2008) (arXiv:0709.0535), whose real packings do not beat the table (its Table 3); D. G. Mixon and H. Parshall, Exact line packings from numerical solutions (arXiv:1902.00552), which gives exact forms of the table's packings.",
+ "optimal": [
+  {"m": 3, "n": 1, "N": 5, "source": "J. J. Benedetto and J. D. Kolesar, Geometric properties of Grassmannian frames for R^2 and R^3, EURASIP J. Adv. Signal Process. (2006); a computer-assisted proof in Fickus, Jasper and Mixon (2018)"},
+  {"m": 3, "n": 1, "N": 8, "source": "D. G. Mixon and H. Parshall, The optimal packing of eight points in the real projective plane, arXiv:1902.10177"},
+  {"m": 4, "n": 1, "N": 6, "source": "Fickus, Jasper and Mixon (2018), Theorem 7"},
+  {"m": 5, "n": 1, "N": 7, "source": "Globally optimizing small codes in real projective spaces, arXiv:1912.03373"},
+  {"m": 6, "n": 1, "N": 8, "source": "Globally optimizing small codes in real projective spaces, arXiv:1912.03373"},
+  {"m": 4, "n": 1, "N": 60, "source": "Delsarte's linear programming bound (the 600-cell's 60 lines); Fickus, Jasper and Mixon (2018), Table 1"},
+  {"m": 6, "n": 1, "N": 36, "source": "Delsarte's linear programming bound (the 36 lines of E6); Fickus, Jasper and Mixon (2018), Table 1"},
+  {"m": 7, "n": 1, "N": 63, "source": "Delsarte's linear programming bound (the 63 lines of E7); Fickus, Jasper and Mixon (2018), Table 1"},
+  {"m": 8, "n": 1, "N": 120, "source": "Delsarte's linear programming bound (the 120 lines of E8); Fickus, Jasper and Mixon (2018), Table 1"}
+ ],
+ "packings": [
+  [3, 5, [5, 0, -1], "0.4473"], [3, 6, [5, 0, -1], "0.4473"], [3, 7, [3, 0, -1], "0.5774"], [3, 12, [17, -14, 1], "0.7446"],
+  [4, 6, [3, -1], "0.3334"], [4, 12, [2, -1], "0.5000"], [4, 60, [4, -2, -1], "0.8091"],
+  [5, 7, [1, -9, -1, 1], "0.2863"], [5, 10, [3, -1], "0.3334"], [5, 16, [5, 0, -1], "0.4473"], [5, 20, [2, -1], "0.5000"],
+  [6, 12, [10, 0, -1], "0.3163"], [6, 15, [3, -1], "0.3334"], [6, 16, [3, -1], "0.3334"], [6, 22, [6, 0, -1], "0.4083"],
+  [6, 24, [9, -4], "0.4445"], [6, 36, [2, -1], "0.5000"], [6, 63, [8, 0, -3], "0.6124"],
+  [7, 9, [5, -1], "0.2000"], [7, 10, [1, 4, -1], "0.2361"], [7, 14, [13, 0, -1], "0.2774"], [7, 27, [3, -1], "0.3334"],
+  [7, 28, [3, -1], "0.3334"], [7, 36, [7, -3], "0.4286"], [7, 63, [2, -1], "0.5000"], [7, 91, [3, 0, -1], "0.5774"],
+  [8, 10, [19, 2, -1], "0.1828"], [8, 32, [3, -1], "0.3334"], [8, 36, [14, -5], "0.3572"], [8, 120, [2, -1], "0.5000"],
+  [9, 12, [19, 2, -1], "0.1828"], [9, 18, [17, 0, -1], "0.2426"], [9, 48, [3, -1], "0.3334"],
+  [10, 12, [7, -1], "0.1429"], [10, 16, [5, -1], "0.2000"], [10, 20, [18, 0, -1], "0.2358"], [10, 40, [13, -4], "0.3077"],
+  [11, 14, [1, 21, 3, -1], "0.1578"], [11, 16, [9, 4, -1], "0.1784"], [11, 18, [5, -1], "0.2000"],
+  [12, 36, [4, -1], "0.2500"], [12, 39, [4, -1], "0.2500"],
+  [13, 15, [9, -1], "0.1112"], [13, 18, [27, 2, -1], "0.1590"], [13, 19, [31, 25, 1, -1], "0.1663"], [13, 26, [5, -1], "0.2000"],
+  [13, 52, [4, -1], "0.2500"],
+  [15, 18, [41, 4, -1], "0.1149"], [15, 21, [7, -1], "0.1429"], [15, 30, [29, 0, -1], "0.1857"], [15, 35, [5, -1], "0.2000"],
+  [15, 36, [5, -1], "0.2000"],
+  [16, 18, [11, -1], "0.0910"], [16, 23, [7, -1], "0.1429"], [16, 40, [5, -1], "0.2000"]
+ ]
+}

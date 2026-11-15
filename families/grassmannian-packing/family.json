@@ -1,0 +1,45 @@
+{
+ "family": "grassmannian-packing",
+ "title": "Packings in real Grassmannian spaces: N n-dimensional subspaces of R^m with the largest least squared chordal distance",
+ "added": "2.2",
+ "objective": "maximize",
+ "id_prefixes": [
+  "grass-"
+ ],
+ "keeper": "N. J. A. Sloane, Table of best Grassmannian packings (with R. H. Hardin, J. H. Conway and others)",
+ "page": "http://neilsloane.com/grass/grassTab.html",
+ "cell_url": "http://neilsloane.com/grass/dim{m}/",
+ "read": "2026-11-15",
+ "revision": "grassTab.html as served on 15 Nov 2026 (last modified 20 Jan 1997)",
+ "exact_values": false,
+ "template": {
+  "title": "Grassmannian packing: {N} subspaces of dimension {n} in R^{m}",
+  "statement": "Find {N} subspaces of dimension {n} of R^{m} whose least squared chordal distance is as large as possible. The squared chordal distance of two subspaces is the sum of the squares of the sines of their {n} principal angles, {n} - tr(P_A P_B) for their orthogonal projections (Conway, Hardin and Sloane, 1996).",
+  "submission": "Text file: {N} x {n} x {m} numbers (integers, decimals or fractions p/q), the {n} spanning vectors of {m} coordinates of each subspace one after the other, as in Sloane's files (neilsloane.com/grass/dim{m}/); the vectors need not be orthonormal. See checkers/grass_check.py.",
+  "args": [
+   "{m}",
+   "{n}",
+   "{N}"
+  ]
+ },
+ "checker": {
+  "program": "grass_check.py",
+  "value": "result"
+ },
+ "score": "the least squared chordal distance between two of the subspaces, exact (larger is better)",
+ "best_text": "The best known value is {best} ({holder}); the table prints its values rounded, so a packing improves it when its least squared chordal distance is larger by more than one unit in the last printed decimal.",
+ "bound_kind": "upper bound",
+ "bound_source": "Rankin's simplex bound n(m-n)/m N/(N-1), and for N > m(m+1)/2 the orthoplex bound n(m-n)/m (Conway, Hardin and Sloane 1996)",
+ "holder_unknown": "the table's source for the entry",
+ "holder_sources": "the name column of the table (Hardin and Sloane's computer searches, or the paper of a construction); later packings from families/grassmannian-packing/literature.json",
+ "open_rule": "every (m, n, N) of the table whose best known value (the largest the table lists for N or more subspaces, or a later published packing) is below the bound by more than one unit of its last printed decimal, unless optimality has been proven since (literature.json)",
+ "left_out": "2826 rows; 5 rows above the bound (not used); 2778 (m, n, N) in the table; 434 equal to the bound (solved); 8 proven optimal since 1997 (solved); 14 exact forms of the table's own packings (Fickus, Jasper and Mixon); 97 too large to check; 11 raised by Fickus, Jasper and Mixon (2018)",
+ "literature": "families/grassmannian-packing/literature.json (checked 16 Nov 2026)",
+ "page_sha256": {
+  "grassTab.html": "d2e8e777b8ad9593c16daa1bde6734790056795e82478a173182b831042675b5"
+ },
+ "cells": "cells.jsonl",
+ "count": 2239,
+ "quantavane_records": 0,
+ "single_problems_left_out": 0
+}

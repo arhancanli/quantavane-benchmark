@@ -768,6 +768,25 @@ def test_unequal_circle_packing(n, rng):
         expect(f"red   {c['id']} (container shrunk to a third)", obb(c["id"], bad), "NOT CERTIFIED,")
 
 
+def test_grassmannian_packing(n, rng):
+    small = [c for c in family_cells("grassmannian-packing") if c["params"]["N"] <= 60]
+    for c in rng.sample(small, min(n, len(small))):
+        m, k, cnt = c["params"]["m"], c["params"]["n"], c["params"]["N"]
+        lines = [" ".join(f"{rng.gauss(0, 1):.12f}" for _ in range(m)) for _ in range(cnt * k)]
+        good = write(f"{c['id']}.txt", lines)
+        expect(f"sample {c['id']} random subspaces", obb(c["id"], good), "does not improve,")
+        bad = write(f"{c['id']}_red.txt", lines[:-1])
+        expect(f"red   {c['id']} (a vector too few)", obb(c["id"], bad), "NOT CERTIFIED,")
+    # nine lines in R^4 (the rows of a Hadamard matrix of order 4, the coordinate axes, a row repeated): a valid
+    # packing whose closest pair is at distance 0, certified and not an improvement
+    c = next((c for c in family_cells("grassmannian-packing") if c["params"] == {"m": 4, "n": 1, "N": 9}), None)
+    if c:
+        cube4 = ["1 1 1 1", "1 1 -1 -1", "1 -1 1 -1", "1 -1 -1 1", "1 0 0 0", "0 1 0 0", "0 0 1 0", "0 0 0 1",
+                 "1 1 1 1"]
+        expect("red   grass-4-1-9: a line repeated (distance 0)", obb(c["id"], write("grass-4-1-9_rep.txt", cube4)),
+               "does not improve,")
+
+
 def main():
     n = int(sys.argv[1]) if len(sys.argv) > 1 else 3
     seed = int(sys.argv[2]) if len(sys.argv) > 2 else 2026
@@ -797,7 +816,8 @@ def main():
                        ("circulant-degree-diameter", test_circulant_degree_diameter),
                        ("bipartite-degree-diameter", test_bipartite_degree_diameter),
                        ("flexible-job-shop", test_flexible_job_shop),
-                       ("unequal-circle-packing", test_unequal_circle_packing)):
+                       ("unequal-circle-packing", test_unequal_circle_packing),
+                       ("grassmannian-packing", test_grassmannian_packing)):
         if os.path.exists(os.path.join(ROOT, "families", name, "cells.jsonl")):
             test(n, rng)
         else:

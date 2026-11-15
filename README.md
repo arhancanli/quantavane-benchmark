@@ -69,16 +69,16 @@ the 100 are new single problems of v2.1, with eight new checkers; see the collec
 | `covering-design` | 61,394 | Covering Repository (successor of D. Gordon's La Jolla Covering Repository): C(v,k,t) and C(v,k,t,m) | `covering_check.py` |
 | `linear-code` | 15,255 | M. Grassl, codetables.de: linear codes over GF(q), q = 2, 3, 4, 5, 7, 8, 9 | `lincode_check.py` |
 | `spherical-code` | 14,782 | H. Cohn, table of spherical codes (dimensions 3 to 32 and a few more) | `sph_check.py` |
-| `covering-array` | 4,731 | C. Smolen's ca-tools table, successor of C. J. Colbourn's covering array tables | `ca_check.py` |
+| `covering-array` | 5,565 | C. Smolen's ca-tools table, successor of C. J. Colbourn's covering array tables | `ca_check.py` |
 | `constant-weight-code` | 1,134 | A. E. Brouwer, bounds for binary constant weight codes | `cw_check.py` |
-| `ordered-orthogonal-array` (in review for v2.2) | 4,709 | W. Ch. Schmid and R. Schürer, MinT: linear ordered orthogonal arrays of depth 1 to 8 and digital nets over GF(2) to GF(128) | `ooa_check.py` |
+| `ordered-orthogonal-array` (in review for v2.2) | 5,075 | W. Ch. Schmid and R. Schürer, MinT: linear ordered orthogonal arrays of depth 1 to 8 and digital nets over GF(2) to GF(128) | `ooa_check.py` |
 | `circle-packing` (in review for v2.2) | 12,759 | E. Specht, Packomania: equal circles in a square, circle, half disc, quarter disc, isosceles right triangle and the rectangles 1 x 0.1 to 1 x 0.8; equal balls in a cube, a ball in R^3 and balls in R^4 to R^6 | `pack_check.py` |
 | `growing-circle-packing` (in review for v2.2) | 396 | E. Specht, Packomania: circles of radii 1, 2, ..., N in the smallest circle or square, balls of radii 1, ..., N in the smallest ball | `pack_check.py` |
 | `circle-packing-sum` (in review for v2.2) | 3,056 | E. Specht, Packomania: circles of any radii in the unit square with the largest sum of radii | `pack_check.py` |
 | `polygon-circle-packing` (in review for v2.2) | 1,106 | E. Specht, Packomania: equal circles in the regular polygons with 5 to 17 sides | `pack_alg_check.py` |
 | `unequal-circle-packing` (in review for v2.2) | 578 | E. Specht, Packomania: circles of radii i^(1/2), i^(-1/2), i^(-2/3), i^(-1/5) in the smallest circle; of radii i^(1/2), i^(-1/2) in the smallest square | `pack_alg_check.py` |
-| `quantum-code` (in review for v2.2) | 7,141 | M. Grassl, codetables.de: additive (stabilizer) quantum codes [[n,k]] with local dimension 2, 3, 4, 5, 7, 8 | `qcode_check.py` |
-| `ea-quantum-code` (in review for v2.2) | 3,263 | M. Grassl, eaqecc.codetables.de: entanglement-assisted quantum codes [[n,k;c]], qubits and qutrits | `qcode_check.py` |
+| `quantum-code` (in review for v2.2) | 7,576 | M. Grassl, codetables.de: additive (stabilizer) quantum codes [[n,k]] with local dimension 2, 3, 4, 5, 7, 8 | `qcode_check.py` |
+| `ea-quantum-code` (in review for v2.2) | 3,720 | M. Grassl, eaqecc.codetables.de: entanglement-assisted quantum codes [[n,k;c]], qubits and qutrits | `qcode_check.py` |
 | `unrestricted-code` (in review for v2.2) | 352 | A. E. Brouwer: unrestricted codes A_q(n,d) for q = 2, 3, 4, 5 and mixed binary/ternary codes N(m,n,d) | `ucode_check.py` |
 | `orthogonal-array` (in review for v2.2) | 249 | W. Ch. Schmid and R. Schürer, MinT: ordered orthogonal arrays and nets of any kind (not only linear) with at most 2^16 runs | `oa_check.py` |
 | `lj-cluster` (in review for v2.2) | 137 | D. J. Wales and others, the Cambridge Cluster Database: Lennard-Jones clusters, N = 14 to 150 | `cluster_check.py` |
@@ -92,11 +92,12 @@ the 100 are new single problems of v2.1, with eight new checkers; see the collec
 | `signed-difference-set` (in review for v2.2) | 22,325 | D. Gordon, La Jolla Signed Difference Set Repository: signed (v,k,lambda) difference sets, v < 500, whose existence is open, one cell per group | `ds_check.py --signed` |
 | `circulant-degree-diameter` (in review for v2.2) | 170 | Combinatorics Wiki: largest known circulant graphs of degree 3 to 20 and diameter 2 to 16 | `circulant_check.py` |
 | `bipartite-degree-diameter` (in review for v2.2) | 32 | Combinatorics Wiki: largest known bipartite graphs of maximum degree 3 to 16 and diameter 3 to 10 (at most 20,000 vertices) | `degdiam_check.py --bipartite` |
+| `grassmannian-packing` (in review for v2.2) | 2,239 | N. J. A. Sloane, table of best Grassmannian packings (with R. H. Hardin, J. H. Conway and others): N lines, planes or 3-spaces in R^3 to R^16, and constructions in higher dimensions | `grass_check.py` |
 
 Every cell is open in the sense written in its family file: its best known value is not marked optimal by the keeper
 and is strictly worse than the bound on the other side (the keeper's own bound, or a standard bound we compute and
-name in the cell). A cell can still turn out to be optimal through an argument nobody has applied to it yet. 2,668
-cells hold a value of ours (`quantavane_record`): 2,088 schedules, 432 spherical codes, 128 covering designs, 13
+name in the cell). A cell can still turn out to be optimal through an argument nobody has applied to it yet. 2,692
+cells hold a value of ours (`quantavane_record`): 2,088 schedules, 432 spherical codes, 128 covering designs, 37
 covering arrays and 7 constant weight codes.
 
 The 374 single problems (v1.1, 8 Nov 2026), each with its own file in `problems/`:
@@ -245,6 +246,16 @@ What each family takes from its table, and what it leaves out:
   one row smaller than the best known; `ca_check.py` hands arrays above 5 x 10^7 visits to its C helper `ca_scan.c`,
   about three minutes for 10^11) or have v^t above 2^26. With the C helper the family has 4,731 cells (2,659 before);
   13 of them hold our own covering perfect hash family arrays (Canli 2026, doi:10.5281/zenodo.23839216).
+  16 Nov 2026: for v <= 64 `ca_check.py` hands large arrays to the new C helper `ca_trie.c`: the rows are split by
+  their symbols in the first t-2 chosen columns, and within each group, for every choice of the (t-1)-th column, the
+  one-hot symbol masks of each row in all later columns are OR-ed into the accumulator of its symbol there (a loop
+  the compiler vectorizes; no array of v^t bits), 4 to 30 times faster than `ca_scan.c` (1.46 x 10^9 visits in 0.34 s
+  against 2.8 s). A cell is now also kept when the estimated check of an array one row smaller than the best known
+  takes at most three minutes, as 10^11 visits did before: `ca_check_seconds` in `tools/import_families.py`, a fit to
+  34 arrays of the shapes of left-out cells timed on this machine (measured to fitted 0.86 to 2.0; the estimate
+  carries a factor 1.3, or 2.1 for strength 5 and 6 with more than 16 MB of masks), and the slowest admitted shapes
+  were timed again directly. This adds 834 cells (5,565 in all; 6,369 stay out); 24 of them hold more of our arrays
+  (37 in all).
 - `linear-code`: every entry of Grassl's tables whose lower bound is below its upper bound and whose check lists at
   most 2^25 codewords of the code or of its dual (91,256 open entries are larger). The construction and its source
   are on each entry's own page at codetables.de, which the cell links.
@@ -253,14 +264,17 @@ What each family takes from its table, and what it leaves out:
 - `ordered-orthogonal-array` (in review for v2.2; read 14 Nov 2026): the cells (base b, depth T, b^m runs, strength k)
   of MinT with 3 <= k <= m <= 51 in which the best known LINEAR object has fewer factors than MinT's bound for linear
   objects, and in which one more factor than the best known can be checked exactly within 2^27 steps, or within
-  2^34 (b = 2), 2^32 (b = 4, 8), 2^31 (b = 3, 5, 7), 2^30 (b = 16 to 256), 2^29 (b = 9, 25, 49) or 2^28 (b = 27, 81)
+  2^36 (b = 2; 2^34 until 15 Nov 2026), 2^32 (b = 4, 8), 2^31 (b = 3, 5, 7), 2^30 (b = 16 to 256), 2^29 (b = 9, 25, 49) or 2^28 (b = 27, 81)
   steps of the depth-vector walk, which runs in C (`ooa_walk.c`, vectors as bit planes; `ooa_walk_p.c`, vectors as
-  digit planes modulo p; 15 Nov 2026: 2,109 more cells, 4,709 in all). Depth 1 is an
+  digit planes modulo p; 15 Nov 2026: 2,109 more cells, 4,709 in all; 16 Nov 2026: for b = 2 the walk is
+  branch-free, one word per vector, about 3.5 times faster (1.2 x 10^9 steps a second for small k), and a cell
+  above the old cap of 2^34 steps is kept when it needs at most 2^36 steps and at most two minutes, estimated from
+  full walks as steps x max(0.82, 0.1 k - 0.1) x 1.05 ns: 366 more cells, 5,075 in all). Depth 1 is an
   orthogonal array, depth net a digital (m - k, m, s)-net. The checker reads a generator matrix and decides the
   strength by two separate exact methods (every choice of depths with a running echelon basis; the row space with a
   MacWilliams identity for the Niederreiter-Rosenbloom-Tsfasman weights), so only linear objects can be submitted;
-  the cell says so when a non-linear object with more factors is known. Left out: 7,665 solved cells, 52,578 open
-  cells whose check would be longer, and the 422 checkable cells of depth 1 over GF(2) to GF(9), which are linear
+  the cell says so when a non-linear object with more factors is known. Left out: 7,665 solved cells, 52,205 open
+  cells whose check would be longer (52,578 before 16 Nov), and the 429 checkable cells of depth 1 over GF(2) to GF(9), which are linear
   codes that the family `linear-code` already asks for. With this family the benchmark has 151,980 problems (395 single problems
   and 151,585 cells; `covering-array` has had 2,659 cells since its table was re-read on 12 Nov).
 - `circle-packing` and `growing-circle-packing` (in review for v2.2; read 14 Nov 2026): every N of the Packomania sections with rational geometry (csq, cci, csc, ccq, crt, scu, ssp, hsp4, hsp5, hsp6; ccin and csqn for radii 1..N) whose value is not in bold (Packomania marks proven optimal packings in bold); sections that mark nothing leave out their small N. `pack_check.py` reads the radius (or the container size) and the centres as decimals and decides containment and every overlap in exact integer arithmetic; its frames were checked on Packomania's own coordinate files for csq, cci, csc, ccq, crt, scu, ssp, ccin and csqn (each passes just below the listed value and fails 10^-9 above it). Left out: the regular-polygon sections and the sections with irrational radii, whose exact check needs algebraic numbers. With these two families the benchmark has 162,459 problems.
@@ -315,7 +329,9 @@ What each family takes from its table, and what it leaves out:
 - `ea-quantum-code` (in review for v2.2; read 15 Nov 2026): every entry [[n,k;c]] with c >= 1 of Grassl's tables of
   entanglement-assisted codes (qubits up to length 64, qutrits up to 36) whose lower bound is below its upper bound
   and whose check lists at most 2^34 elements (qubits, n - k + c <= 34) or 2^31 lines (qutrits, n - k + c <= 20);
-  2,388 qubit and 875 qutrit cells. `qcode_check.py --ebits C` takes generators that need not commute: they must span
+  2,388 qubit and 875 qutrit cells; from 16 Nov 2026 also every cell whose check with the faster lister (see
+  `quantum-code`) is estimated at 60 s or less, for S and its isotropic part: 211 qubit and 246 qutrit cells more,
+  3,720 in all. `qcode_check.py --ebits C` takes generators that need not commute: they must span
   q^(n-k+c) elements with a trace-symplectic form of rank 2c, and the distance follows Luo, Ezerman, Grassl and Ling
   (arXiv:2207.05647, Proposition 1): the least weight of an element of S' outside S (for k = 0, of a nonzero element
   of S', n + 1 if there is none), with S and its isotropic part listed and S' by MacWilliams. Checked against brute
@@ -343,7 +359,17 @@ What each family takes from its table, and what it leaves out:
   exact integers. Codes published after the tables' last change are taken into account (`outside.json`: M. de
   Messières' Zenodo deposits of October 2026, S. Cochinescu's of 12 Nov 2026, and Bartoli, Marcugini and Pambianco's
   quantum caps of 2009): 26 qubit cells they close are left out, and 76 cells give their distance as the best known,
-  credited to them. Left out: 8,740 solved entries and 42,995 open entries whose check would be longer. Checks: the
+  credited to them. 16 Nov 2026: the C helper lists faster, 4 to 5 times for Q = 2, 4, 8 (the combinations of the last
+  10 generators are tabulated, and each Gray-code step takes the weights of its sums with the whole table in one
+  loop the compiler vectorizes: 0.61 ns an element for qubits of length 64, 1.5 ns for length 256) and about 17 times
+  for Q = 3 (digits sliced into bit planes, 1.0 to 1.8 ns a line); a cell is now also kept when its estimated check,
+  the elements listed times the time per element (from full runs of the checker on the largest shapes) plus the
+  MacWilliams step (5 s at length 256), times 1.05, takes at most 60 s, as 2^34 steps did (47 s for qubits with the
+  old lister): n - k = 35 for qubit lengths up to 192 and 36 up to 64, n - k = 18 over GF(4) up to length 64, and
+  n - k = 21 to 23 over GF(3) (`check_seconds` in `tools/qcode_cells.py`; the full runs are in CHANGELOG.md). This
+  adds 435 cells (187 qubit, 201 over GF(3), 47 over GF(4)), 7,576 in all; Q = 5 and 7 keep the old rule.
+  `--max-work` now defaults to 2^37. Left out: 8,740 solved entries and 42,560 open entries whose check would be
+  longer (42,995 before 16 Nov). Checks: the
   five-qubit, Steane and hexacode codes and the five-qudit code over GF(3), GF(4), GF(5), GF(7), GF(8); 36 random
   codes against brute force; the C helper against the Python lister; and 65 of de Messières' codes (n - k <= 30),
   whose distances it reproduces. With this family the benchmark has 169,600 problems; with the second part of
@@ -355,7 +381,8 @@ What each family takes from its table, and what it leaves out:
   the Golomb rulers, 226,515; with the covering designs of m > t searched in C, 230,727; with Brouwer's open
   strongly regular graphs, 232,083; with Gordon's open difference sets and circulant weighing matrices (and seven
   settled circulant weighing matrix problems removed), 337,321; with Gordon's open signed difference sets, 359,646; with the
-  circulant and bipartite degree-diameter tables, 359,848.
+  circulant and bipartite degree-diameter tables, 359,848; with Sloane's Grassmannian packings, 362,087; with the
+  faster checkers for covering arrays, quantum codes and MinT's arrays over GF(2), 364,179.
 - `strongly-regular-graph` (in review for v2.2; read 15 Nov 2026): every parameter set srg(v,k,lambda,mu), v <= 1,300,
   that A. E. Brouwer's table (aeb.win.tue.nl/graphs/srg, 26 pages) marks '?': no graph is known and none has been ruled
   out. A parameter set and its complement are one row pair of the table and one cell here (a graph settles both); 65
@@ -405,6 +432,27 @@ What each family takes from its table, and what it leaves out:
   2-colours the graph. `tests/test_circulant.py`: the optimal degree-4 circulants C_n(1, 2k+1), n = 2k^2 + 2k + 1,
   pass with diameter k and fail with k - 1 (k = 1000 in C), Python and C agree on 150 random graphs, even cycles pass
   and odd cycles fail the bipartite check.
+- `grassmannian-packing` (in review for v2.2; read 15 Nov 2026): N. J. A. Sloane's table of the best known packings of
+  N n-dimensional subspaces of R^m (neilsloane.com/grass/grassTab.html, last modified 20 Jan 1997; with R. H. Hardin,
+  J. H. Conway and others): the least squared chordal distance, the sum of the squares of the sines of the principal
+  angles, to be maximized. A packing in G(m,n) and the complements of its subspaces have the same distances, so n is
+  taken as min(n, m - n). The best known value for N is the largest the table lists for N or more subspaces (a subset
+  of a packing is a packing; 92 cells take the value of a packing of more subspaces, 83 of them from the table itself), raised where a later paper published a better packing:
+  M. Fickus, J. Jasper and D. G. Mixon (Packings in real projective spaces, SIAM J. Appl. Algebra Geom. 2018) give 24/25
+  for 31 to 35 lines in R^15 and 35 to 40 lines in R^16 (the table: 0.9538 to 0.9594), and exact forms of 14 of the
+  table's own line packings. A cell is open when its value is below Rankin's simplex bound n(m-n)/m N/(N-1) (and, for
+  N > m(m+1)/2, the orthoplex bound n(m-n)/m) by more than one unit of its last printed decimal and no proof of
+  optimality is known: proofs since 1997 settle 5 and 8 lines in R^3, 6 in R^4, 7 in R^5, 8 in R^6 and, by Delsarte's
+  linear programming bound, 60 lines in R^4, 36 in R^6, 63 in R^7 and 120 in R^8 (`families/grassmannian-packing/
+  literature.json`, with the sources; the literature check of 16 Nov 2026 also read Dhillon, Heath, Strohmer and
+  Tropp's alternating projection paper of 2008, whose real packings do not beat the table). 2,778 (m, n, N) of the
+  table give 434 at a bound, 8 proven optimal since and 97 whose certificate would be too large (more than 300,000
+  numbers or 10^7 pairs), and 2,239 cells; five rows with values above the Rankin bound are not used. The table prints
+  most values to 15 decimals, so a packing improves a cell when its value is larger by more than one unit of the last
+  printed decimal (decimals with fewer than 10 significant digits and fractions are exact values of constructions).
+  `grass_check.py` reads each subspace as n spanning vectors, scales them to integers and computes every pair's
+  distance exactly, n - tr(adj(G_A) X adj(G_B) X^T)/(det G_A det G_B) with the Gram matrices G and X = A B^T; Sloane's
+  own packings for 9 lines in R^3 and 12 planes in R^5 (fetched by fetch.sh) reproduce the table's values.
 - `project-scheduling`: every instance of the sets with open instances whose best known makespan is above its lower
   bound and which the site does not mark optimal; the open counts match the site's own table of November 2026. The
   highRD, lowRU and 1k variants are not read: their dataset files date from April 2021, many of their upper bounds are
@@ -421,6 +469,8 @@ Each checker in `checkers/` is one file that can be used without the benchmark: 
 with `python3 -I`, except the Ramsey checker, which is C (`cc -O3 -o ramsey_check checkers/ramsey_check.c`). Each
 prints its exact result and exits 0 only for a valid certificate.
 
+- `grass_check.py M N COUNT FILE`: a packing of COUNT subspaces of dimension N in R^M given by spanning vectors; the
+  least squared chordal distance, exact.
 - `circulant_check.py DELTA DIAMETER FILE`: a circulant graph C_n(S) given by n and its jumps, degree at most DELTA
   and diameter at most DIAMETER (one breadth-first search from 0; in C above 10^6 vertices).
 - `ds_check.py GROUP K L FILE`: a (v,K,L) difference set in the abelian group Z_n1 x ... x Z_nr (GROUP = n1,...,nr),
@@ -481,7 +531,7 @@ The checkers added in v2.0, one per new family, also end with `RESULT v`:
   M <= 64 the depth-vector walk runs in C above 2^20 steps: `ooa_walk.c` for B = 2^e, `ooa_walk_p.c` for odd B).
 - `ca_check.py T K V FILE`: a covering array of strength T with K columns over V symbols (for each column and symbol
   the rows holding it form a bit set; every T-set of columns is checked through its intersections, shared between
-  T-sets with the same first columns).
+  T-sets with the same first columns; large arrays in C, `ca_trie.c` for V <= 64, else `ca_scan.c`).
 - `lincode_check.py Q N K FILE`: the exact minimum distance of a linear code over GF(Q), Q = 2, 3, 4, 5, 7, 8 or 9,
   from a generator matrix (rank K checked; every codeword listed once per line through the origin with a Gray code,
   or, when K > N - K, every codeword of the dual code and the MacWilliams identities in exact integers). Elements of

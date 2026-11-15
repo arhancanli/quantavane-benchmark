@@ -327,6 +327,11 @@ python3 -I tests/test_jsp.py || status=1
 python3 -I tests/test_golomb.py || status=1
 python3 -I tests/test_ds.py || status=1
 python3 -I tests/test_circulant.py || status=1
+# v2.2: grass_check.py (the family grassmannian-packing): known packings with exact values, red controls, the exact
+# value against floating-point principal angles; Sloane's own packings (fetch.sh) reproduce the table and do not improve
+python3 -I tests/test_grass.py || status=1
+t grass-3-1-9 certs/grass/grassc.3.1.9.txt "does not improve,"
+t grass-5-2-12 certs/grass/grassc.5.2.12.txt "does not improve,"
 python3 -I tests/sample_cells.py || status=1
 if python3 -I obb.py index > /dev/null; then echo "ok    index.json matches the files"; else echo "FAIL  index.json"; status=1; fi
 exit $status

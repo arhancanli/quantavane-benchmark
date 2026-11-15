@@ -95,6 +95,12 @@ done
 # in collections/open-tables, read by its tools and tests; not copied into this repository
 mkdir -p ../instances/knotinfo
 get ../instances/knotinfo/knotinfo_data_complete.csv https://raw.githubusercontent.com/soehms/database_knotinfo/219c2d982b89fb92b6ab0c556f28cdd766a18734/database_knotinfo/csv_data/knotinfo_data_complete.csv ed4447ff81dc50e2561764760d631356186c34e2dd35f89cc84e0a4d8fedd3d0
+# N. J. A. Sloane's Grassmannian packings (neilsloane.com/grass, no robots.txt restrictions), two packings of open
+# cells of the family grassmannian-packing, replayed by grass_check.py in test.sh (they reproduce the table's values)
+mkdir -p grass
+get grass/grassc.3.1.9.txt http://neilsloane.com/grass/dim3/grassc.3.1.9.txt daad1d294d1505bf700bb55a0b169c360edb378fda0087ed476e5ad48e26a4ec
+sleep 2
+get grass/grassc.5.2.12.txt http://neilsloane.com/grass/dim5/grassc.5.2.12.txt 72459240bb64e91eda35d8e562c58a6712d2a5cbc316ee8ccb3cca10acac3e6b
 # CVRPLIB instances for the routing problems, one request every 2 seconds
 cd .. && mkdir -p instances && cd instances
 slow() { [ -s "$1" ] || sleep 2; get "$@"; }

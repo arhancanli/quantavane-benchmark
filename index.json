@@ -1,6 +1,6 @@
 {
  "benchmark_version": "2.1",
- "problems": 361940,
+ "problems": 364179,
  "by_family": {
   "bipartite-degree-diameter": 32,
   "cage": 40,
@@ -21,6 +21,7 @@
   "erdos-problem": 2,
   "flexible-job-shop": 53,
   "golomb-ruler": 39972,
+  "grassmannian-packing": 2239,
   "growing-circle-packing": 396,
   "hadamard": 4,
   "job-shop": 60,
@@ -202,6 +203,17 @@
    "keeper": "T. Rokicki and G. Dogon, possibly optimal Golomb rulers calculated for 160 to 40,000 marks (cube20.org/golomb; data from 5 marks)",
    "read": "2026-11-15",
    "checker": "golomb_check.py"
+  },
+  {
+   "kind": "family",
+   "family": "grassmannian-packing",
+   "path": "families/grassmannian-packing/cells.jsonl",
+   "definition": "families/grassmannian-packing/family.json",
+   "count": 2239,
+   "sha256": "3df3df25af447733ff3289ca1547e5d47d65b4089818aaddd5325f5e3d4af915",
+   "keeper": "N. J. A. Sloane, Table of best Grassmannian packings (with R. H. Hardin, J. H. Conway and others)",
+   "read": "2026-11-15",
+   "checker": "grass_check.py"
   },
   {
    "kind": "family",

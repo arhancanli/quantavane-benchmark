@@ -18,6 +18,68 @@ value can change within a version when its source table changes; the file then s
   some of them are public on Zenodo. Their values stay as read on 8 Nov until a rule for cells the table does not list is
   chosen.
 
+## Next (in review): faster checkers for covering arrays, quantum codes and MinT's arrays over GF(2) (16 Nov 2026)
+
+- `checkers/ca_trie.c` (new; `ca_check.py` uses it above 5 x 10^7 visits for v <= 64, `--mark` keeps `ca_scan.c`): rows
+  split by their symbols in the first t-2 chosen columns; in each group, for every (t-1)-th column, each row's one-hot
+  symbol masks in all later columns are OR-ed into the accumulator of its symbol there (a vectorized loop, no v^t bit
+  array). 1.46 x 10^9 visits in 0.34 s (`ca_scan.c`: 2.8 s); 0.02 to 0.2 ns a visit by mask width. `ca_check.py` keeps
+  each row as one string (43 ns a symbol to read and pass on). `tests/test_ca.py`: Python, `ca_trie.c` and `ca_scan.c`
+  agree on 76 + 241 random arrays (v up to 64, t up to 5), every gap `ca_trie.c` reports is real, OA(529; 2, 22, 23)
+  and a repaired CA(121; 3, 150, 2) pass with red controls (a row dropped, a column copied).
+- `families/covering-array`: a cell is also kept when the estimated check of an array one row smaller than the best
+  known takes at most three minutes (the old rule, 10^11 visits, was about three minutes in `ca_scan.c`):
+  `ca_check_seconds` in `tools/import_families.py`, fitted to 34 random arrays of left-out shapes timed in full
+  (measured/fitted 0.86 to 2.0) with a factor 1.3, or 2.1 for t >= 5 with more than 16 MB of masks; eight of the
+  slowest admitted shapes timed again in full took 114 to 174 s (estimates 170 to 180 s). +834 cells (5,565; 6,369 stay out), 24 of them our own
+  arrays (37 in all).
+- `checkers/qcode_enum.c`: for Q = 2, 4, 8 the combinations of the last 10 generators are tabulated and each Gray-code
+  step weighs its sums with the whole table in one vectorized loop (0.61 ns an element for qubits of length <= 64,
+  1.5 ns for length 256, 0.8 to 1.9 ns for GF(4) and GF(8); 4 to 5 times faster); for Q = 3 the digits are sliced
+  into bit planes (1.0 ns a line for length <= 64, 1.8 ns to 128; about 17 times faster; QCODE_ENUM_PLAIN=1 keeps the
+  old lister). `qcode_check.py --max-work` defaults to 2^37. `tests/test_qcode.py`: the C helper against the Python
+  lister for every plane count and width (lengths 30 to 256), the bit-sliced GF(3) path against the plain one.
+- `families/quantum-code` and `families/ea-quantum-code`: a cell is also kept when its estimated check (elements
+  listed times the measured time per element, plus the MacWilliams step) takes at most 60 s, as 2^34 steps did
+  (47 s): +435 quantum-code cells (187 qubit: n - k = 35 up to length 192, 36 up to length 64; 201 over GF(3):
+  n - k = 21 to 23; 47 over GF(4): n - k = 18 up to length 64), 7,576 in all; +457 ea-quantum-code cells (211 qubit,
+  246 qutrit), 3,720 in all. End-to-end runs of `qcode_check.py` (CPU time; X-only stabilizers, so the
+  whole listing runs): qubits [[64,28]] 42.2 s, [[128,93]] 32.1 s, [[192,157]] 45.4 s; [[200,165]] 57.1 s and
+  [[256,221]] 63.3 s (lengths above 192 stay out at n - k = 35); [[64,46]] over GF(4) 54.2 s; [[64,41]] and [[100,78]]
+  over GF(3) 52.8 s and 28.6 s.
+- `checkers/ooa_walk.c`: for GF(2) the walk keeps a vector in one word and reduces branch-free (about 3.5 times faster,
+  1.2 x 10^9 steps a second for small k; OOA_WALK_PLAIN=1 keeps the old walk). `tests/test_ooa.py`: the two walks give
+  the same output word for word on 150 random objects up to m = 64. `families/ordered-orthogonal-array`: for b = 2 a
+  cell above the old cap of 2^34 steps is kept when it needs at most 2^36 steps and at most two minutes (the family's
+  rule), estimated as steps x max(0.82, 0.1 k - 0.1) x 1.05 ns from full walks of random 64-row objects with the
+  shapes of left-out cells (the reduction grows with the depth): 33 s (T = 5, k = 6, s = 128), 40 s (T = 4, k = 5,
+  s = 258), 59 s (net, k = 11, s = 33), 93 s (T = 7, k = 20, s = 16) and 110 s (net, k = 36, s = 10, the slowest
+  kept shapes); net k = 29, s = 12 (168 s) and T = 8, k = 37, s = 11 (137 s) stay out. +366 cells, 5,075 in all.
+  Fixed: `ooa_check.py --max-work` defaulted to 2^33, below the family's cap of 2^34 for b = 2, so `obb.py check`
+  refused some kept cells as too large; it now defaults to 2^36.
+- Not done: the 8,891 C(v,k,t,m) entries above the one-hour estimate and a timed sample of the 16,637 cells admitted
+  by size alone on 8 Nov could not be measured: that needs the best known designs, which the Covering Repository does
+  not offer in bulk (most are paid downloads, and automated downloads were refused with HTTP 403 on 25 Oct), and none
+  of our own 101 C(v,k,t,m) designs is among those cells.
+- index.json: 364,179 problems.
+
+## Next (in review): the family `grassmannian-packing` from Sloane's table (16 Nov 2026)
+
+- New exact checker `checkers/grass_check.py`: COUNT subspaces of dimension N in R^M given by spanning vectors (Sloane's
+  file format; decimals with exponents, fractions); every vector scaled to integers and each pair's squared chordal
+  distance computed exactly from Gram matrices and adjugates. `tests/test_grass.py` (run by `test.sh`): the cube's four
+  diagonals give 8/9, coordinate planes 2 and planes at 45 degrees 1, the same for other bases and scalings, 60 random
+  rational packings (n = 1 to 4) against floating-point principal angles, red controls (a repeated subspace gives 0;
+  dependent vectors, a number missing or extra, a malformed number are refused).
+- `families/grassmannian-packing` (2,239 cells; `tools/sloane_grass_cells.py`, `literature.json`): Sloane's table
+  read 15 Nov 2026; the best known value for N is the largest listed for N or more subspaces, raised by Fickus, Jasper
+  and Mixon (2018) to 24/25 for 31-35 lines in R^15 and 35-40 lines in R^16; open below Rankin's simplex and orthoplex
+  bounds; 8 cells proven optimal since 1997 left out (5 and 8 lines in R^3, 6 in R^4, 7 in R^5, 8 in R^6, and the LP
+  cases 60 in R^4, 36 in R^6, 63 in R^7, 120 in R^8); 97 too large to check. fetch.sh downloads two of Sloane's
+  packings (pinned SHA-256); through obb.py they give the table's values and "does not improve". `tests/sample_cells.py`
+  samples the family (random subspaces, a vector missing, a repeated line).
+- index.json: 362,087 problems.
+
 ## Next (in review): the families `circulant-degree-diameter` and `bipartite-degree-diameter` (15 Nov 2026)
 
 - `checkers/circulant_check.py` (new, with the C helper `checkers/circulant_bfs.c`): circulant graphs given by n and
