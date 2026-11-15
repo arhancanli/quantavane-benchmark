@@ -18,6 +18,16 @@ value can change within a version when its source table changes; the file then s
   some of them are public on Zenodo. Their values stay as read on 8 Nov until a rule for cells the table does not list is
   chosen.
 
+## Next (in review): the family `lj-cluster` from the Cambridge Cluster Database (15 Nov 2026)
+
+- New checker `checkers/cluster_check.py`: the Lennard-Jones energy of a cluster, every coordinate read exactly and
+  every pair's term an exact fraction rounded up, printed as a proven upper bound within 10^-12. `tests/test_cluster.py`
+  (run by `test.sh`): exact values for two and three atoms, red controls, the bound against Fraction arithmetic.
+- `families/lj-cluster` (137 cells, N = 14..150; `tools/ccd_cells.py`): Wales and Doye's table, read 15 Nov 2026
+  (unchanged since 1 Nov). `tests/sample_cells.py` samples the family; the database's coordinates for N = 77 give
+  "does not improve".
+- index.json: 186,395 problems.
+
 ## Next (in review): the family `orthogonal-array` (MinT, arrays of any kind) (15 Nov 2026)
 
 - New exact checker `checkers/oa_check.py` with the C helper `checkers/oa_scan.c`: an ordered orthogonal array or net

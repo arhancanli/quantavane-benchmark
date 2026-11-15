@@ -270,6 +270,22 @@ def test_orthogonal_array(n, rng):
         expect(f"red   {c['id']} (one run changed)", obb(c["id"], bad), "NOT CERTIFIED,")
 
 
+def test_lj_cluster(n, rng):
+    """Atoms on a cubic grid of step 1.1: a valid cluster far above the table's energy; two atoms at the same place
+    must be refused."""
+    for c in rng.sample(family_cells("lj-cluster"), n):
+        N = c["params"]["n"]
+        k = 1
+        while k ** 3 < N:
+            k += 1
+        pts = [(1.1 * i, 1.1 * j, 1.1 * l) for i in range(k) for j in range(k) for l in range(k)][:N]
+        lines = [f"{x:.1f} {y:.1f} {z:.1f}" for x, y, z in pts]
+        good = write(f"{c['id']}.txt", lines)
+        expect(f"sample {c['id']} cubic grid", obb(c["id"], good), "does not improve,")
+        bad = write(f"{c['id']}_red.txt", lines[:-1] + [lines[0]])
+        expect(f"red   {c['id']} (two atoms at the same place)", obb(c["id"], bad), "NOT CERTIFIED,")
+
+
 def test_constant_weight_code(n, rng):
     import math
     small = [c for c in family_cells("constant-weight-code")
@@ -566,6 +582,7 @@ def main():
                        ("ea-quantum-code", test_ea_quantum_code),
                        ("unrestricted-code", test_unrestricted_code),
                        ("orthogonal-array", test_orthogonal_array),
+                       ("lj-cluster", test_lj_cluster),
                        ("unequal-circle-packing", test_unequal_circle_packing)):
         if os.path.exists(os.path.join(ROOT, "families", name, "cells.jsonl")):
             test(n, rng)

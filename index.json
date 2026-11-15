@@ -1,6 +1,6 @@
 {
  "benchmark_version": "2.1",
- "problems": 186258,
+ "problems": 186395,
  "by_family": {
   "cage": 40,
   "cap-set": 2,
@@ -22,6 +22,7 @@
   "kissing-number": 25,
   "latin-squares": 1,
   "linear-code": 15255,
+  "lj-cluster": 137,
   "matrix-multiplication": 2,
   "multicolour-ramsey": 14,
   "no-three-in-line": 2,
@@ -140,6 +141,17 @@
    "keeper": "M. Grassl, bounds on the minimum distance of linear codes (codetables.de)",
    "read": "2026-11-09",
    "checker": "lincode_check.py"
+  },
+  {
+   "kind": "family",
+   "family": "lj-cluster",
+   "path": "families/lj-cluster/cells.jsonl",
+   "definition": "families/lj-cluster/family.json",
+   "count": 137,
+   "sha256": "4df472d405ec9d1e01fe56dd3a3ab0387f5fdeb21692b019e3ad331516812788",
+   "keeper": "D. J. Wales and others, the Cambridge Cluster Database (www-wales.ch.cam.ac.uk/CCD.html)",
+   "read": "2026-11-15",
+   "checker": "cluster_check.py"
   },
   {
    "kind": "family",

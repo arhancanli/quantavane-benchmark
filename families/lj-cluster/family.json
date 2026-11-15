@@ -1,0 +1,39 @@
+{
+ "family": "lj-cluster",
+ "title": "Lennard-Jones clusters with the lowest energy",
+ "added": "2.2",
+ "objective": "minimize",
+ "id_prefixes": [
+  "lj-"
+ ],
+ "keeper": "D. J. Wales and others, the Cambridge Cluster Database (www-wales.ch.cam.ac.uk/CCD.html)",
+ "page": "https://www-wales.ch.cam.ac.uk/~wales/CCD/jon/structures/LJ/tables.150.html",
+ "read": "2026-11-15",
+ "revision": "jon/structures/LJ/tables.150.html read 15 Nov 2026 10:55 UTC (unchanged since our read of 1 Nov 2026; SHA-256 in page_sha256)",
+ "exact_values": false,
+ "template": {
+  "title": "Lennard-Jones cluster of {n} atoms",
+  "statement": "Place {n} atoms in space so that the Lennard-Jones energy, the sum over pairs of 4 (r^-12 - r^-6) in reduced units, is as low as possible.",
+  "submission": "Text file: {n} lines, the coordinates x y z of each atom (decimal numbers); see checkers/cluster_check.py.",
+  "args": [
+   "lj",
+   "{n}"
+  ]
+ },
+ "checker": {
+  "program": "cluster_check.py",
+  "value": "result"
+ },
+ "score": "the energy, rounded up in the 12th decimal: a proven upper bound (lower is better)",
+ "best_text": "The putative global minimum in the database is {best} ({holder}); a cluster with a lower energy improves it.",
+ "holder_unknown": "not named in the table",
+ "holder_sources": "the reference column of the table (Wales and Doye, J. Phys. Chem. A 101 (1997) 5111, and the works it cites)",
+ "open_rule": "every N from 14 to 150 of the table of putative global minima (none is proven optimal)",
+ "left_out": "N <= 13; the database's tables for N = 310 to 1000 (later published values are not in them); the table of icosahedral minima",
+ "frames": "the database's own coordinate files for N = 3..150 (read 1 Nov 2026) give, by checkers/cluster_check.py, the listed energies to the printed six decimals (checked for N = 13, 38, 77, 98, 150)",
+ "page_sha256": "0ad26cf6304d9f56dde8a3128920160dee65995d1bb77a81de89bd34fe02e09c",
+ "cells": "cells.jsonl",
+ "count": 137,
+ "quantavane_records": 0,
+ "single_problems_left_out": 0
+}
