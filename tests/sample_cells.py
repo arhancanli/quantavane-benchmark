@@ -113,6 +113,21 @@ def test_covering_design(n, rng):
             bad = write(f"{c['id']}_red.txt", lines[1:] + [" ".join(map(str, blocks[0][:-1] + [p["v"] + 1]))])
             what = "a point outside 1..v"
         expect(f"red   {c['id']} ({what})", obb(c["id"], bad), "NOT CERTIFIED,")
+    # the cells with m > t and more than 1,000 blocks (searched in C since 15 Nov 2026): a greedy t-covering is a
+    # valid (v,k,t,m) design; with the blocks that meet one m-subset in t or more points removed, that m-subset is bad
+    big = [c for c in family_cells("covering-design") if c["params"]["m"] > c["params"]["t"] and int(c["best"]) > 1000
+           and math.comb(c["params"]["v"], c["params"]["t"]) <= 20000]
+    for c in rng.sample(big, min(n, len(big))):
+        p = c["params"]
+        blocks = greedy_covering(p["v"], p["k"], p["t"])
+        good = write(f"{c['id']}.txt", [" ".join(map(str, b)) for b in blocks])
+        expect(f"sample {c['id']} greedy covering ({len(blocks)} blocks, searched in C)", obb(c["id"], good),
+               "does not improve," if len(blocks) >= int(c["best"]) else "IMPROVES,")
+        S = set(rng.sample(range(1, p["v"] + 1), p["m"]))
+        holes = [" ".join(map(str, b)) for b in blocks if len(S & set(b)) < p["t"]]
+        bad = write(f"{c['id']}_red.txt", holes)
+        expect(f"red   {c['id']} (the blocks meeting one {p['m']}-subset in {p['t']} or more points removed)",
+               obb(c["id"], bad), "NOT CERTIFIED,")
 
 
 def test_covering_array(n, rng):

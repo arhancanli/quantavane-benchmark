@@ -38,13 +38,14 @@
  "holder_unknown": "not named in the site's export; see the entry on coveringrepository.com",
  "holder_sources": "our own records (quantavane-covering-records); the site's list of recent uploads and derived coverings, read with each daily export since 1 Nov 2026; for entries unchanged since then, the credit in the La Jolla Covering Repository's final data (frozen 1 March 2026)",
  "open_rule": "every entry whose best known size is above the lower bound named in the cell; entries that equal it are solved and left out. A cell may still be optimal by a sharper bound than these.",
- "left_out": "16566 entries equal to their lower bound (solved); 5155 entries with m > t and at most 3 blocks (a short case analysis settles them); 13242 entries whose check would be very long: t = m with more than 10^10 t-subsets to mark (blocks x C(k,t); about a minute in C), or m > t with more than 1,000 blocks",
+ "left_out": "16566 entries equal to their lower bound (solved); 5155 entries with m > t and at most 3 blocks (a short case analysis settles them); 9030 entries whose check would be very long: 139 with t = m and more than 10^10 t-subsets to mark (blocks x C(k,t); about a minute in C), 8891 with m > t, more than 1,000 blocks and a pessimistic estimate of the search above one hour (tools/import_families.py, lotto_check_hours: the sets of fewer than m points a random design of that size leaves uncovered, at 2.5 ns per block per node in C)",
  "counts": {
   "t = m": 7280,
-  "m > t": 49912
+  "m > t": 54124,
+  "m > t with more than 1,000 blocks (searched in C)": 4212
  },
  "cells": "cells.jsonl",
- "count": 57182,
+ "count": 61394,
  "quantavane_records": 128,
  "single_problems_left_out": 10
 }

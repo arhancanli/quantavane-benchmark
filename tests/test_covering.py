@@ -70,5 +70,52 @@ code, line = run(30, 20, 5, 5, blocks)
 expect("C(30,20,5) with 3,003 blocks (46.6 million marks, C by default)", (code, "marked in C" in line), (0, True))
 code, line = run(30, 20, 5, 5, blocks[1:])
 expect("red: the same with one block dropped", (code, line.startswith("1 of 142506")), (1, True))
+
+# m > t: the search in C (covering_lotto.c) against the Python search, which it follows step for step: on random block
+# sets, half of them repaired into valid designs (a block through a bad set found by the Python search), both must give
+# the same verdict and the same bad set
+sys.path.insert(0, os.path.join(ROOT, "checkers"))
+import covering_check  # noqa: E402
+
+same = valid = 0
+for trial in range(200):
+    v = rng.randint(5, 22)
+    k = rng.randint(1, min(8, v - 1))
+    t = rng.randint(1, k)
+    m = rng.randint(t + 1, min(v, t + 6))
+    blocks = [sorted(rng.sample(range(1, v + 1), k)) for _ in range(rng.randint(1, 40))]
+    if trial % 2 == 0:
+        for _ in range(400):
+            bad = covering_check.find_bad_set(blocks, v, t, m)
+            if bad is None:
+                break
+            pts = sorted(bad)
+            rng.shuffle(pts)
+            b = set(pts[:k])
+            while len(b) < k:
+                b.add(rng.randint(1, v))
+            blocks.append(sorted(b))
+    a, b = run(v, k, t, m, blocks, "--python"), run(v, k, t, m, blocks, "--native")
+    valid += a[0] == 0
+    same += a[0] == b[0] and a[1].replace(" (searched in C)", "") == b[1].replace(" (searched in C)", "")
+expect(f"200 random (v,k,t,m) block sets ({valid} valid): Python and C agree (verdict and bad set)", same, 200)
+for ref in sorted(os.listdir(os.path.join(ROOT, "refs"))):
+    parts = ref[len("ours_covering_"):-4].split("-") if ref.startswith("ours_covering_") else []
+    if len(parts) != 4:
+        continue
+    v, k, t, m = map(int, parts)
+    bl = [list(map(int, x.split())) for x in open(os.path.join(ROOT, "refs", ref)) if x.strip()]
+    for flag in ("--python", "--native"):
+        expect(f"our C({v},{k},{t},{m}) with {len(bl)} blocks {flag}", run(v, k, t, m, bl, flag)[0], 0)
+# every 5-subset of 1..14 (2,002 blocks) is a (14,5,3,5) covering, searched in C by default; with the blocks that meet
+# S = {1,...,5} in 3 or more points removed, S is bad and the search must find a bad set
+blocks = [list(b) for b in itertools.combinations(range(1, 15), 5)]
+code, line = run(14, 5, 3, 5, blocks)
+expect("all 2,002 5-subsets of 1..14 as a C(14,5,3,5) design (C by default)", (code, line), (0, "no bad m-subset exists "
+                                                                                           "(searched in C)"))
+holes = [b for b in blocks if len(set(b) & {1, 2, 3, 4, 5}) < 3]
+code, line = run(14, 5, 3, 5, holes)
+expect(f"red: the {len(holes)} blocks meeting {{1..5}} in at most 2 points", (code, line.startswith("the 5-subset")),
+       (1, True))
 print(f"{'ALL OK' if not failures else str(len(failures)) + ' FAILED'}")
 sys.exit(1 if failures else 0)

@@ -18,6 +18,19 @@ value can change within a version when its source table changes; the file then s
   some of them are public on Zenodo. Their values stay as read on 8 Nov until a rule for cells the table does not list is
   chosen.
 
+## Next (in review): covering designs with m > t searched in C (15 Nov 2026)
+
+- `checkers/covering_check.py`: for m > t with more than 40 blocks (v <= 128) the search for a bad m-subset runs in C
+  (`checkers/covering_lotto.c`), the same search step for step, so the same nodes and the same bad set; `--python` and
+  `--native` force one way. `tests/test_covering.py`: 200 random block sets (half repaired into valid designs) give the
+  same verdict and bad set both ways; our five reference designs pass both ways; all 2,002 5-subsets of 1..14 as a
+  C(14,5,3,5) design pass in C and, with the blocks meeting {1..5} in 3 or more points removed, are refused.
+- `families/covering-design`: the m > t entries with more than 1,000 blocks enter when a pessimistic estimate of the
+  search stays under an hour (`lotto_check_hours`): 4,212 cells, 61,394 in all; 8,891 stay out. Same export (14 Nov
+  2026); the 57,182 earlier cells are unchanged. `tests/sample_cells.py` samples the new cells (a greedy t-covering in
+  C; red control: the blocks meeting one m-subset in t or more points removed).
+- index.json: 230,727 problems.
+
 ## Next (in review): the family `golomb-ruler` from Rokicki and Dogon's table (15 Nov 2026)
 
 - `checkers/golomb_check.py`: above 3,000 marks the differences are marked in C (`checkers/golomb_scan.c`, a bit array).

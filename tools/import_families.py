@@ -116,6 +116,19 @@ def lotto_bound(v, k, t, m):
     return lb, how
 
 
+def lotto_check_hours(v, k, t, m, b):
+    """A pessimistic estimate of covering_check.py's search on a C(v,k,t,m) design with b blocks, in hours: the
+    expected number of sets of fewer than m points meeting every block in fewer than t points if the blocks were
+    random (each t-subset uncovered with probability exp(-b C(k,t) / C(v,t))), times 2.5 ns per block per node, the
+    C helper's measured cost (covering_lotto.c, 15 Nov 2026). The search visits only such sets and cuts most of them:
+    on the 101 C(v,k,t,m) designs of quantavane-covering-records it visited 2.9 to 1.4 x 10^8 times fewer nodes than
+    this count (median 259 times fewer; the slowest, C(36,9,5,11) with 68 blocks, 7.6 million nodes in 3.7 s)."""
+    lam = b * math.comb(k, t) / math.comb(v, t)
+    nodes = sum(math.exp(math.lgamma(v + 1) - math.lgamma(s + 1) - math.lgamma(v - s + 1) - lam * math.comb(s, t))
+                for s in range(m))
+    return nodes * b * 2.5e-9 / 3600
+
+
 def covering_design(export, lajolla, ours_path, read, revision, diffs):
     lj = json.load(open(lajolla))
     ours = {}
@@ -127,7 +140,7 @@ def covering_design(export, lajolla, ours_path, read, revision, diffs):
             if row.get("change") in ("improved", "new"):
                 key = tuple(int(row[x]) for x in "vktm")
                 changed[key] = (int(row["new_b"]), (row.get("author") or "").strip(), row.get("date", ""))
-    rows, n_plain, n_lotto, closed, heavy, tiny = [], 0, 0, 0, 0, 0
+    rows, n_plain, n_lotto, closed, heavy, tiny, heavy_plain, lotto_big = [], 0, 0, 0, 0, 0, 0, 0
     for r in csv.DictReader(open(export, newline="", encoding="utf-8-sig")):
         v, k, t, m, b = (int(r[x]) for x in "vktmb")
         if m == t:
@@ -145,10 +158,13 @@ def covering_design(export, lajolla, ours_path, read, revision, diffs):
             continue
         if m == t and b * math.comb(k, t) > 10 ** 10:      # covering_check.py marks above 2 x 10^7 subsets in C
             heavy += 1
+            heavy_plain += 1
             continue
-        if m > t and b > 1000:
-            heavy += 1
-            continue
+        if m > t and b > 1000:              # 15 Nov 2026: in C (covering_lotto.c) when the pessimistic estimate allows
+            if v > 128 or lotto_check_hours(v, k, t, m, b) > 1:
+                heavy += 1
+                continue
+            lotto_big += 1
         holder, mine = None, False
         if ours.get((v, k, t, m)) == b:
             holder, mine = OURS, True
@@ -215,9 +231,11 @@ def covering_design(export, lajolla, ours_path, read, revision, diffs):
                      "equal it are solved and left out. A cell may still be optimal by a sharper bound than these.",
         "left_out": f"{closed} entries equal to their lower bound (solved); {tiny} entries with m > t and at most 3 "
                     f"blocks (a short case analysis settles them); {heavy} entries whose check would be very long: "
-                    "t = m with more than 10^10 t-subsets to mark (blocks x C(k,t); about a minute in C), or m > t "
-                    "with more than 1,000 blocks",
-        "counts": {"t = m": n_plain, "m > t": n_lotto},
+                    f"{heavy_plain} with t = m and more than 10^10 t-subsets to mark (blocks x C(k,t); about a minute "
+                    f"in C), {heavy - heavy_plain} with m > t, more than 1,000 blocks and a pessimistic estimate of "
+                    "the search above one hour (tools/import_families.py, lotto_check_hours: the sets of fewer than "
+                    "m points a random design of that size leaves uncovered, at 2.5 ns per block per node in C)",
+        "counts": {"t = m": n_plain, "m > t": n_lotto, "m > t with more than 1,000 blocks (searched in C)": lotto_big},
     }
     write_family(defn, rows)
 

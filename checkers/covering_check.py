@@ -15,7 +15,9 @@ is cut when even the candidates cannot complete it: split along blocks, the cand
 that block's remaining room T-1-(chosen points in it). The search is complete, so "no bad M-subset" is a proof.
 
 Above 2 x 10^7 subsets to mark (M = T) the marking is done by the C helper covering_mark.c (built with cc -O3 on first
-use; the bit array then holds up to 2^36 bits); --native or --python forces one way.
+use; the bit array then holds up to 2^36 bits). For M > T with more than 40 blocks (and V <= 128) the search runs in
+the C helper covering_lotto.c, the same search step for step (it visits the same nodes and finds the same bad set),
+about 2.5 ns per block per node. --native or --python forces one way.
 
 Prints "blocks B" and, as its last line, "RESULT B", and exits 0 when the design is valid; exits 1 otherwise."""
 import itertools
@@ -30,17 +32,39 @@ except AttributeError:              # Python 3.9
 
 
 NATIVE_FROM = 2 * 10 ** 7                 # above this many t-subsets to mark, the C helper covering_mark.c marks them
+NATIVE_LOTTO_FROM = 40                    # above this many blocks (m > t, v <= 128), covering_lotto.c searches
+
+
+def helper(name):
+    """The C helper checkers/NAME.c, built with cc -O3 into checkers/bin/ on first use (and again when it changes)."""
+    import os
+    import subprocess
+    here = os.path.dirname(os.path.abspath(__file__))
+    exe, src = os.path.join(here, "bin", name), os.path.join(here, name + ".c")
+    if not os.path.exists(exe) or os.path.getmtime(exe) < os.path.getmtime(src):
+        os.makedirs(os.path.dirname(exe), exist_ok=True)
+        subprocess.run(["cc", "-O3", "-o", exe, src], check=True)
+    return exe
+
+
+def find_bad_set_native(blocks, v, k, t, m):
+    """find_bad_set in C (checkers/covering_lotto.c): the same search, so the same answer."""
+    import subprocess
+    text = f"{len(blocks)}\n" + "".join(" ".join(str(p - 1) for p in sorted(b)) + "\n" for b in blocks)
+    out = subprocess.run([helper("covering_lotto"), str(v), str(k), str(t), str(m)], input=text,
+                         capture_output=True, text=True, check=True).stdout.split("\n")
+    if out[0] == "none":
+        return None
+    bad = [int(x) + 1 for x in out[0].split()[1:]]
+    assert out[0].startswith("bad ") and len(set(bad)) == m and all(1 <= p <= v for p in bad), "covering_lotto: output"
+    assert all(len(set(bad) & set(b)) < t for b in blocks), "covering_lotto: the set it found is not bad"
+    return bad
 
 
 def covers_native(blocks, v, k, t):
     """The same marking in C (checkers/covering_mark.c, built with cc -O3 on first use); returns (covered, total)."""
-    import os
     import subprocess
-    here = os.path.dirname(os.path.abspath(__file__))
-    exe, src = os.path.join(here, "bin", "covering_mark"), os.path.join(here, "covering_mark.c")
-    if not os.path.exists(exe) or os.path.getmtime(exe) < os.path.getmtime(src):
-        os.makedirs(os.path.dirname(exe), exist_ok=True)
-        subprocess.run(["cc", "-O3", "-o", exe, src], check=True)
+    exe = helper("covering_mark")
     text = f"{len(blocks)}\n" + "".join(" ".join(str(p - 1) for p in sorted(b)) + "\n" for b in blocks)
     out = subprocess.run([exe, str(v), str(k), str(t)], input=text, capture_output=True, text=True, check=True).stdout
     covered, total = (int(x) for x in out.split()[1:4:2])
@@ -182,13 +206,15 @@ def main():
         if len(b) != k or len(set(b)) != k or not all(1 <= p <= v for p in b):
             print(f"invalid block {b}: need {k} distinct points from 1..{v}")
             return 1
+    native = True if "--native" in flags else False if "--python" in flags else None
     if m == t:
-        native = True if "--native" in flags else False if "--python" in flags else None
         ok, why = covers_everything(blocks, v, k, t, native)
     else:
-        bad = find_bad_set(blocks, v, t, m)
+        if native is None:
+            native = len(blocks) > NATIVE_LOTTO_FROM and v <= 128
+        bad = find_bad_set_native(blocks, v, k, t, m) if native else find_bad_set(blocks, v, t, m)
         ok = bad is None
-        why = ("no bad m-subset exists" if ok else
+        why = ("no bad m-subset exists" + (" (searched in C)" if native else "") if ok else
                f"the {m}-subset {sorted(bad)} meets every block in fewer than {t} points")
     print(why)
     if not ok:

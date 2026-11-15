@@ -66,7 +66,7 @@ the 100 are new single problems of v2.1, with eight new checkers; see the collec
 | Family | Cells | Table (keeper) | Checker |
 | --- | ---: | --- | --- |
 | `project-scheduling` | 59,170 | Solutions Update, Ghent University (M. Vanhoucke, J. Coelho): RCPSP sets NetRes (7), RG300, RG30, J60, J90, J120, DC2, CV | `rcpsp_check.py` |
-| `covering-design` | 57,182 | Covering Repository (successor of D. Gordon's La Jolla Covering Repository): C(v,k,t) and C(v,k,t,m) | `covering_check.py` |
+| `covering-design` | 61,394 | Covering Repository (successor of D. Gordon's La Jolla Covering Repository): C(v,k,t) and C(v,k,t,m) | `covering_check.py` |
 | `linear-code` | 15,255 | M. Grassl, codetables.de: linear codes over GF(q), q = 2, 3, 4, 5, 7, 8, 9 | `lincode_check.py` |
 | `spherical-code` | 14,782 | H. Cohn, table of spherical codes (dimensions 3 to 32 and a few more) | `sph_check.py` |
 | `covering-array` | 4,731 | C. Smolen's ca-tools table, successor of C. J. Colbourn's covering array tables | `ca_check.py` |
@@ -219,6 +219,16 @@ What each family takes from its table, and what it leaves out:
   records, from the site's list of recent uploads (read with each export since 1 Nov 2026) and, for entries unchanged
   since, from the La Jolla Covering Repository's final data; 50,350 cells (48,205 of them C(v,k,t,m)) have no holder
   in any of these and say so.
+  15 Nov 2026: designs with m > t are searched in C above 40 blocks (`covering_lotto.c`, the Python search step for
+  step, about 2.5 ns per block per node; our reference designs and 200 random block sets give the same answers both
+  ways), and the cap of 1,000 blocks for m > t is lifted where a pessimistic estimate of the search stays under an
+  hour: the sets of fewer than m points that a random design of the best known size would leave uncovered, times 2.5
+  ns per block (`lotto_check_hours` in `tools/import_families.py`). The search visits only such sets and cuts most:
+  on the 101 C(v,k,t,m) designs we hold it visited 2.9 to 1.4 x 10^8 times fewer nodes than the estimate (median 259;
+  the slowest, C(36,9,5,11) with 68 blocks, 7.6 million nodes in 3.7 seconds). This adds 4,212 cells with 1,001 to
+  383,523 blocks (61,394 in all); 8,891 entries with m > t stay out (estimate above an hour), with the 139 entries
+  of t = m above 10^10 marks. The cells with 1,000 blocks or fewer were admitted on 8 Nov by their size alone, as
+  before.
 - `spherical-code`: every entry of the table not marked optimal (32 are). Values are printed rounded up to 12
   decimals, so a code improves an entry only when its largest cosine is smaller by at least one unit in the 12th
   decimal. The holder is the first reference or credit in the entry's notes.
@@ -335,7 +345,7 @@ What each family takes from its table, and what it leaves out:
   Packomania, 181,842; with the walk in C for odd bases, 182,394; with the entanglement-assisted codes, 185,657;
   with Brouwer's unrestricted codes, 186,009; with MinT's arrays of any kind, 186,258; with the Lennard-Jones
   clusters, 186,395; with the rest of Comellas's degree-diameter table, 186,432; with the job shops, 186,545; with
-  the Golomb rulers, 226,515.
+  the Golomb rulers, 226,515; with the covering designs of m > t searched in C, 230,727.
 - `project-scheduling`: every instance of the sets with open instances whose best known makespan is above its lower
   bound and which the site does not mark optimal; the open counts match the site's own table of November 2026. The
   highRD, lowRU and 1k variants are not read: their dataset files date from April 2021, many of their upper bounds are
@@ -365,7 +375,8 @@ prints its exact result and exits 0 only for a valid certificate.
   K_T (Bron-Kerbosch with Tomita's pivot and a colouring bound; n <= 2048).
 - `sph_check.py FILE D N`: the largest cosine between N points on the sphere in R^D, in 50-digit decimal arithmetic.
 - `covering_check.py V K T M FILE`: covering designs C(V,K,T) (M = T) and C(V,K,T,M), by an exact search for an
-  uncovered M-subset (for M = T every T-subset is marked; above 2 x 10^7 of them by the C helper `covering_mark.c`).
+  uncovered M-subset (for M = T every T-subset is marked; above 2 x 10^7 of them by the C helper `covering_mark.c`;
+  for M > T the search runs in the C helper `covering_lotto.c` above 40 blocks).
 - `cw_check.py N D W FILE`: binary constant weight codes, length N, weight W, distance at least D.
 - `cvrp_check.py INSTANCE.vrp SOLUTION.sol`: capacitated vehicle routing in CVRPLIB's formats, distances rounded
   exactly in integers.
