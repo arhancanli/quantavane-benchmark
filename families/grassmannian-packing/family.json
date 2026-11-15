@@ -34,7 +34,7 @@
  "holder_sources": "the name column of the table (Hardin and Sloane's computer searches, or the paper of a construction); later packings from families/grassmannian-packing/literature.json",
  "open_rule": "every (m, n, N) of the table whose best known value (the largest the table lists for N or more subspaces, or a later published packing) is below the bound by more than one unit of its last printed decimal, unless optimality has been proven since (literature.json)",
  "left_out": "2826 rows; 5 rows above the bound (not used); 2778 (m, n, N) in the table; 434 equal to the bound (solved); 8 proven optimal since 1997 (solved); 14 exact forms of the table's own packings (Fickus, Jasper and Mixon); 97 too large to check; 11 raised by Fickus, Jasper and Mixon (2018)",
- "literature": "families/grassmannian-packing/literature.json (checked 16 Nov 2026)",
+ "literature": "families/grassmannian-packing/literature.json (checked 15 Nov 2026)",
  "page_sha256": {
   "grassTab.html": "d2e8e777b8ad9593c16daa1bde6734790056795e82478a173182b831042675b5"
  },

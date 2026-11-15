@@ -24,7 +24,7 @@ checker
 - reports the minimum distance D: for K >= 1 the least w >= 1 with B_w > A_w (an element of S' outside S), for K = 0
   the least w >= 1 with A_w > 0 (then S' = S).
 The work is about Q^(N-K) steps for Q = 2, 4, 8 and Q^(N-K) / (Q - 1) for Q = 3, 5, 7; above --max-work (default
-2^37 since 16 Nov 2026, when the C helper became 4 to 17 times faster; 2^34 before) the program stops with exit
+2^37 since 15 Nov 2026, when the C helper became 4 to 17 times faster; 2^34 before) the program stops with exit
 status 2.
 
 With --ebits C (C >= 1) the code is entanglement-assisted, [[N,K,D;C]] over GF(Q) (M. Grassl's tables at

@@ -6,11 +6,11 @@ PAGES_DIR holds the range pages of the tables (QECC/Tables_color.php, saved as t
 TQ = Q^2 is the q of the site's URLs: 4 for qubits, 9 for qutrits, 16, 25, 49, 64 for local dimension 4, 5, 7, 8).
 Only cell values are stored, with the keeper credited. A cell [[n,k]] is open when its lower bound is below its upper
 bound. It is kept when an exact check of a code with these parameters (checkers/qcode_check.py: list the stabilizer,
-then MacWilliams) takes at most a minute: until 15 Nov 2026 the rule was at most WORK steps, Q^(n-k) for Q = 2, 4, 8
+then MacWilliams) takes at most a minute: the first rule was at most WORK steps, Q^(n-k) for Q = 2, 4, 8
 (WORK = 2^34, 47 s for qubits of length <= 64 with the lister of that day) and (Q^(n-k) - 1)/(Q - 1) for Q = 3, 5, 7
-(WORK = 2^31, 30 to 60 s). From 16 Nov 2026 the C helper qcode_enum.c tabulates the combinations of the last
+(WORK = 2^31, 30 to 60 s). From 15 Nov 2026 the C helper qcode_enum.c tabulates the combinations of the last
 generators (and slices GF(3) into bit planes), and a cell is kept when its estimated check time, the number of
-elements listed times the measured time per element for its field and length (NS_PER, measured 16 Nov 2026 under
+elements listed times the measured time per element for its field and length (NS_PER, measured 15 Nov 2026 under
 load, user time) plus the measured MacWilliams step, is at most 60 s; Q = 5, 7 keep the old rule (their lister is
 unchanged).
 
@@ -104,7 +104,7 @@ def main():
             st["too costly to check"] += 1
             continue
         if work(Q, n - k) > (WORK2 if PRIME[Q] == 2 else WORKODD):
-            st["kept with the faster lister (16 Nov 2026)"] += 1
+            st["kept with the faster lister (15 Nov 2026)"] += 1
         cell = {"id": f"qcode-q{Q}-n{n}-k{k}", "params": {"q": Q, "n": n, "k": k, "tq": Q * Q}}
         if o and o["d"] > lo:
             cell["best"] = str(o["d"])
@@ -163,7 +163,7 @@ def main():
                      "table reaches the upper bound",
         "work_rule": "kept when listing the stabilizer takes at most 2^34 steps (Q^(n-k), for Q = 2, 4, 8) or 2^31 "
                      "steps ((Q^(n-k) - 1)/(Q - 1), for Q = 3, 5, 7): n - k at most 34 for qubits, 20 for Q = 3, 17 "
-                     "for Q = 4, 14 for Q = 5, 11 for Q = 7 and 11 for Q = 8; from 16 Nov 2026 also when the "
+                     "for Q = 4, 14 for Q = 5, 11 for Q = 7 and 11 for Q = 8; from 15 Nov 2026 also when the "
                      "estimated check with the faster lister (qcode_enum.c tabulates the combinations of the last "
                      "generators; GF(3) in bit planes) takes at most 60 s: the elements listed times the time per "
                      "element measured for Q and the length (tools/qcode_cells.py, NS_PER), plus the MacWilliams "

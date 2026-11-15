@@ -13,7 +13,7 @@ any, is printed with its columns. Prints "rows N" and, as its last line, "RESULT
 covering array of strength T with K columns over V symbols; exits 1 otherwise.
 
 Above 5 x 10^7 row visits (C(K,T) x N) the check is done in C (built with cc -O3 on first use). For V <= 64 the helper
-is ca_trie.c (16 Nov 2026): the rows are split by their symbols in the first T-2 chosen columns; within each group,
+is ca_trie.c (15 Nov 2026): the rows are split by their symbols in the first T-2 chosen columns; within each group,
 for every choice of the (T-1)-th column, each row's symbols in all later columns are OR-ed as one-hot bit masks into
 the accumulator of its symbol in that column, and every accumulator must come out full; a row is visited once per
 T-set, as one lane of a vector operation. For V > 64 the helper is ca_scan.c: for each T-set of columns it numbers

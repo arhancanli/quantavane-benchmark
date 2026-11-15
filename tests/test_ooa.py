@@ -110,7 +110,7 @@ for trial in range(600):
     indep_c += a[0]
     same += a[0] == b[0] and (not a[0] or a[2] == b[2])
 expect(f'method D in C against Python on {total_c} random objects ({indep_c} independent)', same, total_c)
-# 9. the branch-free walk for GF(2) (16 Nov 2026) against the plain walk (OOA_WALK_PLAIN=1): the same output, word for
+# 9. the branch-free walk for GF(2) (15 Nov 2026) against the plain walk (OOA_WALK_PLAIN=1): the same output, word for
 #    word (verdict, the dependent columns found, the number of nodes), on random objects up to m = 64
 import subprocess
 oc.way_d_native(oc.Field(2), [[(1, 0)]], 2, 1, 1, 1)                 # builds checkers/bin/ooa_walk

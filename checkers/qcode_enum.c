@@ -11,9 +11,9 @@
    p = 2: every vector of the span is visited once. The combinations of the last L <= 10 vectors are tabulated once
    (2^L entries of packed bit planes); the other r - L vectors are stepped through in Gray-code order (one XOR per
    step), and at each step the weights of the 2^L sums with the table are taken in one loop the compiler vectorizes
-   (XOR, OR of the planes, popcount), then counted into four interleaved histograms (16 Nov 2026; before, one Gray
+   (XOR, OR of the planes, popcount), then counted into four interleaved histograms (15 Nov 2026; before, one Gray
    step per vector).
-   p = 3: bit-sliced, with a table of the combinations of the last generators (16 Nov 2026; see the code), unless the
+   p = 3: bit-sliced, with a table of the combinations of the last generators (15 Nov 2026; see the code), unless the
    environment variable QCODE_ENUM_PLAIN is set.
    p odd (or QCODE_ENUM_PLAIN): every line through the origin is visited once (the vectors whose first nonzero coefficient is 1, stepped
    through like an odometer), and its weight counted p - 1 times (all nonzero multiples have the same weight). */

@@ -195,7 +195,7 @@ def main():
                      "subspaces, or a later published packing) is below the bound by more than one unit of its last "
                      "printed decimal, unless optimality has been proven since (literature.json)",
         "left_out": "; ".join(f"{v} {k}" for k, v in stats.items() if k not in ("kept",)),
-        "literature": "families/grassmannian-packing/literature.json (checked 16 Nov 2026)",
+        "literature": "families/grassmannian-packing/literature.json (checked 15 Nov 2026)",
         "page_sha256": {os.path.basename(page): hashlib.sha256(raw).hexdigest()},
         "cells": "cells.jsonl",
         "count": len(cells),

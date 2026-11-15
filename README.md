@@ -246,7 +246,7 @@ What each family takes from its table, and what it leaves out:
   one row smaller than the best known; `ca_check.py` hands arrays above 5 x 10^7 visits to its C helper `ca_scan.c`,
   about three minutes for 10^11) or have v^t above 2^26. With the C helper the family has 4,731 cells (2,659 before);
   13 of them hold our own covering perfect hash family arrays (Canli 2026, doi:10.5281/zenodo.23839216).
-  16 Nov 2026: for v <= 64 `ca_check.py` hands large arrays to the new C helper `ca_trie.c`: the rows are split by
+  15 Nov 2026: for v <= 64 `ca_check.py` hands large arrays to the new C helper `ca_trie.c`: the rows are split by
   their symbols in the first t-2 chosen columns, and within each group, for every choice of the (t-1)-th column, the
   one-hot symbol masks of each row in all later columns are OR-ed into the accumulator of its symbol there (a loop
   the compiler vectorizes; no array of v^t bits), 4 to 30 times faster than `ca_scan.c` (1.46 x 10^9 visits in 0.34 s
@@ -264,9 +264,9 @@ What each family takes from its table, and what it leaves out:
 - `ordered-orthogonal-array` (in review for v2.2; read 14 Nov 2026): the cells (base b, depth T, b^m runs, strength k)
   of MinT with 3 <= k <= m <= 51 in which the best known LINEAR object has fewer factors than MinT's bound for linear
   objects, and in which one more factor than the best known can be checked exactly within 2^27 steps, or within
-  2^36 (b = 2; 2^34 until 15 Nov 2026), 2^32 (b = 4, 8), 2^31 (b = 3, 5, 7), 2^30 (b = 16 to 256), 2^29 (b = 9, 25, 49) or 2^28 (b = 27, 81)
+  2^36 (b = 2; 2^34 with the first walk), 2^32 (b = 4, 8), 2^31 (b = 3, 5, 7), 2^30 (b = 16 to 256), 2^29 (b = 9, 25, 49) or 2^28 (b = 27, 81)
   steps of the depth-vector walk, which runs in C (`ooa_walk.c`, vectors as bit planes; `ooa_walk_p.c`, vectors as
-  digit planes modulo p; 15 Nov 2026: 2,109 more cells, 4,709 in all; 16 Nov 2026: for b = 2 the walk is
+  digit planes modulo p; 15 Nov 2026: 2,109 more cells, 4,709 in all; 15 Nov 2026: for b = 2 the walk is
   branch-free, one word per vector, about 3.5 times faster (1.2 x 10^9 steps a second for small k), and a cell
   above the old cap of 2^34 steps is kept when it needs at most 2^36 steps and at most two minutes, estimated from
   full walks as steps x max(0.82, 0.1 k - 0.1) x 1.05 ns: 366 more cells, 5,075 in all). Depth 1 is an
@@ -274,7 +274,7 @@ What each family takes from its table, and what it leaves out:
   strength by two separate exact methods (every choice of depths with a running echelon basis; the row space with a
   MacWilliams identity for the Niederreiter-Rosenbloom-Tsfasman weights), so only linear objects can be submitted;
   the cell says so when a non-linear object with more factors is known. Left out: 7,665 solved cells, 52,205 open
-  cells whose check would be longer (52,578 before 16 Nov), and the 429 checkable cells of depth 1 over GF(2) to GF(9), which are linear
+  cells whose check would be longer (52,578 with the first walk), and the 429 checkable cells of depth 1 over GF(2) to GF(9), which are linear
   codes that the family `linear-code` already asks for. With this family the benchmark has 151,980 problems (395 single problems
   and 151,585 cells; `covering-array` has had 2,659 cells since its table was re-read on 12 Nov).
 - `circle-packing` and `growing-circle-packing` (in review for v2.2; read 14 Nov 2026): every N of the Packomania sections with rational geometry (csq, cci, csc, ccq, crt, scu, ssp, hsp4, hsp5, hsp6; ccin and csqn for radii 1..N) whose value is not in bold (Packomania marks proven optimal packings in bold); sections that mark nothing leave out their small N. `pack_check.py` reads the radius (or the container size) and the centres as decimals and decides containment and every overlap in exact integer arithmetic; its frames were checked on Packomania's own coordinate files for csq, cci, csc, ccq, crt, scu, ssp, ccin and csqn (each passes just below the listed value and fails 10^-9 above it). Left out: the regular-polygon sections and the sections with irrational radii, whose exact check needs algebraic numbers. With these two families the benchmark has 162,459 problems.
@@ -329,7 +329,7 @@ What each family takes from its table, and what it leaves out:
 - `ea-quantum-code` (in review for v2.2; read 15 Nov 2026): every entry [[n,k;c]] with c >= 1 of Grassl's tables of
   entanglement-assisted codes (qubits up to length 64, qutrits up to 36) whose lower bound is below its upper bound
   and whose check lists at most 2^34 elements (qubits, n - k + c <= 34) or 2^31 lines (qutrits, n - k + c <= 20);
-  2,388 qubit and 875 qutrit cells; from 16 Nov 2026 also every cell whose check with the faster lister (see
+  2,388 qubit and 875 qutrit cells; from 15 Nov 2026 also every cell whose check with the faster lister (see
   `quantum-code`) is estimated at 60 s or less, for S and its isotropic part: 211 qubit and 246 qutrit cells more,
   3,720 in all. `qcode_check.py --ebits C` takes generators that need not commute: they must span
   q^(n-k+c) elements with a trace-symplectic form of rank 2c, and the distance follows Luo, Ezerman, Grassl and Ling
@@ -359,7 +359,7 @@ What each family takes from its table, and what it leaves out:
   exact integers. Codes published after the tables' last change are taken into account (`outside.json`: M. de
   Messières' Zenodo deposits of October 2026, S. Cochinescu's of 12 Nov 2026, and Bartoli, Marcugini and Pambianco's
   quantum caps of 2009): 26 qubit cells they close are left out, and 76 cells give their distance as the best known,
-  credited to them. 16 Nov 2026: the C helper lists faster, 4 to 5 times for Q = 2, 4, 8 (the combinations of the last
+  credited to them. 15 Nov 2026: the C helper lists faster, 4 to 5 times for Q = 2, 4, 8 (the combinations of the last
   10 generators are tabulated, and each Gray-code step takes the weights of its sums with the whole table in one
   loop the compiler vectorizes: 0.61 ns an element for qubits of length 64, 1.5 ns for length 256) and about 17 times
   for Q = 3 (digits sliced into bit planes, 1.0 to 1.8 ns a line); a cell is now also kept when its estimated check,
@@ -369,7 +369,7 @@ What each family takes from its table, and what it leaves out:
   n - k = 21 to 23 over GF(3) (`check_seconds` in `tools/qcode_cells.py`; the full runs are in CHANGELOG.md). This
   adds 435 cells (187 qubit, 201 over GF(3), 47 over GF(4)), 7,576 in all; Q = 5 and 7 keep the old rule.
   `--max-work` now defaults to 2^37. Left out: 8,740 solved entries and 42,560 open entries whose check would be
-  longer (42,995 before 16 Nov). Checks: the
+  longer (42,995 with the first lister). Checks: the
   five-qubit, Steane and hexacode codes and the five-qudit code over GF(3), GF(4), GF(5), GF(7), GF(8); 36 random
   codes against brute force; the C helper against the Python lister; and 65 of de Messières' codes (n - k <= 30),
   whose distances it reproduces. With this family the benchmark has 169,600 problems; with the second part of
@@ -444,7 +444,7 @@ What each family takes from its table, and what it leaves out:
   N > m(m+1)/2, the orthoplex bound n(m-n)/m) by more than one unit of its last printed decimal and no proof of
   optimality is known: proofs since 1997 settle 5 and 8 lines in R^3, 6 in R^4, 7 in R^5, 8 in R^6 and, by Delsarte's
   linear programming bound, 60 lines in R^4, 36 in R^6, 63 in R^7 and 120 in R^8 (`families/grassmannian-packing/
-  literature.json`, with the sources; the literature check of 16 Nov 2026 also read Dhillon, Heath, Strohmer and
+  literature.json`, with the sources; the literature check of 15 Nov 2026 also read Dhillon, Heath, Strohmer and
   Tropp's alternating projection paper of 2008, whose real packings do not beat the table). 2,778 (m, n, N) of the
   table give 434 at a bound, 8 proven optimal since and 97 whose certificate would be too large (more than 300,000
   numbers or 10^7 pairs), and 2,239 cells; five rows with values above the Rankin bound are not used. The table prints

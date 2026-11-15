@@ -215,7 +215,7 @@ def random_small(rng):
 
 
 def native_vs_python(rng):
-    # (16 Nov 2026: the lister's tabulated p = 2 path for every plane count and width, and its bit-sliced GF(3) path)
+    # (15 Nov 2026: the lister's tabulated p = 2 path for every plane count and width, and its bit-sliced GF(3) path)
     for q, n, k in ((2, 30, 12), (2, 40, 22), (3, 20, 10), (5, 12, 6), (7, 10, 5), (4, 16, 9), (8, 10, 5), (2, 70, 52),
                     (2, 130, 116), (2, 256, 242), (4, 70, 63), (8, 70, 65), (3, 70, 60), (3, 64, 52), (3, 140, 128)):
         F = qc.Field(q)

@@ -24,7 +24,7 @@ FAMILY = len(sys.argv) > 2 and sys.argv[2] == '--family'
 OUT = None if FAMILY else (sys.argv[2] if len(sys.argv) > 2 else None)
 WORK = int(float(sys.argv[3])) if len(sys.argv) > 3 and not FAMILY else 2**27
 # method D in C (checkers/ooa_walk.c, bases 2^e): about 3 x 10^8 steps a second for b = 2, 7 x 10^7 for b = 4, 10^7
-# for b = 256; each base gets the cap that keeps a check near two minutes or less. 16 Nov 2026: the walk for b = 2 is
+# for b = 256; each base gets the cap that keeps a check near two minutes or less. 15 Nov 2026: the walk for b = 2 is
 # branch-free and about 3.5 times faster; a cell above the old cap of 2^34 steps is kept when its steps are at most
 # 2^36 and its time, measured on full walks of random 64-row objects of left-out shapes (0.81 ns a step for k = 5 and
 # 6, 0.94 for k = 11, 2.51 for k = 29, 3.53 for k = 37: the reduction grows with the depth), estimated as
@@ -146,7 +146,7 @@ if FAMILY:
      "holder_unknown": "the construction and its source are on the cell's page at MinT",
      "holder_sources": "the tables list values only; each cell's page names its construction",
      "open_rule": "every cell with 3 <= k <= m <= 51 whose best known linear object has fewer factors than MinT's bound for linear objects",
-     "work_rule": "kept when checking one more factor than the best known takes at most 2^27 steps by the row-space method (about b^m s T / (b - 1), in Python) or by the depth-vector walk (the number of depth vectors times k), which runs in C (checkers/ooa_walk.c for b = 2^e, checkers/ooa_walk_p.c for odd b) with caps of 2^36 steps (b = 2, and above 2^34 only when the time estimated from full walks, steps x max(0.82, 0.1 k - 0.1) x 1.05 ns, is at most two minutes; 2^34 until 15 Nov 2026, before the branch-free walk), 2^32 (b = 4, 8), 2^31 (b = 3, 5, 7), 2^30 (b = 16 to 256), 2^29 (b = 9, 25, 49) and 2^28 (b = 27, 81)",
+     "work_rule": "kept when checking one more factor than the best known takes at most 2^27 steps by the row-space method (about b^m s T / (b - 1), in Python) or by the depth-vector walk (the number of depth vectors times k), which runs in C (checkers/ooa_walk.c for b = 2^e, checkers/ooa_walk_p.c for odd b) with caps of 2^36 steps (b = 2, and above 2^34 only when the time estimated from full walks, steps x max(0.82, 0.1 k - 0.1) x 1.05 ns, is at most two minutes; 2^34 with the first walk), 2^32 (b = 4, 8), 2^31 (b = 3, 5, 7), 2^30 (b = 16 to 256), 2^29 (b = 9, 25, 49) and 2^28 (b = 27, 81)",
      "left_out": (f"{closed} cells with equal bounds (solved); {len(openc) - len(kept)} open cells where checking one more factor than the best known "
                   f"would take more work than the work rule allows (2^27 steps in Python; the walk in C up to 2^28 to 2^36 steps by base); {len(dup)} cells of depth 1 over GF(2) to GF(9), which are linear codes already asked "
                   f"for by the family linear-code; cells with m above 51 (not read); arrays that are not linear (the checker reads generator "

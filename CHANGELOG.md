@@ -18,7 +18,7 @@ value can change within a version when its source table changes; the file then s
   some of them are public on Zenodo. Their values stay as read on 8 Nov until a rule for cells the table does not list is
   chosen.
 
-## Next (in review): faster checkers for covering arrays, quantum codes and MinT's arrays over GF(2) (16 Nov 2026)
+## Next (in review): faster checkers for covering arrays, quantum codes and MinT's arrays over GF(2) (15 Nov 2026)
 
 - `checkers/ca_trie.c` (new; `ca_check.py` uses it above 5 x 10^7 visits for v <= 64, `--mark` keeps `ca_scan.c`): rows
   split by their symbols in the first t-2 chosen columns; in each group, for every (t-1)-th column, each row's one-hot
@@ -63,7 +63,7 @@ value can change within a version when its source table changes; the file then s
   of our own 101 C(v,k,t,m) designs is among those cells.
 - index.json: 364,179 problems.
 
-## Next (in review): the family `grassmannian-packing` from Sloane's table (16 Nov 2026)
+## Next (in review): the family `grassmannian-packing` from Sloane's table (15 Nov 2026)
 
 - New exact checker `checkers/grass_check.py`: COUNT subspaces of dimension N in R^M given by spanning vectors (Sloane's
   file format; decimals with exponents, fractions); every vector scaled to integers and each pair's squared chordal

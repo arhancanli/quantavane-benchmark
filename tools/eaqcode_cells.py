@@ -5,7 +5,7 @@ benchmark family ea-quantum-code, checked by checkers/qcode_check.py --ebits C.
 
 A cell [[n,k;c]] (c >= 1) is open when its lower bound is below its upper bound. Entries with c = 0 are left out: they
 are the stabilizer codes of the family quantum-code. A cell is kept when the exact check lists at most 2^34 elements
-(2^(n-k+c), qubits) or 2^31 lines through the origin ((3^(n-k+c) - 1)/2, qutrits), or, from 16 Nov 2026, when its
+(2^(n-k+c), qubits) or 2^31 lines through the origin ((3^(n-k+c) - 1)/2, qutrits), or, from 15 Nov 2026, when its
 estimated time with the faster lister (the time model of qcode_cells.py, for S and its isotropic part) is at most 60 s.
 The table names each entry's
 construction (a propagation rule or a source) in the cell's title; it is kept as the holder. Only values are stored."""
@@ -53,7 +53,7 @@ def main():
                 if sec is None or sec * (1 + Q ** (-2 * c)) > LIMIT_SECONDS:
                     st["too costly to check"] += 1
                     continue
-                st["kept with the faster lister (16 Nov 2026)"] += 1
+                st["kept with the faster lister (15 Nov 2026)"] += 1
             rows.append({"id": f"eaqcode-q{Q}-n{n}-k{k}-c{c}", "params": {"q": Q, "n": n, "k": k, "c": c},
                          "best": str(lo), "bound": str(hi), "holder": f"construction in the table: {title}"})
             st["kept"] += 1
@@ -87,9 +87,9 @@ def main():
                           "known family, or a source)",
         "open_rule": "every entry with c >= 1 whose lower bound is below its upper bound",
         "work_rule": "kept when the check lists at most 2^34 elements of S (qubits, n - k + c <= 34) or 2^31 lines through the "
-                     "origin (qutrits, n - k + c <= 20); from 16 Nov 2026 also when the estimated check with the faster "
+                     "origin (qutrits, n - k + c <= 20); from 15 Nov 2026 also when the estimated check with the faster "
                      "lister (S and its isotropic part; the measured time model of tools/qcode_cells.py) takes at most 60 s",
-        "left_out": "; ".join(f"q = {Q}: " + ", ".join(f"{v} {k}" for k, v in st.items() if k not in ("entries", "kept", "kept with the faster lister (16 Nov 2026)"))
+        "left_out": "; ".join(f"q = {Q}: " + ", ".join(f"{v} {k}" for k, v in st.items() if k not in ("entries", "kept", "kept with the faster lister (15 Nov 2026)"))
                               for Q, st in stats.items()),
         "page_sha256": shas,
         "cells": "cells.jsonl", "count": len(rows), "quantavane_records": 0, "single_problems_left_out": 0,

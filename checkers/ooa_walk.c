@@ -13,7 +13,7 @@
    zero is dependent. Prints "independent L" (L depth vectors of weight k, all independent) or "dependent (i,d) ..."
    (1-based factor and depth of the chosen columns, the last one dependent), and "nodes N".
 
-   16 Nov 2026: for e = 1 a vector is one word and the reduction is branch-free (v ^= b & -(bit of v at the pivot)),
+   15 Nov 2026: for e = 1 a vector is one word and the reduction is branch-free (v ^= b & -(bit of v at the pivot)),
    about 3.5 times faster; the same walk, the same nodes, the same answers
    (the environment variable OOA_WALK_PLAIN=1 forces the plain walk, for tests). */
 #include <stdio.h>

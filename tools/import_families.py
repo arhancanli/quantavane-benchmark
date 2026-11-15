@@ -306,7 +306,7 @@ CA_NS_PER_GROUP_ROW, CA_NS_PER_SYMBOL = 3.80, 354
 
 def ca_check_seconds(t, k, v, n):
     """ca_check.py's time on an array of n rows with ca_trie.c (v <= 64), from a fit to 34 arrays of the shapes of
-    left-out cells timed on 15-16 Nov 2026 (user time on this machine under load): n C(k,t) visits at CA_NS_PER_VISIT,
+    left-out cells timed on 15 Nov 2026 (user time on this machine under load): n C(k,t) visits at CA_NS_PER_VISIT,
     n C(k,t-1) row steps of the groups, and n k symbols read (C and Python); multiplied by 1.3 (the largest ratio of
     measured to fitted time was 1.25), or by 2.1 for t >= 5 with more than 16 MB of masks (n k bytes per mask), where
     the fit understated large arrays with few columns up to 2.0 times."""
@@ -335,9 +335,9 @@ def covering_array(table, read, revision):
         if best_n <= v ** t or (t == 2 and v == 2):
             solved += 1
             continue
-        old_rule = math.comb(k, t) * (best_n - 1) <= 10 ** 11 and v ** t <= 2 ** 26    # until 15 Nov 2026
+        old_rule = math.comb(k, t) * (best_n - 1) <= 10 ** 11 and v ** t <= 2 ** 26    # the first rule
         if not old_rule:
-            if v > 64 or ca_check_seconds(t, k, v, best_n - 1) > 180:     # ca_trie.c (16 Nov 2026): three minutes
+            if v > 64 or ca_check_seconds(t, k, v, best_n - 1) > 180:     # ca_trie.c (15 Nov 2026): three minutes
                 heavy += 1
                 continue
             trie_new += 1
@@ -378,8 +378,8 @@ def covering_array(table, read, revision):
                      "columns has as few rows), above v^t, leaving out strength 2 over 2 symbols (solved exactly by "
                      "Kleitman and Spencer and by Katona)",
         "work_rule": "kept when checking an array one row smaller than the best known takes about three minutes or "
-                     "less: until 15 Nov 2026, at most 10^11 row visits (C(k,t) x (N - 1)) with v^t at most 2^26 "
-                     "(ca_scan.c); from 16 Nov 2026 also, for v <= 64, an estimated time of ca_check.py with ca_trie.c "
+                     "less: by the first rule, at most 10^11 row visits (C(k,t) x (N - 1)) with v^t at most 2^26 "
+                     "(ca_scan.c); from 15 Nov 2026 also, for v <= 64, an estimated time of ca_check.py with ca_trie.c "
                      f"of at most 180 s (tools/import_families.py, ca_check_seconds: a fit to 34 timed arrays with a "
                      f"safety factor; {trie_new} cells)",
         "left_out": f"{dominated} rows beaten by a row with more columns; {solved} cells solved (v^t rows, or t = v = "

@@ -29,7 +29,7 @@ for B = 3, 5, 7, 9, 25, 27, 49, 81, vectors kept as digit planes modulo p); --na
 
 Prints "RESULT S" as its last line and exits 0 when the strength is at least K; prints the reason and exits 1 when it
 is not or the input is malformed; exits 2 when both methods would need more than --max-work steps (default 2^36 since
-16 Nov 2026, the largest cap of the family ordered-orthogonal-array; 2^33 before, below that family's cap of 2^34)."""
+15 Nov 2026, the largest cap of the family ordered-orthogonal-array; 2^33 before, below that family's cap of 2^34)."""
 import sys
 
 # (characteristic p, degree e, modulus coefficients from x^0 up to x^e)
