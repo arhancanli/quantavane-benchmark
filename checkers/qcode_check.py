@@ -24,7 +24,8 @@ checker
 - reports the minimum distance D: for K >= 1 the least w >= 1 with B_w > A_w (an element of S' outside S), for K = 0
   the least w >= 1 with A_w > 0 (then S' = S).
 The work is about Q^(N-K) steps for Q = 2, 4, 8 and Q^(N-K) / (Q - 1) for Q = 3, 5, 7; above --max-work (default
-2^34) the program stops with exit status 2.
+2^37 since 16 Nov 2026, when the C helper became 4 to 17 times faster; 2^34 before) the program stops with exit
+status 2.
 
 With --ebits C (C >= 1) the code is entanglement-assisted, [[N,K,D;C]] over GF(Q) (M. Grassl's tables at
 eaqecc.codetables.de; the definitions of Luo, Ezerman, Grassl and Ling, arXiv:2207.05647, Proposition 1, for additive
@@ -267,7 +268,7 @@ def radical(F, basis, n):
 
 def main(argv=None):
     argv = list(sys.argv[1:] if argv is None else argv)
-    max_work, force_python, ebits = 2 ** 34, False, 0
+    max_work, force_python, ebits = 2 ** 37, False, 0
     if "--max-work" in argv:
         i = argv.index("--max-work"); max_work = int(float(argv[i + 1])); del argv[i:i + 2]
     if "--ebits" in argv:

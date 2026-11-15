@@ -215,7 +215,9 @@ def random_small(rng):
 
 
 def native_vs_python(rng):
-    for q, n, k in ((2, 30, 12), (2, 40, 22), (3, 20, 10), (5, 12, 6), (7, 10, 5), (4, 16, 9), (8, 10, 5), (2, 70, 52)):
+    # (16 Nov 2026: the lister's tabulated p = 2 path for every plane count and width, and its bit-sliced GF(3) path)
+    for q, n, k in ((2, 30, 12), (2, 40, 22), (3, 20, 10), (5, 12, 6), (7, 10, 5), (4, 16, 9), (8, 10, 5), (2, 70, 52),
+                    (2, 130, 116), (2, 256, 242), (4, 70, 63), (8, 70, 65), (3, 70, 60), (3, 64, 52), (3, 140, 128)):
         F = qc.Field(q)
         r = F.e * (n - k)
         L = 2 * n * F.e
@@ -225,6 +227,20 @@ def native_vs_python(rng):
         a = qc.weights_python(F.p, n, 2 * F.e, basis)
         b = qc.weights_native(F.p, n, 2 * F.e, basis)
         expect(f"[[{n},{k}]] over GF({q}): weight counts, Python = C", a == b, True)
+    # GF(3): the bit-sliced path against the plain odometer (QCODE_ENUM_PLAIN=1) on larger stabilizers
+    import os
+    for n, k in ((60, 44), (100, 86)):
+        F = qc.Field(3)
+        chosen, rows, _ = css_like(F, n, n - k, rng)
+        basis = qc.prime_basis(F, rows, n)
+        fast = qc.weights_native(3, n, 2, basis)
+        os.environ["QCODE_ENUM_PLAIN"] = "1"
+        try:
+            plain = qc.weights_native(3, n, 2, basis)
+        finally:
+            del os.environ["QCODE_ENUM_PLAIN"]
+        expect(f"[[{n},{k}]] over GF(3): weight counts, bit-sliced C = plain C", fast == plain and sum(fast) == 3 ** (n - k),
+               True)
 
 
 def css_like(F, n, r, rng):

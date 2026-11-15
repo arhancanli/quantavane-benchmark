@@ -1,6 +1,6 @@
 {
  "benchmark_version": "2.1",
- "problems": 360682,
+ "problems": 361574,
  "by_family": {
   "bipartite-degree-diameter": 32,
   "cage": 40,
@@ -17,7 +17,7 @@
   "covering-design": 61404,
   "degree-diameter": 57,
   "difference-set": 102628,
-  "ea-quantum-code": 3263,
+  "ea-quantum-code": 3720,
   "erdos-problem": 2,
   "flexible-job-shop": 53,
   "golomb-ruler": 39972,
@@ -36,7 +36,7 @@
   "polygon-circle-packing": 1106,
   "project-scheduling": 59170,
   "projective-plane": 1,
-  "quantum-code": 7141,
+  "quantum-code": 7576,
   "ramsey": 133,
   "schur": 4,
   "shannon-capacity": 1,
@@ -175,8 +175,8 @@
    "family": "ea-quantum-code",
    "path": "families/ea-quantum-code/cells.jsonl",
    "definition": "families/ea-quantum-code/family.json",
-   "count": 3263,
-   "sha256": "5c7ad40120f7f708c6a1c21133afb78a09bfe9b258183217d06fc23482b97567",
+   "count": 3720,
+   "sha256": "70d64f583428f0401cb72c0ec81e1a5c184e617e437af2ad8f10ddba545411bc",
    "keeper": "M. Grassl, bounds on the minimum distance of entanglement-assisted quantum codes (eaqecc.codetables.de)",
    "read": "2026-11-15",
    "checker": "qcode_check.py"
@@ -296,8 +296,8 @@
    "family": "quantum-code",
    "path": "families/quantum-code/cells.jsonl",
    "definition": "families/quantum-code/family.json",
-   "count": 7141,
-   "sha256": "3e0fd7f71fe9cb6295303eb1d9ad05992d332353879e98d420b40fa17505d6f9",
+   "count": 7576,
+   "sha256": "f29340cef1010410342acc26af41e5f20589c8281c786c2d735573483cf68637",
    "keeper": "M. Grassl, bounds on the minimum distance of quantum codes (codetables.de)",
    "read": "2026-11-15",
    "checker": "qcode_check.py"
