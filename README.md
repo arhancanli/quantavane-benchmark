@@ -93,9 +93,11 @@ the 100 are new single problems of v2.1, with eight new checkers; see the collec
 | `circulant-degree-diameter` (in review for v2.2) | 170 | Combinatorics Wiki: largest known circulant graphs of degree 3 to 20 and diameter 2 to 16 | `circulant_check.py` |
 | `bipartite-degree-diameter` (in review for v2.2) | 32 | Combinatorics Wiki: largest known bipartite graphs of maximum degree 3 to 16 and diameter 3 to 10 (at most 20,000 vertices) | `degdiam_check.py --bipartite` |
 | `grassmannian-packing` (in review for v2.2) | 2,239 | N. J. A. Sloane, table of best Grassmannian packings (with R. H. Hardin, J. H. Conway and others): N lines, planes or 3-spaces in R^3 to R^16, and constructions in higher dimensions | `grass_check.py` |
-| `complete-arc` (in review for v2.2) | 9,862 | D. Bartoli, A. A. Davydov, G. Faina, A. A. Kreshchuk, S. Marcugini and F. Pambianco: smallest known complete arcs in the projective planes PG(2,q), every prime power q from 37 to about 102,000 whose check takes at most three minutes (arXiv:1312.2155v3, with the lexiarcs of arXiv:1404.0469v3) | `arc_check.py` |
+| `complete-arc` (in review for v2.2) | 14,778 | D. Bartoli, A. A. Davydov, G. Faina, A. A. Kreshchuk, S. Marcugini and F. Pambianco: smallest known complete arcs in the projective planes PG(2,q), every prime power q from 37 to about 160,000 whose check takes at most ten minutes (arXiv:1312.2155v3, with the lexiarcs of arXiv:1404.0469v3) | `arc_check.py` |
 | `mols` (in review for v2.2) | 8,368 | Handbook of Combinatorial Designs, Table 3.87 (R. J. R. Abel, C. J. Colbourn and J. H. Dinitz; as in SageMath), with Dukes and Ling (2014), Abel, Janiszczak and Staszewski (2024) and C. D. Rosin (12 Nov 2026): the most mutually orthogonal Latin squares of order n, n not a prime power | `mols_check.py` |
 | `multi-mode-scheduling` (in review for v2.2) | 2,135 | Solutions Update (M. Vanhoucke and J. Coelho, Ghent University) with the MMLIB library (V. Van Peteghem and M. Vanhoucke): open instances of MMLIB50, MMLIB100 and MMLIB+ | `rcpsp_check.py mm` |
+| `mslib-scheduling` (in review for v2.2) | 2,750 | MSLIB (J. Snauwaert and M. Vanhoucke, Ghent University): open instances of the multi-skilled RCPSP, basic version, MSLIB1 to MSLIB4 | `msrcpsp_check.py` |
+| `cayley-degree-diameter` (in review for v2.2) | 100 | Combinatorics Wiki: largest known Cayley graphs of degree 3 to 20 and diameter 2 to 10, reconciled with F. Comellas's tables (2024-2026 Cayley graphs) and M. Mačaj (2026) | `cayley_check.py` |
 
 Every cell is open in the sense written in its family file: its best known value is not marked optimal by the keeper
 and is strictly worse than the bound on the other side (the keeper's own bound, or a standard bound we compute and
@@ -397,7 +399,7 @@ What each family takes from its table, and what it leaves out:
   faster checkers for covering arrays, quantum codes and MinT's arrays over GF(2), 364,179; with the smallest known
   complete arcs in PG(2,q), 374,041; with the mutually orthogonal Latin squares, 375,768; with difference matrices
   as certificates for them, 382,409; with the low-weight search for qubit codes, 382,640; with the multi-mode
-  scheduling sets, 384,775.
+  scheduling sets, 384,775; with the arcs' ten-minute rule, the MSLIB instances and the Cayley graphs, 392,541.
 - `strongly-regular-graph` (in review for v2.2; read 15 Nov 2026): every parameter set srg(v,k,lambda,mu), v <= 1,300,
   that A. E. Brouwer's table (aeb.win.tue.nl/graphs/srg, 26 pages) marks '?': no graph is known and none has been ruled
   out. A parameter set and its complement are one row pair of the table and one cell here (a graph settles both); 65
@@ -476,13 +478,15 @@ What each family takes from its table, and what it leaves out:
   fixed lexicographical order of points) for every prime power q <= 321,007. The best known value is the smaller of
   the two (no lexiarc is smaller than the smallest known size); the cell is open for q > 32 (exact values are known
   only for q <= 32), and every value is above the lower bound sqrt(2q) + 1 (sqrt(3q) + 1/2 for q = p^h, h <= 3)
-  stated in the cell. A cell is kept when the check of a complete arc one point smaller is estimated at most three
-  minutes (`arc_check_seconds` in `tools/arcs_cells.py`: steps (q + 2 - n)(n - 1)(n - 2)/2 for n points, at 0.90 ns
-  a step for prime q, 1.18 for q = 2^h and 2.10 for odd q = p^h, h > 1, times 1.15; measured in full, wall clock under
-  the machine's other load, on the complete lexiarcs of PG(2,60013) (1,470 points, 55 s) and PG(2,90001) (1,839
-  points, 1.49 x 10^11 steps, 127 s) and on random sets): 9,862 cells: every prime from 37 to 101,879 and some primes
-  up to 102,539 (the estimate grows with the size), every power of 2 from 64 to 65,536 and every odd prime power p^h,
-  h > 1, up to 66,049 (87 cells have h > 1); 17,981 listed q (68,921 to 430,007) stay out, and 18 with q <= 32. The holder is the source the paper names for the
+  stated in the cell. A cell is kept when the check of a complete arc one point smaller is estimated at most ten
+  minutes, as for `difference-set` (three minutes until 15 Nov 2026; `arc_check_seconds` in `tools/arcs_cells.py`:
+  steps (q + 2 - n)(n - 1)(n - 2)/2 for n points at the largest rates measured near the top of the range, wall clock
+  under the machine's other load, 1.13 ns a step for prime q (q = 180001, 5.71 x 10^11 steps in 644 s), 1.43 for q =
+  2^h (q = 2^17, 416 s) and 3.08 for odd q = p^h, h > 1 (q = 317^2, 511 s), times 1.15): 14,778 cells, every prime
+  from 37 to 160,001 and the sporadic primes of the tables up to 162,007, every power of 2 from 64 to 131,072 and
+  every odd prime power p^h, h > 1, up to 100,489 (103 cells have h > 1); 13,065 listed q (103,823 to 430,007) stay
+  out, and 18 with q <= 32. The largest admitted check (arc-162007, 2,397 points) is 4.65 x 10^11 steps, within
+  `arc_check.py`'s default `--max-work` of 2^39. The holder is the source the paper names for the
   size where it names one (N. Pace for Table 1's q <= 151; P. Lisonek, S. Marcugini and F. Pambianco for q = 37, 61
   and 71), otherwise the collection it comes from. The literature check (`families/complete-arc/literature.json`)
   found no later improvement. `arc_check.py` reads the points (and for q = p^h, h > 1, an irreducible polynomial that
@@ -521,6 +525,39 @@ What each family takes from its table, and what it leaves out:
   `tests/test_mmrcpsp.py`: 300 random instances against an independent check, red controls, and, with the instances
   unpacked under `instances/mmrcpsp/`, 40 published best known solutions of open cells that certify their values. The
   Boctor sets are left out (their instance files are not in the release).
+- `mslib-scheduling` (in review for v2.2; read 15 Nov 2026): the multi-skilled resource-constrained project scheduling
+  problem, basic version (each activity needs, for every skill type, a number of resources mastering that skill; a
+  resource works on one activity at a time), from the MSLIB release v2.2 (March 2026) of J. Snauwaert and M.
+  Vanhoucke: the 2,750 instances of MSLIB1 to MSLIB4 that its sheet MSRCPSP (basic) marks open (285, 358, 431 and
+  1,676), with its lower bounds and best known makespans (its priority-rule, GA, SA, CPLEX and SAT results). The best
+  known value is the smallest makespan the release reports for the instance, which is the sheet's best known column
+  except for MSLIB_Set2_3309 (108 in the column PR ALL, 109 in the best known column); the sheet was read with two
+  separate xlsx readers, and the literature check of 16 Nov 2026 (`families/mslib-scheduling/literature.json`) found
+  no later value. `msrcpsp_check.py` reads the MSLIB format and a schedule of start times with resource:skill
+  assignments and checks precedences, skills, counts and resource overlaps exactly. MSLIB publishes values, not
+  schedules, so the positive controls are schedules built here (a serial schedule generator with matching), certified
+  and never better than the best known values; `tests/test_msrcpsp.py` also checks random instances against an
+  independent check and red controls. The instances are not copied (unpack the release under `instances/mslib/`).
+- `cayley-degree-diameter` (in review for v2.2; read 15 Nov 2026): the largest known Cayley graphs of degree d and
+  diameter k from the Combinatorics Wiki's table, reconciled entry by entry: F. Comellas's tables of the largest known
+  (degree, diameter)-graphs (desc_g2 to desc_g10, read 15 Nov 2026 with pauses of ten seconds) describe many Cayley
+  graphs found in 2024-2026 that are larger than the wiki's entries (28 cells raised, for instance (7,7) from 52,768
+  to 56,952 and (11,8) from 7,442,328 to 9,261,072), and M. Mačaj (CEUR-WS Vol-4323, 2026) proves (4,5) and (4,6)
+  optimal (left out) and raises (4,7) to 1,200 and (4,8) to 3,125; (4,10) takes 17,608 from his status table; (6,4)
+  takes 384, M. Conder's graph (in preparation, May 2026) as reported in F. Comellas's arXiv:2606.10954v2 (read 16 Nov
+  2026; the wiki lists 375). Five Comellas entries whose Cayley wording belongs to another graph are excluded, with
+  the reasons, in `families/cayley-degree-diameter/literature.json`, which also lists what could not be read (Conder's
+  paper, whose search of groups of order below 1,000 may move the cells below 1,000). Cells: the entries not in bold
+  and not proven optimal since, with at most 10^7 vertices: 100 (35 larger stay out). `cayley_check.py` reads
+  generators closed under inverses, without the identity, in one of two forms: permutations, or pairs [x, y] of a
+  semidirect product Z_m x|_a Z_n with the table's product [x, y][u, v] = [x + u mod m, y a^u + v mod n] (a a unit
+  with a^m = 1 mod n, checked), the form of most record graphs, which needs one byte per element where permutations
+  would need gigabytes. It builds the group by breadth-first search from the identity (in C above 10^5 elements,
+  `cayley_bfs.c` for permutations, S_10 with 3,628,800 elements in 3.3 s, and `cayley_sdp.c` for pairs), which gives
+  the order and the diameter. Fifteen record graphs whose generators Comellas's pages print reproduce their published
+  orders and diameters through `obb.py` and certify the best known values of their cells, all 15 among the 28 cells
+  his pages raise (`tests/test_cayley.py`); the other 13 raised cells rest on his pages' descriptions (their
+  generators are in files linked from there, not printed).
 - `project-scheduling`: every instance of the sets with open instances whose best known makespan is above its lower
   bound and which the site does not mark optimal; the open counts match the site's own table of November 2026. The
   highRD, lowRU and 1k variants are not read: their dataset files date from April 2021, many of their upper bounds are
@@ -539,6 +576,10 @@ prints its exact result and exits 0 only for a valid certificate.
 
 - `arc_check.py Q FILE [--saturating]`: a complete arc of PG(2,Q) (no three points on a line, every other point on a
   line through two of them), or a 1-saturating set; the number of points, exact (in C above 2 x 10^6 steps).
+- `cayley_check.py DEGREE DIAMETER FILE`: a Cayley graph given by permutation generators or by generators of a
+  semidirect product Z_m x|_a Z_n; its order and diameter by breadth-first search of the group (in C above 10^5
+  elements).
+- `msrcpsp_check.py INSTANCE.msrcp SCHEDULE`: a multi-skilled project schedule (starts and resource:skill assignments).
 - `grass_check.py M N COUNT FILE`: a packing of COUNT subspaces of dimension N in R^M given by spanning vectors; the
   least squared chordal distance, exact.
 - `circulant_check.py DELTA DIAMETER FILE`: a circulant graph C_n(S) given by n and its jumps, degree at most DELTA

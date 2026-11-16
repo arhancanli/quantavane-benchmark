@@ -352,6 +352,12 @@ t mols-22 certs/mols/control_row_missing.txt "NOT CERTIFIED,"
 # check, red controls; with the MMLIB instances and Solutions Update's best known solutions under instances/mmrcpsp/,
 # 40 published solutions of open cells certify their best known makespans
 python3 -I tests/test_mmrcpsp.py || status=1
+# v2.2: cayley_check.py with its C helper cayley_bfs.c (the family cayley-degree-diameter): the Wagner graph, Q_10, S_8,
+# cycles; Python and C agree on random groups; red controls
+python3 -I tests/test_cayley.py || status=1
+# v2.2: msrcpsp_check.py (the family mslib-scheduling): random multi-skilled instances against an independent check,
+# red controls; with the MSLIB instances under instances/mslib/, serial schedules for 20 open cells
+python3 -I tests/test_msrcpsp.py || status=1
 python3 -I tests/sample_cells.py || status=1
 if python3 -I obb.py index > /dev/null; then echo "ok    index.json matches the files"; else echo "FAIL  index.json"; status=1; fi
 exit $status

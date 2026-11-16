@@ -869,6 +869,20 @@ def test_mols(n, rng):
                obb(c["id"], write(f"{c['id']}_dm_red.txt", [head] + rows + [rows[1]])), "NOT CERTIFIED,")
 
 
+def test_cayley_degree_diameter(n, rng):
+    """The cycle Cay(Z_(2k+1), {1, -1}) (degree 2, diameter k) for the cell's diameter k: certified and far below the
+    table; with the inverse of 1 left out the set is refused."""
+    for c in rng.sample(family_cells("cayley-degree-diameter"), n):
+        k = c["params"]["k"]
+        m = 2 * k + 1
+        gens = [[(x + 1) % m for x in range(m)], [(x - 1) % m for x in range(m)]]
+        lines = [f"points {m}"] + [" ".join(map(str, g)) for g in gens]
+        expect(f"sample {c['id']} the cycle Cay(Z_{m}, {{1, -1}})", obb(c["id"], write(f"{c['id']}.txt", lines)),
+               "does not improve,")
+        expect(f"red   {c['id']} (the inverse of 1 left out)", obb(c["id"], write(f"{c['id']}_red.txt", lines[:2])),
+               "NOT CERTIFIED,")
+
+
 def test_multi_mode_scheduling(n, rng):
     """With the MMLIB instances under instances/mmrcpsp/ (not in the repository): every activity in its mode of least
     nonrenewable demand, the activities one after the other: feasible when those modes fit the nonrenewable
@@ -898,6 +912,41 @@ def test_multi_mode_scheduling(n, rng):
             map(str, pick + starts))])), want)
         expect(f"red   {c['id']} (every start at 0)", obb(c["id"], write(f"{c['id']}_red.txt", [" ".join(
             map(str, pick + [0] * nn))])), "NOT CERTIFIED,")
+
+
+def test_mslib_scheduling(n, rng):
+    """With the MSLIB instances under instances/mslib/ (not in the repository): the activities one after the other, each
+    with its skill requirements matched to resources mastering them (augmenting paths), is feasible and far above the
+    best known makespan; with every start at 0 it is refused."""
+    base = os.path.join(ROOT, "instances", "mslib")
+    if not os.path.isdir(base):
+        print("skip  mslib-scheduling: no instances under instances/mslib/")
+        return
+    sys.path.insert(0, CHECKERS)
+    import msrcpsp_check
+    for c in rng.sample(family_cells("mslib-scheduling"), n):
+        nact, nres, ns, dur, succ, work, req = msrcpsp_check.read_instance(
+            os.path.join(base, c["params"]["set"], c["params"]["file"]))
+        lines, t = [], 0
+        for i in range(nact):
+            slots = [k for k in range(ns) for _ in range(req[i][k])]
+            match = {}
+
+            def augment(slot, seen):
+                for r in range(nres):
+                    if work[r][slots[slot]] and r not in seen:
+                        seen.add(r)
+                        if r not in match or augment(match[r], seen):
+                            match[r] = slot
+                            return True
+                return False
+            assert all(augment(x, set()) for x in range(len(slots)))
+            lines.append(f"{t} " + " ".join(f"{r + 1}:{slots[x] + 1}" for r, x in match.items()))
+            t += dur[i]
+        expect(f"sample {c['id']} activities one after the other", obb(c["id"], write(f"{c['id']}.txt", lines)),
+               "does not improve,")
+        zero = ["0 " + l.split(" ", 1)[1] if " " in l else "0" for l in lines]
+        expect(f"red   {c['id']} (every start at 0)", obb(c["id"], write(f"{c['id']}_red.txt", zero)), "NOT CERTIFIED,")
 
 
 def main():
@@ -934,7 +983,9 @@ def main():
                        ("grassmannian-packing", test_grassmannian_packing),
                        ("complete-arc", test_complete_arc),
                        ("mols", test_mols),
-                       ("multi-mode-scheduling", test_multi_mode_scheduling)):
+                       ("multi-mode-scheduling", test_multi_mode_scheduling),
+                       ("cayley-degree-diameter", test_cayley_degree_diameter),
+                       ("mslib-scheduling", test_mslib_scheduling)):
         if os.path.exists(os.path.join(ROOT, "families", name, "cells.jsonl")):
             test(n, rng)
         else:

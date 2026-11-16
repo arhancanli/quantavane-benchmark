@@ -29,8 +29,8 @@
  "bound_source": "t_2(2,q) > sqrt(2q) + 1 for every q, and t_2(2,q) > sqrt(3q) + 1/2 for q = p^h with h <= 3 (arXiv:1312.2155v3, (1.2), with its references)",
  "holder_unknown": "the authors' collection (the sources of each size are in arXiv:1312.2155v3, Section 2)",
  "holder_sources": "arXiv:1312.2155v3 collects the smallest known sizes from many papers (its Section 2 and references); most are the authors' own randomized greedy searches, Table 1's sizes for q <= 151 are N. Pace's (J. Combin. Des. 22, 2014)",
- "open_rule": "every prime power 32 < q whose best known size (the smallest in either paper) is above the lower bound (all are), kept when the check of a complete arc one point smaller is estimated at most 180 s (arc_check_seconds in tools/arcs_cells.py)",
- "left_out": "18 prime powers q <= 32 (t_2(2,q) known exactly); 17981 prime powers q from 68921 to 430007 whose check is estimated above 180 s (the papers list every prime power to 321007 and sporadic q to 430007)",
+ "open_rule": "every prime power 32 < q whose best known size (the smallest in either paper) is above the lower bound (all are), kept when the check of a complete arc one point smaller is estimated at most 600 s (arc_check_seconds in tools/arcs_cells.py)",
+ "left_out": "18 prime powers q <= 32 (t_2(2,q) known exactly); 13065 prime powers q from 103823 to 430007 whose check is estimated above 600 s (the papers list every prime power to 321007 and sporadic q to 430007)",
  "literature": "families/complete-arc/literature.json",
  "pdf_sha256": {
   "1312.2155v3.pdf": "03292bd4737e584ac4a23e263be832fa522ceebe338b2b8fb51d4db04836bce1",
@@ -41,12 +41,12 @@
   "lexiarc sizes": 27860,
   "prime powers listed": 27861,
   "solved (q <= 32)": 18,
-  "check too long": 17981,
-  "cells": 9862,
-  "cells with q = p^h, h > 1": 87
+  "check too long": 13065,
+  "cells": 14778,
+  "cells with q = p^h, h > 1": 103
  },
  "cells": "cells.jsonl",
- "count": 9862,
+ "count": 14778,
  "quantavane_records": 0,
  "single_problems_left_out": 0
 }

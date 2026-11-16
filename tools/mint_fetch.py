@@ -12,6 +12,7 @@ comes back cut (the server stops at some rows of large strength) is read again a
 
 usage: python3 -I mint_fetch.py OUTDIR [lin]
 """
+import sys; sys.exit("STOPPED 15 Nov 2026 21:2x: MinT robots.txt disallows /query.php? and /table.php? (and /index.php?, /d.php, /du.php, /i.php, /var.php). No scripted reads of MinT; a person opens the page in a browser.")
 import os, sys, time, urllib.request, hashlib
 OUT = sys.argv[1]; os.makedirs(OUT, exist_ok=True)
 LIN = len(sys.argv) > 2 and sys.argv[2] == 'lin'

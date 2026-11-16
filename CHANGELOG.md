@@ -18,6 +18,49 @@ value can change within a version when its source table changes; the file then s
   some of them are public on Zenodo. Their values stay as read on 8 Nov until a rule for cells the table does not list is
   chosen.
 
+## Next (in review): complete arcs checked up to ten minutes (15 Nov 2026)
+
+- `families/complete-arc`: a cell is now kept when the check of a complete arc one point smaller is estimated at most
+  ten minutes (as for `difference-set`; three minutes before), with rates measured near the top of the new range,
+  wall clock under load: prime q 1.13 ns a step (q = 180001: 5.71 x 10^11 steps in 643.8 s), q = 2^17 1.43 (415.5 s),
+  odd q = 317^2 3.08 (511.2 s), times 1.15 (`arc_check_seconds`). 14,778 cells (9,862 before): every prime to 160,001
+  and the tables' sporadic primes to 162,007, powers of 2 to 131,072, odd prime powers to 100,489; 13,065 listed q
+  stay out. The largest admitted check (arc-162007, 2,397 points, 4.65 x 10^11 steps) is within `arc_check.py`'s
+  default `--max-work` of 2^39. The sampled-cells test is unchanged (conics for q <= 700 and one prime power <= 1,000).
+- index.json: 392,541 problems (with the two families below).
+
+## Next (in review): the families `mslib-scheduling` and `cayley-degree-diameter` (15 Nov 2026)
+
+- `checkers/msrcpsp_check.py` (new): the basic multi-skilled RCPSP in MSLIB's format; a schedule gives each
+  activity's start and its resource:skill pairs; precedences, mastered skills, exact counts per skill and resource
+  overlaps are checked exactly. `tests/test_msrcpsp.py`: random instances (284 of 300 drawn are feasible for the
+  generator) against an independent check at every integer time, red controls, and serial schedules for 20 open MSLIB
+  cells (certified, never better than the best known values; MSLIB publishes no schedules).
+- `families/mslib-scheduling` (2,750 cells; `tools/mslib_cells.py`): the instances of MSLIB1 to MSLIB4 that the
+  release v2.2's sheet MSRCPSP (basic) marks open, with its lower bounds and best known makespans.
+- `families/mslib-scheduling`: the best known makespan is the smallest the release reports (the sheet's best known
+  column, its procedures' columns and the instance file): one cell moves, MSLIB_Set2_3309 from 109 to 108 (its column
+  PR ALL; 16 Nov 2026). The 2,750 open rows, their lower bounds and values read the same with a second xlsx reader
+  (openpyxl); `literature.json` (new) lists the literature check of 16 Nov 2026.
+- `checkers/cayley_check.py`, `checkers/cayley_bfs.c` and `checkers/cayley_sdp.c` (new): Cayley graphs from
+  generators closed under inverses (no identity, at most DEGREE of them), given as permutations or as pairs of a
+  semidirect product Z_m x|_a Z_n with the table's product [x, y][u, v] = [x + u mod m, y a^u + v mod n] (a unit with
+  a^m = 1 mod n checked; one byte per element, where permutations of these groups would need gigabytes); order and
+  diameter by breadth-first search of the group. `tests/test_cayley.py`: the Wagner graph Cay(Z_8, {1, 7, 4}) (the
+  table's optimal (3,2) = 8), Q_10, S_8 with adjacent transpositions, cycles, Python and C on random groups; 150
+  random semidirect products, pairs (Python, C) against the permutation route on the regular representation; 15
+  record graphs whose generators F. Comellas's pages print reproduce their published orders through `obb.py`
+  (certifying 15 of the 28 cells his pages raise); red controls for both forms.
+- `families/cayley-degree-diameter` (100 cells; `tools/combwiki_cayley_cells.py`, `literature.json`): the
+  Combinatorics Wiki's table (saved 15 Nov 2026 12:13 UTC) reconciled with F. Comellas's pages desc_g2 to desc_g10
+  (read 15 Nov 2026 18:47 UTC, ten seconds between requests; 28 cells raised by Cayley graphs of 2024-2026), M.
+  Mačaj (CEUR-WS Vol-4323, 2026: (4,5) and (4,6) optimal and left out; (4,7) = 1,200, (4,8) = 3,125; (4,10) =
+  17,608) and F. Comellas's arXiv:2606.10954v2 (read 16 Nov 2026: (6,4) = 384, M. Conder's graph, above the wiki's
+  375); five Comellas entries excluded with reasons; at most 10^7 vertices. Every Comellas entry that mentions Cayley
+  and is larger than its cell was read on 16 Nov 2026: the ones not counted are bi-Cayley graphs, voltage lifts,
+  incidence graphs of the split Cayley hexagon, or Cayley graphs no larger than the cell. Not readable: M. Conder's
+  paper in preparation (its values are used where public sources report them).
+
 ## Next (in review): the family `multi-mode-scheduling` (15 Nov 2026)
 
 - `checkers/rcpsp_check.py`: the format mm (PSPLIB multi-mode, as in MMLIB): modes with durations and renewable and

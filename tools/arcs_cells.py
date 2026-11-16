@@ -12,7 +12,7 @@ their appendix tables is a list of pairs q, size. The two PDFs are named to reco
 
 A cell is a prime power q > 32 (the paper: the exact values of t_2(2,q) are known only for q <= 32), with the best
 known value the smallest size in either paper (no lexiarc is smaller than the smallest known size), kept when the
-check of a complete arc one point smaller is estimated at most three minutes (arc_check_seconds). The bound on the
+check of a complete arc one point smaller is estimated at most ten minutes (arc_check_seconds). The bound on the
 other side is the paper's lower bound (1.2): t_2(2,q) > sqrt(2q) + 1, and t_2(2,q) > sqrt(3q) + 1/2 for q = p^h with
 h <= 3."""
 import hashlib
@@ -25,12 +25,14 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "tools"))
 from import_families import write_family  # noqa: E402
 
-LIMIT_SECONDS = 180
-# nanoseconds per step of arc_scan.c, wall clock on this machine under the load of other jobs: prime q 0.875 and 0.851
-# (complete lexiarcs of PG(2,60013), 6.31 x 10^10 steps in 55.3 s, and PG(2,90001), 1.49 x 10^11 steps in 126.6 s;
-# eight directions per pass), q = 2^16 1.18 and odd q = p^h (h > 1, marks by Zech's logarithms) 2.06 to 2.10 (q =
-# 223^2, 3^10; random sets checked in full with ARC_SCAN_ALL); the estimate takes 0.90, 1.18 and 2.10 with a factor 1.15
-NS_PER_STEP = {"prime": 0.90, "two": 1.18, "odd": 2.10}
+LIMIT_SECONDS = 600     # ten minutes, as for the family difference-set (raised from three minutes on 15 Nov 2026)
+# nanoseconds per step of arc_scan.c at the top of the ten-minute range, wall clock on this machine under the load of
+# other jobs, sets of points checked in full (ARC_SCAN_ALL counts every uncovered point): prime q 1.128 (q = 180001,
+# 2550 points, 5.71 x 10^11 steps in 643.8 s; 0.851 to 0.875 on the complete lexiarcs of PG(2,60013) and PG(2,90001)),
+# q = 2^17 1.425 (2140 points, 2.92 x 10^11 steps in 415.5 s), odd q = p^h (h > 1) 3.084 (q = 317^2, 1846 points,
+# 1.66 x 10^11 steps in 511.2 s); the time per step grows with the arrays, so the largest measured rates are used,
+# with a factor 1.15
+NS_PER_STEP = {"prime": 1.13, "two": 1.43, "odd": 3.08}
 SAFETY = 1.15
 
 

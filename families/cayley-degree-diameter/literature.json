@@ -1,0 +1,90 @@
+{
+ "note": "Literature check of 15 Nov 2026 for the Combinatorics Wiki's table of the largest known Cayley graphs (page saved 15 Nov 2026 12:13 UTC). The table is behind: F. Comellas's tables of the largest known (degree, diameter)-graphs (web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g2.html to desc_g10.html, read 15 Nov 2026 18:47 UTC, ten seconds between requests; the site serves no robots.txt) describe many Cayley graphs found in 2024-2026 that are larger than the wiki's entries, and M. Macaj (New computational results for the degree/diameter problem for 4-valent Cayley graphs, CEUR-WS Vol-4323, paper 33, 2026) settles two cells and raises two. The best known value of a cell is the largest of the wiki's value, the largest graph that Comellas's pages describe as a Cayley graph for that degree and diameter (tools/combwiki_cayley_cells.py reads the pages: an entry or former result counts when its own description says it is a Cayley graph, and not when it says bi-Cayley, not Cayley, a Cayley controller graph, the split Cayley hexagon or 'Cayley ? False'; where the description names the group Z_m (x) Z_n, m n must equal the order) and the papers below.",
+ "solved": [
+  {
+   "d": 4,
+   "k": 5,
+   "value": 216,
+   "source": "M. Macaj, CEUR-WS Vol-4323 paper 33 (2026): N_Cay(4,5) = 216, exhaustive search"
+  },
+  {
+   "d": 4,
+   "k": 6,
+   "value": 513,
+   "source": "M. Macaj, CEUR-WS Vol-4323 paper 33 (2026): N_Cay(4,6) = 513, exhaustive search"
+  }
+ ],
+ "values": [
+  {
+   "d": 4,
+   "k": 7,
+   "value": 1200,
+   "source": "M. Macaj, CEUR-WS Vol-4323 paper 33 (2026), final table"
+  },
+  {
+   "d": 4,
+   "k": 8,
+   "value": 3125,
+   "source": "M. Macaj, CEUR-WS Vol-4323 paper 33 (2026), final table"
+  },
+  {
+   "d": 4,
+   "k": 10,
+   "value": 17608,
+   "source": "status table of M. Macaj, CEUR-WS Vol-4323 paper 33 (2026), citing Loz and Pineda-Villavicencio (the wiki lists 17604)"
+  },
+  {
+   "d": 6,
+   "k": 4,
+   "value": 384,
+   "source": "M. Conder, Largest Cayley graphs with prescribed degree and diameter (in preparation, May 2026), as reported by F. Comellas, Non-Isomorphic Optimal Cayley Graphs, arXiv:2606.10954v2 (23 Jun 2026), Section 4.3: the graph MC384, 'new best Cayley degree-diameter graph', distance distribution [1, 6, 30, 136, 211] (the wiki lists 375)"
+  }
+ ],
+ "excluded_from_comellas": [
+  {
+   "d": 5,
+   "k": 4,
+   "order": 212,
+   "reason": "the Cayley data line in the entry gives a group 12*(67), which does not match 212; the graph's own description does not say Cayley"
+  },
+  {
+   "d": 5,
+   "k": 7,
+   "order": 5516,
+   "reason": "the Cayley data line in the entry is Loz's 5500-vertex graph (the wiki's value), not the 5516-vertex graph"
+  },
+  {
+   "d": 5,
+   "k": 8,
+   "order": 17030,
+   "reason": "the Cayley sentence refers to Sampels's graph, not the 17030-vertex graph"
+  },
+  {
+   "d": 6,
+   "k": 8,
+   "order": 294679,
+   "reason": "the entry's own text gives diameter 9 (P. R. Hafner's graph, the wiki's (6,9) region); not counted for diameter 8"
+  },
+  {
+   "d": 5,
+   "k": 10,
+   "order": 190578,
+   "reason": "a voltage lift, not a Cayley graph; the Cayley sentence is the section's heading for degrees 6 to 16"
+  }
+ ],
+ "also_read": [
+  {
+   "source": "F. Comellas, Non-Isomorphic Optimal Cayley Graphs, arXiv:2606.10954v2 (23 Jun 2026), PDF read 16 Nov 2026",
+   "finding": "its sections give one value per (degree, diameter) pair, (3,3) to (3,10), (4,2) to (4,5), (5,2) to (5,5), (6,2) to (6,4), (7,2), (7,3) and (8,2) to (13,2); all agree with the cells or with entries the wiki marks optimal except (6,4) = 384 (Conder), which raises the cell; (3,9), (3,10), (5,4), (5,5) and (13,2) are given as the best known, not proved optimal (for (13,2) the paper says the graph is not listed as optimal)"
+  },
+  {
+   "source": "Combinatorics Wiki, Description of optimal Cayley graphs found by Marston Conder (saved 16 Nov 2026; last modified 3 Jan 2019)",
+   "finding": "optimal graphs of degree 3 to 12, diameter 2, and some of diameter 3 to 7: entries the wiki's table already marks optimal (not cells)"
+  },
+  {
+   "source": "M. Macaj, CEUR-WS Vol-4323 paper 33 (2026), Section 1 and references",
+   "finding": "cites M. Conder's update and R. J. Evans and P. Potocnik's census of 4-valent Cayley graphs (orders up to 1025 and 1536); for degree 4 the values above are Macaj's"
+  }
+ ],
+ "not_read": "M. Conder, Largest Cayley graphs with prescribed degree and diameter (in preparation, May 2026; cited by Macaj and Comellas, not public on 16 Nov 2026). Its search covers Cayley graphs of order below 1000, so it may raise, or prove optimal, cells whose best known value is below 1000: (3,9), (3,10), (5,4), (5,5), (6,4), (7,4), (8,3), (9,3), (10,3), (11,3), (12,3), (13,2), (13,3), (14,2), (15,2), (15,3), (16,2) to (20,2). Only its values reported in public sources are used."
+}

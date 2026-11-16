@@ -1,0 +1,53 @@
+{
+ "family": "cayley-degree-diameter",
+ "title": "The degree-diameter problem for Cayley graphs",
+ "added": "2.2",
+ "objective": "maximize",
+ "id_prefixes": [
+  "caydd-"
+ ],
+ "keeper": "Combinatorics Wiki (E. Loz, H. Pérez-Rosés, G. Pineda-Villavicencio and contributors), The Degree Diameter Problem for Cayley Graphs",
+ "page": "http://combinatoricswiki.org/wiki/The_Degree_Diameter_Problem_for_Cayley_Graphs",
+ "read": "2026-11-15",
+ "revision": "Combinatorics Wiki page saved 15 Nov 2026 12:13:56 UTC (no robots.txt), F. Comellas's pages desc_g2 to desc_g10 read 15 Nov 2026 18:47 UTC, M. Macaj (CEUR-WS Vol-4323, 2026), F. Comellas arXiv:2606.10954v2 (read 16 Nov 2026); SHA-256 in page_sha256 and comellas_sha256",
+ "page_sha256": "b85fba33201d8ea6fb1bb7801f5110d1164b872d210b6783e46ae2d594fa1217",
+ "comellas_sha256": {
+  "desc_g2.html": "2a32a98fe82a7e196fcc87ffeeca2f90ca483e8934a2c3f7199b636e931339e1",
+  "desc_g3.html": "ff0f4f61cb19aabff4151753cee3a465e2e57cfc71549bc2567ace46a1a30fac",
+  "desc_g4.html": "743d2cd1395e59457f5a7d694afebbbc090ac61d58ebea548da4b18459465da3",
+  "desc_g5.html": "8a1b1cd5cbcc7bac57fb41576a3aa9d14d30392e4e2eb0f088764a4b98ce8278",
+  "desc_g6.html": "5eea0d35c9103a94d37f902dad1e9e2172cd5b1b3d41ed5ff9c86142523455f9",
+  "desc_g7.html": "2c865d60eb2126c51f1e5159b7fd131b94e3887147ef58c01be16a03e9dcf092",
+  "desc_g8.html": "943a823df9245e2e15cdff9c861d21aa1ac175caef5b7d1d6482fd30ec3c0eda",
+  "desc_g9.html": "db6eee3088d0c1bb36e694d2cc972e2c2aae51c1493ffab4cba8ac4ff49a34af",
+  "desc_g10.html": "fb53053535d5626e2416b23fce05ef28e5bcc39a0e95f027224b143be18f85fa"
+ },
+ "literature": "families/cayley-degree-diameter/literature.json",
+ "template": {
+  "title": "Cayley graph of degree {d} and diameter {k}",
+  "statement": "Find a group G and a generating set S of G, closed under inverses and without the identity, with |S| <= {d}, such that the Cayley graph Cay(G, S) has diameter at most {k}, with as many vertices |G| as possible.",
+  "submission": "Text file: either 'points m', then the generators as permutations of 0..m-1, one per line (the images of 0, 1, ..., m - 1), or 'semidirect m n a' (the group Z_m x|_a Z_n of the table, [x, y][u, v] = [x + u mod m, y a^u + v mod n]), then the generators as pairs 'x y', one per line; see checkers/cayley_check.py.",
+  "args": [
+   "{d}",
+   "{k}"
+  ]
+ },
+ "checker": {
+  "program": "cayley_check.py",
+  "value": "result"
+ },
+ "score": "the number of vertices, the order of G (larger is better)",
+ "best_text": "The largest known Cayley graph in the Combinatorics Wiki's table has {best} vertices ({holder}); a Cayley graph with more vertices improves it.",
+ "holder_unknown": "not named in the table's colour key",
+ "holder_sources": "the colour of the entry in the wiki's table and the page's colour key; for a raised value, Comellas's entry or the paper",
+ "open_rule": "every entry of the table (degree 3 to 20, diameter 2 to 10) not in bold (bold entries are optimal) and not proven optimal since, with at most 10,000,000 vertices; the best known value is the largest of the wiki's, Comellas's Cayley graphs and the papers in literature.json",
+ "left_out": "21 optimal (bold), 2 proven optimal since (Macaj 2026), 35 more than 10,000,000 vertices",
+ "raised": {
+  "raised by Comellas's pages": 28,
+  "raised by a paper": 4
+ },
+ "cells": "cells.jsonl",
+ "count": 100,
+ "quantavane_records": 0,
+ "single_problems_left_out": 0
+}

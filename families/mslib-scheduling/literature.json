@@ -1,0 +1,10 @@
+{
+ "note": "Literature check of 16 Nov 2026 for best known makespans or lower bounds of the basic MSRCPSP on MSLIB1 to MSLIB4 published after the release v2.2 (11 Mar 2026) of the library. Nothing found changes a cell; the checks are listed so that they can be repeated.",
+ "checked": [
+  {"source": "J. Snauwaert and M. Vanhoucke, A classification and new benchmark instances for the multi-skilled resource-constrained project scheduling problem, EJOR 307 (2023) 1-19", "finding": "the library's paper; its results are those of the release's sheet (the release v2.2 updates them)"},
+  {"source": "MSLIB release v2.2, sheet MSRCPSP (basic), read with two separately written xlsx readers (tools/mmrcpsp_cells.py's and openpyxl)", "finding": "2,750 instances marked Open (the sheet's own count '# Open 2750'); for every one the best known lower bound is the largest of the procedures' lower bounds and below the best known makespan; the best known makespan is the smallest of the procedures' except for MSLIB_Set2_3309, where the column PR ALL gives 108 and the best known column 109: the cell takes 108"},
+  {"source": "J. Snauwaert and M. Vanhoucke, a solution framework for multi-skilled project scheduling with hierarchical skills, Journal of Scheduling 28 (2025), issue 3 (RePEc listing read 16 Nov 2026)", "finding": "hierarchical skill levels, another version of the problem; no values for the basic version beyond the release"},
+  {"source": "web searches (16 Nov 2026) for MSLIB or MSRCPSP with new best known solutions, improved upper or lower bounds, constraint programming, SAT or large neighbourhood search, 2024-2026", "finding": "no paper reporting basic-version values on MSLIB1 to MSLIB4 after the release"}
+ ],
+ "not_read": "papers behind publishers' paywalls that cite the EJOR paper (their abstracts do not mention new MSLIB values)"
+}

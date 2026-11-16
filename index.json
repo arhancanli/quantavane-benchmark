@@ -1,16 +1,17 @@
 {
  "benchmark_version": "2.1",
- "problems": 384775,
+ "problems": 392541,
  "by_family": {
   "bipartite-degree-diameter": 32,
   "cage": 40,
   "cap-set": 2,
+  "cayley-degree-diameter": 100,
   "circle-packing": 12759,
   "circle-packing-sum": 3056,
   "circulant-degree-diameter": 170,
   "circulant-weighing-matrix": 2622,
   "coil-in-the-box": 5,
-  "complete-arc": 9862,
+  "complete-arc": 14778,
   "constant": 7,
   "constant-weight-code": 1166,
   "costas-array": 2,
@@ -32,6 +33,7 @@
   "lj-cluster": 137,
   "matrix-multiplication": 2,
   "mols": 8368,
+  "mslib-scheduling": 2750,
   "multi-mode-scheduling": 2135,
   "multicolour-ramsey": 14,
   "no-three-in-line": 2,
@@ -74,6 +76,17 @@
    "keeper": "Combinatorics Wiki (E. Loz, H. Pérez-Rosés, G. Pineda-Villavicencio and contributors), The Degree Diameter Problem for Bipartite Graphs",
    "read": "2026-11-15",
    "checker": "degdiam_check.py"
+  },
+  {
+   "kind": "family",
+   "family": "cayley-degree-diameter",
+   "path": "families/cayley-degree-diameter/cells.jsonl",
+   "definition": "families/cayley-degree-diameter/family.json",
+   "count": 100,
+   "sha256": "33ba663916c738268716df1561d6eb2da2ea31ec635e03a0e6264dd4f4498119",
+   "keeper": "Combinatorics Wiki (E. Loz, H. Pérez-Rosés, G. Pineda-Villavicencio and contributors), The Degree Diameter Problem for Cayley Graphs",
+   "read": "2026-11-15",
+   "checker": "cayley_check.py"
   },
   {
    "kind": "family",
@@ -124,8 +137,8 @@
    "family": "complete-arc",
    "path": "families/complete-arc/cells.jsonl",
    "definition": "families/complete-arc/family.json",
-   "count": 9862,
-   "sha256": "72e295c7ddb6c66c660110d6834d5466aa6493769e47df6a0772c9b30ef669e9",
+   "count": 14778,
+   "sha256": "0725927e34af98758741617235c819078538b808b3d9eec5841d5a96fc6628da",
    "keeper": "D. Bartoli, A. A. Davydov, G. Faina, A. A. Kreshchuk, S. Marcugini and F. Pambianco, tables of the smallest known sizes of complete arcs in PG(2,q) (arXiv:1312.2155v3) and of complete lexiarcs (arXiv:1404.0469v3)",
    "read": "2026-11-15",
    "checker": "arc_check.py"
@@ -283,6 +296,17 @@
    "keeper": "Handbook of Combinatorial Designs, Table 3.87 (R. J. R. Abel, C. J. Colbourn and J. H. Dinitz), as in SageMath's MOLS_handbook_data, with the later results of families/mols/literature.json",
    "read": "2026-11-15",
    "checker": "mols_check.py"
+  },
+  {
+   "kind": "family",
+   "family": "mslib-scheduling",
+   "path": "families/mslib-scheduling/cells.jsonl",
+   "definition": "families/mslib-scheduling/family.json",
+   "count": 2750,
+   "sha256": "5a9aa0dbe95d3d66266cbc93fc7b280df217d246e2f0c8a6c99de610ef3e3332",
+   "keeper": "MSLIB, J. Snauwaert and M. Vanhoucke, OR&S group, Ghent University (A classification and new benchmark instances for the multi-skilled resource-constrained project scheduling problem, EJOR 307 (2023) 1-19)",
+   "read": "2026-11-15",
+   "checker": "msrcpsp_check.py"
   },
   {
    "kind": "family",

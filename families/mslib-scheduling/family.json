@@ -1,0 +1,85 @@
+{
+ "family": "mslib-scheduling",
+ "title": "Multi-skilled resource-constrained project scheduling (MSRCPSP, basic), shortest makespan",
+ "added": "2.2",
+ "objective": "minimize",
+ "id_prefixes": [
+  "mslib-"
+ ],
+ "keeper": "MSLIB, J. Snauwaert and M. Vanhoucke, OR&S group, Ghent University (A classification and new benchmark instances for the multi-skilled resource-constrained project scheduling problem, EJOR 307 (2023) 1-19)",
+ "page": "https://github.com/MarioVanhoucke/MSLIB-Multi-Skilled-Resource-Constrained-Project-Library",
+ "cell_url": "https://www.projectmanagement.ugent.be/research/project_scheduling/MSRCPSP",
+ "read": "2026-11-15",
+ "revision": "MSLIB release v2.2 (GitHub, 11 Mar 2026), MSLIB_v2_2.zip downloaded 15 Nov 2026 (SHA-256 in source_sha256), sheet MSRCPSP (basic)",
+ "template": {
+  "title": "MSRCPSP instance {file} ({set})",
+  "statement": "Schedule the activities of instance {file} of {set} and assign to each activity, for every skill type, as many resources mastering that skill as it requires, so that every activity starts after its predecessors finish and no resource works on two activities at once, finishing as early as possible (the basic multi-skilled RCPSP; the instance file is in the MSLIB release, MSLIB_v2_2.zip).",
+  "submission": "Text file: one line per activity in the instance's order (the dummies included): the start time, then 'resource:skill' for every resource the activity uses (numbered from 1); see checkers/msrcpsp_check.py.",
+  "args": [
+   "instances/mslib/{set}/{file}"
+  ]
+ },
+ "checker": {
+  "program": "msrcpsp_check.py",
+  "value": "result"
+ },
+ "score": "the makespan (smaller is better)",
+ "best_text": "The best known makespan is {best} ({holder}); a feasible schedule that finishes earlier improves it.",
+ "bound_kind": "lower bound",
+ "bound_source": "the lower bound in MSLIB's sheet MSRCPSP (basic)",
+ "holder_unknown": "MSLIB release v2.2",
+ "holder_sources": "MSLIB's sheet (the procedures that found the values are its columns: PR, GA, SA, CPLEX, SAT); the best known value is the smallest makespan the release reports, which is the best known column's except for MSLIB_Set2_3309 (PR ALL 108, best known column 109)",
+ "open_rule": "every instance of MSLIB1 to MSLIB4 that the sheet marks Open (lower bound below the best known makespan)",
+ "left_out": "the closed instances and MSLIB5 (empirical instances with no status); MSLIB publishes values, not schedules, so no published schedule is replayed",
+ "literature": "families/mslib-scheduling/literature.json",
+ "instances": "Instance files are not copied here: unpack MSLIB1.zip to MSLIB4.zip from MSLIB_v2_2.zip (the library's GitHub release) under instances/mslib/, so that instances/mslib/MSLIB1/MSLIB_Set1_1.msrcp exists.",
+ "source_sha256": {
+  "MSLIB_v2_2.zip": "f1672d2e2e85091f598e497b898b20c468b0b9a10030c5ca8d8ae798b6529e8c"
+ },
+ "counts": {
+  "MSLIB1": {
+   "instances": 6600,
+   "open": 285,
+   "closed": 6315,
+   "no status": 0,
+   "best from the instance file": 0,
+   "best from a procedure's column": 0
+  },
+  "MSLIB2": {
+   "instances": 9000,
+   "open": 358,
+   "closed": 8642,
+   "no status": 0,
+   "best from the instance file": 0,
+   "best from a procedure's column": 1
+  },
+  "MSLIB3": {
+   "instances": 11880,
+   "open": 431,
+   "closed": 11449,
+   "no status": 0,
+   "best from the instance file": 0,
+   "best from a procedure's column": 0
+  },
+  "MSLIB4": {
+   "instances": 5000,
+   "open": 1676,
+   "closed": 3324,
+   "no status": 0,
+   "best from the instance file": 0,
+   "best from a procedure's column": 0
+  },
+  "MSLIB5": {
+   "instances": 19,
+   "open": 0,
+   "closed": 0,
+   "no status": 19,
+   "best from the instance file": 0,
+   "best from a procedure's column": 0
+  }
+ },
+ "cells": "cells.jsonl",
+ "count": 2750,
+ "quantavane_records": 0,
+ "single_problems_left_out": 0
+}
