@@ -66,7 +66,7 @@ the 100 are new single problems of v2.1, with eight new checkers; see the collec
 | Family | Cells | Table (keeper) | Checker |
 | --- | ---: | --- | --- |
 | `project-scheduling` | 59,170 | Solutions Update, Ghent University (M. Vanhoucke, J. Coelho): RCPSP sets NetRes (7), RG300, RG30, J60, J90, J120, DC2, CV | `rcpsp_check.py` |
-| `covering-design` | 61,394 | Covering Repository (successor of D. Gordon's La Jolla Covering Repository): C(v,k,t) and C(v,k,t,m) | `covering_check.py` |
+| `covering-design` | 61,396 | Covering Repository (successor of D. Gordon's La Jolla Covering Repository): C(v,k,t) and C(v,k,t,m) | `covering_check.py` |
 | `linear-code` | 15,255 | M. Grassl, codetables.de: linear codes over GF(q), q = 2, 3, 4, 5, 7, 8, 9 | `lincode_check.py` |
 | `spherical-code` | 14,782 | H. Cohn, table of spherical codes (dimensions 3 to 32 and a few more) | `sph_check.py` |
 | `covering-array` | 5,565 | C. Smolen's ca-tools table, successor of C. J. Colbourn's covering array tables | `ca_check.py` |
@@ -242,6 +242,15 @@ What each family takes from its table, and what it leaves out:
   383,523 blocks (61,394 in all); 8,891 entries with m > t stay out (estimate above an hour), with the 139 entries
   of t = m above 10^10 marks. The cells with 1,000 blocks or fewer were admitted on 8 Nov by their size alone, as
   before.
+  16 Nov 2026: the values now come from the repository's two complete lists at the bottom of its Download page (the
+  (v,k,t,m) and (v,k,t) archives). Automatic download of the two list files (download_archive.aspx,
+  download_archive_vkt.aspx), up to once a day, and the listing of these entries with credit to the original authors:
+  written permission of the Covering Repository's keeper, 16 Nov 2026. The search page and the designs are never read by
+  script. Refreshed from the lists of 16 Nov (`tools/covering_refresh.py`, which keeps every rule above): 654 values
+  fell since 14 Nov, 371 of them in cells (none reaches its lower bound; 20 of these cells lose a named holder, because
+  the lists name no author) and 2 entries with m > t now at or under 1,000 blocks join, C(63,5,4,14) = 997 and
+  C(70,5,4,16) = 978; the other 281 stay out (estimate above an hour). None of the new values is ours, and none of our
+  128 cells was beaten. 61,396 cells.
 - `spherical-code`: every entry of the table not marked optimal (32 are). Values are printed rounded up to 12
   decimals, so a code improves an entry only when its largest cosine is smaller by at least one unit in the 12th
   decimal. The holder is the first reference or credit in the entry's notes.
@@ -399,7 +408,8 @@ What each family takes from its table, and what it leaves out:
   faster checkers for covering arrays, quantum codes and MinT's arrays over GF(2), 364,179; with the smallest known
   complete arcs in PG(2,q), 374,041; with the mutually orthogonal Latin squares, 375,768; with difference matrices
   as certificates for them, 382,409; with the low-weight search for qubit codes, 382,640; with the multi-mode
-  scheduling sets, 384,775; with the arcs' ten-minute rule, the MSLIB instances and the Cayley graphs, 392,541.
+  scheduling sets, 384,775; with the arcs' ten-minute rule, the MSLIB instances and the Cayley graphs, 392,541;
+  with the Covering Repository's complete lists of 16 Nov, 392,543.
 - `strongly-regular-graph` (in review for v2.2; read 15 Nov 2026): every parameter set srg(v,k,lambda,mu), v <= 1,300,
   that A. E. Brouwer's table (aeb.win.tue.nl/graphs/srg, 26 pages) marks '?': no graph is known and none has been ruled
   out. A parameter set and its complement are one row pair of the table and one cell here (a graph settles both); 65

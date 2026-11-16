@@ -8,8 +8,8 @@
  ],
  "keeper": "Covering Repository (coveringrepository.com), successor of D. Gordon's La Jolla Covering Repository",
  "page": "https://www.coveringrepository.com/",
- "read": "2026-11-14",
- "revision": "the site's own CSV export of every entry (v,k,t,m,b), made 14 Nov 2026 22:22 +04: 92,155 entries, SHA-256 04bcbf7427bcf6c796f5333382a509c83092b958e6ab521b1c52893690aceaa8",
+ "read": "2026-11-16",
+ "revision": "the Covering Repository's two complete lists (download.aspx: the (v,k,t,m) archive, CoveringRepositoryArchiveVKTM.txt, SHA-256 d647e2908d27d3e06cdd8cab8cf5f4397c7647d2cd875c27a15b0ab8393e0391, and the (v,k,t) archive, CoveringRepositoryArchiveVKT.txt, SHA-256 253625b4136a52989179018dfe326ab48d5be21b2bb6ffb8830402ccf6704c55), downloaded 16 Nov 2026 22:31 +04 with the maintainer's permission: 92,155 entries with a size (v,k,t,m,b, SHA-256 fc9045497f2c6d5dd60fc02d247b240d56a5516cc595aee923c86097a426cc2e); the cells were first read from the site's CSV export of 14 Nov 2026 and refreshed from these lists",
  "template": {
   "title": "Covering design C({v},{k},{t})",
   "statement": "Find {k}-subsets (blocks) of {{1, ..., {v}}} such that every {t}-subset lies in some block, with as few blocks as possible.",
@@ -36,16 +36,29 @@
  "bound_kind": "lower bound",
  "bound_source": "the larger of Schönheim's bound and the La Jolla Covering Repository's listed lower bound (m = t); for m > t the counting bound C(v,m) / (the m-subsets one block meets in at least t points) and, for t = 2, Turán's theorem (the pairs inside blocks form a graph with no independent m-set: at least C(v,2) - t(v,m-1) edges, C(k,2) per block); the method is named after the value",
  "holder_unknown": "not named in the site's export; see the entry on coveringrepository.com",
- "holder_sources": "our own records (quantavane-covering-records); the site's list of recent uploads and derived coverings, read with each daily export since 1 Nov 2026; for entries unchanged since then, the credit in the La Jolla Covering Repository's final data (frozen 1 March 2026)",
+ "holder_sources": "our own records (quantavane-covering-records); the site's list of recent uploads and derived coverings, read with each daily export since 1 Nov 2026; for entries unchanged since then, the credit in the La Jolla Covering Repository's final data (frozen 1 March 2026); values changed since 14 Nov 2026 come from the repository's two complete lists, which name no author: the holder is ours when our records hold a covering of that size, otherwise see the entry on coveringrepository.com",
  "open_rule": "every entry whose best known size is above the lower bound named in the cell; entries that equal it are solved and left out. A cell may still be optimal by a sharper bound than these.",
- "left_out": "16566 entries equal to their lower bound (solved); 5155 entries with m > t and at most 3 blocks (a short case analysis settles them); 9030 entries whose check would be very long: 139 with t = m and more than 10^10 t-subsets to mark (blocks x C(k,t); about a minute in C), 8891 with m > t, more than 1,000 blocks and a pessimistic estimate of the search above one hour (tools/import_families.py, lotto_check_hours: the sets of fewer than m points a random design of that size leaves uncovered, at 2.5 ns per block per node in C)",
+ "left_out": "16566 entries equal to their lower bound (solved); 5155 entries with m > t and at most 3 blocks (a short case analysis settles them); 9028 entries whose check would be very long: 139 with t = m and more than 10^10 t-subsets to mark (blocks x C(k,t); about a minute in C), 8889 with m > t, more than 1,000 blocks and a pessimistic estimate of the search above one hour (tools/import_families.py, lotto_check_hours: the sets of fewer than m points a random design of that size leaves uncovered, at 2.5 ns per block per node in C)",
  "counts": {
-  "t = m": 7280,
-  "m > t": 54124,
+  "t = m": 7275,
+  "m > t": 54121,
   "m > t with more than 1,000 blocks (searched in C)": 4212
  },
+ "refresh": {
+  "values changed in the list": 654,
+  "cells with a new value": 371,
+  "cells solved": 0,
+  "cells now at most 3 blocks": 0,
+  "our records beaten": 0,
+  "new values that are ours": 0,
+  "admitted": 2,
+  "still too long to check": 281,
+  "m = t, would need the La Jolla bound": 0,
+  "changed entries already single problems": 0
+ },
+ "permission": "Automatic download of the two list files (download_archive.aspx, download_archive_vkt.aspx), up to once a day, and the listing of these entries with credit to the original authors: written permission of the Covering Repository's keeper, 16 Nov 2026. The search page and the designs are never read by script.",
  "cells": "cells.jsonl",
- "count": 61394,
+ "count": 61396,
  "quantavane_records": 128,
- "single_problems_left_out": 10
+ "single_problems_left_out": 0
 }

@@ -7876,33 +7876,33 @@
 {"id": "covering-18-5-4-6", "params": {"v": 18, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "99", "bound": "47 (counting)"}
 {"id": "covering-19-5-4-6", "params": {"v": 19, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "131", "bound": "58 (counting)"}
 {"id": "covering-20-5-4-6", "params": {"v": 20, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "167", "bound": "72 (counting)"}
-{"id": "covering-21-5-4-6", "params": {"v": 21, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "206", "bound": "89 (counting)"}
-{"id": "covering-22-5-4-6", "params": {"v": 22, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "257", "bound": "108 (counting)"}
-{"id": "covering-23-5-4-6", "params": {"v": 23, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "314", "bound": "129 (counting)"}
-{"id": "covering-24-5-4-6", "params": {"v": 24, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "381", "bound": "154 (counting)"}
-{"id": "covering-25-5-4-6", "params": {"v": 25, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "455", "bound": "183 (counting)"}
-{"id": "covering-26-5-4-6", "params": {"v": 26, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "534", "bound": "215 (counting)"}
-{"id": "covering-27-5-4-6", "params": {"v": 27, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "646", "bound": "252 (counting)"}
-{"id": "covering-28-5-4-6", "params": {"v": 28, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "760", "bound": "293 (counting)"}
-{"id": "covering-29-5-4-6", "params": {"v": 29, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "904", "bound": "339 (counting)"}
-{"id": "covering-30-5-4-6", "params": {"v": 30, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "1065", "bound": "390 (counting)"}
-{"id": "covering-31-5-4-6", "params": {"v": 31, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "1225", "bound": "446 (counting)"}
-{"id": "covering-32-5-4-6", "params": {"v": 32, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "1417", "bound": "509 (counting)"}
-{"id": "covering-33-5-4-6", "params": {"v": 33, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "1652", "bound": "578 (counting)"}
-{"id": "covering-34-5-4-6", "params": {"v": 34, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "1908", "bound": "654 (counting)"}
-{"id": "covering-35-5-4-6", "params": {"v": 35, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "2158", "bound": "737 (counting)"}
-{"id": "covering-36-5-4-6", "params": {"v": 36, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "2448", "bound": "827 (counting)"}
-{"id": "covering-37-5-4-6", "params": {"v": 37, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "2753", "bound": "926 (counting)"}
-{"id": "covering-38-5-4-6", "params": {"v": 38, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "3131", "bound": "1033 (counting)"}
-{"id": "covering-39-5-4-6", "params": {"v": 39, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "3502", "bound": "1150 (counting)"}
-{"id": "covering-40-5-4-6", "params": {"v": 40, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "3931", "bound": "1276 (counting)"}
-{"id": "covering-41-5-4-6", "params": {"v": 41, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "4348", "bound": "1412 (counting)"}
-{"id": "covering-42-5-4-6", "params": {"v": 42, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "4844", "bound": "1558 (counting)"}
-{"id": "covering-43-5-4-6", "params": {"v": 43, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "5326", "bound": "1716 (counting)"}
-{"id": "covering-44-5-4-6", "params": {"v": 44, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "5852", "bound": "1886 (counting)"}
+{"id": "covering-21-5-4-6", "params": {"v": 21, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "204", "bound": "89 (counting)"}
+{"id": "covering-22-5-4-6", "params": {"v": 22, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "252", "bound": "108 (counting)"}
+{"id": "covering-23-5-4-6", "params": {"v": 23, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "308", "bound": "129 (counting)"}
+{"id": "covering-24-5-4-6", "params": {"v": 24, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "363", "bound": "154 (counting)"}
+{"id": "covering-25-5-4-6", "params": {"v": 25, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "442", "bound": "183 (counting)"}
+{"id": "covering-26-5-4-6", "params": {"v": 26, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "531", "bound": "215 (counting)"}
+{"id": "covering-27-5-4-6", "params": {"v": 27, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "638", "bound": "252 (counting)"}
+{"id": "covering-28-5-4-6", "params": {"v": 28, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "751", "bound": "293 (counting)"}
+{"id": "covering-29-5-4-6", "params": {"v": 29, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "876", "bound": "339 (counting)"}
+{"id": "covering-30-5-4-6", "params": {"v": 30, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "1041", "bound": "390 (counting)"}
+{"id": "covering-31-5-4-6", "params": {"v": 31, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "1183", "bound": "446 (counting)"}
+{"id": "covering-32-5-4-6", "params": {"v": 32, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "1366", "bound": "509 (counting)"}
+{"id": "covering-33-5-4-6", "params": {"v": 33, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "1523", "bound": "578 (counting)"}
+{"id": "covering-34-5-4-6", "params": {"v": 34, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "1749", "bound": "654 (counting)"}
+{"id": "covering-35-5-4-6", "params": {"v": 35, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "1976", "bound": "737 (counting)"}
+{"id": "covering-36-5-4-6", "params": {"v": 36, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "2244", "bound": "827 (counting)"}
+{"id": "covering-37-5-4-6", "params": {"v": 37, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "2556", "bound": "926 (counting)"}
+{"id": "covering-38-5-4-6", "params": {"v": 38, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "2899", "bound": "1033 (counting)"}
+{"id": "covering-39-5-4-6", "params": {"v": 39, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "3330", "bound": "1150 (counting)"}
+{"id": "covering-40-5-4-6", "params": {"v": 40, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "3785", "bound": "1276 (counting)"}
+{"id": "covering-41-5-4-6", "params": {"v": 41, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "4332", "bound": "1412 (counting)"}
+{"id": "covering-42-5-4-6", "params": {"v": 42, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "4687", "bound": "1558 (counting)"}
+{"id": "covering-43-5-4-6", "params": {"v": 43, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "5316", "bound": "1716 (counting)"}
+{"id": "covering-44-5-4-6", "params": {"v": 44, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "5839", "bound": "1886 (counting)"}
 {"id": "covering-45-5-4-6", "params": {"v": 45, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "6410", "bound": "2068 (counting)"}
-{"id": "covering-46-5-4-6", "params": {"v": 46, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "7053", "bound": "2262 (counting)"}
-{"id": "covering-47-5-4-6", "params": {"v": 47, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "7714", "bound": "2471 (counting)"}
+{"id": "covering-46-5-4-6", "params": {"v": 46, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "7050", "bound": "2262 (counting)"}
+{"id": "covering-47-5-4-6", "params": {"v": 47, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "7712", "bound": "2471 (counting)"}
 {"id": "covering-48-5-4-6", "params": {"v": 48, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "8421", "bound": "2693 (counting)"}
 {"id": "covering-49-5-4-6", "params": {"v": 49, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "9166", "bound": "2930 (counting)"}
 {"id": "covering-50-5-4-6", "params": {"v": 50, "k": 5, "t": 4, "m": 6}, "variant": "lotto", "best": "10048", "bound": "3182 (counting)"}
@@ -8129,27 +8129,27 @@
 {"id": "covering-34-5-4-10", "params": {"v": 34, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "211", "bound": "53 (counting)"}
 {"id": "covering-35-5-4-10", "params": {"v": 35, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "243", "bound": "60 (counting)"}
 {"id": "covering-36-5-4-10", "params": {"v": 36, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "279", "bound": "66 (counting)"}
-{"id": "covering-37-5-4-10", "params": {"v": 37, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "318", "bound": "74 (counting)"}
-{"id": "covering-38-5-4-10", "params": {"v": 38, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "369", "bound": "82 (counting)"}
-{"id": "covering-39-5-4-10", "params": {"v": 39, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "420", "bound": "91 (counting)"}
-{"id": "covering-40-5-4-10", "params": {"v": 40, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "471", "bound": "101 (counting)"}
-{"id": "covering-41-5-4-10", "params": {"v": 41, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "528", "bound": "111 (counting)"}
-{"id": "covering-42-5-4-10", "params": {"v": 42, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "595", "bound": "123 (counting)"}
-{"id": "covering-43-5-4-10", "params": {"v": 43, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "664", "bound": "135 (counting)"}
-{"id": "covering-44-5-4-10", "params": {"v": 44, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "731", "bound": "147 (counting)"}
-{"id": "covering-45-5-4-10", "params": {"v": 45, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "805", "bound": "161 (counting)"}
-{"id": "covering-46-5-4-10", "params": {"v": 46, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "884", "bound": "176 (counting)"}
-{"id": "covering-47-5-4-10", "params": {"v": 47, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "967", "bound": "192 (counting)"}
-{"id": "covering-48-5-4-10", "params": {"v": 48, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "1054", "bound": "209 (counting)"}
-{"id": "covering-49-5-4-10", "params": {"v": 49, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "1166", "bound": "226 (counting)"}
-{"id": "covering-50-5-4-10", "params": {"v": 50, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "1265", "bound": "245 (counting)"}
-{"id": "covering-51-5-4-10", "params": {"v": 51, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "1377", "bound": "266 (counting)"}
-{"id": "covering-52-5-4-10", "params": {"v": 52, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "1491", "bound": "287 (counting)"}
-{"id": "covering-53-5-4-10", "params": {"v": 53, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "1635", "bound": "310 (counting)"}
-{"id": "covering-54-5-4-10", "params": {"v": 54, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "1796", "bound": "334 (counting)"}
-{"id": "covering-55-5-4-10", "params": {"v": 55, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "1956", "bound": "359 (counting)"}
-{"id": "covering-56-5-4-10", "params": {"v": 56, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "2125", "bound": "386 (counting)"}
-{"id": "covering-57-5-4-10", "params": {"v": 57, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "2313", "bound": "414 (counting)"}
+{"id": "covering-37-5-4-10", "params": {"v": 37, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "316", "bound": "74 (counting)"}
+{"id": "covering-38-5-4-10", "params": {"v": 38, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "364", "bound": "82 (counting)"}
+{"id": "covering-39-5-4-10", "params": {"v": 39, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "415", "bound": "91 (counting)"}
+{"id": "covering-40-5-4-10", "params": {"v": 40, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "466", "bound": "101 (counting)"}
+{"id": "covering-41-5-4-10", "params": {"v": 41, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "522", "bound": "111 (counting)"}
+{"id": "covering-42-5-4-10", "params": {"v": 42, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "577", "bound": "123 (counting)"}
+{"id": "covering-43-5-4-10", "params": {"v": 43, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "647", "bound": "135 (counting)"}
+{"id": "covering-44-5-4-10", "params": {"v": 44, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "713", "bound": "147 (counting)"}
+{"id": "covering-45-5-4-10", "params": {"v": 45, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "792", "bound": "161 (counting)"}
+{"id": "covering-46-5-4-10", "params": {"v": 46, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "875", "bound": "176 (counting)"}
+{"id": "covering-47-5-4-10", "params": {"v": 47, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "962", "bound": "192 (counting)"}
+{"id": "covering-48-5-4-10", "params": {"v": 48, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "1051", "bound": "209 (counting)"}
+{"id": "covering-49-5-4-10", "params": {"v": 49, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "1158", "bound": "226 (counting)"}
+{"id": "covering-50-5-4-10", "params": {"v": 50, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "1262", "bound": "245 (counting)"}
+{"id": "covering-51-5-4-10", "params": {"v": 51, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "1369", "bound": "266 (counting)"}
+{"id": "covering-52-5-4-10", "params": {"v": 52, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "1482", "bound": "287 (counting)"}
+{"id": "covering-53-5-4-10", "params": {"v": 53, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "1607", "bound": "310 (counting)"}
+{"id": "covering-54-5-4-10", "params": {"v": 54, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "1772", "bound": "334 (counting)"}
+{"id": "covering-55-5-4-10", "params": {"v": 55, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "1914", "bound": "359 (counting)"}
+{"id": "covering-56-5-4-10", "params": {"v": 56, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "2083", "bound": "386 (counting)"}
+{"id": "covering-57-5-4-10", "params": {"v": 57, "k": 5, "t": 4, "m": 10}, "variant": "lotto", "best": "2254", "bound": "414 (counting)"}
 {"id": "covering-17-5-4-11", "params": {"v": 17, "k": 5, "t": 4, "m": 11}, "variant": "lotto", "best": "5", "bound": "3 (counting)"}
 {"id": "covering-18-5-4-11", "params": {"v": 18, "k": 5, "t": 4, "m": 11}, "variant": "lotto", "best": "7", "bound": "4 (counting)"}
 {"id": "covering-19-5-4-11", "params": {"v": 19, "k": 5, "t": 4, "m": 11}, "variant": "lotto", "best": "10", "bound": "4 (counting)"}
@@ -8174,20 +8174,20 @@
 {"id": "covering-38-5-4-11", "params": {"v": 38, "k": 5, "t": 4, "m": 11}, "variant": "lotto", "best": "244", "bound": "54 (counting)"}
 {"id": "covering-39-5-4-11", "params": {"v": 39, "k": 5, "t": 4, "m": 11}, "variant": "lotto", "best": "284", "bound": "60 (counting)"}
 {"id": "covering-40-5-4-11", "params": {"v": 40, "k": 5, "t": 4, "m": 11}, "variant": "lotto", "best": "326", "bound": "66 (counting)"}
-{"id": "covering-41-5-4-11", "params": {"v": 41, "k": 5, "t": 4, "m": 11}, "variant": "lotto", "best": "373", "bound": "73 (counting)"}
-{"id": "covering-42-5-4-11", "params": {"v": 42, "k": 5, "t": 4, "m": 11}, "variant": "lotto", "best": "412", "bound": "80 (counting)"}
-{"id": "covering-43-5-4-11", "params": {"v": 43, "k": 5, "t": 4, "m": 11}, "variant": "lotto", "best": "463", "bound": "88 (counting)"}
-{"id": "covering-44-5-4-11", "params": {"v": 44, "k": 5, "t": 4, "m": 11}, "variant": "lotto", "best": "514", "bound": "96 (counting)"}
-{"id": "covering-45-5-4-11", "params": {"v": 45, "k": 5, "t": 4, "m": 11}, "variant": "lotto", "best": "571", "bound": "105 (counting)"}
-{"id": "covering-46-5-4-11", "params": {"v": 46, "k": 5, "t": 4, "m": 11}, "variant": "lotto", "best": "628", "bound": "115 (counting)"}
-{"id": "covering-47-5-4-11", "params": {"v": 47, "k": 5, "t": 4, "m": 11}, "variant": "lotto", "best": "695", "bound": "125 (counting)"}
-{"id": "covering-48-5-4-11", "params": {"v": 48, "k": 5, "t": 4, "m": 11}, "variant": "lotto", "best": "762", "bound": "136 (counting)"}
-{"id": "covering-49-5-4-11", "params": {"v": 49, "k": 5, "t": 4, "m": 11}, "variant": "lotto", "best": "836", "bound": "147 (counting)"}
-{"id": "covering-50-5-4-11", "params": {"v": 50, "k": 5, "t": 4, "m": 11}, "variant": "lotto", "best": "910", "bound": "159 (counting)"}
-{"id": "covering-51-5-4-11", "params": {"v": 51, "k": 5, "t": 4, "m": 11}, "variant": "lotto", "best": "989", "bound": "172 (counting)"}
-{"id": "covering-52-5-4-11", "params": {"v": 52, "k": 5, "t": 4, "m": 11}, "variant": "lotto", "best": "1068", "bound": "186 (counting)"}
-{"id": "covering-53-5-4-11", "params": {"v": 53, "k": 5, "t": 4, "m": 11}, "variant": "lotto", "best": "1180", "bound": "201 (counting)"}
-{"id": "covering-54-5-4-11", "params": {"v": 54, "k": 5, "t": 4, "m": 11}, "variant": "lotto", "best": "1292", "bound": "216 (counting)"}
+{"id": "covering-41-5-4-11", "params": {"v": 41, "k": 5, "t": 4, "m": 11}, "variant": "lotto", "best": "371", "bound": "73 (counting)"}
+{"id": "covering-42-5-4-11", "params": {"v": 42, "k": 5, "t": 4, "m": 11}, "variant": "lotto", "best": "408", "bound": "80 (counting)"}
+{"id": "covering-43-5-4-11", "params": {"v": 43, "k": 5, "t": 4, "m": 11}, "variant": "lotto", "best": "456", "bound": "88 (counting)"}
+{"id": "covering-44-5-4-11", "params": {"v": 44, "k": 5, "t": 4, "m": 11}, "variant": "lotto", "best": "504", "bound": "96 (counting)"}
+{"id": "covering-45-5-4-11", "params": {"v": 45, "k": 5, "t": 4, "m": 11}, "variant": "lotto", "best": "560", "bound": "105 (counting)"}
+{"id": "covering-46-5-4-11", "params": {"v": 46, "k": 5, "t": 4, "m": 11}, "variant": "lotto", "best": "615", "bound": "115 (counting)"}
+{"id": "covering-47-5-4-11", "params": {"v": 47, "k": 5, "t": 4, "m": 11}, "variant": "lotto", "best": "671", "bound": "125 (counting)"}
+{"id": "covering-48-5-4-11", "params": {"v": 48, "k": 5, "t": 4, "m": 11}, "variant": "lotto", "best": "726", "bound": "136 (counting)"}
+{"id": "covering-49-5-4-11", "params": {"v": 49, "k": 5, "t": 4, "m": 11}, "variant": "lotto", "best": "805", "bound": "147 (counting)"}
+{"id": "covering-50-5-4-11", "params": {"v": 50, "k": 5, "t": 4, "m": 11}, "variant": "lotto", "best": "884", "bound": "159 (counting)"}
+{"id": "covering-51-5-4-11", "params": {"v": 51, "k": 5, "t": 4, "m": 11}, "variant": "lotto", "best": "973", "bound": "172 (counting)"}
+{"id": "covering-52-5-4-11", "params": {"v": 52, "k": 5, "t": 4, "m": 11}, "variant": "lotto", "best": "1062", "bound": "186 (counting)"}
+{"id": "covering-53-5-4-11", "params": {"v": 53, "k": 5, "t": 4, "m": 11}, "variant": "lotto", "best": "1169", "bound": "201 (counting)"}
+{"id": "covering-54-5-4-11", "params": {"v": 54, "k": 5, "t": 4, "m": 11}, "variant": "lotto", "best": "1276", "bound": "216 (counting)"}
 {"id": "covering-18-5-4-12", "params": {"v": 18, "k": 5, "t": 4, "m": 12}, "variant": "lotto", "best": "5", "bound": "3 (counting)"}
 {"id": "covering-19-5-4-12", "params": {"v": 19, "k": 5, "t": 4, "m": 12}, "variant": "lotto", "best": "6", "bound": "3 (counting)"}
 {"id": "covering-20-5-4-12", "params": {"v": 20, "k": 5, "t": 4, "m": 12}, "variant": "lotto", "best": "9", "bound": "4 (counting)"}
@@ -8300,16 +8300,17 @@
 {"id": "covering-50-5-4-14", "params": {"v": 50, "k": 5, "t": 4, "m": 14}, "variant": "lotto", "best": "323", "bound": "56 (counting)"}
 {"id": "covering-51-5-4-14", "params": {"v": 51, "k": 5, "t": 4, "m": 14}, "variant": "lotto", "best": "355", "bound": "61 (counting)"}
 {"id": "covering-52-5-4-14", "params": {"v": 52, "k": 5, "t": 4, "m": 14}, "variant": "lotto", "best": "391", "bound": "65 (counting)"}
-{"id": "covering-53-5-4-14", "params": {"v": 53, "k": 5, "t": 4, "m": 14}, "variant": "lotto", "best": "430", "bound": "70 (counting)"}
-{"id": "covering-54-5-4-14", "params": {"v": 54, "k": 5, "t": 4, "m": 14}, "variant": "lotto", "best": "481", "bound": "76 (counting)"}
-{"id": "covering-55-5-4-14", "params": {"v": 55, "k": 5, "t": 4, "m": 14}, "variant": "lotto", "best": "532", "bound": "81 (counting)"}
-{"id": "covering-56-5-4-14", "params": {"v": 56, "k": 5, "t": 4, "m": 14}, "variant": "lotto", "best": "583", "bound": "87 (counting)"}
-{"id": "covering-57-5-4-14", "params": {"v": 57, "k": 5, "t": 4, "m": 14}, "variant": "lotto", "best": "634", "bound": "93 (counting)"}
-{"id": "covering-58-5-4-14", "params": {"v": 58, "k": 5, "t": 4, "m": 14}, "variant": "lotto", "best": "685", "bound": "100 (counting)"}
-{"id": "covering-59-5-4-14", "params": {"v": 59, "k": 5, "t": 4, "m": 14}, "variant": "lotto", "best": "742", "bound": "107 (counting)"}
-{"id": "covering-60-5-4-14", "params": {"v": 60, "k": 5, "t": 4, "m": 14}, "variant": "lotto", "best": "809", "bound": "114 (counting)"}
-{"id": "covering-61-5-4-14", "params": {"v": 61, "k": 5, "t": 4, "m": 14}, "variant": "lotto", "best": "878", "bound": "122 (counting)"}
-{"id": "covering-62-5-4-14", "params": {"v": 62, "k": 5, "t": 4, "m": 14}, "variant": "lotto", "best": "945", "bound": "130 (counting)"}
+{"id": "covering-53-5-4-14", "params": {"v": 53, "k": 5, "t": 4, "m": 14}, "variant": "lotto", "best": "428", "bound": "70 (counting)"}
+{"id": "covering-54-5-4-14", "params": {"v": 54, "k": 5, "t": 4, "m": 14}, "variant": "lotto", "best": "476", "bound": "76 (counting)"}
+{"id": "covering-55-5-4-14", "params": {"v": 55, "k": 5, "t": 4, "m": 14}, "variant": "lotto", "best": "527", "bound": "81 (counting)"}
+{"id": "covering-56-5-4-14", "params": {"v": 56, "k": 5, "t": 4, "m": 14}, "variant": "lotto", "best": "578", "bound": "87 (counting)"}
+{"id": "covering-57-5-4-14", "params": {"v": 57, "k": 5, "t": 4, "m": 14}, "variant": "lotto", "best": "629", "bound": "93 (counting)"}
+{"id": "covering-58-5-4-14", "params": {"v": 58, "k": 5, "t": 4, "m": 14}, "variant": "lotto", "best": "680", "bound": "100 (counting)"}
+{"id": "covering-59-5-4-14", "params": {"v": 59, "k": 5, "t": 4, "m": 14}, "variant": "lotto", "best": "736", "bound": "107 (counting)"}
+{"id": "covering-60-5-4-14", "params": {"v": 60, "k": 5, "t": 4, "m": 14}, "variant": "lotto", "best": "791", "bound": "114 (counting)"}
+{"id": "covering-61-5-4-14", "params": {"v": 61, "k": 5, "t": 4, "m": 14}, "variant": "lotto", "best": "861", "bound": "122 (counting)"}
+{"id": "covering-62-5-4-14", "params": {"v": 62, "k": 5, "t": 4, "m": 14}, "variant": "lotto", "best": "927", "bound": "130 (counting)"}
+{"id": "covering-63-5-4-14", "params": {"v": 63, "k": 5, "t": 4, "m": 14}, "variant": "lotto", "best": "997", "bound": "138 (counting)"}
 {"id": "covering-21-5-4-15", "params": {"v": 21, "k": 5, "t": 4, "m": 15}, "variant": "lotto", "best": "4", "bound": "2 (counting)"}
 {"id": "covering-22-5-4-15", "params": {"v": 22, "k": 5, "t": 4, "m": 15}, "variant": "lotto", "best": "4", "bound": "3 (counting)"}
 {"id": "covering-23-5-4-15", "params": {"v": 23, "k": 5, "t": 4, "m": 15}, "variant": "lotto", "best": "6", "bound": "3 (counting)"}
@@ -8346,16 +8347,16 @@
 {"id": "covering-54-5-4-15", "params": {"v": 54, "k": 5, "t": 4, "m": 15}, "variant": "lotto", "best": "356", "bound": "57 (counting)"}
 {"id": "covering-55-5-4-15", "params": {"v": 55, "k": 5, "t": 4, "m": 15}, "variant": "lotto", "best": "396", "bound": "61 (counting)"}
 {"id": "covering-56-5-4-15", "params": {"v": 56, "k": 5, "t": 4, "m": 15}, "variant": "lotto", "best": "438", "bound": "65 (counting)"}
-{"id": "covering-57-5-4-15", "params": {"v": 57, "k": 5, "t": 4, "m": 15}, "variant": "lotto", "best": "485", "bound": "70 (counting)"}
-{"id": "covering-58-5-4-15", "params": {"v": 58, "k": 5, "t": 4, "m": 15}, "variant": "lotto", "best": "524", "bound": "75 (counting)"}
-{"id": "covering-59-5-4-15", "params": {"v": 59, "k": 5, "t": 4, "m": 15}, "variant": "lotto", "best": "575", "bound": "80 (counting)"}
-{"id": "covering-60-5-4-15", "params": {"v": 60, "k": 5, "t": 4, "m": 15}, "variant": "lotto", "best": "626", "bound": "85 (counting)"}
-{"id": "covering-61-5-4-15", "params": {"v": 61, "k": 5, "t": 4, "m": 15}, "variant": "lotto", "best": "677", "bound": "91 (counting)"}
-{"id": "covering-62-5-4-15", "params": {"v": 62, "k": 5, "t": 4, "m": 15}, "variant": "lotto", "best": "728", "bound": "97 (counting)"}
-{"id": "covering-63-5-4-15", "params": {"v": 63, "k": 5, "t": 4, "m": 15}, "variant": "lotto", "best": "785", "bound": "103 (counting)"}
-{"id": "covering-64-5-4-15", "params": {"v": 64, "k": 5, "t": 4, "m": 15}, "variant": "lotto", "best": "842", "bound": "110 (counting)"}
-{"id": "covering-65-5-4-15", "params": {"v": 65, "k": 5, "t": 4, "m": 15}, "variant": "lotto", "best": "909", "bound": "116 (counting)"}
-{"id": "covering-66-5-4-15", "params": {"v": 66, "k": 5, "t": 4, "m": 15}, "variant": "lotto", "best": "976", "bound": "124 (counting)"}
+{"id": "covering-57-5-4-15", "params": {"v": 57, "k": 5, "t": 4, "m": 15}, "variant": "lotto", "best": "483", "bound": "70 (counting)"}
+{"id": "covering-58-5-4-15", "params": {"v": 58, "k": 5, "t": 4, "m": 15}, "variant": "lotto", "best": "520", "bound": "75 (counting)"}
+{"id": "covering-59-5-4-15", "params": {"v": 59, "k": 5, "t": 4, "m": 15}, "variant": "lotto", "best": "568", "bound": "80 (counting)"}
+{"id": "covering-60-5-4-15", "params": {"v": 60, "k": 5, "t": 4, "m": 15}, "variant": "lotto", "best": "616", "bound": "85 (counting)"}
+{"id": "covering-61-5-4-15", "params": {"v": 61, "k": 5, "t": 4, "m": 15}, "variant": "lotto", "best": "667", "bound": "91 (counting)"}
+{"id": "covering-62-5-4-15", "params": {"v": 62, "k": 5, "t": 4, "m": 15}, "variant": "lotto", "best": "718", "bound": "97 (counting)"}
+{"id": "covering-63-5-4-15", "params": {"v": 63, "k": 5, "t": 4, "m": 15}, "variant": "lotto", "best": "774", "bound": "103 (counting)"}
+{"id": "covering-64-5-4-15", "params": {"v": 64, "k": 5, "t": 4, "m": 15}, "variant": "lotto", "best": "829", "bound": "110 (counting)"}
+{"id": "covering-65-5-4-15", "params": {"v": 65, "k": 5, "t": 4, "m": 15}, "variant": "lotto", "best": "885", "bound": "116 (counting)"}
+{"id": "covering-66-5-4-15", "params": {"v": 66, "k": 5, "t": 4, "m": 15}, "variant": "lotto", "best": "940", "bound": "124 (counting)"}
 {"id": "covering-22-5-4-16", "params": {"v": 22, "k": 5, "t": 4, "m": 16}, "variant": "lotto", "best": "4", "bound": "2 (counting)"}
 {"id": "covering-23-5-4-16", "params": {"v": 23, "k": 5, "t": 4, "m": 16}, "variant": "lotto", "best": "4", "bound": "2 (counting)"}
 {"id": "covering-24-5-4-16", "params": {"v": 24, "k": 5, "t": 4, "m": 16}, "variant": "lotto", "best": "5", "bound": "3 (counting)"}
@@ -8402,8 +8403,9 @@
 {"id": "covering-65-5-4-16", "params": {"v": 65, "k": 5, "t": 4, "m": 16}, "variant": "lotto", "best": "697", "bound": "89 (counting)"}
 {"id": "covering-66-5-4-16", "params": {"v": 66, "k": 5, "t": 4, "m": 16}, "variant": "lotto", "best": "748", "bound": "94 (counting)"}
 {"id": "covering-67-5-4-16", "params": {"v": 67, "k": 5, "t": 4, "m": 16}, "variant": "lotto", "best": "799", "bound": "100 (counting)"}
-{"id": "covering-68-5-4-16", "params": {"v": 68, "k": 5, "t": 4, "m": 16}, "variant": "lotto", "best": "869", "bound": "106 (counting)"}
-{"id": "covering-69-5-4-16", "params": {"v": 69, "k": 5, "t": 4, "m": 16}, "variant": "lotto", "best": "935", "bound": "112 (counting)"}
+{"id": "covering-68-5-4-16", "params": {"v": 68, "k": 5, "t": 4, "m": 16}, "variant": "lotto", "best": "867", "bound": "106 (counting)"}
+{"id": "covering-69-5-4-16", "params": {"v": 69, "k": 5, "t": 4, "m": 16}, "variant": "lotto", "best": "923", "bound": "112 (counting)"}
+{"id": "covering-70-5-4-16", "params": {"v": 70, "k": 5, "t": 4, "m": 16}, "variant": "lotto", "best": "978", "bound": "118 (counting)"}
 {"id": "covering-23-5-4-17", "params": {"v": 23, "k": 5, "t": 4, "m": 17}, "variant": "lotto", "best": "4", "bound": "2 (counting)"}
 {"id": "covering-24-5-4-17", "params": {"v": 24, "k": 5, "t": 4, "m": 17}, "variant": "lotto", "best": "4", "bound": "2 (counting)"}
 {"id": "covering-25-5-4-17", "params": {"v": 25, "k": 5, "t": 4, "m": 17}, "variant": "lotto", "best": "5", "bound": "3 (counting)"}
@@ -8501,15 +8503,15 @@
 {"id": "covering-66-5-4-18", "params": {"v": 66, "k": 5, "t": 4, "m": 18}, "variant": "lotto", "best": "435", "bound": "58 (counting)"}
 {"id": "covering-67-5-4-18", "params": {"v": 67, "k": 5, "t": 4, "m": 18}, "variant": "lotto", "best": "467", "bound": "61 (counting)"}
 {"id": "covering-68-5-4-18", "params": {"v": 68, "k": 5, "t": 4, "m": 18}, "variant": "lotto", "best": "503", "bound": "65 (counting)"}
-{"id": "covering-69-5-4-18", "params": {"v": 69, "k": 5, "t": 4, "m": 18}, "variant": "lotto", "best": "542", "bound": "69 (counting)"}
-{"id": "covering-70-5-4-18", "params": {"v": 70, "k": 5, "t": 4, "m": 18}, "variant": "lotto", "best": "593", "bound": "73 (counting)"}
-{"id": "covering-71-5-4-18", "params": {"v": 71, "k": 5, "t": 4, "m": 18}, "variant": "lotto", "best": "644", "bound": "77 (counting)"}
-{"id": "covering-72-5-4-18", "params": {"v": 72, "k": 5, "t": 4, "m": 18}, "variant": "lotto", "best": "695", "bound": "81 (counting)"}
-{"id": "covering-73-5-4-18", "params": {"v": 73, "k": 5, "t": 4, "m": 18}, "variant": "lotto", "best": "746", "bound": "85 (counting)"}
-{"id": "covering-74-5-4-18", "params": {"v": 74, "k": 5, "t": 4, "m": 18}, "variant": "lotto", "best": "797", "bound": "90 (counting)"}
-{"id": "covering-75-5-4-18", "params": {"v": 75, "k": 5, "t": 4, "m": 18}, "variant": "lotto", "best": "848", "bound": "95 (counting)"}
-{"id": "covering-76-5-4-18", "params": {"v": 76, "k": 5, "t": 4, "m": 18}, "variant": "lotto", "best": "899", "bound": "100 (counting)"}
-{"id": "covering-77-5-4-18", "params": {"v": 77, "k": 5, "t": 4, "m": 18}, "variant": "lotto", "best": "956", "bound": "105 (counting)"}
+{"id": "covering-69-5-4-18", "params": {"v": 69, "k": 5, "t": 4, "m": 18}, "variant": "lotto", "best": "540", "bound": "69 (counting)"}
+{"id": "covering-70-5-4-18", "params": {"v": 70, "k": 5, "t": 4, "m": 18}, "variant": "lotto", "best": "588", "bound": "73 (counting)"}
+{"id": "covering-71-5-4-18", "params": {"v": 71, "k": 5, "t": 4, "m": 18}, "variant": "lotto", "best": "639", "bound": "77 (counting)"}
+{"id": "covering-72-5-4-18", "params": {"v": 72, "k": 5, "t": 4, "m": 18}, "variant": "lotto", "best": "690", "bound": "81 (counting)"}
+{"id": "covering-73-5-4-18", "params": {"v": 73, "k": 5, "t": 4, "m": 18}, "variant": "lotto", "best": "741", "bound": "85 (counting)"}
+{"id": "covering-74-5-4-18", "params": {"v": 74, "k": 5, "t": 4, "m": 18}, "variant": "lotto", "best": "792", "bound": "90 (counting)"}
+{"id": "covering-75-5-4-18", "params": {"v": 75, "k": 5, "t": 4, "m": 18}, "variant": "lotto", "best": "843", "bound": "95 (counting)"}
+{"id": "covering-76-5-4-18", "params": {"v": 76, "k": 5, "t": 4, "m": 18}, "variant": "lotto", "best": "894", "bound": "100 (counting)"}
+{"id": "covering-77-5-4-18", "params": {"v": 77, "k": 5, "t": 4, "m": 18}, "variant": "lotto", "best": "950", "bound": "105 (counting)"}
 {"id": "covering-25-5-4-19", "params": {"v": 25, "k": 5, "t": 4, "m": 19}, "variant": "lotto", "best": "4", "bound": "2 (counting)"}
 {"id": "covering-26-5-4-19", "params": {"v": 26, "k": 5, "t": 4, "m": 19}, "variant": "lotto", "best": "4", "bound": "2 (counting)"}
 {"id": "covering-27-5-4-19", "params": {"v": 27, "k": 5, "t": 4, "m": 19}, "variant": "lotto", "best": "5", "bound": "2 (counting)"}
@@ -8558,15 +8560,15 @@
 {"id": "covering-70-5-4-19", "params": {"v": 70, "k": 5, "t": 4, "m": 19}, "variant": "lotto", "best": "468", "bound": "58 (counting)"}
 {"id": "covering-71-5-4-19", "params": {"v": 71, "k": 5, "t": 4, "m": 19}, "variant": "lotto", "best": "508", "bound": "62 (counting)"}
 {"id": "covering-72-5-4-19", "params": {"v": 72, "k": 5, "t": 4, "m": 19}, "variant": "lotto", "best": "550", "bound": "65 (counting)"}
-{"id": "covering-73-5-4-19", "params": {"v": 73, "k": 5, "t": 4, "m": 19}, "variant": "lotto", "best": "597", "bound": "68 (counting)"}
-{"id": "covering-74-5-4-19", "params": {"v": 74, "k": 5, "t": 4, "m": 19}, "variant": "lotto", "best": "636", "bound": "72 (counting)"}
-{"id": "covering-75-5-4-19", "params": {"v": 75, "k": 5, "t": 4, "m": 19}, "variant": "lotto", "best": "687", "bound": "76 (counting)"}
-{"id": "covering-76-5-4-19", "params": {"v": 76, "k": 5, "t": 4, "m": 19}, "variant": "lotto", "best": "738", "bound": "80 (counting)"}
-{"id": "covering-77-5-4-19", "params": {"v": 77, "k": 5, "t": 4, "m": 19}, "variant": "lotto", "best": "789", "bound": "84 (counting)"}
-{"id": "covering-78-5-4-19", "params": {"v": 78, "k": 5, "t": 4, "m": 19}, "variant": "lotto", "best": "840", "bound": "88 (counting)"}
-{"id": "covering-79-5-4-19", "params": {"v": 79, "k": 5, "t": 4, "m": 19}, "variant": "lotto", "best": "891", "bound": "93 (counting)"}
-{"id": "covering-80-5-4-19", "params": {"v": 80, "k": 5, "t": 4, "m": 19}, "variant": "lotto", "best": "942", "bound": "97 (counting)"}
-{"id": "covering-81-5-4-19", "params": {"v": 81, "k": 5, "t": 4, "m": 19}, "variant": "lotto", "best": "999", "bound": "102 (counting)"}
+{"id": "covering-73-5-4-19", "params": {"v": 73, "k": 5, "t": 4, "m": 19}, "variant": "lotto", "best": "595", "bound": "68 (counting)"}
+{"id": "covering-74-5-4-19", "params": {"v": 74, "k": 5, "t": 4, "m": 19}, "variant": "lotto", "best": "632", "bound": "72 (counting)"}
+{"id": "covering-75-5-4-19", "params": {"v": 75, "k": 5, "t": 4, "m": 19}, "variant": "lotto", "best": "680", "bound": "76 (counting)"}
+{"id": "covering-76-5-4-19", "params": {"v": 76, "k": 5, "t": 4, "m": 19}, "variant": "lotto", "best": "728", "bound": "80 (counting)"}
+{"id": "covering-77-5-4-19", "params": {"v": 77, "k": 5, "t": 4, "m": 19}, "variant": "lotto", "best": "779", "bound": "84 (counting)"}
+{"id": "covering-78-5-4-19", "params": {"v": 78, "k": 5, "t": 4, "m": 19}, "variant": "lotto", "best": "830", "bound": "88 (counting)"}
+{"id": "covering-79-5-4-19", "params": {"v": 79, "k": 5, "t": 4, "m": 19}, "variant": "lotto", "best": "881", "bound": "93 (counting)"}
+{"id": "covering-80-5-4-19", "params": {"v": 80, "k": 5, "t": 4, "m": 19}, "variant": "lotto", "best": "932", "bound": "97 (counting)"}
+{"id": "covering-81-5-4-19", "params": {"v": 81, "k": 5, "t": 4, "m": 19}, "variant": "lotto", "best": "988", "bound": "102 (counting)"}
 {"id": "covering-26-5-4-20", "params": {"v": 26, "k": 5, "t": 4, "m": 20}, "variant": "lotto", "best": "4", "bound": "2 (counting)"}
 {"id": "covering-27-5-4-20", "params": {"v": 27, "k": 5, "t": 4, "m": 20}, "variant": "lotto", "best": "4", "bound": "2 (counting)"}
 {"id": "covering-28-5-4-20", "params": {"v": 28, "k": 5, "t": 4, "m": 20}, "variant": "lotto", "best": "5", "bound": "2 (counting)"}
@@ -12610,11 +12612,11 @@
 {"id": "covering-26-6-5-9", "params": {"v": 26, "k": 6, "t": 5, "m": 9}, "variant": "lotto", "best": "440", "bound": "104 (counting)", "holder": "rené cadière (11/11/2026)"}
 {"id": "covering-27-6-5-9", "params": {"v": 27, "k": 6, "t": 5, "m": 9}, "variant": "lotto", "best": "551", "bound": "126 (counting)", "holder": "rené cadière (13/11/2026)"}
 {"id": "covering-28-6-5-9", "params": {"v": 28, "k": 6, "t": 5, "m": 9}, "variant": "lotto", "best": "714", "bound": "153 (counting)", "holder": "rené cadière (13/11/2026)"}
-{"id": "covering-29-6-5-9", "params": {"v": 29, "k": 6, "t": 5, "m": 9}, "variant": "lotto", "best": "920", "bound": "183 (counting)", "holder": "rené cadière (13/11/2026)"}
+{"id": "covering-29-6-5-9", "params": {"v": 29, "k": 6, "t": 5, "m": 9}, "variant": "lotto", "best": "910", "bound": "183 (counting)"}
 {"id": "covering-30-6-5-9", "params": {"v": 30, "k": 6, "t": 5, "m": 9}, "variant": "lotto", "best": "1088", "bound": "218 (counting)", "holder": "rené cadière (13/11/2026)"}
 {"id": "covering-31-6-5-9", "params": {"v": 31, "k": 6, "t": 5, "m": 9}, "variant": "lotto", "best": "1307", "bound": "258 (counting)", "holder": "rené cadière (13/11/2026)"}
 {"id": "covering-32-6-5-9", "params": {"v": 32, "k": 6, "t": 5, "m": 9}, "variant": "lotto", "best": "1522", "bound": "304 (counting)", "holder": "rené cadière (13/11/2026)"}
-{"id": "covering-33-6-5-9", "params": {"v": 33, "k": 6, "t": 5, "m": 9}, "variant": "lotto", "best": "1852", "bound": "357 (counting)", "holder": "RosarioMarino (14/11/2026)"}
+{"id": "covering-33-6-5-9", "params": {"v": 33, "k": 6, "t": 5, "m": 9}, "variant": "lotto", "best": "1851", "bound": "357 (counting)"}
 {"id": "covering-34-6-5-9", "params": {"v": 34, "k": 6, "t": 5, "m": 9}, "variant": "lotto", "best": "2338", "bound": "416 (counting)"}
 {"id": "covering-35-6-5-9", "params": {"v": 35, "k": 6, "t": 5, "m": 9}, "variant": "lotto", "best": "2725", "bound": "484 (counting)"}
 {"id": "covering-36-6-5-9", "params": {"v": 36, "k": 6, "t": 5, "m": 9}, "variant": "lotto", "best": "3060", "bound": "559 (counting)"}
@@ -15569,7 +15571,7 @@
 {"id": "covering-27-7-4", "params": {"v": 27, "k": 7, "t": 4, "m": 4}, "best": "635", "bound": "502 (Schönheim)", "holder": "Jan de Heer and Steve Muir, 2008"}
 {"id": "covering-28-7-4", "params": {"v": 28, "k": 7, "t": 4, "m": 4}, "best": "792", "bound": "668 (Schönheim)", "holder": "Moshe Milshtein, 2024 (Tabu Search started from a 793-block covering previously created by Jan de Heer and Steve Muir)"}
 {"id": "covering-29-7-4", "params": {"v": 29, "k": 7, "t": 4, "m": 4}, "best": "853", "bound": "738 (Schönheim)", "holder": "Moshe Milshtein, 2024 (Tabu Search started from an 880-block covering previously created by Jan de Heer and Steve Muir)"}
-{"id": "covering-30-7-4", "params": {"v": 30, "k": 7, "t": 4, "m": 4}, "best": "1065", "bound": "832 (Schönheim)", "holder": "Bluskov and Sidorenko, 2025 (union optimization)"}
+{"id": "covering-30-7-4", "params": {"v": 30, "k": 7, "t": 4, "m": 4}, "best": "1062", "bound": "832 (Schönheim)"}
 {"id": "covering-31-7-4", "params": {"v": 31, "k": 7, "t": 4, "m": 4}, "best": "1122", "bound": "930 (La Jolla)", "holder": "Jan de Heer and Steve Muir, 2007"}
 {"id": "covering-32-7-4", "params": {"v": 32, "k": 7, "t": 4, "m": 4}, "best": "1369", "bound": "1135 (La Jolla)", "holder": "Jan de Heer and Steve Muir, 2026 (Private Tools)"}
 {"id": "covering-33-7-4", "params": {"v": 33, "k": 7, "t": 4, "m": 4}, "best": "1618", "bound": "1259 (Schönheim)", "holder": "Jan de Heer and Steve Muir, 2026 (Private Tools)"}
@@ -15808,7 +15810,7 @@
 {"id": "covering-58-7-4-7", "params": {"v": 58, "k": 7, "t": 4, "m": 7}, "variant": "lotto", "best": "1706", "bound": "398 (counting)"}
 {"id": "covering-59-7-4-7", "params": {"v": 59, "k": 7, "t": 4, "m": 7}, "variant": "lotto", "best": "1914", "bound": "426 (counting)"}
 {"id": "covering-60-7-4-7", "params": {"v": 60, "k": 7, "t": 4, "m": 7}, "variant": "lotto", "best": "1975", "bound": "455 (counting)"}
-{"id": "covering-61-7-4-7", "params": {"v": 61, "k": 7, "t": 4, "m": 7}, "variant": "lotto", "best": "2187", "bound": "486 (counting)"}
+{"id": "covering-61-7-4-7", "params": {"v": 61, "k": 7, "t": 4, "m": 7}, "variant": "lotto", "best": "2184", "bound": "486 (counting)"}
 {"id": "covering-62-7-4-7", "params": {"v": 62, "k": 7, "t": 4, "m": 7}, "variant": "lotto", "best": "2244", "bound": "518 (counting)"}
 {"id": "covering-63-7-4-7", "params": {"v": 63, "k": 7, "t": 4, "m": 7}, "variant": "lotto", "best": "2491", "bound": "552 (counting)"}
 {"id": "covering-64-7-4-7", "params": {"v": 64, "k": 7, "t": 4, "m": 7}, "variant": "lotto", "best": "2738", "bound": "588 (counting)"}
@@ -27047,15 +27049,15 @@
 {"id": "covering-19-9-7-8", "params": {"v": 19, "k": 9, "t": 7, "m": 8}, "variant": "lotto", "best": "423", "bound": "205 (counting)", "holder": "rené cadière (10/11/2026)"}
 {"id": "covering-20-9-7-8", "params": {"v": 20, "k": 9, "t": 7, "m": 8}, "variant": "lotto", "best": "662", "bound": "312 (counting)", "holder": "rené cadière (11/11/2026)"}
 {"id": "covering-21-9-7-8", "params": {"v": 21, "k": 9, "t": 7, "m": 8}, "variant": "lotto", "best": "1052", "bound": "462 (counting)", "holder": "rené cadière (11/11/2026)"}
-{"id": "covering-22-9-7-8", "params": {"v": 22, "k": 9, "t": 7, "m": 8}, "variant": "lotto", "best": "1491", "bound": "671 (counting)"}
+{"id": "covering-22-9-7-8", "params": {"v": 22, "k": 9, "t": 7, "m": 8}, "variant": "lotto", "best": "1475", "bound": "671 (counting)"}
 {"id": "covering-23-9-7-8", "params": {"v": 23, "k": 9, "t": 7, "m": 8}, "variant": "lotto", "best": "1916", "bound": "956 (counting)", "holder": "Weber Azevedo (13/11/2026)"}
-{"id": "covering-24-9-7-8", "params": {"v": 24, "k": 9, "t": 7, "m": 8}, "variant": "lotto", "best": "2520", "bound": "1340 (counting)"}
-{"id": "covering-25-9-7-8", "params": {"v": 25, "k": 9, "t": 7, "m": 8}, "variant": "lotto", "best": "3148", "bound": "1849 (counting)"}
-{"id": "covering-26-9-7-8", "params": {"v": 26, "k": 9, "t": 7, "m": 8}, "variant": "lotto", "best": "4365", "bound": "2516 (counting)"}
-{"id": "covering-27-9-7-8", "params": {"v": 27, "k": 9, "t": 7, "m": 8}, "variant": "lotto", "best": "6170", "bound": "3380 (counting)"}
-{"id": "covering-28-9-7-8", "params": {"v": 28, "k": 9, "t": 7, "m": 8}, "variant": "lotto", "best": "8817", "bound": "4485 (counting)"}
-{"id": "covering-29-9-7-8", "params": {"v": 29, "k": 9, "t": 7, "m": 8}, "variant": "lotto", "best": "12536", "bound": "5888 (counting)"}
-{"id": "covering-30-9-7-8", "params": {"v": 30, "k": 9, "t": 7, "m": 8}, "variant": "lotto", "best": "17718", "bound": "7651 (counting)"}
+{"id": "covering-24-9-7-8", "params": {"v": 24, "k": 9, "t": 7, "m": 8}, "variant": "lotto", "best": "2518", "bound": "1340 (counting)"}
+{"id": "covering-25-9-7-8", "params": {"v": 25, "k": 9, "t": 7, "m": 8}, "variant": "lotto", "best": "3137", "bound": "1849 (counting)"}
+{"id": "covering-26-9-7-8", "params": {"v": 26, "k": 9, "t": 7, "m": 8}, "variant": "lotto", "best": "4337", "bound": "2516 (counting)"}
+{"id": "covering-27-9-7-8", "params": {"v": 27, "k": 9, "t": 7, "m": 8}, "variant": "lotto", "best": "5843", "bound": "3380 (counting)"}
+{"id": "covering-28-9-7-8", "params": {"v": 28, "k": 9, "t": 7, "m": 8}, "variant": "lotto", "best": "8545", "bound": "4485 (counting)"}
+{"id": "covering-29-9-7-8", "params": {"v": 29, "k": 9, "t": 7, "m": 8}, "variant": "lotto", "best": "12384", "bound": "5888 (counting)"}
+{"id": "covering-30-9-7-8", "params": {"v": 30, "k": 9, "t": 7, "m": 8}, "variant": "lotto", "best": "17585", "bound": "7651 (counting)"}
 {"id": "covering-31-9-7-8", "params": {"v": 31, "k": 9, "t": 7, "m": 8}, "variant": "lotto", "best": "24720", "bound": "9849 (counting)"}
 {"id": "covering-32-9-7-8", "params": {"v": 32, "k": 9, "t": 7, "m": 8}, "variant": "lotto", "best": "34202", "bound": "12567 (counting)"}
 {"id": "covering-33-9-7-8", "params": {"v": 33, "k": 9, "t": 7, "m": 8}, "variant": "lotto", "best": "45822", "bound": "15904 (counting)"}
@@ -27352,7 +27354,7 @@
 {"id": "covering-17-9-8-10", "params": {"v": 17, "k": 9, "t": 8, "m": 10}, "variant": "lotto", "best": "146", "bound": "75 (counting)"}
 {"id": "covering-18-9-8-10", "params": {"v": 18, "k": 9, "t": 8, "m": 10}, "variant": "lotto", "best": "264", "bound": "132 (counting)", "holder": "rené cadière (10/11/2026)"}
 {"id": "covering-19-9-8-10", "params": {"v": 19, "k": 9, "t": 8, "m": 10}, "variant": "lotto", "best": "485", "bound": "223 (counting)", "holder": "rené cadière (13/11/2026)"}
-{"id": "covering-20-9-8-10", "params": {"v": 20, "k": 9, "t": 8, "m": 10}, "variant": "lotto", "best": "1026", "bound": "366 (counting)"}
+{"id": "covering-20-9-8-10", "params": {"v": 20, "k": 9, "t": 8, "m": 10}, "variant": "lotto", "best": "968", "bound": "366 (counting)"}
 {"id": "covering-21-9-8-10", "params": {"v": 21, "k": 9, "t": 8, "m": 10}, "variant": "lotto", "best": "1795", "bound": "583 (counting)"}
 {"id": "covering-22-9-8-10", "params": {"v": 22, "k": 9, "t": 8, "m": 10}, "variant": "lotto", "best": "2893", "bound": "905 (counting)"}
 {"id": "covering-23-9-8-10", "params": {"v": 23, "k": 9, "t": 8, "m": 10}, "variant": "lotto", "best": "4578", "bound": "1374 (counting)"}
@@ -27372,7 +27374,7 @@
 {"id": "covering-21-9-8-11", "params": {"v": 21, "k": 9, "t": 8, "m": 11}, "variant": "lotto", "best": "630", "bound": "173 (counting)"}
 {"id": "covering-22-9-8-11", "params": {"v": 22, "k": 9, "t": 8, "m": 11}, "variant": "lotto", "best": "1036", "bound": "266 (counting)"}
 {"id": "covering-23-9-8-11", "params": {"v": 23, "k": 9, "t": 8, "m": 11}, "variant": "lotto", "best": "1706", "bound": "402 (counting)"}
-{"id": "covering-24-9-8-11", "params": {"v": 24, "k": 9, "t": 8, "m": 11}, "variant": "lotto", "best": "2464", "bound": "595 (counting)"}
+{"id": "covering-24-9-8-11", "params": {"v": 24, "k": 9, "t": 8, "m": 11}, "variant": "lotto", "best": "2462", "bound": "595 (counting)"}
 {"id": "covering-25-9-8-11", "params": {"v": 25, "k": 9, "t": 8, "m": 11}, "variant": "lotto", "best": "3746", "bound": "864 (counting)"}
 {"id": "covering-26-9-8-11", "params": {"v": 26, "k": 9, "t": 8, "m": 11}, "variant": "lotto", "best": "5854", "bound": "1235 (counting)"}
 {"id": "covering-27-9-8-11", "params": {"v": 27, "k": 9, "t": 8, "m": 11}, "variant": "lotto", "best": "8893", "bound": "1740 (counting)"}
@@ -27550,7 +27552,7 @@
 {"id": "covering-20-9-9-12", "params": {"v": 20, "k": 9, "t": 9, "m": 12}, "variant": "lotto", "best": "1653", "bound": "764 (counting)"}
 {"id": "covering-21-9-9-12", "params": {"v": 21, "k": 9, "t": 9, "m": 12}, "variant": "lotto", "best": "3264", "bound": "1337 (counting)"}
 {"id": "covering-22-9-9-12", "params": {"v": 22, "k": 9, "t": 9, "m": 12}, "variant": "lotto", "best": "5965", "bound": "2261 (counting)", "holder": "Evandro De Simone (12/11/2026)"}
-{"id": "covering-23-9-9-12", "params": {"v": 23, "k": 9, "t": 9, "m": 12}, "variant": "lotto", "best": "10960", "bound": "3715 (counting)"}
+{"id": "covering-23-9-9-12", "params": {"v": 23, "k": 9, "t": 9, "m": 12}, "variant": "lotto", "best": "10691", "bound": "3715 (counting)"}
 {"id": "covering-24-9-9-12", "params": {"v": 24, "k": 9, "t": 9, "m": 12}, "variant": "lotto", "best": "18781", "bound": "5944 (counting)"}
 {"id": "covering-25-9-9-12", "params": {"v": 25, "k": 9, "t": 9, "m": 12}, "variant": "lotto", "best": "31180", "bound": "9287 (counting)"}
 {"id": "covering-15-9-9-13", "params": {"v": 15, "k": 9, "t": 9, "m": 13}, "variant": "lotto", "best": "10", "bound": "7 (counting)"}
@@ -30812,7 +30814,7 @@
 {"id": "covering-34-10-5-7", "params": {"v": 34, "k": 10, "t": 5, "m": 7}, "variant": "lotto", "best": "331", "bound": "73 (counting)"}
 {"id": "covering-35-10-5-7", "params": {"v": 35, "k": 10, "t": 5, "m": 7}, "variant": "lotto", "best": "395", "bound": "84 (counting)", "holder": "RosarioMarino (10/11/2026)"}
 {"id": "covering-36-10-5-7", "params": {"v": 36, "k": 10, "t": 5, "m": 7}, "variant": "lotto", "best": "473", "bound": "96 (counting)"}
-{"id": "covering-37-10-5-7", "params": {"v": 37, "k": 10, "t": 5, "m": 7}, "variant": "lotto", "best": "592", "bound": "110 (counting)"}
+{"id": "covering-37-10-5-7", "params": {"v": 37, "k": 10, "t": 5, "m": 7}, "variant": "lotto", "best": "590", "bound": "110 (counting)"}
 {"id": "covering-38-10-5-7", "params": {"v": 38, "k": 10, "t": 5, "m": 7}, "variant": "lotto", "best": "689", "bound": "125 (counting)"}
 {"id": "covering-39-10-5-7", "params": {"v": 39, "k": 10, "t": 5, "m": 7}, "variant": "lotto", "best": "784", "bound": "142 (counting)", "holder": "SG (08/11/2026)"}
 {"id": "covering-40-10-5-7", "params": {"v": 40, "k": 10, "t": 5, "m": 7}, "variant": "lotto", "best": "912", "bound": "161 (counting)", "holder": "SG (08/11/2026)"}
@@ -30852,7 +30854,7 @@
 {"id": "covering-30-10-5-8", "params": {"v": 30, "k": 10, "t": 5, "m": 8}, "variant": "lotto", "best": "91", "bound": "18 (counting)"}
 {"id": "covering-31-10-5-8", "params": {"v": 31, "k": 10, "t": 5, "m": 8}, "variant": "lotto", "best": "112", "bound": "21 (counting)"}
 {"id": "covering-32-10-5-8", "params": {"v": 32, "k": 10, "t": 5, "m": 8}, "variant": "lotto", "best": "131", "bound": "24 (counting)"}
-{"id": "covering-33-10-5-8", "params": {"v": 33, "k": 10, "t": 5, "m": 8}, "variant": "lotto", "best": "156", "bound": "28 (counting)"}
+{"id": "covering-33-10-5-8", "params": {"v": 33, "k": 10, "t": 5, "m": 8}, "variant": "lotto", "best": "155", "bound": "28 (counting)"}
 {"id": "covering-34-10-5-8", "params": {"v": 34, "k": 10, "t": 5, "m": 8}, "variant": "lotto", "best": "170", "bound": "32 (counting)"}
 {"id": "covering-35-10-5-8", "params": {"v": 35, "k": 10, "t": 5, "m": 8}, "variant": "lotto", "best": "203", "bound": "37 (counting)"}
 {"id": "covering-36-10-5-8", "params": {"v": 36, "k": 10, "t": 5, "m": 8}, "variant": "lotto", "best": "248", "bound": "42 (counting)", "holder": "Terenzio Lazzarotto (08/11/2026)"}
@@ -32292,10 +32294,10 @@
 {"id": "covering-19-10-8-9", "params": {"v": 19, "k": 10, "t": 8, "m": 9}, "variant": "lotto", "best": "485", "bound": "223 (counting)", "holder": "rené cadière (13/11/2026)"}
 {"id": "covering-20-10-8-9", "params": {"v": 20, "k": 10, "t": 8, "m": 9}, "variant": "lotto", "best": "789", "bound": "366 (counting)", "holder": "rené cadière (13/11/2026)"}
 {"id": "covering-21-10-8-9", "params": {"v": 21, "k": 10, "t": 8, "m": 9}, "variant": "lotto", "best": "1298", "bound": "583 (counting)", "holder": "rené cadière (13/11/2026)"}
-{"id": "covering-22-10-8-9", "params": {"v": 22, "k": 10, "t": 8, "m": 9}, "variant": "lotto", "best": "2613", "bound": "905 (counting)"}
-{"id": "covering-23-10-8-9", "params": {"v": 23, "k": 10, "t": 8, "m": 9}, "variant": "lotto", "best": "3822", "bound": "1374 (counting)"}
-{"id": "covering-24-10-8-9", "params": {"v": 24, "k": 10, "t": 8, "m": 9}, "variant": "lotto", "best": "5475", "bound": "2043 (counting)"}
-{"id": "covering-25-10-8-9", "params": {"v": 25, "k": 10, "t": 8, "m": 9}, "variant": "lotto", "best": "7698", "bound": "2983 (counting)"}
+{"id": "covering-22-10-8-9", "params": {"v": 22, "k": 10, "t": 8, "m": 9}, "variant": "lotto", "best": "2257", "bound": "905 (counting)"}
+{"id": "covering-23-10-8-9", "params": {"v": 23, "k": 10, "t": 8, "m": 9}, "variant": "lotto", "best": "3311", "bound": "1374 (counting)"}
+{"id": "covering-24-10-8-9", "params": {"v": 24, "k": 10, "t": 8, "m": 9}, "variant": "lotto", "best": "4504", "bound": "2043 (counting)"}
+{"id": "covering-25-10-8-9", "params": {"v": 25, "k": 10, "t": 8, "m": 9}, "variant": "lotto", "best": "6918", "bound": "2983 (counting)"}
 {"id": "covering-26-10-8-9", "params": {"v": 26, "k": 10, "t": 8, "m": 9}, "variant": "lotto", "best": "10412", "bound": "4281 (counting)"}
 {"id": "covering-27-10-8-9", "params": {"v": 27, "k": 10, "t": 8, "m": 9}, "variant": "lotto", "best": "14473", "bound": "6048 (counting)"}
 {"id": "covering-28-10-8-9", "params": {"v": 28, "k": 10, "t": 8, "m": 9}, "variant": "lotto", "best": "20445", "bound": "8424 (counting)"}
@@ -32505,7 +32507,7 @@
 {"id": "covering-18-10-9-11", "params": {"v": 18, "k": 10, "t": 9, "m": 11}, "variant": "lotto", "best": "207", "bound": "111 (counting)"}
 {"id": "covering-19-10-9-11", "params": {"v": 19, "k": 10, "t": 9, "m": 11}, "variant": "lotto", "best": "423", "bound": "205 (counting)", "holder": "rené cadière (10/11/2026)"}
 {"id": "covering-20-10-9-11", "params": {"v": 20, "k": 10, "t": 9, "m": 11}, "variant": "lotto", "best": "789", "bound": "366 (counting)", "holder": "rené cadière (13/11/2026)"}
-{"id": "covering-21-10-9-11", "params": {"v": 21, "k": 10, "t": 9, "m": 11}, "variant": "lotto", "best": "1892", "bound": "629 (counting)"}
+{"id": "covering-21-10-9-11", "params": {"v": 21, "k": 10, "t": 9, "m": 11}, "variant": "lotto", "best": "1719", "bound": "629 (counting)"}
 {"id": "covering-22-10-9-11", "params": {"v": 22, "k": 10, "t": 9, "m": 11}, "variant": "lotto", "best": "3446", "bound": "1050 (counting)"}
 {"id": "covering-23-10-9-11", "params": {"v": 23, "k": 10, "t": 9, "m": 11}, "variant": "lotto", "best": "5804", "bound": "1706 (counting)"}
 {"id": "covering-24-10-9-11", "params": {"v": 24, "k": 10, "t": 9, "m": 11}, "variant": "lotto", "best": "9420", "bound": "2702 (counting)"}
@@ -34788,46 +34790,46 @@
 {"id": "covering-26-11-4-6", "params": {"v": 26, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "16", "bound": "6 (counting)"}
 {"id": "covering-27-11-4-6", "params": {"v": 27, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "19", "bound": "7 (counting)"}
 {"id": "covering-28-11-4-6", "params": {"v": 28, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "23", "bound": "8 (counting)"}
-{"id": "covering-29-11-4-6", "params": {"v": 29, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "27", "bound": "9 (counting)"}
+{"id": "covering-29-11-4-6", "params": {"v": 29, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "25", "bound": "9 (counting)"}
 {"id": "covering-30-11-4-6", "params": {"v": 30, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "31", "bound": "10 (counting)"}
 {"id": "covering-31-11-4-6", "params": {"v": 31, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "36", "bound": "11 (counting)"}
 {"id": "covering-32-11-4-6", "params": {"v": 32, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "38", "bound": "12 (counting)"}
 {"id": "covering-33-11-4-6", "params": {"v": 33, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "40", "bound": "13 (counting)"}
 {"id": "covering-34-11-4-6", "params": {"v": 34, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "44", "bound": "15 (counting)"}
-{"id": "covering-35-11-4-6", "params": {"v": 35, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "51", "bound": "16 (counting)"}
+{"id": "covering-35-11-4-6", "params": {"v": 35, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "50", "bound": "16 (counting)"}
 {"id": "covering-36-11-4-6", "params": {"v": 36, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "65", "bound": "18 (counting)"}
-{"id": "covering-37-11-4-6", "params": {"v": 37, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "70", "bound": "20 (counting)"}
-{"id": "covering-38-11-4-6", "params": {"v": 38, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "75", "bound": "22 (counting)"}
-{"id": "covering-39-11-4-6", "params": {"v": 39, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "83", "bound": "24 (counting)"}
-{"id": "covering-40-11-4-6", "params": {"v": 40, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "87", "bound": "26 (counting)"}
+{"id": "covering-37-11-4-6", "params": {"v": 37, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "69", "bound": "20 (counting)"}
+{"id": "covering-38-11-4-6", "params": {"v": 38, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "74", "bound": "22 (counting)"}
+{"id": "covering-39-11-4-6", "params": {"v": 39, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "78", "bound": "24 (counting)"}
+{"id": "covering-40-11-4-6", "params": {"v": 40, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "86", "bound": "26 (counting)"}
 {"id": "covering-41-11-4-6", "params": {"v": 41, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "92", "bound": "29 (counting)"}
-{"id": "covering-42-11-4-6", "params": {"v": 42, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "99", "bound": "32 (counting)"}
-{"id": "covering-43-11-4-6", "params": {"v": 43, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "116", "bound": "35 (counting)"}
-{"id": "covering-44-11-4-6", "params": {"v": 44, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "126", "bound": "38 (counting)"}
+{"id": "covering-42-11-4-6", "params": {"v": 42, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "97", "bound": "32 (counting)"}
+{"id": "covering-43-11-4-6", "params": {"v": 43, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "110", "bound": "35 (counting)"}
+{"id": "covering-44-11-4-6", "params": {"v": 44, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "124", "bound": "38 (counting)"}
 {"id": "covering-45-11-4-6", "params": {"v": 45, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "145", "bound": "41 (counting)"}
 {"id": "covering-46-11-4-6", "params": {"v": 46, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "164", "bound": "44 (counting)"}
-{"id": "covering-47-11-4-6", "params": {"v": 47, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "190", "bound": "48 (counting)"}
-{"id": "covering-48-11-4-6", "params": {"v": 48, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "217", "bound": "52 (counting)"}
-{"id": "covering-49-11-4-6", "params": {"v": 49, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "242", "bound": "56 (counting)"}
-{"id": "covering-50-11-4-6", "params": {"v": 50, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "276", "bound": "61 (counting)"}
-{"id": "covering-51-11-4-6", "params": {"v": 51, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "306", "bound": "66 (counting)"}
+{"id": "covering-47-11-4-6", "params": {"v": 47, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "180", "bound": "48 (counting)"}
+{"id": "covering-48-11-4-6", "params": {"v": 48, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "213", "bound": "52 (counting)"}
+{"id": "covering-49-11-4-6", "params": {"v": 49, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "240", "bound": "56 (counting)"}
+{"id": "covering-50-11-4-6", "params": {"v": 50, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "270", "bound": "61 (counting)"}
+{"id": "covering-51-11-4-6", "params": {"v": 51, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "304", "bound": "66 (counting)"}
 {"id": "covering-52-11-4-6", "params": {"v": 52, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "346", "bound": "71 (counting)"}
-{"id": "covering-53-11-4-6", "params": {"v": 53, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "380", "bound": "76 (counting)"}
+{"id": "covering-53-11-4-6", "params": {"v": 53, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "374", "bound": "76 (counting)"}
 {"id": "covering-54-11-4-6", "params": {"v": 54, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "419", "bound": "82 (counting)"}
-{"id": "covering-55-11-4-6", "params": {"v": 55, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "456", "bound": "88 (counting)"}
+{"id": "covering-55-11-4-6", "params": {"v": 55, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "452", "bound": "88 (counting)"}
 {"id": "covering-56-11-4-6", "params": {"v": 56, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "497", "bound": "94 (counting)"}
-{"id": "covering-57-11-4-6", "params": {"v": 57, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "549", "bound": "100 (counting)"}
-{"id": "covering-58-11-4-6", "params": {"v": 58, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "592", "bound": "107 (counting)"}
-{"id": "covering-59-11-4-6", "params": {"v": 59, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "633", "bound": "115 (counting)"}
-{"id": "covering-60-11-4-6", "params": {"v": 60, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "668", "bound": "122 (counting)"}
-{"id": "covering-61-11-4-6", "params": {"v": 61, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "725", "bound": "130 (counting)"}
-{"id": "covering-62-11-4-6", "params": {"v": 62, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "769", "bound": "139 (counting)"}
-{"id": "covering-63-11-4-6", "params": {"v": 63, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "820", "bound": "148 (counting)"}
-{"id": "covering-64-11-4-6", "params": {"v": 64, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "875", "bound": "157 (counting)"}
-{"id": "covering-65-11-4-6", "params": {"v": 65, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "935", "bound": "166 (counting)"}
-{"id": "covering-66-11-4-6", "params": {"v": 66, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "1007", "bound": "177 (counting)"}
-{"id": "covering-67-11-4-6", "params": {"v": 67, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "1074", "bound": "187 (counting)"}
-{"id": "covering-68-11-4-6", "params": {"v": 68, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "1137", "bound": "198 (counting)"}
+{"id": "covering-57-11-4-6", "params": {"v": 57, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "548", "bound": "100 (counting)"}
+{"id": "covering-58-11-4-6", "params": {"v": 58, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "590", "bound": "107 (counting)"}
+{"id": "covering-59-11-4-6", "params": {"v": 59, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "631", "bound": "115 (counting)"}
+{"id": "covering-60-11-4-6", "params": {"v": 60, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "663", "bound": "122 (counting)"}
+{"id": "covering-61-11-4-6", "params": {"v": 61, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "722", "bound": "130 (counting)"}
+{"id": "covering-62-11-4-6", "params": {"v": 62, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "764", "bound": "139 (counting)"}
+{"id": "covering-63-11-4-6", "params": {"v": 63, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "812", "bound": "148 (counting)"}
+{"id": "covering-64-11-4-6", "params": {"v": 64, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "871", "bound": "157 (counting)"}
+{"id": "covering-65-11-4-6", "params": {"v": 65, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "920", "bound": "166 (counting)"}
+{"id": "covering-66-11-4-6", "params": {"v": 66, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "998", "bound": "177 (counting)"}
+{"id": "covering-67-11-4-6", "params": {"v": 67, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "1073", "bound": "187 (counting)"}
+{"id": "covering-68-11-4-6", "params": {"v": 68, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "1133", "bound": "198 (counting)"}
 {"id": "covering-69-11-4-6", "params": {"v": 69, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "1189", "bound": "210 (counting)"}
 {"id": "covering-70-11-4-6", "params": {"v": 70, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "1258", "bound": "222 (counting)"}
 {"id": "covering-90-11-4-6", "params": {"v": 90, "k": 11, "t": 4, "m": 6}, "variant": "lotto", "best": "3357", "bound": "591 (counting)"}
@@ -34997,37 +34999,37 @@
 {"id": "covering-53-11-4-9", "params": {"v": 53, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "67", "bound": "14 (counting)"}
 {"id": "covering-54-11-4-9", "params": {"v": 54, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "71", "bound": "14 (counting)"}
 {"id": "covering-55-11-4-9", "params": {"v": 55, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "75", "bound": "15 (counting)"}
-{"id": "covering-56-11-4-9", "params": {"v": 56, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "82", "bound": "16 (counting)"}
+{"id": "covering-56-11-4-9", "params": {"v": 56, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "81", "bound": "16 (counting)"}
 {"id": "covering-57-11-4-9", "params": {"v": 57, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "86", "bound": "17 (counting)"}
-{"id": "covering-58-11-4-9", "params": {"v": 58, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "93", "bound": "18 (counting)"}
-{"id": "covering-59-11-4-9", "params": {"v": 59, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "106", "bound": "19 (counting)"}
-{"id": "covering-60-11-4-9", "params": {"v": 60, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "112", "bound": "21 (counting)"}
-{"id": "covering-61-11-4-9", "params": {"v": 61, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "117", "bound": "22 (counting)"}
-{"id": "covering-62-11-4-9", "params": {"v": 62, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "123", "bound": "23 (counting)"}
-{"id": "covering-63-11-4-9", "params": {"v": 63, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "129", "bound": "24 (counting)"}
+{"id": "covering-58-11-4-9", "params": {"v": 58, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "92", "bound": "18 (counting)"}
+{"id": "covering-59-11-4-9", "params": {"v": 59, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "105", "bound": "19 (counting)"}
+{"id": "covering-60-11-4-9", "params": {"v": 60, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "109", "bound": "21 (counting)"}
+{"id": "covering-61-11-4-9", "params": {"v": 61, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "116", "bound": "22 (counting)"}
+{"id": "covering-62-11-4-9", "params": {"v": 62, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "120", "bound": "23 (counting)"}
+{"id": "covering-63-11-4-9", "params": {"v": 63, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "128", "bound": "24 (counting)"}
 {"id": "covering-64-11-4-9", "params": {"v": 64, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "134", "bound": "26 (counting)"}
-{"id": "covering-65-11-4-9", "params": {"v": 65, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "141", "bound": "27 (counting)"}
-{"id": "covering-66-11-4-9", "params": {"v": 66, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "156", "bound": "29 (counting)"}
-{"id": "covering-67-11-4-9", "params": {"v": 67, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "163", "bound": "30 (counting)"}
-{"id": "covering-68-11-4-9", "params": {"v": 68, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "179", "bound": "32 (counting)"}
-{"id": "covering-69-11-4-9", "params": {"v": 69, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "190", "bound": "33 (counting)"}
-{"id": "covering-70-11-4-9", "params": {"v": 70, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "202", "bound": "35 (counting)"}
-{"id": "covering-71-11-4-9", "params": {"v": 71, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "214", "bound": "37 (counting)"}
-{"id": "covering-72-11-4-9", "params": {"v": 72, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "229", "bound": "39 (counting)"}
-{"id": "covering-73-11-4-9", "params": {"v": 73, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "241", "bound": "41 (counting)"}
-{"id": "covering-74-11-4-9", "params": {"v": 74, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "259", "bound": "43 (counting)"}
-{"id": "covering-75-11-4-9", "params": {"v": 75, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "278", "bound": "45 (counting)"}
-{"id": "covering-76-11-4-9", "params": {"v": 76, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "297", "bound": "47 (counting)"}
-{"id": "covering-77-11-4-9", "params": {"v": 77, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "316", "bound": "49 (counting)"}
-{"id": "covering-78-11-4-9", "params": {"v": 78, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "340", "bound": "52 (counting)"}
-{"id": "covering-79-11-4-9", "params": {"v": 79, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "366", "bound": "54 (counting)"}
-{"id": "covering-80-11-4-9", "params": {"v": 80, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "393", "bound": "57 (counting)"}
-{"id": "covering-81-11-4-9", "params": {"v": 81, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "418", "bound": "59 (counting)"}
-{"id": "covering-82-11-4-9", "params": {"v": 82, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "452", "bound": "62 (counting)"}
-{"id": "covering-83-11-4-9", "params": {"v": 83, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "482", "bound": "65 (counting)"}
-{"id": "covering-84-11-4-9", "params": {"v": 84, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "517", "bound": "68 (counting)"}
-{"id": "covering-85-11-4-9", "params": {"v": 85, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "551", "bound": "71 (counting)"}
-{"id": "covering-86-11-4-9", "params": {"v": 86, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "581", "bound": "74 (counting)"}
+{"id": "covering-65-11-4-9", "params": {"v": 65, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "139", "bound": "27 (counting)"}
+{"id": "covering-66-11-4-9", "params": {"v": 66, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "152", "bound": "29 (counting)"}
+{"id": "covering-67-11-4-9", "params": {"v": 67, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "161", "bound": "30 (counting)"}
+{"id": "covering-68-11-4-9", "params": {"v": 68, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "174", "bound": "32 (counting)"}
+{"id": "covering-69-11-4-9", "params": {"v": 69, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "188", "bound": "33 (counting)"}
+{"id": "covering-70-11-4-9", "params": {"v": 70, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "200", "bound": "35 (counting)"}
+{"id": "covering-71-11-4-9", "params": {"v": 71, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "212", "bound": "37 (counting)"}
+{"id": "covering-72-11-4-9", "params": {"v": 72, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "225", "bound": "39 (counting)"}
+{"id": "covering-73-11-4-9", "params": {"v": 73, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "239", "bound": "41 (counting)"}
+{"id": "covering-74-11-4-9", "params": {"v": 74, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "257", "bound": "43 (counting)"}
+{"id": "covering-75-11-4-9", "params": {"v": 75, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "276", "bound": "45 (counting)"}
+{"id": "covering-76-11-4-9", "params": {"v": 76, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "295", "bound": "47 (counting)"}
+{"id": "covering-77-11-4-9", "params": {"v": 77, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "313", "bound": "49 (counting)"}
+{"id": "covering-78-11-4-9", "params": {"v": 78, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "332", "bound": "52 (counting)"}
+{"id": "covering-79-11-4-9", "params": {"v": 79, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "356", "bound": "54 (counting)"}
+{"id": "covering-80-11-4-9", "params": {"v": 80, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "389", "bound": "57 (counting)"}
+{"id": "covering-81-11-4-9", "params": {"v": 81, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "416", "bound": "59 (counting)"}
+{"id": "covering-82-11-4-9", "params": {"v": 82, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "446", "bound": "62 (counting)"}
+{"id": "covering-83-11-4-9", "params": {"v": 83, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "480", "bound": "65 (counting)"}
+{"id": "covering-84-11-4-9", "params": {"v": 84, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "515", "bound": "68 (counting)"}
+{"id": "covering-85-11-4-9", "params": {"v": 85, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "545", "bound": "71 (counting)"}
+{"id": "covering-86-11-4-9", "params": {"v": 86, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "579", "bound": "74 (counting)"}
 {"id": "covering-87-11-4-9", "params": {"v": 87, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "610", "bound": "77 (counting)", "holder": "derived on the site from a known design (01/11/2026)"}
 {"id": "covering-88-11-4-9", "params": {"v": 88, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "638", "bound": "80 (counting)", "holder": "derived on the site from a known design (01/11/2026)"}
 {"id": "covering-89-11-4-9", "params": {"v": 89, "k": 11, "t": 4, "m": 9}, "variant": "lotto", "best": "668", "bound": "83 (counting)", "holder": "derived on the site from a known design (01/11/2026)"}
@@ -35049,18 +35051,18 @@
 {"id": "covering-48-11-4-10", "params": {"v": 48, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "31", "bound": "7 (counting)"}
 {"id": "covering-49-11-4-10", "params": {"v": 49, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "34", "bound": "7 (counting)"}
 {"id": "covering-50-11-4-10", "params": {"v": 50, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "37", "bound": "8 (counting)"}
-{"id": "covering-51-11-4-10", "params": {"v": 51, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "41", "bound": "8 (counting)"}
-{"id": "covering-52-11-4-10", "params": {"v": 52, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "45", "bound": "9 (counting)"}
-{"id": "covering-53-11-4-10", "params": {"v": 53, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "49", "bound": "9 (counting)"}
-{"id": "covering-54-11-4-10", "params": {"v": 54, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "53", "bound": "10 (counting)"}
+{"id": "covering-51-11-4-10", "params": {"v": 51, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "40", "bound": "8 (counting)"}
+{"id": "covering-52-11-4-10", "params": {"v": 52, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "43", "bound": "9 (counting)"}
+{"id": "covering-53-11-4-10", "params": {"v": 53, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "47", "bound": "9 (counting)"}
+{"id": "covering-54-11-4-10", "params": {"v": 54, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "52", "bound": "10 (counting)"}
 {"id": "covering-55-11-4-10", "params": {"v": 55, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "55", "bound": "11 (counting)"}
 {"id": "covering-56-11-4-10", "params": {"v": 56, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "58", "bound": "11 (counting)"}
 {"id": "covering-57-11-4-10", "params": {"v": 57, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "62", "bound": "12 (counting)"}
 {"id": "covering-58-11-4-10", "params": {"v": 58, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "66", "bound": "13 (counting)"}
 {"id": "covering-59-11-4-10", "params": {"v": 59, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "71", "bound": "13 (counting)", "holder": "derived on the site from a known design (01/11/2026)"}
-{"id": "covering-60-11-4-10", "params": {"v": 60, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "78", "bound": "14 (counting)"}
+{"id": "covering-60-11-4-10", "params": {"v": 60, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "77", "bound": "14 (counting)"}
 {"id": "covering-61-11-4-10", "params": {"v": 61, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "82", "bound": "15 (counting)", "holder": "derived on the site from a known design (01/11/2026)"}
-{"id": "covering-62-11-4-10", "params": {"v": 62, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "89", "bound": "16 (counting)", "holder": "derived on the site from a known design (01/11/2026)"}
+{"id": "covering-62-11-4-10", "params": {"v": 62, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "88", "bound": "16 (counting)"}
 {"id": "covering-63-11-4-10", "params": {"v": 63, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "93", "bound": "16 (counting)"}
 {"id": "covering-64-11-4-10", "params": {"v": 64, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "100", "bound": "17 (counting)"}
 {"id": "covering-65-11-4-10", "params": {"v": 65, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "104", "bound": "18 (counting)"}
@@ -35070,15 +35072,15 @@
 {"id": "covering-69-11-4-10", "params": {"v": 69, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "126", "bound": "22 (counting)"}
 {"id": "covering-70-11-4-10", "params": {"v": 70, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "141", "bound": "23 (counting)"}
 {"id": "covering-71-11-4-10", "params": {"v": 71, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "148", "bound": "24 (counting)"}
-{"id": "covering-72-11-4-10", "params": {"v": 72, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "159", "bound": "26 (counting)"}
-{"id": "covering-73-11-4-10", "params": {"v": 73, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "168", "bound": "27 (counting)"}
-{"id": "covering-74-11-4-10", "params": {"v": 74, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "178", "bound": "28 (counting)", "holder": "derived on the site from a known design (01/11/2026)"}
-{"id": "covering-75-11-4-10", "params": {"v": 75, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "189", "bound": "30 (counting)"}
-{"id": "covering-76-11-4-10", "params": {"v": 76, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "197", "bound": "31 (counting)", "holder": "derived on the site from a known design (01/11/2026)"}
-{"id": "covering-77-11-4-10", "params": {"v": 77, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "209", "bound": "32 (counting)", "holder": "derived on the site from a known design (01/11/2026)"}
-{"id": "covering-78-11-4-10", "params": {"v": 78, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "224", "bound": "34 (counting)", "holder": "derived on the site from a known design (01/11/2026)"}
-{"id": "covering-79-11-4-10", "params": {"v": 79, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "236", "bound": "35 (counting)", "holder": "derived on the site from a known design (01/11/2026)"}
-{"id": "covering-80-11-4-10", "params": {"v": 80, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "254", "bound": "37 (counting)"}
+{"id": "covering-72-11-4-10", "params": {"v": 72, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "157", "bound": "26 (counting)"}
+{"id": "covering-73-11-4-10", "params": {"v": 73, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "166", "bound": "27 (counting)"}
+{"id": "covering-74-11-4-10", "params": {"v": 74, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "176", "bound": "28 (counting)"}
+{"id": "covering-75-11-4-10", "params": {"v": 75, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "187", "bound": "30 (counting)"}
+{"id": "covering-76-11-4-10", "params": {"v": 76, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "195", "bound": "31 (counting)"}
+{"id": "covering-77-11-4-10", "params": {"v": 77, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "207", "bound": "32 (counting)"}
+{"id": "covering-78-11-4-10", "params": {"v": 78, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "220", "bound": "34 (counting)"}
+{"id": "covering-79-11-4-10", "params": {"v": 79, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "234", "bound": "35 (counting)"}
+{"id": "covering-80-11-4-10", "params": {"v": 80, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "252", "bound": "37 (counting)"}
 {"id": "covering-81-11-4-10", "params": {"v": 81, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "270", "bound": "39 (counting)"}
 {"id": "covering-82-11-4-10", "params": {"v": 82, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "282", "bound": "40 (counting)"}
 {"id": "covering-83-11-4-10", "params": {"v": 83, "k": 11, "t": 4, "m": 10}, "variant": "lotto", "best": "294", "bound": "42 (counting)"}
@@ -35110,41 +35112,41 @@
 {"id": "covering-53-11-4-11", "params": {"v": 53, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "34", "bound": "7 (counting)"}
 {"id": "covering-54-11-4-11", "params": {"v": 54, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "38", "bound": "7 (counting)"}
 {"id": "covering-55-11-4-11", "params": {"v": 55, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "41", "bound": "8 (counting)"}
-{"id": "covering-56-11-4-11", "params": {"v": 56, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "45", "bound": "8 (counting)"}
+{"id": "covering-56-11-4-11", "params": {"v": 56, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "44", "bound": "8 (counting)"}
 {"id": "covering-57-11-4-11", "params": {"v": 57, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "48", "bound": "9 (counting)"}
-{"id": "covering-58-11-4-11", "params": {"v": 58, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "52", "bound": "9 (counting)"}
+{"id": "covering-58-11-4-11", "params": {"v": 58, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "50", "bound": "9 (counting)"}
 {"id": "covering-59-11-4-11", "params": {"v": 59, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "56", "bound": "10 (counting)"}
 {"id": "covering-60-11-4-11", "params": {"v": 60, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "59", "bound": "10 (counting)"}
 {"id": "covering-61-11-4-11", "params": {"v": 61, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "63", "bound": "11 (counting)"}
-{"id": "covering-62-11-4-11", "params": {"v": 62, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "67", "bound": "11 (counting)"}
-{"id": "covering-63-11-4-11", "params": {"v": 63, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "71", "bound": "12 (counting)"}
+{"id": "covering-62-11-4-11", "params": {"v": 62, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "65", "bound": "11 (counting)"}
+{"id": "covering-63-11-4-11", "params": {"v": 63, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "69", "bound": "12 (counting)"}
 {"id": "covering-64-11-4-11", "params": {"v": 64, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "75", "bound": "12 (counting)"}
 {"id": "covering-65-11-4-11", "params": {"v": 65, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "78", "bound": "13 (counting)"}
 {"id": "covering-66-11-4-11", "params": {"v": 66, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "80", "bound": "14 (counting)"}
 {"id": "covering-67-11-4-11", "params": {"v": 67, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "84", "bound": "14 (counting)"}
 {"id": "covering-68-11-4-11", "params": {"v": 68, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "88", "bound": "15 (counting)"}
-{"id": "covering-69-11-4-11", "params": {"v": 69, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "95", "bound": "16 (counting)"}
-{"id": "covering-70-11-4-11", "params": {"v": 70, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "102", "bound": "16 (counting)"}
+{"id": "covering-69-11-4-11", "params": {"v": 69, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "94", "bound": "16 (counting)"}
+{"id": "covering-70-11-4-11", "params": {"v": 70, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "100", "bound": "16 (counting)"}
 {"id": "covering-71-11-4-11", "params": {"v": 71, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "111", "bound": "17 (counting)", "holder": "derived on the site from a known design (01/11/2026)"}
 {"id": "covering-72-11-4-11", "params": {"v": 72, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "118", "bound": "18 (counting)"}
 {"id": "covering-73-11-4-11", "params": {"v": 73, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "122", "bound": "19 (counting)", "holder": "derived on the site from a known design (01/11/2026)"}
-{"id": "covering-74-11-4-11", "params": {"v": 74, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "131", "bound": "20 (counting)"}
+{"id": "covering-74-11-4-11", "params": {"v": 74, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "128", "bound": "20 (counting)"}
 {"id": "covering-75-11-4-11", "params": {"v": 75, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "136", "bound": "21 (counting)"}
-{"id": "covering-76-11-4-11", "params": {"v": 76, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "143", "bound": "22 (counting)"}
-{"id": "covering-77-11-4-11", "params": {"v": 77, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "150", "bound": "23 (counting)"}
-{"id": "covering-78-11-4-11", "params": {"v": 78, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "162", "bound": "24 (counting)"}
-{"id": "covering-79-11-4-11", "params": {"v": 79, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "167", "bound": "25 (counting)"}
-{"id": "covering-80-11-4-11", "params": {"v": 80, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "174", "bound": "26 (counting)"}
-{"id": "covering-81-11-4-11", "params": {"v": 81, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "179", "bound": "27 (counting)"}
-{"id": "covering-82-11-4-11", "params": {"v": 82, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "184", "bound": "28 (counting)"}
-{"id": "covering-83-11-4-11", "params": {"v": 83, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "191", "bound": "29 (counting)"}
-{"id": "covering-84-11-4-11", "params": {"v": 84, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "198", "bound": "30 (counting)"}
-{"id": "covering-85-11-4-11", "params": {"v": 85, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "215", "bound": "32 (counting)"}
-{"id": "covering-86-11-4-11", "params": {"v": 86, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "225", "bound": "33 (counting)"}
-{"id": "covering-87-11-4-11", "params": {"v": 87, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "242", "bound": "34 (counting)"}
-{"id": "covering-88-11-4-11", "params": {"v": 88, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "252", "bound": "36 (counting)"}
-{"id": "covering-89-11-4-11", "params": {"v": 89, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "271", "bound": "37 (counting)"}
-{"id": "covering-90-11-4-11", "params": {"v": 90, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "290", "bound": "38 (counting)"}
+{"id": "covering-76-11-4-11", "params": {"v": 76, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "141", "bound": "22 (counting)"}
+{"id": "covering-77-11-4-11", "params": {"v": 77, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "147", "bound": "23 (counting)"}
+{"id": "covering-78-11-4-11", "params": {"v": 78, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "156", "bound": "24 (counting)"}
+{"id": "covering-79-11-4-11", "params": {"v": 79, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "164", "bound": "25 (counting)"}
+{"id": "covering-80-11-4-11", "params": {"v": 80, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "170", "bound": "26 (counting)"}
+{"id": "covering-81-11-4-11", "params": {"v": 81, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "175", "bound": "27 (counting)"}
+{"id": "covering-82-11-4-11", "params": {"v": 82, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "183", "bound": "28 (counting)"}
+{"id": "covering-83-11-4-11", "params": {"v": 83, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "189", "bound": "29 (counting)"}
+{"id": "covering-84-11-4-11", "params": {"v": 84, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "194", "bound": "30 (counting)"}
+{"id": "covering-85-11-4-11", "params": {"v": 85, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "207", "bound": "32 (counting)"}
+{"id": "covering-86-11-4-11", "params": {"v": 86, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "220", "bound": "33 (counting)"}
+{"id": "covering-87-11-4-11", "params": {"v": 87, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "234", "bound": "34 (counting)"}
+{"id": "covering-88-11-4-11", "params": {"v": 88, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "248", "bound": "36 (counting)"}
+{"id": "covering-89-11-4-11", "params": {"v": 89, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "269", "bound": "37 (counting)"}
+{"id": "covering-90-11-4-11", "params": {"v": 90, "k": 11, "t": 4, "m": 11}, "variant": "lotto", "best": "288", "bound": "38 (counting)"}
 {"id": "covering-36-11-4-12", "params": {"v": 36, "k": 11, "t": 4, "m": 12}, "variant": "lotto", "best": "5", "bound": "2 (counting)"}
 {"id": "covering-37-11-4-12", "params": {"v": 37, "k": 11, "t": 4, "m": 12}, "variant": "lotto", "best": "5", "bound": "2 (counting)"}
 {"id": "covering-38-11-4-12", "params": {"v": 38, "k": 11, "t": 4, "m": 12}, "variant": "lotto", "best": "5", "bound": "3 (counting)"}
@@ -35186,20 +35188,20 @@
 {"id": "covering-74-11-4-12", "params": {"v": 74, "k": 11, "t": 4, "m": 12}, "variant": "lotto", "best": "98", "bound": "14 (counting)"}
 {"id": "covering-75-11-4-12", "params": {"v": 75, "k": 11, "t": 4, "m": 12}, "variant": "lotto", "best": "102", "bound": "15 (counting)"}
 {"id": "covering-76-11-4-12", "params": {"v": 76, "k": 11, "t": 4, "m": 12}, "variant": "lotto", "best": "106", "bound": "16 (counting)"}
-{"id": "covering-77-11-4-12", "params": {"v": 77, "k": 11, "t": 4, "m": 12}, "variant": "lotto", "best": "113", "bound": "16 (counting)"}
+{"id": "covering-77-11-4-12", "params": {"v": 77, "k": 11, "t": 4, "m": 12}, "variant": "lotto", "best": "112", "bound": "16 (counting)"}
 {"id": "covering-78-11-4-12", "params": {"v": 78, "k": 11, "t": 4, "m": 12}, "variant": "lotto", "best": "117", "bound": "17 (counting)"}
-{"id": "covering-79-11-4-12", "params": {"v": 79, "k": 11, "t": 4, "m": 12}, "variant": "lotto", "best": "124", "bound": "18 (counting)"}
+{"id": "covering-79-11-4-12", "params": {"v": 79, "k": 11, "t": 4, "m": 12}, "variant": "lotto", "best": "123", "bound": "18 (counting)"}
 {"id": "covering-80-11-4-12", "params": {"v": 80, "k": 11, "t": 4, "m": 12}, "variant": "lotto", "best": "128", "bound": "19 (counting)"}
-{"id": "covering-81-11-4-12", "params": {"v": 81, "k": 11, "t": 4, "m": 12}, "variant": "lotto", "best": "135", "bound": "19 (counting)"}
-{"id": "covering-82-11-4-12", "params": {"v": 82, "k": 11, "t": 4, "m": 12}, "variant": "lotto", "best": "148", "bound": "20 (counting)"}
-{"id": "covering-83-11-4-12", "params": {"v": 83, "k": 11, "t": 4, "m": 12}, "variant": "lotto", "best": "154", "bound": "21 (counting)"}
-{"id": "covering-84-11-4-12", "params": {"v": 84, "k": 11, "t": 4, "m": 12}, "variant": "lotto", "best": "159", "bound": "22 (counting)"}
-{"id": "covering-85-11-4-12", "params": {"v": 85, "k": 11, "t": 4, "m": 12}, "variant": "lotto", "best": "165", "bound": "23 (counting)"}
-{"id": "covering-86-11-4-12", "params": {"v": 86, "k": 11, "t": 4, "m": 12}, "variant": "lotto", "best": "171", "bound": "24 (counting)"}
+{"id": "covering-81-11-4-12", "params": {"v": 81, "k": 11, "t": 4, "m": 12}, "variant": "lotto", "best": "134", "bound": "19 (counting)"}
+{"id": "covering-82-11-4-12", "params": {"v": 82, "k": 11, "t": 4, "m": 12}, "variant": "lotto", "best": "147", "bound": "20 (counting)"}
+{"id": "covering-83-11-4-12", "params": {"v": 83, "k": 11, "t": 4, "m": 12}, "variant": "lotto", "best": "151", "bound": "21 (counting)"}
+{"id": "covering-84-11-4-12", "params": {"v": 84, "k": 11, "t": 4, "m": 12}, "variant": "lotto", "best": "158", "bound": "22 (counting)"}
+{"id": "covering-85-11-4-12", "params": {"v": 85, "k": 11, "t": 4, "m": 12}, "variant": "lotto", "best": "162", "bound": "23 (counting)"}
+{"id": "covering-86-11-4-12", "params": {"v": 86, "k": 11, "t": 4, "m": 12}, "variant": "lotto", "best": "170", "bound": "24 (counting)"}
 {"id": "covering-87-11-4-12", "params": {"v": 87, "k": 11, "t": 4, "m": 12}, "variant": "lotto", "best": "176", "bound": "25 (counting)"}
-{"id": "covering-88-11-4-12", "params": {"v": 88, "k": 11, "t": 4, "m": 12}, "variant": "lotto", "best": "183", "bound": "26 (counting)"}
-{"id": "covering-89-11-4-12", "params": {"v": 89, "k": 11, "t": 4, "m": 12}, "variant": "lotto", "best": "198", "bound": "27 (counting)"}
-{"id": "covering-90-11-4-12", "params": {"v": 90, "k": 11, "t": 4, "m": 12}, "variant": "lotto", "best": "205", "bound": "28 (counting)"}
+{"id": "covering-88-11-4-12", "params": {"v": 88, "k": 11, "t": 4, "m": 12}, "variant": "lotto", "best": "181", "bound": "26 (counting)"}
+{"id": "covering-89-11-4-12", "params": {"v": 89, "k": 11, "t": 4, "m": 12}, "variant": "lotto", "best": "194", "bound": "27 (counting)"}
+{"id": "covering-90-11-4-12", "params": {"v": 90, "k": 11, "t": 4, "m": 12}, "variant": "lotto", "best": "203", "bound": "28 (counting)"}
 {"id": "covering-37-11-4-13", "params": {"v": 37, "k": 11, "t": 4, "m": 13}, "variant": "lotto", "best": "4", "bound": "2 (counting)"}
 {"id": "covering-38-11-4-13", "params": {"v": 38, "k": 11, "t": 4, "m": 13}, "variant": "lotto", "best": "4", "bound": "2 (counting)"}
 {"id": "covering-39-11-4-13", "params": {"v": 39, "k": 11, "t": 4, "m": 13}, "variant": "lotto", "best": "4", "bound": "2 (counting)"}
@@ -35246,9 +35248,9 @@
 {"id": "covering-80-11-4-13", "params": {"v": 80, "k": 11, "t": 4, "m": 13}, "variant": "lotto", "best": "102", "bound": "14 (counting)", "holder": "derived on the site from a known design (01/11/2026)"}
 {"id": "covering-81-11-4-13", "params": {"v": 81, "k": 11, "t": 4, "m": 13}, "variant": "lotto", "best": "108", "bound": "15 (counting)"}
 {"id": "covering-82-11-4-13", "params": {"v": 82, "k": 11, "t": 4, "m": 13}, "variant": "lotto", "best": "113", "bound": "15 (counting)", "holder": "derived on the site from a known design (01/11/2026)"}
-{"id": "covering-83-11-4-13", "params": {"v": 83, "k": 11, "t": 4, "m": 13}, "variant": "lotto", "best": "120", "bound": "16 (counting)"}
+{"id": "covering-83-11-4-13", "params": {"v": 83, "k": 11, "t": 4, "m": 13}, "variant": "lotto", "best": "119", "bound": "16 (counting)"}
 {"id": "covering-84-11-4-13", "params": {"v": 84, "k": 11, "t": 4, "m": 13}, "variant": "lotto", "best": "124", "bound": "17 (counting)"}
-{"id": "covering-85-11-4-13", "params": {"v": 85, "k": 11, "t": 4, "m": 13}, "variant": "lotto", "best": "131", "bound": "17 (counting)"}
+{"id": "covering-85-11-4-13", "params": {"v": 85, "k": 11, "t": 4, "m": 13}, "variant": "lotto", "best": "130", "bound": "17 (counting)"}
 {"id": "covering-86-11-4-13", "params": {"v": 86, "k": 11, "t": 4, "m": 13}, "variant": "lotto", "best": "135", "bound": "18 (counting)"}
 {"id": "covering-87-11-4-13", "params": {"v": 87, "k": 11, "t": 4, "m": 13}, "variant": "lotto", "best": "142", "bound": "19 (counting)"}
 {"id": "covering-88-11-4-13", "params": {"v": 88, "k": 11, "t": 4, "m": 13}, "variant": "lotto", "best": "146", "bound": "19 (counting)"}
@@ -35290,10 +35292,10 @@
 {"id": "covering-71-11-4-14", "params": {"v": 71, "k": 11, "t": 4, "m": 14}, "variant": "lotto", "best": "49", "bound": "8 (counting)"}
 {"id": "covering-72-11-4-14", "params": {"v": 72, "k": 11, "t": 4, "m": 14}, "variant": "lotto", "best": "52", "bound": "8 (counting)"}
 {"id": "covering-73-11-4-14", "params": {"v": 73, "k": 11, "t": 4, "m": 14}, "variant": "lotto", "best": "55", "bound": "8 (counting)"}
-{"id": "covering-74-11-4-14", "params": {"v": 74, "k": 11, "t": 4, "m": 14}, "variant": "lotto", "best": "59", "bound": "9 (counting)"}
-{"id": "covering-75-11-4-14", "params": {"v": 75, "k": 11, "t": 4, "m": 14}, "variant": "lotto", "best": "63", "bound": "9 (counting)"}
-{"id": "covering-76-11-4-14", "params": {"v": 76, "k": 11, "t": 4, "m": 14}, "variant": "lotto", "best": "67", "bound": "9 (counting)"}
-{"id": "covering-77-11-4-14", "params": {"v": 77, "k": 11, "t": 4, "m": 14}, "variant": "lotto", "best": "70", "bound": "10 (counting)"}
+{"id": "covering-74-11-4-14", "params": {"v": 74, "k": 11, "t": 4, "m": 14}, "variant": "lotto", "best": "58", "bound": "9 (counting)"}
+{"id": "covering-75-11-4-14", "params": {"v": 75, "k": 11, "t": 4, "m": 14}, "variant": "lotto", "best": "61", "bound": "9 (counting)"}
+{"id": "covering-76-11-4-14", "params": {"v": 76, "k": 11, "t": 4, "m": 14}, "variant": "lotto", "best": "65", "bound": "9 (counting)"}
+{"id": "covering-77-11-4-14", "params": {"v": 77, "k": 11, "t": 4, "m": 14}, "variant": "lotto", "best": "69", "bound": "10 (counting)"}
 {"id": "covering-78-11-4-14", "params": {"v": 78, "k": 11, "t": 4, "m": 14}, "variant": "lotto", "best": "73", "bound": "10 (counting)"}
 {"id": "covering-79-11-4-14", "params": {"v": 79, "k": 11, "t": 4, "m": 14}, "variant": "lotto", "best": "76", "bound": "11 (counting)"}
 {"id": "covering-80-11-4-14", "params": {"v": 80, "k": 11, "t": 4, "m": 14}, "variant": "lotto", "best": "80", "bound": "11 (counting)"}
@@ -35306,7 +35308,7 @@
 {"id": "covering-87-11-4-14", "params": {"v": 87, "k": 11, "t": 4, "m": 14}, "variant": "lotto", "best": "111", "bound": "14 (counting)"}
 {"id": "covering-88-11-4-14", "params": {"v": 88, "k": 11, "t": 4, "m": 14}, "variant": "lotto", "best": "115", "bound": "15 (counting)"}
 {"id": "covering-89-11-4-14", "params": {"v": 89, "k": 11, "t": 4, "m": 14}, "variant": "lotto", "best": "119", "bound": "15 (counting)"}
-{"id": "covering-90-11-4-14", "params": {"v": 90, "k": 11, "t": 4, "m": 14}, "variant": "lotto", "best": "126", "bound": "16 (counting)"}
+{"id": "covering-90-11-4-14", "params": {"v": 90, "k": 11, "t": 4, "m": 14}, "variant": "lotto", "best": "125", "bound": "16 (counting)"}
 {"id": "covering-39-11-4-15", "params": {"v": 39, "k": 11, "t": 4, "m": 15}, "variant": "lotto", "best": "4", "bound": "2 (counting)"}
 {"id": "covering-40-11-4-15", "params": {"v": 40, "k": 11, "t": 4, "m": 15}, "variant": "lotto", "best": "4", "bound": "2 (counting)"}
 {"id": "covering-41-11-4-15", "params": {"v": 41, "k": 11, "t": 4, "m": 15}, "variant": "lotto", "best": "4", "bound": "2 (counting)"}
@@ -35347,15 +35349,15 @@
 {"id": "covering-76-11-4-15", "params": {"v": 76, "k": 11, "t": 4, "m": 15}, "variant": "lotto", "best": "52", "bound": "8 (counting)"}
 {"id": "covering-77-11-4-15", "params": {"v": 77, "k": 11, "t": 4, "m": 15}, "variant": "lotto", "best": "56", "bound": "8 (counting)"}
 {"id": "covering-78-11-4-15", "params": {"v": 78, "k": 11, "t": 4, "m": 15}, "variant": "lotto", "best": "59", "bound": "8 (counting)"}
-{"id": "covering-79-11-4-15", "params": {"v": 79, "k": 11, "t": 4, "m": 15}, "variant": "lotto", "best": "63", "bound": "9 (counting)"}
-{"id": "covering-80-11-4-15", "params": {"v": 80, "k": 11, "t": 4, "m": 15}, "variant": "lotto", "best": "66", "bound": "9 (counting)"}
-{"id": "covering-81-11-4-15", "params": {"v": 81, "k": 11, "t": 4, "m": 15}, "variant": "lotto", "best": "70", "bound": "9 (counting)"}
-{"id": "covering-82-11-4-15", "params": {"v": 82, "k": 11, "t": 4, "m": 15}, "variant": "lotto", "best": "74", "bound": "10 (counting)"}
+{"id": "covering-79-11-4-15", "params": {"v": 79, "k": 11, "t": 4, "m": 15}, "variant": "lotto", "best": "62", "bound": "9 (counting)"}
+{"id": "covering-80-11-4-15", "params": {"v": 80, "k": 11, "t": 4, "m": 15}, "variant": "lotto", "best": "65", "bound": "9 (counting)"}
+{"id": "covering-81-11-4-15", "params": {"v": 81, "k": 11, "t": 4, "m": 15}, "variant": "lotto", "best": "68", "bound": "9 (counting)"}
+{"id": "covering-82-11-4-15", "params": {"v": 82, "k": 11, "t": 4, "m": 15}, "variant": "lotto", "best": "72", "bound": "10 (counting)"}
 {"id": "covering-83-11-4-15", "params": {"v": 83, "k": 11, "t": 4, "m": 15}, "variant": "lotto", "best": "77", "bound": "10 (counting)"}
-{"id": "covering-84-11-4-15", "params": {"v": 84, "k": 11, "t": 4, "m": 15}, "variant": "lotto", "best": "81", "bound": "10 (counting)"}
-{"id": "covering-85-11-4-15", "params": {"v": 85, "k": 11, "t": 4, "m": 15}, "variant": "lotto", "best": "85", "bound": "11 (counting)"}
-{"id": "covering-86-11-4-15", "params": {"v": 86, "k": 11, "t": 4, "m": 15}, "variant": "lotto", "best": "89", "bound": "11 (counting)"}
-{"id": "covering-87-11-4-15", "params": {"v": 87, "k": 11, "t": 4, "m": 15}, "variant": "lotto", "best": "93", "bound": "11 (counting)"}
+{"id": "covering-84-11-4-15", "params": {"v": 84, "k": 11, "t": 4, "m": 15}, "variant": "lotto", "best": "80", "bound": "10 (counting)"}
+{"id": "covering-85-11-4-15", "params": {"v": 85, "k": 11, "t": 4, "m": 15}, "variant": "lotto", "best": "83", "bound": "11 (counting)"}
+{"id": "covering-86-11-4-15", "params": {"v": 86, "k": 11, "t": 4, "m": 15}, "variant": "lotto", "best": "87", "bound": "11 (counting)"}
+{"id": "covering-87-11-4-15", "params": {"v": 87, "k": 11, "t": 4, "m": 15}, "variant": "lotto", "best": "91", "bound": "11 (counting)"}
 {"id": "covering-88-11-4-15", "params": {"v": 88, "k": 11, "t": 4, "m": 15}, "variant": "lotto", "best": "95", "bound": "12 (counting)"}
 {"id": "covering-89-11-4-15", "params": {"v": 89, "k": 11, "t": 4, "m": 15}, "variant": "lotto", "best": "98", "bound": "12 (counting)"}
 {"id": "covering-90-11-4-15", "params": {"v": 90, "k": 11, "t": 4, "m": 15}, "variant": "lotto", "best": "102", "bound": "13 (counting)"}
@@ -36402,7 +36404,7 @@
 {"id": "covering-30-11-6", "params": {"v": 30, "k": 11, "t": 6, "m": 6}, "best": "2721", "bound": "1607 (Schönheim)", "holder": "Bluskov and Sidorenko, 2025 (union optimization)"}
 {"id": "covering-31-11-6", "params": {"v": 31, "k": 11, "t": 6, "m": 6}, "best": "3468", "bound": "1911 (Schönheim)"}
 {"id": "covering-32-11-6", "params": {"v": 32, "k": 11, "t": 6, "m": 6}, "best": "4377", "bound": "2319 (La Jolla)", "holder": "Jan de Heer and Steve Muir, 2026 (Private Tools)"}
-{"id": "covering-33-11-6", "params": {"v": 33, "k": 11, "t": 6, "m": 6}, "best": "5621", "bound": "2748 (La Jolla)"}
+{"id": "covering-33-11-6", "params": {"v": 33, "k": 11, "t": 6, "m": 6}, "best": "5613", "bound": "2748 (La Jolla)"}
 {"id": "covering-34-11-6", "params": {"v": 34, "k": 11, "t": 6, "m": 6}, "best": "7007", "bound": "3379 (La Jolla)", "holder": "Jan de Heer and Steve Muir, 2026 (Private Tools)"}
 {"id": "covering-35-11-6", "params": {"v": 35, "k": 11, "t": 6, "m": 6}, "best": "8400", "bound": "4134 (La Jolla)", "holder": "Dietmar Pree, 2024 (Local search)"}
 {"id": "covering-36-11-6", "params": {"v": 36, "k": 11, "t": 6, "m": 6}, "best": "10556", "bound": "5031 (Schönheim)", "holder": "Dietmar Pree, 2024 (Local search)"}
@@ -37252,7 +37254,7 @@
 {"id": "covering-22-11-8-9", "params": {"v": 22, "k": 11, "t": 8, "m": 9}, "variant": "lotto", "best": "905", "bound": "266 (counting)", "holder": "SG (07/11/2026)"}
 {"id": "covering-23-11-8-9", "params": {"v": 23, "k": 11, "t": 8, "m": 9}, "variant": "lotto", "best": "1512", "bound": "402 (counting)", "holder": "Evandro De Simone (09/11/2026)"}
 {"id": "covering-24-11-8-9", "params": {"v": 24, "k": 11, "t": 8, "m": 9}, "variant": "lotto", "best": "2305", "bound": "595 (counting)"}
-{"id": "covering-25-11-8-9", "params": {"v": 25, "k": 11, "t": 8, "m": 9}, "variant": "lotto", "best": "3432", "bound": "864 (counting)"}
+{"id": "covering-25-11-8-9", "params": {"v": 25, "k": 11, "t": 8, "m": 9}, "variant": "lotto", "best": "3302", "bound": "864 (counting)"}
 {"id": "covering-26-11-8-9", "params": {"v": 26, "k": 11, "t": 8, "m": 9}, "variant": "lotto", "best": "4631", "bound": "1235 (counting)"}
 {"id": "covering-27-11-8-9", "params": {"v": 27, "k": 11, "t": 8, "m": 9}, "variant": "lotto", "best": "6107", "bound": "1740 (counting)"}
 {"id": "covering-28-11-8-9", "params": {"v": 28, "k": 11, "t": 8, "m": 9}, "variant": "lotto", "best": "8154", "bound": "2415 (counting)"}
@@ -37452,9 +37454,9 @@
 {"id": "covering-17-11-9-10", "params": {"v": 17, "k": 11, "t": 9, "m": 10}, "variant": "lotto", "best": "129", "bound": "58 (counting)"}
 {"id": "covering-18-11-9-10", "params": {"v": 18, "k": 11, "t": 9, "m": 10}, "variant": "lotto", "best": "264", "bound": "111 (counting)"}
 {"id": "covering-19-11-9-10", "params": {"v": 19, "k": 11, "t": 9, "m": 10}, "variant": "lotto", "best": "520", "bound": "205 (counting)"}
-{"id": "covering-20-11-9-10", "params": {"v": 20, "k": 11, "t": 9, "m": 10}, "variant": "lotto", "best": "1026", "bound": "366 (counting)"}
-{"id": "covering-21-11-9-10", "params": {"v": 21, "k": 11, "t": 9, "m": 10}, "variant": "lotto", "best": "1892", "bound": "629 (counting)"}
-{"id": "covering-22-11-9-10", "params": {"v": 22, "k": 11, "t": 9, "m": 10}, "variant": "lotto", "best": "3286", "bound": "1050 (counting)"}
+{"id": "covering-20-11-9-10", "params": {"v": 20, "k": 11, "t": 9, "m": 10}, "variant": "lotto", "best": "968", "bound": "366 (counting)"}
+{"id": "covering-21-11-9-10", "params": {"v": 21, "k": 11, "t": 9, "m": 10}, "variant": "lotto", "best": "1719", "bound": "629 (counting)"}
+{"id": "covering-22-11-9-10", "params": {"v": 22, "k": 11, "t": 9, "m": 10}, "variant": "lotto", "best": "2993", "bound": "1050 (counting)"}
 {"id": "covering-23-11-9-10", "params": {"v": 23, "k": 11, "t": 9, "m": 10}, "variant": "lotto", "best": "5004", "bound": "1706 (counting)"}
 {"id": "covering-24-11-9-10", "params": {"v": 24, "k": 11, "t": 9, "m": 10}, "variant": "lotto", "best": "8323", "bound": "2702 (counting)"}
 {"id": "covering-25-11-9-10", "params": {"v": 25, "k": 11, "t": 9, "m": 10}, "variant": "lotto", "best": "13590", "bound": "4186 (counting)"}
@@ -37609,7 +37611,7 @@
 {"id": "covering-19-11-10-12", "params": {"v": 19, "k": 11, "t": 10, "m": 12}, "variant": "lotto", "best": "320", "bound": "160 (counting)", "holder": "rené cadière (09/11/2026)"}
 {"id": "covering-20-11-10-12", "params": {"v": 20, "k": 11, "t": 10, "m": 12}, "variant": "lotto", "best": "662", "bound": "312 (counting)", "holder": "rené cadière (11/11/2026)"}
 {"id": "covering-21-11-10-12", "params": {"v": 21, "k": 11, "t": 10, "m": 12}, "variant": "lotto", "best": "1298", "bound": "583 (counting)", "holder": "rené cadière (13/11/2026)"}
-{"id": "covering-22-11-10-12", "params": {"v": 22, "k": 11, "t": 10, "m": 12}, "variant": "lotto", "best": "3286", "bound": "1050 (counting)"}
+{"id": "covering-22-11-10-12", "params": {"v": 22, "k": 11, "t": 10, "m": 12}, "variant": "lotto", "best": "2993", "bound": "1050 (counting)"}
 {"id": "covering-23-11-10-12", "params": {"v": 23, "k": 11, "t": 10, "m": 12}, "variant": "lotto", "best": "6455", "bound": "1833 (counting)"}
 {"id": "covering-24-11-10-12", "params": {"v": 24, "k": 11, "t": 10, "m": 12}, "variant": "lotto", "best": "11380", "bound": "3105 (counting)"}
 {"id": "covering-25-11-10-12", "params": {"v": 25, "k": 11, "t": 10, "m": 12}, "variant": "lotto", "best": "19464", "bound": "5124 (counting)"}
@@ -37652,7 +37654,7 @@
 {"id": "covering-22-11-10-16", "params": {"v": 22, "k": 11, "t": 10, "m": 16}, "variant": "lotto", "best": "37", "bound": "14 (counting)"}
 {"id": "covering-23-11-10-16", "params": {"v": 23, "k": 11, "t": 10, "m": 16}, "variant": "lotto", "best": "65", "bound": "23 (counting)"}
 {"id": "covering-24-11-10-16", "params": {"v": 24, "k": 11, "t": 10, "m": 16}, "variant": "lotto", "best": "153", "bound": "37 (counting)"}
-{"id": "covering-25-11-10-16", "params": {"v": 25, "k": 11, "t": 10, "m": 16}, "variant": "lotto", "best": "307", "bound": "59 (counting)"}
+{"id": "covering-25-11-10-16", "params": {"v": 25, "k": 11, "t": 10, "m": 16}, "variant": "lotto", "best": "290", "bound": "59 (counting)"}
 {"id": "covering-26-11-10-16", "params": {"v": 26, "k": 11, "t": 10, "m": 16}, "variant": "lotto", "best": "515", "bound": "92 (counting)"}
 {"id": "covering-27-11-10-16", "params": {"v": 27, "k": 11, "t": 10, "m": 16}, "variant": "lotto", "best": "891", "bound": "142 (counting)"}
 {"id": "covering-28-11-10-16", "params": {"v": 28, "k": 11, "t": 10, "m": 16}, "variant": "lotto", "best": "1487", "bound": "214 (counting)"}
@@ -40608,7 +40610,7 @@
 {"id": "covering-29-12-5-6", "params": {"v": 29, "k": 12, "t": 5, "m": 6}, "variant": "lotto", "best": "123", "bound": "34 (counting)"}
 {"id": "covering-30-12-5-6", "params": {"v": 30, "k": 12, "t": 5, "m": 6}, "variant": "lotto", "best": "142", "bound": "40 (counting)"}
 {"id": "covering-31-12-5-6", "params": {"v": 31, "k": 12, "t": 5, "m": 6}, "variant": "lotto", "best": "189", "bound": "47 (counting)"}
-{"id": "covering-32-12-5-6", "params": {"v": 32, "k": 12, "t": 5, "m": 6}, "variant": "lotto", "best": "222", "bound": "55 (counting)"}
+{"id": "covering-32-12-5-6", "params": {"v": 32, "k": 12, "t": 5, "m": 6}, "variant": "lotto", "best": "221", "bound": "55 (counting)"}
 {"id": "covering-33-12-5-6", "params": {"v": 33, "k": 12, "t": 5, "m": 6}, "variant": "lotto", "best": "283", "bound": "64 (counting)"}
 {"id": "covering-34-12-5-6", "params": {"v": 34, "k": 12, "t": 5, "m": 6}, "variant": "lotto", "best": "330", "bound": "74 (counting)"}
 {"id": "covering-35-12-5-6", "params": {"v": 35, "k": 12, "t": 5, "m": 6}, "variant": "lotto", "best": "402", "bound": "85 (counting)"}
@@ -40711,7 +40713,7 @@
 {"id": "covering-31-12-5-9", "params": {"v": 31, "k": 12, "t": 5, "m": 9}, "variant": "lotto", "best": "19", "bound": "5 (counting)"}
 {"id": "covering-32-12-5-9", "params": {"v": 32, "k": 12, "t": 5, "m": 9}, "variant": "lotto", "best": "20", "bound": "6 (counting)"}
 {"id": "covering-33-12-5-9", "params": {"v": 33, "k": 12, "t": 5, "m": 9}, "variant": "lotto", "best": "29", "bound": "7 (counting)"}
-{"id": "covering-34-12-5-9", "params": {"v": 34, "k": 12, "t": 5, "m": 9}, "variant": "lotto", "best": "33", "bound": "8 (counting)"}
+{"id": "covering-34-12-5-9", "params": {"v": 34, "k": 12, "t": 5, "m": 9}, "variant": "lotto", "best": "32", "bound": "8 (counting)"}
 {"id": "covering-35-12-5-9", "params": {"v": 35, "k": 12, "t": 5, "m": 9}, "variant": "lotto", "best": "41", "bound": "8 (counting)"}
 {"id": "covering-36-12-5-9", "params": {"v": 36, "k": 12, "t": 5, "m": 9}, "variant": "lotto", "best": "42", "bound": "9 (counting)"}
 {"id": "covering-37-12-5-9", "params": {"v": 37, "k": 12, "t": 5, "m": 9}, "variant": "lotto", "best": "57", "bound": "11 (counting)"}
@@ -40787,13 +40789,13 @@
 {"id": "covering-53-12-5-10", "params": {"v": 53, "k": 12, "t": 5, "m": 10}, "variant": "lotto", "best": "209", "bound": "29 (counting)"}
 {"id": "covering-54-12-5-10", "params": {"v": 54, "k": 12, "t": 5, "m": 10}, "variant": "lotto", "best": "228", "bound": "31 (counting)"}
 {"id": "covering-55-12-5-10", "params": {"v": 55, "k": 12, "t": 5, "m": 10}, "variant": "lotto", "best": "275", "bound": "33 (counting)"}
-{"id": "covering-56-12-5-10", "params": {"v": 56, "k": 12, "t": 5, "m": 10}, "variant": "lotto", "best": "308", "bound": "36 (counting)"}
+{"id": "covering-56-12-5-10", "params": {"v": 56, "k": 12, "t": 5, "m": 10}, "variant": "lotto", "best": "307", "bound": "36 (counting)"}
 {"id": "covering-57-12-5-10", "params": {"v": 57, "k": 12, "t": 5, "m": 10}, "variant": "lotto", "best": "350", "bound": "39 (counting)"}
-{"id": "covering-58-12-5-10", "params": {"v": 58, "k": 12, "t": 5, "m": 10}, "variant": "lotto", "best": "395", "bound": "42 (counting)"}
-{"id": "covering-59-12-5-10", "params": {"v": 59, "k": 12, "t": 5, "m": 10}, "variant": "lotto", "best": "430", "bound": "46 (counting)"}
-{"id": "covering-60-12-5-10", "params": {"v": 60, "k": 12, "t": 5, "m": 10}, "variant": "lotto", "best": "475", "bound": "49 (counting)"}
-{"id": "covering-61-12-5-10", "params": {"v": 61, "k": 12, "t": 5, "m": 10}, "variant": "lotto", "best": "517", "bound": "53 (counting)"}
-{"id": "covering-62-12-5-10", "params": {"v": 62, "k": 12, "t": 5, "m": 10}, "variant": "lotto", "best": "571", "bound": "57 (counting)"}
+{"id": "covering-58-12-5-10", "params": {"v": 58, "k": 12, "t": 5, "m": 10}, "variant": "lotto", "best": "394", "bound": "42 (counting)"}
+{"id": "covering-59-12-5-10", "params": {"v": 59, "k": 12, "t": 5, "m": 10}, "variant": "lotto", "best": "429", "bound": "46 (counting)"}
+{"id": "covering-60-12-5-10", "params": {"v": 60, "k": 12, "t": 5, "m": 10}, "variant": "lotto", "best": "474", "bound": "49 (counting)"}
+{"id": "covering-61-12-5-10", "params": {"v": 61, "k": 12, "t": 5, "m": 10}, "variant": "lotto", "best": "516", "bound": "53 (counting)"}
+{"id": "covering-62-12-5-10", "params": {"v": 62, "k": 12, "t": 5, "m": 10}, "variant": "lotto", "best": "570", "bound": "57 (counting)"}
 {"id": "covering-63-12-5-10", "params": {"v": 63, "k": 12, "t": 5, "m": 10}, "variant": "lotto", "best": "625", "bound": "61 (counting)"}
 {"id": "covering-64-12-5-10", "params": {"v": 64, "k": 12, "t": 5, "m": 10}, "variant": "lotto", "best": "679", "bound": "66 (counting)"}
 {"id": "covering-65-12-5-10", "params": {"v": 65, "k": 12, "t": 5, "m": 10}, "variant": "lotto", "best": "751", "bound": "70 (counting)"}
@@ -40897,11 +40899,11 @@
 {"id": "covering-65-12-5-12", "params": {"v": 65, "k": 12, "t": 5, "m": 12}, "variant": "lotto", "best": "245", "bound": "28 (counting)"}
 {"id": "covering-66-12-5-12", "params": {"v": 66, "k": 12, "t": 5, "m": 12}, "variant": "lotto", "best": "264", "bound": "30 (counting)"}
 {"id": "covering-67-12-5-12", "params": {"v": 67, "k": 12, "t": 5, "m": 12}, "variant": "lotto", "best": "311", "bound": "32 (counting)"}
-{"id": "covering-68-12-5-12", "params": {"v": 68, "k": 12, "t": 5, "m": 12}, "variant": "lotto", "best": "344", "bound": "34 (counting)"}
+{"id": "covering-68-12-5-12", "params": {"v": 68, "k": 12, "t": 5, "m": 12}, "variant": "lotto", "best": "343", "bound": "34 (counting)"}
 {"id": "covering-69-12-5-12", "params": {"v": 69, "k": 12, "t": 5, "m": 12}, "variant": "lotto", "best": "391", "bound": "36 (counting)"}
-{"id": "covering-70-12-5-12", "params": {"v": 70, "k": 12, "t": 5, "m": 12}, "variant": "lotto", "best": "424", "bound": "39 (counting)"}
-{"id": "covering-71-12-5-12", "params": {"v": 71, "k": 12, "t": 5, "m": 12}, "variant": "lotto", "best": "474", "bound": "41 (counting)"}
-{"id": "covering-72-12-5-12", "params": {"v": 72, "k": 12, "t": 5, "m": 12}, "variant": "lotto", "best": "522", "bound": "44 (counting)"}
+{"id": "covering-70-12-5-12", "params": {"v": 70, "k": 12, "t": 5, "m": 12}, "variant": "lotto", "best": "423", "bound": "39 (counting)"}
+{"id": "covering-71-12-5-12", "params": {"v": 71, "k": 12, "t": 5, "m": 12}, "variant": "lotto", "best": "473", "bound": "41 (counting)"}
+{"id": "covering-72-12-5-12", "params": {"v": 72, "k": 12, "t": 5, "m": 12}, "variant": "lotto", "best": "521", "bound": "44 (counting)"}
 {"id": "covering-73-12-5-12", "params": {"v": 73, "k": 12, "t": 5, "m": 12}, "variant": "lotto", "best": "576", "bound": "46 (counting)"}
 {"id": "covering-74-12-5-12", "params": {"v": 74, "k": 12, "t": 5, "m": 12}, "variant": "lotto", "best": "625", "bound": "49 (counting)"}
 {"id": "covering-75-12-5-12", "params": {"v": 75, "k": 12, "t": 5, "m": 12}, "variant": "lotto", "best": "679", "bound": "52 (counting)"}
@@ -41004,17 +41006,17 @@
 {"id": "covering-77-12-5-14", "params": {"v": 77, "k": 12, "t": 5, "m": 14}, "variant": "lotto", "best": "283", "bound": "28 (counting)"}
 {"id": "covering-78-12-5-14", "params": {"v": 78, "k": 12, "t": 5, "m": 14}, "variant": "lotto", "best": "314", "bound": "30 (counting)"}
 {"id": "covering-79-12-5-14", "params": {"v": 79, "k": 12, "t": 5, "m": 14}, "variant": "lotto", "best": "361", "bound": "31 (counting)"}
-{"id": "covering-80-12-5-14", "params": {"v": 80, "k": 12, "t": 5, "m": 14}, "variant": "lotto", "best": "394", "bound": "33 (counting)"}
+{"id": "covering-80-12-5-14", "params": {"v": 80, "k": 12, "t": 5, "m": 14}, "variant": "lotto", "best": "393", "bound": "33 (counting)"}
 {"id": "covering-81-12-5-14", "params": {"v": 81, "k": 12, "t": 5, "m": 14}, "variant": "lotto", "best": "436", "bound": "35 (counting)"}
-{"id": "covering-82-12-5-14", "params": {"v": 82, "k": 12, "t": 5, "m": 14}, "variant": "lotto", "best": "481", "bound": "36 (counting)"}
-{"id": "covering-83-12-5-14", "params": {"v": 83, "k": 12, "t": 5, "m": 14}, "variant": "lotto", "best": "516", "bound": "38 (counting)"}
+{"id": "covering-82-12-5-14", "params": {"v": 82, "k": 12, "t": 5, "m": 14}, "variant": "lotto", "best": "480", "bound": "36 (counting)"}
+{"id": "covering-83-12-5-14", "params": {"v": 83, "k": 12, "t": 5, "m": 14}, "variant": "lotto", "best": "515", "bound": "38 (counting)"}
 {"id": "covering-84-12-5-14", "params": {"v": 84, "k": 12, "t": 5, "m": 14}, "variant": "lotto", "best": "558", "bound": "40 (counting)"}
-{"id": "covering-85-12-5-14", "params": {"v": 85, "k": 12, "t": 5, "m": 14}, "variant": "lotto", "best": "603", "bound": "42 (counting)"}
-{"id": "covering-86-12-5-14", "params": {"v": 86, "k": 12, "t": 5, "m": 14}, "variant": "lotto", "best": "638", "bound": "45 (counting)"}
-{"id": "covering-87-12-5-14", "params": {"v": 87, "k": 12, "t": 5, "m": 14}, "variant": "lotto", "best": "683", "bound": "47 (counting)"}
-{"id": "covering-88-12-5-14", "params": {"v": 88, "k": 12, "t": 5, "m": 14}, "variant": "lotto", "best": "725", "bound": "49 (counting)"}
-{"id": "covering-89-12-5-14", "params": {"v": 89, "k": 12, "t": 5, "m": 14}, "variant": "lotto", "best": "770", "bound": "52 (counting)"}
-{"id": "covering-90-12-5-14", "params": {"v": 90, "k": 12, "t": 5, "m": 14}, "variant": "lotto", "best": "812", "bound": "54 (counting)"}
+{"id": "covering-85-12-5-14", "params": {"v": 85, "k": 12, "t": 5, "m": 14}, "variant": "lotto", "best": "602", "bound": "42 (counting)"}
+{"id": "covering-86-12-5-14", "params": {"v": 86, "k": 12, "t": 5, "m": 14}, "variant": "lotto", "best": "637", "bound": "45 (counting)"}
+{"id": "covering-87-12-5-14", "params": {"v": 87, "k": 12, "t": 5, "m": 14}, "variant": "lotto", "best": "682", "bound": "47 (counting)"}
+{"id": "covering-88-12-5-14", "params": {"v": 88, "k": 12, "t": 5, "m": 14}, "variant": "lotto", "best": "724", "bound": "49 (counting)"}
+{"id": "covering-89-12-5-14", "params": {"v": 89, "k": 12, "t": 5, "m": 14}, "variant": "lotto", "best": "769", "bound": "52 (counting)"}
+{"id": "covering-90-12-5-14", "params": {"v": 90, "k": 12, "t": 5, "m": 14}, "variant": "lotto", "best": "811", "bound": "54 (counting)"}
 {"id": "covering-39-12-5-15", "params": {"v": 39, "k": 12, "t": 5, "m": 15}, "variant": "lotto", "best": "5", "bound": "2 (counting)"}
 {"id": "covering-40-12-5-15", "params": {"v": 40, "k": 12, "t": 5, "m": 15}, "variant": "lotto", "best": "5", "bound": "3 (counting)"}
 {"id": "covering-41-12-5-15", "params": {"v": 41, "k": 12, "t": 5, "m": 15}, "variant": "lotto", "best": "5", "bound": "3 (counting)"}
@@ -42693,7 +42695,7 @@
 {"id": "covering-19-12-11-13", "params": {"v": 19, "k": 12, "t": 11, "m": 13}, "variant": "lotto", "best": "214", "bound": "105 (counting)"}
 {"id": "covering-20-12-11-13", "params": {"v": 20, "k": 12, "t": 11, "m": 13}, "variant": "lotto", "best": "481", "bound": "226 (counting)"}
 {"id": "covering-21-12-11-13", "params": {"v": 21, "k": 12, "t": 11, "m": 13}, "variant": "lotto", "best": "1052", "bound": "462 (counting)", "holder": "rené cadière (11/11/2026)"}
-{"id": "covering-22-12-11-13", "params": {"v": 22, "k": 12, "t": 11, "m": 13}, "variant": "lotto", "best": "2613", "bound": "905 (counting)"}
+{"id": "covering-22-12-11-13", "params": {"v": 22, "k": 12, "t": 11, "m": 13}, "variant": "lotto", "best": "2257", "bound": "905 (counting)"}
 {"id": "covering-23-12-11-13", "params": {"v": 23, "k": 12, "t": 11, "m": 13}, "variant": "lotto", "best": "5004", "bound": "1706 (counting)"}
 {"id": "covering-24-12-11-13", "params": {"v": 24, "k": 12, "t": 11, "m": 13}, "variant": "lotto", "best": "10707", "bound": "3105 (counting)"}
 {"id": "covering-16-12-11-14", "params": {"v": 16, "k": 12, "t": 11, "m": 14}, "variant": "lotto", "best": "4", "bound": "3 (counting)"}
@@ -42740,7 +42742,7 @@
 {"id": "covering-24-12-11-18", "params": {"v": 24, "k": 12, "t": 11, "m": 18}, "variant": "lotto", "best": "37", "bound": "13 (counting)"}
 {"id": "covering-25-12-11-18", "params": {"v": 25, "k": 12, "t": 11, "m": 18}, "variant": "lotto", "best": "70", "bound": "22 (counting)"}
 {"id": "covering-26-12-11-18", "params": {"v": 26, "k": 12, "t": 11, "m": 18}, "variant": "lotto", "best": "168", "bound": "36 (counting)"}
-{"id": "covering-27-12-11-18", "params": {"v": 27, "k": 12, "t": 11, "m": 18}, "variant": "lotto", "best": "325", "bound": "57 (counting)"}
+{"id": "covering-27-12-11-18", "params": {"v": 27, "k": 12, "t": 11, "m": 18}, "variant": "lotto", "best": "321", "bound": "57 (counting)"}
 {"id": "covering-28-12-11-18", "params": {"v": 28, "k": 12, "t": 11, "m": 18}, "variant": "lotto", "best": "545", "bound": "91 (counting)", "holder": "Terenzio Lazzarotto (08/11/2026)"}
 {"id": "covering-22-12-11-19", "params": {"v": 22, "k": 12, "t": 11, "m": 19}, "variant": "lotto", "best": "4", "bound": "3 (counting)"}
 {"id": "covering-23-12-11-19", "params": {"v": 23, "k": 12, "t": 11, "m": 19}, "variant": "lotto", "best": "8", "bound": "4 (counting)"}
@@ -44686,13 +44688,13 @@
 {"id": "covering-52-13-4-6", "params": {"v": 52, "k": 13, "t": 4, "m": 6}, "variant": "lotto", "best": "113", "bound": "35 (counting)", "holder": "SG (10/11/2026)"}
 {"id": "covering-53-13-4-6", "params": {"v": 53, "k": 13, "t": 4, "m": 6}, "variant": "lotto", "best": "124", "bound": "38 (counting)", "holder": "SG (10/11/2026)"}
 {"id": "covering-54-13-4-6", "params": {"v": 54, "k": 13, "t": 4, "m": 6}, "variant": "lotto", "best": "161", "bound": "41 (counting)"}
-{"id": "covering-55-13-4-6", "params": {"v": 55, "k": 13, "t": 4, "m": 6}, "variant": "lotto", "best": "176", "bound": "44 (counting)"}
+{"id": "covering-55-13-4-6", "params": {"v": 55, "k": 13, "t": 4, "m": 6}, "variant": "lotto", "best": "173", "bound": "44 (counting)"}
 {"id": "covering-56-13-4-6", "params": {"v": 56, "k": 13, "t": 4, "m": 6}, "variant": "lotto", "best": "188", "bound": "47 (counting)", "holder": "SG (10/11/2026)"}
-{"id": "covering-57-13-4-6", "params": {"v": 57, "k": 13, "t": 4, "m": 6}, "variant": "lotto", "best": "224", "bound": "50 (counting)"}
+{"id": "covering-57-13-4-6", "params": {"v": 57, "k": 13, "t": 4, "m": 6}, "variant": "lotto", "best": "201", "bound": "50 (counting)"}
 {"id": "covering-58-13-4-6", "params": {"v": 58, "k": 13, "t": 4, "m": 6}, "variant": "lotto", "best": "239", "bound": "53 (counting)"}
-{"id": "covering-59-13-4-6", "params": {"v": 59, "k": 13, "t": 4, "m": 6}, "variant": "lotto", "best": "262", "bound": "57 (counting)", "holder": "SG (10/11/2026)"}
-{"id": "covering-60-13-4-6", "params": {"v": 60, "k": 13, "t": 4, "m": 6}, "variant": "lotto", "best": "289", "bound": "60 (counting)", "holder": "SG (10/11/2026)"}
-{"id": "covering-61-13-4-6", "params": {"v": 61, "k": 13, "t": 4, "m": 6}, "variant": "lotto", "best": "312", "bound": "64 (counting)", "holder": "SG (10/11/2026)"}
+{"id": "covering-59-13-4-6", "params": {"v": 59, "k": 13, "t": 4, "m": 6}, "variant": "lotto", "best": "260", "bound": "57 (counting)"}
+{"id": "covering-60-13-4-6", "params": {"v": 60, "k": 13, "t": 4, "m": 6}, "variant": "lotto", "best": "279", "bound": "60 (counting)"}
+{"id": "covering-61-13-4-6", "params": {"v": 61, "k": 13, "t": 4, "m": 6}, "variant": "lotto", "best": "306", "bound": "64 (counting)"}
 {"id": "covering-62-13-4-6", "params": {"v": 62, "k": 13, "t": 4, "m": 6}, "variant": "lotto", "best": "351", "bound": "68 (counting)"}
 {"id": "covering-63-13-4-6", "params": {"v": 63, "k": 13, "t": 4, "m": 6}, "variant": "lotto", "best": "384", "bound": "73 (counting)"}
 {"id": "covering-64-13-4-6", "params": {"v": 64, "k": 13, "t": 4, "m": 6}, "variant": "lotto", "best": "408", "bound": "77 (counting)", "holder": "SG (10/11/2026)"}
@@ -45544,7 +45546,7 @@
 {"id": "covering-42-13-5-7", "params": {"v": 42, "k": 13, "t": 5, "m": 7}, "variant": "lotto", "best": "242", "bound": "48 (counting)"}
 {"id": "covering-43-13-5-7", "params": {"v": 43, "k": 13, "t": 5, "m": 7}, "variant": "lotto", "best": "293", "bound": "53 (counting)"}
 {"id": "covering-44-13-5-7", "params": {"v": 44, "k": 13, "t": 5, "m": 7}, "variant": "lotto", "best": "339", "bound": "59 (counting)"}
-{"id": "covering-45-13-5-7", "params": {"v": 45, "k": 13, "t": 5, "m": 7}, "variant": "lotto", "best": "407", "bound": "66 (counting)"}
+{"id": "covering-45-13-5-7", "params": {"v": 45, "k": 13, "t": 5, "m": 7}, "variant": "lotto", "best": "399", "bound": "66 (counting)"}
 {"id": "covering-46-13-5-7", "params": {"v": 46, "k": 13, "t": 5, "m": 7}, "variant": "lotto", "best": "464", "bound": "73 (counting)"}
 {"id": "covering-47-13-5-7", "params": {"v": 47, "k": 13, "t": 5, "m": 7}, "variant": "lotto", "best": "538", "bound": "81 (counting)"}
 {"id": "covering-48-13-5-7", "params": {"v": 48, "k": 13, "t": 5, "m": 7}, "variant": "lotto", "best": "613", "bound": "89 (counting)"}
@@ -45742,7 +45744,7 @@
 {"id": "covering-75-13-5-11", "params": {"v": 75, "k": 13, "t": 5, "m": 11}, "variant": "lotto", "best": "626", "bound": "54 (counting)"}
 {"id": "covering-76-13-5-11", "params": {"v": 76, "k": 13, "t": 5, "m": 11}, "variant": "lotto", "best": "680", "bound": "57 (counting)"}
 {"id": "covering-77-13-5-11", "params": {"v": 77, "k": 13, "t": 5, "m": 11}, "variant": "lotto", "best": "732", "bound": "61 (counting)"}
-{"id": "covering-78-13-5-11", "params": {"v": 78, "k": 13, "t": 5, "m": 11}, "variant": "lotto", "best": "800", "bound": "64 (counting)"}
+{"id": "covering-78-13-5-11", "params": {"v": 78, "k": 13, "t": 5, "m": 11}, "variant": "lotto", "best": "792", "bound": "64 (counting)"}
 {"id": "covering-79-13-5-11", "params": {"v": 79, "k": 13, "t": 5, "m": 11}, "variant": "lotto", "best": "857", "bound": "68 (counting)"}
 {"id": "covering-80-13-5-11", "params": {"v": 80, "k": 13, "t": 5, "m": 11}, "variant": "lotto", "best": "931", "bound": "72 (counting)"}
 {"id": "covering-30-13-5-12", "params": {"v": 30, "k": 13, "t": 5, "m": 12}, "variant": "lotto", "best": "4", "bound": "2 (counting)"}
@@ -47692,8 +47694,8 @@
 {"id": "covering-19-13-12-14", "params": {"v": 19, "k": 13, "t": 12, "m": 14}, "variant": "lotto", "best": "111", "bound": "58 (counting)"}
 {"id": "covering-20-13-12-14", "params": {"v": 20, "k": 13, "t": 12, "m": 14}, "variant": "lotto", "best": "298", "bound": "139 (counting)"}
 {"id": "covering-21-13-12-14", "params": {"v": 21, "k": 13, "t": 12, "m": 14}, "variant": "lotto", "best": "598", "bound": "313 (counting)"}
-{"id": "covering-22-13-12-14", "params": {"v": 22, "k": 13, "t": 12, "m": 14}, "variant": "lotto", "best": "1491", "bound": "671 (counting)"}
-{"id": "covering-23-13-12-14", "params": {"v": 23, "k": 13, "t": 12, "m": 14}, "variant": "lotto", "best": "3822", "bound": "1374 (counting)"}
+{"id": "covering-22-13-12-14", "params": {"v": 22, "k": 13, "t": 12, "m": 14}, "variant": "lotto", "best": "1475", "bound": "671 (counting)"}
+{"id": "covering-23-13-12-14", "params": {"v": 23, "k": 13, "t": 12, "m": 14}, "variant": "lotto", "best": "3311", "bound": "1374 (counting)"}
 {"id": "covering-24-13-12-14", "params": {"v": 24, "k": 13, "t": 12, "m": 14}, "variant": "lotto", "best": "8323", "bound": "2702 (counting)"}
 {"id": "covering-17-13-12-15", "params": {"v": 17, "k": 13, "t": 12, "m": 15}, "variant": "lotto", "best": "4", "bound": "3 (counting)"}
 {"id": "covering-18-13-12-15", "params": {"v": 18, "k": 13, "t": 12, "m": 15}, "variant": "lotto", "best": "10", "bound": "6 (counting)"}
@@ -47736,7 +47738,7 @@
 {"id": "covering-24-13-12-19", "params": {"v": 24, "k": 13, "t": 12, "m": 19}, "variant": "lotto", "best": "22", "bound": "9 (counting)"}
 {"id": "covering-25-13-12-19", "params": {"v": 25, "k": 13, "t": 12, "m": 19}, "variant": "lotto", "best": "48", "bound": "16 (counting)"}
 {"id": "covering-26-13-12-19", "params": {"v": 26, "k": 13, "t": 12, "m": 19}, "variant": "lotto", "best": "86", "bound": "28 (counting)"}
-{"id": "covering-27-13-12-19", "params": {"v": 27, "k": 13, "t": 12, "m": 19}, "variant": "lotto", "best": "239", "bound": "47 (counting)"}
+{"id": "covering-27-13-12-19", "params": {"v": 27, "k": 13, "t": 12, "m": 19}, "variant": "lotto", "best": "215", "bound": "47 (counting)"}
 {"id": "covering-28-13-12-19", "params": {"v": 28, "k": 13, "t": 12, "m": 19}, "variant": "lotto", "best": "458", "bound": "78 (counting)"}
 {"id": "covering-23-13-12-20", "params": {"v": 23, "k": 13, "t": 12, "m": 20}, "variant": "lotto", "best": "4", "bound": "3 (counting)"}
 {"id": "covering-24-13-12-20", "params": {"v": 24, "k": 13, "t": 12, "m": 20}, "variant": "lotto", "best": "9", "bound": "5 (counting)"}
@@ -49550,7 +49552,7 @@
 {"id": "covering-31-14-4-6", "params": {"v": 31, "k": 14, "t": 4, "m": 6}, "variant": "lotto", "best": "11", "bound": "5 (counting)", "holder": "SG (12/11/2026)"}
 {"id": "covering-32-14-4-6", "params": {"v": 32, "k": 14, "t": 4, "m": 6}, "variant": "lotto", "best": "13", "bound": "5 (counting)"}
 {"id": "covering-33-14-4-6", "params": {"v": 33, "k": 14, "t": 4, "m": 6}, "variant": "lotto", "best": "15", "bound": "6 (counting)"}
-{"id": "covering-34-14-4-6", "params": {"v": 34, "k": 14, "t": 4, "m": 6}, "variant": "lotto", "best": "18", "bound": "6 (counting)"}
+{"id": "covering-34-14-4-6", "params": {"v": 34, "k": 14, "t": 4, "m": 6}, "variant": "lotto", "best": "17", "bound": "6 (counting)"}
 {"id": "covering-35-14-4-6", "params": {"v": 35, "k": 14, "t": 4, "m": 6}, "variant": "lotto", "best": "21", "bound": "7 (counting)"}
 {"id": "covering-36-14-4-6", "params": {"v": 36, "k": 14, "t": 4, "m": 6}, "variant": "lotto", "best": "23", "bound": "7 (counting)"}
 {"id": "covering-37-14-4-6", "params": {"v": 37, "k": 14, "t": 4, "m": 6}, "variant": "lotto", "best": "26", "bound": "8 (counting)"}
@@ -49622,9 +49624,9 @@
 {"id": "covering-41-14-4-7", "params": {"v": 41, "k": 14, "t": 4, "m": 7}, "variant": "lotto", "best": "24", "bound": "7 (counting)"}
 {"id": "covering-42-14-4-7", "params": {"v": 42, "k": 14, "t": 4, "m": 7}, "variant": "lotto", "best": "24", "bound": "7 (counting)"}
 {"id": "covering-43-14-4-7", "params": {"v": 43, "k": 14, "t": 4, "m": 7}, "variant": "lotto", "best": "30", "bound": "8 (counting)"}
-{"id": "covering-44-14-4-7", "params": {"v": 44, "k": 14, "t": 4, "m": 7}, "variant": "lotto", "best": "33", "bound": "8 (counting)"}
+{"id": "covering-44-14-4-7", "params": {"v": 44, "k": 14, "t": 4, "m": 7}, "variant": "lotto", "best": "31", "bound": "8 (counting)"}
 {"id": "covering-45-14-4-7", "params": {"v": 45, "k": 14, "t": 4, "m": 7}, "variant": "lotto", "best": "36", "bound": "9 (counting)"}
-{"id": "covering-46-14-4-7", "params": {"v": 46, "k": 14, "t": 4, "m": 7}, "variant": "lotto", "best": "37", "bound": "9 (counting)"}
+{"id": "covering-46-14-4-7", "params": {"v": 46, "k": 14, "t": 4, "m": 7}, "variant": "lotto", "best": "36", "bound": "9 (counting)"}
 {"id": "covering-47-14-4-7", "params": {"v": 47, "k": 14, "t": 4, "m": 7}, "variant": "lotto", "best": "40", "bound": "10 (counting)"}
 {"id": "covering-48-14-4-7", "params": {"v": 48, "k": 14, "t": 4, "m": 7}, "variant": "lotto", "best": "41", "bound": "11 (counting)"}
 {"id": "covering-49-14-4-7", "params": {"v": 49, "k": 14, "t": 4, "m": 7}, "variant": "lotto", "best": "45", "bound": "11 (counting)"}
@@ -49743,7 +49745,7 @@
 {"id": "covering-41-14-4-9", "params": {"v": 41, "k": 14, "t": 4, "m": 9}, "variant": "lotto", "best": "6", "bound": "3 (counting)"}
 {"id": "covering-42-14-4-9", "params": {"v": 42, "k": 14, "t": 4, "m": 9}, "variant": "lotto", "best": "6", "bound": "3 (counting)"}
 {"id": "covering-43-14-4-9", "params": {"v": 43, "k": 14, "t": 4, "m": 9}, "variant": "lotto", "best": "8", "bound": "4 (counting)"}
-{"id": "covering-44-14-4-9", "params": {"v": 44, "k": 14, "t": 4, "m": 9}, "variant": "lotto", "best": "10", "bound": "4 (counting)"}
+{"id": "covering-44-14-4-9", "params": {"v": 44, "k": 14, "t": 4, "m": 9}, "variant": "lotto", "best": "9", "bound": "4 (counting)"}
 {"id": "covering-45-14-4-9", "params": {"v": 45, "k": 14, "t": 4, "m": 9}, "variant": "lotto", "best": "10", "bound": "4 (counting)"}
 {"id": "covering-46-14-4-9", "params": {"v": 46, "k": 14, "t": 4, "m": 9}, "variant": "lotto", "best": "11", "bound": "4 (counting)"}
 {"id": "covering-47-14-4-9", "params": {"v": 47, "k": 14, "t": 4, "m": 9}, "variant": "lotto", "best": "13", "bound": "5 (counting)"}
@@ -49809,7 +49811,7 @@
 {"id": "covering-59-14-4-10", "params": {"v": 59, "k": 14, "t": 4, "m": 10}, "variant": "lotto", "best": "25", "bound": "6 (counting)"}
 {"id": "covering-60-14-4-10", "params": {"v": 60, "k": 14, "t": 4, "m": 10}, "variant": "lotto", "best": "27", "bound": "6 (counting)"}
 {"id": "covering-61-14-4-10", "params": {"v": 61, "k": 14, "t": 4, "m": 10}, "variant": "lotto", "best": "29", "bound": "7 (counting)"}
-{"id": "covering-62-14-4-10", "params": {"v": 62, "k": 14, "t": 4, "m": 10}, "variant": "lotto", "best": "32", "bound": "7 (counting)"}
+{"id": "covering-62-14-4-10", "params": {"v": 62, "k": 14, "t": 4, "m": 10}, "variant": "lotto", "best": "31", "bound": "7 (counting)"}
 {"id": "covering-63-14-4-10", "params": {"v": 63, "k": 14, "t": 4, "m": 10}, "variant": "lotto", "best": "35", "bound": "7 (counting)"}
 {"id": "covering-64-14-4-10", "params": {"v": 64, "k": 14, "t": 4, "m": 10}, "variant": "lotto", "best": "37", "bound": "8 (counting)"}
 {"id": "covering-65-14-4-10", "params": {"v": 65, "k": 14, "t": 4, "m": 10}, "variant": "lotto", "best": "40", "bound": "8 (counting)"}
@@ -49868,10 +49870,10 @@
 {"id": "covering-71-14-4-11", "params": {"v": 71, "k": 14, "t": 4, "m": 11}, "variant": "lotto", "best": "42", "bound": "8 (counting)"}
 {"id": "covering-72-14-4-11", "params": {"v": 72, "k": 14, "t": 4, "m": 11}, "variant": "lotto", "best": "44", "bound": "8 (counting)"}
 {"id": "covering-73-14-4-11", "params": {"v": 73, "k": 14, "t": 4, "m": 11}, "variant": "lotto", "best": "49", "bound": "8 (counting)"}
-{"id": "covering-74-14-4-11", "params": {"v": 74, "k": 14, "t": 4, "m": 11}, "variant": "lotto", "best": "51", "bound": "9 (counting)"}
+{"id": "covering-74-14-4-11", "params": {"v": 74, "k": 14, "t": 4, "m": 11}, "variant": "lotto", "best": "50", "bound": "9 (counting)"}
 {"id": "covering-75-14-4-11", "params": {"v": 75, "k": 14, "t": 4, "m": 11}, "variant": "lotto", "best": "54", "bound": "9 (counting)"}
 {"id": "covering-76-14-4-11", "params": {"v": 76, "k": 14, "t": 4, "m": 11}, "variant": "lotto", "best": "55", "bound": "9 (counting)"}
-{"id": "covering-77-14-4-11", "params": {"v": 77, "k": 14, "t": 4, "m": 11}, "variant": "lotto", "best": "59", "bound": "10 (counting)"}
+{"id": "covering-77-14-4-11", "params": {"v": 77, "k": 14, "t": 4, "m": 11}, "variant": "lotto", "best": "58", "bound": "10 (counting)"}
 {"id": "covering-78-14-4-11", "params": {"v": 78, "k": 14, "t": 4, "m": 11}, "variant": "lotto", "best": "61", "bound": "10 (counting)"}
 {"id": "covering-79-14-4-11", "params": {"v": 79, "k": 14, "t": 4, "m": 11}, "variant": "lotto", "best": "64", "bound": "11 (counting)"}
 {"id": "covering-80-14-4-11", "params": {"v": 80, "k": 14, "t": 4, "m": 11}, "variant": "lotto", "best": "67", "bound": "11 (counting)"}
@@ -49950,7 +49952,7 @@
 {"id": "covering-62-14-4-13", "params": {"v": 62, "k": 14, "t": 4, "m": 13}, "variant": "lotto", "best": "9", "bound": "4 (counting)"}
 {"id": "covering-63-14-4-13", "params": {"v": 63, "k": 14, "t": 4, "m": 13}, "variant": "lotto", "best": "9", "bound": "4 (counting)"}
 {"id": "covering-64-14-4-13", "params": {"v": 64, "k": 14, "t": 4, "m": 13}, "variant": "lotto", "best": "11", "bound": "4 (counting)"}
-{"id": "covering-65-14-4-13", "params": {"v": 65, "k": 14, "t": 4, "m": 13}, "variant": "lotto", "best": "13", "bound": "4 (counting)"}
+{"id": "covering-65-14-4-13", "params": {"v": 65, "k": 14, "t": 4, "m": 13}, "variant": "lotto", "best": "12", "bound": "4 (counting)"}
 {"id": "covering-66-14-4-13", "params": {"v": 66, "k": 14, "t": 4, "m": 13}, "variant": "lotto", "best": "13", "bound": "4 (counting)"}
 {"id": "covering-67-14-4-13", "params": {"v": 67, "k": 14, "t": 4, "m": 13}, "variant": "lotto", "best": "14", "bound": "4 (counting)"}
 {"id": "covering-68-14-4-13", "params": {"v": 68, "k": 14, "t": 4, "m": 13}, "variant": "lotto", "best": "16", "bound": "4 (counting)"}
@@ -50019,7 +50021,7 @@
 {"id": "covering-87-14-4-14", "params": {"v": 87, "k": 14, "t": 4, "m": 14}, "variant": "lotto", "best": "39", "bound": "7 (counting)"}
 {"id": "covering-88-14-4-14", "params": {"v": 88, "k": 14, "t": 4, "m": 14}, "variant": "lotto", "best": "41", "bound": "7 (counting)"}
 {"id": "covering-89-14-4-14", "params": {"v": 89, "k": 14, "t": 4, "m": 14}, "variant": "lotto", "best": "43", "bound": "7 (counting)"}
-{"id": "covering-90-14-4-14", "params": {"v": 90, "k": 14, "t": 4, "m": 14}, "variant": "lotto", "best": "46", "bound": "7 (counting)"}
+{"id": "covering-90-14-4-14", "params": {"v": 90, "k": 14, "t": 4, "m": 14}, "variant": "lotto", "best": "45", "bound": "7 (counting)"}
 {"id": "covering-48-14-4-15", "params": {"v": 48, "k": 14, "t": 4, "m": 15}, "variant": "lotto", "best": "4", "bound": "2 (counting)"}
 {"id": "covering-49-14-4-15", "params": {"v": 49, "k": 14, "t": 4, "m": 15}, "variant": "lotto", "best": "4", "bound": "2 (counting)"}
 {"id": "covering-50-14-4-15", "params": {"v": 50, "k": 14, "t": 4, "m": 15}, "variant": "lotto", "best": "4", "bound": "2 (counting)"}
@@ -50141,7 +50143,7 @@
 {"id": "covering-83-14-4-17", "params": {"v": 83, "k": 14, "t": 4, "m": 17}, "variant": "lotto", "best": "12", "bound": "4 (counting)"}
 {"id": "covering-84-14-4-17", "params": {"v": 84, "k": 14, "t": 4, "m": 17}, "variant": "lotto", "best": "12", "bound": "4 (counting)"}
 {"id": "covering-85-14-4-17", "params": {"v": 85, "k": 14, "t": 4, "m": 17}, "variant": "lotto", "best": "14", "bound": "4 (counting)"}
-{"id": "covering-86-14-4-17", "params": {"v": 86, "k": 14, "t": 4, "m": 17}, "variant": "lotto", "best": "16", "bound": "4 (counting)"}
+{"id": "covering-86-14-4-17", "params": {"v": 86, "k": 14, "t": 4, "m": 17}, "variant": "lotto", "best": "15", "bound": "4 (counting)"}
 {"id": "covering-87-14-4-17", "params": {"v": 87, "k": 14, "t": 4, "m": 17}, "variant": "lotto", "best": "16", "bound": "4 (counting)"}
 {"id": "covering-88-14-4-17", "params": {"v": 88, "k": 14, "t": 4, "m": 17}, "variant": "lotto", "best": "17", "bound": "4 (counting)"}
 {"id": "covering-89-14-4-17", "params": {"v": 89, "k": 14, "t": 4, "m": 17}, "variant": "lotto", "best": "19", "bound": "4 (counting)"}
@@ -50289,7 +50291,7 @@
 {"id": "covering-43-14-5", "params": {"v": 43, "k": 14, "t": 5, "m": 5}, "best": "1281", "bound": "618 (La Jolla)"}
 {"id": "covering-44-14-5", "params": {"v": 44, "k": 14, "t": 5, "m": 5}, "best": "1426", "bound": "657 (La Jolla)", "holder": "Terenzio Lazzarotto (12/11/2026)"}
 {"id": "covering-45-14-5", "params": {"v": 45, "k": 14, "t": 5, "m": 5}, "best": "1604", "bound": "785 (Schönheim)"}
-{"id": "covering-46-14-5", "params": {"v": 46, "k": 14, "t": 5, "m": 5}, "best": "1903", "bound": "845 (Schönheim)", "holder": "derived on the site from a known design (12/11/2026)"}
+{"id": "covering-46-14-5", "params": {"v": 46, "k": 14, "t": 5, "m": 5}, "best": "1894", "bound": "845 (Schönheim)"}
 {"id": "covering-47-14-5", "params": {"v": 47, "k": 14, "t": 5, "m": 5}, "best": "2009", "bound": "894 (La Jolla)"}
 {"id": "covering-48-14-5", "params": {"v": 48, "k": 14, "t": 5, "m": 5}, "best": "2156", "bound": "1005 (Schönheim)", "holder": "Jan de Heer and Steve Muir, 2026 (Private Tools)"}
 {"id": "covering-49-14-5", "params": {"v": 49, "k": 14, "t": 5, "m": 5}, "best": "2518", "bound": "1075 (Schönheim)", "holder": "Jan de Heer and Steve Muir, 2026 (Private Tools)"}
@@ -50433,11 +50435,11 @@
 {"id": "covering-37-14-5-8", "params": {"v": 37, "k": 14, "t": 5, "m": 8}, "variant": "lotto", "best": "44", "bound": "9 (counting)"}
 {"id": "covering-38-14-5-8", "params": {"v": 38, "k": 14, "t": 5, "m": 8}, "variant": "lotto", "best": "47", "bound": "10 (counting)"}
 {"id": "covering-39-14-5-8", "params": {"v": 39, "k": 14, "t": 5, "m": 8}, "variant": "lotto", "best": "58", "bound": "11 (counting)"}
-{"id": "covering-40-14-5-8", "params": {"v": 40, "k": 14, "t": 5, "m": 8}, "variant": "lotto", "best": "63", "bound": "13 (counting)"}
+{"id": "covering-40-14-5-8", "params": {"v": 40, "k": 14, "t": 5, "m": 8}, "variant": "lotto", "best": "62", "bound": "13 (counting)"}
 {"id": "covering-41-14-5-8", "params": {"v": 41, "k": 14, "t": 5, "m": 8}, "variant": "lotto", "best": "79", "bound": "14 (counting)", "holder": "Terenzio Lazzarotto (08/11/2026)"}
 {"id": "covering-42-14-5-8", "params": {"v": 42, "k": 14, "t": 5, "m": 8}, "variant": "lotto", "best": "84", "bound": "16 (counting)", "holder": "Terenzio Lazzarotto (07/11/2026)"}
 {"id": "covering-43-14-5-8", "params": {"v": 43, "k": 14, "t": 5, "m": 8}, "variant": "lotto", "best": "105", "bound": "17 (counting)", "holder": "Terenzio Lazzarotto (08/11/2026)"}
-{"id": "covering-44-14-5-8", "params": {"v": 44, "k": 14, "t": 5, "m": 8}, "variant": "lotto", "best": "111", "bound": "19 (counting)"}
+{"id": "covering-44-14-5-8", "params": {"v": 44, "k": 14, "t": 5, "m": 8}, "variant": "lotto", "best": "110", "bound": "19 (counting)"}
 {"id": "covering-45-14-5-8", "params": {"v": 45, "k": 14, "t": 5, "m": 8}, "variant": "lotto", "best": "140", "bound": "21 (counting)"}
 {"id": "covering-46-14-5-8", "params": {"v": 46, "k": 14, "t": 5, "m": 8}, "variant": "lotto", "best": "149", "bound": "23 (counting)"}
 {"id": "covering-47-14-5-8", "params": {"v": 47, "k": 14, "t": 5, "m": 8}, "variant": "lotto", "best": "158", "bound": "25 (counting)"}
@@ -50655,7 +50657,7 @@
 {"id": "covering-63-14-5-12", "params": {"v": 63, "k": 14, "t": 5, "m": 12}, "variant": "lotto", "best": "96", "bound": "13 (counting)"}
 {"id": "covering-64-14-5-12", "params": {"v": 64, "k": 14, "t": 5, "m": 12}, "variant": "lotto", "best": "102", "bound": "13 (counting)"}
 {"id": "covering-65-14-5-12", "params": {"v": 65, "k": 14, "t": 5, "m": 12}, "variant": "lotto", "best": "116", "bound": "14 (counting)"}
-{"id": "covering-66-14-5-12", "params": {"v": 66, "k": 14, "t": 5, "m": 12}, "variant": "lotto", "best": "123", "bound": "15 (counting)"}
+{"id": "covering-66-14-5-12", "params": {"v": 66, "k": 14, "t": 5, "m": 12}, "variant": "lotto", "best": "122", "bound": "15 (counting)"}
 {"id": "covering-67-14-5-12", "params": {"v": 67, "k": 14, "t": 5, "m": 12}, "variant": "lotto", "best": "138", "bound": "16 (counting)"}
 {"id": "covering-68-14-5-12", "params": {"v": 68, "k": 14, "t": 5, "m": 12}, "variant": "lotto", "best": "144", "bound": "17 (counting)", "holder": "derived on the site from a known design (07/11/2026)"}
 {"id": "covering-69-14-5-12", "params": {"v": 69, "k": 14, "t": 5, "m": 12}, "variant": "lotto", "best": "155", "bound": "18 (counting)"}
@@ -50758,9 +50760,9 @@
 {"id": "covering-71-14-5-14", "params": {"v": 71, "k": 14, "t": 5, "m": 14}, "variant": "lotto", "best": "89", "bound": "11 (counting)"}
 {"id": "covering-72-14-5-14", "params": {"v": 72, "k": 14, "t": 5, "m": 14}, "variant": "lotto", "best": "93", "bound": "11 (counting)"}
 {"id": "covering-73-14-5-14", "params": {"v": 73, "k": 14, "t": 5, "m": 14}, "variant": "lotto", "best": "104", "bound": "12 (counting)"}
-{"id": "covering-74-14-5-14", "params": {"v": 74, "k": 14, "t": 5, "m": 14}, "variant": "lotto", "best": "109", "bound": "12 (counting)"}
+{"id": "covering-74-14-5-14", "params": {"v": 74, "k": 14, "t": 5, "m": 14}, "variant": "lotto", "best": "108", "bound": "12 (counting)"}
 {"id": "covering-75-14-5-14", "params": {"v": 75, "k": 14, "t": 5, "m": 14}, "variant": "lotto", "best": "123", "bound": "13 (counting)"}
-{"id": "covering-76-14-5-14", "params": {"v": 76, "k": 14, "t": 5, "m": 14}, "variant": "lotto", "best": "129", "bound": "14 (counting)"}
+{"id": "covering-76-14-5-14", "params": {"v": 76, "k": 14, "t": 5, "m": 14}, "variant": "lotto", "best": "128", "bound": "14 (counting)"}
 {"id": "covering-77-14-5-14", "params": {"v": 77, "k": 14, "t": 5, "m": 14}, "variant": "lotto", "best": "138", "bound": "14 (counting)"}
 {"id": "covering-78-14-5-14", "params": {"v": 78, "k": 14, "t": 5, "m": 14}, "variant": "lotto", "best": "144", "bound": "15 (counting)"}
 {"id": "covering-79-14-5-14", "params": {"v": 79, "k": 14, "t": 5, "m": 14}, "variant": "lotto", "best": "152", "bound": "16 (counting)"}
@@ -51185,7 +51187,7 @@
 {"id": "covering-35-14-6-10", "params": {"v": 35, "k": 14, "t": 6, "m": 10}, "variant": "lotto", "best": "43", "bound": "8 (counting)"}
 {"id": "covering-36-14-6-10", "params": {"v": 36, "k": 14, "t": 6, "m": 10}, "variant": "lotto", "best": "51", "bound": "10 (counting)"}
 {"id": "covering-37-14-6-10", "params": {"v": 37, "k": 14, "t": 6, "m": 10}, "variant": "lotto", "best": "66", "bound": "11 (counting)"}
-{"id": "covering-38-14-6-10", "params": {"v": 38, "k": 14, "t": 6, "m": 10}, "variant": "lotto", "best": "77", "bound": "12 (counting)"}
+{"id": "covering-38-14-6-10", "params": {"v": 38, "k": 14, "t": 6, "m": 10}, "variant": "lotto", "best": "76", "bound": "12 (counting)"}
 {"id": "covering-39-14-6-10", "params": {"v": 39, "k": 14, "t": 6, "m": 10}, "variant": "lotto", "best": "102", "bound": "14 (counting)"}
 {"id": "covering-40-14-6-10", "params": {"v": 40, "k": 14, "t": 6, "m": 10}, "variant": "lotto", "best": "116", "bound": "16 (counting)", "holder": "Terenzio Lazzarotto (07/11/2026)"}
 {"id": "covering-41-14-6-10", "params": {"v": 41, "k": 14, "t": 6, "m": 10}, "variant": "lotto", "best": "145", "bound": "18 (counting)"}
@@ -51240,7 +51242,7 @@
 {"id": "covering-37-14-6-12", "params": {"v": 37, "k": 14, "t": 6, "m": 12}, "variant": "lotto", "best": "19", "bound": "5 (counting)"}
 {"id": "covering-38-14-6-12", "params": {"v": 38, "k": 14, "t": 6, "m": 12}, "variant": "lotto", "best": "21", "bound": "5 (counting)"}
 {"id": "covering-39-14-6-12", "params": {"v": 39, "k": 14, "t": 6, "m": 12}, "variant": "lotto", "best": "27", "bound": "6 (counting)"}
-{"id": "covering-40-14-6-12", "params": {"v": 40, "k": 14, "t": 6, "m": 12}, "variant": "lotto", "best": "33", "bound": "6 (counting)"}
+{"id": "covering-40-14-6-12", "params": {"v": 40, "k": 14, "t": 6, "m": 12}, "variant": "lotto", "best": "32", "bound": "6 (counting)"}
 {"id": "covering-41-14-6-12", "params": {"v": 41, "k": 14, "t": 6, "m": 12}, "variant": "lotto", "best": "41", "bound": "7 (counting)"}
 {"id": "covering-42-14-6-12", "params": {"v": 42, "k": 14, "t": 6, "m": 12}, "variant": "lotto", "best": "49", "bound": "8 (counting)"}
 {"id": "covering-43-14-6-12", "params": {"v": 43, "k": 14, "t": 6, "m": 12}, "variant": "lotto", "best": "57", "bound": "9 (counting)"}
@@ -51417,8 +51419,8 @@
 {"id": "covering-62-14-6-16", "params": {"v": 62, "k": 14, "t": 6, "m": 16}, "variant": "lotto", "best": "96", "bound": "11 (counting)"}
 {"id": "covering-63-14-6-16", "params": {"v": 63, "k": 14, "t": 6, "m": 16}, "variant": "lotto", "best": "108", "bound": "12 (counting)"}
 {"id": "covering-64-14-6-16", "params": {"v": 64, "k": 14, "t": 6, "m": 16}, "variant": "lotto", "best": "121", "bound": "12 (counting)"}
-{"id": "covering-65-14-6-16", "params": {"v": 65, "k": 14, "t": 6, "m": 16}, "variant": "lotto", "best": "145", "bound": "13 (counting)"}
-{"id": "covering-66-14-6-16", "params": {"v": 66, "k": 14, "t": 6, "m": 16}, "variant": "lotto", "best": "161", "bound": "14 (counting)"}
+{"id": "covering-65-14-6-16", "params": {"v": 65, "k": 14, "t": 6, "m": 16}, "variant": "lotto", "best": "144", "bound": "13 (counting)"}
+{"id": "covering-66-14-6-16", "params": {"v": 66, "k": 14, "t": 6, "m": 16}, "variant": "lotto", "best": "160", "bound": "14 (counting)"}
 {"id": "covering-67-14-6-16", "params": {"v": 67, "k": 14, "t": 6, "m": 16}, "variant": "lotto", "best": "183", "bound": "15 (counting)"}
 {"id": "covering-68-14-6-16", "params": {"v": 68, "k": 14, "t": 6, "m": 16}, "variant": "lotto", "best": "190", "bound": "16 (counting)"}
 {"id": "covering-69-14-6-16", "params": {"v": 69, "k": 14, "t": 6, "m": 16}, "variant": "lotto", "best": "200", "bound": "17 (counting)"}
@@ -51461,7 +51463,7 @@
 {"id": "covering-64-14-6-17", "params": {"v": 64, "k": 14, "t": 6, "m": 17}, "variant": "lotto", "best": "82", "bound": "9 (counting)"}
 {"id": "covering-65-14-6-17", "params": {"v": 65, "k": 14, "t": 6, "m": 17}, "variant": "lotto", "best": "94", "bound": "10 (counting)"}
 {"id": "covering-66-14-6-17", "params": {"v": 66, "k": 14, "t": 6, "m": 17}, "variant": "lotto", "best": "107", "bound": "11 (counting)"}
-{"id": "covering-67-14-6-17", "params": {"v": 67, "k": 14, "t": 6, "m": 17}, "variant": "lotto", "best": "120", "bound": "11 (counting)"}
+{"id": "covering-67-14-6-17", "params": {"v": 67, "k": 14, "t": 6, "m": 17}, "variant": "lotto", "best": "119", "bound": "11 (counting)"}
 {"id": "covering-68-14-6-17", "params": {"v": 68, "k": 14, "t": 6, "m": 17}, "variant": "lotto", "best": "130", "bound": "12 (counting)"}
 {"id": "covering-69-14-6-17", "params": {"v": 69, "k": 14, "t": 6, "m": 17}, "variant": "lotto", "best": "156", "bound": "13 (counting)"}
 {"id": "covering-70-14-6-17", "params": {"v": 70, "k": 14, "t": 6, "m": 17}, "variant": "lotto", "best": "172", "bound": "14 (counting)", "holder": "derived on the site from a known design (07/11/2026)"}
@@ -51553,7 +51555,7 @@
 {"id": "covering-65-14-6-19", "params": {"v": 65, "k": 14, "t": 6, "m": 19}, "variant": "lotto", "best": "49", "bound": "6 (counting)"}
 {"id": "covering-66-14-6-19", "params": {"v": 66, "k": 14, "t": 6, "m": 19}, "variant": "lotto", "best": "52", "bound": "7 (counting)"}
 {"id": "covering-67-14-6-19", "params": {"v": 67, "k": 14, "t": 6, "m": 19}, "variant": "lotto", "best": "58", "bound": "7 (counting)"}
-{"id": "covering-68-14-6-19", "params": {"v": 68, "k": 14, "t": 6, "m": 19}, "variant": "lotto", "best": "64", "bound": "7 (counting)"}
+{"id": "covering-68-14-6-19", "params": {"v": 68, "k": 14, "t": 6, "m": 19}, "variant": "lotto", "best": "63", "bound": "7 (counting)"}
 {"id": "covering-69-14-6-19", "params": {"v": 69, "k": 14, "t": 6, "m": 19}, "variant": "lotto", "best": "72", "bound": "8 (counting)"}
 {"id": "covering-70-14-6-19", "params": {"v": 70, "k": 14, "t": 6, "m": 19}, "variant": "lotto", "best": "80", "bound": "8 (counting)"}
 {"id": "covering-71-14-6-19", "params": {"v": 71, "k": 14, "t": 6, "m": 19}, "variant": "lotto", "best": "88", "bound": "9 (counting)"}
@@ -51616,7 +51618,7 @@
 {"id": "covering-84-14-6-20", "params": {"v": 84, "k": 14, "t": 6, "m": 20}, "variant": "lotto", "best": "192", "bound": "14 (counting)"}
 {"id": "covering-85-14-6-20", "params": {"v": 85, "k": 14, "t": 6, "m": 20}, "variant": "lotto", "best": "208", "bound": "15 (counting)"}
 {"id": "covering-86-14-6-20", "params": {"v": 86, "k": 14, "t": 6, "m": 20}, "variant": "lotto", "best": "224", "bound": "16 (counting)"}
-{"id": "covering-87-14-6-20", "params": {"v": 87, "k": 14, "t": 6, "m": 20}, "variant": "lotto", "best": "245", "bound": "17 (counting)"}
+{"id": "covering-87-14-6-20", "params": {"v": 87, "k": 14, "t": 6, "m": 20}, "variant": "lotto", "best": "244", "bound": "17 (counting)"}
 {"id": "covering-88-14-6-20", "params": {"v": 88, "k": 14, "t": 6, "m": 20}, "variant": "lotto", "best": "270", "bound": "18 (counting)"}
 {"id": "covering-89-14-6-20", "params": {"v": 89, "k": 14, "t": 6, "m": 20}, "variant": "lotto", "best": "284", "bound": "18 (counting)", "holder": "derived on the site from a known design (07/11/2026)"}
 {"id": "covering-90-14-6-20", "params": {"v": 90, "k": 14, "t": 6, "m": 20}, "variant": "lotto", "best": "313", "bound": "19 (counting)"}
@@ -51666,12 +51668,12 @@
 {"id": "covering-24-14-7-8", "params": {"v": 24, "k": 14, "t": 7, "m": 8}, "variant": "lotto", "best": "82", "bound": "20 (counting)", "holder": "FrancoAtzeni (05/11/2026)"}
 {"id": "covering-25-14-7-8", "params": {"v": 25, "k": 14, "t": 7, "m": 8}, "variant": "lotto", "best": "114", "bound": "27 (counting)"}
 {"id": "covering-26-14-7-8", "params": {"v": 26, "k": 14, "t": 7, "m": 8}, "variant": "lotto", "best": "168", "bound": "36 (counting)"}
-{"id": "covering-27-14-7-8", "params": {"v": 27, "k": 14, "t": 7, "m": 8}, "variant": "lotto", "best": "239", "bound": "47 (counting)"}
-{"id": "covering-28-14-7-8", "params": {"v": 28, "k": 14, "t": 7, "m": 8}, "variant": "lotto", "best": "309", "bound": "61 (counting)"}
+{"id": "covering-27-14-7-8", "params": {"v": 27, "k": 14, "t": 7, "m": 8}, "variant": "lotto", "best": "215", "bound": "47 (counting)"}
+{"id": "covering-28-14-7-8", "params": {"v": 28, "k": 14, "t": 7, "m": 8}, "variant": "lotto", "best": "298", "bound": "61 (counting)"}
 {"id": "covering-29-14-7-8", "params": {"v": 29, "k": 14, "t": 7, "m": 8}, "variant": "lotto", "best": "438", "bound": "79 (counting)"}
 {"id": "covering-30-14-7-8", "params": {"v": 30, "k": 14, "t": 7, "m": 8}, "variant": "lotto", "best": "604", "bound": "102 (counting)"}
 {"id": "covering-31-14-7-8", "params": {"v": 31, "k": 14, "t": 7, "m": 8}, "variant": "lotto", "best": "788", "bound": "129 (counting)"}
-{"id": "covering-32-14-7-8", "params": {"v": 32, "k": 14, "t": 7, "m": 8}, "variant": "lotto", "best": "1081", "bound": "163 (counting)"}
+{"id": "covering-32-14-7-8", "params": {"v": 32, "k": 14, "t": 7, "m": 8}, "variant": "lotto", "best": "1069", "bound": "163 (counting)"}
 {"id": "covering-33-14-7-8", "params": {"v": 33, "k": 14, "t": 7, "m": 8}, "variant": "lotto", "best": "1286", "bound": "204 (counting)"}
 {"id": "covering-34-14-7-8", "params": {"v": 34, "k": 14, "t": 7, "m": 8}, "variant": "lotto", "best": "1653", "bound": "254 (counting)"}
 {"id": "covering-35-14-7-8", "params": {"v": 35, "k": 14, "t": 7, "m": 8}, "variant": "lotto", "best": "2055", "bound": "314 (counting)"}
@@ -51810,12 +51812,12 @@
 {"id": "covering-46-14-7-14", "params": {"v": 46, "k": 14, "t": 7, "m": 14}, "variant": "lotto", "best": "211", "bound": "17 (counting)", "holder": "derived on the site from a known design (05/11/2026)"}
 {"id": "covering-47-14-7-14", "params": {"v": 47, "k": 14, "t": 7, "m": 14}, "variant": "lotto", "best": "243", "bound": "19 (counting)"}
 {"id": "covering-48-14-7-14", "params": {"v": 48, "k": 14, "t": 7, "m": 14}, "variant": "lotto", "best": "297", "bound": "21 (counting)"}
-{"id": "covering-49-14-7-14", "params": {"v": 49, "k": 14, "t": 7, "m": 14}, "variant": "lotto", "best": "355", "bound": "24 (counting)"}
-{"id": "covering-50-14-7-14", "params": {"v": 50, "k": 14, "t": 7, "m": 14}, "variant": "lotto", "best": "409", "bound": "27 (counting)"}
-{"id": "covering-51-14-7-14", "params": {"v": 51, "k": 14, "t": 7, "m": 14}, "variant": "lotto", "best": "480", "bound": "30 (counting)"}
-{"id": "covering-52-14-7-14", "params": {"v": 52, "k": 14, "t": 7, "m": 14}, "variant": "lotto", "best": "550", "bound": "34 (counting)"}
-{"id": "covering-53-14-7-14", "params": {"v": 53, "k": 14, "t": 7, "m": 14}, "variant": "lotto", "best": "679", "bound": "38 (counting)"}
-{"id": "covering-54-14-7-14", "params": {"v": 54, "k": 14, "t": 7, "m": 14}, "variant": "lotto", "best": "813", "bound": "43 (counting)"}
+{"id": "covering-49-14-7-14", "params": {"v": 49, "k": 14, "t": 7, "m": 14}, "variant": "lotto", "best": "344", "bound": "24 (counting)"}
+{"id": "covering-50-14-7-14", "params": {"v": 50, "k": 14, "t": 7, "m": 14}, "variant": "lotto", "best": "402", "bound": "27 (counting)"}
+{"id": "covering-51-14-7-14", "params": {"v": 51, "k": 14, "t": 7, "m": 14}, "variant": "lotto", "best": "456", "bound": "30 (counting)"}
+{"id": "covering-52-14-7-14", "params": {"v": 52, "k": 14, "t": 7, "m": 14}, "variant": "lotto", "best": "539", "bound": "34 (counting)"}
+{"id": "covering-53-14-7-14", "params": {"v": 53, "k": 14, "t": 7, "m": 14}, "variant": "lotto", "best": "675", "bound": "38 (counting)"}
+{"id": "covering-54-14-7-14", "params": {"v": 54, "k": 14, "t": 7, "m": 14}, "variant": "lotto", "best": "802", "bound": "43 (counting)"}
 {"id": "covering-55-14-7-14", "params": {"v": 55, "k": 14, "t": 7, "m": 14}, "variant": "lotto", "best": "942", "bound": "48 (counting)"}
 {"id": "covering-31-14-7-15", "params": {"v": 31, "k": 14, "t": 7, "m": 15}, "variant": "lotto", "best": "5", "bound": "2 (counting)"}
 {"id": "covering-32-14-7-15", "params": {"v": 32, "k": 14, "t": 7, "m": 15}, "variant": "lotto", "best": "5", "bound": "2 (counting)"}
@@ -51869,9 +51871,9 @@
 {"id": "covering-52-14-7-16", "params": {"v": 52, "k": 14, "t": 7, "m": 16}, "variant": "lotto", "best": "144", "bound": "15 (counting)", "holder": "derived on the site from a known design (05/11/2026)"}
 {"id": "covering-53-14-7-16", "params": {"v": 53, "k": 14, "t": 7, "m": 16}, "variant": "lotto", "best": "176", "bound": "16 (counting)"}
 {"id": "covering-54-14-7-16", "params": {"v": 54, "k": 14, "t": 7, "m": 16}, "variant": "lotto", "best": "230", "bound": "18 (counting)"}
-{"id": "covering-55-14-7-16", "params": {"v": 55, "k": 14, "t": 7, "m": 16}, "variant": "lotto", "best": "284", "bound": "20 (counting)"}
-{"id": "covering-56-14-7-16", "params": {"v": 56, "k": 14, "t": 7, "m": 16}, "variant": "lotto", "best": "336", "bound": "22 (counting)"}
-{"id": "covering-57-14-7-16", "params": {"v": 57, "k": 14, "t": 7, "m": 16}, "variant": "lotto", "best": "394", "bound": "24 (counting)"}
+{"id": "covering-55-14-7-16", "params": {"v": 55, "k": 14, "t": 7, "m": 16}, "variant": "lotto", "best": "277", "bound": "20 (counting)"}
+{"id": "covering-56-14-7-16", "params": {"v": 56, "k": 14, "t": 7, "m": 16}, "variant": "lotto", "best": "331", "bound": "22 (counting)"}
+{"id": "covering-57-14-7-16", "params": {"v": 57, "k": 14, "t": 7, "m": 16}, "variant": "lotto", "best": "388", "bound": "24 (counting)"}
 {"id": "covering-58-14-7-16", "params": {"v": 58, "k": 14, "t": 7, "m": 16}, "variant": "lotto", "best": "448", "bound": "27 (counting)"}
 {"id": "covering-59-14-7-16", "params": {"v": 59, "k": 14, "t": 7, "m": 16}, "variant": "lotto", "best": "512", "bound": "29 (counting)"}
 {"id": "covering-60-14-7-16", "params": {"v": 60, "k": 14, "t": 7, "m": 16}, "variant": "lotto", "best": "590", "bound": "32 (counting)"}
@@ -51908,12 +51910,12 @@
 {"id": "covering-59-14-7-17", "params": {"v": 59, "k": 14, "t": 7, "m": 17}, "variant": "lotto", "best": "289", "bound": "20 (counting)"}
 {"id": "covering-60-14-7-17", "params": {"v": 60, "k": 14, "t": 7, "m": 17}, "variant": "lotto", "best": "346", "bound": "22 (counting)"}
 {"id": "covering-61-14-7-17", "params": {"v": 61, "k": 14, "t": 7, "m": 17}, "variant": "lotto", "best": "419", "bound": "24 (counting)"}
-{"id": "covering-62-14-7-17", "params": {"v": 62, "k": 14, "t": 7, "m": 17}, "variant": "lotto", "best": "489", "bound": "27 (counting)"}
+{"id": "covering-62-14-7-17", "params": {"v": 62, "k": 14, "t": 7, "m": 17}, "variant": "lotto", "best": "486", "bound": "27 (counting)"}
 {"id": "covering-63-14-7-17", "params": {"v": 63, "k": 14, "t": 7, "m": 17}, "variant": "lotto", "best": "543", "bound": "29 (counting)"}
 {"id": "covering-64-14-7-17", "params": {"v": 64, "k": 14, "t": 7, "m": 17}, "variant": "lotto", "best": "611", "bound": "32 (counting)"}
-{"id": "covering-65-14-7-17", "params": {"v": 65, "k": 14, "t": 7, "m": 17}, "variant": "lotto", "best": "714", "bound": "35 (counting)"}
-{"id": "covering-66-14-7-17", "params": {"v": 66, "k": 14, "t": 7, "m": 17}, "variant": "lotto", "best": "843", "bound": "38 (counting)"}
-{"id": "covering-67-14-7-17", "params": {"v": 67, "k": 14, "t": 7, "m": 17}, "variant": "lotto", "best": "927", "bound": "42 (counting)"}
+{"id": "covering-65-14-7-17", "params": {"v": 65, "k": 14, "t": 7, "m": 17}, "variant": "lotto", "best": "703", "bound": "35 (counting)"}
+{"id": "covering-66-14-7-17", "params": {"v": 66, "k": 14, "t": 7, "m": 17}, "variant": "lotto", "best": "833", "bound": "38 (counting)"}
+{"id": "covering-67-14-7-17", "params": {"v": 67, "k": 14, "t": 7, "m": 17}, "variant": "lotto", "best": "916", "bound": "42 (counting)"}
 {"id": "covering-34-14-7-18", "params": {"v": 34, "k": 14, "t": 7, "m": 18}, "variant": "lotto", "best": "4", "bound": "2 (counting)"}
 {"id": "covering-35-14-7-18", "params": {"v": 35, "k": 14, "t": 7, "m": 18}, "variant": "lotto", "best": "4", "bound": "2 (counting)"}
 {"id": "covering-36-14-7-18", "params": {"v": 36, "k": 14, "t": 7, "m": 18}, "variant": "lotto", "best": "4", "bound": "2 (counting)"}
@@ -52054,7 +52056,7 @@
 {"id": "covering-22-14-8-9", "params": {"v": 22, "k": 14, "t": 8, "m": 9}, "variant": "lotto", "best": "80", "bound": "20 (counting)"}
 {"id": "covering-23-14-8-9", "params": {"v": 23, "k": 14, "t": 8, "m": 9}, "variant": "lotto", "best": "106", "bound": "29 (counting)", "holder": "Terenzio Lazzarotto (08/11/2026)"}
 {"id": "covering-24-14-8-9", "params": {"v": 24, "k": 14, "t": 8, "m": 9}, "variant": "lotto", "best": "195", "bound": "41 (counting)"}
-{"id": "covering-25-14-8-9", "params": {"v": 25, "k": 14, "t": 8, "m": 9}, "variant": "lotto", "best": "307", "bound": "59 (counting)"}
+{"id": "covering-25-14-8-9", "params": {"v": 25, "k": 14, "t": 8, "m": 9}, "variant": "lotto", "best": "290", "bound": "59 (counting)"}
 {"id": "covering-26-14-8-9", "params": {"v": 26, "k": 14, "t": 8, "m": 9}, "variant": "lotto", "best": "412", "bound": "83 (counting)"}
 {"id": "covering-27-14-8-9", "params": {"v": 27, "k": 14, "t": 8, "m": 9}, "variant": "lotto", "best": "643", "bound": "115 (counting)"}
 {"id": "covering-28-14-8-9", "params": {"v": 28, "k": 14, "t": 8, "m": 9}, "variant": "lotto", "best": "916", "bound": "157 (counting)"}
@@ -52076,7 +52078,7 @@
 {"id": "covering-25-14-8-10", "params": {"v": 25, "k": 14, "t": 8, "m": 10}, "variant": "lotto", "best": "74", "bound": "18 (counting)"}
 {"id": "covering-26-14-8-10", "params": {"v": 26, "k": 14, "t": 8, "m": 10}, "variant": "lotto", "best": "107", "bound": "24 (counting)"}
 {"id": "covering-27-14-8-10", "params": {"v": 27, "k": 14, "t": 8, "m": 10}, "variant": "lotto", "best": "158", "bound": "33 (counting)"}
-{"id": "covering-28-14-8-10", "params": {"v": 28, "k": 14, "t": 8, "m": 10}, "variant": "lotto", "best": "270", "bound": "44 (counting)"}
+{"id": "covering-28-14-8-10", "params": {"v": 28, "k": 14, "t": 8, "m": 10}, "variant": "lotto", "best": "244", "bound": "44 (counting)"}
 {"id": "covering-29-14-8-10", "params": {"v": 29, "k": 14, "t": 8, "m": 10}, "variant": "lotto", "best": "363", "bound": "58 (counting)"}
 {"id": "covering-30-14-8-10", "params": {"v": 30, "k": 14, "t": 8, "m": 10}, "variant": "lotto", "best": "529", "bound": "77 (counting)"}
 {"id": "covering-31-14-8-10", "params": {"v": 31, "k": 14, "t": 8, "m": 10}, "variant": "lotto", "best": "735", "bound": "101 (counting)"}
@@ -52171,7 +52173,7 @@
 {"id": "covering-44-14-8-16", "params": {"v": 44, "k": 14, "t": 8, "m": 16}, "variant": "lotto", "best": "299", "bound": "19 (counting)", "holder": "derived on the site from a known design (08/11/2026)"}
 {"id": "covering-45-14-8-16", "params": {"v": 45, "k": 14, "t": 8, "m": 16}, "variant": "lotto", "best": "376", "bound": "22 (counting)", "holder": "derived on the site from a known design (08/11/2026)"}
 {"id": "covering-46-14-8-16", "params": {"v": 46, "k": 14, "t": 8, "m": 16}, "variant": "lotto", "best": "465", "bound": "26 (counting)"}
-{"id": "covering-47-14-8-16", "params": {"v": 47, "k": 14, "t": 8, "m": 16}, "variant": "lotto", "best": "577", "bound": "30 (counting)"}
+{"id": "covering-47-14-8-16", "params": {"v": 47, "k": 14, "t": 8, "m": 16}, "variant": "lotto", "best": "560", "bound": "30 (counting)"}
 {"id": "covering-48-14-8-16", "params": {"v": 48, "k": 14, "t": 8, "m": 16}, "variant": "lotto", "best": "682", "bound": "34 (counting)"}
 {"id": "covering-49-14-8-16", "params": {"v": 49, "k": 14, "t": 8, "m": 16}, "variant": "lotto", "best": "835", "bound": "39 (counting)"}
 {"id": "covering-31-14-8-17", "params": {"v": 31, "k": 14, "t": 8, "m": 17}, "variant": "lotto", "best": "5", "bound": "2 (counting)"}
@@ -52193,7 +52195,7 @@
 {"id": "covering-47-14-8-17", "params": {"v": 47, "k": 14, "t": 8, "m": 17}, "variant": "lotto", "best": "277", "bound": "19 (counting)"}
 {"id": "covering-48-14-8-17", "params": {"v": 48, "k": 14, "t": 8, "m": 17}, "variant": "lotto", "best": "351", "bound": "22 (counting)"}
 {"id": "covering-49-14-8-17", "params": {"v": 49, "k": 14, "t": 8, "m": 17}, "variant": "lotto", "best": "428", "bound": "25 (counting)"}
-{"id": "covering-50-14-8-17", "params": {"v": 50, "k": 14, "t": 8, "m": 17}, "variant": "lotto", "best": "540", "bound": "28 (counting)"}
+{"id": "covering-50-14-8-17", "params": {"v": 50, "k": 14, "t": 8, "m": 17}, "variant": "lotto", "best": "514", "bound": "28 (counting)"}
 {"id": "covering-51-14-8-17", "params": {"v": 51, "k": 14, "t": 8, "m": 17}, "variant": "lotto", "best": "633", "bound": "32 (counting)"}
 {"id": "covering-52-14-8-17", "params": {"v": 52, "k": 14, "t": 8, "m": 17}, "variant": "lotto", "best": "786", "bound": "37 (counting)"}
 {"id": "covering-53-14-8-17", "params": {"v": 53, "k": 14, "t": 8, "m": 17}, "variant": "lotto", "best": "952", "bound": "42 (counting)"}
@@ -52216,9 +52218,9 @@
 {"id": "covering-48-14-8-18", "params": {"v": 48, "k": 14, "t": 8, "m": 18}, "variant": "lotto", "best": "180", "bound": "15 (counting)", "holder": "derived on the site from a known design (08/11/2026)"}
 {"id": "covering-49-14-8-18", "params": {"v": 49, "k": 14, "t": 8, "m": 18}, "variant": "lotto", "best": "168", "bound": "17 (counting)"}
 {"id": "covering-50-14-8-18", "params": {"v": 50, "k": 14, "t": 8, "m": 18}, "variant": "lotto", "best": "256", "bound": "19 (counting)"}
-{"id": "covering-51-14-8-18", "params": {"v": 51, "k": 14, "t": 8, "m": 18}, "variant": "lotto", "best": "353", "bound": "21 (counting)"}
-{"id": "covering-52-14-8-18", "params": {"v": 52, "k": 14, "t": 8, "m": 18}, "variant": "lotto", "best": "447", "bound": "24 (counting)"}
-{"id": "covering-53-14-8-18", "params": {"v": 53, "k": 14, "t": 8, "m": 18}, "variant": "lotto", "best": "549", "bound": "27 (counting)"}
+{"id": "covering-51-14-8-18", "params": {"v": 51, "k": 14, "t": 8, "m": 18}, "variant": "lotto", "best": "350", "bound": "21 (counting)"}
+{"id": "covering-52-14-8-18", "params": {"v": 52, "k": 14, "t": 8, "m": 18}, "variant": "lotto", "best": "439", "bound": "24 (counting)"}
+{"id": "covering-53-14-8-18", "params": {"v": 53, "k": 14, "t": 8, "m": 18}, "variant": "lotto", "best": "534", "bound": "27 (counting)"}
 {"id": "covering-54-14-8-18", "params": {"v": 54, "k": 14, "t": 8, "m": 18}, "variant": "lotto", "best": "645", "bound": "31 (counting)"}
 {"id": "covering-55-14-8-18", "params": {"v": 55, "k": 14, "t": 8, "m": 18}, "variant": "lotto", "best": "759", "bound": "35 (counting)"}
 {"id": "covering-56-14-8-18", "params": {"v": 56, "k": 14, "t": 8, "m": 18}, "variant": "lotto", "best": "873", "bound": "40 (counting)", "holder": "derived on the site from a known design (10/11/2026)"}
@@ -52244,9 +52246,9 @@
 {"id": "covering-52-14-8-19", "params": {"v": 52, "k": 14, "t": 8, "m": 19}, "variant": "lotto", "best": "214", "bound": "17 (counting)"}
 {"id": "covering-53-14-8-19", "params": {"v": 53, "k": 14, "t": 8, "m": 19}, "variant": "lotto", "best": "265", "bound": "19 (counting)"}
 {"id": "covering-54-14-8-19", "params": {"v": 54, "k": 14, "t": 8, "m": 19}, "variant": "lotto", "best": "316", "bound": "21 (counting)"}
-{"id": "covering-55-14-8-19", "params": {"v": 55, "k": 14, "t": 8, "m": 19}, "variant": "lotto", "best": "428", "bound": "24 (counting)"}
-{"id": "covering-56-14-8-19", "params": {"v": 56, "k": 14, "t": 8, "m": 19}, "variant": "lotto", "best": "521", "bound": "27 (counting)"}
-{"id": "covering-57-14-8-19", "params": {"v": 57, "k": 14, "t": 8, "m": 19}, "variant": "lotto", "best": "633", "bound": "30 (counting)"}
+{"id": "covering-55-14-8-19", "params": {"v": 55, "k": 14, "t": 8, "m": 19}, "variant": "lotto", "best": "402", "bound": "24 (counting)"}
+{"id": "covering-56-14-8-19", "params": {"v": 56, "k": 14, "t": 8, "m": 19}, "variant": "lotto", "best": "488", "bound": "27 (counting)"}
+{"id": "covering-57-14-8-19", "params": {"v": 57, "k": 14, "t": 8, "m": 19}, "variant": "lotto", "best": "607", "bound": "30 (counting)"}
 {"id": "covering-58-14-8-19", "params": {"v": 58, "k": 14, "t": 8, "m": 19}, "variant": "lotto", "best": "726", "bound": "33 (counting)"}
 {"id": "covering-59-14-8-19", "params": {"v": 59, "k": 14, "t": 8, "m": 19}, "variant": "lotto", "best": "892", "bound": "37 (counting)"}
 {"id": "covering-34-14-8-20", "params": {"v": 34, "k": 14, "t": 8, "m": 20}, "variant": "lotto", "best": "4", "bound": "2 (counting)"}
@@ -52273,11 +52275,11 @@
 {"id": "covering-55-14-8-20", "params": {"v": 55, "k": 14, "t": 8, "m": 20}, "variant": "lotto", "best": "220", "bound": "17 (counting)"}
 {"id": "covering-56-14-8-20", "params": {"v": 56, "k": 14, "t": 8, "m": 20}, "variant": "lotto", "best": "279", "bound": "19 (counting)"}
 {"id": "covering-57-14-8-20", "params": {"v": 57, "k": 14, "t": 8, "m": 20}, "variant": "lotto", "best": "335", "bound": "21 (counting)"}
-{"id": "covering-58-14-8-20", "params": {"v": 58, "k": 14, "t": 8, "m": 20}, "variant": "lotto", "best": "437", "bound": "23 (counting)"}
-{"id": "covering-59-14-8-20", "params": {"v": 59, "k": 14, "t": 8, "m": 20}, "variant": "lotto", "best": "533", "bound": "26 (counting)"}
-{"id": "covering-60-14-8-20", "params": {"v": 60, "k": 14, "t": 8, "m": 20}, "variant": "lotto", "best": "642", "bound": "29 (counting)"}
-{"id": "covering-61-14-8-20", "params": {"v": 61, "k": 14, "t": 8, "m": 20}, "variant": "lotto", "best": "738", "bound": "32 (counting)"}
-{"id": "covering-62-14-8-20", "params": {"v": 62, "k": 14, "t": 8, "m": 20}, "variant": "lotto", "best": "852", "bound": "36 (counting)"}
+{"id": "covering-58-14-8-20", "params": {"v": 58, "k": 14, "t": 8, "m": 20}, "variant": "lotto", "best": "421", "bound": "23 (counting)"}
+{"id": "covering-59-14-8-20", "params": {"v": 59, "k": 14, "t": 8, "m": 20}, "variant": "lotto", "best": "523", "bound": "26 (counting)"}
+{"id": "covering-60-14-8-20", "params": {"v": 60, "k": 14, "t": 8, "m": 20}, "variant": "lotto", "best": "619", "bound": "29 (counting)"}
+{"id": "covering-61-14-8-20", "params": {"v": 61, "k": 14, "t": 8, "m": 20}, "variant": "lotto", "best": "733", "bound": "32 (counting)"}
+{"id": "covering-62-14-8-20", "params": {"v": 62, "k": 14, "t": 8, "m": 20}, "variant": "lotto", "best": "847", "bound": "36 (counting)"}
 {"id": "covering-63-14-8-20", "params": {"v": 63, "k": 14, "t": 8, "m": 20}, "variant": "lotto", "best": "966", "bound": "40 (counting)", "holder": "derived on the site from a known design (10/11/2026)"}
 {"id": "covering-16-14-9-10", "params": {"v": 16, "k": 14, "t": 9, "m": 10}, "variant": "lotto", "best": "6", "bound": "2 (counting)"}
 {"id": "covering-17-14-9-10", "params": {"v": 17, "k": 14, "t": 9, "m": 10}, "variant": "lotto", "best": "6", "bound": "3 (counting)"}
@@ -52318,7 +52320,7 @@
 {"id": "covering-25-14-9-12", "params": {"v": 25, "k": 14, "t": 9, "m": 12}, "variant": "lotto", "best": "59", "bound": "14 (counting)"}
 {"id": "covering-26-14-9-12", "params": {"v": 26, "k": 14, "t": 9, "m": 12}, "variant": "lotto", "best": "89", "bound": "19 (counting)"}
 {"id": "covering-27-14-9-12", "params": {"v": 27, "k": 14, "t": 9, "m": 12}, "variant": "lotto", "best": "139", "bound": "27 (counting)"}
-{"id": "covering-28-14-9-12", "params": {"v": 28, "k": 14, "t": 9, "m": 12}, "variant": "lotto", "best": "227", "bound": "37 (counting)"}
+{"id": "covering-28-14-9-12", "params": {"v": 28, "k": 14, "t": 9, "m": 12}, "variant": "lotto", "best": "219", "bound": "37 (counting)"}
 {"id": "covering-29-14-9-12", "params": {"v": 29, "k": 14, "t": 9, "m": 12}, "variant": "lotto", "best": "346", "bound": "51 (counting)"}
 {"id": "covering-30-14-9-12", "params": {"v": 30, "k": 14, "t": 9, "m": 12}, "variant": "lotto", "best": "529", "bound": "70 (counting)"}
 {"id": "covering-22-14-9-13", "params": {"v": 22, "k": 14, "t": 9, "m": 13}, "variant": "lotto", "best": "5", "bound": "3 (counting)"}
@@ -52458,7 +52460,7 @@
 {"id": "covering-25-14-10-14", "params": {"v": 25, "k": 14, "t": 10, "m": 14}, "variant": "lotto", "best": "53", "bound": "12 (counting)"}
 {"id": "covering-26-14-10-14", "params": {"v": 26, "k": 14, "t": 10, "m": 14}, "variant": "lotto", "best": "77", "bound": "17 (counting)"}
 {"id": "covering-27-14-10-14", "params": {"v": 27, "k": 14, "t": 10, "m": 14}, "variant": "lotto", "best": "130", "bound": "25 (counting)"}
-{"id": "covering-28-14-10-14", "params": {"v": 28, "k": 14, "t": 10, "m": 14}, "variant": "lotto", "best": "222", "bound": "36 (counting)"}
+{"id": "covering-28-14-10-14", "params": {"v": 28, "k": 14, "t": 10, "m": 14}, "variant": "lotto", "best": "215", "bound": "36 (counting)"}
 {"id": "covering-29-14-10-14", "params": {"v": 29, "k": 14, "t": 10, "m": 14}, "variant": "lotto", "best": "337", "bound": "51 (counting)"}
 {"id": "covering-23-14-10-15", "params": {"v": 23, "k": 14, "t": 10, "m": 15}, "variant": "lotto", "best": "6", "bound": "3 (counting)"}
 {"id": "covering-24-14-10-15", "params": {"v": 24, "k": 14, "t": 10, "m": 15}, "variant": "lotto", "best": "11", "bound": "4 (counting)"}
@@ -52556,7 +52558,7 @@
 {"id": "covering-25-14-11-16", "params": {"v": 25, "k": 14, "t": 11, "m": 16}, "variant": "lotto", "best": "44", "bound": "11 (counting)"}
 {"id": "covering-26-14-11-16", "params": {"v": 26, "k": 14, "t": 11, "m": 16}, "variant": "lotto", "best": "62", "bound": "16 (counting)"}
 {"id": "covering-27-14-11-16", "params": {"v": 27, "k": 14, "t": 11, "m": 16}, "variant": "lotto", "best": "124", "bound": "25 (counting)"}
-{"id": "covering-28-14-11-16", "params": {"v": 28, "k": 14, "t": 11, "m": 16}, "variant": "lotto", "best": "227", "bound": "37 (counting)"}
+{"id": "covering-28-14-11-16", "params": {"v": 28, "k": 14, "t": 11, "m": 16}, "variant": "lotto", "best": "219", "bound": "37 (counting)"}
 {"id": "covering-29-14-11-16", "params": {"v": 29, "k": 14, "t": 11, "m": 16}, "variant": "lotto", "best": "367", "bound": "56 (counting)"}
 {"id": "covering-23-14-11-17", "params": {"v": 23, "k": 14, "t": 11, "m": 17}, "variant": "lotto", "best": "4", "bound": "3 (counting)"}
 {"id": "covering-24-14-11-17", "params": {"v": 24, "k": 14, "t": 11, "m": 17}, "variant": "lotto", "best": "8", "bound": "4 (counting)"}
@@ -52642,7 +52644,7 @@
 {"id": "covering-25-14-12-18", "params": {"v": 25, "k": 14, "t": 12, "m": 18}, "variant": "lotto", "best": "34", "bound": "10 (counting)", "holder": "FrancoAtzeni (12/11/2026)"}
 {"id": "covering-26-14-12-18", "params": {"v": 26, "k": 14, "t": 12, "m": 18}, "variant": "lotto", "best": "54", "bound": "17 (counting)"}
 {"id": "covering-27-14-12-18", "params": {"v": 27, "k": 14, "t": 12, "m": 18}, "variant": "lotto", "best": "122", "bound": "27 (counting)"}
-{"id": "covering-28-14-12-18", "params": {"v": 28, "k": 14, "t": 12, "m": 18}, "variant": "lotto", "best": "270", "bound": "44 (counting)"}
+{"id": "covering-28-14-12-18", "params": {"v": 28, "k": 14, "t": 12, "m": 18}, "variant": "lotto", "best": "244", "bound": "44 (counting)"}
 {"id": "covering-29-14-12-18", "params": {"v": 29, "k": 14, "t": 12, "m": 18}, "variant": "lotto", "best": "502", "bound": "70 (counting)"}
 {"id": "covering-24-14-12-19", "params": {"v": 24, "k": 14, "t": 12, "m": 19}, "variant": "lotto", "best": "6", "bound": "4 (counting)"}
 {"id": "covering-25-14-12-19", "params": {"v": 25, "k": 14, "t": 12, "m": 19}, "variant": "lotto", "best": "13", "bound": "5 (counting)"}
@@ -52674,7 +52676,7 @@
 {"id": "covering-21-14-13-15", "params": {"v": 21, "k": 14, "t": 13, "m": 15}, "variant": "lotto", "best": "390", "bound": "181 (counting)"}
 {"id": "covering-22-14-13-15", "params": {"v": 22, "k": 14, "t": 13, "m": 15}, "variant": "lotto", "best": "719", "bound": "427 (counting)"}
 {"id": "covering-23-14-13-15", "params": {"v": 23, "k": 14, "t": 13, "m": 15}, "variant": "lotto", "best": "1916", "bound": "956 (counting)", "holder": "Weber Azevedo (13/11/2026)"}
-{"id": "covering-24-14-13-15", "params": {"v": 24, "k": 14, "t": 13, "m": 15}, "variant": "lotto", "best": "5475", "bound": "2043 (counting)"}
+{"id": "covering-24-14-13-15", "params": {"v": 24, "k": 14, "t": 13, "m": 15}, "variant": "lotto", "best": "4504", "bound": "2043 (counting)"}
 {"id": "covering-25-14-13-15", "params": {"v": 25, "k": 14, "t": 13, "m": 15}, "variant": "lotto", "best": "13590", "bound": "4186 (counting)"}
 {"id": "covering-18-14-13-16", "params": {"v": 18, "k": 14, "t": 13, "m": 16}, "variant": "lotto", "best": "5", "bound": "3 (counting)"}
 {"id": "covering-19-14-13-16", "params": {"v": 19, "k": 14, "t": 13, "m": 16}, "variant": "lotto", "best": "11", "bound": "7 (counting)"}
@@ -52683,7 +52685,7 @@
 {"id": "covering-22-14-13-16", "params": {"v": 22, "k": 14, "t": 13, "m": 16}, "variant": "lotto", "best": "234", "bound": "92 (counting)"}
 {"id": "covering-23-14-13-16", "params": {"v": 23, "k": 14, "t": 13, "m": 16}, "variant": "lotto", "best": "542", "bound": "203 (counting)", "holder": "rené cadière (01/11/2026)"}
 {"id": "covering-24-14-13-16", "params": {"v": 24, "k": 14, "t": 13, "m": 16}, "variant": "lotto", "best": "1293", "bound": "427 (counting)"}
-{"id": "covering-25-14-13-16", "params": {"v": 25, "k": 14, "t": 13, "m": 16}, "variant": "lotto", "best": "3432", "bound": "864 (counting)"}
+{"id": "covering-25-14-13-16", "params": {"v": 25, "k": 14, "t": 13, "m": 16}, "variant": "lotto", "best": "3302", "bound": "864 (counting)"}
 {"id": "covering-26-14-13-16", "params": {"v": 26, "k": 14, "t": 13, "m": 16}, "variant": "lotto", "best": "7173", "bound": "1689 (counting)"}
 {"id": "covering-19-14-13-17", "params": {"v": 19, "k": 14, "t": 13, "m": 17}, "variant": "lotto", "best": "4", "bound": "3 (counting)"}
 {"id": "covering-20-14-13-17", "params": {"v": 20, "k": 14, "t": 13, "m": 17}, "variant": "lotto", "best": "8", "bound": "5 (counting)"}
@@ -52716,7 +52718,7 @@
 {"id": "covering-25-14-13-20", "params": {"v": 25, "k": 14, "t": 13, "m": 20}, "variant": "lotto", "best": "29", "bound": "11 (counting)"}
 {"id": "covering-26-14-13-20", "params": {"v": 26, "k": 14, "t": 13, "m": 20}, "variant": "lotto", "best": "60", "bound": "20 (counting)"}
 {"id": "covering-27-14-13-20", "params": {"v": 27, "k": 14, "t": 13, "m": 20}, "variant": "lotto", "best": "139", "bound": "35 (counting)"}
-{"id": "covering-28-14-13-20", "params": {"v": 28, "k": 14, "t": 13, "m": 20}, "variant": "lotto", "best": "309", "bound": "61 (counting)"}
+{"id": "covering-28-14-13-20", "params": {"v": 28, "k": 14, "t": 13, "m": 20}, "variant": "lotto", "best": "298", "bound": "61 (counting)"}
 {"id": "covering-29-14-13-20", "params": {"v": 29, "k": 14, "t": 13, "m": 20}, "variant": "lotto", "best": "645", "bound": "106 (counting)"}
 {"id": "covering-18-14-14-15", "params": {"v": 18, "k": 14, "t": 14, "m": 15}, "variant": "lotto", "best": "207", "bound": "204 (counting)"}
 {"id": "covering-19-14-14-15", "params": {"v": 19, "k": 14, "t": 14, "m": 15}, "variant": "lotto", "best": "839", "bound": "776 (counting)"}
@@ -54438,7 +54440,7 @@
 {"id": "covering-70-15-4-6", "params": {"v": 70, "k": 15, "t": 4, "m": 6}, "variant": "lotto", "best": "309", "bound": "60 (counting)"}
 {"id": "covering-71-15-4-6", "params": {"v": 71, "k": 15, "t": 4, "m": 6}, "variant": "lotto", "best": "316", "bound": "63 (counting)"}
 {"id": "covering-72-15-4-6", "params": {"v": 72, "k": 15, "t": 4, "m": 6}, "variant": "lotto", "best": "352", "bound": "67 (counting)", "holder": "SG (13/11/2026)"}
-{"id": "covering-73-15-4-6", "params": {"v": 73, "k": 15, "t": 4, "m": 6}, "variant": "lotto", "best": "382", "bound": "70 (counting)"}
+{"id": "covering-73-15-4-6", "params": {"v": 73, "k": 15, "t": 4, "m": 6}, "variant": "lotto", "best": "379", "bound": "70 (counting)"}
 {"id": "covering-74-15-4-6", "params": {"v": 74, "k": 15, "t": 4, "m": 6}, "variant": "lotto", "best": "395", "bound": "74 (counting)"}
 {"id": "covering-75-15-4-6", "params": {"v": 75, "k": 15, "t": 4, "m": 6}, "variant": "lotto", "best": "432", "bound": "78 (counting)", "holder": "Terenzio Lazzarotto (09/11/2026)"}
 {"id": "covering-76-15-4-6", "params": {"v": 76, "k": 15, "t": 4, "m": 6}, "variant": "lotto", "best": "467", "bound": "82 (counting)"}
@@ -54447,7 +54449,7 @@
 {"id": "covering-79-15-4-6", "params": {"v": 79, "k": 15, "t": 4, "m": 6}, "variant": "lotto", "best": "533", "bound": "95 (counting)"}
 {"id": "covering-80-15-4-6", "params": {"v": 80, "k": 15, "t": 4, "m": 6}, "variant": "lotto", "best": "559", "bound": "99 (counting)"}
 {"id": "covering-81-15-4-6", "params": {"v": 81, "k": 15, "t": 4, "m": 6}, "variant": "lotto", "best": "572", "bound": "104 (counting)"}
-{"id": "covering-82-15-4-6", "params": {"v": 82, "k": 15, "t": 4, "m": 6}, "variant": "lotto", "best": "621", "bound": "109 (counting)"}
+{"id": "covering-82-15-4-6", "params": {"v": 82, "k": 15, "t": 4, "m": 6}, "variant": "lotto", "best": "614", "bound": "109 (counting)"}
 {"id": "covering-83-15-4-6", "params": {"v": 83, "k": 15, "t": 4, "m": 6}, "variant": "lotto", "best": "653", "bound": "114 (counting)"}
 {"id": "covering-84-15-4-6", "params": {"v": 84, "k": 15, "t": 4, "m": 6}, "variant": "lotto", "best": "685", "bound": "120 (counting)"}
 {"id": "covering-85-15-4-6", "params": {"v": 85, "k": 15, "t": 4, "m": 6}, "variant": "lotto", "best": "727", "bound": "125 (counting)"}
@@ -55211,7 +55213,7 @@
 {"id": "covering-44-15-5-7", "params": {"v": 44, "k": 15, "t": 5, "m": 7}, "variant": "lotto", "best": "120", "bound": "28 (counting)"}
 {"id": "covering-45-15-5-7", "params": {"v": 45, "k": 15, "t": 5, "m": 7}, "variant": "lotto", "best": "124", "bound": "32 (counting)"}
 {"id": "covering-46-15-5-7", "params": {"v": 46, "k": 15, "t": 5, "m": 7}, "variant": "lotto", "best": "182", "bound": "35 (counting)"}
-{"id": "covering-47-15-5-7", "params": {"v": 47, "k": 15, "t": 5, "m": 7}, "variant": "lotto", "best": "200", "bound": "38 (counting)"}
+{"id": "covering-47-15-5-7", "params": {"v": 47, "k": 15, "t": 5, "m": 7}, "variant": "lotto", "best": "198", "bound": "38 (counting)"}
 {"id": "covering-48-15-5-7", "params": {"v": 48, "k": 15, "t": 5, "m": 7}, "variant": "lotto", "best": "215", "bound": "42 (counting)"}
 {"id": "covering-49-15-5-7", "params": {"v": 49, "k": 15, "t": 5, "m": 7}, "variant": "lotto", "best": "268", "bound": "47 (counting)"}
 {"id": "covering-50-15-5-7", "params": {"v": 50, "k": 15, "t": 5, "m": 7}, "variant": "lotto", "best": "295", "bound": "51 (counting)"}
@@ -55487,7 +55489,7 @@
 {"id": "covering-84-15-5-12", "params": {"v": 84, "k": 15, "t": 5, "m": 12}, "variant": "lotto", "best": "316", "bound": "29 (counting)"}
 {"id": "covering-85-15-5-12", "params": {"v": 85, "k": 15, "t": 5, "m": 12}, "variant": "lotto", "best": "331", "bound": "31 (counting)"}
 {"id": "covering-86-15-5-12", "params": {"v": 86, "k": 15, "t": 5, "m": 12}, "variant": "lotto", "best": "377", "bound": "32 (counting)"}
-{"id": "covering-87-15-5-12", "params": {"v": 87, "k": 15, "t": 5, "m": 12}, "variant": "lotto", "best": "407", "bound": "34 (counting)"}
+{"id": "covering-87-15-5-12", "params": {"v": 87, "k": 15, "t": 5, "m": 12}, "variant": "lotto", "best": "405", "bound": "34 (counting)"}
 {"id": "covering-88-15-5-12", "params": {"v": 88, "k": 15, "t": 5, "m": 12}, "variant": "lotto", "best": "422", "bound": "36 (counting)"}
 {"id": "covering-89-15-5-12", "params": {"v": 89, "k": 15, "t": 5, "m": 12}, "variant": "lotto", "best": "475", "bound": "37 (counting)"}
 {"id": "covering-90-15-5-12", "params": {"v": 90, "k": 15, "t": 5, "m": 12}, "variant": "lotto", "best": "502", "bound": "39 (counting)"}
@@ -56872,7 +56874,7 @@
 {"id": "covering-24-15-8-9", "params": {"v": 24, "k": 15, "t": 8, "m": 9}, "variant": "lotto", "best": "90", "bound": "21 (counting)", "holder": "Terenzio Lazzarotto (08/11/2026)"}
 {"id": "covering-25-15-8-9", "params": {"v": 25, "k": 15, "t": 8, "m": 9}, "variant": "lotto", "best": "140", "bound": "30 (counting)"}
 {"id": "covering-26-15-8-9", "params": {"v": 26, "k": 15, "t": 8, "m": 9}, "variant": "lotto", "best": "223", "bound": "42 (counting)"}
-{"id": "covering-27-15-8-9", "params": {"v": 27, "k": 15, "t": 8, "m": 9}, "variant": "lotto", "best": "325", "bound": "57 (counting)"}
+{"id": "covering-27-15-8-9", "params": {"v": 27, "k": 15, "t": 8, "m": 9}, "variant": "lotto", "best": "321", "bound": "57 (counting)"}
 {"id": "covering-28-15-8-9", "params": {"v": 28, "k": 15, "t": 8, "m": 9}, "variant": "lotto", "best": "458", "bound": "78 (counting)"}
 {"id": "covering-29-15-8-9", "params": {"v": 29, "k": 15, "t": 8, "m": 9}, "variant": "lotto", "best": "645", "bound": "106 (counting)"}
 {"id": "covering-30-15-8-9", "params": {"v": 30, "k": 15, "t": 8, "m": 9}, "variant": "lotto", "best": "895", "bound": "141 (counting)"}
@@ -57005,9 +57007,9 @@
 {"id": "covering-47-15-8-16", "params": {"v": 47, "k": 15, "t": 8, "m": 16}, "variant": "lotto", "best": "292", "bound": "18 (counting)", "holder": "derived on the site from a known design (08/11/2026)"}
 {"id": "covering-48-15-8-16", "params": {"v": 48, "k": 15, "t": 8, "m": 16}, "variant": "lotto", "best": "342", "bound": "20 (counting)"}
 {"id": "covering-49-15-8-16", "params": {"v": 49, "k": 15, "t": 8, "m": 16}, "variant": "lotto", "best": "425", "bound": "23 (counting)"}
-{"id": "covering-50-15-8-16", "params": {"v": 50, "k": 15, "t": 8, "m": 16}, "variant": "lotto", "best": "527", "bound": "26 (counting)"}
-{"id": "covering-51-15-8-16", "params": {"v": 51, "k": 15, "t": 8, "m": 16}, "variant": "lotto", "best": "649", "bound": "30 (counting)"}
-{"id": "covering-52-15-8-16", "params": {"v": 52, "k": 15, "t": 8, "m": 16}, "variant": "lotto", "best": "782", "bound": "34 (counting)"}
+{"id": "covering-50-15-8-16", "params": {"v": 50, "k": 15, "t": 8, "m": 16}, "variant": "lotto", "best": "523", "bound": "26 (counting)"}
+{"id": "covering-51-15-8-16", "params": {"v": 51, "k": 15, "t": 8, "m": 16}, "variant": "lotto", "best": "645", "bound": "30 (counting)"}
+{"id": "covering-52-15-8-16", "params": {"v": 52, "k": 15, "t": 8, "m": 16}, "variant": "lotto", "best": "781", "bound": "34 (counting)"}
 {"id": "covering-53-15-8-16", "params": {"v": 53, "k": 15, "t": 8, "m": 16}, "variant": "lotto", "best": "918", "bound": "39 (counting)"}
 {"id": "covering-33-15-8-17", "params": {"v": 33, "k": 15, "t": 8, "m": 17}, "variant": "lotto", "best": "5", "bound": "2 (counting)"}
 {"id": "covering-34-15-8-17", "params": {"v": 34, "k": 15, "t": 8, "m": 17}, "variant": "lotto", "best": "5", "bound": "2 (counting)"}
@@ -57091,7 +57093,7 @@
 {"id": "covering-61-15-8-19", "params": {"v": 61, "k": 15, "t": 8, "m": 19}, "variant": "lotto", "best": "557", "bound": "28 (counting)"}
 {"id": "covering-62-15-8-19", "params": {"v": 62, "k": 15, "t": 8, "m": 19}, "variant": "lotto", "best": "679", "bound": "31 (counting)"}
 {"id": "covering-63-15-8-19", "params": {"v": 63, "k": 15, "t": 8, "m": 19}, "variant": "lotto", "best": "815", "bound": "34 (counting)"}
-{"id": "covering-64-15-8-19", "params": {"v": 64, "k": 15, "t": 8, "m": 19}, "variant": "lotto", "best": "963", "bound": "38 (counting)"}
+{"id": "covering-64-15-8-19", "params": {"v": 64, "k": 15, "t": 8, "m": 19}, "variant": "lotto", "best": "959", "bound": "38 (counting)"}
 {"id": "covering-36-15-8-20", "params": {"v": 36, "k": 15, "t": 8, "m": 20}, "variant": "lotto", "best": "4", "bound": "2 (counting)"}
 {"id": "covering-37-15-8-20", "params": {"v": 37, "k": 15, "t": 8, "m": 20}, "variant": "lotto", "best": "4", "bound": "2 (counting)"}
 {"id": "covering-38-15-8-20", "params": {"v": 38, "k": 15, "t": 8, "m": 20}, "variant": "lotto", "best": "4", "bound": "2 (counting)"}
@@ -57461,7 +57463,7 @@
 {"id": "covering-21-15-12-13", "params": {"v": 21, "k": 15, "t": 12, "m": 13}, "variant": "lotto", "best": "224", "bound": "72 (counting)"}
 {"id": "covering-22-15-12-13", "params": {"v": 22, "k": 15, "t": 12, "m": 13}, "variant": "lotto", "best": "520", "bound": "152 (counting)"}
 {"id": "covering-23-15-12-13", "params": {"v": 23, "k": 15, "t": 12, "m": 13}, "variant": "lotto", "best": "1192", "bound": "306 (counting)"}
-{"id": "covering-24-15-12-13", "params": {"v": 24, "k": 15, "t": 12, "m": 13}, "variant": "lotto", "best": "2464", "bound": "595 (counting)"}
+{"id": "covering-24-15-12-13", "params": {"v": 24, "k": 15, "t": 12, "m": 13}, "variant": "lotto", "best": "2462", "bound": "595 (counting)"}
 {"id": "covering-25-15-12-13", "params": {"v": 25, "k": 15, "t": 12, "m": 13}, "variant": "lotto", "best": "5132", "bound": "1118 (counting)"}
 {"id": "covering-26-15-12-13", "params": {"v": 26, "k": 15, "t": 12, "m": 13}, "variant": "lotto", "best": "9883", "bound": "2036 (counting)"}
 {"id": "covering-18-15-12-14", "params": {"v": 18, "k": 15, "t": 12, "m": 14}, "variant": "lotto", "best": "5", "bound": "2 (counting)"}
@@ -57593,8 +57595,8 @@
 {"id": "covering-21-15-14-16", "params": {"v": 21, "k": 15, "t": 14, "m": 16}, "variant": "lotto", "best": "169", "bound": "89 (counting)"}
 {"id": "covering-22-15-14-16", "params": {"v": 22, "k": 15, "t": 14, "m": 16}, "variant": "lotto", "best": "526", "bound": "232 (counting)"}
 {"id": "covering-23-15-14-16", "params": {"v": 23, "k": 15, "t": 14, "m": 16}, "variant": "lotto", "best": "759", "bound": "573 (counting)"}
-{"id": "covering-24-15-14-16", "params": {"v": 24, "k": 15, "t": 14, "m": 16}, "variant": "lotto", "best": "2520", "bound": "1340 (counting)"}
-{"id": "covering-25-15-14-16", "params": {"v": 25, "k": 15, "t": 14, "m": 16}, "variant": "lotto", "best": "7698", "bound": "2983 (counting)"}
+{"id": "covering-24-15-14-16", "params": {"v": 24, "k": 15, "t": 14, "m": 16}, "variant": "lotto", "best": "2518", "bound": "1340 (counting)"}
+{"id": "covering-25-15-14-16", "params": {"v": 25, "k": 15, "t": 14, "m": 16}, "variant": "lotto", "best": "6918", "bound": "2983 (counting)"}
 {"id": "covering-26-15-14-16", "params": {"v": 26, "k": 15, "t": 14, "m": 16}, "variant": "lotto", "best": "20378", "bound": "6354 (counting)"}
 {"id": "covering-19-15-14-17", "params": {"v": 19, "k": 15, "t": 14, "m": 17}, "variant": "lotto", "best": "5", "bound": "3 (counting)"}
 {"id": "covering-20-15-14-17", "params": {"v": 20, "k": 15, "t": 14, "m": 17}, "variant": "lotto", "best": "12", "bound": "8 (counting)"}
@@ -58962,7 +58964,7 @@
 {"id": "covering-60-19-4", "params": {"v": 60, "k": 19, "t": 4, "m": 4}, "best": "212", "bound": "149 (La Jolla)"}
 {"id": "covering-61-19-4", "params": {"v": 61, "k": 19, "t": 4, "m": 4}, "best": "239", "bound": "161 (La Jolla)"}
 {"id": "covering-62-19-4", "params": {"v": 62, "k": 19, "t": 4, "m": 4}, "best": "260", "bound": "180 (La Jolla)"}
-{"id": "covering-63-19-4", "params": {"v": 63, "k": 19, "t": 4, "m": 4}, "best": "284", "bound": "186 (La Jolla)"}
+{"id": "covering-63-19-4", "params": {"v": 63, "k": 19, "t": 4, "m": 4}, "best": "283", "bound": "186 (La Jolla)"}
 {"id": "covering-64-19-4", "params": {"v": 64, "k": 19, "t": 4, "m": 4}, "best": "315", "bound": "203 (La Jolla)"}
 {"id": "covering-65-19-4", "params": {"v": 65, "k": 19, "t": 4, "m": 4}, "best": "343", "bound": "220 (La Jolla)"}
 {"id": "covering-66-19-4", "params": {"v": 66, "k": 19, "t": 4, "m": 4}, "best": "367", "bound": "240 (La Jolla)"}
@@ -59795,18 +59797,18 @@
 {"id": "covering-59-21-5", "params": {"v": 59, "k": 21, "t": 5, "m": 5}, "best": "718", "bound": "321 (Schönheim)", "holder": "Franco Atzeni, 2025 (Local Search)"}
 {"id": "covering-60-21-5", "params": {"v": 60, "k": 21, "t": 5, "m": 5}, "best": "783", "bound": "346 (La Jolla)"}
 {"id": "covering-61-21-5", "params": {"v": 61, "k": 21, "t": 5, "m": 5}, "best": "847", "bound": "384 (La Jolla)", "holder": "A. West, 2025 (Local search)"}
-{"id": "covering-62-21-5", "params": {"v": 62, "k": 21, "t": 5, "m": 5}, "best": "946", "bound": "408 (Schönheim)", "holder": "A. West, 2025 (Local search)"}
-{"id": "covering-63-21-5", "params": {"v": 63, "k": 21, "t": 5, "m": 5}, "best": "1009", "bound": "420 (Schönheim)"}
+{"id": "covering-62-21-5", "params": {"v": 62, "k": 21, "t": 5, "m": 5}, "best": "942", "bound": "408 (Schönheim)"}
+{"id": "covering-63-21-5", "params": {"v": 63, "k": 21, "t": 5, "m": 5}, "best": "1003", "bound": "420 (Schönheim)"}
 {"id": "covering-64-21-5", "params": {"v": 64, "k": 21, "t": 5, "m": 5}, "best": "1147", "bound": "455 (La Jolla)"}
 {"id": "covering-65-21-5", "params": {"v": 65, "k": 21, "t": 5, "m": 5}, "best": "1232", "bound": "496 (La Jolla)", "holder": "Terenzio Lazzarotto (13/11/2026)"}
-{"id": "covering-66-21-5", "params": {"v": 66, "k": 21, "t": 5, "m": 5}, "best": "1354", "bound": "522 (La Jolla)", "holder": "A. West, 2024 (Local search)"}
+{"id": "covering-66-21-5", "params": {"v": 66, "k": 21, "t": 5, "m": 5}, "best": "1349", "bound": "522 (La Jolla)"}
 {"id": "covering-67-21-5", "params": {"v": 67, "k": 21, "t": 5, "m": 5}, "best": "1482", "bound": "581 (La Jolla)"}
-{"id": "covering-68-21-5", "params": {"v": 68, "k": 21, "t": 5, "m": 5}, "best": "1596", "bound": "651 (La Jolla)", "holder": "A. West, 2025 (Local search)"}
-{"id": "covering-69-21-5", "params": {"v": 69, "k": 21, "t": 5, "m": 5}, "best": "1660", "bound": "671 (La Jolla)"}
+{"id": "covering-68-21-5", "params": {"v": 68, "k": 21, "t": 5, "m": 5}, "best": "1591", "bound": "651 (La Jolla)"}
+{"id": "covering-69-21-5", "params": {"v": 69, "k": 21, "t": 5, "m": 5}, "best": "1654", "bound": "671 (La Jolla)"}
 {"id": "covering-70-21-5", "params": {"v": 70, "k": 21, "t": 5, "m": 5}, "best": "1826", "bound": "750 (La Jolla)"}
-{"id": "covering-71-21-5", "params": {"v": 71, "k": 21, "t": 5, "m": 5}, "best": "2031", "bound": "819 (La Jolla)", "holder": "Jan de Heer and Steve Muir, 2026 (Private Tools)"}
+{"id": "covering-71-21-5", "params": {"v": 71, "k": 21, "t": 5, "m": 5}, "best": "2026", "bound": "819 (La Jolla)"}
 {"id": "covering-72-21-5", "params": {"v": 72, "k": 21, "t": 5, "m": 5}, "best": "2201", "bound": "854 (La Jolla)"}
-{"id": "covering-73-21-5", "params": {"v": 73, "k": 21, "t": 5, "m": 5}, "best": "2320", "bound": "939 (Schönheim)"}
+{"id": "covering-73-21-5", "params": {"v": 73, "k": 21, "t": 5, "m": 5}, "best": "2314", "bound": "939 (Schönheim)"}
 {"id": "covering-74-21-5", "params": {"v": 74, "k": 21, "t": 5, "m": 5}, "best": "2526", "bound": "980 (Schönheim)", "holder": "A. West, 2024 (Local search)"}
 {"id": "covering-75-21-5", "params": {"v": 75, "k": 21, "t": 5, "m": 5}, "best": "2565", "bound": "1026 (La Jolla)", "holder": "A. West, 2025 (Local search)"}
 {"id": "covering-76-21-5", "params": {"v": 76, "k": 21, "t": 5, "m": 5}, "best": "2587", "bound": "1115 (Schönheim)", "holder": "A. West, 2024 (Local search)"}
@@ -60539,13 +60541,13 @@
 {"id": "covering-67-23-5", "params": {"v": 67, "k": 23, "t": 5, "m": 5}, "best": "825", "bound": "368 (La Jolla)"}
 {"id": "covering-68-23-5", "params": {"v": 68, "k": 23, "t": 5, "m": 5}, "best": "932", "bound": "388 (La Jolla)", "holder": "Terenzio Lazzarotto (12/11/2026)"}
 {"id": "covering-69-23-5", "params": {"v": 69, "k": 23, "t": 5, "m": 5}, "best": "1015", "bound": "420 (Schönheim)", "holder": "Terenzio Lazzarotto (13/11/2026)"}
-{"id": "covering-70-23-5", "params": {"v": 70, "k": 23, "t": 5, "m": 5}, "best": "1128", "bound": "442 (Schönheim)"}
+{"id": "covering-70-23-5", "params": {"v": 70, "k": 23, "t": 5, "m": 5}, "best": "1118", "bound": "442 (Schönheim)"}
 {"id": "covering-71-23-5", "params": {"v": 71, "k": 23, "t": 5, "m": 5}, "best": "1211", "bound": "473 (La Jolla)"}
 {"id": "covering-72-23-5", "params": {"v": 72, "k": 23, "t": 5, "m": 5}, "best": "1336", "bound": "508 (La Jolla)"}
 {"id": "covering-73-23-5", "params": {"v": 73, "k": 23, "t": 5, "m": 5}, "best": "1426", "bound": "531 (La Jolla)"}
 {"id": "covering-74-23-5", "params": {"v": 74, "k": 23, "t": 5, "m": 5}, "best": "1544", "bound": "589 (La Jolla)"}
 {"id": "covering-75-23-5", "params": {"v": 75, "k": 23, "t": 5, "m": 5}, "best": "1675", "bound": "617 (La Jolla)", "holder": "derived on the site from a known design (13/11/2026)"}
-{"id": "covering-76-23-5", "params": {"v": 76, "k": 23, "t": 5, "m": 5}, "best": "1838", "bound": "678 (La Jolla)"}
+{"id": "covering-76-23-5", "params": {"v": 76, "k": 23, "t": 5, "m": 5}, "best": "1828", "bound": "678 (La Jolla)"}
 {"id": "covering-77-23-5", "params": {"v": 77, "k": 23, "t": 5, "m": 5}, "best": "2002", "bound": "754 (La Jolla)"}
 {"id": "covering-78-23-5", "params": {"v": 78, "k": 23, "t": 5, "m": 5}, "best": "2125", "bound": "821 (La Jolla)"}
 {"id": "covering-79-23-5", "params": {"v": 79, "k": 23, "t": 5, "m": 5}, "best": "2193", "bound": "856 (La Jolla)", "holder": "A. West, 2023 (Local search)"}
@@ -60598,7 +60600,7 @@
 {"id": "covering-56-23-6", "params": {"v": 56, "k": 23, "t": 6, "m": 6}, "best": "1319", "bound": "475 (La Jolla)"}
 {"id": "covering-57-23-6", "params": {"v": 57, "k": 23, "t": 6, "m": 6}, "best": "1506", "bound": "501 (La Jolla)"}
 {"id": "covering-58-23-6", "params": {"v": 58, "k": 23, "t": 6, "m": 6}, "best": "1717", "bound": "580 (La Jolla)"}
-{"id": "covering-59-23-6", "params": {"v": 59, "k": 23, "t": 6, "m": 6}, "best": "1947", "bound": "632 (La Jolla)"}
+{"id": "covering-59-23-6", "params": {"v": 59, "k": 23, "t": 6, "m": 6}, "best": "1913", "bound": "632 (La Jolla)"}
 {"id": "covering-60-23-6", "params": {"v": 60, "k": 23, "t": 6, "m": 6}, "best": "2245", "bound": "702 (La Jolla)"}
 {"id": "covering-61-23-6", "params": {"v": 61, "k": 23, "t": 6, "m": 6}, "best": "2467", "bound": "775 (La Jolla)"}
 {"id": "covering-62-23-6", "params": {"v": 62, "k": 23, "t": 6, "m": 6}, "best": "2818", "bound": "839 (Schönheim)", "holder": "Terenzio Lazzarotto (13/11/2026)"}
@@ -60878,11 +60880,11 @@
 {"id": "covering-60-24-5", "params": {"v": 60, "k": 24, "t": 5, "m": 5}, "best": "307", "bound": "188 (La Jolla)", "holder": "derived on the site from a known design (11/11/2026)"}
 {"id": "covering-61-24-5", "params": {"v": 61, "k": 24, "t": 5, "m": 5}, "best": "381", "bound": "201 (La Jolla)"}
 {"id": "covering-62-24-5", "params": {"v": 62, "k": 24, "t": 5, "m": 5}, "best": "407", "bound": "228 (La Jolla)", "holder": "derived on the site from a known design (11/11/2026)"}
-{"id": "covering-63-24-5", "params": {"v": 63, "k": 24, "t": 5, "m": 5}, "best": "430", "bound": "242 (La Jolla)", "holder": "Terenzio Lazzarotto (12/11/2026)"}
+{"id": "covering-63-24-5", "params": {"v": 63, "k": 24, "t": 5, "m": 5}, "best": "429", "bound": "242 (La Jolla)"}
 {"id": "covering-64-24-5", "params": {"v": 64, "k": 24, "t": 5, "m": 5}, "best": "472", "bound": "251 (La Jolla)", "holder": "derived on the site from a known design (11/11/2026)"}
 {"id": "covering-65-24-5", "params": {"v": 65, "k": 24, "t": 5, "m": 5}, "best": "519", "bound": "274 (La Jolla)", "holder": "derived on the site from a known design (11/11/2026)"}
-{"id": "covering-66-24-5", "params": {"v": 66, "k": 24, "t": 5, "m": 5}, "best": "595", "bound": "289 (La Jolla)", "holder": "Terenzio Lazzarotto (12/11/2026)"}
-{"id": "covering-67-24-5", "params": {"v": 67, "k": 24, "t": 5, "m": 5}, "best": "651", "bound": "313 (Schönheim)", "holder": "Terenzio Lazzarotto (12/11/2026)"}
+{"id": "covering-66-24-5", "params": {"v": 66, "k": 24, "t": 5, "m": 5}, "best": "594", "bound": "289 (La Jolla)"}
+{"id": "covering-67-24-5", "params": {"v": 67, "k": 24, "t": 5, "m": 5}, "best": "650", "bound": "313 (Schönheim)"}
 {"id": "covering-68-24-5", "params": {"v": 68, "k": 24, "t": 5, "m": 5}, "best": "704", "bound": "323 (Schönheim)", "holder": "derived on the site from a known design (11/11/2026)"}
 {"id": "covering-69-24-5", "params": {"v": 69, "k": 24, "t": 5, "m": 5}, "best": "755", "bound": "343 (Schönheim)", "holder": "La Jolla Covering Repository, 2009 (Multiple of (23,8,5) covering)"}
 {"id": "covering-70-24-5", "params": {"v": 70, "k": 24, "t": 5, "m": 5}, "best": "759", "bound": "385 (La Jolla)", "holder": "La Jolla Covering Repository, 2009 (Simple construction from (71,24,5))"}
@@ -61286,7 +61288,7 @@
 {"id": "covering-60-25-6", "params": {"v": 60, "k": 25, "t": 6, "m": 6}, "best": "1190", "bound": "437 (La Jolla)"}
 {"id": "covering-61-25-6", "params": {"v": 61, "k": 25, "t": 6, "m": 6}, "best": "1329", "bound": "459 (La Jolla)", "holder": "A. West, 2025 (Local search)"}
 {"id": "covering-62-25-6", "params": {"v": 62, "k": 25, "t": 6, "m": 6}, "best": "1541", "bound": "499 (La Jolla)", "holder": "A. West, 2025 (Local search)"}
-{"id": "covering-63-25-6", "params": {"v": 63, "k": 25, "t": 6, "m": 6}, "best": "1736", "bound": "575 (La Jolla)"}
+{"id": "covering-63-25-6", "params": {"v": 63, "k": 25, "t": 6, "m": 6}, "best": "1720", "bound": "575 (La Jolla)"}
 {"id": "covering-64-25-6", "params": {"v": 64, "k": 25, "t": 6, "m": 6}, "best": "1808", "bound": "620 (La Jolla)"}
 {"id": "covering-65-25-6", "params": {"v": 65, "k": 25, "t": 6, "m": 6}, "best": "1854", "bound": "653 (La Jolla)"}
 {"id": "covering-66-25-6", "params": {"v": 66, "k": 25, "t": 6, "m": 6}, "best": "2373", "bound": "724 (La Jolla)", "holder": "derived on the site from a known design (11/11/2026)"}

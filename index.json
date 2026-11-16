@@ -1,6 +1,6 @@
 {
  "benchmark_version": "2.1",
- "problems": 392541,
+ "problems": 392543,
  "by_family": {
   "bipartite-degree-diameter": 32,
   "cage": 40,
@@ -16,7 +16,7 @@
   "constant-weight-code": 1166,
   "costas-array": 2,
   "covering-array": 5565,
-  "covering-design": 61404,
+  "covering-design": 61406,
   "degree-diameter": 57,
   "difference-set": 102628,
   "ea-quantum-code": 3726,
@@ -170,10 +170,10 @@
    "family": "covering-design",
    "path": "families/covering-design/cells.jsonl",
    "definition": "families/covering-design/family.json",
-   "count": 61394,
-   "sha256": "019de645dddac2d7c2f884f1b1f566bff18834216580e45ac25b3d5ac424340a",
+   "count": 61396,
+   "sha256": "0d82e37dfa44b587d05a53dff534d0caf54d59ccda893b3177d9ba6f06f5cdba",
    "keeper": "Covering Repository (coveringrepository.com), successor of D. Gordon's La Jolla Covering Repository",
-   "read": "2026-11-14",
+   "read": "2026-11-16",
    "checker": "covering_check.py"
   },
   {

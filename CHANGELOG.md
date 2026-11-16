@@ -18,6 +18,19 @@ value can change within a version when its source table changes; the file then s
   some of them are public on Zenodo. Their values stay as read on 8 Nov until a rule for cells the table does not list is
   chosen.
 
+## Next (in review): covering-design from the Covering Repository's complete lists (16 Nov 2026)
+
+- `families/covering-design`: values now come from the two complete lists at the bottom of coveringrepository.com's
+  Download page (the (v,k,t,m) and (v,k,t) archives). Automatic download of the two list files (download_archive.aspx,
+  download_archive_vkt.aspx), up to once a day, and the listing of these entries with credit to the original authors:
+  written permission of the Covering Repository's keeper, 16 Nov 2026. The search page and the designs are never read by
+  script. `tools/covering_refresh.py` (new) refreshes the cells from a newer list under the builder's rules: 654 values
+  fell between the export of 14 Nov and the lists of 16 Nov 22:31 +04; 371 cells take the new value (none reaches its
+  lower bound; 20 lose a named holder, as the lists name no author), C(63,5,4,14) = 997 and C(70,5,4,16) = 978 join (m >
+  t, now at most 1,000 blocks), and 281 other changed entries stay out (check estimate above an hour). None of the new
+  values is ours; none of our 128 cells was beaten. 61,396 cells (61,394 before).
+- index.json: 392,543 problems.
+
 ## Next (in review): complete arcs checked up to ten minutes (15 Nov 2026)
 
 - `families/complete-arc`: a cell is now kept when the check of a complete arc one point smaller is estimated at most
