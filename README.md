@@ -738,6 +738,9 @@ cite its keeper as well: every problem's `best_known.provenance` names the table
 the benchmark is cited by its leaderboard row, which gives the submitter, the date it was checked and the certificate's
 SHA-256.
 
+Known uses of this work are listed in [USED_BY.md](USED_BY.md). If you use it, please open an issue or a pull request
+with a link so that yours can be added.
+
 ## Licence
 
 `obb.py`, the checkers, the problem and family files, the Originals and our reference certificates: MIT (see
